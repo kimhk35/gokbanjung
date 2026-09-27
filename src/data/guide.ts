@@ -250,21 +250,25 @@ export const GUIDE: GuideSection[] = [
     title: L("데이터 창고 업데이트 (한 번만)", "Database update (once)"),
     steps: [
       L(
-        "폴더의 2_DB업데이트.cmd를 더블클릭합니다.",
-        "Double-click 2_DB업데이트.cmd in the folder.",
+        "supabase.com에 로그인 → 복음교리반 프로젝트를 엽니다.",
+        "Sign in to supabase.com and open the Gospel Doctrine project.",
       ),
       L(
-        "DATABASE_URL 값을 붙여 넣고 Enter. 화면에 글자가 보이지 않는 것이 정상입니다.",
-        "Paste the DATABASE_URL value and press Enter. It is normal that nothing appears.",
+        "왼쪽 메뉴 SQL Editor → New query(새 쿼리).",
+        "Left menu SQL Editor → New query.",
       ),
       L(
-        "UPDATE를 입력하고 Enter → '완료했습니다'가 나오면 끝입니다.",
-        "Type UPDATE and press Enter → done when it says so.",
+        "폴더의 DB업데이트_SQL편집기용.sql을 메모장으로 열어 전부 복사(Ctrl+A, Ctrl+C) → 편집기에 붙여 넣기.",
+        "Open DB업데이트_SQL편집기용.sql in Notepad, copy everything (Ctrl+A, Ctrl+C) and paste it into the editor.",
+      ),
+      L(
+        "Run을 누릅니다. 아래 결과에 '완료: …'가 나오면 끝입니다.",
+        "Press Run. Done when the result shows '완료: …'.",
       ),
     ],
     note: L(
-      "기존 글과 기록은 그대로 두고, 와드 일정·함께 생각하기용 표만 추가합니다.",
-      "Existing posts and records stay; only the calendar and question tables are added.",
+      "기존 글과 기록은 그대로 두고 새 표만 추가하며, 두 번 실행해도 안전합니다. DATABASE_URL 값을 알고 있다면 2_DB업데이트.cmd로 해도 됩니다.",
+      "Existing posts and records stay; only new tables are added, and running it twice is safe. If you know the DATABASE_URL value you can use 2_DB업데이트.cmd instead.",
     ),
   },
   {
