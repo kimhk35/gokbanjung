@@ -1232,3 +1232,37 @@ a.event-card:hover {
 .insight-actions {
   flex-wrap: wrap;
 }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.selection-bar {
+  width: max-content;
+  max-width: calc(100vw - 32px);
+}
+.selection-bar button {
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .mobile-nav a span {
+    max-width: 74px;
+    text-align: center;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+}
+footer .feedback a {
+  color: inherit;
+  text-decoration: underline;
+}
+footer .updated,
+footer .feedback {
+  white-space: nowrap;
+}

@@ -24,7 +24,8 @@ export function Modal({
         <Dialog.Overlay className="overlay" />
         <Dialog.Content className="modal">
           <Dialog.Title className="modal-title">{title}</Dialog.Title>
-          <Dialog.Description>
+          {/* Without a description the generic hint is for screen readers only. */}
+          <Dialog.Description className={description ? undefined : "sr-only"}>
             {description ||
               t(
                 "내용을 확인한 후 진행해 주세요.",

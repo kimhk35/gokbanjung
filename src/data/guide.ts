@@ -28,6 +28,24 @@ export const GUIDE: GuideSection[] = [
       "곡반정와드 복음교리반의 매일 말씀 학습, 와드 일정, 함께 생각하기를 한곳에 모은 학습 공간입니다. 교회의 공식 웹사이트가 아닙니다.",
       "A learning space for the Gokbanjeong Ward Gospel Doctrine class that brings together daily scripture study, the ward calendar and shared questions. It is not an official Church website.",
     ),
+    steps: [
+      L(
+        "만든 사람: 김홍겸 형제 · 박녹형 형제",
+        "Created by Brother Honggyeom Kim · Brother Nokhyeong Park",
+      ),
+      L(
+        "피드백과 의견은 kimhk35@ajou.ac.kr 로 보내 주세요.",
+        "Please send feedback and ideas to kimhk35@ajou.ac.kr.",
+      ),
+      L(
+        "사이트 아래쪽에서 최근 업데이트 날짜를 확인할 수 있습니다.",
+        "The last-updated date is shown at the bottom of the site.",
+      ),
+    ],
+    note: L(
+      "본 사이트의 모든 자료(경전·교재·그림 등)의 저작권은 예수 그리스도 후기 성도 교회(The Church of Jesus Christ of Latter-day Saints)에 있습니다.",
+      "All materials on this site (scriptures, manuals, images and more) are © The Church of Jesus Christ of Latter-day Saints.",
+    ),
   },
   {
     id: "start",

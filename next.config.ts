@@ -1,5 +1,8 @@
 import type { NextConfig } from "next";
+// Shown in the footer as "최근 업데이트" (Korea date of this build).
+const buildDate = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10);
 const config: NextConfig = {
+  env: { NEXT_PUBLIC_BUILD_DATE: buildDate },
   distDir: process.env.NEXT_DIST_DIR || ".next",
   serverExternalPackages: ["@electric-sql/pglite", "pdf-parse"],
   outputFileTracingIncludes: {

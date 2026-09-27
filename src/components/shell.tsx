@@ -21,12 +21,13 @@ import { Modal } from "./ui/dialog";
 import { TranslateHelp } from "./translate-help";
 import { DailyInsightPopup } from "./learning/daily-insight";
 import { UI_LANGS, type UiLang } from "@/lib/i18n";
+import { SITE_INFO } from "@/lib/site-info";
 import { GuestGate } from "./account";
 import { AnnouncementPopup } from "./announcement-popup";
 import { loginStatus } from "@/lib/login-status";
 import { canManageRecords } from "@/lib/access";
 export function Shell({ children }: { children: ReactNode }) {
-  const { lang, uiLang, setLang, t, boot } = useApp();
+  const { lang, uiLang, setLang, t, tl, boot } = useApp();
   const path = usePathname();
   const [dark, setDark] = useState(false);
   const [menu, setMenu] = useState(false);
@@ -252,8 +253,21 @@ export function Shell({ children }: { children: ReactNode }) {
           )}
         </span>
         <span className="creator">
-          {t("제작자 · 김홍겸 형제", "Created by Brother Honggyeom Kim")}
+          {t("만든 사람 · ", "Created by ")}
+          {tl(SITE_INFO.creators)}
         </span>
+        <span className="feedback">
+          {t("피드백·의견 · ", "Feedback & ideas · ")}
+          <a href={`mailto:${SITE_INFO.feedbackEmail}`}>
+            {SITE_INFO.feedbackEmail}
+          </a>
+        </span>
+        {SITE_INFO.updated && (
+          <span className="updated">
+            {t("최근 업데이트 · ", "Last updated · ")}
+            <time dateTime={SITE_INFO.updated}>{SITE_INFO.updated}</time>
+          </span>
+        )}
         <p className="copyright-notice">
           {t(
             "본 사이트의 모든 자료에 대한 저작권은 예수 그리스도 후기성도 교회에 있습니다. 저작권자의 허락 없는 무단 복제·배포 및 2차적 저작물 제작을 금합니다.",
