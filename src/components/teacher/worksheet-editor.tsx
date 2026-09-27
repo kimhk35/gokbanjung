@@ -1,8 +1,16 @@
 "use client";
 import { useEffect, useState } from "react";
-import { ArrowUp, ArrowDown, Plus, Trash2, Eye, RotateCcw } from "lucide-react";
+import {
+  ArrowUp,
+  ArrowDown,
+  Plus,
+  Trash2,
+  Eye,
+  RotateCcw,
+  FileUp,
+} from "lucide-react";
 import { useApp } from "../provider";
-import { api } from "@/lib/client";
+import { api, RequestError } from "@/lib/client";
 import { Modal } from "../ui/dialog";
 import type { Localized } from "@/lib/types";
 type Sheet = { items: Localized[]; version: number };
@@ -46,6 +54,37 @@ export function WorksheetEditor({ week }: { week: number }) {
       [next[index], next[index + delta]] = [next[index + delta], next[index]];
       return next;
     });
+  }
+  const [importing, setImporting] = useState(false);
+  // Worksheet file → question drafts (rules, no AI). Both language fields get
+  // the same text; the teacher translates the other language if needed.
+  async function importFile(file: File | undefined) {
+    if (!file) return;
+    setImporting(true);
+    try {
+      const form = new FormData();
+      form.append("file", file);
+      const response = await fetch("/api/worksheet-import", {
+        method: "POST",
+        body: form,
+        credentials: "same-origin",
+      });
+      const data = await response.json();
+      if (!response.ok) throw new RequestError(data.error || "server_error");
+      const room = 20 - items.length;
+      const added = (data.questions as string[]).slice(0, room);
+      setItems((prev) => [...prev, ...added.map((q) => ({ ko: q, en: q }))]);
+      notify(
+        t(
+          `문항 ${added.length}개를 가져왔어요. 확인·수정하고, 다른 언어 칸은 필요하면 번역한 뒤 저장해 주세요.`,
+          `Imported ${added.length} questions. Review them, translate the other language if needed, then save.`,
+        ),
+      );
+    } catch (e) {
+      error(e);
+    } finally {
+      setImporting(false);
+    }
   }
   async function save() {
     if (!saved) return;
@@ -164,6 +203,24 @@ export function WorksheetEditor({ week }: { week: number }) {
             <Plus size={17} />
             {t("문항 추가", "Add question")} ({items.length}/20)
           </button>
+          <label className="button secondary file-button">
+            <FileUp size={17} />
+            {importing
+              ? t("문항을 찾는 중…", "Finding questions…")
+              : t(
+                  "학습지 파일에서 문항 가져오기",
+                  "Import questions from a worksheet file",
+                )}
+            <input
+              type="file"
+              accept=".pdf,.docx,.hwp,.hwpx,.txt,.md"
+              disabled={importing || items.length >= 20}
+              onChange={(e) => {
+                void importFile(e.target.files?.[0]);
+                e.target.value = "";
+              }}
+            />
+          </label>
           <button
             type="button"
             className="button secondary"

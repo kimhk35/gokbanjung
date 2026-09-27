@@ -1334,3 +1334,13 @@ footer .feedback {
 .chapter-source a {
   color: var(--navy);
 }
+.file-button {
+  position: relative;
+  cursor: pointer;
+}
+.file-button input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}

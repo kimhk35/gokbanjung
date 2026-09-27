@@ -48,3 +48,4 @@ test-results/
 .superpowers/
 .env.smtp.local
 *.backup-*
+/.next-build/

@@ -40,6 +40,14 @@ type Context = {
 };
 const C = createContext<Context | null>(null);
 const phase2Errors: Record<string, Localized> = {
+  no_questions: {
+    ko: "파일에서 문항을 찾지 못했어요. 문항 앞에 1. 2. 같은 번호가 있는지 확인해 주세요.",
+    en: "No questions were found. Check that questions are numbered like 1. 2.",
+  },
+  unreadable_file: {
+    ko: "파일을 읽지 못했어요. 스캔한 그림 파일이 아닌지 확인해 주세요.",
+    en: "The file could not be read. Make sure it is not a scanned image.",
+  },
   rights_required: {
     ko: "본문을 게시할 권한이 있는지 확인란에 체크해 주세요.",
     en: "Please confirm you have permission to post this text.",
