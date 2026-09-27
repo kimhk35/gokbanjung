@@ -97,6 +97,26 @@ const errors: Record<string, Localized> = {
     ko: "AI 요청 설정이 현재 모델과 맞지 않습니다. 관리자에게 모델 설정 확인을 요청해 주세요.",
     en: "The AI request is incompatible with the configured model. Ask the administrator to check its settings.",
   },
+  invalid_time: {
+    ko: "날짜와 시간을 확인해 주세요. 끝나는 시간은 시작 시간보다 늦어야 합니다.",
+    en: "Check the date and time. The end must be after the start.",
+  },
+  invalid_file: {
+    ko: "PNG·JPG·WebP 사진만 올릴 수 있습니다.",
+    en: "Only PNG, JPG or WebP images can be uploaded.",
+  },
+  storage_unavailable: {
+    ko: "사진 저장소가 아직 연결되지 않았습니다. 포스터 없이 저장할 수 있습니다.",
+    en: "Image storage is not connected yet. You can save without a poster.",
+  },
+  conflict: {
+    ko: "이미 처리된 요청입니다. 새로고침해 주세요.",
+    en: "This was already handled. Please refresh.",
+  },
+  not_found: {
+    ko: "찾을 수 없거나 아직 공개되지 않았습니다.",
+    en: "Not found or not published yet.",
+  },
   nickname_required: {
     ko: "먼저 닉네임을 입력해 주세요.",
     en: "Please choose a nickname first.",
