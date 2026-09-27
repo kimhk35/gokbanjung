@@ -221,6 +221,7 @@ export function Shell({ children }: { children: ReactNode }) {
             "Read, ponder, share, and live the gospel of Jesus Christ together.",
           )}
         </p>
+        <Link href="/guide">{t("사용설명서", "User guide")}</Link>
         <Link href="/privacy">
           {t("개인정보와 나의 기록", "Privacy & my records")}
         </Link>
@@ -281,6 +282,7 @@ export function Shell({ children }: { children: ReactNode }) {
             ["/teacher/apply", t("교사 신청", "Apply to teach"), BookOpen],
             ["/admin", t("관리자", "Administrator"), ShieldCheck],
             ["/privacy", t("내 기록 관리", "Manage my records"), ShieldCheck],
+            ["/guide", t("사용설명서", "User guide"), BookOpen],
           ].map(([href, label, Icon]) => {
             const I = Icon as typeof BookOpen;
             return (

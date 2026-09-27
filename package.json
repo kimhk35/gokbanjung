@@ -10,7 +10,8 @@
     "test": "node --import tsx --test tests/*.test.ts",
     "seed": "node --import tsx scripts/seed.ts",
     "check:live": "node scripts/check-live.mjs",
-    "db:update": "node scripts/update-database.mjs"
+    "db:update": "node scripts/update-database.mjs",
+    "guide:build": "node --import tsx scripts/guide-html.ts"
   },
   "dependencies": {
     "@aiden0z/pptx-renderer": "1.3.0",

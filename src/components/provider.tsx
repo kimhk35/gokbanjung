@@ -10,6 +10,7 @@ import {
 import { api, RequestError } from "@/lib/client";
 import type { Lang, Actor, Week, Localized } from "@/lib/types";
 import { curriculum } from "@/lib/curriculum";
+import { initialLang } from "@/lib/lang";
 type Boot = {
   actor: Actor;
   weeks: { data: Week }[];
@@ -257,8 +258,12 @@ export function Provider({ children }: { children: ReactNode }) {
     setBoot(await api<Boot>("bootstrap"));
   }, []);
   useEffect(() => {
-    const saved = localStorage.getItem("ggc_lang");
-    if (saved === "en") setLanguage("en");
+    // First visit follows the device language; a saved choice wins.
+    const initial = initialLang(
+      localStorage.getItem("ggc_lang"),
+      navigator.languages?.length ? navigator.languages : [navigator.language],
+    );
+    if (initial === "en") setLanguage("en");
     reload()
       .catch(error)
       .finally(() => setReady(true));
