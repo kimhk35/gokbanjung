@@ -48,9 +48,6 @@ try {
     console.log(
       "Verified: accounts, quizzes, ward calendar, shared prompts. Existing records preserved.",
     );
-    console.log(
-      "Verified: account approval, private quiz sets, attempts and reward rules. Existing records preserved.",
-    );
   });
 } catch (e) {
   console.error(
