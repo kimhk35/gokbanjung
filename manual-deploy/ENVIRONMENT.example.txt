@@ -1,0 +1,10 @@
+# Add these individually in Vercel > Project > Settings > Environment Variables.
+# Select Production and Preview. Mark the three private values as Sensitive when available.
+DATABASE_URL=PASTE_SUPABASE_TRANSACTION_POOLER_CONNECTION_STRING
+NEXT_PUBLIC_SUPABASE_URL=https://xxoxvehviwtkmpigltat.supabase.co
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_MTdQ2x3hURGQ7i5V9yKCPw_XDkaY5mE
+SUPABASE_SERVICE_ROLE_KEY=PASTE_THIS_PROJECT_SERVICE_ROLE_KEY
+OPENAI_API_KEY=PASTE_YOUR_OPENAI_API_KEY
+OPENAI_MODEL=gpt-4.1-mini
+# Initially omit NEXT_PUBLIC_SITE_URL. The server validates against the request origin.
+# Never set it to localhost on Vercel. If added later, use the exact primary HTTPS site origin.

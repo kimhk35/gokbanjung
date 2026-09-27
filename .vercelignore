@@ -1,0 +1,16 @@
+.git
+node_modules
+.next
+.next-http-test
+.next-release-qa
+.local-db
+.local-db-service-test
+.local-db-release-qa
+output
+docs
+manual-deploy
+*.cmd
+.env*
+*.log
+*.tsbuildinfo
+supabase/.temp

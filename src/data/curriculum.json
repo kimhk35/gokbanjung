@@ -1,0 +1,1201 @@
+[
+  {
+    "number": 1,
+    "start": "2025-12-29",
+    "end": "2026-01-04",
+    "reference": {
+      "ko": "구약전서 소개",
+      "en": "Introduction to the Old Testament"
+    },
+    "title": {
+      "ko": "예수 그리스도의 첫 번째 성약",
+      "en": "The First Testament of Jesus Christ"
+    },
+    "sourcePage": 13,
+    "pdfPage": 18,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/01?lang=kor"
+  },
+  {
+    "number": 2,
+    "start": "2026-01-05",
+    "end": "2026-01-11",
+    "reference": {
+      "ko": "모세서 1장; 아브라함서 3장",
+      "en": "Moses 1; Abraham 3"
+    },
+    "title": {
+      "ko": "“이것이 곧 나의 일이요, 나의 영광이니라”",
+      "en": "This Is My Work and My Glory"
+    },
+    "sourcePage": 19,
+    "pdfPage": 24,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/02?lang=kor"
+  },
+  {
+    "number": 3,
+    "start": "2026-01-12",
+    "end": "2026-01-18",
+    "reference": {
+      "ko": "창세기1~2장; 모세서 2~3장; 아브라함서 4~5장",
+      "en": "Genesis 1–2; Moses 2–3; Abraham 4–5"
+    },
+    "title": {
+      "ko": "“태초에 하나님이 천지를 창조하시니라”",
+      "en": "In the Beginning God Created the Heaven and the Earth"
+    },
+    "sourcePage": 25,
+    "pdfPage": 30,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/03?lang=kor"
+  },
+  {
+    "number": 4,
+    "start": "2026-01-19",
+    "end": "2026-01-25",
+    "reference": {
+      "ko": "창세기 3~4장; 모세서 4~5장",
+      "en": "Genesis 3–4; Moses 4–5"
+    },
+    "title": {
+      "ko": "아담과 이브의 타락",
+      "en": "The Fall of Adam and Eve"
+    },
+    "sourcePage": 31,
+    "pdfPage": 36,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/04?lang=kor"
+  },
+  {
+    "number": 5,
+    "start": "2026-01-26",
+    "end": "2026-02-01",
+    "reference": {
+      "ko": "창세기 5장; 모세서 6장",
+      "en": "Genesis 5; Moses 6"
+    },
+    "title": {
+      "ko": "“네 자녀들에게 자유롭게 이 일을 가르치라”",
+      "en": "Teach These Things Freely unto Your Children"
+    },
+    "sourcePage": 37,
+    "pdfPage": 42,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/05?lang=kor"
+  },
+  {
+    "number": 6,
+    "start": "2026-02-02",
+    "end": "2026-02-08",
+    "reference": {
+      "ko": "모세서 7장",
+      "en": "Moses 7"
+    },
+    "title": {
+      "ko": "“주가 그의 백성을 시온이라 불렀더라”",
+      "en": "The Lord Called His People Zion"
+    },
+    "sourcePage": 43,
+    "pdfPage": 48,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/06?lang=kor"
+  },
+  {
+    "number": 7,
+    "start": "2026-02-09",
+    "end": "2026-02-15",
+    "reference": {
+      "ko": "창세기 6~11장; 모세서 8장",
+      "en": "Genesis 6–11; Moses 8"
+    },
+    "title": {
+      "ko": "“노아는 여호와께 은혜를 입었더라”",
+      "en": "Noah and the Tower of Babel"
+    },
+    "sourcePage": 49,
+    "pdfPage": 54,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/07?lang=kor"
+  },
+  {
+    "number": 8,
+    "start": "2026-02-16",
+    "end": "2026-02-22",
+    "reference": {
+      "ko": "창세기 12~17장; 아브라함서 1~2장",
+      "en": "Genesis 12–17; Abraham 1–2"
+    },
+    "title": {
+      "ko": "“의의 더 큰 추종자가 되고”",
+      "en": "To Be a Greater Follower of Righteousness"
+    },
+    "sourcePage": 58,
+    "pdfPage": 63,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/08?lang=kor"
+  },
+  {
+    "number": 9,
+    "start": "2026-02-23",
+    "end": "2026-03-01",
+    "reference": {
+      "ko": "창세기 18~23장",
+      "en": "Genesis 18–23"
+    },
+    "title": {
+      "ko": "“여호와께 능하지 못한 일이 있겠느냐”",
+      "en": "Is Anything Too Hard for the Lord?"
+    },
+    "sourcePage": 64,
+    "pdfPage": 69,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/09?lang=kor"
+  },
+  {
+    "number": 10,
+    "start": "2026-03-02",
+    "end": "2026-03-08",
+    "reference": {
+      "ko": "창세기 24~33장",
+      "en": "Genesis 24–33"
+    },
+    "title": {
+      "ko": "“하나님께서 승리하시게 하십시오”",
+      "en": "Let God Prevail"
+    },
+    "sourcePage": 73,
+    "pdfPage": 78,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/10?lang=kor"
+  },
+  {
+    "number": 11,
+    "start": "2026-03-09",
+    "end": "2026-03-15",
+    "reference": {
+      "ko": "창세기 37~41장",
+      "en": "Genesis 37–41"
+    },
+    "title": {
+      "ko": "“여호와께서 요셉과 함께 하시므로”",
+      "en": "The Lord Was with Joseph"
+    },
+    "sourcePage": 79,
+    "pdfPage": 84,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/11?lang=kor"
+  },
+  {
+    "number": 12,
+    "start": "2026-03-16",
+    "end": "2026-03-22",
+    "reference": {
+      "ko": "창세기 42~50장",
+      "en": "Genesis 42–50"
+    },
+    "title": {
+      "ko": "“하나님은 그것을 선으로 바꾸사”",
+      "en": "God Meant It unto Good"
+    },
+    "sourcePage": 85,
+    "pdfPage": 90,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/12?lang=kor"
+  },
+  {
+    "number": 13,
+    "start": "2026-03-23",
+    "end": "2026-03-29",
+    "reference": {
+      "ko": "출애굽기 1~6장",
+      "en": "Exodus 1–6"
+    },
+    "title": {
+      "ko": "“나의 언약을 기억하노라”",
+      "en": "I Have Remembered My Covenant"
+    },
+    "sourcePage": 91,
+    "pdfPage": 96,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/13?lang=kor"
+  },
+  {
+    "number": 14,
+    "start": "2026-03-30",
+    "end": "2026-04-05",
+    "reference": {
+      "ko": "부활절",
+      "en": "Easter"
+    },
+    "title": {
+      "ko": "“사망을 영원히 멸하실 것이라”",
+      "en": "He Will Swallow Up Death in Victory"
+    },
+    "sourcePage": 97,
+    "pdfPage": 102,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/14?lang=kor"
+  },
+  {
+    "number": 15,
+    "start": "2026-04-06",
+    "end": "2026-04-12",
+    "reference": {
+      "ko": "출애굽기 7~13장",
+      "en": "Exodus 7–13"
+    },
+    "title": {
+      "ko": "“너희는 애굽[에서] … 나온 그 날을 기념하여”",
+      "en": "Remember This Day, in Which Ye Came Out from Egypt"
+    },
+    "sourcePage": 103,
+    "pdfPage": 108,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/15?lang=kor"
+  },
+  {
+    "number": 16,
+    "start": "2026-04-13",
+    "end": "2026-04-19",
+    "reference": {
+      "ko": "출애굽기 14~18장",
+      "en": "Exodus 14–18"
+    },
+    "title": {
+      "ko": "“가만히 서서 여호와께서 … 행하시는 구원을 보라”",
+      "en": "Stand Still, and See the Salvation of the Lord"
+    },
+    "sourcePage": 109,
+    "pdfPage": 114,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/16?lang=kor"
+  },
+  {
+    "number": 17,
+    "start": "2026-04-20",
+    "end": "2026-04-26",
+    "reference": {
+      "ko": "출애굽기 19~20장; 24장; 31~34장",
+      "en": "Exodus 19–20; 24; 31–34"
+    },
+    "title": {
+      "ko": "“여호와께서 명령하신 대로 우리가 다 행하리이다”",
+      "en": "All That the Lord Hath Said Will We Do"
+    },
+    "sourcePage": 115,
+    "pdfPage": 120,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/17?lang=kor"
+  },
+  {
+    "number": 18,
+    "start": "2026-04-27",
+    "end": "2026-05-03",
+    "reference": {
+      "ko": "출애굽기 35~40장; 레위기 1장; 4장; 16장; 19장",
+      "en": "Exodus 35–40; Leviticus 1; 4; 16; 19"
+    },
+    "title": {
+      "ko": "“여호와께 성결”",
+      "en": "Holiness to the Lord"
+    },
+    "sourcePage": 124,
+    "pdfPage": 129,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/18?lang=kor"
+  },
+  {
+    "number": 19,
+    "start": "2026-05-04",
+    "end": "2026-05-10",
+    "reference": {
+      "ko": "민수기 11~14장; 20~24장; 27장",
+      "en": "Numbers 11–14; 20–24; 27"
+    },
+    "title": {
+      "ko": "“여호와를 거역하지 [말고] … 두려워하지 말라”",
+      "en": "Rebel Not against the Lord, Neither Fear"
+    },
+    "sourcePage": 130,
+    "pdfPage": 135,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/19?lang=kor"
+  },
+  {
+    "number": 20,
+    "start": "2026-05-11",
+    "end": "2026-05-17",
+    "reference": {
+      "ko": "신명기 6~8장; 15장; 18장; 29~30장; 34장",
+      "en": "Deuteronomy 6–8; 15; 18; 29–30; 34"
+    },
+    "title": {
+      "ko": "“너는 조심하여 … 여호와를 잊지 말고”",
+      "en": "Beware Lest Thou Forget the Lord"
+    },
+    "sourcePage": 136,
+    "pdfPage": 141,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/20?lang=kor"
+  },
+  {
+    "number": 21,
+    "start": "2026-05-18",
+    "end": "2026-05-24",
+    "reference": {
+      "ko": "여호수아 1~8장; 23~24장",
+      "en": "Joshua 1–8; 23–24"
+    },
+    "title": {
+      "ko": "“강하고 담대하라”",
+      "en": "Be Strong and of a Good Courage"
+    },
+    "sourcePage": 145,
+    "pdfPage": 150,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/21?lang=kor"
+  },
+  {
+    "number": 22,
+    "start": "2026-05-25",
+    "end": "2026-05-31",
+    "reference": {
+      "ko": "사사기 2~4장; 6~8장; 13~16장",
+      "en": "Judges 2–4; 6–8; 13–16"
+    },
+    "title": {
+      "ko": "“여호와께서 … 한 구원자를 세워”",
+      "en": "The Lord Raised Up a Deliverer"
+    },
+    "sourcePage": 151,
+    "pdfPage": 156,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/22?lang=kor"
+  },
+  {
+    "number": 23,
+    "start": "2026-06-01",
+    "end": "2026-06-07",
+    "reference": {
+      "ko": "룻기; 사무엘상 1~7장",
+      "en": "Ruth ; 1 Samuel 1–7"
+    },
+    "title": {
+      "ko": "“내 마음이 여호와로 말미암아 즐거워하며”",
+      "en": "My Heart Rejoiceth in the Lord"
+    },
+    "sourcePage": 157,
+    "pdfPage": 162,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/23?lang=kor"
+  },
+  {
+    "number": 24,
+    "start": "2026-06-08",
+    "end": "2026-06-14",
+    "reference": {
+      "ko": "사무엘상 8~10장; 13장; 15~16장",
+      "en": "1 Samuel 8–10; 13; 15–16"
+    },
+    "title": {
+      "ko": "“여호와는 중심을 보느니라”",
+      "en": "The Lord Looketh on the Heart"
+    },
+    "sourcePage": 163,
+    "pdfPage": 168,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/24?lang=kor"
+  },
+  {
+    "number": 25,
+    "start": "2026-06-15",
+    "end": "2026-06-21",
+    "reference": {
+      "ko": "사무엘상 17~18장; 24~26장; 사무엘하 5~7장",
+      "en": "1 Samuel 17–18; 24–26; 2 Samuel 5–7"
+    },
+    "title": {
+      "ko": "“전쟁은 여호와께 속한 것인즉”",
+      "en": "The Battle Is the Lord’s"
+    },
+    "sourcePage": 169,
+    "pdfPage": 174,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/25?lang=kor"
+  },
+  {
+    "number": 26,
+    "start": "2026-06-22",
+    "end": "2026-06-28",
+    "reference": {
+      "ko": "사무엘하 11~12장; 열왕기상 3장; 6~9장; 11장",
+      "en": "2 Samuel 11–12; 1 Kings 3; 6–9; 11"
+    },
+    "title": {
+      "ko": "“주는 하늘에서 그들의 기도[를] … 들으시고”",
+      "en": "Hear Thou in Heaven Their Prayer"
+    },
+    "sourcePage": 175,
+    "pdfPage": 180,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/26?lang=kor"
+  },
+  {
+    "number": 27,
+    "start": "2026-06-29",
+    "end": "2026-07-05",
+    "reference": {
+      "ko": "열왕기상 12~13장; 17~22장",
+      "en": "1 Kings 12–13; 17–22"
+    },
+    "title": {
+      "ko": "“여호와가 만일 하나님이면 그를 따르고”",
+      "en": "If the Lord Be God, Follow Him"
+    },
+    "sourcePage": 181,
+    "pdfPage": 186,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/27?lang=kor"
+  },
+  {
+    "number": 28,
+    "start": "2026-07-06",
+    "end": "2026-07-12",
+    "reference": {
+      "ko": "열왕기하 2~7장",
+      "en": "2 Kings 2–7"
+    },
+    "title": {
+      "ko": "“이스라엘 중에 선지자가 있[느니라]”",
+      "en": "There Is a Prophet in Israel"
+    },
+    "sourcePage": 187,
+    "pdfPage": 192,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/28?lang=kor"
+  },
+  {
+    "number": 29,
+    "start": "2026-07-13",
+    "end": "2026-07-19",
+    "reference": {
+      "ko": "열왕기하 16~25장",
+      "en": "2 Kings 16–25"
+    },
+    "title": {
+      "ko": "“히스기야가 이스라엘 하나님 여호와를 의지하였는데”",
+      "en": "He Trusted in the Lord God of Israel"
+    },
+    "sourcePage": 196,
+    "pdfPage": 201,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/29?lang=kor"
+  },
+  {
+    "number": 30,
+    "start": "2026-07-20",
+    "end": "2026-07-26",
+    "reference": {
+      "ko": "역대하 14~20장; 26장; 30장",
+      "en": "2 Chronicles 14–20; 26; 30"
+    },
+    "title": {
+      "ko": "“오직 주만 바라보나이다”",
+      "en": "Our Eyes Are upon Thee"
+    },
+    "sourcePage": 202,
+    "pdfPage": 207,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/30?lang=kor"
+  },
+  {
+    "number": 31,
+    "start": "2026-07-27",
+    "end": "2026-08-02",
+    "reference": {
+      "ko": "에스라 1장; 3~7장; 느헤미야 2장; 4~6장; 8장",
+      "en": "Ezra 1; 3–7; Nehemiah 2; 4–6; 8"
+    },
+    "title": {
+      "ko": "“내가 이제 큰 역사를 하니”",
+      "en": "I Am Doing a Great Work"
+    },
+    "sourcePage": 208,
+    "pdfPage": 213,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/31?lang=kor"
+  },
+  {
+    "number": 32,
+    "start": "2026-08-03",
+    "end": "2026-08-09",
+    "reference": {
+      "ko": "에스더",
+      "en": "Esther"
+    },
+    "title": {
+      "ko": "“네가 … 이 때를 위[하여 왔느니라]”",
+      "en": "For Such a Time as This"
+    },
+    "sourcePage": 214,
+    "pdfPage": 219,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/32?lang=kor"
+  },
+  {
+    "number": 33,
+    "start": "2026-08-10",
+    "end": "2026-08-16",
+    "reference": {
+      "ko": "욥기 1~3장; 12~14장; 19장; 21~24장; 38~40장; 42장",
+      "en": "Job 1–3; 12–14; 19; 21–24; 38–40; 42"
+    },
+    "title": {
+      "ko": "“[그래도] 나는 그를 의뢰하리니”",
+      "en": "Yet Will I Trust in Him"
+    },
+    "sourcePage": 223,
+    "pdfPage": 228,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/33?lang=kor"
+  },
+  {
+    "number": 34,
+    "start": "2026-08-17",
+    "end": "2026-08-23",
+    "reference": {
+      "ko": "시편 1~2편; 8편; 19~33편; 40편; 46편",
+      "en": "Psalms 1–2; 8; 19–33; 40; 46"
+    },
+    "title": {
+      "ko": "“여호와는 나의 목자시니”",
+      "en": "The Lord Is My Shepherd"
+    },
+    "sourcePage": 229,
+    "pdfPage": 234,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/34?lang=kor"
+  },
+  {
+    "number": 35,
+    "start": "2026-08-24",
+    "end": "2026-08-30",
+    "reference": {
+      "ko": "시편 49~51편; 61~66편; 69~72편; 77~78편; 85~86편",
+      "en": "Psalms 49–51; 61–66; 69–72; 77–78; 85–86"
+    },
+    "title": {
+      "ko": "“하나님이 나의 영혼을 위하여 행하신 일을 내가 선포하리로다”",
+      "en": "I Will Declare What He Hath Done for My Soul"
+    },
+    "sourcePage": 235,
+    "pdfPage": 240,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/35?lang=kor"
+  },
+  {
+    "number": 36,
+    "start": "2026-08-31",
+    "end": "2026-09-06",
+    "reference": {
+      "ko": "시편 102~103편; 110편; 116~119편; 127~128편; 135~139편; 146~150편",
+      "en": "Psalms 102–103; 110; 116–119; 127–128; 135–139; 146–150"
+    },
+    "title": {
+      "ko": "“호흡이 있는 자마다 여호와를 찬양할지어다”",
+      "en": "Let Every Thing That Hath Breath Praise the Lord"
+    },
+    "sourcePage": 241,
+    "pdfPage": 246,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/36?lang=kor"
+  },
+  {
+    "number": 37,
+    "start": "2026-09-07",
+    "end": "2026-09-13",
+    "reference": {
+      "ko": "잠언 1~4장; 15~16장; 22장; 31장; 전도서 1~3장; 11~12장",
+      "en": "Proverbs 1–4; 15–16; 22; 31; Ecclesiastes 1–3; 11–12"
+    },
+    "title": {
+      "ko": "“네 길을 지도하시리라”",
+      "en": "He Shall Direct Thy Paths"
+    },
+    "sourcePage": 247,
+    "pdfPage": 252,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/37?lang=kor"
+  },
+  {
+    "number": 38,
+    "start": "2026-09-14",
+    "end": "2026-09-20",
+    "reference": {
+      "ko": "이사야 1~12장",
+      "en": "Isaiah 1–12"
+    },
+    "title": {
+      "ko": "“하나님은 나의 구원이시라”",
+      "en": "God Is My Salvation"
+    },
+    "sourcePage": 256,
+    "pdfPage": 261,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/38?lang=kor"
+  },
+  {
+    "number": 39,
+    "start": "2026-09-21",
+    "end": "2026-09-27",
+    "reference": {
+      "ko": "이사야 13~14장; 22장; 24~30장; 35장",
+      "en": "Isaiah 13–14; 22; 24–30; 35"
+    },
+    "title": {
+      "ko": "“기이하고 가장 기이한 일”",
+      "en": "A Marvellous Work and a Wonder"
+    },
+    "sourcePage": 262,
+    "pdfPage": 267,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/39?lang=kor"
+  },
+  {
+    "number": 40,
+    "start": "2026-09-28",
+    "end": "2026-10-04",
+    "reference": {
+      "ko": "이사야 40~49장",
+      "en": "Isaiah 40–49"
+    },
+    "title": {
+      "ko": "“내 백성을 위로하라”",
+      "en": "Comfort Ye My People"
+    },
+    "sourcePage": 268,
+    "pdfPage": 273,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/40?lang=kor"
+  },
+  {
+    "number": 41,
+    "start": "2026-10-05",
+    "end": "2026-10-11",
+    "reference": {
+      "ko": "이사야 50~57장",
+      "en": "Isaiah 50–57"
+    },
+    "title": {
+      "ko": "“그는 실로 우리의 질고를 지고 우리의 슬픔을 당하였거늘”",
+      "en": "He Hath Borne Our Griefs, and Carried Our Sorrows"
+    },
+    "sourcePage": 274,
+    "pdfPage": 279,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/41?lang=kor"
+  },
+  {
+    "number": 42,
+    "start": "2026-10-12",
+    "end": "2026-10-18",
+    "reference": {
+      "ko": "이사야 58~66장",
+      "en": "Isaiah 58–66"
+    },
+    "title": {
+      "ko": "“구속자가 시온에 임하며”",
+      "en": "The Redeemer Shall Come to Zion"
+    },
+    "sourcePage": 280,
+    "pdfPage": 285,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/42?lang=kor"
+  },
+  {
+    "number": 43,
+    "start": "2026-10-19",
+    "end": "2026-10-25",
+    "reference": {
+      "ko": "예레미야 1~3장; 7장; 16~18장; 20장",
+      "en": "Jeremiah 1–3; 7; 16–18; 20"
+    },
+    "title": {
+      "ko": "“내가 너를 모태에 짓기 전에 너를 알았고”",
+      "en": "Before I Formed Thee in the Belly I Knew Thee"
+    },
+    "sourcePage": 286,
+    "pdfPage": 291,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43?lang=kor"
+  },
+  {
+    "number": 44,
+    "start": "2026-10-26",
+    "end": "2026-11-01",
+    "reference": {
+      "ko": "예레미야 31~33장; 36~38장; 예레미야애가 1장; 3장",
+      "en": "Jeremiah 31–33; 36–38; Lamentations 1; 3"
+    },
+    "title": {
+      "ko": "“내가 그들의 슬픔을 돌려서 즐겁게 하며”",
+      "en": "I Will Turn Their Mourning into Joy"
+    },
+    "sourcePage": 292,
+    "pdfPage": 297,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": {
+      "ko": "교재 목차는 예레미야 36~38장, 본문 제목은 36~39장으로 다릅니다. 목차 기준으로 표시하며 교사 확인이 필요합니다.",
+      "en": "The table of contents lists Jeremiah 36–38, while the lesson heading lists 36–39. The contents range is used pending teacher review."
+    },
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44?lang=kor"
+  },
+  {
+    "number": 45,
+    "start": "2026-11-02",
+    "end": "2026-11-08",
+    "reference": {
+      "ko": "에스겔 1~3장; 33~34장; 36~37장; 47장",
+      "en": "Ezekiel 1–3; 33–34; 36–37; 47"
+    },
+    "title": {
+      "ko": "“새 영을 너희 속에 두고”",
+      "en": "A New Spirit Will I Put within You"
+    },
+    "sourcePage": 298,
+    "pdfPage": 303,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/45?lang=kor"
+  },
+  {
+    "number": 46,
+    "start": "2026-11-09",
+    "end": "2026-11-15",
+    "reference": {
+      "ko": "다니엘 1~7장",
+      "en": "Daniel 1–7"
+    },
+    "title": {
+      "ko": "“사람을 구원할 다른 신이 없음이니라”",
+      "en": "There Is No Other God That Can Deliver"
+    },
+    "sourcePage": 304,
+    "pdfPage": 309,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/46?lang=kor"
+  },
+  {
+    "number": 47,
+    "start": "2026-11-16",
+    "end": "2026-11-22",
+    "reference": {
+      "ko": "호세아 1~6장; 10~14장; 요엘",
+      "en": "Hosea 1–6; 10–14; Joel"
+    },
+    "title": {
+      "ko": "“내가 … 기쁘게 그들을 사랑하리니”",
+      "en": "I Will Love Them Freely"
+    },
+    "sourcePage": 310,
+    "pdfPage": 315,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47?lang=kor"
+  },
+  {
+    "number": 48,
+    "start": "2026-11-23",
+    "end": "2026-11-29",
+    "reference": {
+      "ko": "아모스; 오바댜; 요나",
+      "en": "Amos ; Obadiah ; Jonah"
+    },
+    "title": {
+      "ko": "“여호와를 찾으라 그리하면 살리라”",
+      "en": "Seek the Lord, and Ye Shall Live"
+    },
+    "sourcePage": 316,
+    "pdfPage": 321,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/48?lang=kor"
+  },
+  {
+    "number": 49,
+    "start": "2026-11-30",
+    "end": "2026-12-06",
+    "reference": {
+      "ko": "미가; 나훔; 하박국; 스바냐",
+      "en": "Micah ; Nahum ; Habakkuk ; Zephaniah"
+    },
+    "title": {
+      "ko": "“주께서는 … 인애를 기뻐하시므로”",
+      "en": "He Delighteth in Mercy"
+    },
+    "sourcePage": 322,
+    "pdfPage": 327,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/49?lang=kor"
+  },
+  {
+    "number": 50,
+    "start": "2026-12-07",
+    "end": "2026-12-13",
+    "reference": {
+      "ko": "학개 1~2장; 스가랴 1~4장; 7~14장",
+      "en": "Haggai 1–2; Zechariah 1–4; 7–14"
+    },
+    "title": {
+      "ko": "“여호와께 성결”",
+      "en": "Holiness to the Lord"
+    },
+    "sourcePage": 328,
+    "pdfPage": 333,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/50?lang=kor"
+  },
+  {
+    "number": 51,
+    "start": "2026-12-14",
+    "end": "2026-12-20",
+    "reference": {
+      "ko": "말라기",
+      "en": "Malachi"
+    },
+    "title": {
+      "ko": "“여호와께서 이르시되 내가 너희를 사랑하였노라”",
+      "en": "I Have Loved You, Saith the Lord"
+    },
+    "sourcePage": 334,
+    "pdfPage": 339,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/51?lang=kor"
+  },
+  {
+    "number": 52,
+    "start": "2026-12-21",
+    "end": "2026-12-27",
+    "reference": {
+      "ko": "성탄절",
+      "en": "Christmas"
+    },
+    "title": {
+      "ko": "“우리가 그를 기다렸으니 그가 우리를 구원하시리로다”",
+      "en": "We Have Waited for Him, and He Will Save Us"
+    },
+    "sourcePage": 340,
+    "pdfPage": 345,
+    "status": "published",
+    "source": "2026 Come, Follow Me — Old Testament (Korean)",
+    "sourceNote": null,
+    "translationLabel": {
+      "ko": "영어 제목은 학습용 번역입니다.",
+      "en": "English titles are study translations of the Korean source."
+    },
+    "sourceUrl": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/52?lang=kor"
+  }
+]
