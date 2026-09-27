@@ -35,6 +35,14 @@ test("every guide text exists in both Korean and English", () => {
     "managers",
     "errors",
     "other-languages",
+    "daily-insight",
+    "cards",
+    "verse-notes",
+    "text-notes",
+    "app-install",
+    "present",
+    "upload-text",
+    "insight-edit",
   ])
     assert.ok(ids.has(id), `missing section ${id}`);
 });
@@ -44,6 +52,8 @@ test("standalone manual carries both languages and switches automatically", () =
   assert.match(html, /<html lang="ko">/);
   assert.match(html, /data-set-lang="ko"/);
   assert.match(html, /data-set-lang="en"/);
+  assert.match(html, /data-set-lang="es"/);
+  assert.match(html, /data-set-lang="fil"/);
   assert.match(html, /navigator\.languages/);
   assert.ok(
     html.includes(GUIDE[0].title.ko) && html.includes(GUIDE[0].title.en),

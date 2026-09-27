@@ -47,8 +47,8 @@ export const GUIDE: GuideSection[] = [
         "The ward calendar and shared questions open right away, even without a nickname.",
       ),
       L(
-        "오른쪽 위 한국어/EN 버튼으로 언어를 바꿀 수 있습니다. 처음에는 기기 언어에 맞춰 자동으로 정해집니다.",
-        "Use the 한국어/EN buttons at the top right to switch language. The first visit follows your device language automatically.",
+        "오른쪽 위 언어 버튼(한국어·EN·ES·FIL)으로 언어를 바꿀 수 있습니다. 처음에는 기기 언어에 맞춰 자동으로 정해집니다.",
+        "Use the language buttons at the top right (한국어·EN·ES·FIL) to switch language. The first visit follows your device language automatically.",
       ),
     ],
   },
@@ -222,6 +222,112 @@ export const GUIDE: GuideSection[] = [
     ),
   },
   {
+    id: "daily-insight",
+    part: "member",
+    title: L("오늘의 Insight 카드", "Today's insight card"),
+    intro: L(
+      "매일 처음 사이트를 열면 그날의 Insight 카드가 뜹니다. 몇째 날인지, 오늘의 질문, 핵심 주제(오늘 읽을 범위), 핵심 메시지가 담겨 있습니다. 닫으면 그날은 다시 뜨지 않고, 홈 화면 맨 위에서 언제든 다시 볼 수 있습니다.",
+      "The first time you open the site each day, today's insight card appears: the day of the week's study, today's question, the key topic (today's reading) and the key message. Once closed it won't pop up again that day, and it is always at the top of Home.",
+    ),
+    steps: [
+      L(
+        "'오늘 학습 시작'을 누르면 그날의 말씀 학습으로 바로 갑니다.",
+        "Tap Start today's study to go straight to today's lesson.",
+      ),
+      L(
+        "'이미지로 저장·공유'를 누르면 카드를 사진으로 저장하거나 카카오톡 등으로 보낼 수 있습니다.",
+        "Tap Save or share image to keep the card as a picture or send it by chat.",
+      ),
+    ],
+  },
+  {
+    id: "cards",
+    part: "member",
+    title: L("답글을 카드 이미지로 저장하기", "Saving a reply as a card image"),
+    steps: [
+      L(
+        "함께 생각하기의 답글 아래 '카드' 버튼을 누릅니다.",
+        "Tap the Card button under a reply in Think together.",
+      ),
+      L(
+        "정사각형·세로·가로 크기와 배경 그림을 고르고, 작성자 이름을 보일지 정합니다.",
+        "Choose square, portrait or landscape, a background, and whether to show the author's name.",
+      ),
+      L(
+        "'이미지 저장' 또는 '공유'를 누릅니다. 이미지는 휴대폰 안에서만 만들어지고 서버로 보내지지 않습니다.",
+        "Tap Save image or Share. The image is made on your phone and never sent to the server.",
+      ),
+    ],
+  },
+  {
+    id: "verse-notes",
+    part: "member",
+    title: L("절 번호로 의견 달기", "Notes on a verse"),
+    steps: [
+      L(
+        "주차 페이지 아래 '절에 의견 달기'를 열거나, 경전 읽기 화면 맨 아래로 내려갑니다.",
+        "Open Verse notes at the bottom of a week page, or scroll to the bottom of Read scriptures.",
+      ),
+      L(
+        "장을 고르고 시작 절(끝 절은 선택)을 적은 뒤, 짧은 인용(200자까지)과 생각을 씁니다.",
+        "Choose the chapter and the starting verse (end verse optional), then add a short quote (up to 200 characters) and your thought.",
+      ),
+      L(
+        "같은 절에 달린 다른 사람들의 의견이 절 번호별로 모여 보이고, 하트와 댓글을 남길 수 있습니다.",
+        "Other people's notes are grouped by verse; you can heart and comment on them.",
+      ),
+    ],
+  },
+  {
+    id: "text-notes",
+    part: "member",
+    title: L(
+      "공과 본문에 형광펜·의견 달기",
+      "Highlights and notes on the lesson text",
+    ),
+    intro: L(
+      "교사가 공과 본문을 올린 주에는 주차 페이지의 '공과 본문 읽고 문장에 의견 달기'에서 본문을 읽을 수 있습니다.",
+      "In weeks when a teacher has posted the lesson text, open Read the lesson text and add notes on the week page.",
+    ),
+    steps: [
+      L(
+        "문장을 길게 누르거나 드래그해 선택하면 아래에 버튼이 나타납니다.",
+        "Press and hold or drag to select a sentence; buttons appear at the bottom.",
+      ),
+      L(
+        "'형광펜'은 나만 보는 표시로, 이 기기에 저장됩니다.",
+        "Highlight marks it just for you and is saved on this device.",
+      ),
+      L(
+        "'의견 달기'는 모두에게 공개됩니다. 의견이 달린 문장에는 점선 밑줄이 생기고, 누르면 그 문장의 의견만 모아 볼 수 있습니다.",
+        "Add note is public. Sentences with notes get a dotted underline; tap one to see just its notes.",
+      ),
+    ],
+  },
+  {
+    id: "app-install",
+    part: "member",
+    title: L("안드로이드 앱 설치하기", "Installing the Android app"),
+    steps: [
+      L(
+        "운영자에게 받은 gokbanjung.apk 파일을 휴대폰에서 누릅니다.",
+        "Tap the gokbanjung.apk file you received from an operator on your phone.",
+      ),
+      L(
+        "'출처를 알 수 없는 앱' 경고가 나오면 '설정' → '이 출처 허용'을 켠 뒤 돌아와 '설치'를 누릅니다.",
+        "If you see an unknown-apps warning, open Settings → Allow from this source, then return and tap Install.",
+      ),
+      L(
+        "홈 화면의 곡반정와드 아이콘으로 앱을 엽니다. 사이트가 바뀌면 앱도 자동으로 최신 내용이 됩니다.",
+        "Open the app from the Gokbanjeong Ward icon on your home screen. The app always shows the latest site automatically.",
+      ),
+    ],
+    note: L(
+      "아이폰은 앱 파일 대신 Safari의 '홈 화면에 추가'를 쓰면 앱처럼 사용할 수 있습니다.",
+      "On iPhone, use Safari's Add to Home Screen instead; it works like an app.",
+    ),
+  },
+  {
     id: "deploy",
     part: "operator",
     title: L("처음 배포하기 (한 번만)", "First deployment (once)"),
@@ -367,6 +473,80 @@ export const GUIDE: GuideSection[] = [
       L(
         "질문, 읽기 자료, 포스터(선택)를 넣고 게시합니다.",
         "Add the question, a reading and an optional poster, then publish.",
+      ),
+    ],
+  },
+  {
+    id: "present",
+    part: "operator",
+    title: L(
+      "수업에서 답글 발표하기 (교사·관리자)",
+      "Presenting replies in class (teachers, admins)",
+    ),
+    steps: [
+      L(
+        "질문 화면에서 '발표 준비'를 누르면 답글마다 '☆ 담기' 버튼이 생깁니다.",
+        "On a question, tap Prepare to present; each reply gets an Add ☆ button.",
+      ),
+      L(
+        "발표할 답글을 담고, 오른쪽 목록에서 ↑↓로 순서를 정합니다. 목록은 이 기기에 저장됩니다.",
+        "Add the replies to show and order them with ↑↓ in the list. The list is saved on this device.",
+      ),
+      L(
+        "'발표 시작' → 전체 화면. ←/→ 키나 화면 터치로 넘기고, '이름 숨기기'로 작성자를 가리고, Esc로 끝냅니다.",
+        "Tap Start for full screen. Use ←/→ or tap to move, Hide names to hide authors, and Esc to finish.",
+      ),
+    ],
+  },
+  {
+    id: "upload-text",
+    part: "operator",
+    title: L(
+      "공과 본문 올리기 (교사·관리자)",
+      "Uploading lesson text (teachers, admins)",
+    ),
+    steps: [
+      L(
+        "주차 페이지 → '공과 본문 읽고 문장에 의견 달기' → '본문 올리기'.",
+        "Week page → Read the lesson text and add notes → Upload text.",
+      ),
+      L(
+        "웹 페이지에서 본문을 복사해 붙여 넣으면 제목·목록·굵게가 유지됩니다. 출처 주소와 권한 메모를 적습니다.",
+        "Paste text copied from a web page (headings, lists and bold are kept), and enter the source link and a rights note.",
+      ),
+      L(
+        "'게시할 권한이 있음을 확인합니다'에 체크해야 저장할 수 있습니다. 미리 보기 후 '임시 저장' 또는 '게시하기'.",
+        "You must tick I confirm I have permission to post. Preview, then Save draft or Publish.",
+      ),
+      L(
+        "게시한 본문을 고치면 새 판(버전)이 임시 저장되고, 다시 게시할 때까지 이전 판이 보입니다. 이전 판에 달린 의견은 같은 문장을 찾아 붙습니다.",
+        "Editing a published text creates a new draft version; readers see the previous one until you publish. Notes move to the same sentence in the new version.",
+      ),
+    ],
+    note: L(
+      "교회 자료는 저작권이 있습니다. 게시 허락을 받은 본문만 올려 주세요.",
+      "Church materials are copyrighted. Upload only text you have permission to post.",
+    ),
+  },
+  {
+    id: "insight-edit",
+    part: "operator",
+    title: L(
+      "오늘의 Insight 수정하기 (교사·관리자)",
+      "Editing today's insight (teachers, admins)",
+    ),
+    steps: [
+      L(
+        "홈 화면 맨 위 카드의 '오늘 카드 수정'을 누릅니다.",
+        "Tap Edit today's card on the card at the top of Home.",
+      ),
+      L(
+        "제목·질문·핵심 주제·핵심 메시지를 고치거나, 카드 그림을 올리면 그림이 카드 전체로 보입니다.",
+        "Change the title, question, key topic or key message, or upload a picture to use it as the whole card.",
+      ),
+      L(
+        "그날 하루만 바뀝니다. '자동 카드로 되돌리기'로 원래대로 돌아갑니다.",
+        "It changes only that day. Use the automatic card to undo.",
       ),
     ],
   },

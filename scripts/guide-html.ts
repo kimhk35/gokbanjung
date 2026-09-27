@@ -1,9 +1,11 @@
-// Builds the standalone bilingual manual (사용설명서.html) from src/data/guide.ts.
+// Builds the standalone four-language manual (사용설명서.html) from
+// src/data/guide.ts; Spanish/Filipino come from the site's dictionaries.
 // Run: node --import tsx scripts/guide-html.ts
 import { writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { GUIDE, GUIDE_PARTS, type GuideSection } from "../src/data/guide";
 import type { Localized } from "../src/lib/types";
+import { translate, UI_LANGS } from "../src/lib/i18n";
 
 const esc = (s: string) =>
   s
@@ -12,7 +14,9 @@ const esc = (s: string) =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 const both = (l: Localized) =>
-  `<span lang="ko">${esc(l.ko)}</span><span lang="en">${esc(l.en)}</span>`;
+  UI_LANGS.map(
+    ({ id }) => `<span lang="${id}">${esc(translate(id, l.ko, l.en))}</span>`,
+  ).join("");
 
 function section(s: GuideSection) {
   const parts = [`<section id="${s.id}"><h2>${both(s.title)}</h2>`];
@@ -79,7 +83,7 @@ nav.toc ul{padding-left:1.1em;margin:.2em 0 .6em}a{color:var(--navy)}@media (pre
 .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
 .lang button{min-width:64px;min-height:44px;border:0;background:var(--surface);color:var(--ink);font:inherit;font-weight:700;cursor:pointer}
 .lang button[aria-pressed=true]{background:var(--navy);color:#fff}
-html[lang=ko] [lang=en],html[lang=en] [lang=ko]{display:none}
+html[lang=ko] span[lang]:not([lang=ko]),html[lang=en] span[lang]:not([lang=en]),html[lang=es] span[lang]:not([lang=es]),html[lang=fil] span[lang]:not([lang=fil]){display:none}
 .lang button[lang]{display:inline-block !important}
 </style>
 </head>
@@ -87,7 +91,7 @@ html[lang=ko] [lang=en],html[lang=en] [lang=ko]{display:none}
 <main>
 <header>
 <div><small>${both({ ko: "곡반정와드 통합 학습 사이트", en: "Gokbanjeong Ward learning site" })}</small><h1>${both({ ko: "사용설명서", en: "User guide" })}</h1></div>
-<div class="lang" role="group" aria-label="Language"><button type="button" lang="ko" data-set-lang="ko">한국어</button><button type="button" lang="en" data-set-lang="en">EN</button></div>
+<div class="lang" role="group" aria-label="Language"><button type="button" lang="ko" data-set-lang="ko">한국어</button><button type="button" lang="en" data-set-lang="en">EN</button><button type="button" lang="es" data-set-lang="es">ES</button><button type="button" lang="fil" data-set-lang="fil">FIL</button></div>
 </header>
 <nav class="toc" aria-label="Contents"><ul>${toc}</ul></nav>
 ${body}
@@ -95,9 +99,9 @@ ${body}
 <script>
 (function(){
   function pick(saved,langs){
-    if(saved==="ko"||saved==="en")return saved;
+    if(saved==="ko"||saved==="en"||saved==="es"||saved==="fil")return saved;
     if(!langs.length)return "ko";
-    for(var i=0;i<langs.length;i++){var b=String(langs[i]).toLowerCase().split("-")[0];if(b==="ko"||b==="en")return b;}
+    for(var i=0;i<langs.length;i++){var b=String(langs[i]).toLowerCase().split("-")[0];if(b==="ko"||b==="en"||b==="es")return b;if(b==="fil"||b==="tl")return "fil";}
     return "en";
   }
   function set(l){
