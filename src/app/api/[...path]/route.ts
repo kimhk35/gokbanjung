@@ -8,6 +8,12 @@ import { generate, reviewAi } from "@/lib/ai";
 import { AppError, ensure } from "@/lib/errors";
 import { privileged } from "@/lib/db";
 import { checkAiConnection } from "@/lib/openai-config";
+import { sameOrigin, siteOrigin } from "@/lib/site-url";
+import {
+  isCommunityPath,
+  communityRead,
+  communityWrite,
+} from "@/lib/community-api";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -109,13 +115,23 @@ async function handle(
         ),
       );
     }
+    if (request.method === "GET" && isCommunityPath(path)) {
+      let viewer = null;
+      try {
+        viewer = await actor();
+      } catch (e) {
+        if (!(e instanceof AppError && e.status === 401)) throw e;
+      }
+      return json(
+        await communityRead(viewer, path, request.nextUrl.searchParams),
+      );
+    }
     if (request.method === "GET")
       return json(
         await readData(await actor(), path, request.nextUrl.searchParams),
       );
-    const expected = new URL(process.env.NEXT_PUBLIC_SITE_URL || request.url)
-      .origin;
-    ensure(request.headers.get("origin") === expected, 403, "origin_rejected");
+    const expected = siteOrigin(request.headers, request.url);
+    ensure(sameOrigin(request.headers, request.url), 403, "origin_rejected");
     const bodyLimit =
       path === "lesson/config"
         ? 3500000
@@ -130,6 +146,8 @@ async function handle(
     const body = await request.text();
     ensure(Buffer.byteLength(body, "utf8") < bodyLimit, 413, "too_large");
     const input = body ? JSON.parse(body) : {};
+    if (isCommunityPath(path))
+      return json(await communityWrite(await actor(), path, input));
     if (path === "session") return json(await createGuest());
     if (path === "teacher/request") {
       const { requestTeacher } = await import("@/lib/teacher-accounts");

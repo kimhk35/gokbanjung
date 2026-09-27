@@ -4,14 +4,12 @@ import { actor } from "@/lib/auth";
 import { asActor } from "@/lib/db";
 import { requireAdmin, rateLimit } from "@/lib/service";
 import { AppError, ensure } from "@/lib/errors";
+import { sameOrigin } from "@/lib/site-url";
 export const runtime = "nodejs";
 export const maxDuration = 60;
 export async function POST(req: NextRequest) {
   try {
-    ensure(
-      req.headers.get("origin") ===
-        new URL(process.env.NEXT_PUBLIC_SITE_URL || req.url).origin,
-    );
+    ensure(sameOrigin(req.headers, req.url), 403, "origin_rejected");
     const a = await actor();
     await requireAdmin(a);
     await rateLimit("upload:" + a.id, 10, 3600);
