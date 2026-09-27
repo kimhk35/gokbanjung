@@ -39,6 +39,12 @@ type Context = {
   ready: boolean;
 };
 const C = createContext<Context | null>(null);
+const phase2Errors: Record<string, Localized> = {
+  rights_required: {
+    ko: "본문을 게시할 권한이 있는지 확인란에 체크해 주세요.",
+    en: "Please confirm you have permission to post this text.",
+  },
+};
 const errors: Record<string, Localized> = {
   lesson_too_large: {
     ko: "수업 이미지 용량이 큽니다. 이미지를 줄이거나 여러 주차로 나눠 저장해 주세요(총 3.5MB 미만).",
@@ -251,7 +257,11 @@ export function Provider({ children }: { children: ReactNode }) {
     (e: unknown) => {
       const key = e instanceof RequestError ? e.code : "server_error";
       notify(
-        (errors[key] && t(errors[key].ko, errors[key].en)) ||
+        ((errors[key] || phase2Errors[key]) &&
+          t(
+            (errors[key] || phase2Errors[key]).ko,
+            (errors[key] || phase2Errors[key]).en,
+          )) ||
           t(
             "잠시 문제가 발생했습니다. 작성한 내용은 이 기기에 보관됩니다.",
             "Something went wrong. Your draft is kept on this device.",

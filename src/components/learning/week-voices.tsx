@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { BookOpenText, MessageCircle } from "lucide-react";
 import { useApp } from "../provider";
 import { api } from "@/lib/client";
 import type { Prompt } from "@/lib/prompts";
@@ -37,6 +37,16 @@ export function WeekVoices({ week }: { week: number }) {
           ))}
         </div>
       )}
+      <Link
+        className="button secondary lesson-text-link"
+        href={`/week/${week}/text`}
+      >
+        <BookOpenText size={18} />{" "}
+        {t(
+          "공과 본문 읽고 문장에 의견 달기",
+          "Read the lesson text and add notes",
+        )}
+      </Link>
       <details className="verse-notes-toggle">
         <summary>
           {t(

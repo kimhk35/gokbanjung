@@ -30,6 +30,10 @@ export async function communityRead(
       return P.getPrompt(a, params.get("slug") || "");
     case "notes/verse-list":
       return (await import("./verse-notes")).listVerseNotes(a, params);
+    case "notes/text-get":
+      return (await import("./lesson-texts")).getLessonText(a, params);
+    case "notes/text-list":
+      return (await import("./lesson-texts")).listTextNotes(a, params);
     case "home/activity":
       return {
         events: await W.upcomingEvents(3),
@@ -47,6 +51,7 @@ export async function communityWrite(a: Actor, path: string, input: unknown) {
   const W = await import("./ward-events");
   const P = await import("./prompts");
   const V = await import("./verse-notes");
+  const T = await import("./lesson-texts");
   const handlers: Record<
     string,
     (a: Actor, input: unknown) => Promise<unknown>
@@ -67,6 +72,13 @@ export async function communityWrite(a: Actor, path: string, input: unknown) {
     "notes/verse-heart": V.toggleVerseHeart,
     "notes/verse-comment": V.addVerseComment,
     "notes/verse-comment-delete": V.deleteVerseComment,
+    "notes/text-upload": T.saveLessonText,
+    "notes/text-publish": T.setLessonTextStatus,
+    "notes/text-save": T.saveTextNote,
+    "notes/text-delete": T.deleteTextNote,
+    "notes/text-heart": T.toggleTextHeart,
+    "notes/text-comment": T.addTextComment,
+    "notes/text-comment-delete": T.deleteTextComment,
   };
   const handler = handlers[path];
   ensure(handler, 404, "not_found");
