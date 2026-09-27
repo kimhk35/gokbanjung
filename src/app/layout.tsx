@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import "./renewal.css";
 import "./community.css";
+import "./theme.css";
 import { Provider } from "@/components/provider";
 import { Shell } from "@/components/shell";
 export const viewport: Viewport = {
@@ -10,8 +11,8 @@ export const viewport: Viewport = {
   viewportFit: "cover",
   interactiveWidget: "resizes-content",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f7f6f1" },
-    { media: "(prefers-color-scheme: dark)", color: "#141f28" },
+    { media: "(prefers-color-scheme: light)", color: "#fbf7f0" },
+    { media: "(prefers-color-scheme: dark)", color: "#11201f" },
   ],
 };
 export const metadata: Metadata = {

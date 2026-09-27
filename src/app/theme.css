@@ -1,0 +1,220 @@
+/* gokbanjung theme "따뜻한 햇살" — warm sand, deep teal, amber.
+   Imported last so it overrides the tokens and the hard-coded blues in
+   globals.css / renewal.css without editing those files. */
+:root {
+  --bg: #fbf7f0;
+  --surface: #fffdf9;
+  --ink: #233a3a;
+  --muted: #67716c;
+  --line: #ece2d2;
+  --soft: #f3ecdf;
+  --navy: #12706d;
+  --gold: #9a5f12;
+  --sage: #e6f1ec;
+  --shadow: 0 12px 38px #12706d0f;
+  --primary-hover: #0e5a57;
+  --hero-deep: #0c2826;
+  --on-navy: #ffffff;
+  --on-gold: #ffffff;
+}
+:root[data-theme="dark"] {
+  --bg: #11201f;
+  --surface: #1b302e;
+  --ink: #eef6f3;
+  --muted: #b0c3bd;
+  --line: #2f4744;
+  --soft: #223a37;
+  --navy: #4fb3ad;
+  --gold: #f0b35a;
+  --sage: #223a37;
+  --shadow: none;
+  --primary-hover: #6cc6c0;
+  --hero-deep: #081716;
+  --on-navy: #0b1b1a;
+  --on-gold: #2a1c05;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 100% 0%, #f0b35a14, transparent 55%),
+    radial-gradient(ellipse at 0% 30%, #12706d0d, transparent 60%), var(--bg);
+}
+:root[data-theme="dark"] body {
+  background:
+    radial-gradient(ellipse at 100% 0%, #f0b35a0d, transparent 55%), var(--bg);
+}
+.site-header {
+  background: linear-gradient(120deg, var(--surface), var(--soft));
+  border-top-color: var(--navy);
+}
+
+/* Navigation */
+.desktop-nav a[aria-current="page"] {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+  box-shadow: 0 6px 18px #12706d25;
+}
+.desktop-nav a[aria-current="page"] small,
+.desktop-nav a[aria-current="page"] .nav-arrow {
+  color: #e2f4f1;
+}
+:root[data-theme="dark"] .desktop-nav a[aria-current="page"],
+:root[data-theme="dark"] .desktop-nav a[aria-current="page"] strong {
+  color: var(--on-navy);
+}
+:root[data-theme="dark"] .desktop-nav a[aria-current="page"] small,
+:root[data-theme="dark"] .desktop-nav a[aria-current="page"] .nav-arrow {
+  color: #0b1b1a;
+}
+:root[data-theme="dark"] .desktop-nav a:not([aria-current="page"]) {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .desktop-nav a:not([aria-current="page"]) small {
+  color: var(--muted);
+}
+.nav-arrow {
+  color: #a39684;
+}
+.brand-icon,
+.nav-symbol,
+.feature-card > div > svg {
+  color: var(--navy);
+}
+:root[data-theme="dark"] .nav-symbol,
+:root[data-theme="dark"] .feature-card > div > svg {
+  color: var(--gold);
+}
+
+/* Buttons */
+.primary {
+  background: var(--navy);
+  box-shadow: 0 5px 14px #12706d1b;
+}
+.primary:hover {
+  background: var(--primary-hover);
+}
+:root[data-theme="dark"] .primary {
+  color: #0b1b1a;
+}
+:root[data-theme="dark"] .study-view-tabs button.active {
+  color: #0b1b1a;
+  background: var(--navy);
+}
+.weekly-feature > a {
+  color: var(--navy);
+}
+
+/* Reading toolbar */
+:root[data-theme="dark"] .reading-toolbar a {
+  background: var(--soft);
+  color: var(--ink);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .reading-toolbar a:hover {
+  background: #2c4a46;
+}
+:root[data-theme="dark"] .reading-toolbar label,
+:root[data-theme="dark"] .reading-toolbar select {
+  color: var(--ink);
+}
+
+/* Home */
+.home > .eyebrow {
+  border-color: #d9c6a5;
+  color: var(--gold);
+  background: linear-gradient(160deg, #fffdf9, #f5ecdd);
+  box-shadow:
+    0 6px 0 #efe3cf,
+    0 12px 24px #9a5f1210;
+}
+:root[data-theme="dark"] .home > .eyebrow {
+  border-color: var(--line);
+  background: var(--surface);
+  box-shadow: none;
+}
+.home .hero {
+  background-color: var(--hero-deep);
+  background-image:
+    linear-gradient(
+      90deg,
+      var(--hero-deep) 0%,
+      #0c2826f2 25%,
+      #0c28269c 45%,
+      #0c282600 68%
+    ),
+    url("/christus-background.png");
+}
+.home .hero-copy > p {
+  color: #e7f2ee;
+}
+.home .hero-copy > .overline,
+.home .hero-copy h1 em,
+:root[data-theme="dark"] .home .hero-copy h1 em {
+  color: #f6c983;
+}
+.scripture-art {
+  background: linear-gradient(#f5ecdd, #fffdf9);
+}
+@media (max-width: 760px) {
+  .home .hero {
+    background-image:
+      linear-gradient(
+        0deg,
+        var(--hero-deep) 0%,
+        var(--hero-deep) 45%,
+        #0c282600 72%
+      ),
+      url("/christus-background.png");
+  }
+}
+
+/* Lesson presentation */
+.lesson-presentation {
+  background: #0c1f1e;
+  color: #eef6f3;
+}
+.lesson-presentation .slide {
+  background:
+    radial-gradient(ellipse at top right, #f0b35a22, transparent 65%), #12302d;
+  border-color: #2f4744;
+}
+.lesson-presentation .overline {
+  color: #f6c983;
+}
+
+/* Brand mark and language switch */
+.brand-icon {
+  border-color: #cfe3de;
+  color: var(--navy);
+  background: linear-gradient(160deg, #fffdf9, #e3f0ec);
+  box-shadow:
+    0 6px 0 #e6dcc9,
+    0 12px 24px #12706d10;
+}
+:root[data-theme="dark"] .brand-icon {
+  border-color: var(--line);
+  color: var(--gold);
+  background: linear-gradient(160deg, #1f3a37, #15302d);
+  box-shadow: 0 6px 0 #0c1918;
+}
+.languages button[aria-pressed="true"] {
+  background: var(--navy);
+  color: var(--on-navy);
+}
+:root[data-theme="dark"] .languages {
+  background: var(--surface);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .languages button {
+  color: var(--ink);
+}
+:root[data-theme="dark"] .languages button[aria-pressed="true"] {
+  background: var(--navy);
+  color: var(--on-navy);
+}
+:root[data-theme="dark"] .nav-symbol {
+  color: var(--gold);
+}

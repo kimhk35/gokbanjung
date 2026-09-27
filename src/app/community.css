@@ -46,7 +46,7 @@
 }
 .segmented button[aria-pressed="true"] {
   background: var(--navy);
-  color: #fff;
+  color: var(--on-navy);
 }
 .chip-row {
   display: flex;
@@ -67,7 +67,7 @@
 .chip[aria-pressed="true"] {
   background: var(--gold);
   border-color: var(--gold);
-  color: #fff;
+  color: var(--on-gold);
 }
 .ward-search {
   min-height: 44px;
@@ -121,7 +121,7 @@
 }
 .month-cell[aria-pressed="true"] {
   background: var(--navy);
-  color: #fff;
+  color: var(--on-navy);
 }
 .month-cell .dot {
   position: absolute;
@@ -439,7 +439,7 @@ a.event-card:hover {
 .share-tabs a[aria-current="page"] {
   background: var(--navy);
   border-color: var(--navy);
-  color: #fff;
+  color: var(--on-navy);
 }
 .home-community {
   display: grid;
@@ -690,7 +690,7 @@ a.event-card:hover {
 }
 .guide-lang button[aria-pressed="true"] {
   background: var(--navy);
-  color: #fff;
+  color: var(--on-navy);
 }
 .guide-toc {
   display: grid;
