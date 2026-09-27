@@ -909,3 +909,22 @@ a.event-card:hover {
   margin: 0;
   accent-color: #f0b35a;
 }
+/* Quote card */
+.quote-card {
+  display: grid;
+  gap: 14px;
+}
+.quote-card-preview {
+  display: grid;
+  place-items: center;
+  background: var(--soft);
+  border-radius: 14px;
+  padding: 10px;
+}
+.quote-card-preview canvas {
+  max-width: 100%;
+  max-height: 52vh;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px #0002;
+}

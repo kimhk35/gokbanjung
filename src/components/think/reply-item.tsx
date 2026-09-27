@@ -1,10 +1,17 @@
 "use client";
 import { useState } from "react";
-import { Heart, MessageCircle, Star, Trash2 } from "lucide-react";
+import {
+  Heart,
+  Image as ImageIcon,
+  MessageCircle,
+  Star,
+  Trash2,
+} from "lucide-react";
+import { QuoteCard } from "./quote-card";
 import { useApp } from "../provider";
 import { api } from "@/lib/client";
 import { newId } from "@/lib/image-compress";
-import type { Reply, ReplyComment } from "@/lib/prompts";
+import type { Prompt, Reply, ReplyComment } from "@/lib/prompts";
 import { useLocalDraft } from "../use-local-draft";
 
 export function useAuthorDefault() {
@@ -36,15 +43,18 @@ export function ReplyItem({
   onRemove,
   queued,
   onQueue,
+  prompt,
 }: {
   reply: Reply;
   onChange: (r: Reply) => void;
   onRemove: () => void;
   queued?: boolean;
   onQueue?: () => void;
+  prompt?: Prompt;
 }) {
   const { t, lang, boot, error } = useApp();
   const [open, setOpen] = useState(false);
+  const [card, setCard] = useState(false);
   const [busy, setBusy] = useState(false);
   const author = useAuthorDefault();
   const draft = useLocalDraft(
@@ -100,6 +110,14 @@ export function ReplyItem({
   };
   return (
     <article className="reply">
+      {prompt && card && (
+        <QuoteCard
+          reply={reply}
+          prompt={prompt}
+          open={card}
+          onOpenChange={setCard}
+        />
+      )}
       <header>
         <strong>{reply.author}</strong>
         <time>{when(reply.created_at, lang)}</time>
@@ -123,6 +141,16 @@ export function ReplyItem({
         >
           <MessageCircle size={18} /> {reply.comments.length}
         </button>
+        {prompt && (
+          <button
+            type="button"
+            className="reply-action"
+            aria-label={t("카드로 저장", "Save as a card")}
+            onClick={() => setCard(true)}
+          >
+            <ImageIcon size={18} /> {t("카드", "Card")}
+          </button>
+        )}
         {onQueue && (
           <button
             type="button"

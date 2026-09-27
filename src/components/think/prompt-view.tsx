@@ -268,6 +268,7 @@ function ReplyList({
               key={r.id}
               reply={r}
               queued={q.queue.includes(r.id)}
+              prompt={prompt}
               onQueue={
                 presenter && preparing ? () => q.toggle(r.id) : undefined
               }
