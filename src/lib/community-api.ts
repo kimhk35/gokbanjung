@@ -2,9 +2,17 @@ import { ensure, AppError } from "./errors";
 import type { Actor } from "./types";
 
 export function isCommunityPath(path: string) {
-  return path.startsWith("ward/") || path.startsWith("think/") || path === "home/activity";
+  return (
+    path.startsWith("ward/") ||
+    path.startsWith("think/") ||
+    path === "home/activity"
+  );
 }
-export async function communityRead(a: Actor | null, path: string, params: URLSearchParams) {
+export async function communityRead(
+  a: Actor | null,
+  path: string,
+  params: URLSearchParams,
+) {
   const W = await import("./ward-events");
   const P = await import("./prompts");
   switch (path) {
@@ -20,7 +28,10 @@ export async function communityRead(a: Actor | null, path: string, params: URLSe
     case "think/prompt":
       return P.getPrompt(a, params.get("slug") || "");
     case "home/activity":
-      return { events: await W.upcomingEvents(3), ...(await P.recentActivity()) };
+      return {
+        events: await W.upcomingEvents(3),
+        ...(await P.recentActivity()),
+      };
     default:
       throw new AppError(404, "not_found");
   }
@@ -32,7 +43,10 @@ export async function communityWrite(a: Actor, path: string, input: unknown) {
   await rateLimit("community:" + a.id, 120, 60);
   const W = await import("./ward-events");
   const P = await import("./prompts");
-  const handlers: Record<string, (a: Actor, input: unknown) => Promise<unknown>> = {
+  const handlers: Record<
+    string,
+    (a: Actor, input: unknown) => Promise<unknown>
+  > = {
     "ward/save": W.saveEvent,
     "ward/status": W.setEventStatus,
     "ward/delete": W.deleteEvent,

@@ -11,7 +11,8 @@ export function useRefresh(fn: () => void, ms: number, paused: boolean) {
   });
   useEffect(() => {
     const tick = () => {
-      if (!hold.current && document.visibilityState === "visible") run.current();
+      if (!hold.current && document.visibilityState === "visible")
+        run.current();
     };
     const id = setInterval(tick, ms);
     document.addEventListener("visibilitychange", tick);

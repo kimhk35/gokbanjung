@@ -2,7 +2,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 // Device-only drafts for replies/comments (comefollowme behaviour): saved
 // 800 ms after typing stops and on page hide; never sent to the server.
-export function useLocalDraft<T extends Record<string, string>>(key: string | null, empty: T) {
+export function useLocalDraft<T extends Record<string, string>>(
+  key: string | null,
+  empty: T,
+) {
   const storageKey = key ? "ggc_local_draft:" + key : null;
   const [value, setValue] = useState<T>(empty);
   const [saved, setSaved] = useState(false);
@@ -30,7 +33,8 @@ export function useLocalDraft<T extends Record<string, string>>(key: string | nu
     dirty.current = false;
     try {
       const v = latest.current;
-      if (Object.values(v).some((x) => x.trim())) localStorage.setItem(storageKey, JSON.stringify(v));
+      if (Object.values(v).some((x) => x.trim()))
+        localStorage.setItem(storageKey, JSON.stringify(v));
       else localStorage.removeItem(storageKey);
       setSaved(true);
     } catch {}
