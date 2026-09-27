@@ -9,7 +9,7 @@ test("SQL-editor update file installs the new tables, can run twice, and keeps e
   const sql = await readFile("DB업데이트_SQL편집기용.sql", "utf8");
   assert.doesNotMatch(
     sql,
-    /\b(drop|truncate|delete\s+from|alter\s+table\s+ggc\.(?!event|prompt|verse|lesson_text|text_note))/i,
+    /\b(drop|truncate|delete\s+from|alter\s+table\s+ggc\.(?!event|prompt|verse|lesson_text|text_note|daily_insight))/i,
     "additive only",
   );
   const { PGlite } = await import("@electric-sql/pglite");

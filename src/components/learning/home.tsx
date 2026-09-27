@@ -17,6 +17,7 @@ import { RecommendedDiscussion } from "./recommended-discussion";
 import { useStudyDate } from "../use-study-date";
 import { Announcements } from "./announcements";
 import { HomeCommunity } from "./home-community";
+import { DailyInsightHome } from "./daily-insight";
 export function HomePage() {
   const { tl, locale, t, lang, weeks } = useApp();
   const date = useStudyDate();
@@ -36,6 +37,7 @@ export function HomePage() {
         <span>{t("와서 나를 따르라", "COME, FOLLOW ME")}</span>
         <span>2026 · {t("구약전서", "OLD TESTAMENT")}</span>
       </div>
+      <DailyInsightHome />
       <section className="hero">
         <div className="hero-copy">
           <span className="overline">

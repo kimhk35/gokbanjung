@@ -13,9 +13,15 @@ const databaseUrl =
   process.env.DATABASE_URL || (await ask("DATABASE_URL (hidden): ", true));
 const email =
   (await ask("Admin email [kimhk35@ajou.ac.kr]: ")) || "kimhk35@ajou.ac.kr";
-const projectRef=new URL(url).hostname.split('.')[0];
-const databaseTarget=new URL(databaseUrl);
-if(databaseTarget.hostname!==`db.${projectRef}.supabase.co` && decodeURIComponent(databaseTarget.username)!==`postgres.${projectRef}`)throw new Error('API and database project references do not match. No account was created.');
+const projectRef = new URL(url).hostname.split(".")[0];
+const databaseTarget = new URL(databaseUrl);
+if (
+  databaseTarget.hostname !== `db.${projectRef}.supabase.co` &&
+  decodeURIComponent(databaseTarget.username) !== `postgres.${projectRef}`
+)
+  throw new Error(
+    "API and database project references do not match. No account was created.",
+  );
 console.log(
   "Target Supabase:",
   new URL(url).hostname,

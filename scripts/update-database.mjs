@@ -73,18 +73,28 @@ try {
       await tx.unsafe(
         await read("supabase/migrations/20260928000000_notes.sql", "utf8"),
       );
+    const [insights] =
+      await tx`select to_regclass('ggc.daily_insights') as installed`;
+    if (!insights.installed)
+      await tx.unsafe(
+        await read(
+          "supabase/migrations/20260929000000_daily_insights.sql",
+          "utf8",
+        ),
+      );
     const [storage] =
       await tx`select to_regclass('storage.buckets') as installed`;
     if (storage.installed)
       await tx`insert into storage.buckets(id,name,public,file_size_limit,allowed_mime_types) values('ggc-posters','ggc-posters',true,2097152,array['image/webp','image/png','image/jpeg']) on conflict(id) do nothing`;
     const [verified] =
-      await tx`select to_regclass('ggc.quiz_sets') as quizzes,to_regclass('ggc.account_requests') as accounts,to_regclass('ggc.events') as events,to_regclass('ggc.prompt_reply_reactions') as prompts,to_regclass('ggc.text_note_comments') as notes`;
+      await tx`select to_regclass('ggc.quiz_sets') as quizzes,to_regclass('ggc.account_requests') as accounts,to_regclass('ggc.events') as events,to_regclass('ggc.prompt_reply_reactions') as prompts,to_regclass('ggc.text_note_comments') as notes,to_regclass('ggc.daily_insights') as insights`;
     if (
       !verified.quizzes ||
       !verified.accounts ||
       !verified.events ||
       !verified.prompts ||
-      !verified.notes
+      !verified.notes ||
+      !verified.insights
     )
       throw new Error("Schema verification failed");
     console.log(

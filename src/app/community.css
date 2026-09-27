@@ -1158,3 +1158,77 @@ a.event-card:hover {
   white-space: normal;
   align-items: flex-start;
 }
+/* Today's insight card */
+.daily-insight-home {
+  margin: 0 0 24px;
+}
+.daily-insight {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 14px;
+  padding: 26px 24px;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, #fffdf9e6, #f5ecdde6),
+    var(--insight-art, none) right bottom/cover no-repeat,
+    var(--surface);
+}
+:root[data-theme="dark"] .daily-insight {
+  background:
+    linear-gradient(180deg, #1b302ee6, #11201fef),
+    var(--insight-art, none) right bottom/cover no-repeat,
+    var(--surface);
+}
+.daily-insight header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.insight-kicker {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--navy);
+  color: var(--on-navy);
+  font-weight: 800;
+}
+.daily-insight header strong {
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+.insight-question {
+  margin: 0;
+  font-size: clamp(1.35rem, 4.6vw, 2rem);
+  line-height: 1.45;
+  font-weight: 800;
+  color: var(--ink);
+  word-break: keep-all;
+}
+.insight-row {
+  margin: 0;
+  display: grid;
+  gap: 4px;
+  line-height: 1.6;
+}
+.insight-row span {
+  justify-self: start;
+  padding: 2px 12px;
+  border-radius: 8px;
+  background: var(--navy);
+  color: var(--on-navy);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.daily-insight-image {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+.insight-actions {
+  flex-wrap: wrap;
+}

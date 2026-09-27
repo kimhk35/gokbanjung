@@ -19,6 +19,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { useApp } from "./provider";
 import { Modal } from "./ui/dialog";
 import { TranslateHelp } from "./translate-help";
+import { DailyInsightPopup } from "./learning/daily-insight";
 import { UI_LANGS, type UiLang } from "@/lib/i18n";
 import { GuestGate } from "./account";
 import { AnnouncementPopup } from "./announcement-popup";
@@ -229,6 +230,7 @@ export function Shell({ children }: { children: ReactNode }) {
         )}
       </main>
       <AnnouncementPopup />
+      <DailyInsightPopup />
       <footer>
         <span>
           {t("곡반정와드 복음교리반", "Gokbanjeong Ward Gospel Doctrine")}

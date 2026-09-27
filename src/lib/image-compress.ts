@@ -20,7 +20,7 @@ export async function compressImage(file: File, maxSide = 1600): Promise<Blob> {
   if (!blob) throw new RequestError("invalid_file");
   return blob;
 }
-export async function uploadPoster(file: File, kind: "events" | "prompts") {
+export async function uploadPoster(file: File, kind: "events" | "prompts" | "insights") {
   if (!ACCEPTED.includes(file.type)) throw new RequestError("invalid_file");
   if (file.size > 5 * 1024 * 1024) throw new RequestError("too_large");
   const blob = await compressImage(file);

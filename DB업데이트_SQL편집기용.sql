@@ -173,6 +173,22 @@ alter table ggc.text_note_reactions enable row level security;
 alter table ggc.text_note_comments enable row level security;
 revoke all on ggc.verse_notes,ggc.verse_note_reactions,ggc.verse_note_comments,ggc.lesson_texts,ggc.text_notes,ggc.text_note_reactions,ggc.text_note_comments from anon,authenticated;
 
+-- 20260929000000_daily_insights.sql
+-- gokbanjung: teacher overrides for the automatic "오늘의 Insight" card.
+-- Additive only.
+create table if not exists ggc.daily_insights(
+ day date primary key,
+ title text not null default '' check(char_length(title)<=120),
+ question text not null check(char_length(btrim(question)) between 1 and 500),
+ topic text not null default '' check(char_length(topic)<=200),
+ message text not null default '' check(char_length(message)<=600),
+ image_path text check(image_path is null or image_path ~ '^insights/[a-f0-9-]{36}\.(webp|png|jpg)$'),
+ updated_by uuid references ggc.actors(id) on delete set null,
+ updated_at timestamptz not null default now()
+);
+alter table ggc.daily_insights enable row level security;
+revoke all on ggc.daily_insights from anon,authenticated;
+
 -- 일정·질문 포스터 사진 보관함 (공개 읽기, 2MB, 사진만)
 do $$
 begin
@@ -188,6 +204,7 @@ select case
    and to_regclass('ggc.prompt_reply_reactions') is not null
    and to_regclass('ggc.verse_notes') is not null
    and to_regclass('ggc.text_note_comments') is not null
+   and to_regclass('ggc.daily_insights') is not null
   then '완료: 와드 일정·함께 생각하기·의견 달기 표가 준비되었습니다 (기존 기록 유지)'
   else '실패: 표를 만들지 못했습니다'
 end as result;

@@ -37,6 +37,7 @@ select case
    and to_regclass('ggc.prompt_reply_reactions') is not null
    and to_regclass('ggc.verse_notes') is not null
    and to_regclass('ggc.text_note_comments') is not null
+   and to_regclass('ggc.daily_insights') is not null
   then '완료: 와드 일정·함께 생각하기·의견 달기 표가 준비되었습니다 (기존 기록 유지)'
   else '실패: 표를 만들지 못했습니다'
 end as result;

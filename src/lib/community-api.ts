@@ -6,6 +6,7 @@ export function isCommunityPath(path: string) {
     path.startsWith("ward/") ||
     path.startsWith("think/") ||
     path.startsWith("notes/") ||
+    path.startsWith("insight/") ||
     path === "home/activity"
   );
 }
@@ -34,6 +35,11 @@ export async function communityRead(
       return (await import("./lesson-texts")).getLessonText(a, params);
     case "notes/text-list":
       return (await import("./lesson-texts")).listTextNotes(a, params);
+    case "insight/today":
+      return (await import("./daily-insight-service")).getDailyInsight(
+        a,
+        params,
+      );
     case "home/activity":
       return {
         events: await W.upcomingEvents(3),
@@ -52,6 +58,7 @@ export async function communityWrite(a: Actor, path: string, input: unknown) {
   const P = await import("./prompts");
   const V = await import("./verse-notes");
   const T = await import("./lesson-texts");
+  const I = await import("./daily-insight-service");
   const handlers: Record<
     string,
     (a: Actor, input: unknown) => Promise<unknown>
@@ -79,6 +86,8 @@ export async function communityWrite(a: Actor, path: string, input: unknown) {
     "notes/text-heart": T.toggleTextHeart,
     "notes/text-comment": T.addTextComment,
     "notes/text-comment-delete": T.deleteTextComment,
+    "insight/save": I.saveDailyInsight,
+    "insight/reset": I.resetDailyInsight,
   };
   const handler = handlers[path];
   ensure(handler, 404, "not_found");

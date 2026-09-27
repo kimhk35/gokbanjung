@@ -17,7 +17,11 @@ export async function POST(req: NextRequest) {
   try {
     ensure(sameOrigin(req.headers, req.url), 403, "origin_rejected");
     const kind = req.nextUrl.searchParams.get("kind");
-    ensure(kind === "events" || kind === "prompts", 400, "invalid_input");
+    ensure(
+      kind === "events" || kind === "prompts" || kind === "insights",
+      400,
+      "invalid_input",
+    );
     const a = await actor();
     ensure(
       kind === "events" ? await canCreateEvents(a) : canAuthor(a),
