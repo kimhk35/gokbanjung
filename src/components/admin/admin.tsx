@@ -15,6 +15,7 @@ import { PasswordManagement } from "./password-management";
 import { displayLoginId } from "@/lib/login-id";
 import { Confirm } from "../ui/dialog";
 import { AccountApprovals } from "./account-approvals";
+import { EventManagers } from "./event-managers";
 type AdminData = {
   applications: {
     id: string;
@@ -133,6 +134,7 @@ export function AdminPage() {
           <Tabs.List className="tabs">
             {[
               ["teachers", "교사 승인", "Teacher approval"],
+              ["ward-managers", "일정 담당자", "Calendar managers"],
               ["members", "반원관리 · 학습 통계", "Members · Statistics"],
               ["lesson-library", "공과자료실", "Lesson library"],
               ["accounts", "로그인 승인", "Account approval"],
@@ -147,6 +149,9 @@ export function AdminPage() {
               </Tabs.Trigger>
             ))}
           </Tabs.List>
+          <Tabs.Content value="ward-managers">
+            <EventManagers />
+          </Tabs.Content>
           <Tabs.Content value="members">
             <ClassMembers />
           </Tabs.Content>

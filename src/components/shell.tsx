@@ -13,6 +13,7 @@ import {
   ArrowUpRight,
   ShieldCheck,
   GraduationCap,
+  CalendarDays,
 } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 import { useApp } from "./provider";
@@ -45,10 +46,18 @@ export function Shell({ children }: { children: ReactNode }) {
   const links = [
     ["/", t("홈", "Home"), Home],
     ["/learn", t("말씀 학습", "Study the word"), BookOpen],
-    ["/community", t("신앙의 나눔", "Faith sharing"), NotebookPen],
-    ["/discussion", t("토론", "Discussion"), MessageCircle],
-    ["/journey", t("나의 신앙 여정", "My journey"), Compass],
+    ["/think", t("나눔", "Sharing"), MessageCircle],
+    ["/ward", t("와드 일정", "Ward calendar"), CalendarDays],
+    ["/journey", t("나의 여정", "My journey"), Compass],
   ] as const;
+  const groups: Record<string, string[]> = {
+    "/think": ["/think", "/p/", "/community", "/discussion"],
+    "/ward": ["/ward", "/e/"],
+  };
+  const isActive = (href: string) =>
+    href === "/"
+      ? path === "/"
+      : (groups[href] || [href]).some((p) => path.startsWith(p));
   return (
     <>
       <a className="skip" href="#main">
@@ -78,7 +87,7 @@ export function Shell({ children }: { children: ReactNode }) {
         >
           {links.slice(1).map(([href, label, Icon], index) => (
             <Link
-              aria-current={path.startsWith(href) ? "page" : undefined}
+              aria-current={isActive(href) ? "page" : undefined}
               href={href}
               key={href}
             >
@@ -225,11 +234,7 @@ export function Shell({ children }: { children: ReactNode }) {
           <Link
             href={href}
             key={href}
-            aria-current={
-              (href === "/" ? path === href : path.startsWith(href))
-                ? "page"
-                : undefined
-            }
+            aria-current={isActive(href) ? "page" : undefined}
           >
             <Icon size={22} />
             <span>{label}</span>

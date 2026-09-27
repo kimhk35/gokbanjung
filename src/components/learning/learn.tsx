@@ -23,6 +23,7 @@ import {
   BookOpen,
   Search,
 } from "lucide-react";
+import { WeekVoices } from "./week-voices";
 export function WeekPicker({
   week,
   onChange,
@@ -375,6 +376,7 @@ export function WeekPage({ number }: { number: number }) {
           {t("주간 토론", "Weekly discussion")}
         </Link>
       </div>
+      <WeekVoices week={number} />
     </div>
   );
 }

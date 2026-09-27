@@ -16,6 +16,7 @@ import { ContinueLearning } from "./continue-learning";
 import {RecommendedDiscussion} from './recommended-discussion';
 import { useStudyDate } from "../use-study-date";
 import { Announcements } from "./announcements";
+import { HomeCommunity } from "./home-community";
 export function HomePage() {
   const { t, lang, weeks } = useApp();
   const date = useStudyDate();
@@ -178,6 +179,7 @@ export function HomePage() {
           ))}
         </div>
       </section>
+      <HomeCommunity />
       <section className="week-question">
         <span className="overline">
           {t("이번 주 질문", "QUESTION OF THE WEEK")}
