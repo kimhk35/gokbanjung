@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./renewal.css";
+import "./community.css";
 import { Provider } from "@/components/provider";
 import { Shell } from "@/components/shell";
 export const metadata: Metadata = {
