@@ -2,9 +2,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 // Device-only drafts for replies/comments (comefollowme behaviour): saved
 // 800 ms after typing stops and on page hide; never sent to the server.
+// `force` values win over a stored draft (e.g. the verse the reader tapped).
 export function useLocalDraft<T extends Record<string, string>>(
   key: string | null,
   empty: T,
+  force?: Partial<T>,
 ) {
   const storageKey = key ? "ggc_local_draft:" + key : null;
   const [value, setValue] = useState<T>(empty);
@@ -14,6 +16,7 @@ export function useLocalDraft<T extends Record<string, string>>(
   const dirty = useRef(false);
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const emptyRef = useRef(empty);
+  const forceRef = useRef(force);
   useEffect(() => {
     if (!storageKey) return;
     let next = emptyRef.current;
@@ -21,6 +24,7 @@ export function useLocalDraft<T extends Record<string, string>>(
       const raw = localStorage.getItem(storageKey);
       if (raw) next = { ...emptyRef.current, ...JSON.parse(raw) };
     } catch {}
+    if (forceRef.current) next = { ...next, ...forceRef.current };
     latest.current = next;
     dirty.current = false;
     setValue(next);

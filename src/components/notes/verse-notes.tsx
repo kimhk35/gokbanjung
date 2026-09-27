@@ -21,11 +21,13 @@ export function VerseNotes({
   chapter,
   week,
   verseHint,
+  pickedVerse,
 }: {
   bookId?: string;
   chapter?: number;
   week?: number;
   verseHint?: string;
+  pickedVerse?: number;
 }) {
   const { t, tl, uiLang, boot, error } = useApp();
   const [data, setData] = useState<Data | null>(null);
@@ -55,6 +57,7 @@ export function VerseNotes({
       start: verseHint?.split(/[-–~]/)[0] || "",
       end: "",
     },
+    pickedVerse ? { start: String(pickedVerse), end: "" } : undefined,
   );
   useRefresh(load, 30000, draft.typing || !!draft.value.body.trim());
   const bookOf = (id: string) => scriptureBooks.find((b) => b.id === id);

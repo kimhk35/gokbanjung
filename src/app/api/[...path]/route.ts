@@ -54,6 +54,26 @@ async function handle(
       ensure(parts.length <= 2, 404, "not_found");
       return json(await readMaterials(a, parts[1]));
     }
+    if (request.method === "GET" && path === "scripture/chapter") {
+      const { scriptureBooks } = await import("@/lib/scriptures");
+      const { fetchChapter } = await import("@/lib/scripture-text");
+      const { isUiLang } = await import("@/lib/i18n");
+      const params = request.nextUrl.searchParams;
+      const book = scriptureBooks.find((b) => b.id === params.get("book"));
+      ensure(book, 400, "invalid_input");
+      const chapter = z.coerce
+        .number()
+        .int()
+        .min(1)
+        .max(book.chapters)
+        .parse(params.get("chapter"));
+      const ui = params.get("lang");
+      const text = await fetchChapter(book, chapter, isUiLang(ui) ? ui : "ko");
+      ensure(text, 503, "source_unavailable");
+      return NextResponse.json(text, {
+        headers: { "Cache-Control": "public, max-age=3600, s-maxage=86400" },
+      });
+    }
     if (request.method === "GET" && path === "scripture/verses") {
       const { scriptureBooks, scriptureUrl } = await import("@/lib/scriptures");
       const { extractVerses } = await import("@/lib/quiz");
@@ -342,9 +362,12 @@ async function handle(
     }
     if (path === "ai") return json(await generate(a, input));
     if (path === "ai-review") return json(await reviewAi(a, input));
-    if (["approve-teacher", "approve-account"].includes(path) && input.status === "approved") {
+    if (
+      ["approve-teacher", "approve-account"].includes(path) &&
+      input.status === "approved"
+    ) {
       const { confirmForApproval } = await import("@/lib/account-security");
-      await confirmForApproval(a,path,input);
+      await confirmForApproval(a, path, input);
     }
     const result = await writeData(a, path, input);
     if (path === "delete-records") (await cookies()).delete("ggc_guest");

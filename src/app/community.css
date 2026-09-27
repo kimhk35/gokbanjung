@@ -1266,3 +1266,71 @@ footer .updated,
 footer .feedback {
   white-space: nowrap;
 }
+/* In-site scripture chapter */
+.chapter-view {
+  margin-top: 20px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+}
+.chapter-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.chapter-head h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.chapter-summary {
+  margin: 14px 0;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.verses {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+.verses li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+  scroll-margin-top: 80px;
+}
+.verse-number {
+  min-width: 36px;
+  min-height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--soft);
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.verse-number:hover {
+  border-color: var(--gold);
+}
+.chapter-source {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.chapter-source p {
+  margin: 3px 0;
+}
+.chapter-source a {
+  color: var(--navy);
+}

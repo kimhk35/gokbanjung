@@ -5,10 +5,16 @@ import { Sprout, Bookmark, Flower2, Download, Check } from "lucide-react";
 import { useApp } from "../provider";
 import { PageTitle, Empty } from "./learn";
 import { api } from "@/lib/client";
-import {quizPoints} from '@/lib/quiz';
+import { quizPoints } from "@/lib/quiz";
 type Event = {
   id: string;
-  kind: "daily" | "weekly" | "monthly21" | "quiz_daily" | "quiz_weekly" | "quiz_monthly";
+  kind:
+    | "daily"
+    | "weekly"
+    | "monthly21"
+    | "quiz_daily"
+    | "quiz_weekly"
+    | "quiz_monthly";
   period: string;
   earned_at: string;
 };
@@ -97,10 +103,40 @@ export function RewardsPage() {
         )}
       />
       <section className="reward-month">
-        <h2>{t('경전 퀴즈 추가 보상','Scripture quiz bonus rewards')}</h2>
-        <p>{t('모은 학습 포인트: ','Learning points earned: ')}{data?.events.reduce((sum,e)=>sum+(e.kind.startsWith('quiz_')?quizPoints[e.kind.replace('quiz_','') as keyof typeof quizPoints]:0),0)||0}</p>
-        <div className="chips">{data?.events.filter(e=>e.kind.startsWith('quiz_')).map(e=><span className="badge" key={e.id}>{e.period} · {t(e.kind==='quiz_daily'?'오늘의 경전 탐구자':e.kind==='quiz_weekly'?'주간 경전 탐구자':'월간 경전 탐구자',e.kind.replace('quiz_','')+' scripture explorer')}</span>)}</div>
-        <Link className="button secondary" href="/quiz">{t('퀴즈에 도전하기','Try a quiz')}</Link>
+        <h2>{t("경전 퀴즈 추가 보상", "Scripture quiz bonus rewards")}</h2>
+        <p>
+          {t("모은 학습 포인트: ", "Learning points earned: ")}
+          {data?.events.reduce(
+            (sum, e) =>
+              sum +
+              (e.kind.startsWith("quiz_")
+                ? quizPoints[
+                    e.kind.replace("quiz_", "") as keyof typeof quizPoints
+                  ]
+                : 0),
+            0,
+          ) || 0}
+        </p>
+        <div className="chips">
+          {data?.events
+            .filter((e) => e.kind.startsWith("quiz_"))
+            .map((e) => (
+              <span className="badge" key={e.id}>
+                {e.period} ·{" "}
+                {t(
+                  e.kind === "quiz_daily"
+                    ? "오늘의 경전 탐구자"
+                    : e.kind === "quiz_weekly"
+                      ? "주간 경전 탐구자"
+                      : "월간 경전 탐구자",
+                  e.kind.replace("quiz_", "") + " scripture explorer",
+                )}
+              </span>
+            ))}
+        </div>
+        <Link className="button secondary" href="/quiz">
+          {t("퀴즈에 도전하기", "Try a quiz")}
+        </Link>
       </section>
       <section className="reward-month">
         <div className="section-heading">
