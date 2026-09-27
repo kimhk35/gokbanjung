@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, ExternalLink, Share2 } from "lucide-react";
+import { ArrowLeft, ExternalLink, Presentation, Share2 } from "lucide-react";
 import { useApp } from "../provider";
 import { Empty } from "../learning/learn";
 import { Confirm } from "../ui/dialog";
@@ -14,6 +14,7 @@ import { useLocalDraft } from "../use-local-draft";
 import { useRefresh } from "../use-refresh";
 import { share } from "../ward/event-detail";
 import { ReplyItem, rememberAuthor, useAuthorDefault } from "./reply-item";
+import { PresentMode, QueuePanel, usePresentQueue } from "./present-mode";
 import { PromptEditor } from "./prompt-editor";
 
 type View = { prompt: Prompt; replies: Reply[]; canAuthor: boolean };
@@ -31,6 +32,8 @@ export function PromptView({
   const [busy, setBusy] = useState(false);
   const [editing, setEditing] = useState(false);
   const author = useAuthorDefault();
+  const [preparing, setPreparing] = useState(false);
+  const [presenting, setPresenting] = useState(false);
   const draft = useLocalDraft(
     boot && data ? `${boot.actor.id}:reply:${data.prompt.id}` : null,
     { author, body: "" },
@@ -86,6 +89,9 @@ export function PromptView({
   const { prompt } = data;
   const poster = posterUrl(prompt.poster_path);
   const canEdit = prompt.mine || boot?.actor.role === "ADMIN";
+  const presenter =
+    boot?.actor.kind === "user" &&
+    ["TEACHER", "ADMIN"].includes(boot.actor.role);
   return (
     <div className="prompt-view">
       {!embedded && (
@@ -133,6 +139,16 @@ export function PromptView({
         >
           <Share2 size={18} /> {t("공유", "Share")}
         </button>
+        {presenter && (
+          <button
+            type="button"
+            className="button secondary"
+            aria-pressed={preparing}
+            onClick={() => setPreparing(!preparing)}
+          >
+            <Presentation size={18} /> {t("발표 준비", "Prepare to present")}
+          </button>
+        )}
         {canEdit && (
           <button
             type="button"
@@ -197,37 +213,71 @@ export function PromptView({
           </button>
         </div>
       </section>
+      <ReplyList
+        prompt={prompt}
+        replies={data.replies}
+        setReplies={(update) =>
+          setData((d) => d && { ...d, replies: update(d.replies) })
+        }
+        presenter={!!presenter}
+        preparing={preparing}
+        presenting={presenting}
+        setPresenting={setPresenting}
+      />
+      <PromptEditor
+        open={editing}
+        onOpenChange={setEditing}
+        prompt={prompt}
+        onSaved={() => load()}
+      />
+    </div>
+  );
+}
+
+function ReplyList({
+  prompt,
+  replies,
+  setReplies,
+  presenter,
+  preparing,
+  presenting,
+  setPresenting,
+}: {
+  prompt: Prompt;
+  replies: Reply[];
+  setReplies: (update: (r: Reply[]) => Reply[]) => void;
+  presenter: boolean;
+  preparing: boolean;
+  presenting: boolean;
+  setPresenting: (v: boolean) => void;
+}) {
+  const { t, boot } = useApp();
+  const q = usePresentQueue(boot?.actor.id, prompt.id);
+  return (
+    <div className={preparing ? "replies-with-panel" : undefined}>
       <section className="replies" aria-live="polite">
         <h3>
           {t(
-            `다른 사람들의 생각 ${data.replies.length}`,
-            `Replies ${data.replies.length}`,
+            `다른 사람들의 생각 ${replies.length}`,
+            `Replies ${replies.length}`,
           )}
         </h3>
-        {data.replies.length ? (
-          data.replies.map((r) => (
+        {replies.length ? (
+          replies.map((r) => (
             <ReplyItem
               key={r.id}
               reply={r}
+              queued={q.queue.includes(r.id)}
+              onQueue={
+                presenter && preparing ? () => q.toggle(r.id) : undefined
+              }
               onChange={(next) =>
-                setData(
-                  (d) =>
-                    d && {
-                      ...d,
-                      replies: d.replies.map((x) =>
-                        x.id === next.id ? next : x,
-                      ),
-                    },
+                setReplies((list) =>
+                  list.map((x) => (x.id === next.id ? next : x)),
                 )
               }
               onRemove={() =>
-                setData(
-                  (d) =>
-                    d && {
-                      ...d,
-                      replies: d.replies.filter((x) => x.id !== r.id),
-                    },
-                )
+                setReplies((list) => list.filter((x) => x.id !== r.id))
               }
             />
           ))
@@ -237,12 +287,23 @@ export function PromptView({
           </p>
         )}
       </section>
-      <PromptEditor
-        open={editing}
-        onOpenChange={setEditing}
-        prompt={prompt}
-        onSaved={() => load()}
-      />
+      {presenter && preparing && (
+        <QueuePanel
+          replies={replies}
+          queue={q.queue}
+          onMove={q.move}
+          onToggle={q.toggle}
+          onStart={() => setPresenting(true)}
+        />
+      )}
+      {presenting && (
+        <PresentMode
+          prompt={prompt}
+          replies={replies}
+          queue={q.queue}
+          onClose={() => setPresenting(false)}
+        />
+      )}
     </div>
   );
 }

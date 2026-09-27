@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Heart, MessageCircle, Trash2 } from "lucide-react";
+import { Heart, MessageCircle, Star, Trash2 } from "lucide-react";
 import { useApp } from "../provider";
 import { api } from "@/lib/client";
 import { newId } from "@/lib/image-compress";
@@ -34,10 +34,14 @@ export function ReplyItem({
   reply,
   onChange,
   onRemove,
+  queued,
+  onQueue,
 }: {
   reply: Reply;
   onChange: (r: Reply) => void;
   onRemove: () => void;
+  queued?: boolean;
+  onQueue?: () => void;
 }) {
   const { t, lang, boot, error } = useApp();
   const [open, setOpen] = useState(false);
@@ -119,6 +123,17 @@ export function ReplyItem({
         >
           <MessageCircle size={18} /> {reply.comments.length}
         </button>
+        {onQueue && (
+          <button
+            type="button"
+            className="reply-action"
+            aria-pressed={!!queued}
+            onClick={onQueue}
+          >
+            <Star size={18} fill={queued ? "currentColor" : "none"} />{" "}
+            {queued ? t("담김", "Added") : t("담기", "Add")}
+          </button>
+        )}
         {reply.mine && (
           <button
             type="button"
