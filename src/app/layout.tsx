@@ -1,9 +1,19 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import "./renewal.css";
 import "./community.css";
 import { Provider } from "@/components/provider";
 import { Shell } from "@/components/shell";
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  interactiveWidget: "resizes-content",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f7f6f1" },
+    { media: "(prefers-color-scheme: dark)", color: "#141f28" },
+  ],
+};
 export const metadata: Metadata = {
   title: "곡반정와드 복음교리반 전용 학습 사이트",
   description:

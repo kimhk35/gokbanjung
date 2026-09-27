@@ -100,10 +100,13 @@ export function Shell({ children }: { children: ReactNode }) {
                   {
                     [
                       t("경전 속에서 발견하는 오늘", "Discover the word"),
-                      t("서로의 발견을 나누는 공간", "Share your discoveries"),
                       t(
-                        "좋은 질문으로 깊어지는 배움",
-                        "Explore meaningful questions",
+                        "함께 생각하기 · 생각벽 · 토론",
+                        "Think together · wall · discussion",
+                      ),
+                      t(
+                        "와드 모임과 활동 한눈에",
+                        "Ward meetings and activities",
                       ),
                       t("말씀과 함께 쌓아가는 기록", "Keep your reflections"),
                     ][index]
@@ -184,9 +187,20 @@ export function Shell({ children }: { children: ReactNode }) {
         </label>
       </div>
       <main id="main">
-        {["/account", "/admin", "/teacher", "/privacy", "/auth"].some((p) =>
-          path.startsWith(p),
-        ) ? (
+        {[
+          "/account",
+          "/admin",
+          "/teacher",
+          "/privacy",
+          "/auth",
+          // Public comefollowme-style pages: readable (and repliable as
+          // "익명") without choosing a nickname first.
+          "/ward",
+          "/e/",
+          "/think",
+          "/p/",
+          "/guide",
+        ].some((p) => path.startsWith(p)) ? (
           children
         ) : (
           <GuestGate

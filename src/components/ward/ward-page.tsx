@@ -97,7 +97,7 @@ export function WardPage() {
         <div className="month-switch">
           <button
             type="button"
-            className="icon-button"
+            className="ward-nav-button"
             aria-label={t("이전 달", "Previous month")}
             onClick={() => move(-1)}
           >
@@ -106,7 +106,7 @@ export function WardPage() {
           <strong>{monthLabel}</strong>
           <button
             type="button"
-            className="icon-button"
+            className="ward-nav-button"
             aria-label={t("다음 달", "Next month")}
             onClick={() => move(1)}
           >
@@ -170,7 +170,7 @@ export function WardPage() {
           ))}
         </div>
         <input
-          className="search"
+          className="ward-search"
           type="search"
           value={query}
           placeholder={t("일정 검색", "Search events")}
