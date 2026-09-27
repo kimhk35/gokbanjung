@@ -14,3 +14,5 @@ manual-deploy
 *.log
 *.tsbuildinfo
 supabase/.temp
+.superpowers
+사용설명서.html
