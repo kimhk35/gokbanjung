@@ -240,6 +240,20 @@ export const GUIDE: GuideSection[] = [
     ),
   },
   {
+    id: "scripture-reader",
+    part: "member",
+    title: L("경전을 사이트에서 바로 읽기", "Reading scripture right in the site"),
+    steps: [
+      L("☰ → 경전 읽기에서 책과 장을 고르거나, 주차 페이지의 오늘 읽을 장 버튼을 누릅니다.", "Open ☰ → Read scriptures and choose a book and chapter, or tap a chapter button on a week page."),
+      L("성경·몰몬경·교리와 성약·값진 진주를 모두 이 화면에서 읽을 수 있고, ◀ ▶로 앞뒤 장으로 넘깁니다.", "The Bible, Book of Mormon, Doctrine and Covenants and Pearl of Great Price all open here; use ◀ ▶ for the previous or next chapter."),
+      L("절 번호를 누르면 그 절에 의견을 달 수 있습니다.", "Tap a verse number to add a note to that verse."),
+    ],
+    note: L(
+      "본문은 교회 공식 사이트(churchofjesuschrist.org)에서 그대로 가져오며, 모든 경전 본문의 저작권은 The Church of Jesus Christ of Latter-day Saints에 있습니다. 선택한 언어로 없는 장은 영어로 보여 줍니다.",
+      "The text comes unchanged from churchofjesuschrist.org and is © The Church of Jesus Christ of Latter-day Saints. Chapters not published in your language are shown in English.",
+    ),
+  },
+  {
     id: "daily-insight",
     part: "member",
     title: L("오늘의 Insight 카드", "Today's insight card"),
@@ -325,20 +339,18 @@ export const GUIDE: GuideSection[] = [
   {
     id: "app-install",
     part: "member",
-    title: L("안드로이드 앱 설치하기", "Installing the Android app"),
+    title: L("안드로이드 앱 설치·업데이트·삭제", "Installing, updating and removing the Android app"),
+    intro: L(
+      "앱은 사이트를 전체 화면으로 여는 공식 방식(TWA)으로 만들어져, 사이트가 바뀌면 앱도 자동으로 최신 내용이 됩니다. 연락처·사진·위치 같은 휴대폰 권한은 하나도 요청하지 않습니다.",
+      "The app opens the site full screen using Google's official method (TWA), so it always shows the latest site. It asks for no phone permissions such as contacts, photos or location.",
+    ),
     steps: [
-      L(
-        "운영자에게 받은 gokbanjung.apk 파일을 휴대폰에서 누릅니다.",
-        "Tap the gokbanjung.apk file you received from an operator on your phone.",
-      ),
-      L(
-        "'출처를 알 수 없는 앱' 경고가 나오면 '설정' → '이 출처 허용'을 켠 뒤 돌아와 '설치'를 누릅니다.",
-        "If you see an unknown-apps warning, open Settings → Allow from this source, then return and tap Install.",
-      ),
-      L(
-        "홈 화면의 곡반정와드 아이콘으로 앱을 엽니다. 사이트가 바뀌면 앱도 자동으로 최신 내용이 됩니다.",
-        "Open the app from the Gokbanjeong Ward icon on your home screen. The app always shows the latest site automatically.",
-      ),
+      L("운영자가 카카오톡·메일·구글 드라이브로 보낸 gokbanjung.apk 파일을 휴대폰에서 누릅니다. (카카오톡은 파일을 저장한 뒤 '열기')", "On your phone, tap the gokbanjung.apk file an operator sent by chat, email or Google Drive. (In chat apps, save the file first, then open it.)"),
+      L("'이 출처의 앱을 설치할 수 없습니다' 또는 '출처를 알 수 없는 앱' 창이 뜨면 '설정'을 누르고 '이 출처 허용'을 켠 뒤 뒤로 돌아옵니다.", "If you see 'For your security, your phone is not allowed to install unknown apps from this source', tap Settings, turn on Allow from this source, then go back."),
+      L("'설치'를 누르고, 끝나면 '열기'를 누릅니다. 구글 Play 프로텍트가 '검사'를 권하면 '검사 없이 설치' 대신 '앱 검사'를 눌러도 됩니다.", "Tap Install, then Open. If Google Play Protect suggests scanning, you can tap Scan app."),
+      L("홈 화면의 곡반정와드 아이콘(해 뜨는 책 그림)으로 언제든 엽니다.", "Open it any time from the Gokbanjeong Ward icon (a sunrise over a book) on your home screen."),
+      L("업데이트: 내용은 저절로 최신이 됩니다. 운영자가 새 앱 파일을 보내 준 경우에만 같은 방법으로 설치하면 기존 앱 위에 덮어써집니다(기록은 그대로).", "Updating: content updates by itself. Only when an operator sends a new app file, install it the same way; it replaces the old app and keeps your data."),
+      L("삭제: 아이콘을 길게 누른 뒤 '앱 정보' → '삭제'를 누릅니다.", "Removing: press and hold the icon, then App info → Uninstall."),
     ],
     note: L(
       "아이폰은 앱 파일 대신 Safari의 '홈 화면에 추가'를 쓰면 앱처럼 사용할 수 있습니다.",
@@ -567,6 +579,34 @@ export const GUIDE: GuideSection[] = [
         "It changes only that day. Use the automatic card to undo.",
       ),
     ],
+  },
+  {
+    id: "worksheet-import",
+    part: "operator",
+    title: L("학습지 파일에서 문항 가져오기 (교사·관리자)", "Importing a worksheet file (teachers, admins)"),
+    steps: [
+      L("교사 학습관리 → 학습지 수정 → '학습지 파일에서 문항 가져오기'를 누릅니다.", "Teacher workspace → Edit worksheet → Import questions from a worksheet file."),
+      L("PDF·워드(docx)·한글(hwp, hwpx)·텍스트 파일(4MB까지)을 고르면 1. 2) ① 문1 Q1 같은 번호가 붙은 질문을 찾아 문항으로 넣습니다. 여러 줄로 나뉜 질문은 한 문항으로 합치고, 답 쓰는 칸은 뺍니다.", "Choose a PDF, Word (docx), Hangul (hwp, hwpx) or text file (up to 4 MB). Numbered questions (1. 2) ① 문1 Q1) become items; wrapped lines are joined and answer blanks skipped."),
+      L("가져온 문항은 한국어·영어 칸에 같은 글로 들어갑니다. 확인·수정하고, 필요하면 다른 언어로 번역한 뒤 '새 버전 저장·게시'를 누르면 반원들이 바로 답을 쓰고 제출할 수 있습니다.", "Imported text fills both the Korean and English fields. Review, translate if needed, then Save & publish version; members can answer and submit right away."),
+    ],
+    note: L(
+      "스캔한 그림 PDF는 글자를 읽을 수 없어 가져올 수 없습니다. 파일은 서버에 저장되지 않습니다.",
+      "Scanned image PDFs have no text and cannot be imported. The file is not stored on the server.",
+    ),
+  },
+  {
+    id: "apk-build",
+    part: "operator",
+    title: L("앱 파일 다시 만들기와 서명 열쇠 보관", "Rebuilding the app and keeping the signing key"),
+    steps: [
+      L("앱 내용은 사이트를 따라 자동으로 바뀌므로, 아이콘·앱 이름을 바꿀 때만 다시 만듭니다.", "The app follows the site automatically; rebuild only to change the icon or app name."),
+      L("gokbanjung 폴더의 android/build.ps1을 실행하면 C:/ggc-android/project에 새 APK가 생깁니다. android/twa-manifest.json의 appVersionCode 숫자를 1씩 올려야 기존 앱 위에 설치됩니다.", "Run android/build.ps1 in the gokbanjung folder; the new APK appears in C:/ggc-android/project. Increase appVersionCode in android/twa-manifest.json by 1 so it installs over the old app."),
+      L("서명 열쇠(%USERPROFILE%/.claude/secrets/gokbanjung-release.keystore)와 비밀번호(.env의 GOKBANJUNG_KEYSTORE_PASSWORD)를 USB 등 안전한 곳에 따로 백업해 두세요. 잃어버리면 앱을 업데이트할 수 없습니다.", "Back up the signing key (%USERPROFILE%/.claude/secrets/gokbanjung-release.keystore) and its password (GOKBANJUNG_KEYSTORE_PASSWORD in .env) somewhere safe, such as a USB drive. Without them the app cannot be updated."),
+    ],
+    note: L(
+      "서명 열쇠와 비밀번호는 절대 GitHub·카카오톡·메일로 보내지 마세요.",
+      "Never send the signing key or its password by GitHub, chat or email.",
+    ),
   },
   {
     id: "update-site",
