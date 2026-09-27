@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>곡반정와드 색상 시안</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 "Noto Sans KR","Malgun Gothic",sans-serif;background:#e9e9e9;color:#222}
+header.top{padding:24px 16px 8px;text-align:center}
+header.top h1{margin:0 0 6px;font-size:1.5rem}
+header.top p{margin:0;color:#555}
+.mode{display:inline-flex;margin:14px 0 4px;border:1px solid #bbb;border-radius:999px;overflow:hidden}
+.mode button{min-height:40px;padding:0 18px;border:0;background:#fff;font:inherit;cursor:pointer}
+.mode button[aria-pressed=true]{background:#222;color:#fff}
+.grid{display:flex;flex-wrap:wrap;gap:28px;justify-content:center;padding:16px}
+figure{margin:0;text-align:center}
+figcaption{margin-top:10px}
+figcaption strong{display:block;font-size:1.15rem}
+figcaption span{color:#555;font-size:.9rem}
+.chips{display:flex;gap:6px;justify-content:center;margin-top:6px}
+.chips i{width:26px;height:26px;border-radius:50%;border:1px solid #0002}
+/* phone mock */
+.phone{width:320px;height:640px;border-radius:34px;border:10px solid #1b1b1b;overflow:hidden;position:relative;background:var(--bg);color:var(--ink);text-align:left;box-shadow:0 20px 50px #0003}
+.phone .hd{padding:18px 16px 14px;background:var(--hero);border-bottom:1px solid var(--line)}
+.brand{display:flex;gap:10px;align-items:center}
+.logo{width:40px;height:40px;border-radius:12px;background:var(--primary);display:grid;place-items:center;color:var(--on-primary);font-weight:800}
+.brand small{display:block;color:var(--accent);font-weight:700;font-size:.7rem;letter-spacing:.1em}
+.brand b{font-size:1.2rem}
+.langs{position:absolute;top:18px;right:14px;display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:.72rem;background:var(--surface)}
+.langs span{padding:4px 9px}.langs span:first-child{background:var(--primary);color:var(--on-primary)}
+.body{padding:14px;display:grid;gap:12px}
+.eyebrow{color:var(--accent);font-size:.7rem;letter-spacing:.12em;font-weight:700}
+h2{margin:2px 0 0;font-size:1.25rem}
+.chiprow{display:flex;gap:6px;overflow:hidden}
+.chip{padding:4px 11px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font-size:.78rem;white-space:nowrap}
+.chip.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:var(--shadow)}
+.tag{display:inline-block;font-size:.7rem;padding:1px 8px;border-radius:999px;background:var(--soft);color:var(--ink)}
+.card h3{margin:5px 0 3px;font-size:1rem}
+.meta{color:var(--muted);font-size:.8rem}
+.reply p{margin:4px 0 8px;font-size:.88rem}
+.acts{display:flex;gap:6px}
+.acts span{border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:.78rem}
+.acts .heart{color:var(--heart);border-color:var(--heart)}
+.btn{display:inline-block;background:var(--primary);color:var(--on-primary);border-radius:12px;padding:8px 14px;font-weight:700;font-size:.85rem}
+.nav{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-around;padding:8px 4px 12px;background:var(--surface);border-top:1px solid var(--line);font-size:.66rem;color:var(--muted)}
+.nav span{display:grid;justify-items:center;gap:2px}
+.nav span::before{content:"";width:18px;height:18px;border-radius:6px;border:2px solid currentColor}
+.nav .on{color:var(--accent);font-weight:700}
+/* palettes */
+.p0{--bg:#f4f9fc;--hero:linear-gradient(180deg,#eaf4f8,#f4f9fc);--surface:#fff;--ink:#163e53;--muted:#526d7c;--line:#dbe8ef;--soft:#e2f3ee;--primary:#086d91;--on-primary:#fff;--accent:#95681d;--on-accent:#fff;--heart:#c0392b;--shadow:0 8px 24px #205b7c10}
+.p1{--bg:#f2f5ef;--hero:linear-gradient(180deg,#e3ecdf,#f2f5ef);--surface:#fffefb;--ink:#1f3527;--muted:#5d6d60;--line:#d7e0d2;--soft:#e8efe3;--primary:#2f5d45;--on-primary:#fff;--accent:#c0643a;--on-accent:#fff;--heart:#c0392b;--shadow:0 8px 24px #2f5d4512}
+.p2{--bg:#f6f4fb;--hero:linear-gradient(180deg,#ebe7f8,#f6f4fb);--surface:#fff;--ink:#2a2750;--muted:#66637f;--line:#e0dcef;--soft:#eeeaf9;--primary:#4b45a1;--on-primary:#fff;--accent:#d9734e;--on-accent:#fff;--heart:#d0445c;--shadow:0 8px 24px #4b45a112}
+.p3{--bg:#fbf7f0;--hero:linear-gradient(180deg,#f5ecdd,#fbf7f0);--surface:#fffdf9;--ink:#233a3a;--muted:#67716c;--line:#ece2d2;--soft:#f3ecdf;--primary:#12706d;--on-primary:#fff;--accent:#d7922b;--on-accent:#2a1c05;--heart:#c8453b;--shadow:0 8px 24px #12706d12}
+body.dark .p0{--bg:#0d1b2a;--hero:#132536;--surface:#172b3c;--ink:#eef7ff;--muted:#b3cad9;--line:#31495c;--soft:#21394b;--primary:#157a9e;--accent:#eed097;--on-accent:#1a1204;--shadow:none}
+body.dark .p1{--bg:#141c17;--hero:#1a241e;--surface:#1f2b24;--ink:#eef3ec;--muted:#b3c1b5;--line:#34443a;--soft:#27352d;--primary:#5e9c78;--on-primary:#0c1a12;--accent:#e58b62;--on-accent:#24100a;--shadow:none}
+body.dark .p2{--bg:#15142a;--hero:#1c1b36;--surface:#221f40;--ink:#f0eefb;--muted:#bbb7d6;--line:#3a365e;--soft:#2b2850;--primary:#8d86e6;--on-primary:#15142a;--accent:#f09a78;--on-accent:#2a1208;--shadow:none}
+body.dark .p3{--bg:#11201f;--hero:#162a28;--surface:#1b302e;--ink:#eef6f3;--muted:#b0c3bd;--line:#2f4744;--soft:#223a37;--primary:#4fb3ad;--on-primary:#0b1b1a;--accent:#f0b35a;--on-accent:#2a1c05;--shadow:none}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>곡반정와드 새 색상 시안</h1>
+  <p>맨 왼쪽은 지금(예전) 색이에요. 오른쪽 세 가지 중 마음에 드는 번호를 알려 주세요.</p>
+  <div class="mode" role="group" aria-label="밝기">
+    <button type="button" aria-pressed="true" data-mode="light">밝은 화면</button>
+    <button type="button" aria-pressed="false" data-mode="dark">어두운 화면</button>
+  </div>
+</header>
+<main class="grid" id="grid"></main>
+<template id="phone">
+  <div class="phone">
+    <div class="hd"><div class="brand"><div class="logo">곡</div><div><small>경기스테이크</small><b>곡반정와드</b></div></div><div class="langs"><span>한국어</span><span>EN</span></div></div>
+    <div class="body">
+      <div><div class="eyebrow">WARD · CALENDAR</div><h2>와드 일정</h2></div>
+      <div class="chiprow"><span class="chip on">전체</span><span class="chip">초등회</span><span class="chip">청소년</span><span class="chip">상호부조회</span></div>
+      <div class="card"><span class="tag">전 회원</span><h3>성찬식 모임</h3><div class="meta">9월 27일 (일) 오전 11:00 – 오후 12:10</div><div class="meta">곡반정 와드 예배당</div></div>
+      <div class="card reply"><div class="meta"><b style="color:var(--ink)">박자매</b> · 9월 27일</div><p>40:31 — 힘들 때마다 이 구절을 떠올립니다.</p><div class="acts"><span class="heart">♥ 2</span><span>댓글 1</span></div></div>
+      <div><span class="btn">답글 등록</span></div>
+    </div>
+    <nav class="nav"><span>홈</span><span>말씀 학습</span><span>나눔</span><span class="on">와드 일정</span><span>나의 여정</span></nav>
+  </div>
+</template>
+<script>
+var options=[
+ ["p0","지금 색 (예전 사이트)","하늘색 + 금색",["#f4f9fc","#086d91","#95681d"]],
+ ["p1","1번 · 올리브 숲","차분한 초록 + 테라코타(붉은 흙색)",["#f2f5ef","#2f5d45","#c0643a"]],
+ ["p2","2번 · 새벽 보라","부드러운 남보라 + 산호색",["#f6f4fb","#4b45a1","#d9734e"]],
+ ["p3","3번 · 따뜻한 햇살","청록 + 호박색, 따뜻한 모래 배경",["#fbf7f0","#12706d","#d7922b"]]
+];
+var grid=document.getElementById("grid"),tpl=document.getElementById("phone");
+options.forEach(function(o){
+ var f=document.createElement("figure");f.className=o[0];
+ f.appendChild(tpl.content.cloneNode(true));
+ var c=document.createElement("figcaption");
+ c.innerHTML="<strong>"+o[1]+"</strong><span>"+o[2]+"</span><div class='chips'>"+o[3].map(function(h){return "<i style='background:"+h+"'></i>"}).join("")+"</div>";
+ f.appendChild(c);grid.appendChild(f);
+});
+document.querySelectorAll("[data-mode]").forEach(function(b){b.onclick=function(){
+ document.body.classList.toggle("dark",b.dataset.mode==="dark");
+ document.body.style.background=b.dataset.mode==="dark"?"#0b0b0b":"#e9e9e9";
+ document.querySelector("header.top").style.color=b.dataset.mode==="dark"?"#eee":"";
+ document.querySelectorAll("[data-mode]").forEach(function(x){x.setAttribute("aria-pressed",String(x===b))});
+}});
+</script>
+</body>
+</html>
