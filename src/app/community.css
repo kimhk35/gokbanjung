@@ -51,6 +51,8 @@
 .chip-row {
   display: flex;
   gap: 8px;
+  min-width: 0;
+  max-width: 100%;
   overflow-x: auto;
   padding-bottom: 4px;
   scrollbar-width: none;
@@ -1251,8 +1253,12 @@ a.event-card:hover {
   white-space: nowrap;
 }
 @media (max-width: 767px) {
+  .mobile-nav a {
+    flex: 1 1 0;
+    min-width: 0;
+  }
   .mobile-nav a span {
-    max-width: 74px;
+    max-width: 100%;
     text-align: center;
     line-height: 1.15;
     overflow-wrap: anywhere;
@@ -1262,8 +1268,11 @@ footer .feedback a {
   color: inherit;
   text-decoration: underline;
 }
+/* Own line each: JSX puts no space between them, so inline nowrap spans would
+   join into one unbreakable line and widen the page on phones. */
 footer .updated,
 footer .feedback {
+  display: block;
   white-space: nowrap;
 }
 /* In-site scripture chapter */
@@ -1343,4 +1352,18 @@ footer .feedback {
   inset: 0;
   opacity: 0;
   cursor: pointer;
+}
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.text-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.verse-notes .field-row {
+  grid-template-columns: 1fr 1fr;
 }

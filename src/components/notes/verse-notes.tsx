@@ -217,7 +217,7 @@ export function VerseNotes({
           )}
           <button
             type="submit"
-            className="button"
+            className="button primary"
             disabled={busy || !valid || !draft.value.body.trim()}
           >
             {t("의견 등록", "Post note")}

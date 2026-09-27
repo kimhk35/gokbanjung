@@ -172,7 +172,7 @@ export function Shell({ children }: { children: ReactNode }) {
             {t("공과자료실", "Lesson library")}
           </Link>
         )}
-        <Link href="/scriptures">{t("경전 읽기 ↗", "Read scriptures ↗")}</Link>
+        <Link href="/scriptures">{t("경전 읽기", "Read scriptures")}</Link>
         <Link href="/quiz">{t("경전 퀴즈", "Scripture quiz")}</Link>
         <Link href="/my-posts">{t("내가 쓴 글", "My writing")}</Link>
         <Link href="/account">
