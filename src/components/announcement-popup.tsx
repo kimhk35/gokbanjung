@@ -7,7 +7,7 @@ import { Modal } from "./ui/dialog";
 type Item = { id: string; content: { ko: string; en: string } };
 const version = (item: Item) => item.id + ":" + JSON.stringify(item.content);
 export function AnnouncementPopup() {
-  const { boot, lang, t } = useApp();
+  const { tl, boot, lang, t } = useApp();
   const path = usePathname();
   const [items, setItems] = useState<Item[]>([]);
   const [dismissed, setDismissed] = useState<string[]>([]);
@@ -71,7 +71,7 @@ export function AnnouncementPopup() {
       <div className="announcement-popup-list">
         {unread.map((item) => (
           <p className="preserve" key={item.id}>
-            {item.content[lang] || item.content.ko}
+            {tl(item.content) || item.content.ko}
           </p>
         ))}
       </div>

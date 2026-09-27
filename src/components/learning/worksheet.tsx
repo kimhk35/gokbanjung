@@ -31,7 +31,7 @@ export function WorksheetPage() {
   );
 }
 function Worksheet({ week }: { week: number }) {
-  const { t, lang, boot, weeks, error, notify } = useApp();
+  const { tl, locale, t, lang, boot, weeks, error, notify } = useApp();
   const [initial, setInitial] = useState<Record<string, string>>();
   const [version, setVersion] = useState(0);
   const [previousDraft, setPreviousDraft] = useState<{
@@ -102,9 +102,9 @@ function Worksheet({ week }: { week: number }) {
     try {
       const { worksheetPdf } = await import("@/lib/export");
       await worksheetPdf({
-        title: w.title[lang],
-        reference: w.reference[lang],
-        items: items.map((p) => p[lang]),
+        title: tl(w.title),
+        reference: tl(w.reference),
+        items: items.map((p) => tl(p)),
         answers: draft.value,
         lang,
         week,
@@ -125,7 +125,7 @@ function Worksheet({ week }: { week: number }) {
     <>
       <div className="worksheet-toolbar">
         <div>
-          <h2>{w.reference[lang]}</h2>
+          <h2>{tl(w.reference)}</h2>
           <p className="private">
             <LockKeyhole size={15} />
             {t(
@@ -165,8 +165,7 @@ function Worksheet({ week }: { week: number }) {
           {Object.entries(previousDraft.answers).map(([k, v]) => (
             <div key={k}>
               <strong>
-                {previousDraft.worksheet_snapshot?.items[Number(k)]?.[lang] ||
-                  k}
+                {tl(previousDraft.worksheet_snapshot?.items[Number(k)]) || k}
               </strong>
               <p style={{ whiteSpace: "pre-wrap" }}>{v}</p>
             </div>
@@ -176,14 +175,14 @@ function Worksheet({ week }: { week: number }) {
       <div className="worksheet-paper">
         <div className="paper-header">
           <span>WEEK {week}</span>
-          <strong>{w.title[lang]}</strong>
+          <strong>{tl(w.title)}</strong>
         </div>
         {items.map((p, i) => (
           <label className="field" key={i}>
             <span className="item-number">
               {String(i + 1).padStart(2, "0")}
             </span>
-            {p[lang]}
+            {tl(p)}
             <textarea
               value={draft.value[String(i)] || ""}
               onChange={(e) => draft.change(String(i), e.target.value)}
@@ -212,12 +211,8 @@ function Worksheet({ week }: { week: number }) {
           submissions.map((s) => (
             <article className="submission-card" key={s.id}>
               <div className="section-heading">
-                <strong>{statuses[s.status]?.[lang] || s.status}</strong>
-                <time>
-                  {new Date(s.created_at).toLocaleString(
-                    lang === "ko" ? "ko-KR" : "en-US",
-                  )}
-                </time>
+                <strong>{tl(statuses[s.status]) || s.status}</strong>
+                <time>{new Date(s.created_at).toLocaleString(locale)}</time>
               </div>
               <p>
                 {boot?.teachers.find((t) => t.id === s.teacher_id)?.nickname ||

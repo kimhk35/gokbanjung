@@ -11,7 +11,7 @@ import { canManageRecords } from "@/lib/access";
 import { ProgressDashboard } from "./progress-dashboard";
 import { RecordsGate } from "../account";
 export function JourneyPage() {
-  const { t, lang, boot, weeks, error } = useApp();
+  const { tl, t, lang, boot, weeks, error } = useApp();
   const [data, setData] = useState<{
     reflections: {
       week: number;
@@ -57,7 +57,7 @@ export function JourneyPage() {
       <div className="chips">
         {data?.bookmarks.map((b) => (
           <Link key={b.id} href={`/week/${b.week}`}>
-            {weeks.find((w) => w.number === b.week)?.reference[lang]}
+            {tl(weeks.find((w) => w.number === b.week)?.reference)}
           </Link>
         ))}
       </div>
@@ -72,7 +72,7 @@ export function JourneyPage() {
                   `WEEK ${r.week} · DAY ${r.day}`,
                 )}
               </span>
-              <h3>{weeks.find((w) => w.number === r.week)?.reference[lang]}</h3>
+              <h3>{tl(weeks.find((w) => w.number === r.week)?.reference)}</h3>
               <p>
                 <Translated
                   text={
@@ -219,7 +219,7 @@ export function QuestionsPage() {
   );
 }
 export function CalendarPage() {
-  const { t, lang, weeks } = useApp();
+  const { locale, tl, t, lang, weeks } = useApp();
   const [month, setMonth] = useState(new Date().getMonth() + 1);
   return (
     <div className="page">
@@ -235,10 +235,9 @@ export function CalendarPage() {
         >
           {Array.from({ length: 12 }, (_, i) => (
             <option key={i} value={i + 1}>
-              {new Date(2026, i, 1).toLocaleDateString(
-                lang === "ko" ? "ko-KR" : "en-US",
-                { month: "long" },
-              )}
+              {new Date(2026, i, 1).toLocaleDateString(locale, {
+                month: "long",
+              })}
             </option>
           ))}
         </select>
@@ -254,7 +253,7 @@ export function CalendarPage() {
           return w ? (
             <Link key={i} href={`/week/${w.number}/day/${day}`}>
               <strong>{i + 1}</strong>
-              <small>{w.reference[lang]}</small>
+              <small>{tl(w.reference)}</small>
             </Link>
           ) : (
             <div key={i}>

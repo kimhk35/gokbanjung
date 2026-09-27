@@ -31,14 +31,14 @@ export function WeekPicker({
   week: number;
   onChange: (w: number) => void;
 }) {
-  const { weeks, lang, t } = useApp();
+  const { tl, weeks, lang, t } = useApp();
   return (
     <label className="week-picker">
       {t("주차 선택", "Choose a week")}
       <select value={week} onChange={(e) => onChange(Number(e.target.value))}>
         {weeks.map((w) => (
           <option key={w.number} value={w.number}>
-            {String(w.number).padStart(2, "0")} · {w.reference[lang]}
+            {String(w.number).padStart(2, "0")} · {tl(w.reference)}
           </option>
         ))}
       </select>
@@ -72,17 +72,17 @@ export function Empty({ title, body }: { title: string; body?: string }) {
   );
 }
 export function LearnPage() {
-  const { weeks, t, lang } = useApp();
+  const { locale, tl, weeks, t, lang } = useApp();
   const [query, setQuery] = useState("");
   const thisWeek = currentWeek();
   const monthOptions = Array.from(
     new Map(
       weeks.map((w) => [
         w.start.slice(0, 7),
-        new Date(w.start + "T12:00:00").toLocaleDateString(
-          lang === "ko" ? "ko-KR" : "en-US",
-          { year: "numeric", month: "long" },
-        ),
+        new Date(w.start + "T12:00:00").toLocaleDateString(locale, {
+          year: "numeric",
+          month: "long",
+        }),
       ]),
     ).entries(),
   );
@@ -99,7 +99,7 @@ export function LearnPage() {
       setSelectedWeek(weeksInMonth[0]?.number || weeks[0]?.number || 1);
   }, [month, selectedWeek, weeksInMonth, weeks]);
   const searched = weeks.filter((w) =>
-    (w.title[lang] + w.reference[lang] + w.number)
+    (tl(w.title) + tl(w.reference) + w.number)
       .toLowerCase()
       .includes(query.toLowerCase()),
   );
@@ -225,8 +225,8 @@ export function LearnPage() {
             <span className="muted">
               {w.start.slice(5)} — {w.end.slice(5)}
             </span>
-            <h2>{w.title[lang]}</h2>
-            <p>{w.reference[lang]}</p>
+            <h2>{tl(w.title)}</h2>
+            <p>{tl(w.reference)}</p>
             <ArrowUpRight size={20} />
           </Link>
         ))}
@@ -238,7 +238,7 @@ export function LearnPage() {
   );
 }
 export function WeekPage({ number }: { number: number }) {
-  const { weeks, lang, t, boot, notify, error } = useApp();
+  const { uiLang, tl, weeks, lang, t, boot, notify, error } = useApp();
   const w = weeks.find((w) => w.number === number);
   const [completed, setCompleted] = useState<number[]>([]);
   useEffect(() => {
@@ -269,18 +269,18 @@ export function WeekPage({ number }: { number: number }) {
       </Link>
       <PageTitle
         eyebrow={`WEEK ${number} · ${w.start} — ${w.end}`}
-        title={w.title[lang]}
-        description={w.reference[lang]}
+        title={tl(w.title)}
+        description={tl(w.reference)}
       />
-      {w.sourceNote && <p className="notice">{w.sourceNote[lang]}</p>}
+      {w.sourceNote && <p className="notice">{tl(w.sourceNote)}</p>}
       <div className="source-card">
         <BookOpen size={27} />
         <div>
           <strong>
             {t("이번 주 말씀 읽기", "Read this week’s scriptures")}
           </strong>
-          <p>{w.reference[lang]}</p>
-          <a href={officialUrl(w, lang)} target="_blank" rel="noreferrer">
+          <p>{tl(w.reference)}</p>
+          <a href={officialUrl(w, uiLang)} target="_blank" rel="noreferrer">
             {t("공식 교재에서 읽기", "Read the official manual")}{" "}
             <ArrowUpRight size={17} />
           </a>
@@ -381,7 +381,7 @@ export function WeekPage({ number }: { number: number }) {
   );
 }
 export function LessonPage({ number, day }: { number: number; day: number }) {
-  const { weeks, lang, t, boot, error, notify } = useApp();
+  const { uiLang, tl, locale, weeks, lang, t, boot, error, notify } = useApp();
   const w = weeks.find((w) => w.number === number);
   const [initial, setInitial] = useState<Record<string, string>>();
   const [prior, setPrior] = useState("");
@@ -450,7 +450,7 @@ export function LessonPage({ number, day }: { number: number; day: number }) {
             ? t("이번 주를 돌아보며", "Looking back on this week")
             : t("오늘, 말씀에 머무는 시간", "A moment in the word")
         }
-        description={w.title[lang]}
+        description={tl(w.title)}
       />
       {prior && (
         <aside className="notice">
@@ -474,7 +474,7 @@ export function LessonPage({ number, day }: { number: number; day: number }) {
             </p>
             <a
               className="button secondary"
-              href={officialUrl(w, lang)}
+              href={officialUrl(w, uiLang)}
               target="_blank"
               rel="noreferrer"
             >
@@ -515,7 +515,7 @@ export function LessonPage({ number, day }: { number: number; day: number }) {
             </label>
             {prompts.map((p, i) => (
               <label className="field" key={i}>
-                {p[lang]}
+                {tl(p)}
                 <textarea
                   value={draft.value[String(i)] || ""}
                   onChange={(e) => draft.change(String(i), e.target.value)}
@@ -658,7 +658,7 @@ export function LessonPage({ number, day }: { number: number; day: number }) {
         </article>
         <aside className="lesson-aside">
           <span className="overline">YOUR WEEK</span>
-          <h3>{w.reference[lang]}</h3>
+          <h3>{tl(w.reference)}</h3>
           {Array.from({ length: 7 }, (_, i) => (
             <Link
               key={i}
@@ -695,7 +695,7 @@ export function LessonPage({ number, day }: { number: number; day: number }) {
               <span>
                 {new Date(
                   lessonDate(w.start, i + 1) + "T00:00:00Z",
-                ).toLocaleDateString(lang === "ko" ? "ko-KR" : "en-US", {
+                ).toLocaleDateString(locale, {
                   month: "numeric",
                   day: "numeric",
                   timeZone: "UTC",

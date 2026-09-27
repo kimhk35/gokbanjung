@@ -2,10 +2,11 @@
 import { useApp } from "../provider";
 import { PageTitle } from "../learning/learn";
 import { GUIDE, GUIDE_PARTS, type GuideSection } from "@/data/guide";
+import { UI_LANGS } from "@/lib/i18n";
 
 const PARTS = Object.keys(GUIDE_PARTS) as GuideSection["part"][];
 export function GuidePage() {
-  const { t, lang, setLang } = useApp();
+  const { tl, t, setLang, uiLang } = useApp();
   return (
     <div className="page narrow guide-page">
       <div className="guide-top">
@@ -22,30 +23,27 @@ export function GuidePage() {
           role="group"
           aria-label={t("언어", "Language")}
         >
-          <button
-            type="button"
-            aria-pressed={lang === "ko"}
-            onClick={() => setLang("ko")}
-          >
-            한국어
-          </button>
-          <button
-            type="button"
-            aria-pressed={lang === "en"}
-            onClick={() => setLang("en")}
-          >
-            EN
-          </button>
+          {UI_LANGS.map((l) => (
+            <button
+              key={l.id}
+              type="button"
+              lang={l.id}
+              aria-pressed={uiLang === l.id}
+              onClick={() => setLang(l.id)}
+            >
+              {l.short}
+            </button>
+          ))}
         </div>
       </div>
       <nav className="guide-toc" aria-label={t("목차", "Contents")}>
         {PARTS.map((p) => (
           <div key={p}>
-            <strong>{GUIDE_PARTS[p][lang]}</strong>
+            <strong>{tl(GUIDE_PARTS[p])}</strong>
             <ul>
               {GUIDE.filter((s) => s.part === p).map((s) => (
                 <li key={s.id}>
-                  <a href={`#${s.id}`}>{s.title[lang]}</a>
+                  <a href={`#${s.id}`}>{tl(s.title)}</a>
                 </li>
               ))}
             </ul>
@@ -54,15 +52,15 @@ export function GuidePage() {
       </nav>
       {PARTS.map((p) => (
         <div key={p}>
-          <h2 className="guide-part">{GUIDE_PARTS[p][lang]}</h2>
+          <h2 className="guide-part">{tl(GUIDE_PARTS[p])}</h2>
           {GUIDE.filter((s) => s.part === p).map((s) => (
             <section key={s.id} id={s.id} className="guide-section">
-              <h3>{s.title[lang]}</h3>
-              {s.intro && <p>{s.intro[lang]}</p>}
+              <h3>{tl(s.title)}</h3>
+              {s.intro && <p>{tl(s.intro)}</p>}
               {s.steps && (
                 <ol>
                   {s.steps.map((x, i) => (
-                    <li key={i}>{x[lang]}</li>
+                    <li key={i}>{tl(x)}</li>
                   ))}
                 </ol>
               )}
@@ -72,7 +70,7 @@ export function GuidePage() {
                     <thead>
                       <tr>
                         {s.table.head.map((h, i) => (
-                          <th key={i}>{h[lang]}</th>
+                          <th key={i}>{tl(h)}</th>
                         ))}
                       </tr>
                     </thead>
@@ -80,7 +78,7 @@ export function GuidePage() {
                       {s.table.rows.map((r, i) => (
                         <tr key={i}>
                           {r.map((c, j) => (
-                            <td key={j}>{c[lang]}</td>
+                            <td key={j}>{tl(c)}</td>
                           ))}
                         </tr>
                       ))}
@@ -88,7 +86,7 @@ export function GuidePage() {
                   </table>
                 </div>
               )}
-              {s.note && <p className="guide-note">{s.note[lang]}</p>}
+              {s.note && <p className="guide-note">{tl(s.note)}</p>}
             </section>
           ))}
         </div>

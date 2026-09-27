@@ -6,7 +6,7 @@ import { useApp } from "./provider";
 import { Confirm } from "./ui/dialog";
 type Item = { id: string; content: { ko: string; en: string } };
 export function AnnouncementManager() {
-  const { t, lang, error, notify } = useApp();
+  const { tl, t, lang, error, notify } = useApp();
   const [items, setItems] = useState<Item[]>([]);
   const [ko, setKo] = useState("");
   const [en, setEn] = useState("");
@@ -149,7 +149,7 @@ export function AnnouncementManager() {
       )}
       {items.map((item) => (
         <article className="panel" key={item.id}>
-          <p className="preserve">{item.content[lang]}</p>
+          <p className="preserve">{tl(item.content)}</p>
           <details>
             <summary>{t("다른 언어 보기", "View other language")}</summary>
             <p className="preserve">

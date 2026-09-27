@@ -15,7 +15,7 @@ import type { Prompt, Reply, ReplyComment } from "@/lib/prompts";
 import { useLocalDraft } from "../use-local-draft";
 
 export function useAuthorDefault() {
-  const { boot } = useApp();
+  const { locale, boot } = useApp();
   if (boot?.actor.nickname) return boot.actor.nickname;
   try {
     return localStorage.getItem("ggc_author") || "";
@@ -28,8 +28,8 @@ export function rememberAuthor(name: string) {
     if (name.trim()) localStorage.setItem("ggc_author", name.trim());
   } catch {}
 }
-export function when(iso: string, lang: string) {
-  return new Intl.DateTimeFormat(lang === "ko" ? "ko-KR" : "en-US", {
+export function when(iso: string, locale: string) {
+  return new Intl.DateTimeFormat(locale, {
     timeZone: "Asia/Seoul",
     month: "short",
     day: "numeric",
@@ -52,7 +52,7 @@ export function ReplyItem({
   onQueue?: () => void;
   prompt?: Prompt;
 }) {
-  const { t, lang, boot, error } = useApp();
+  const { locale, t, lang, boot, error } = useApp();
   const [open, setOpen] = useState(false);
   const [card, setCard] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -120,7 +120,7 @@ export function ReplyItem({
       )}
       <header>
         <strong>{reply.author}</strong>
-        <time>{when(reply.created_at, lang)}</time>
+        <time>{when(reply.created_at, locale)}</time>
       </header>
       <p className="preserve">{reply.body}</p>
       <div className="reply-actions">

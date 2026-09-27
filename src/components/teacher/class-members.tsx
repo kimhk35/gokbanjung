@@ -21,7 +21,7 @@ type Member = Actor & {
 };
 type Data = { members: Member[]; teachers: { id: string; nickname: string }[] };
 export function ClassMembers() {
-  const { boot, t, lang, error } = useApp();
+  const { locale, boot, t, lang, error } = useApp();
   const [week, setWeek] = useState(currentWeek()?.number || 38);
   const [teacher, setTeacher] = useState("all");
   const [search, setSearch] = useState("");
@@ -221,7 +221,7 @@ export function ClassMembers() {
                       <td>
                         {m.last_completed_at
                           ? new Date(m.last_completed_at).toLocaleDateString(
-                              lang === "ko" ? "ko-KR" : "en-US",
+                              locale,
                               { timeZone: "Asia/Seoul" },
                             )
                           : "—"}

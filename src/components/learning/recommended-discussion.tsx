@@ -7,7 +7,7 @@ import { officialUrl } from "@/lib/curriculum";
 import type { Week } from "@/lib/types";
 import { api } from "@/lib/client";
 export function RecommendedDiscussion({ week }: { week: Week }) {
-  const { t, lang, boot, notify, error } = useApp();
+  const { uiLang, tl, t, lang, boot, notify, error } = useApp();
   const [busy, setBusy] = useState(false);
   const q = recommendedQuestion(week, 1, lang);
   const follow = t(
@@ -50,7 +50,7 @@ export function RecommendedDiscussion({ week }: { week: Week }) {
           "교재 주제를 바탕으로 재구성한 토론 제안이며 공식 질문이 아닙니다.",
           "Adapted discussion suggestion based on the manual, not an official question.",
         )}{" "}
-        {week.reference[lang]} ·{" "}
+        {tl(week.reference)} ·{" "}
         {t(`교재 ${week.sourcePage}쪽`, `Manual p. ${week.sourcePage}`)}
       </small>
       <div className="actions">
@@ -65,7 +65,7 @@ export function RecommendedDiscussion({ week }: { week: Week }) {
           onClick={async () => {
             try {
               await navigator.clipboard.writeText(
-                q.question + "\n" + follow + "\n" + officialUrl(week, lang),
+                q.question + "\n" + follow + "\n" + officialUrl(week, uiLang),
               );
               notify(
                 t("토론 질문을 복사했습니다.", "Discussion prompt copied."),
@@ -82,7 +82,7 @@ export function RecommendedDiscussion({ week }: { week: Week }) {
         >
           {t("토론 질문 복사", "Copy discussion prompt")}
         </button>
-        <a href={officialUrl(week, lang)} target="_blank" rel="noreferrer">
+        <a href={officialUrl(week, uiLang)} target="_blank" rel="noreferrer">
           {t("교재 원문 ↗", "Read manual ↗")}
         </a>
         {["TEACHER", "ADMIN"].includes(boot?.actor.role || "") && (

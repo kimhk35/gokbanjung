@@ -45,7 +45,7 @@ export function EventManagers() {
             <tr>
               <th>{t("이름", "Name")}</th>
               {ORGANIZATIONS.map(([id, ko, en]) => (
-                <th key={id}>{lang === "ko" ? ko : en}</th>
+                <th key={id}>{t(ko, en)}</th>
               ))}
             </tr>
           </thead>

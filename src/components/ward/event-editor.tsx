@@ -217,7 +217,7 @@ function EditorForm({
                   checked={form.organizations.includes(id)}
                   onChange={() => toggleOrg(id)}
                 />
-                {lang === "ko" ? ko : en}
+                {t(ko, en)}
               </label>
             ))}
           </fieldset>

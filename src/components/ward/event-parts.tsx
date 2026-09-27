@@ -5,17 +5,15 @@ import { useApp } from "../provider";
 import { ORGANIZATIONS, ZONE, dayKey, onDay } from "@/lib/ward-model";
 import { posterUrl } from "@/lib/poster";
 import type { WardEvent } from "@/lib/ward-events";
-import type { Lang } from "@/lib/types";
 
-export function orgLabel(id: string, lang: Lang) {
+export function orgLabel(id: string, t: (ko: string, en: string) => string) {
   const o = ORGANIZATIONS.find((x) => x[0] === id);
-  return o ? (lang === "ko" ? o[1] : o[2]) : id;
+  return o ? t(o[1], o[2]) : id;
 }
 export function formatRange(
   e: Pick<WardEvent, "starts_at" | "ends_at">,
-  lang: Lang,
+  locale: string,
 ) {
-  const locale = lang === "ko" ? "ko-KR" : "en-US";
   const date = new Intl.DateTimeFormat(locale, {
     timeZone: ZONE,
     month: "long",
@@ -48,7 +46,7 @@ export function EventCard({
   event: WardEvent;
   preview?: boolean;
 }) {
-  const { lang } = useApp();
+  const { t, locale } = useApp();
   const poster = posterUrl(event.poster_path);
   const body = (
     <>
@@ -59,14 +57,14 @@ export function EventCard({
         <div className="event-tags">
           {event.organizations.map((o) => (
             <span className="org-chip" key={o}>
-              {orgLabel(o, lang)}
+              {orgLabel(o, t)}
             </span>
           ))}
           <StatusBadge status={event.status} />
         </div>
         <h3>{event.title}</h3>
         <p className="event-meta">
-          <CalendarDays size={16} aria-hidden /> {formatRange(event, lang)}
+          <CalendarDays size={16} aria-hidden /> {formatRange(event, locale)}
         </p>
         {event.location && (
           <p className="event-meta">
@@ -97,14 +95,17 @@ export function MonthGrid({
   selected: string;
   onSelect: (day: string) => void;
 }) {
-  const { t, lang } = useApp();
+  const { locale, t, lang } = useApp();
   const first = new Date(Date.UTC(year, month0, 1)).getUTCDay();
   const days = new Date(Date.UTC(year, month0 + 1, 0)).getUTCDate();
   const today = dayKey(new Date());
-  const names =
-    lang === "ko"
-      ? ["일", "월", "화", "수", "목", "금", "토"]
-      : ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  // 2023-01-01 was a Sunday: weekday names in the visitor's language.
+  const names = Array.from({ length: 7 }, (_, i) =>
+    new Intl.DateTimeFormat(locale, {
+      weekday: "short",
+      timeZone: "UTC",
+    }).format(new Date(Date.UTC(2023, 0, 1 + i))),
+  );
   const cells = [
     ...Array(first).fill(null),
     ...Array.from({ length: days }, (_, i) => i + 1),

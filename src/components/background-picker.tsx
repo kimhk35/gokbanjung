@@ -10,7 +10,7 @@ export function BackgroundPicker({
   onChange: (id: string) => void;
   disabled?: boolean;
 }) {
-  const { lang, t } = useApp();
+  const { tl, lang, t } = useApp();
   return (
     <details className="background-picker">
       <summary>
@@ -32,7 +32,7 @@ export function BackgroundPicker({
             onClick={() => onChange(item.id)}
           >
             <img src={cardBackgroundUrl(item.id)!} alt="" loading="lazy" />
-            <span>{item[lang]}</span>
+            <span>{tl(item)}</span>
           </button>
         ))}
       </div>

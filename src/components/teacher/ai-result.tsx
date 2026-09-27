@@ -9,7 +9,7 @@ export function AiResult({
   feature: string;
   content: unknown;
 }) {
-  const { lang, t } = useApp();
+  const { tl, lang, t } = useApp();
   const data = parseAiContent(feature, content);
   if (!data)
     return (
@@ -40,7 +40,7 @@ export function AiResult({
       {"items" in data && (
         <ol className="ai-result-list">
           {data.items.map((item, i) => (
-            <li key={i}>{item[lang]}</li>
+            <li key={i}>{tl(item)}</li>
           ))}
         </ol>
       )}
@@ -48,8 +48,8 @@ export function AiResult({
         <ol className="ai-result-list">
           {data.weeks.map((week, i) => (
             <li key={i}>
-              <strong>{week.title[lang]}</strong>
-              <p>{week.reference[lang]}</p>
+              <strong>{tl(week.title)}</strong>
+              <p>{tl(week.reference)}</p>
               <small>
                 {week.start} – {week.end}
               </small>

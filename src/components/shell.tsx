@@ -19,12 +19,13 @@ import { useEffect, useState, type ReactNode } from "react";
 import { useApp } from "./provider";
 import { Modal } from "./ui/dialog";
 import { TranslateHelp } from "./translate-help";
+import { UI_LANGS, type UiLang } from "@/lib/i18n";
 import { GuestGate } from "./account";
 import { AnnouncementPopup } from "./announcement-popup";
 import { loginStatus } from "@/lib/login-status";
 import { canManageRecords } from "@/lib/access";
 export function Shell({ children }: { children: ReactNode }) {
-  const { lang, setLang, t, boot } = useApp();
+  const { lang, uiLang, setLang, t, boot } = useApp();
   const path = usePathname();
   const [dark, setDark] = useState(false);
   const [menu, setMenu] = useState(false);
@@ -120,14 +121,29 @@ export function Shell({ children }: { children: ReactNode }) {
         </nav>
         <div className="header-actions">
           <div className="languages" aria-label={t("언어 선택", "Language")}>
-            <button aria-pressed={lang === "ko"} onClick={() => setLang("ko")}>
-              한국어
-            </button>
-            <span>/</span>
-            <button aria-pressed={lang === "en"} onClick={() => setLang("en")}>
-              EN
-            </button>
+            {UI_LANGS.map((l) => (
+              <button
+                key={l.id}
+                lang={l.id}
+                aria-pressed={uiLang === l.id}
+                onClick={() => setLang(l.id)}
+              >
+                {l.short}
+              </button>
+            ))}
           </div>
+          <select
+            className="language-select"
+            aria-label={t("언어 선택", "Language")}
+            value={uiLang}
+            onChange={(e) => setLang(e.target.value as UiLang)}
+          >
+            {UI_LANGS.map((l) => (
+              <option key={l.id} value={l.id} lang={l.id}>
+                {l.label}
+              </option>
+            ))}
+          </select>
           <TranslateHelp />
           <button
             className="icon-button"

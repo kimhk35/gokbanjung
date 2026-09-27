@@ -133,7 +133,7 @@ type TeacherData = {
   ai: AIRecord[];
 };
 export function TeacherPage() {
-  const { t, lang, boot, error, notify, reload, weeks } = useApp();
+  const { locale, tl, t, lang, boot, error, notify, reload, weeks } = useApp();
   const [week, setWeek] = useState(currentWeek()?.number || 38);
   const [data, setData] = useState<TeacherData | null>(null);
   const [selected, setSelected] = useState<Submission | null>(null);
@@ -282,9 +282,7 @@ export function TeacherPage() {
                           )}
                         </strong>
                         <p>
-                          {new Date(s.created_at).toLocaleDateString(
-                            lang === "ko" ? "ko-KR" : "en-US",
-                          )}
+                          {new Date(s.created_at).toLocaleDateString(locale)}
                         </p>
                       </div>
                       <span className="badge">
@@ -672,8 +670,8 @@ export function TeacherPage() {
             {Object.entries(selected.answers).map(([k, v]) => (
               <div key={k}>
                 <strong>
-                  {selected.worksheet_snapshot?.items[Number(k)]?.[lang] ||
-                    fields[Number(k)]?.[lang] ||
+                  {tl(selected.worksheet_snapshot?.items[Number(k)]) ||
+                    tl(fields[Number(k)]) ||
                     k}
                 </strong>
                 <p>{v}</p>

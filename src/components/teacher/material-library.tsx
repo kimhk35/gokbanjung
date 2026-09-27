@@ -9,7 +9,7 @@ import { currentWeek } from "@/lib/curriculum";
 import type { LessonMaterial } from "@/lib/lesson-materials";
 
 export function MaterialLibrary() {
-  const { t, lang, boot, weeks, error } = useApp();
+  const { tl, t, lang, boot, weeks, error } = useApp();
   const [data, setData] = useState<LessonMaterial[]>([]),
     [loading, setLoading] = useState(true),
     [failed, setFailed] = useState(false);
@@ -34,11 +34,25 @@ export function MaterialLibrary() {
     if (!allowed) return;
     let active = true;
     api<LessonMaterial[]>("lesson-materials")
-      .then(rows => {if(active) {setData(rows);setFailed(false);}})
-      .catch(e => {if(active) {setFailed(true);error(e);}})
-      .finally(() => {if(active)setLoading(false);});
-    return () => {active=false;};
-  }, [allowed,error]);
+      .then((rows) => {
+        if (active) {
+          setData(rows);
+          setFailed(false);
+        }
+      })
+      .catch((e) => {
+        if (active) {
+          setFailed(true);
+          error(e);
+        }
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+    return () => {
+      active = false;
+    };
+  }, [allowed, error]);
   if (!allowed)
     return (
       <section className="panel">
@@ -82,7 +96,7 @@ export function MaterialLibrary() {
             <option value={0}>{t("전체 공과", "All lessons")}</option>
             {weeks.map((w) => (
               <option value={w.number} key={w.number}>
-                {w.number}. {w.title[lang]}
+                {w.number}. {tl(w.title)}
               </option>
             ))}
           </select>
@@ -105,7 +119,7 @@ export function MaterialLibrary() {
                 {m.weeks
                   .map(
                     (n) =>
-                      `${n}. ${weeks.find((w) => w.number === n)?.title[lang] || ""}`,
+                      `${n}. ${tl(weeks.find((w) => w.number === n)?.title) || ""}`,
                   )
                   .join(" / ")}
               </p>

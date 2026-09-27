@@ -12,7 +12,7 @@ import { PromptView } from "./prompt-view";
 import { when } from "./reply-item";
 
 export function ThinkPage() {
-  const { t, lang, weeks, boot, error } = useApp();
+  const { locale, tl, t, lang, weeks, boot, error } = useApp();
   const [week, setWeek] = useState<string>("");
   const [data, setData] = useState<{
     items: Prompt[];
@@ -60,7 +60,7 @@ export function ThinkPage() {
             <option value="">{t("전체", "All")}</option>
             {weeks.map((w) => (
               <option key={w.number} value={w.number}>
-                {w.number}. {w.title[lang]}
+                {w.number}. {tl(w.title)}
               </option>
             ))}
           </select>
@@ -108,7 +108,7 @@ export function ThinkPage() {
                 </p>
                 <small className="muted">
                   <MessageCircle size={14} /> {p.reply_count} · {p.author} ·{" "}
-                  {when(p.created_at, lang)}
+                  {when(p.created_at, locale)}
                 </small>
               </Link>
             ))}

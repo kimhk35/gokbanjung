@@ -14,7 +14,7 @@ import { api } from "@/lib/client";
 import type { Week } from "@/lib/types";
 
 export function ScriptureReader() {
-  const { t, lang } = useApp();
+  const { uiLang, tl, t, lang } = useApp();
   const [bookId, setBookId] = useState("ot/isa");
   const [chapter, setChapter] = useState(1);
   const [verse, setVerse] = useState("1");
@@ -49,7 +49,7 @@ export function ScriptureReader() {
     href = scriptureUrl(
       book,
       chapter,
-      lang,
+      uiLang,
       verse.trim() ? parts[0] : undefined,
       parts[1],
     );
@@ -131,12 +131,12 @@ export function ScriptureReader() {
               }}
             >
               {Object.entries(collections).map(([id, label]) => (
-                <optgroup key={id} label={label[lang]}>
+                <optgroup key={id} label={tl(label)}>
                   {scriptureBooks
                     .filter((b) => b.collection === id)
                     .map((b) => (
                       <option key={b.id} value={b.id}>
-                        {b[lang]}
+                        {tl(b)}
                       </option>
                     ))}
                 </optgroup>
@@ -170,7 +170,7 @@ export function ScriptureReader() {
           </label>
         </div>
         <h2 aria-live="polite">
-          {book[lang]} {chapter}
+          {tl(book)} {chapter}
           {verse ? `:${verse}` : ""}
         </h2>
         {href ? (
@@ -205,7 +205,7 @@ export function ScriptureReader() {
         )}
         <a
           className="button secondary"
-          href={scriptureUrl(book, chapter, lang)}
+          href={scriptureUrl(book, chapter, uiLang)}
           target="_blank"
           rel="noreferrer"
         >
@@ -223,7 +223,7 @@ export function ScriptureReader() {
 }
 
 export function ReadingLinks({ week, day }: { week: Week; day: number }) {
-  const { lang, t } = useApp();
+  const { uiLang, tl, lang, t } = useApp();
   return (
     <div className="scripture-links">
       <p>
@@ -246,11 +246,11 @@ export function ReadingLinks({ week, day }: { week: Week; day: number }) {
             <a
               className="button secondary"
               key={part}
-              href={scriptureUrl(book, chapter, lang)}
+              href={scriptureUrl(book, chapter, uiLang)}
               target="_blank"
               rel="noreferrer"
             >
-              {book[lang]} {chapter} ↗
+              {tl(book)} {chapter} ↗
             </a>
           );
         })}

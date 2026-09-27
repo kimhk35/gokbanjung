@@ -5,7 +5,7 @@ import { api } from "@/lib/client";
 import { useApp } from "../provider";
 type Announcement = { id: string; content: { ko: string; en: string } };
 export function Announcements() {
-  const { lang, t, boot } = useApp();
+  const { tl, lang, t, boot } = useApp();
   const [items, setItems] = useState<Announcement[]>([]);
   useEffect(() => {
     let active = true;
@@ -29,7 +29,7 @@ export function Announcements() {
       </h2>
       {items.slice(0, 5).map((item) => (
         <p className="preserve" key={item.id}>
-          {item.content[lang] || item.content.ko || item.content.en}
+          {tl(item.content) || item.content.ko || item.content.en}
         </p>
       ))}
     </section>

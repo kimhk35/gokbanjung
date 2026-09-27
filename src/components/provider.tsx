@@ -11,6 +11,7 @@ import { api, RequestError } from "@/lib/client";
 import type { Lang, Actor, Week, Localized } from "@/lib/types";
 import { curriculum } from "@/lib/curriculum";
 import { initialLang } from "@/lib/lang";
+import { baseLang, localeOf, translate, type UiLang } from "@/lib/i18n";
 type Boot = {
   actor: Actor;
   weeks: { data: Week }[];
@@ -21,8 +22,12 @@ type Boot = {
   persistent: boolean;
 };
 type Context = {
+  /** ko/en language for server requests and ko/en-only data. */
   lang: Lang;
-  setLang: (lang: Lang) => void;
+  /** The language the visitor chose: ko, en, es or fil. */
+  uiLang: UiLang;
+  setLang: (lang: UiLang) => void;
+  locale: string;
   t: (ko: string, en: string) => string;
   tl: (text: Localized | null | undefined) => string;
   boot: Boot | null;
@@ -233,26 +238,27 @@ const errors: Record<string, Localized> = {
   },
 };
 export function Provider({ children }: { children: ReactNode }) {
-  const [lang, setLanguage] = useState<Lang>("ko");
+  const [uiLang, setLanguage] = useState<UiLang>("ko");
+  const lang = baseLang(uiLang);
   const [boot, setBoot] = useState<Boot | null>(null);
   const [message, notify] = useState("");
   const [ready, setReady] = useState(false);
   const t = useCallback(
-    (ko: string, en: string) => (lang === "ko" ? ko : en),
-    [lang],
+    (ko: string, en: string) => translate(uiLang, ko, en),
+    [uiLang],
   );
   const error = useCallback(
     (e: unknown) => {
       const key = e instanceof RequestError ? e.code : "server_error";
       notify(
-        errors[key]?.[lang] ||
+        (errors[key] && t(errors[key].ko, errors[key].en)) ||
           t(
             "잠시 문제가 발생했습니다. 작성한 내용은 이 기기에 보관됩니다.",
             "Something went wrong. Your draft is kept on this device.",
           ),
       );
     },
-    [lang, t],
+    [t],
   );
   const reload = useCallback(async () => {
     await api("session", {});
@@ -264,20 +270,20 @@ export function Provider({ children }: { children: ReactNode }) {
       localStorage.getItem("ggc_lang"),
       navigator.languages?.length ? navigator.languages : [navigator.language],
     );
-    if (initial === "en") setLanguage("en");
+    if (initial !== "ko") setLanguage(initial);
     reload()
       .catch(error)
       .finally(() => setReady(true));
   }, [reload]);
   useEffect(() => {
-    document.documentElement.lang = lang;
-  }, [lang]);
+    document.documentElement.lang = uiLang;
+  }, [uiLang]);
   useEffect(() => {
     if (!message) return;
     const timer = setTimeout(() => notify(""), 6000);
     return () => clearTimeout(timer);
   }, [message]);
-  const setLang = (value: Lang) => {
+  const setLang = (value: UiLang) => {
     setLanguage(value);
     localStorage.setItem("ggc_lang", value);
   };
@@ -285,7 +291,9 @@ export function Provider({ children }: { children: ReactNode }) {
     <C.Provider
       value={{
         lang,
+        uiLang,
         setLang,
+        locale: localeOf(uiLang),
         t,
         tl: (text: Localized | null | undefined) =>
           text ? t(text.ko, text.en) : "",

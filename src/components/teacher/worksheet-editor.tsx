@@ -7,7 +7,7 @@ import { Modal } from "../ui/dialog";
 import type { Localized } from "@/lib/types";
 type Sheet = { items: Localized[]; version: number };
 export function WorksheetEditor({ week }: { week: number }) {
-  const { t, lang, error, notify } = useApp();
+  const { tl, t, lang, error, notify } = useApp();
   const [saved, setSaved] = useState<Sheet | null>(null);
   const [items, setItems] = useState<Localized[]>([]);
   const [busy, setBusy] = useState(false);
@@ -210,7 +210,7 @@ export function WorksheetEditor({ week }: { week: number }) {
           {items.map((p, i) => (
             <div className="field" key={i}>
               <strong>
-                {i + 1}. {p[lang] || t("문항을 입력하세요", "Enter a prompt")}
+                {i + 1}. {tl(p) || t("문항을 입력하세요", "Enter a prompt")}
               </strong>
               <textarea
                 rows={3}

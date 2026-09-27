@@ -13,15 +13,22 @@ import { dayIndex, reading } from "@/lib/curriculum";
 import { recommendedQuestion } from "@/lib/recommendations";
 import { Recommendation } from "./recommendation";
 import { ContinueLearning } from "./continue-learning";
-import {RecommendedDiscussion} from './recommended-discussion';
+import { RecommendedDiscussion } from "./recommended-discussion";
 import { useStudyDate } from "../use-study-date";
 import { Announcements } from "./announcements";
 import { HomeCommunity } from "./home-community";
 export function HomePage() {
-  const { t, lang, weeks } = useApp();
+  const { tl, locale, t, lang, weeks } = useApp();
   const date = useStudyDate();
-  if (!date) return <div className="page" aria-busy="true">{t("오늘의 학습을 불러오는 중…", "Loading today’s learning…")}</div>;
-  const w = weeks.find((w) => w.start <= date && w.end >= date) || (date < weeks[0].start ? weeks[0] : weeks.at(-1)!);
+  if (!date)
+    return (
+      <div className="page" aria-busy="true">
+        {t("오늘의 학습을 불러오는 중…", "Loading today’s learning…")}
+      </div>
+    );
+  const w =
+    weeks.find((w) => w.start <= date && w.end >= date) ||
+    (date < weeks[0].start ? weeks[0] : weeks.at(-1)!);
   const day = dayIndex(w, date);
   return (
     <div className="page home">
@@ -32,7 +39,10 @@ export function HomePage() {
       <section className="hero">
         <div className="hero-copy">
           <span className="overline">
-            {t("예수 그리스도를 중심에 두는 한 주", "A WEEK CENTERED ON JESUS CHRIST")}
+            {t(
+              "예수 그리스도를 중심에 두는 한 주",
+              "A WEEK CENTERED ON JESUS CHRIST",
+            )}
           </span>
           <h1>
             {t("말씀을 펼치는 순간,", "Open the scriptures.")}
@@ -45,7 +55,10 @@ export function HomePage() {
               "Read the scriptures, ponder deeply,",
             )}
             <br className="desktop-only" />
-            {t("가정과 삶에서 복음을 실천해 보세요.", "and live the gospel at home and in daily life.")}
+            {t(
+              "가정과 삶에서 복음을 실천해 보세요.",
+              "and live the gospel at home and in daily life.",
+            )}
           </p>
           <Link
             className="button primary"
@@ -63,28 +76,30 @@ export function HomePage() {
         </div>
       </section>
       <section className="weekly-feature">
-          <div className="feature-top">
-            <span>{t("와서 나를 따르라 · 이번 주 말씀", "COME, FOLLOW ME · READING")}</span>
-            <span>WEEK {String(w.number).padStart(2, "0")}</span>
-          </div>
-          <div className="feature-center">
-            <BookOpen size={34} strokeWidth={1} />
-            <p className="date">
-              {w.start.slice(5).replace("-", ".")} —{" "}
-              {w.end.slice(5).replace("-", ".")}
-            </p>
-            <h2>{w.title[lang]}</h2>
-            <p>{w.reference[lang]}</p>
-          </div>
-          <Link href={`/week/${w.number}`}>
-            {t("이번 주 학습 살펴보기", "Explore this week")}
-            <ArrowUpRight size={22} />
-          </Link>
-          <span className="feature-line" />
+        <div className="feature-top">
+          <span>
+            {t("와서 나를 따르라 · 이번 주 말씀", "COME, FOLLOW ME · READING")}
+          </span>
+          <span>WEEK {String(w.number).padStart(2, "0")}</span>
+        </div>
+        <div className="feature-center">
+          <BookOpen size={34} strokeWidth={1} />
+          <p className="date">
+            {w.start.slice(5).replace("-", ".")} —{" "}
+            {w.end.slice(5).replace("-", ".")}
+          </p>
+          <h2>{tl(w.title)}</h2>
+          <p>{tl(w.reference)}</p>
+        </div>
+        <Link href={`/week/${w.number}`}>
+          {t("이번 주 학습 살펴보기", "Explore this week")}
+          <ArrowUpRight size={22} />
+        </Link>
+        <span className="feature-line" />
       </section>
       <ContinueLearning />
       <Announcements />
-      <RecommendedDiscussion week={w}/>
+      <RecommendedDiscussion week={w} />
       <Recommendation week={w} day={day} />
       <section
         className="rhythm"
@@ -124,10 +139,11 @@ export function HomePage() {
             <h2>{t("오늘의 작은 발견", "A small discovery for today")}</h2>
           </div>
           <span className="muted">
-            {new Date(date + "T12:00:00").toLocaleDateString(
-              lang === "ko" ? "ko-KR" : "en-US",
-              { month: "long", day: "numeric", weekday: "long" },
-            )}
+            {new Date(date + "T12:00:00").toLocaleDateString(locale, {
+              month: "long",
+              day: "numeric",
+              weekday: "long",
+            })}
           </span>
         </div>
         <div className="feature-grid">

@@ -13,7 +13,7 @@ export function ProgressDashboard({
   reflections: number;
   bookmarks: number;
 }) {
-  const { weeks, lang, t } = useApp();
+  const { tl, locale, weeks, lang, t } = useApp();
   const today = useStudyDate();
   const activeWeek =
     weeks.find((w) => today && w.start <= today && w.end >= today) || weeks[0];
@@ -99,7 +99,7 @@ export function ProgressDashboard({
                 <option value={w.number} key={w.number}>
                   {w.number}
                   {t("주차 · ", " · ")}
-                  {w.reference[lang]}
+                  {tl(w.reference)}
                 </option>
               ))}
             </select>
@@ -113,10 +113,10 @@ export function ProgressDashboard({
                 aria-label={`${date} ${complete.has(date) ? t("완료", "Complete") : t("학습하기", "Study")}`}
               >
                 <small>
-                  {new Date(date + "T00:00:00Z").toLocaleDateString(
-                    lang === "ko" ? "ko-KR" : "en-US",
-                    { weekday: "short", timeZone: "UTC" },
-                  )}
+                  {new Date(date + "T00:00:00Z").toLocaleDateString(locale, {
+                    weekday: "short",
+                    timeZone: "UTC",
+                  })}
                 </small>
                 <strong>{Number(date.slice(-2))}</strong>
                 <span>{complete.has(date) ? "✓" : "○"}</span>

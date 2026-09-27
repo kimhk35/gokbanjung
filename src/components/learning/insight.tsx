@@ -16,7 +16,7 @@ import { currentWeek } from "@/lib/curriculum";
 import { PageTitle, WeekPicker } from "./learn";
 type Insight = { headline: string; question: string; action: string };
 export function InsightPage() {
-  const { t, lang, weeks, boot, error, notify } = useApp();
+  const { tl, t, lang, weeks, boot, error, notify } = useApp();
   const params = useSearchParams();
   const [week, setWeek] = useState(
     Number(params.get("week")) || currentWeek()?.number || 38,
@@ -151,7 +151,7 @@ export function InsightPage() {
     };
     const groups = [
       { text: insight.headline, size: 56, gap: 35 },
-      { text: w.reference[lang], size: 26, gap: 45 },
+      { text: tl(w.reference), size: 26, gap: 45 },
       { text: insight.question, size: 30, gap: 25 },
       { text: insight.action, size: 30, gap: 0 },
     ];
@@ -318,7 +318,7 @@ export function InsightPage() {
               >
                 {cardBackgrounds.map((bg) => (
                   <option key={bg.id} value={bg.id}>
-                    {bg[lang]}
+                    {tl(bg)}
                   </option>
                 ))}
                 <option value="navy">{t("밤하늘", "Night sky")}</option>

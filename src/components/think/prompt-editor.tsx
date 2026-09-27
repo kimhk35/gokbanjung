@@ -49,7 +49,7 @@ export function PromptEditor(props: EditorProps) {
   );
 }
 function PromptForm({ onOpenChange, prompt, onSaved }: EditorProps) {
-  const { t, lang, weeks, error, notify } = useApp();
+  const { tl, t, lang, weeks, error, notify } = useApp();
   const [form, setForm] = useState<Form>(() =>
     prompt
       ? {
@@ -72,7 +72,7 @@ function PromptForm({ onOpenChange, prompt, onSaved }: EditorProps) {
       ...f,
       week: w ? w.number : null,
       source_url: w?.sourceUrl || f.source_url,
-      reference_label: w ? w.reference[lang] : f.reference_label,
+      reference_label: w ? tl(w.reference) : f.reference_label,
     }));
   };
   const save = async () => {
@@ -120,7 +120,7 @@ function PromptForm({ onOpenChange, prompt, onSaved }: EditorProps) {
           <option value="">{t("선택 안 함", "None")}</option>
           {weeks.map((w) => (
             <option key={w.number} value={w.number}>
-              {w.number}. {w.title[lang]}
+              {w.number}. {tl(w.title)}
             </option>
           ))}
         </select>

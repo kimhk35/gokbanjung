@@ -1,4 +1,5 @@
 import raw from "@/data/curriculum.json";
+import { churchLangCode, type UiLang } from "./i18n";
 import type { Week, Lang, Localized } from "./types";
 export const curriculum: Week[] = raw as Week[];
 export const COURSE = "old-testament-2026";
@@ -127,9 +128,6 @@ export function reading(w: Week, day: number, lang: Lang) {
     )
     .join("; ");
 }
-export function officialUrl(w: Week, lang: Lang) {
-  return w.sourceUrl.replace(
-    "lang=kor",
-    `lang=${lang === "ko" ? "kor" : "eng"}`,
-  );
+export function officialUrl(w: Week, lang: Lang | UiLang) {
+  return w.sourceUrl.replace("lang=kor", `lang=${churchLangCode(lang)}`);
 }

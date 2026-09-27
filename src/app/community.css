@@ -946,3 +946,29 @@ a.event-card:hover {
   color: var(--ink);
   font: inherit;
 }
+/* Four-language switch: buttons on wide screens, a select on phones */
+.language-select {
+  display: none;
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9rem;
+}
+.languages button {
+  min-width: 40px;
+}
+@media (max-width: 767px) {
+  .header-actions .languages {
+    display: none;
+  }
+  .header-actions .language-select {
+    display: inline-block;
+  }
+}
+.guide-lang button {
+  min-width: 56px;
+}

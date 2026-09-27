@@ -23,7 +23,7 @@ const blank: LessonConfig = {
   activeId: null,
 };
 export function LessonBuilder() {
-  const { t, lang, weeks, boot, error, notify } = useApp();
+  const { tl, t, lang, weeks, boot, error, notify } = useApp();
   const params = useSearchParams();
   const requestedWeek = Number(params.get("week"));
   const [week, setWeek] = useState(
@@ -142,7 +142,7 @@ export function LessonBuilder() {
             >
               {weeks.map((w) => (
                 <option value={w.number} key={w.number}>
-                  {w.number} · {w.title[lang]}
+                  {w.number} · {tl(w.title)}
                 </option>
               ))}
             </select>
@@ -167,7 +167,7 @@ export function LessonBuilder() {
               </option>
               {cardBackgrounds.map((bg) => (
                 <option value={bg.id} key={bg.id}>
-                  {bg[lang]}
+                  {tl(bg)}
                 </option>
               ))}
             </select>

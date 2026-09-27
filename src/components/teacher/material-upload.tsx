@@ -20,7 +20,7 @@ export function MaterialUpload({
   onDone: (items: LessonItem[]) => void;
   onSkip?: (items: LessonItem[]) => void;
 }) {
-  const { t, lang, weeks, error, notify } = useApp();
+  const { tl, t, lang, weeks, error, notify } = useApp();
   const [items, setItems] = useState<LessonItem[]>([]);
   const [title, setTitle] = useState("");
   const [selected, setSelected] = useState<number[]>([week]);
@@ -208,7 +208,7 @@ export function MaterialUpload({
                     }
                   />
                   <span>
-                    {w.number}. {w.title[lang]}
+                    {w.number}. {tl(w.title)}
                   </span>
                 </label>
               ))}

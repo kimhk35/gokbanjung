@@ -51,7 +51,7 @@ type AdminData = {
   }[];
 };
 export function AdminPage() {
-  const { t, lang, boot, error, notify, reload } = useApp();
+  const { locale, t, lang, boot, error, notify, reload } = useApp();
   const [data, setData] = useState<AdminData | null>(null);
   const [busy, setBusy] = useState(false);
   const [moderation, setModeration] = useState("automatic");
@@ -397,9 +397,7 @@ export function AdminPage() {
             {data?.versions.map((v) => (
               <p key={v.id}>
                 {v.kind} · {v.record_id} ·{" "}
-                {new Date(v.created_at).toLocaleString(
-                  lang === "ko" ? "ko-KR" : "en-US",
-                )}
+                {new Date(v.created_at).toLocaleString(locale)}
               </p>
             ))}
             <a className="button secondary" href="/api/backup">

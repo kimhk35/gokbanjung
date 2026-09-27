@@ -30,7 +30,7 @@ function subscribePhone(onChange: () => void) {
 }
 const isPhone = () => window.matchMedia(PHONE).matches;
 export function WardPage() {
-  const { t, lang, boot, error } = useApp();
+  const { locale, t, lang, boot, error } = useApp();
   const today = dayKey(new Date());
   const [year, setYear] = useState(Number(today.slice(0, 4)));
   const [month0, setMonth0] = useState(Number(today.slice(5, 7)) - 1);
@@ -79,10 +79,11 @@ export function WardPage() {
     );
   }, [data, org, query]);
   const dayItems = items.filter((e) => onDay(e, selected));
-  const monthLabel = new Intl.DateTimeFormat(
-    lang === "ko" ? "ko-KR" : "en-US",
-    { year: "numeric", month: "long", timeZone: "UTC" },
-  ).format(new Date(Date.UTC(year, month0, 1)));
+  const monthLabel = new Intl.DateTimeFormat(locale, {
+    year: "numeric",
+    month: "long",
+    timeZone: "UTC",
+  }).format(new Date(Date.UTC(year, month0, 1)));
   return (
     <div className="page ward-page">
       <PageTitle
@@ -165,7 +166,7 @@ export function WardPage() {
               aria-pressed={org === id}
               onClick={() => setOrg(id)}
             >
-              {lang === "ko" ? ko : en}
+              {t(ko, en)}
             </button>
           ))}
         </div>
@@ -190,7 +191,7 @@ export function WardPage() {
           />
           <section className="day-list" aria-live="polite">
             <h2>
-              {new Intl.DateTimeFormat(lang === "ko" ? "ko-KR" : "en-US", {
+              {new Intl.DateTimeFormat(locale, {
                 month: "long",
                 day: "numeric",
                 weekday: "long",
