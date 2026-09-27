@@ -9,7 +9,7 @@ const url =
 const host = new URL(url).hostname;
 console.log("Database host:", host);
 if (
-  (await ask("Update this gospel-class database? Type UPDATE: ")) !== "UPDATE"
+  (await ask("Add gokbanjung tables to this database? Type UPDATE: ")) !== "UPDATE"
 )
   process.exit(1);
 const sql = postgres(url, {
@@ -37,10 +37,17 @@ try {
     );
     const [materials] = await tx`select to_regclass('ggc.lesson_materials') as installed`;
     if (!materials.installed) await tx.unsafe(await read("supabase/migrations/20260915132630_lesson_material_images.sql","utf8"));
+    const [ward] = await tx`select to_regclass('ggc.events') as installed`;
+    if (!ward.installed) await tx.unsafe(await read("supabase/migrations/20260927000000_ward_community.sql","utf8"));
+    const [storage] = await tx`select to_regclass('storage.buckets') as installed`;
+    if (storage.installed) await tx`insert into storage.buckets(id,name,public,file_size_limit,allowed_mime_types) values('ggc-posters','ggc-posters',true,2097152,array['image/webp','image/png','image/jpeg']) on conflict(id) do nothing`;
     const [verified] =
-      await tx`select to_regclass('ggc.quiz_sets') as quizzes,to_regclass('ggc.account_requests') as accounts`;
-    if (!verified.quizzes || !verified.accounts)
+      await tx`select to_regclass('ggc.quiz_sets') as quizzes,to_regclass('ggc.account_requests') as accounts,to_regclass('ggc.events') as events,to_regclass('ggc.prompt_reply_reactions') as prompts`;
+    if (!verified.quizzes || !verified.accounts || !verified.events || !verified.prompts)
       throw new Error("Schema verification failed");
+    console.log(
+      "Verified: accounts, quizzes, ward calendar, shared prompts. Existing records preserved.",
+    );
     console.log(
       "Verified: account approval, private quiz sets, attempts and reward rules. Existing records preserved.",
     );

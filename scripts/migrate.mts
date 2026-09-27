@@ -24,6 +24,7 @@ try {
     await sql.unsafe(await readFile("supabase/seed.sql", "utf8"));
   // Private Storage bucket. Only server-side administrator routes handle objects.
   await sql`insert into storage.buckets(id,name,public,file_size_limit) values('gospel-materials','gospel-materials',false,4194304) on conflict(id) do nothing`;
+  await sql`insert into storage.buckets(id,name,public,file_size_limit,allowed_mime_types) values('ggc-posters','ggc-posters',true,2097152,array['image/webp','image/png','image/jpeg']) on conflict(id) do nothing`;
   console.log("Migrations and curriculum applied.");
 } finally {
   await sql.end();
