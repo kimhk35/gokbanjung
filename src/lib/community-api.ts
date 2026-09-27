@@ -5,6 +5,7 @@ export function isCommunityPath(path: string) {
   return (
     path.startsWith("ward/") ||
     path.startsWith("think/") ||
+    path.startsWith("notes/") ||
     path === "home/activity"
   );
 }
@@ -27,6 +28,8 @@ export async function communityRead(
       return P.listPrompts(a, params);
     case "think/prompt":
       return P.getPrompt(a, params.get("slug") || "");
+    case "notes/verse-list":
+      return (await import("./verse-notes")).listVerseNotes(a, params);
     case "home/activity":
       return {
         events: await W.upcomingEvents(3),
@@ -43,6 +46,7 @@ export async function communityWrite(a: Actor, path: string, input: unknown) {
   await rateLimit("community:" + a.id, 120, 60);
   const W = await import("./ward-events");
   const P = await import("./prompts");
+  const V = await import("./verse-notes");
   const handlers: Record<
     string,
     (a: Actor, input: unknown) => Promise<unknown>
@@ -58,6 +62,11 @@ export async function communityWrite(a: Actor, path: string, input: unknown) {
     "think/comment": P.addReplyComment,
     "think/comment-delete": P.deleteReplyComment,
     "think/heart": P.toggleHeart,
+    "notes/verse-save": V.saveVerseNote,
+    "notes/verse-delete": V.deleteVerseNote,
+    "notes/verse-heart": V.toggleVerseHeart,
+    "notes/verse-comment": V.addVerseComment,
+    "notes/verse-comment-delete": V.deleteVerseComment,
   };
   const handler = handlers[path];
   ensure(handler, 404, "not_found");

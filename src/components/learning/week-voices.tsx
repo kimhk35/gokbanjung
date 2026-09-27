@@ -6,6 +6,7 @@ import { useApp } from "../provider";
 import { api } from "@/lib/client";
 import type { Prompt } from "@/lib/prompts";
 import { ThoughtWall } from "../community/wall";
+import { VerseNotes } from "../notes/verse-notes";
 
 export function WeekVoices({ week }: { week: number }) {
   const { t, boot } = useApp();
@@ -36,6 +37,15 @@ export function WeekVoices({ week }: { week: number }) {
           ))}
         </div>
       )}
+      <details className="verse-notes-toggle">
+        <summary>
+          {t(
+            "절에 의견 달기 · 다른 사람들의 절 의견 보기",
+            "Verse notes · see others' notes on verses",
+          )}
+        </summary>
+        <VerseNotes week={week} />
+      </details>
       <ThoughtWall week={week} />
     </section>
   );

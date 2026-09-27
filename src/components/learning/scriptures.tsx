@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { VerseNotes } from "../notes/verse-notes";
 import Link from "next/link";
 import { useApp } from "../provider";
 import {
@@ -218,6 +219,12 @@ export function ScriptureReader() {
           )}
         </small>
       </section>
+      <VerseNotes
+        key={`${bookId}:${chapter}`}
+        bookId={bookId}
+        chapter={chapter}
+        verseHint={verse}
+      />
     </div>
   );
 }
