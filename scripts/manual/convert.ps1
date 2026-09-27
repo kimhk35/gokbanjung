@@ -1,7 +1,9 @@
-﻿# Converts the manual DOCX files to PDF (Microsoft Word) and HWPX (Hangul).
+﻿# Converts the manual DOCX files to PDF with Microsoft Word.
+# (HWPX is written by build.mts with kordoc; Hangul automation cannot open files on this PC.)
 # Run from the project folder:  powershell -File scripts/manual/convert.ps1
+param([string]$Folder = "사용설명서(사용자용)")
 $ErrorActionPreference = "Stop"
-$dir = Join-Path (Get-Location) "사용설명서(사용자용)"
+$dir = Join-Path (Get-Location) $Folder
 $docs = Get-ChildItem $dir -Filter "*.docx"
 
 $word = New-Object -ComObject Word.Application
@@ -18,12 +20,3 @@ try {
   }
 } finally { $word.Quit() }
 
-$hwp = New-Object -ComObject HWPFrame.HwpObject
-try {
-  foreach ($d in $docs) {
-    $out = [IO.Path]::ChangeExtension($d.FullName, ".hwpx")
-    if (-not $hwp.Open($d.FullName, "", "")) { throw "Hangul could not open $($d.Name)" }
-    if (-not $hwp.SaveAs($out, "HWPX", "")) { throw "Hangul could not save $out" }
-    "HWPX $out"
-  }
-} finally { $hwp.Quit() }

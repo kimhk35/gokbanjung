@@ -1,7 +1,7 @@
 // Builds the member (user) manual from src/data/guide.ts + screenshots:
 //   DOCX (ko, en) · single-page HTML (4 languages) · HTML e-book (4 languages)
-// PDF and HWPX are converted from the DOCX by scripts/manual/convert.ps1
-// (Word and Hangul do the conversion, so layout and pictures are kept).
+// HWPX (ko, en) is written here with kordoc; PDF is converted from the DOCX
+// by Microsoft Word (scripts/manual/convert.ps1), so layout and pictures are kept.
 // Run: node --import tsx scripts/manual/build.mts   (after shots.mjs)
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
@@ -25,7 +25,9 @@ import {
   TextRun,
   WidthType,
 } from "docx";
+import { markdownToHwpx } from "kordoc";
 import { GUIDE, GUIDE_PARTS, type GuideSection } from "../../src/data/guide";
+import { kstDate, SITE_INFO } from "../../src/lib/site-info";
 import { translate, UI_LANGS, type UiLang } from "../../src/lib/i18n";
 import type { Localized } from "../../src/lib/types";
 
@@ -36,6 +38,13 @@ const SUBTITLE: Localized = {
   en: "For members · Learn the word together, no sign-in needed",
 };
 const SITE = "https://gokbanjeong-gospel-class.vercel.app";
+const UPDATED = kstDate(new Date());
+// Cover/credits lines, each already in the reader's language.
+const credits = (lang: UiLang) => [
+  translate(lang, "만든 사람 · ", "Created by ") + tr(SITE_INFO.creators, lang),
+  translate(lang, "피드백·의견 · ", "Feedback & ideas · ") + SITE_INFO.feedbackEmail,
+  translate(lang, "최근 업데이트 · ", "Last updated · ") + UPDATED,
+];
 const IMAGES: Record<string, string> = {
   start: "start",
   menu: "home",
@@ -47,6 +56,7 @@ const IMAGES: Record<string, string> = {
   cards: "card",
   "verse-notes": "verse",
   "text-notes": "text",
+  "scripture-reader": "scripture",
 };
 const SECTIONS = GUIDE.filter((s) => s.part !== "operator");
 const PARTS = (["member", "help"] as const).map((p) => ({ part: p, sections: SECTIONS.filter((s) => s.part === p) }));
@@ -67,6 +77,8 @@ for p in glob.glob(r"${OUT}/images/*/*.png"):
     im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
     im.save(p[:-4] + ".jpg", quality=86, optimize=True)
     im.save(p[:-4] + ".webp", quality=80)
+    small = im.resize((240, round(im.height * 240 / im.width)), Image.LANCZOS)
+    small.save(p[:-4] + ".hwp.jpg", quality=86, optimize=True)
 `,
   ],
   { stdio: "inherit" },
@@ -99,10 +111,18 @@ function docxFor(lang: "ko" | "en") {
       spacing: { before: 600 },
       children: [new TextRun({ text: SITE, size: 22, color: "67716C" })],
     }),
+    ...credits(lang).map(
+      (line, i) =>
+        new Paragraph({
+          alignment: AlignmentType.CENTER,
+          spacing: { before: i ? 60 : 900 },
+          children: [new TextRun({ text: line, size: 22, color: "233A3A" })],
+        }),
+    ),
     new Paragraph({
       alignment: AlignmentType.CENTER,
-      spacing: { before: 120 },
-      children: [new TextRun({ text: "2026", size: 22, color: "67716C" })],
+      spacing: { before: 360 },
+      children: [new TextRun({ text: tr(SITE_INFO.copyright, lang), size: 18, color: "67716C" })],
     }),
     new Paragraph({ children: [new PageBreak()] }),
     new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun(lang === "ko" ? "목차" : "Contents")] }),
@@ -200,6 +220,9 @@ function sectionDocx(s: GuideSection, lang: "ko" | "en") {
 
 // ---------- HTML (single page and e-book) ----------
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const multiLines = (f: (lang: UiLang) => string[]) =>
+  UI_LANGS.map(({ id }) => `<span lang="${id}">${f(id).map(esc).join("<br>")}</span>`).join("");
+const creditsHtml = () => `<p class="credits">${multiLines(credits)}</p><p class="credits small">${multi(SITE_INFO.copyright)}</p>`;
 const multi = (l: Localized) => UI_LANGS.map(({ id }) => `<span lang="${id}">${esc(tr(l, id))}</span>`).join("");
 const dataUri = (file: string) => `data:image/webp;base64,${readFileSync(file).toString("base64")}`;
 function imgHtml(id: string) {
@@ -233,6 +256,7 @@ ol{padding-left:1.3em}li{margin:.3em 0}
 .table{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:420px}th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{color:var(--muted)}
 .shot{margin:14px auto 0;max-width:280px}.shot img{width:100%;border-radius:18px;border:1px solid var(--line);display:block}
 a{color:var(--teal)}
+.credits{color:var(--muted);font-size:.9rem;margin:.4em 0}.credits.small{font-size:.8rem}
 .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
 .lang button{min-width:52px;min-height:44px;border:0;background:transparent;color:var(--ink);font:inherit;font-weight:700;cursor:pointer}
 .lang button[aria-pressed=true]{background:var(--teal);color:#fff}
@@ -265,13 +289,13 @@ function singleHtml() {
 section{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0;scroll-margin-top:16px}
 h2.part{margin:44px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--amber);color:var(--amber);font-size:1rem;letter-spacing:.06em}
 nav.toc{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 20px;margin-top:16px}nav.toc ul{padding-left:1.1em}`,
-    `<main><header class="top"><div><small>${multi(SUBTITLE)}</small><h1>${multi(TITLE)}</h1></div>${langButtons}</header><nav class="toc"><ul>${toc}</ul></nav>${body}<p class="note">${multi({ ko: "사이트 주소: ", en: "Site: " })}<a href="${SITE}">${SITE}</a></p></main>`,
+    `<main><header class="top"><div><small>${multi(SUBTITLE)}</small><h1>${multi(TITLE)}</h1></div>${langButtons}</header>${creditsHtml()}<nav class="toc"><ul>${toc}</ul></nav>${body}<p class="note">${multi({ ko: "사이트 주소: ", en: "Site: " })}<a href="${SITE}">${SITE}</a></p></main>`,
   );
 }
 
 function ebookHtml() {
   const pages: string[] = [
-    `<section class="page cover" data-page><div><p class="kicker">GOKBANJEONG WARD</p><h1>${multi(TITLE)}</h1><p>${multi(SUBTITLE)}</p><p class="hint">${multi({ ko: "화면을 옆으로 넘기거나 ▶ 버튼을 누르세요", en: "Swipe or press ▶ to turn the page" })}</p></div></section>`,
+    `<section class="page cover" data-page><div><p class="kicker">GOKBANJEONG WARD</p><h1>${multi(TITLE)}</h1><p>${multi(SUBTITLE)}</p><p class="hint">${multi({ ko: "화면을 옆으로 넘기거나 ▶ 버튼을 누르세요", en: "Swipe or press ▶ to turn the page" })}</p>${creditsHtml()}</div></section>`,
     `<section class="page" data-page><h2>${multi({ ko: "목차", en: "Contents" })}</h2><ol class="toc">${SECTIONS.map((s, i) => `<li><a href="#" data-go="${i + 2}">${multi(s.title)}</a></li>`).join("")}</ol></section>`,
     ...SECTIONS.map((s) => `<section class="page" data-page><p class="kicker">${multi(GUIDE_PARTS[s.part])}</p>${sectionHtml(s)}</section>`),
   ];
@@ -309,7 +333,35 @@ function ebookHtml() {
   );
 }
 
+// ---------- HWPX (kordoc) ----------
+async function hwpxFor(lang: "ko" | "en") {
+  const images: Record<string, Uint8Array> = {};
+  const md: string[] = [`# ${tr(TITLE, lang)}`, "", tr(SUBTITLE, lang), "", SITE, "", ...credits(lang).flatMap((l) => [l, ""]), tr(SITE_INFO.copyright, lang), ""];
+  for (const { part, sections } of PARTS) {
+    md.push(`# ${tr(GUIDE_PARTS[part], lang)}`, "");
+    for (const s of sections) {
+      md.push(`## ${tr(s.title, lang)}`, "");
+      if (s.intro) md.push(tr(s.intro, lang), "");
+      if (s.steps) md.push(...s.steps.map((x, i) => `${i + 1}. ${tr(x, lang)}`), "");
+      if (s.table) {
+        const row = (cells: Localized[]) => `| ${cells.map((c) => tr(c, lang).replace(/\|/g, "/")).join(" | ")} |`;
+        md.push(row(s.table.head), `|${s.table.head.map(() => " --- ").join("|")}|`, ...s.table.rows.map(row), "");
+      }
+      if (s.note) md.push(`> ${tr(s.note, lang)}`, "");
+      const name = IMAGES[s.id];
+      const file = name && `${OUT}/images/${lang}/${name}.hwp.jpg`;
+      if (file && existsSync(file)) {
+        images[`${name}.jpg`] = readFileSync(file);
+        md.push(`![${tr(s.title, lang)}](${name}.jpg)`, "");
+      }
+    }
+  }
+  return Buffer.from(await markdownToHwpx(md.join("\n"), { images }));
+}
+
 const files: [string, Buffer | string][] = [
+  ["곡반정와드_사용설명서_한국어.hwpx", await hwpxFor("ko")],
+  ["곡반정와드_사용설명서_English.hwpx", await hwpxFor("en")],
   ["곡반정와드_사용설명서_한국어.docx", await Packer.toBuffer(docxFor("ko"))],
   ["곡반정와드_사용설명서_English.docx", await Packer.toBuffer(docxFor("en"))],
   ["곡반정와드_사용설명서.html", singleHtml()],
