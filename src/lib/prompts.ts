@@ -2,6 +2,7 @@ import { z } from "zod";
 import { privileged, type DB } from "./db";
 import { ensure } from "./errors";
 import type { Actor } from "./types";
+import { ANONYMOUS } from "./author-label";
 
 export type Prompt = {
   id: string;
@@ -53,7 +54,7 @@ function shapePrompt(row: PromptRow, a: Actor | null): Prompt {
 }
 const author = z.string().max(50).optional();
 export function authorName(raw: string | undefined) {
-  return raw?.trim() || "익명";
+  return raw?.trim() || ANONYMOUS;
 }
 export function canAuthor(a: Actor | null) {
   return !!a && a.kind === "user" && ["TEACHER", "ADMIN"].includes(a.role);

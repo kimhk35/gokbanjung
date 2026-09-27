@@ -7,6 +7,7 @@ import { newId } from "@/lib/image-compress";
 import type { NoteComment, ThreadFields } from "@/lib/note-threads";
 import { useLocalDraft } from "../use-local-draft";
 import { rememberAuthor, useAuthorDefault, when } from "../think/reply-item";
+import { authorLabel } from "@/lib/author-label";
 
 type Note = ThreadFields & {
   id: string;
@@ -88,7 +89,7 @@ export function NoteItem<T extends Note>({
   return (
     <article className="reply note-item">
       <header>
-        <strong>{note.author}</strong>
+        <strong>{authorLabel(note.author, t)}</strong>
         <time>{when(note.created_at, locale)}</time>
       </header>
       {quote}
@@ -126,7 +127,7 @@ export function NoteItem<T extends Note>({
         <div className="reply-comments">
           {note.comments.map((c) => (
             <div className="reply-comment" key={c.id}>
-              <strong>{c.author}</strong>{" "}
+              <strong>{authorLabel(c.author, t)}</strong>{" "}
               <span className="preserve">{c.body}</span>
               {c.mine && (
                 <button

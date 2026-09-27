@@ -10,6 +10,7 @@ import { useRefresh } from "../use-refresh";
 import { PromptEditor } from "./prompt-editor";
 import { PromptView } from "./prompt-view";
 import { when } from "./reply-item";
+import { authorLabel } from "@/lib/author-label";
 
 export function ThinkPage() {
   const { locale, tl, t, lang, weeks, boot, error } = useApp();
@@ -107,7 +108,7 @@ export function ThinkPage() {
                     : p.question}
                 </p>
                 <small className="muted">
-                  <MessageCircle size={14} /> {p.reply_count} · {p.author} ·{" "}
+                  <MessageCircle size={14} /> {p.reply_count} · {authorLabel(p.author, t)} ·{" "}
                   {when(p.created_at, locale)}
                 </small>
               </Link>

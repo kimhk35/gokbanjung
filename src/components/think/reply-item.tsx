@@ -13,6 +13,7 @@ import { api } from "@/lib/client";
 import { newId } from "@/lib/image-compress";
 import type { Prompt, Reply, ReplyComment } from "@/lib/prompts";
 import { useLocalDraft } from "../use-local-draft";
+import { authorLabel } from "@/lib/author-label";
 
 export function useAuthorDefault() {
   const { locale, boot } = useApp();
@@ -119,7 +120,7 @@ export function ReplyItem({
         />
       )}
       <header>
-        <strong>{reply.author}</strong>
+        <strong>{authorLabel(reply.author, t)}</strong>
         <time>{when(reply.created_at, locale)}</time>
       </header>
       <p className="preserve">{reply.body}</p>
@@ -177,7 +178,7 @@ export function ReplyItem({
         <div className="reply-comments">
           {reply.comments.map((c) => (
             <div className="reply-comment" key={c.id}>
-              <strong>{c.author}</strong>{" "}
+              <strong>{authorLabel(c.author, t)}</strong>{" "}
               <span className="preserve">{c.body}</span>
               {c.mine && (
                 <button

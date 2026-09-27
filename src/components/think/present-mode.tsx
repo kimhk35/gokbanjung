@@ -11,6 +11,7 @@ import {
 import { useApp } from "../provider";
 import type { Prompt, Reply } from "@/lib/prompts";
 import { move, resolve, slides, toggle } from "@/lib/present-queue";
+import { authorLabel } from "@/lib/author-label";
 
 const key = (actorId: string, promptId: string) =>
   `ggc_present:${actorId}:${promptId}`;
@@ -206,7 +207,7 @@ export function PresentMode({
           <div className="present-slide">
             <p className="preserve present-body">{slide.reply.body}</p>
             {!hideNames && (
-              <p className="present-author">— {slide.reply.author}</p>
+              <p className="present-author">— {authorLabel(slide.reply.author, t)}</p>
             )}
           </div>
         )}

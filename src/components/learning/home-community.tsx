@@ -7,6 +7,7 @@ import { api } from "@/lib/client";
 import type { WardEvent } from "@/lib/ward-events";
 import type { Prompt } from "@/lib/prompts";
 import { EventCard } from "../ward/event-parts";
+import { authorLabel } from "@/lib/author-label";
 
 type Activity = {
   events: WardEvent[];
@@ -65,7 +66,7 @@ export function HomeCommunity() {
             className="recent-reply"
             href={`/p/${r.prompt_slug}`}
           >
-            <strong>{r.author}</strong> <span>{r.body}</span>
+            <strong>{authorLabel(r.author, t)}</strong> <span>{r.body}</span>
             <small className="muted">{r.prompt_title}</small>
           </Link>
         ))}

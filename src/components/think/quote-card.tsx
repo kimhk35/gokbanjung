@@ -8,6 +8,7 @@ import { loadCardBackground } from "@/lib/card-backgrounds";
 import { CARD_SIZES, type CardSize, wrapLines } from "@/lib/card-text";
 import type { Prompt, Reply } from "@/lib/prompts";
 import { when } from "./reply-item";
+import { authorLabel } from "@/lib/author-label";
 
 const FONT = '"Noto Sans KR", "Malgun Gothic", sans-serif';
 
@@ -136,7 +137,7 @@ export function QuoteCard({
       size,
       title: prompt.title,
       body: reply.body,
-      meta: [showAuthor ? reply.author : null, when(reply.created_at, locale)]
+      meta: [showAuthor ? authorLabel(reply.author, t) : null, when(reply.created_at, locale)]
         .filter(Boolean)
         .join(" · "),
       footer: t(

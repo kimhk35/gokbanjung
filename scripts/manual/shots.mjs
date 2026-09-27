@@ -6,11 +6,18 @@ import { mkdirSync } from "node:fs";
 
 const OUT = "사용설명서(사용자용)/images";
 const prompts = await (await fetch("http://localhost:3100/api/think/prompts")).json();
-const slug = prompts.items.find((p) => p.reply_count > 0)?.slug;
-if (!slug) throw new Error("Demo data missing: need a question with replies");
+// Each manual shows demo posts written in its own language
+// (English demo data: .superpowers/seed-en.mts).
+const hangul = /[가-힣]/;
+const slugFor = (lang) =>
+  prompts.items.find((p) => p.reply_count > 0 && hangul.test(p.title) === (lang === "ko"))?.slug;
+for (const lang of ["ko", "en"])
+  if (!slugFor(lang)) throw new Error(`Demo data missing: need a ${lang} question with replies`);
+const VERSE_CHAPTER = { ko: 40, en: 41 }; // chapters holding each language's demo verse note
+const TEXT_PHRASE = { ko: "새 힘을 얻으리니", en: "renew their strength" };
 
 const select = (blockIndex, phrase) =>
-  `(()=>{const b=[...document.querySelectorAll('[data-block-start]')][${blockIndex}];const w=document.createTreeWalker(b,NodeFilter.SHOW_TEXT);let n=w.nextNode();while(n&&n.textContent.indexOf(${JSON.stringify(phrase)})<0)n=w.nextNode();if(!n)return 0;const i=n.textContent.indexOf(${JSON.stringify(phrase)});const r=document.createRange();r.setStart(n,i);r.setEnd(n,i+${phrase.length});getSelection().removeAllRanges();getSelection().addRange(r);return 1})()`;
+  `(()=>{const b=[...document.querySelectorAll('[data-block-start]')][${blockIndex}];b.scrollIntoView({block:'center'});const w=document.createTreeWalker(b,NodeFilter.SHOW_TEXT);let n=w.nextNode();while(n&&n.textContent.indexOf(${JSON.stringify(phrase)})<0)n=w.nextNode();if(!n)return 0;const i=n.textContent.indexOf(${JSON.stringify(phrase)});const r=document.createRange();r.setStart(n,i);r.setEnd(n,i+${phrase.length});getSelection().removeAllRanges();getSelection().addRange(r);return 1})()`;
 
 function steps(lang) {
   const setLang = `localStorage.setItem('ggc_lang','${lang}')`;
@@ -22,11 +29,11 @@ function steps(lang) {
     { go: "/", wait: 7000, shot: `${lang}/home` },
     { go: "/week/40", wait: 7000, shot: `${lang}/study` },
     { go: "/ward", wait: 6000, shot: `${lang}/ward` },
-    { go: `/p/${slug}`, wait: 6000, eval: "document.querySelector('.replies')?.scrollIntoView(),1", sleep: 800, shot: `${lang}/think` },
+    { go: `/p/${slugFor(lang)}`, wait: 6000, eval: "document.querySelector('.replies')?.scrollIntoView(),1", sleep: 800, shot: `${lang}/think` },
     { eval: "[...document.querySelectorAll('.reply-action')].find(b=>b.getAttribute('aria-label')&&b.textContent.length<8&&b.querySelector('svg'))?.click(),document.querySelectorAll('.reply .reply-action')[2]?.click(),1", sleep: 2500, shot: `${lang}/card` },
-    { go: "/scriptures?book=ot/isa&chapter=40", wait: 8000, eval: "document.querySelector('.verse-notes .verse-group')?.scrollIntoView({block:'center'}),1", sleep: 1500, shot: `${lang}/verse` },
+    { go: `/scriptures?book=ot/isa&chapter=${VERSE_CHAPTER[lang]}`, wait: 8000, eval: "document.querySelector('.verse-notes .verse-group')?.scrollIntoView({block:'center'}),1", sleep: 1500, shot: `${lang}/verse` },
     { go: "/scriptures?book=bofm/1-ne&chapter=3", wait: 7000, eval: "document.querySelector('.chapter-view')?.scrollIntoView(),1", sleep: 2500, shot: `${lang}/scripture` },
-    { go: "/week/40/text", wait: 7000, eval: select(2, lang === "ko" ? "새 힘을 얻으리니" : "새 힘을 얻으리니"), sleep: 800, shot: `${lang}/text` },
+    { go: "/week/40/text", wait: 7000, eval: select(2, TEXT_PHRASE[lang]), sleep: 800, shot: `${lang}/text` },
     { go: "/ward", wait: 6000, eval: "document.querySelector('.header-actions .icon-button[aria-label]')?.click(),1", sleep: 1200, shot: `${lang}/translate` },
   ];
 }
