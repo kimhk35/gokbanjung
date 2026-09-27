@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Maskable (full-bleed) variant: the artwork sits inside the 80% safe zone
+       so Android can crop it to a circle, squircle or rounded square. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17847f"/>
+      <stop offset="1" stop-color="#0c4f4c"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="1" r="0.9">
+      <stop offset="0" stop-color="#ffd98f"/>
+      <stop offset="1" stop-color="#f0b35a"/>
+    </radialGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffdf9"/>
+      <stop offset="1" stop-color="#f3e6cf"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <g transform="translate(51.2 40) scale(0.8)">
+  <g stroke="#f6c983" stroke-width="14" stroke-linecap="round" opacity="0.9">
+    <line x1="256" y1="92" x2="256" y2="130"/>
+    <line x1="160" y1="122" x2="178" y2="154"/>
+    <line x1="352" y1="122" x2="334" y2="154"/>
+    <line x1="96" y1="190" x2="128" y2="206"/>
+    <line x1="416" y1="190" x2="384" y2="206"/>
+  </g>
+  <path d="M166 262a90 90 0 0 1 180 0z" fill="url(#sun)"/>
+  <path d="M256 296c-40-28-92-36-146-30v132c54-6 106 2 146 30z" fill="url(#page)"/>
+  <path d="M256 296c40-28 92-36 146-30v132c-54-6-106 2-146 30z" fill="url(#page)"/>
+  <path d="M256 296v132" stroke="#c9a46a" stroke-width="6"/>
+  <g stroke="#d8c19c" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M140 306c34-3 68 3 96 18"/>
+    <path d="M140 338c34-3 68 3 96 18"/>
+    <path d="M140 370c34-3 68 3 96 18"/>
+    <path d="M372 306c-34-3-68 3-96 18"/>
+    <path d="M372 338c-34-3-68 3-96 18"/>
+    <path d="M372 370c-34-3-68 3-96 18"/>
+  </g>
+</g>
+</svg>

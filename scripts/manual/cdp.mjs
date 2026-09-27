@@ -55,6 +55,8 @@ const steps = JSON.parse(process.argv[3] || "[]");
 const results = [];
 for (const s of steps) {
   try {
+    if (s.transparent)
+      await send("Emulation.setDefaultBackgroundColorOverride", { color: { r: 0, g: 0, b: 0, a: 0 } });
     if (s.size) await size(...s.size);
     if (s.go) await go(s.go, s.wait);
     if (s.eval) results.push([s.label || s.eval.slice(0, 40), await evaluate(s.eval)]);
