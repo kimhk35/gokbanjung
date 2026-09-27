@@ -2,16 +2,30 @@ import { readFile, existsSync } from "node:fs";
 import { readFile as read } from "node:fs/promises";
 import postgres from "postgres";
 import { ask } from "./terminal-input.mjs";
+import { parseDatabaseUrl } from "./database-url.mjs";
 if (existsSync(".env.local")) process.loadEnvFile(".env.local");
-const url =
+const parsed = parseDatabaseUrl(
   process.env.DATABASE_URL ||
-  (await ask("Paste DATABASE_URL (hidden): ", true));
-const host = new URL(url).hostname;
-console.log("Database host:", host);
-if (
-  (await ask("Add gokbanjung tables to this database? Type UPDATE: ")) !== "UPDATE"
-)
+    (await ask(
+      "DATABASE_URL 값을 붙여 넣고 Enter (화면에 안 보이는 것이 정상) / Paste DATABASE_URL (hidden): ",
+      true,
+    )),
+);
+if (parsed.error) {
+  console.error(parsed.error);
+  console.error("연결하지 않았습니다. 바뀐 것은 없습니다.");
   process.exit(1);
+}
+const { url, host } = parsed;
+console.log("연결할 곳 / Database host:", host);
+if (
+  (
+    await ask("새 표를 추가하려면 UPDATE 를 입력하고 Enter / Type UPDATE: ")
+  ).trim() !== "UPDATE"
+) {
+  console.error("UPDATE 가 아니어서 멈췄습니다. 바뀐 것은 없습니다.");
+  process.exit(1);
+}
 const sql = postgres(url, {
   prepare: false,
   max: 1,
@@ -29,21 +43,42 @@ try {
     const [course] =
       await tx`select id from ggc.courses where id='old-testament-2026'`;
     if (!course) throw new Error("This is not the expected course database.");
-    if (!check.accounts) await tx.unsafe(
-      await read(
-        "supabase/migrations/20260914130515_guest_accounts_quizzes.sql",
-        "utf8",
-      ),
-    );
-    const [materials] = await tx`select to_regclass('ggc.lesson_materials') as installed`;
-    if (!materials.installed) await tx.unsafe(await read("supabase/migrations/20260915132630_lesson_material_images.sql","utf8"));
+    if (!check.accounts)
+      await tx.unsafe(
+        await read(
+          "supabase/migrations/20260914130515_guest_accounts_quizzes.sql",
+          "utf8",
+        ),
+      );
+    const [materials] =
+      await tx`select to_regclass('ggc.lesson_materials') as installed`;
+    if (!materials.installed)
+      await tx.unsafe(
+        await read(
+          "supabase/migrations/20260915132630_lesson_material_images.sql",
+          "utf8",
+        ),
+      );
     const [ward] = await tx`select to_regclass('ggc.events') as installed`;
-    if (!ward.installed) await tx.unsafe(await read("supabase/migrations/20260927000000_ward_community.sql","utf8"));
-    const [storage] = await tx`select to_regclass('storage.buckets') as installed`;
-    if (storage.installed) await tx`insert into storage.buckets(id,name,public,file_size_limit,allowed_mime_types) values('ggc-posters','ggc-posters',true,2097152,array['image/webp','image/png','image/jpeg']) on conflict(id) do nothing`;
+    if (!ward.installed)
+      await tx.unsafe(
+        await read(
+          "supabase/migrations/20260927000000_ward_community.sql",
+          "utf8",
+        ),
+      );
+    const [storage] =
+      await tx`select to_regclass('storage.buckets') as installed`;
+    if (storage.installed)
+      await tx`insert into storage.buckets(id,name,public,file_size_limit,allowed_mime_types) values('ggc-posters','ggc-posters',true,2097152,array['image/webp','image/png','image/jpeg']) on conflict(id) do nothing`;
     const [verified] =
       await tx`select to_regclass('ggc.quiz_sets') as quizzes,to_regclass('ggc.account_requests') as accounts,to_regclass('ggc.events') as events,to_regclass('ggc.prompt_reply_reactions') as prompts`;
-    if (!verified.quizzes || !verified.accounts || !verified.events || !verified.prompts)
+    if (
+      !verified.quizzes ||
+      !verified.accounts ||
+      !verified.events ||
+      !verified.prompts
+    )
       throw new Error("Schema verification failed");
     console.log(
       "Verified: accounts, quizzes, ward calendar, shared prompts. Existing records preserved.",
