@@ -24,6 +24,7 @@ type Context = {
   lang: Lang;
   setLang: (lang: Lang) => void;
   t: (ko: string, en: string) => string;
+  tl: (text: Localized | null | undefined) => string;
   boot: Boot | null;
   weeks: Week[];
   reload: () => Promise<void>;
@@ -286,6 +287,8 @@ export function Provider({ children }: { children: ReactNode }) {
         lang,
         setLang,
         t,
+        tl: (text: Localized | null | undefined) =>
+          text ? t(text.ko, text.en) : "",
         boot,
         weeks: boot?.weeks.map((w) => w.data) || curriculum,
         reload,

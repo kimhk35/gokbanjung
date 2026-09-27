@@ -34,6 +34,7 @@ test("every guide text exists in both Korean and English", () => {
     "db-update",
     "managers",
     "errors",
+    "other-languages",
   ])
     assert.ok(ids.has(id), `missing section ${id}`);
 });

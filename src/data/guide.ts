@@ -191,6 +191,37 @@ export const GUIDE: GuideSection[] = [
     ],
   },
   {
+    id: "other-languages",
+    part: "member",
+    title: L("다른 언어로 보기", "Viewing in other languages"),
+    intro: L(
+      "한국어·영어·스페인어·필리핀어는 오른쪽 위 언어 버튼으로 바로 바뀝니다. 그 밖의 언어는 휴대폰이나 컴퓨터의 자동 번역을 켜면 이 사이트 전체가 바로 번역됩니다.",
+      "Korean, English, Spanish and Filipino switch instantly with the language buttons at the top right. For any other language, turn on your phone's or computer's built-in translation and the whole site is translated right away.",
+    ),
+    steps: [
+      L(
+        "안드로이드 Chrome: 오른쪽 위 ⋮ → '번역…' → 원하는 언어.",
+        "Android Chrome: ⋮ at the top right → Translate… → choose a language.",
+      ),
+      L(
+        "삼성 인터넷: 아래 ≡ 메뉴 → '페이지 번역'(또는 번역 아이콘) → 원하는 언어.",
+        "Samsung Internet: ≡ menu at the bottom → Translate page (or the translate icon) → choose a language.",
+      ),
+      L(
+        "아이폰 Safari: 주소창 왼쪽 '가가'(또는 aA) → '번역' → 원하는 언어.",
+        "iPhone Safari: tap aA at the left of the address bar → Translate → choose a language.",
+      ),
+      L(
+        "컴퓨터 Chrome·Edge: 주소창 오른쪽 번역 아이콘 → 원하는 언어.",
+        "Computer Chrome or Edge: the translate icon at the right of the address bar → choose a language.",
+      ),
+    ],
+    note: L(
+      "자동 번역은 기계 번역이라 어색할 수 있습니다. 경전은 교회 공식 사이트에서 해당 언어로 읽는 것이 가장 정확합니다.",
+      "Automatic translation is machine translation and may read awkwardly. For scripture, the Church's official site in your language is most accurate.",
+    ),
+  },
+  {
     id: "deploy",
     part: "operator",
     title: L("처음 배포하기 (한 번만)", "First deployment (once)"),

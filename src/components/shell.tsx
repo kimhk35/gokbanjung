@@ -18,6 +18,7 @@ import {
 import { useEffect, useState, type ReactNode } from "react";
 import { useApp } from "./provider";
 import { Modal } from "./ui/dialog";
+import { TranslateHelp } from "./translate-help";
 import { GuestGate } from "./account";
 import { AnnouncementPopup } from "./announcement-popup";
 import { loginStatus } from "@/lib/login-status";
@@ -127,6 +128,7 @@ export function Shell({ children }: { children: ReactNode }) {
               EN
             </button>
           </div>
+          <TranslateHelp />
           <button
             className="icon-button"
             onClick={theme}
@@ -298,6 +300,7 @@ export function Shell({ children }: { children: ReactNode }) {
             );
           })}
         </div>
+        <TranslateHelp asMenuItem />
         {boot && (
           <p className="muted">
             {t("로그인 상태: ", "Signed in as: ")}
