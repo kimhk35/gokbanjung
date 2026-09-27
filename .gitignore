@@ -49,3 +49,7 @@ test-results/
 .env.smtp.local
 *.backup-*
 /.next-build/
+
+# Android signing key never goes in the repo
+*.keystore
+*.jks
