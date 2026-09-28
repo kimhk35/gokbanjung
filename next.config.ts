@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { contentSecurityPolicy } from "./src/lib/security-headers";
 // Shown in the footer as "최근 업데이트" (Korea date of this build).
 const buildDate = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10);
 const config: NextConfig = {
@@ -27,8 +28,12 @@ const config: NextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.supabase.co; font-src 'self' data: blob:; connect-src 'self' https://*.supabase.co; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+            // CSP_STRICT=1 runs the dev server with the production policy
+            // (to check a change never needs eval).
+            value: contentSecurityPolicy(
+              process.env.NODE_ENV === "development" &&
+                process.env.CSP_STRICT !== "1",
+            ),
           },
         ],
       },

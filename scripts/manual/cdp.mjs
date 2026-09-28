@@ -28,6 +28,9 @@ ws.onmessage = (m) => {
   if (msg.id && waiting.has(msg.id)) waiting.get(msg.id)(msg);
   if (msg.method === "Runtime.exceptionThrown") logs.push("EXCEPTION " + msg.params.exceptionDetails.exception?.description?.slice(0, 200));
   if (msg.method === "Runtime.consoleAPICalled" && msg.params.type === "error") logs.push("console.error " + msg.params.args.map((a) => a.value ?? a.description).join(" ").slice(0, 200));
+  // Browser-generated messages, e.g. Content-Security-Policy violations.
+  if (msg.method === "Log.entryAdded" && msg.params.entry.level === "error")
+    logs.push("browser " + (msg.params.entry.url || "").split("/").pop() + " " + msg.params.entry.text.slice(0, 200));
 };
 const send = (method, params = {}) =>
   new Promise((resolve, reject) => {
@@ -37,6 +40,7 @@ const send = (method, params = {}) =>
   });
 await send("Page.enable");
 await send("Runtime.enable");
+await send("Log.enable");
 const evaluate = async (expression) => (await send("Runtime.evaluate", { expression, awaitPromise: true, returnByValue: true })).result.value;
 async function size(width, height) {
   await send("Emulation.setDeviceMetricsOverride", { width, height, deviceScaleFactor: Number(process.env.SHOT_SCALE || 1), mobile: width < 768 });
