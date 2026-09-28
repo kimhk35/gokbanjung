@@ -91,8 +91,13 @@ export function ChapterView({
           {text.lang !== wanted && (
             <p className="guide-note">
               {t(
-                `이 장은 선택한 언어로 제공되지 않아 ${LANG_NAMES[text.lang]?.[0] || text.lang}로 보여 드립니다.`,
-                `This chapter is not available in your language, so it is shown in ${LANG_NAMES[text.lang]?.[1] || text.lang}.`,
+                "이 장은 선택한 언어로 제공되지 않아 {language}로 보여 드립니다.",
+                "This chapter is not available in your language, so it is shown in {language}.",
+                {
+                  language: LANG_NAMES[text.lang]
+                    ? t(...LANG_NAMES[text.lang])
+                    : text.lang,
+                },
               )}
             </p>
           )}
@@ -103,10 +108,7 @@ export function ChapterView({
                 <button
                   type="button"
                   className="verse-number"
-                  aria-label={t(
-                    `${v.verse}절에 의견 달기`,
-                    `Add a note to verse ${v.verse}`,
-                  )}
+                  aria-label={t("{verse}절에 의견 달기", "Add a note to verse {verse}", { verse: v.verse })}
                   onClick={() => onVerse(v.verse)}
                 >
                   {v.verse}

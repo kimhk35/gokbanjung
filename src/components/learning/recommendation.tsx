@@ -14,8 +14,8 @@ export function Recommendation({
   day: number;
   lesson?: boolean;
 }) {
-  const { uiLang, tl, lang, t, notify } = useApp();
-  const item = recommendedQuestion(week, day, lang);
+  const { uiLang, tl, t, notify } = useApp();
+  const item = recommendedQuestion(week, day, uiLang);
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(
@@ -38,16 +38,13 @@ export function Recommendation({
     >
       <span className="overline">
         {t("오늘의 추천 질문", "TODAY’S RECOMMENDED QUESTION")} ·{" "}
-        {t(`${week.number}주차 ${day}일차`, `WEEK ${week.number} / DAY ${day}`)}
+        {t("{number}주차 {day}일차", "WEEK {number} / DAY {day}", { number: week.number, day })}
       </span>
       <h2>{item.theme}</h2>
       <p className="recommended-question">{item.question}</p>
       <p className="recommendation-source">
         {tl(week.reference)} ·{" "}
-        {t(
-          `교재 ${item.sourcePage}쪽부터`,
-          `Manual from p. ${item.sourcePage}`,
-        )}
+        {t("교재 {sourcePage}쪽부터", "Manual from p. {sourcePage}", { sourcePage: item.sourcePage })}
       </p>
       <small>
         {t(

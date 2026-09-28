@@ -85,10 +85,7 @@ function QuizContent() {
         ))}
       </div>
       <p className="notice">
-        {t(
-          `80% 이상 정답이면 ${quizPoints[kind]} 학습 포인트와 배지를 받습니다. 일간 3/3 · 주간 8/10 · 월간 16/20. 재도전은 가능하며 같은 기간의 보상은 한 번만 지급합니다.`,
-          `Earn ${quizPoints[kind]} learning points and a badge at 80%: daily 3/3, weekly 8/10, monthly 16/20. Retry freely; rewards are awarded once per period.`,
-        )}
+        {t("80% 이상 정답이면 {v} 학습 포인트와 배지를 받습니다. 일간 3/3 · 주간 8/10 · 월간 16/20. 재도전은 가능하며 같은 기간의 보상은 한 번만 지급합니다.", "Earn {v} learning points and a badge at 80%: daily 3/3, weekly 8/10, monthly 16/20. Retry freely; rewards are awarded once per period.", { v: quizPoints[kind] })}
       </p>
       {!quiz && (
         <button
@@ -133,10 +130,7 @@ function QuizContent() {
         >
           <p>
             {quiz.period} ·{" "}
-            {t(
-              `${answers.filter((a) => a >= 0).length}/${quiz.questions.length}문항 응답`,
-              `Answered ${answers.filter((a) => a >= 0).length}/${quiz.questions.length}`,
-            )}
+            {t("{length}/{length2}문항 응답", "Answered {length}/{length2}", { length: answers.filter((a) => a >= 0).length, length2: quiz.questions.length })}
           </p>
           {quiz.questions.map((q, i) => (
             <section
@@ -189,10 +183,7 @@ function QuizContent() {
             </h2>
             <p>
               {result.newReward
-                ? t(
-                    `추가 보상 +${result.points}포인트!`,
-                    `Bonus reward: +${result.points} points!`,
-                  )
+                ? t("추가 보상 +{points}포인트!", "Bonus reward: +{points} points!", { points: result.points })
                 : result.passed
                   ? t(
                       "통과했습니다. 이 기간의 보상은 이미 받았습니다.",

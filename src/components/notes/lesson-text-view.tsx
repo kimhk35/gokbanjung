@@ -279,7 +279,7 @@ export function LessonTextReader({ week }: { week: number }) {
   return (
     <div className="page lesson-text-page">
       <Link className="text-button back-link" href={`/week/${week}`}>
-        <ArrowLeft size={18} /> {t(`${week}주차로`, `Back to week ${week}`)}
+        <ArrowLeft size={18} /> {t("{week}주차로", "Back to week {week}", { week })}
       </Link>
       {data.canEdit && (
         <div className="manager-bar">
@@ -412,7 +412,7 @@ export function LessonTextReader({ week }: { week: number }) {
               <h3>
                 {focus
                   ? t("선택한 문장의 의견", "Notes on this passage")
-                  : t(`본문 의견 ${notes.length}`, `Notes ${notes.length}`)}
+                  : t("본문 의견 {length}", "Notes {length}", { length: notes.length })}
               </h3>
               {focus && (
                 <button

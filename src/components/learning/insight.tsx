@@ -135,7 +135,7 @@ export function InsightPage() {
     }
     ctx.fillStyle = theme === "sand" ? "#20364a" : "#ffffff";
     ctx.font = '28px "Noto Sans KR"';
-    ctx.fillText(lang === "ko" ? "오늘의 발견" : "TODAY’S INSIGHT", 100, 140);
+    ctx.fillText(t("오늘의 발견", "TODAY’S INSIGHT"), 100, 140);
     const wrap = (str: string, font: number) => {
       ctx.font = `${font}px "Noto Sans KR"`;
       const lines: string[] = [];

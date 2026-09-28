@@ -11,6 +11,7 @@ import { wrapLines } from "@/lib/card-text";
 import { posterUrl } from "@/lib/poster";
 import { uploadPoster } from "@/lib/image-compress";
 import type { AutoInsight, InsightText } from "@/lib/daily-insight";
+import type { UiLang } from "@/lib/i18n";
 import type { CustomInsight } from "@/lib/daily-insight-service";
 
 type Data = {
@@ -23,8 +24,8 @@ const SEEN = "ggc_insight_seen";
 const FONT = '"Noto Sans KR", "Malgun Gothic", sans-serif';
 
 // Text shown on the card: the teacher's version if any, else automatic.
-function cardText(d: Data, lang: "ko" | "en"): InsightText | null {
-  const auto = d.auto?.[lang] || null;
+function cardText(d: Data, lang: UiLang): InsightText | null {
+  const auto = d.auto?.[lang] || d.auto?.en || null;
   if (!d.custom) return auto;
   return {
     kicker: auto?.kicker || d.date,
@@ -47,7 +48,11 @@ export function useDailyInsight() {
   return { data, reload: load };
 }
 
-async function saveImage(d: Data, text: InsightText, lang: string) {
+async function saveImage(
+  d: Data,
+  text: InsightText,
+  t: (ko: string, en: string) => string,
+) {
   const name = `gokbanjung-insight-${d.date}.png`;
   let blob: Blob | null = null;
   if (d.custom?.image_path) {
@@ -97,8 +102,8 @@ async function saveImage(d: Data, text: InsightText, lang: string) {
     }
     ctx.font = `500 34px ${FONT}`;
     for (const [label, value] of [
-      [lang === "ko" ? "핵심 주제" : "Key topic", text.topic],
-      [lang === "ko" ? "핵심 메시지" : "Key message", text.message],
+      [t("핵심 주제", "Key topic"), text.topic],
+      [t("핵심 메시지", "Key message"), text.message],
     ]) {
       if (!value) continue;
       y += 30;
@@ -115,9 +120,7 @@ async function saveImage(d: Data, text: InsightText, lang: string) {
     ctx.fillStyle = "#9a5f12";
     ctx.font = `600 30px ${FONT}`;
     ctx.fillText(
-      lang === "ko"
-        ? "곡반정와드 · 오늘의 Insight"
-        : "Gokbanjeong Ward · Today’s insight",
+      t("곡반정와드 · 오늘의 Insight", "Gokbanjeong Ward · Today’s insight"),
       80,
       1270,
     );
@@ -146,8 +149,8 @@ export function DailyInsightCard({
   data: Data;
   onEdit?: () => void;
 }) {
-  const { t, lang } = useApp();
-  const text = cardText(data, lang);
+  const { t, uiLang } = useApp();
+  const text = cardText(data, uiLang);
   if (!text) return null;
   const image = data.custom?.image_path
     ? posterUrl(data.custom.image_path)
@@ -193,7 +196,7 @@ export function DailyInsightCard({
         <button
           type="button"
           className="button secondary"
-          onClick={() => saveImage(data, text, lang)}
+          onClick={() => saveImage(data, text, t)}
         >
           <Download size={18} />{" "}
           {t("이미지로 저장·공유", "Save or share image")}
@@ -291,10 +294,7 @@ function InsightForm({
   return (
     <div className="event-form">
       <p className="muted">
-        {t(
-          `${data.date} 하루만 바뀝니다. 비워 둔 칸은 표시하지 않아요.`,
-          `Changes only ${data.date}. Empty fields are hidden.`,
-        )}
+        {t("{date} 하루만 바뀝니다. 비워 둔 칸은 표시하지 않아요.", "Changes only {date}. Empty fields are hidden.", { date: data.date })}
       </p>
       <label className="field">
         {t("제목", "Title")}

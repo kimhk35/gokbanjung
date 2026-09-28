@@ -1,6 +1,7 @@
 // Builds src/i18n/catalog.json (Korean source → English) from every string
 // the UI can show through t()/tl(): t("ko","en") and L("ko","en") calls,
-// { ko: "…", en: "…" } object literals, and ko/en data files.
+// translate(lang, "ko", "en") calls, ["ko", "en"] pairs, { ko: "…", en: "…" }
+// object literals, and ko/en data files. Blanks like {n} stay in the key.
 // Run: npm run i18n:extract   (prints template-literal calls it cannot key)
 import { readFileSync, writeFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
@@ -9,6 +10,7 @@ import curriculum from "../src/data/curriculum.json";
 import backgrounds from "../src/data/card-backgrounds.json";
 import { scriptureBooks, collections } from "../src/lib/scriptures";
 import { ORGANIZATIONS } from "../src/lib/ward-model";
+import { questionTopics } from "../src/data/question-topics";
 
 const catalog = new Map<string, string>();
 const dynamic: string[] = [];
@@ -45,9 +47,12 @@ for (const file of files("src")) {
         : ts.isPropertyAccessExpression(callee)
           ? callee.name.text
           : "";
-      if (name === "t" || name === "L") {
-        const [a, b] = node.arguments;
-        if (text(a) !== undefined && text(b) !== undefined)
+      if (name === "t" || name === "L" || name === "translate") {
+        const [a, b] =
+          name === "translate" ? node.arguments.slice(1) : node.arguments;
+        if (!a || !b) {
+          // translate(lang, ...pair): the pair itself is extracted as an array.
+        } else if (text(a) !== undefined && text(b) !== undefined)
           add(text(a), text(b));
         else if (ts.isTemplateExpression(a) || ts.isTemplateExpression(b))
           dynamic.push(
@@ -55,6 +60,9 @@ for (const file of files("src")) {
           );
       }
     }
+    // ["한국어", "English"] pairs (label tables, sentence patterns).
+    if (ts.isArrayLiteralExpression(node) && node.elements.length === 2)
+      add(text(node.elements[0]), text(node.elements[1]));
     if (ts.isObjectLiteralExpression(node)) {
       const props = new Map<string, ts.Node>();
       for (const p of node.properties)
@@ -83,6 +91,10 @@ for (const b of backgrounds) add(b.ko, b.en);
 for (const b of scriptureBooks) add(b.ko, b.en);
 for (const c of Object.values(collections)) add(c.ko, c.en);
 for (const [, ko, en] of ORGANIZATIONS) add(ko, en);
+for (const [theme, themeEn, question, questionEn] of questionTopics) {
+  add(theme, themeEn);
+  add(question, questionEn);
+}
 
 const sorted = Object.fromEntries(
   [...catalog.entries()].sort(([a], [b]) => a.localeCompare(b, "ko")),

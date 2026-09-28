@@ -7,20 +7,14 @@ import { officialUrl } from "@/lib/curriculum";
 import type { Week } from "@/lib/types";
 import { api } from "@/lib/client";
 export function RecommendedDiscussion({ week }: { week: Week }) {
-  const { uiLang, tl, t, lang, boot, notify, error } = useApp();
+  const { uiLang, tl, t, boot, notify, error } = useApp();
   const [busy, setBusy] = useState(false);
-  const q = recommendedQuestion(week, 1, lang);
-  const follow = t(
-    `「${q.theme}」에 대해 서로 다르게 이해한 부분은 무엇이며, 각자 어떤 구절을 근거로 생각했나요?`,
-    `Where do your views on “${q.theme}” differ, and what passage supports each view?`,
-  );
+  const q = recommendedQuestion(week, 1, uiLang);
+  const follow = t("「{theme}」에 대해 서로 다르게 이해한 부분은 무엇이며, 각자 어떤 구절을 근거로 생각했나요?", "Where do your views on “{theme}” differ, and what passage supports each view?", { theme: q.theme });
   return (
     <section className="panel recommendation">
       <span className="overline">
-        {t(
-          `오늘의 추천 토론 · ${week.number}주차`,
-          `TODAY’S DISCUSSION · WEEK ${week.number}`,
-        )}
+        {t("오늘의 추천 토론 · {number}주차", "TODAY’S DISCUSSION · WEEK {number}", { number: week.number })}
       </span>
       <h2>{q.theme}</h2>
       <p className="recommended-question">{q.question}</p>
@@ -51,7 +45,7 @@ export function RecommendedDiscussion({ week }: { week: Week }) {
           "Adapted discussion suggestion based on the manual, not an official question.",
         )}{" "}
         {tl(week.reference)} ·{" "}
-        {t(`교재 ${week.sourcePage}쪽`, `Manual p. ${week.sourcePage}`)}
+        {t("교재 {sourcePage}쪽", "Manual p. {sourcePage}", { sourcePage: week.sourcePage })}
       </small>
       <div className="actions">
         <Link

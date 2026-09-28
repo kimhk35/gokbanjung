@@ -32,10 +32,7 @@ export function ContinueLearning() {
   return (
     <div className="continue-learning">
       <span>
-        {t(
-          `마지막 기록: ${last.week}주차 · ${last.day}일차`,
-          `Last reflection: Week ${last.week} · Day ${last.day}`,
-        )}
+        {t("마지막 기록: {week}주차 · {day}일차", "Last reflection: Week {week} · Day {day}", { week: last.week, day: last.day })}
       </span>
       <Link
         className="button secondary"

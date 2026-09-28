@@ -27,7 +27,7 @@ import { AnnouncementPopup } from "./announcement-popup";
 import { loginStatus } from "@/lib/login-status";
 import { canManageRecords } from "@/lib/access";
 export function Shell({ children }: { children: ReactNode }) {
-  const { lang, uiLang, setLang, t, tl, boot } = useApp();
+  const { uiLang, setLang, t, tl, boot } = useApp();
   const path = usePathname();
   const [dark, setDark] = useState(false);
   const [menu, setMenu] = useState(false);
@@ -46,7 +46,7 @@ export function Shell({ children }: { children: ReactNode }) {
     document.documentElement.dataset.theme = !dark ? "dark" : "light";
     localStorage.setItem("ggc_theme", !dark ? "dark" : "light");
   };
-  const status = loginStatus(boot?.actor, lang);
+  const status = loginStatus(boot?.actor, uiLang);
   const links = [
     ["/", t("홈", "Home"), Home],
     ["/learn", t("말씀 학습", "Study the word"), BookOpen],

@@ -9,7 +9,7 @@ import { currentWeek } from "@/lib/curriculum";
 import type { LessonMaterial } from "@/lib/lesson-materials";
 
 export function MaterialLibrary() {
-  const { tl, t, lang, boot, weeks, error } = useApp();
+  const { tl, t, boot, weeks, error } = useApp();
   const [data, setData] = useState<LessonMaterial[]>([]),
     [loading, setLoading] = useState(true),
     [failed, setFailed] = useState(false);
@@ -115,7 +115,7 @@ export function MaterialLibrary() {
             <article className="panel" key={m.id}>
               <h3>{m.title}</h3>
               <p>
-                {t(`${m.slide_count}장 · `, `${m.slide_count} slides · `)}
+                {t("{slide_count}장 · ", "{slide_count} slides · ", { slide_count: m.slide_count })}
                 {m.weeks
                   .map(
                     (n) =>
@@ -159,7 +159,7 @@ export function MaterialLibrary() {
             <img
               className="material-preview"
               src={`/api/lesson-materials/${selected.id}/slides/${index}`}
-              alt={t(`${index + 1}번 슬라이드`, `Slide ${index + 1}`)}
+              alt={t("{v}번 슬라이드", "Slide {v}", { v: index + 1 })}
             />
             <div className="actions">
               <button

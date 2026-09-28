@@ -89,10 +89,7 @@ export function PasswordManagement() {
           "이 계정의 비밀번호를 초기화할까요?",
           "Reset this account’s password?",
         )}
-        description={t(
-          `${accounts.find((a) => a.id === selected)?.nickname || ""} 님의 기존 비밀번호를 더 이상 사용할 수 없게 됩니다.`,
-          "The user’s old password will no longer work.",
-        )}
+        description={t("{v} 님의 기존 비밀번호를 더 이상 사용할 수 없게 됩니다.", "The user’s old password will no longer work.", { v: accounts.find((a) => a.id === selected)?.nickname || "" })}
         onConfirm={() => reset()}
       />
     </section>

@@ -31,6 +31,18 @@ test("automatic card from the curriculum: day number, weekday, question, reading
   );
 });
 
+test("automatic card is also written in Spanish and Filipino", () => {
+  const card = autoInsight("2026-09-30")!;
+  assert.equal(card.es.kicker, "Día 3 (mié)");
+  assert.match(card.es.topic, /Isaías/);
+  assert.match(card.es.message, /Consolad/);
+  assert.match(card.fil.kicker, /^Araw 3 /);
+  // Study questions are translated, not copied from English.
+  for (const lang of ["es", "fil"] as const)
+    for (const k of ["title", "question"] as const)
+      assert.notEqual(card[lang][k], card.en[k], `${lang} ${k}`);
+});
+
 async function make(role: Actor["role"]): Promise<Actor> {
   const kind = role === "GUEST" ? "guest" : "user";
   return privileged(

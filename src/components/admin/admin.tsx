@@ -227,10 +227,7 @@ export function AdminPage() {
                     }
                   >
                     {teacherPassword.length > 0 && teacherPassword.length < 10
-                      ? t(
-                          `현재 ${teacherPassword.length}자 · 10자 이상 입력해 주세요.`,
-                          `Currently ${teacherPassword.length} characters · use at least 10.`,
-                        )
+                      ? t("현재 {length}자 · 10자 이상 입력해 주세요.", "Currently {length} characters · use at least 10.", { length: teacherPassword.length })
                       : t(
                           "10자 이상으로 설정해 교사에게 안전하게 전달해 주세요.",
                           "Use 10 or more characters and share it securely with the teacher.",
@@ -298,10 +295,7 @@ export function AdminPage() {
                           {t("교사 제거", "Remove teacher")}
                         </button>
                       }
-                      title={t(
-                        `${a.name} 교사를 제거할까요?`,
-                        `Remove ${a.name} as a teacher?`,
-                      )}
+                      title={t("{name} 교사를 제거할까요?", "Remove {name} as a teacher?", { name: a.name })}
                       description={t(
                         "교사 권한과 신청 목록에서 제거합니다. 개인 학습 기록과 기존 제출물은 보존됩니다.",
                         "Remove teaching access and the application. Personal learning records and existing submissions are preserved.",
@@ -424,10 +418,7 @@ export function AdminPage() {
                       {},
                     );
                     setAiCheck(
-                      t(
-                        `연결 성공 · ${result.model}`,
-                        `Connected · ${result.model}`,
-                      ),
+                      t("연결 성공 · {model}", "Connected · {model}", { model: result.model }),
                     );
                     await reload();
                   });
@@ -460,7 +451,7 @@ export function AdminPage() {
                     {Array.from({ length: 52 }, (_, index) => index + 1).map(
                       (number) => (
                         <option key={number} value={number}>
-                          {t(`${number}주차`, `Week ${number}`)}
+                          {t("{number}주차", "Week {number}", { number })}
                         </option>
                       ),
                     )}
@@ -530,10 +521,7 @@ export function AdminPage() {
                 <article className="panel" key={item.id}>
                   <div className="section-heading">
                     <h3>
-                      {t(
-                        `${item.week}주차 질문 초안`,
-                        `Week ${item.week} question draft`,
-                      )}
+                      {t("{week}주차 질문 초안", "Week {week} question draft", { week: item.week })}
                     </h3>
                     <span className="badge">
                       {

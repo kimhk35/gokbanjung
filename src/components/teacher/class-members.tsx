@@ -21,7 +21,7 @@ type Member = Actor & {
 };
 type Data = { members: Member[]; teachers: { id: string; nickname: string }[] };
 export function ClassMembers() {
-  const { locale, boot, t, lang, error } = useApp();
+  const { locale, boot, t, uiLang, error } = useApp();
   const [week, setWeek] = useState(currentWeek()?.number || 38);
   const [teacher, setTeacher] = useState("all");
   const [search, setSearch] = useState("");
@@ -181,7 +181,7 @@ export function ClassMembers() {
                 <tbody>
                   {members.map((m) => (
                     <tr key={m.id}>
-                      <th scope="row">{loginStatus(m, lang)}</th>
+                      <th scope="row">{loginStatus(m, uiLang)}</th>
                       {admin && (
                         <td>{m.teacher_name || t("미선택", "Unassigned")}</td>
                       )}
@@ -189,10 +189,7 @@ export function ClassMembers() {
                         <progress
                           max={7}
                           value={m.week_days}
-                          aria-label={t(
-                            `${m.nickname} 선택 주차 학습 완료`,
-                            `${m.nickname}: selected week completion`,
-                          )}
+                          aria-label={t("{nickname} 선택 주차 학습 완료", "{nickname}: selected week completion", { nickname: m.nickname })}
                         />
                         <br />
                         {m.week_days}/7
@@ -235,7 +232,7 @@ export function ClassMembers() {
                             {Array.from({ length: 52 }, (_, i) => i + 1).map(
                               (w) => (
                                 <span key={w}>
-                                  {t(`${w}주`, `W${w}`)} ·{" "}
+                                  {t("{w}주", "W{w}", { w })} ·{" "}
                                   {m.progress.find((p) => p.week === w)?.days ||
                                     0}
                                   /7

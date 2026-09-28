@@ -31,7 +31,7 @@ export function WeekPicker({
   week: number;
   onChange: (w: number) => void;
 }) {
-  const { tl, weeks, lang, t } = useApp();
+  const { tl, weeks, t } = useApp();
   return (
     <label className="week-picker">
       {t("주차 선택", "Choose a week")}
@@ -72,7 +72,7 @@ export function Empty({ title, body }: { title: string; body?: string }) {
   );
 }
 export function LearnPage() {
-  const { locale, tl, weeks, t, lang } = useApp();
+  const { locale, tl, weeks, t } = useApp();
   const [query, setQuery] = useState("");
   const thisWeek = currentWeek();
   const monthOptions = Array.from(
@@ -179,10 +179,7 @@ export function LearnPage() {
                 >
                   {weeksInMonth.map((w) => (
                     <option key={w.number} value={w.number}>
-                      {t(
-                        `${w.number}주차 · ${w.title.ko}`,
-                        `Week ${w.number} · ${w.title.en}`,
-                      )}
+                      {t("{number}주차 · {ko}", "Week {number} · {en}", { number: w.number, ko: w.title.ko, en: w.title.en })}
                     </option>
                   ))}
                 </select>
@@ -238,7 +235,7 @@ export function LearnPage() {
   );
 }
 export function WeekPage({ number }: { number: number }) {
-  const { uiLang, tl, weeks, lang, t, boot, notify, error } = useApp();
+  const { uiLang, tl, weeks, t, boot, notify, error } = useApp();
   const w = weeks.find((w) => w.number === number);
   const [completed, setCompleted] = useState<number[]>([]);
   useEffect(() => {
@@ -285,10 +282,7 @@ export function WeekPage({ number }: { number: number }) {
             <ArrowUpRight size={17} />
           </a>
           <small>
-            {t(
-              `제공된 교재 ${w.sourcePage}쪽 · 주간 일정 원문 기준`,
-              `Provided manual, page ${w.sourcePage} · English titles are study translations`,
-            )}
+            {t("제공된 교재 {sourcePage}쪽 · 주간 일정 원문 기준", "Provided manual, page {sourcePage} · English titles are study translations", { sourcePage: w.sourcePage })}
           </small>
         </div>
         <button
@@ -349,7 +343,7 @@ export function WeekPage({ number }: { number: number }) {
               <strong>
                 {i === 6
                   ? t("이번 주 돌아보기", "Reflect on the week")
-                  : reading(w, i + 1, lang)}
+                  : reading(w, i + 1, uiLang)}
               </strong>
               <small>
                 {i === 6
@@ -381,7 +375,7 @@ export function WeekPage({ number }: { number: number }) {
   );
 }
 export function LessonPage({ number, day }: { number: number; day: number }) {
-  const { uiLang, tl, locale, weeks, lang, t, boot, error, notify } = useApp();
+  const { uiLang, tl, locale, weeks, t, boot, error, notify } = useApp();
   const w = weeks.find((w) => w.number === number);
   const [initial, setInitial] = useState<Record<string, string>>();
   const [prior, setPrior] = useState("");
@@ -464,7 +458,7 @@ export function LessonPage({ number, day }: { number: number; day: number }) {
         <article>
           <section className="reading-panel">
             <span className="overline">01 · READ</span>
-            <h2>{reading(w, day, lang)}</h2>
+            <h2>{reading(w, day, uiLang)}</h2>
             <ReadingLinks week={w} day={day} />
             <p>
               {t(
@@ -482,10 +476,7 @@ export function LessonPage({ number, day }: { number: number; day: number }) {
               <ArrowUpRight size={18} />
             </a>
             <small>
-              {t(
-                `교재 ${w.sourcePage}쪽 · 일별 학습 분량 제안`,
-                `Manual p. ${w.sourcePage} · Suggested daily portion`,
-              )}
+              {t("교재 {sourcePage}쪽 · 일별 학습 분량 제안", "Manual p. {sourcePage} · Suggested daily portion", { sourcePage: w.sourcePage })}
             </small>
           </section>
           <Recommendation week={w} day={day} lesson />

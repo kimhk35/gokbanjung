@@ -276,10 +276,7 @@ export function TeacherPage() {
                     >
                       <div>
                         <strong>
-                          {t(
-                            `${s.week}주차 활동지`,
-                            `Week ${s.week} worksheet`,
-                          )}
+                          {t("{week}주차 활동지", "Week {week} worksheet", { week: s.week })}
                         </strong>
                         <p>
                           {new Date(s.created_at).toLocaleDateString(locale)}

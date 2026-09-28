@@ -1,18 +1,19 @@
 import type { LessonConfig, LessonItem } from "./lesson-config";
-import type { Lang, Week } from "./types";
+import { translate, type UiLang } from "./i18n";
+import type { Week } from "./types";
 
-export function defaultLessonItems(week: Week, lang: Lang): LessonItem[] {
-  const t = (ko: string, en: string) => (lang === "ko" ? ko : en);
+export function defaultLessonItems(week: Week, lang: UiLang): LessonItem[] {
+  const t = (ko: string, en: string) => translate(lang, ko, en);
   const slides: Pick<LessonItem, "kind" | "title" | "text">[] = [
     {
       kind: "start",
       title: t("오늘의 주제", "TODAY’S TOPIC"),
-      text: week.title[lang],
+      text: t(week.title.ko, week.title.en),
     },
     {
       kind: "reading",
       title: t("함께 읽을 말씀", "OUR READING"),
-      text: week.reference[lang],
+      text: t(week.reference.ko, week.reference.en),
     },
     {
       kind: "question",
@@ -52,7 +53,7 @@ export function resizeLesson(
   count: number,
   defaults: LessonItem[],
   createId: () => string,
-  lang: Lang,
+  lang: UiLang,
 ): LessonConfig {
   if (!Number.isInteger(count) || count < 1 || count > 40)
     throw new Error("invalid_input");
@@ -73,9 +74,7 @@ export function resizeLesson(
       id: createId(),
       kind: "explanation",
       title:
-        lang === "ko"
-          ? `수업 ${items.length + 1}`
-          : `Slide ${items.length + 1}`,
+        translate(lang, "수업 {n}", "Slide {n}", undefined, { n: items.length + 1 }),
       text: "",
       enabled: true,
     };

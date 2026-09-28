@@ -15,7 +15,7 @@ import { Modal } from "../ui/dialog";
 import type { Localized } from "@/lib/types";
 type Sheet = { items: Localized[]; version: number };
 export function WorksheetEditor({ week }: { week: number }) {
-  const { tl, t, lang, error, notify } = useApp();
+  const { tl, t, error, notify } = useApp();
   const [saved, setSaved] = useState<Sheet | null>(null);
   const [items, setItems] = useState<Localized[]>([]);
   const [busy, setBusy] = useState(false);
@@ -75,10 +75,7 @@ export function WorksheetEditor({ week }: { week: number }) {
       const added = (data.questions as string[]).slice(0, room);
       setItems((prev) => [...prev, ...added.map((q) => ({ ko: q, en: q }))]);
       notify(
-        t(
-          `문항 ${added.length}개를 가져왔어요. 확인·수정하고, 다른 언어 칸은 필요하면 번역한 뒤 저장해 주세요.`,
-          `Imported ${added.length} questions. Review them, translate the other language if needed, then save.`,
-        ),
+        t("문항 {length}개를 가져왔어요. 확인·수정하고, 다른 언어 칸은 필요하면 번역한 뒤 저장해 주세요.", "Imported {length} questions. Review them, translate the other language if needed, then save.", { length: added.length }),
       );
     } catch (e) {
       error(e);
@@ -115,7 +112,7 @@ export function WorksheetEditor({ week }: { week: number }) {
         <h2>{t("학습지 수정", "Edit worksheet")}</h2>
         <span>
           {saved
-            ? t(`버전 ${saved.version}`, `Version ${saved.version}`)
+            ? t("버전 {version}", "Version {version}", { version: saved.version })
             : t("불러오는 중…", "Loading…")}
         </span>
       </div>
@@ -132,16 +129,13 @@ export function WorksheetEditor({ week }: { week: number }) {
         {items.map((item, i) => (
           <div key={i} className="worksheet-edit-item">
             <div className="section-heading">
-              <strong>{t(`문항 ${i + 1}`, `Question ${i + 1}`)}</strong>
+              <strong>{t("문항 {v}", "Question {v}", { v: i + 1 })}</strong>
               <div className="actions">
                 <button
                   type="button"
                   className="icon-button"
                   disabled={i === 0}
-                  aria-label={t(
-                    `${i + 1}번 문항 위로`,
-                    `Move question ${i + 1} up`,
-                  )}
+                  aria-label={t("{v}번 문항 위로", "Move question {v} up", { v: i + 1 })}
                   onClick={() => move(i, -1)}
                 >
                   <ArrowUp size={18} />
@@ -150,10 +144,7 @@ export function WorksheetEditor({ week }: { week: number }) {
                   type="button"
                   className="icon-button"
                   disabled={i === items.length - 1}
-                  aria-label={t(
-                    `${i + 1}번 문항 아래로`,
-                    `Move question ${i + 1} down`,
-                  )}
+                  aria-label={t("{v}번 문항 아래로", "Move question {v} down", { v: i + 1 })}
                   onClick={() => move(i, 1)}
                 >
                   <ArrowDown size={18} />
@@ -162,10 +153,7 @@ export function WorksheetEditor({ week }: { week: number }) {
                   type="button"
                   className="icon-button"
                   disabled={items.length === 1}
-                  aria-label={t(
-                    `${i + 1}번 문항 삭제`,
-                    `Delete question ${i + 1}`,
-                  )}
+                  aria-label={t("{v}번 문항 삭제", "Delete question {v}", { v: i + 1 })}
                   onClick={() => setRemove(i)}
                 >
                   <Trash2 size={18} />
@@ -272,10 +260,7 @@ export function WorksheetEditor({ week }: { week: number }) {
               <textarea
                 rows={3}
                 readOnly
-                aria-label={t(
-                  `${i + 1}번 답안 미리보기`,
-                  `Answer ${i + 1} preview`,
-                )}
+                aria-label={t("{v}번 답안 미리보기", "Answer {v} preview", { v: i + 1 })}
               />
             </div>
           ))}

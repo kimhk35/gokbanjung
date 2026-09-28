@@ -108,7 +108,7 @@ export function PromptView({
       )}
       <span className="overline">
         {prompt.reference_label ||
-          (prompt.week ? t(`${prompt.week}주차`, `Week ${prompt.week}`) : "")}
+          (prompt.week ? t("{week}주차", "Week {week}", { week: prompt.week }) : "")}
       </span>
       <h2 className="prompt-title">{prompt.title}</h2>
       <p className="prompt-question preserve">{prompt.question}</p>
@@ -257,10 +257,7 @@ function ReplyList({
     <div className={preparing ? "replies-with-panel" : undefined}>
       <section className="replies" aria-live="polite">
         <h3>
-          {t(
-            `다른 사람들의 생각 ${replies.length}`,
-            `Replies ${replies.length}`,
-          )}
+          {t("다른 사람들의 생각 {length}", "Replies {length}", { length: replies.length })}
         </h3>
         {replies.length ? (
           replies.map((r) => (

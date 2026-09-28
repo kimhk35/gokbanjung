@@ -11,7 +11,13 @@ import { api, RequestError } from "@/lib/client";
 import type { Lang, Actor, Week, Localized } from "@/lib/types";
 import { curriculum } from "@/lib/curriculum";
 import { initialLang } from "@/lib/lang";
-import { baseLang, localeOf, translate, type UiLang } from "@/lib/i18n";
+import {
+  baseLang,
+  localeOf,
+  translate,
+  type UiLang,
+  type Vars,
+} from "@/lib/i18n";
 type Boot = {
   actor: Actor;
   weeks: { data: Week }[];
@@ -28,7 +34,7 @@ type Context = {
   uiLang: UiLang;
   setLang: (lang: UiLang) => void;
   locale: string;
-  t: (ko: string, en: string) => string;
+  t: (ko: string, en: string, vars?: Vars) => string;
   tl: (text: Localized | null | undefined) => string;
   boot: Boot | null;
   weeks: Week[];
@@ -258,7 +264,8 @@ export function Provider({ children }: { children: ReactNode }) {
   const [message, notify] = useState("");
   const [ready, setReady] = useState(false);
   const t = useCallback(
-    (ko: string, en: string) => translate(uiLang, ko, en),
+    (ko: string, en: string, vars?: Vars) =>
+      translate(uiLang, ko, en, undefined, vars),
     [uiLang],
   );
   const error = useCallback(

@@ -19,7 +19,7 @@ import { Announcements } from "./announcements";
 import { HomeCommunity } from "./home-community";
 import { DailyInsightHome } from "./daily-insight";
 export function HomePage() {
-  const { tl, locale, t, lang, weeks } = useApp();
+  const { tl, locale, t, uiLang, weeks } = useApp();
   const date = useStudyDate();
   if (!date)
     return (
@@ -153,14 +153,14 @@ export function HomePage() {
             {
               icon: BookOpen,
               label: t("오늘의 말씀", "Today’s reading"),
-              body: reading(w, day, lang),
+              body: reading(w, day, uiLang),
               href: `/week/${w.number}/day/${day}`,
               n: "01",
             },
             {
               icon: Feather,
               label: t("오늘의 질문", "Today’s question"),
-              body: recommendedQuestion(w, day, lang).question,
+              body: recommendedQuestion(w, day, uiLang).question,
               href: `/week/${w.number}/day/${day}`,
               n: "02",
             },

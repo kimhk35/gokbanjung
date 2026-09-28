@@ -69,10 +69,7 @@ export function QueuePanel({
     >
       <header>
         <strong>
-          {t(
-            `발표 목록 ${queued.length}`,
-            `Presentation list ${queued.length}`,
-          )}
+          {t("발표 목록 {length}", "Presentation list {length}", { length: queued.length })}
         </strong>
         <button type="button" className="button" onClick={onStart}>
           <Play size={18} /> {t("발표 시작", "Start")}

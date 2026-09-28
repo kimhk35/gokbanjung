@@ -95,7 +95,7 @@ export function MonthGrid({
   selected: string;
   onSelect: (day: string) => void;
 }) {
-  const { locale, t, lang } = useApp();
+  const { locale, t } = useApp();
   const first = new Date(Date.UTC(year, month0, 1)).getUTCDay();
   const days = new Date(Date.UTC(year, month0 + 1, 0)).getUTCDate();
   const today = dayKey(new Date());
@@ -132,7 +132,7 @@ export function MonthGrid({
             className="month-cell"
             aria-pressed={selected === key}
             aria-current={today === key ? "date" : undefined}
-            aria-label={`${key} ${count ? t(`일정 ${count}개`, `${count} events`) : ""}`}
+            aria-label={`${key} ${count ? t("일정 {count}개", "{count} events", { count }) : ""}`}
             onClick={() => onSelect(key)}
           >
             <span>{d}</span>

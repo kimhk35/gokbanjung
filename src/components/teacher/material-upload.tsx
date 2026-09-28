@@ -20,7 +20,7 @@ export function MaterialUpload({
   onDone: (items: LessonItem[]) => void;
   onSkip?: (items: LessonItem[]) => void;
 }) {
-  const { tl, t, lang, weeks, error, notify } = useApp();
+  const { tl, t, weeks, error, notify } = useApp();
   const [items, setItems] = useState<LessonItem[]>([]);
   const [title, setTitle] = useState("");
   const [selected, setSelected] = useState<number[]>([week]);
@@ -40,10 +40,7 @@ export function MaterialUpload({
       id = created.id;
       for (let i = 0; i < items.length; i++) {
         setProgress(
-          t(
-            `${i + 1}/${items.length}장 저장 중…`,
-            `Saving slide ${i + 1}/${items.length}…`,
-          ),
+          t("{v}/{length}장 저장 중…", "Saving slide {v}/{length}…", { v: i + 1, length: items.length }),
         );
         await api("lesson-materials/slide", {
           id,
@@ -92,10 +89,7 @@ export function MaterialUpload({
                 remaining,
                 (done, total) =>
                   setProgress(
-                    t(
-                      `${done}/${total}장 이미지 변환 중…`,
-                      `Converting slide ${done}/${total}…`,
-                    ),
+                    t("{done}/{total}장 이미지 변환 중…", "Converting slide {done}/{total}…", { done, total }),
                   ),
               );
               setTitle(file.name.replace(/\.pptx$/i, "").slice(0, 120));
@@ -148,7 +142,7 @@ export function MaterialUpload({
               <img
                 className="material-preview"
                 src={items[index].image}
-                alt={t(`${index + 1}번 슬라이드`, `Slide ${index + 1}`)}
+                alt={t("{v}번 슬라이드", "Slide {v}", { v: index + 1 })}
               />
             )}
             <div className="actions">

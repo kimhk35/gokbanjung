@@ -13,7 +13,7 @@ import { cardBackgroundUrl } from "@/lib/card-backgrounds";
 import { defaultLessonItems } from "@/lib/lesson-slides";
 import type { LessonConfig } from "@/lib/lesson-config";
 export function PresentationPage() {
-  const { t, lang, weeks, boot, error } = useApp();
+  const { t, uiLang, weeks, boot, error } = useApp();
   const params = useSearchParams();
   const requestedWeek =
     Number(params.get("week")) || currentWeek()?.number || 38;
@@ -26,7 +26,7 @@ export function PresentationPage() {
   const lastPresented = useRef("");
   const allowed =
     boot?.actor.role === "TEACHER" || boot?.actor.role === "ADMIN";
-  const defaults = defaultLessonItems(w, lang);
+  const defaults = defaultLessonItems(w, uiLang);
   const custom = config?.items.filter((item) => item.enabled) || [];
   const slides = custom.length
     ? custom.map((item) => ({

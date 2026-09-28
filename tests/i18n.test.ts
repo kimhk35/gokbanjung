@@ -28,3 +28,13 @@ test("device language picks one of the four", () => {
   assert.equal(initialLang(null, ["ko-KR"]), "ko");
   assert.equal(initialLang(null, ["de"]), "en");
 });
+test("sentences with blanks are looked up by their pattern, then filled", () => {
+  const d = { es: { "문항 {n}개를 가져왔어요": "Se importaron {n} preguntas" }, fil: {} };
+  assert.equal(translate("es", "문항 {n}개를 가져왔어요", "Imported {n} questions", d, { n: 3 }), "Se importaron 3 preguntas");
+  assert.equal(translate("fil", "문항 {n}개를 가져왔어요", "Imported {n} questions", d, { n: 3 }), "Imported 3 questions");
+  assert.equal(translate("ko", "문항 {n}개를 가져왔어요", "Imported {n} questions", d, { n: 3 }), "문항 3개를 가져왔어요");
+  // A value that itself contains braces is inserted as-is, not re-filled.
+  assert.equal(translate("en", "{a} and {b}", "{a} and {b}", d, { a: "{b}", b: "x" }), "{b} and x");
+  // Unknown blanks stay visible so a mistake is noticed.
+  assert.equal(translate("en", "{a}", "{a} {z}", d, { a: 1 }), "1 {z}");
+});

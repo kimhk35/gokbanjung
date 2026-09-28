@@ -13,7 +13,7 @@ import { when } from "./reply-item";
 import { authorLabel } from "@/lib/author-label";
 
 export function ThinkPage() {
-  const { locale, tl, t, lang, weeks, boot, error } = useApp();
+  const { locale, tl, t, weeks, boot, error } = useApp();
   const [week, setWeek] = useState<string>("");
   const [data, setData] = useState<{
     items: Prompt[];
@@ -99,7 +99,7 @@ export function ThinkPage() {
               >
                 <span className="overline">
                   {p.reference_label ||
-                    (p.week ? t(`${p.week}주차`, `Week ${p.week}`) : "")}
+                    (p.week ? t("{week}주차", "Week {week}", { week: p.week }) : "")}
                 </span>
                 <h3>{p.title}</h3>
                 <p>

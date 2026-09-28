@@ -23,7 +23,7 @@ const blank: LessonConfig = {
   activeId: null,
 };
 export function LessonBuilder() {
-  const { tl, t, lang, weeks, boot, error, notify } = useApp();
+  const { tl, t, lang, uiLang, weeks, boot, error, notify } = useApp();
   const params = useSearchParams();
   const requestedWeek = Number(params.get("week"));
   const [week, setWeek] = useState(
@@ -224,9 +224,9 @@ export function LessonBuilder() {
                   resizeLesson(
                     config,
                     Number(slideCount ?? visibleCount),
-                    defaultLessonItems(w, lang),
+                    defaultLessonItems(w, uiLang),
                     () => crypto.randomUUID(),
-                    lang,
+                    uiLang,
                   ),
                 );
                 setSlideCount(null);
@@ -236,10 +236,7 @@ export function LessonBuilder() {
             {t("장수 적용 · 저장", "Apply & save count")}
           </button>
           <p className="muted">
-            {t(
-              `현재 ${visibleCount}장 표시 · ${config.items.filter((item) => !item.enabled).length}장 보관`,
-              `${visibleCount} visible · ${config.items.filter((item) => !item.enabled).length} hidden`,
-            )}
+            {t("현재 {visibleCount}장 표시 · {length}장 보관", "{visibleCount} visible · {length} hidden", { visibleCount, length: config.items.filter((item) => !item.enabled).length })}
           </p>
         </div>
         <p className="muted">

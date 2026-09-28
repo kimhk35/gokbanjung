@@ -18,10 +18,22 @@ export const DICTS: Dicts = { es, fil };
 export function isUiLang(value: unknown): value is UiLang {
   return value === "ko" || value === "en" || value === "es" || value === "fil";
 }
-export function translate(ui: UiLang, ko: string, en: string, dicts: Dicts = DICTS) {
-  if (ui === "ko") return ko;
-  if (ui === "en") return en;
-  return dicts[ui][ko] || en;
+export type Vars = Record<string, string | number>;
+// Sentences with changing parts use named blanks: t("문항 {n}개", "{n} items",
+// { n }). The pattern is the dictionary key; blanks are filled afterwards in
+// one pass, so a value containing braces is never filled again.
+export function translate(
+  ui: UiLang,
+  ko: string,
+  en: string,
+  dicts: Dicts = DICTS,
+  vars?: Vars,
+) {
+  const text = ui === "ko" ? ko : ui === "en" ? en : dicts[ui][ko] || en;
+  if (!vars) return text;
+  return text.replace(/\{(\w+)\}/g, (blank, name: string) =>
+    name in vars ? String(vars[name]) : blank,
+  );
 }
 // Language used for server requests and ko/en-only data.
 export function baseLang(ui: UiLang): Lang {

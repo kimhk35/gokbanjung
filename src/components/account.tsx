@@ -121,7 +121,7 @@ export function RecordsGate({ children }: { children: ReactNode }) {
   return children;
 }
 export function AccountPage() {
-  const { t, lang, boot, error, reload, notify } = useApp();
+  const { t, uiLang, boot, error, reload, notify } = useApp();
   const [email, setEmail] = useState(""),
     [password, setPassword] = useState(""),
     [busy, setBusy] = useState(false),
@@ -132,7 +132,7 @@ export function AccountPage() {
       {boot && (
         <p className="notice">
           {t("로그인 상태: ", "Signed in as: ")}
-          {loginStatus(boot.actor, lang)}
+          {loginStatus(boot.actor, uiLang)}
         </p>
       )}
       {canManageRecords(boot?.actor) && boot && (

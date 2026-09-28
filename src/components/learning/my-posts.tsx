@@ -34,10 +34,7 @@ export function MyPosts() {
     <RecordsGate>
       <div className="page narrow">
         <h1>
-          {t(
-            `${boot?.actor.nickname}님의 글`,
-            `${boot?.actor.nickname}'s writing`,
-          )}
+          {t("{nickname}님의 글", "{nickname}'s writing", { nickname: boot?.actor.nickname ?? "" })}
         </h1>
         <p>
           {t(
@@ -62,7 +59,7 @@ export function MyPosts() {
           .map((p) => (
             <article className="panel" key={p.kind + p.id}>
               <small>
-                {t(`${p.week}주차 · `, `Week ${p.week} · `)}
+                {t("{week}주차 · ", "Week {week} · ", { week: p.week })}
                 {t(
                   p.kind === "note"
                     ? "생각벽"

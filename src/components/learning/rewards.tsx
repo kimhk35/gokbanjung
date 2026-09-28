@@ -152,17 +152,11 @@ export function RewardsPage() {
                 "이번 달의 꾸준한 배움 배지를 받았어요!",
                 "You earned this month’s Steady Learning badge!",
               )
-            : t(
-                `이번 달 ${days}일 함께했어요. ${Math.max(0, 21 - days)}일을 더 만나면 배지가 완성됩니다.`,
-                `You learned on ${days} days this month. ${Math.max(0, 21 - days)} more days to your badge.`,
-              )}
+            : t("이번 달 {days}일 함께했어요. {v}일을 더 만나면 배지가 완성됩니다.", "You learned on {days} days this month. {v} more days to your badge.", { days, v: Math.max(0, 21 - days) })}
         </p>
         <div
           className="reward-garden"
-          aria-label={t(
-            `21일 중 ${Math.min(days, 21)}일 완료`,
-            `${Math.min(days, 21)} of 21 days completed`,
-          )}
+          aria-label={t("21일 중 {v}일 완료", "{v} of 21 days completed", { v: Math.min(days, 21) })}
         >
           {Array.from({ length: 21 }, (_, i) => (
             <div className={i < days ? "earned" : ""} key={i}>
@@ -222,7 +216,7 @@ export function RewardsPage() {
         <div className="chips">
           {weekly.map((e) => (
             <Link key={e.id} href={`/week/${e.period}`}>
-              <Bookmark size={17} /> {t(`${e.period}주차`, `Week ${e.period}`)}
+              <Bookmark size={17} /> {t("{period}주차", "Week {period}", { period: e.period })}
             </Link>
           ))}
         </div>

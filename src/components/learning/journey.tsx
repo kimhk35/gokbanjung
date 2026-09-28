@@ -11,7 +11,7 @@ import { canManageRecords } from "@/lib/access";
 import { ProgressDashboard } from "./progress-dashboard";
 import { RecordsGate } from "../account";
 export function JourneyPage() {
-  const { tl, t, lang, boot, weeks, error } = useApp();
+  const { tl, t, boot, weeks, error } = useApp();
   const [data, setData] = useState<{
     reflections: {
       week: number;
@@ -67,10 +67,7 @@ export function JourneyPage() {
           {data.reflections.map((r) => (
             <article key={`${r.week}-${r.day}`}>
               <span className="overline">
-                {t(
-                  `${r.week}주차 · ${r.day}일차`,
-                  `WEEK ${r.week} · DAY ${r.day}`,
-                )}
+                {t("{week}주차 · {day}일차", "WEEK {week} · DAY {day}", { week: r.week, day: r.day })}
               </span>
               <h3>{tl(weeks.find((w) => w.number === r.week)?.reference)}</h3>
               <p>
@@ -219,7 +216,7 @@ export function QuestionsPage() {
   );
 }
 export function CalendarPage() {
-  const { locale, tl, t, lang, weeks } = useApp();
+  const { locale, tl, t, weeks } = useApp();
   const [month, setMonth] = useState(new Date().getMonth() + 1);
   return (
     <div className="page">

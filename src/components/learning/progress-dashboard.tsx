@@ -56,10 +56,7 @@ export function ProgressDashboard({
         <div
           className="progress-ring"
           role="img"
-          aria-label={t(
-            `${week.number}주차 ${done}/7일 완료, ${percent}%`,
-            `Week ${week.number}: ${done}/7 days completed, ${percent}%`,
-          )}
+          aria-label={t("{number}주차 {done}/7일 완료, {percent}%", "Week {number}: {done}/7 days completed, {percent}%", { number: week.number, done, percent })}
         >
           <svg viewBox="0 0 120 120" aria-hidden="true">
             <circle
@@ -144,10 +141,7 @@ export function ProgressDashboard({
           </label>
         </div>
         <p>
-          {t(
-            `이 달의 학습 ${monthInfo.done}/${monthInfo.total}일 완료`,
-            `This month: ${monthInfo.done}/${monthInfo.total} study days completed`,
-          )}
+          {t("이 달의 학습 {done}/{total}일 완료", "This month: {done}/{total} study days completed", { done: monthInfo.done, total: monthInfo.total })}
         </p>
         <div className="progress-calendar">
           {(lang === "ko"
@@ -195,19 +189,13 @@ export function ProgressDashboard({
               key={m.month}
               onClick={() => setMonth(m.month)}
               aria-pressed={selectedMonth === m.month}
-              aria-label={t(
-                `${i + 1}월 ${m.done}/${m.total}일 완료`,
-                `${m.month}: ${m.done}/${m.total} days complete`,
-              )}
+              aria-label={t("{v}월 {done}/{total}일 완료", "{month}: {done}/{total} days complete", { v: i + 1, done: m.done, total: m.total, month: m.month })}
             >
               <span>
-                {t(
-                  `${i + 1}월`,
-                  new Date(Date.UTC(2026, i, 1)).toLocaleDateString("en-US", {
-                    month: "short",
-                    timeZone: "UTC",
-                  }),
-                )}
+                {new Date(Date.UTC(2026, i, 1)).toLocaleDateString(locale, {
+                  month: "short",
+                  timeZone: "UTC",
+                })}
               </span>
               <span className="progress-bar">
                 <span

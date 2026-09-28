@@ -1,5 +1,5 @@
 import raw from "@/data/curriculum.json";
-import { churchLangCode, type UiLang } from "./i18n";
+import { churchLangCode, translate, type UiLang } from "./i18n";
 import type { Week, Lang, Localized } from "./types";
 export const curriculum: Week[] = raw as Week[];
 export const COURSE = "old-testament-2026";
@@ -109,8 +109,8 @@ const bookNames: Record<string, string> = {
   Christmas: "성탄절",
   "Introduction to the Old Testament": "구약전서 소개",
 };
-export function reading(w: Week, day: number, lang: Lang) {
-  if (day === 7) return w.reference[lang];
+export function reading(w: Week, day: number, lang: UiLang) {
+  if (day === 7) return translate(lang, w.reference.ko, w.reference.en);
   const chapters = referenceChapters(w);
   const a = Math.floor(((day - 1) * chapters.length) / 6),
     b = Math.floor((day * chapters.length) / 6);
@@ -119,12 +119,13 @@ export function reading(w: Week, day: number, lang: Lang) {
     .map((c) =>
       lang === "en"
         ? c
-        : c.replace(
-            /^(.+?)( \d+)?$/,
-            (_, book, num) =>
-              (bookNames[book] || book) +
-              (num ? num + (book === "Psalms" ? "편" : "장") : ""),
-          ),
+        : c.replace(/^(.+?)( \d+)?$/, (_, book: string, num?: string) => {
+            const ko = bookNames[book] || book;
+            // Korean adds 장/편; es/fil use the dictionary's book name + number.
+            if (lang === "ko")
+              return ko + (num ? num + (book === "Psalms" ? "편" : "장") : "");
+            return translate(lang, ko, book) + (num || "");
+          }),
     )
     .join("; ");
 }
