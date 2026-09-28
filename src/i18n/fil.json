@@ -1343,6 +1343,7 @@
  "학습지 수정": "I-edit ang worksheet",
  "학습지 파일에서 문항 가져오기": "Mag-import ng mga tanong mula sa worksheet file",
  "학습지 파일에서 문항 가져오기 (교사·관리자)": "Pag-import ng worksheet file (mga guro, admin)",
+ "학습지 파일이 너무 크거나 복잡해서 읽지 않았어요. 그림을 빼거나 문항만 담은 파일로 다시 시도해 주세요.": "Masyadong malaki o komplikado ang worksheet file para mabasa. Alisin ang mga larawan o gumamit ng file na mga tanong lang ang laman.",
  "학습지가 변경되었습니다. 입력 내용은 이 기기에 보존됩니다. 새로고침 후 새 버전을 확인하세요.": "Nagbago ang worksheet. Nananatili sa device na ito ang iyong inilagay. I-reload para suriin ang bagong bersyon.",
  "학습하기": "Pag-aaral",
  "한 문장으로 정리하기": "Ang linggong ito sa isang pangungusap",

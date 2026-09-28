@@ -48,3 +48,22 @@ test("Word and Hangul worksheets become questions", async () => {
     "누구에게 전하고 싶나요?",
   ]);
 });
+
+test("zip-based files that expand too much are refused before unpacking", async () => {
+  const { default: JSZip } = await import("jszip");
+  const { zipTooLarge } = await import("../src/lib/file-text");
+  const bomb = new JSZip();
+  bomb.file("word/document.xml", new Uint8Array(60 * 1024 * 1024)); // 60 MB of zeros
+  const bombBytes = await bomb.generateAsync({ type: "uint8array", compression: "DEFLATE" });
+  assert.ok(bombBytes.length < 1024 * 1024, "compressed size stays small");
+  assert.equal(zipTooLarge(bombBytes), true);
+  const many = new JSZip();
+  for (let i = 0; i < 3001; i++) many.file(`f${i}.xml`, "x");
+  assert.equal(zipTooLarge(await many.generateAsync({ type: "uint8array" })), true);
+  const docx = await Packer.toBuffer(
+    new Document({ sections: [{ children: [new Paragraph("1. 질문")] }] }),
+  );
+  assert.equal(zipTooLarge(new Uint8Array(docx)), false);
+  // Not a readable zip at all: refuse rather than guess.
+  assert.equal(zipTooLarge(new Uint8Array([0x50, 0x4b, 3, 4, 0, 0])), true);
+});

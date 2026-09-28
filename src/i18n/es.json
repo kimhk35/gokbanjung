@@ -1343,6 +1343,7 @@
  "학습지 수정": "Editar hoja de trabajo",
  "학습지 파일에서 문항 가져오기": "Importar preguntas desde un archivo",
  "학습지 파일에서 문항 가져오기 (교사·관리자)": "Importar un archivo de hoja de trabajo (maestros, administradores)",
+ "학습지 파일이 너무 크거나 복잡해서 읽지 않았어요. 그림을 빼거나 문항만 담은 파일로 다시 시도해 주세요.": "El archivo de la hoja de trabajo es demasiado grande o complejo para leerlo. Quita las imágenes o usa un archivo que solo tenga las preguntas.",
  "학습지가 변경되었습니다. 입력 내용은 이 기기에 보존됩니다. 새로고침 후 새 버전을 확인하세요.": "La hoja de trabajo cambió. Lo que escribiste sigue en este dispositivo. Vuelve a cargar para revisar la nueva versión.",
  "학습하기": "Estudio",
  "한 문장으로 정리하기": "Esta semana en una frase",

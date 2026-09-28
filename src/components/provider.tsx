@@ -50,6 +50,10 @@ const phase2Errors: Record<string, Localized> = {
     ko: "파일에서 문항을 찾지 못했어요. 문항 앞에 1. 2. 같은 번호가 있는지 확인해 주세요.",
     en: "No questions were found. Check that questions are numbered like 1. 2.",
   },
+  file_too_complex: {
+    ko: "학습지 파일이 너무 크거나 복잡해서 읽지 않았어요. 그림을 빼거나 문항만 담은 파일로 다시 시도해 주세요.",
+    en: "The worksheet file is too large or complex to read. Remove pictures or use a file with just the questions.",
+  },
   unreadable_file: {
     ko: "파일을 읽지 못했어요. 스캔한 그림 파일이 아닌지 확인해 주세요.",
     en: "The file could not be read. Make sure it is not a scanned image.",

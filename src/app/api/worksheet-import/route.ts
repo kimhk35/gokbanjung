@@ -4,7 +4,7 @@ import { rateLimit } from "@/lib/service";
 import { AppError, ensure } from "@/lib/errors";
 import { sameOrigin } from "@/lib/site-url";
 import { canAuthor } from "@/lib/prompts";
-import { extractText, fileKind } from "@/lib/file-text";
+import { extractText, fileKind, zipTooLarge } from "@/lib/file-text";
 import { extractQuestions } from "@/lib/worksheet-import";
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -28,6 +28,8 @@ export async function POST(req: NextRequest) {
     const bytes = new Uint8Array(await file.arrayBuffer());
     const kind = fileKind(file.name, bytes);
     ensure(kind, 400, "invalid_file");
+    if (kind === "docx" || kind === "hwpx")
+      ensure(!zipTooLarge(bytes), 413, "file_too_complex");
     let text = "";
     try {
       text = await extractText(bytes, kind);

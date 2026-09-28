@@ -220,6 +220,7 @@ export function Shell({ children }: { children: ReactNode }) {
           "/think",
           "/p/",
           "/guide",
+          "/scriptures",
         ].some((p) => path.startsWith(p)) ? (
           children
         ) : (

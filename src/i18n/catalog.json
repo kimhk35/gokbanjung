@@ -1343,6 +1343,7 @@
  "학습지 수정": "Edit worksheet",
  "학습지 파일에서 문항 가져오기": "Import questions from a worksheet file",
  "학습지 파일에서 문항 가져오기 (교사·관리자)": "Importing a worksheet file (teachers, admins)",
+ "학습지 파일이 너무 크거나 복잡해서 읽지 않았어요. 그림을 빼거나 문항만 담은 파일로 다시 시도해 주세요.": "The worksheet file is too large or complex to read. Remove pictures or use a file with just the questions.",
  "학습지가 변경되었습니다. 입력 내용은 이 기기에 보존됩니다. 새로고침 후 새 버전을 확인하세요.": "The worksheet has changed. Your input remains on this device. Reload to review the new version.",
  "학습하기": "Study",
  "한 문장으로 정리하기": "This week in one sentence",
