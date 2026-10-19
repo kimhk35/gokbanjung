@@ -936,3 +936,61 @@ repository-local author rogernhpark with that email; no global Git settings chan
 The30 reviewed files are committed on codex/integrated-study-reader. Full90 tests
 pass. Unused docs/working/materials assets remain local and untracked. Pushing only
 this feature branch to origin; production DB migrations remain unapplied.
+
+## Neon authentication and file storage — 2026-10-20
+
+The former Supabase project was deleted. Production was moved to Neon and the
+original migrations plus seed were installed. Guest reads returned 200 and the
+course has 52 weeks. Old Supabase passwords and file bytes cannot be recovered
+from the new database.
+
+Authentication now uses Better Auth 1.7.11 with pg. `database-auth.ts` provides a
+server-only adapter so the existing signup/approval/password-management routes
+keep their application roles and guest record ownership. Provider UUIDs still
+resolve through `ggc.account_requests`. Old `sb-` cookies are ignored. Signup
+never replaces an administrator's session. Duplicate signup's synthetic provider
+ID is rejected before an application account can link to it. Password reset
+revokes provider sessions. There is no public Better Auth catch-all handler.
+
+`20261019040000_database_auth.sql` creates the server-only `public.ggc_auth_*`
+tables. The signing key is generated once in `ggc_auth_config` and is shared by
+serverless instances. Optional BETTER_AUTH_SECRET overrides it. DATABASE_URL is
+the only required service credential. Supabase and Neon Auth keys are unused.
+
+`20261019030000_database_file_storage.sql` adds `ggc.stored_files`. Uploads and
+resource creation are atomic. `/api/files/posters/...` retains public poster
+reads. Material documents require an administrator in the matching course.
+Limits remain 2MB posters and 4MB documents. Direct browser DB roles cannot read
+file bytes or authentication tables.
+
+Apply both new migrations to Neon before testing sign-in/uploads. The supplied
+Neon_Login_Upload_Update.sql wraps them in one prepared statement. It was tested
+twice and preserved all 52 weeks. It contains no passwords or database URLs.
+For the first administrator use `node scripts/bootstrap-admin.mjs` or apply for
+a teacher account and edit/run `scripts/approve-first-admin.sql` as the Neon
+owner. The SQL refuses to replace a different existing administrator.
+
+Verification: actual Better Auth signup/signin/session/logout/password-reset
+against PGlite-backed PostgreSQL passed. Next cookie encoding roundtrip passed.
+Storage bytes/role/course checks passed. TypeScript and scoped server ESLint
+passed. Repository-wide ESLint still reports existing UI hook/link errors.
+Full regression exercised 92 cases. One obsolete Supabase CSP assertion was
+updated and its focused rerun passed 2/2. The other 91 cases passed. The final
+authentication test also verifies Next.js cookie parsing. A clean Turbopack
+build succeeded before the final two small corrections. The local incremental
+cache then failed to open. The final source passed a full Webpack release build
+including TypeScript and all 33 static pages.
+No private account data or secrets were inspected.
+
+Publishing is blocked by the current connection: GitHub create-tree and
+create-branch both returned 403 Resource not accessible by integration.
+The CLI has no GitHub credential. Nothing was pushed or deployed. The current
+GitHub account is kimhk35 and the target is kimhk35/gokbanjung main. Repository
+metadata reports user push access but the integration itself refuses writes.
+The Vercel connector also returns project-not-found for the known project/team.
+The user authorized the GitHub browser fallback. Google sign-in and device
+verification completed on 2026-10-20. The browser then failed with a retained
+credential-state error before any source files were uploaded. Starting a fresh
+script runtime did not recover browser access. Nothing has been committed or
+deployed. The reviewed 29-file overlay is supplied as Gokbanjung_Neon_Update.zip
+for one manual GitHub upload preserving its directory structure.

@@ -1,90 +1,76 @@
 import { existsSync } from "node:fs";
-import { createClient } from "@supabase/supabase-js";
+import { randomUUID } from "node:crypto";
+import { hashPassword } from "better-auth/crypto";
 import postgres from "postgres";
 import { ask } from "./terminal-input.mjs";
+import { parseDatabaseUrl } from "./database-url.mjs";
 if (existsSync(".env.local")) process.loadEnvFile(".env.local");
-const url =
-  process.env.NEXT_PUBLIC_SUPABASE_URL ||
-  (await ask("Supabase Project URL (https://...supabase.co): "));
-const serviceKey =
-  process.env.SUPABASE_SERVICE_ROLE_KEY ||
-  (await ask("Supabase service_role / secret key (hidden): ", true));
-const databaseUrl =
-  process.env.DATABASE_URL || (await ask("DATABASE_URL (hidden): ", true));
-const email =
-  (await ask("Admin email [kimhk35@ajou.ac.kr]: ")) || "kimhk35@ajou.ac.kr";
-const projectRef = new URL(url).hostname.split(".")[0];
-const databaseTarget = new URL(databaseUrl);
-if (
-  databaseTarget.hostname !== `db.${projectRef}.supabase.co` &&
-  decodeURIComponent(databaseTarget.username) !== `postgres.${projectRef}`
-)
-  throw new Error(
-    "API and database project references do not match. No account was created.",
-  );
-console.log(
-  "Target Supabase:",
-  new URL(url).hostname,
-  "Database:",
-  new URL(databaseUrl).hostname,
-  "Admin email:",
-  email,
+const parsed = parseDatabaseUrl(
+  process.env.DATABASE_URL || (await ask("DATABASE_URL (hidden): ", true)),
 );
+if (parsed.error) throw new Error(parsed.error);
+const login = (await ask("Administrator login ID or email: ")).toLowerCase();
+if (
+  !/^[a-z0-9_]{4,24}$/.test(login) &&
+  !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(login)
+)
+  throw new Error("Enter a valid login ID or email.");
+const email = login.includes("@")
+  ? login
+  : `${login}@accounts.gokbanjeong.invalid`;
+console.log("Database host:", parsed.host, "Administrator login:", login);
 if (
   (await ask("Create or assign this administrator? Type ADMIN: ")) !== "ADMIN"
 )
   process.exit(1);
-const client = createClient(url, serviceKey, {
-  auth: { persistSession: false, autoRefreshToken: false },
+const sql = postgres(parsed.url, {
+  prepare: false,
+  max: 1,
+  ssl: parsed.host === "localhost" ? false : "require",
 });
-const sql = postgres(databaseUrl, { prepare: false, max: 1, ssl: "require" });
 try {
   const [ready] =
-    await sql`select to_regclass('ggc.account_requests') as accounts`;
-  if (!ready.accounts) throw new Error("Run 05_UPDATE_DATABASE first.");
-  let [user] =
-    await sql`select id from auth.users where lower(email)=lower(${email})`;
-  if (user) {
-    const verified = await client.auth.admin.getUserById(user.id);
-    if (
-      verified.error ||
-      verified.data.user.email?.toLowerCase() !== email.toLowerCase()
-    )
-      throw new Error("API and database targets do not match.");
-  } else {
+    await sql`select to_regclass('public.ggc_auth_user') as users,to_regclass('ggc.account_requests') as accounts`;
+  if (!ready.users || !ready.accounts)
+    throw new Error("Run npm run db:update first.");
+  const [existing] =
+    await sql`select id from public.ggc_auth_user where lower(email)=lower(${email})`;
+  let passwordHash;
+  if (!existing) {
     const password = await ask(
-      "New administrator password (10+ characters, hidden): ",
+      "New password (10-128 characters, hidden): ",
       true,
     );
-    if (password.length < 10)
-      throw new Error("Password must contain at least 10 characters.");
-    const created = await client.auth.admin.createUser({
-      email,
-      password,
-      email_confirm: true,
-    });
-    if (created.error || !created.data.user)
-      throw new Error("Auth user creation failed.");
-    [user] =
-      await sql`select id from auth.users where id=${created.data.user.id}`;
-    if (!user) throw new Error("API and database targets do not match.");
+    if (password.length < 10 || password.length > 128)
+      throw new Error("Password must be 10-128 characters.");
+    passwordHash = await hashPassword(password);
   }
   await sql.begin(async (tx) => {
+    await tx`select pg_advisory_xact_lock(20261019,4)`;
+    let [user] =
+      await tx`select id from public.ggc_auth_user where lower(email)=lower(${email})`;
+    if (!user) {
+      if (!passwordHash) throw new Error("Account changed. Run setup again.");
+      const id = randomUUID();
+      [user] =
+        await tx`insert into public.ggc_auth_user(id,name,email,"emailVerified") values(${id},'관리자',${email},true) returning id`;
+      await tx`insert into public.ggc_auth_account(id,"accountId","providerId","userId",password) values(${randomUUID()},${id},'credential',${id},${passwordHash})`;
+    }
     const [linked] =
       await tx`select actor_id from ggc.account_requests where user_id=${user.id}`;
     const id = linked?.actor_id || user.id;
     await tx`insert into ggc.actors(id,kind,role,nickname) values(${id},'user','ADMIN','관리자') on conflict(id) do update set kind='user',role='ADMIN'`;
     await tx`update ggc.account_requests set status='approved',reviewed_by=${id} where user_id=${user.id}`;
     await tx`delete from ggc.guest_sessions where actor_id=${id}`;
+    await tx`delete from public.ggc_auth_session where "userId"=${user.id}`;
   });
   console.log(
-    "Administrator assigned. Existing passwords were not changed. Sign in at /admin.",
+    "Administrator ready. Sign in at /admin. Existing passwords were preserved.",
   );
-} catch (e) {
+} catch (error) {
   console.error(
     "Administrator setup failed. Category:",
-    e.code || "configuration",
-    "Check matching project credentials and email.",
+    error.code || "configuration",
   );
   process.exitCode = 1;
 } finally {

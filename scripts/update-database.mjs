@@ -1,4 +1,4 @@
-import { readFile, existsSync } from "node:fs";
+import { existsSync } from "node:fs";
 import { readFile as read } from "node:fs/promises";
 import postgres from "postgres";
 import { ask } from "./terminal-input.mjs";
@@ -82,10 +82,27 @@ try {
           "utf8",
         ),
       );
-    const [storage] =
-      await tx`select to_regclass('storage.buckets') as installed`;
-    if (storage.installed)
-      await tx`insert into storage.buckets(id,name,public,file_size_limit,allowed_mime_types) values('ggc-posters','ggc-posters',true,2097152,array['image/webp','image/png','image/jpeg']) on conflict(id) do nothing`;
+    // Idempotent migrations also repair a partially installed reader schema.
+    for (const file of [
+      "20261018010000_study_community.sql",
+      "20261018020000_study_material_progress.sql",
+      "20261019030000_database_file_storage.sql",
+      "20261019040000_database_auth.sql",
+    ]) {
+      await tx.unsafe(await read(`supabase/migrations/${file}`, "utf8"));
+    }
+    const [reader] = await tx`select
+      to_regclass('ggc.study_prompt_assignments') as assignments,
+      to_regclass('ggc.study_range_thoughts') as thoughts,
+      to_regclass('ggc.study_material_progress') as progress,
+      to_regclass('ggc.study_day_completion') as completion`;
+    if (Object.values(reader).some((table) => !table))
+      throw new Error("Study reader schema verification failed");
+    const [neon] = await tx`select to_regclass('ggc.stored_files') as files,
+      to_regclass('public.ggc_auth_user') as users,
+      to_regclass('public.ggc_auth_session') as sessions`;
+    if (Object.values(neon).some(table => !table))
+      throw new Error("Database authentication/storage verification failed");
     const [verified] =
       await tx`select to_regclass('ggc.quiz_sets') as quizzes,to_regclass('ggc.account_requests') as accounts,to_regclass('ggc.events') as events,to_regclass('ggc.prompt_reply_reactions') as prompts,to_regclass('ggc.text_note_comments') as notes,to_regclass('ggc.daily_insights') as insights`;
     if (
@@ -98,7 +115,7 @@ try {
     )
       throw new Error("Schema verification failed");
     console.log(
-      "Verified: accounts, quizzes, ward calendar, shared prompts, notes. Existing records preserved.",
+      "Verified: accounts, quizzes, ward calendar, shared prompts, notes, reader questions and progress. Existing records preserved.",
     );
   });
 } catch (e) {
