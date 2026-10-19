@@ -9,7 +9,7 @@ test("SQL-editor update file installs the new tables, can run twice, and keeps e
   const sql = await readFile("DB업데이트_SQL편집기용.sql", "utf8");
   assert.doesNotMatch(
     sql,
-    /\b(drop|truncate|delete\s+from|alter\s+table\s+ggc\.(?!event|prompt|verse|lesson_text|text_note|daily_insight))/i,
+    /\b(drop|truncate|delete\s+from|alter\s+table\s+ggc\.(?!event|prompt|verse|lesson_text|text_note|daily_insight|study_))/i,
     "additive only",
   );
   const { PGlite } = await import("@electric-sql/pglite");
@@ -18,7 +18,7 @@ test("SQL-editor update file installs the new tables, can run twice, and keeps e
     "create role authenticated; create role anon; create schema ggc;",
   );
   for (const file of (await readdir("supabase/migrations")).sort())
-    if (!/^2026092[7-9]/.test(file))
+    if (!/^2026092[7-9]|^202609[3-9]|^20261/.test(file))
       await db.exec(await readFile("supabase/migrations/" + file, "utf8"));
   await db.exec(await readFile("supabase/seed.sql", "utf8"));
   await db.query(
@@ -38,7 +38,7 @@ test("SQL-editor update file installs the new tables, can run twice, and keeps e
   }
   assert.equal(await count(), before);
   const tables = await db.query<{ t: string }>(
-    "select to_regclass('ggc.events')::text as t union all select to_regclass('ggc.prompt_reply_reactions')::text union all select to_regclass('ggc.verse_notes')::text union all select to_regclass('ggc.text_note_comments')::text",
+    "select to_regclass('ggc.events')::text as t union all select to_regclass('ggc.prompt_reply_reactions')::text union all select to_regclass('ggc.verse_notes')::text union all select to_regclass('ggc.text_note_comments')::text union all select to_regclass('ggc.study_prompt_assignments')::text union all select to_regclass('ggc.study_range_thoughts')::text union all select to_regclass('ggc.study_material_progress')::text union all select to_regclass('ggc.study_day_completion')::text",
   );
   assert.deepEqual(
     tables.rows.map((r) => r.t),
@@ -47,6 +47,10 @@ test("SQL-editor update file installs the new tables, can run twice, and keeps e
       "ggc.prompt_reply_reactions",
       "ggc.verse_notes",
       "ggc.text_note_comments",
+      "ggc.study_prompt_assignments",
+      "ggc.study_range_thoughts",
+      "ggc.study_material_progress",
+      "ggc.study_day_completion",
     ],
   );
   await db.close();

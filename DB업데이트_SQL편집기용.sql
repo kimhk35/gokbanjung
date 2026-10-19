@@ -189,6 +189,58 @@ create table if not exists ggc.daily_insights(
 alter table ggc.daily_insights enable row level security;
 revoke all on ggc.daily_insights from anon,authenticated;
 
+-- 20261018010000_study_community.sql
+-- Add metadata and reader thoughts without altering existing prompt tables.
+create table if not exists ggc.study_prompt_assignments (
+ prompt_id uuid primary key references ggc.prompts(id) on delete cascade,
+ week integer not null check (week between 1 and 52),
+ day integer not null check (day between 1 and 7),
+ updated_at timestamptz not null default now(),
+ unique(week,day)
+);
+create table if not exists ggc.study_range_thoughts (
+ id uuid primary key,
+ owner_id uuid not null references ggc.actors(id) on delete cascade,
+ week integer not null check (week between 1 and 52),
+ day integer not null check (day between 1 and 7),
+ track text not null check (track in ('adult','family')),
+ source_path text not null check (source_path ~ '^/study/[a-zA-Z0-9/_-]+$' and source_path not like '%//%'),
+ anchor text not null check (char_length(anchor) between 1 and 200 and anchor ~ '^[a-zA-Z0-9][a-zA-Z0-9_,.-]*$'),
+ label text not null check (char_length(btrim(label)) between 1 and 200),
+ body text not null check (char_length(btrim(body)) between 1 and 3000),
+ author text not null check (char_length(btrim(author)) between 1 and 50),
+ visibility text not null check (visibility in ('public','private')),
+ created_at timestamptz not null default now()
+);
+create index if not exists study_range_place on ggc.study_range_thoughts(week,source_path,anchor,created_at);
+alter table ggc.study_prompt_assignments enable row level security;
+alter table ggc.study_range_thoughts enable row level security;
+-- Access only through the authenticated server API, which filters private rows.
+revoke all on ggc.study_prompt_assignments,ggc.study_range_thoughts from anon,authenticated;
+
+-- 20261018020000_study_material_progress.sql
+-- Additive, server-only self-reported progress. Question replies are independent.
+create table if not exists ggc.study_material_progress (
+ owner_id uuid not null references ggc.actors(id) on delete cascade,
+ week int not null check (week between 1 and 52),
+ day int not null check (day between 1 and 7),
+ track text not null check (track in ('adult','family')),
+ task_id text not null,
+ updated_at timestamptz not null default now(),
+ primary key(owner_id,week,day,track,task_id)
+);
+alter table ggc.study_material_progress enable row level security;
+revoke all on ggc.study_material_progress from anon,authenticated;
+-- Material-based completion is independent of legacy reflections and rewards.
+create table if not exists ggc.study_day_completion (
+ owner_id uuid not null references ggc.actors(id) on delete cascade,
+ week int not null,
+ day int not null,
+ primary key(owner_id,week,day)
+);
+alter table ggc.study_day_completion enable row level security;
+revoke all on ggc.study_day_completion from anon,authenticated;
+
 -- 일정·질문 포스터 사진 보관함 (공개 읽기, 2MB, 사진만)
 do $$
 begin
@@ -205,6 +257,10 @@ select case
    and to_regclass('ggc.verse_notes') is not null
    and to_regclass('ggc.text_note_comments') is not null
    and to_regclass('ggc.daily_insights') is not null
+   and to_regclass('ggc.study_prompt_assignments') is not null
+   and to_regclass('ggc.study_range_thoughts') is not null
+   and to_regclass('ggc.study_material_progress') is not null
+   and to_regclass('ggc.study_day_completion') is not null
   then '완료: 와드 일정·함께 생각하기·의견 달기 표가 준비되었습니다 (기존 기록 유지)'
   else '실패: 표를 만들지 못했습니다'
 end as result;

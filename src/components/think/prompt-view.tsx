@@ -12,7 +12,6 @@ import { posterUrl } from "@/lib/poster";
 import type { Prompt, Reply } from "@/lib/prompts";
 import { useLocalDraft } from "../use-local-draft";
 import { useRefresh } from "../use-refresh";
-import { share } from "../ward/event-detail";
 import { ReplyItem, rememberAuthor, useAuthorDefault } from "./reply-item";
 import { PresentMode, QueuePanel, usePresentQueue } from "./present-mode";
 import { PromptEditor } from "./prompt-editor";
@@ -21,16 +20,20 @@ type View = { prompt: Prompt; replies: Reply[]; canAuthor: boolean };
 export function PromptView({
   slug,
   embedded = false,
+  onChanged,
 }: {
   slug: string;
   embedded?: boolean;
+  onChanged?: () => void;
 }) {
   const { t, boot, error, notify } = useApp();
   const router = useRouter();
   const [data, setData] = useState<View | null>(null);
   const [missing, setMissing] = useState(false);
+  const [failed, setFailed] = useState(false);
   const [busy, setBusy] = useState(false);
   const [editing, setEditing] = useState(false);
+  const [shareLink, setShareLink] = useState("");
   const author = useAuthorDefault();
   const [preparing, setPreparing] = useState(false);
   const [presenting, setPresenting] = useState(false);
@@ -43,19 +46,23 @@ export function PromptView({
       .then((d) => {
         setData(d);
         setMissing(false);
+        setFailed(false);
       })
-      .catch((e) =>
-        e instanceof RequestError && e.code === "not_found"
-          ? setMissing(true)
-          : error(e),
-      );
+      .catch((e) => {
+        if (e instanceof RequestError && e.code === "not_found")
+          setMissing(true);
+        else {
+          setFailed(true);
+          error(e);
+        }
+      });
   }, [slug, error]);
   useEffect(() => {
-    if (boot) load();
+    load();
   }, [boot, load]);
   useRefresh(load, 30000, draft.typing || !!draft.value.body.trim() || editing);
   const submit = async () => {
-    if (!data) return;
+    if (!data || !boot) return;
     setBusy(true);
     try {
       const reply = await api<Reply>("think/reply", {
@@ -67,6 +74,7 @@ export function PromptView({
       rememberAuthor(draft.value.author);
       draft.clear();
       setData({ ...data, replies: [...data.replies, reply] });
+      onChanged?.();
     } catch (e) {
       error(e);
     } finally {
@@ -76,7 +84,10 @@ export function PromptView({
   const removePrompt = async () => {
     try {
       await api("think/delete", { id: data!.prompt.id });
-      router.push("/think");
+      if (embedded) {
+        setMissing(true);
+        onChanged?.();
+      } else router.push("/think");
     } catch (e) {
       error(e);
     }
@@ -85,6 +96,15 @@ export function PromptView({
     return (
       <Empty title={t("질문을 찾을 수 없습니다.", "Question not found.")} />
     );
+  if (!data && failed)
+    return (
+      <p role="alert">
+        {t("질문을 불러오지 못했습니다.", "Unable to load the question.")}{" "}
+        <button type="button" className="text-button" onClick={load}>
+          {t("다시 시도", "Retry")}
+        </button>
+      </p>
+    );
   if (!data) return <div className="skeleton" />;
   const { prompt } = data;
   const poster = posterUrl(prompt.poster_path);
@@ -92,23 +112,30 @@ export function PromptView({
   const presenter =
     boot?.actor.kind === "user" &&
     ["TEACHER", "ADMIN"].includes(boot.actor.role);
-  return (
-    <div className="prompt-view">
-      {!embedded && (
-        <Link className="text-button back-link" href="/think">
-          <ArrowLeft size={18} /> {t("함께 생각하기", "Think together")}
-        </Link>
-      )}
-      {poster && (
-        <img
-          className="event-poster"
-          src={poster}
-          alt={t("질문 포스터", "Question poster")}
-        />
-      )}
+  const details = (
+    <div className={embedded ? "study-question-details" : undefined}>
+      {poster &&
+        (embedded ? (
+          <details className="study-question-poster">
+            <summary>{t("질문 포스터 보기", "View question poster")}</summary>
+            <img
+              className="event-poster"
+              src={poster}
+              alt={t("질문 포스터", "Question poster")}
+            />
+          </details>
+        ) : (
+          <img
+            className="event-poster"
+            src={poster}
+            alt={t("질문 포스터", "Question poster")}
+          />
+        ))}
       <span className="overline">
         {prompt.reference_label ||
-          (prompt.week ? t("{week}주차", "Week {week}", { week: prompt.week }) : "")}
+          (prompt.week
+            ? t("{week}주차", "Week {week}", { week: prompt.week })
+            : "")}
       </span>
       <h2 className="prompt-title">{prompt.title}</h2>
       <p className="prompt-question preserve">{prompt.question}</p>
@@ -132,9 +159,19 @@ export function PromptView({
         <button
           type="button"
           className="button secondary"
-          onClick={() => {
-            history.replaceState(null, "", `/p/${prompt.slug}`);
-            share(prompt.title, t, notify);
+          onClick={async () => {
+            const url = new URL(`/p/${prompt.slug}`, location.origin).href;
+            setShareLink(url);
+            try {
+              if (navigator.share)
+                await navigator.share({ title: prompt.title, url });
+              else {
+                await navigator.clipboard.writeText(url);
+                notify(t("링크를 복사했습니다.", "Link copied."));
+              }
+            } catch {
+              /* The visible URL remains available if sharing is cancelled. */
+            }
           }}
         >
           <Share2 size={18} /> {t("공유", "Share")}
@@ -174,61 +211,108 @@ export function PromptView({
           />
         )}
       </div>
-      <section
-        className="reply-composer"
-        aria-label={t("답글 쓰기", "Write a reply")}
-      >
-        <h3>{t("나의 생각 나누기", "Share your thought")}</h3>
-        <input
-          aria-label={t("이름 (비우면 익명)", "Name (blank = anonymous)")}
-          placeholder={t("이름 (비우면 익명)", "Name (blank = anonymous)")}
-          maxLength={50}
-          value={draft.value.author}
-          onChange={(e) => draft.setField("author", e.target.value)}
-        />
-        <textarea
-          aria-label={t("답글", "Reply")}
-          placeholder={t("짧은 생각도 좋아요.", "A short thought is welcome.")}
-          rows={4}
-          maxLength={3000}
-          value={draft.value.body}
-          onChange={(e) => draft.setField("body", e.target.value)}
-        />
-        <div className="button-row">
-          {draft.saved && (
-            <small className="muted">
-              {t(
-                "이 기기에 임시 저장됨 · 등록 전에는 공개되지 않아요",
-                "Saved on this device · not public until posted",
-              )}
-            </small>
-          )}
-          <button
-            type="button"
-            className="button"
-            disabled={busy || !draft.value.body.trim()}
-            onClick={submit}
-          >
-            {t("답글 등록", "Post reply")}
-          </button>
-        </div>
-      </section>
+      {shareLink && (
+        <label className="field study-question-share">
+          {t("질문 공유 링크", "Question link")}
+          <input
+            readOnly
+            value={shareLink}
+            onFocus={(e) => e.currentTarget.select()}
+          />
+          <a href={`/p/${prompt.slug}`} target="_blank" rel="noreferrer">
+            {t("새 창에서 질문 열기", "Open question in a new tab")}
+          </a>
+        </label>
+      )}
+    </div>
+  );
+  const composer = (
+    <section
+      className={`reply-composer${embedded ? " study-question-composer" : ""}`}
+      aria-label={t("답글 쓰기", "Write a reply")}
+    >
+      <h3>{t("나의 생각 나누기", "Share your thought")}</h3>
+      <input
+        aria-label={t("이름 (비우면 익명)", "Name (blank = anonymous)")}
+        placeholder={t("이름 (비우면 익명)", "Name (blank = anonymous)")}
+        maxLength={50}
+        disabled={!boot}
+        value={draft.value.author}
+        onChange={(e) => draft.setField("author", e.target.value)}
+      />
+      <textarea
+        aria-label={t("답글", "Reply")}
+        placeholder={t("짧은 생각도 좋아요.", "A short thought is welcome.")}
+        rows={4}
+        maxLength={3000}
+        disabled={!boot}
+        value={draft.value.body}
+        onChange={(e) => draft.setField("body", e.target.value)}
+      />
+      <div className="button-row">
+        {draft.saved && (
+          <small className="muted">
+            {t(
+              "이 기기에 임시 저장됨 · 등록 전에는 공개되지 않아요",
+              "Saved on this device · not public until posted",
+            )}
+          </small>
+        )}
+        <button
+          type="button"
+          className="button"
+          disabled={!boot || busy || !draft.value.body.trim()}
+          onClick={submit}
+        >
+          {t("답글 등록", "Post reply")}
+        </button>
+      </div>
+    </section>
+  );
+  const replies = (
+    <div className={embedded ? "study-question-replies" : undefined}>
       <ReplyList
         prompt={prompt}
         replies={data.replies}
-        setReplies={(update) =>
-          setData((d) => d && { ...d, replies: update(d.replies) })
-        }
+        setReplies={(update) => {
+          setData((d) => d && { ...d, replies: update(d.replies) });
+          onChanged?.();
+        }}
         presenter={!!presenter}
         preparing={preparing}
         presenting={presenting}
         setPresenting={setPresenting}
       />
+    </div>
+  );
+  return (
+    <div className={`prompt-view${embedded ? " study-question-view" : ""}`}>
+      {!embedded && (
+        <Link className="text-button back-link" href="/think">
+          <ArrowLeft size={18} /> {t("함께 생각하기", "Think together")}
+        </Link>
+      )}
+      {embedded ? (
+        <div className="study-question-scroll">
+          {details}
+          {replies}
+        </div>
+      ) : (
+        <>
+          {details}
+          {composer}
+          {replies}
+        </>
+      )}
+      {embedded && composer}
       <PromptEditor
         open={editing}
         onOpenChange={setEditing}
         prompt={prompt}
-        onSaved={() => load()}
+        onSaved={() => {
+          load();
+          onChanged?.();
+        }}
       />
     </div>
   );
@@ -257,7 +341,9 @@ function ReplyList({
     <div className={preparing ? "replies-with-panel" : undefined}>
       <section className="replies" aria-live="polite">
         <h3>
-          {t("다른 사람들의 생각 {length}", "Replies {length}", { length: replies.length })}
+          {t("다른 사람들의 생각 {length}", "Replies {length}", {
+            length: replies.length,
+          })}
         </h3>
         {replies.length ? (
           replies.map((r) => (

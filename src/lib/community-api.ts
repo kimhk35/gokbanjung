@@ -29,6 +29,18 @@ export async function communityRead(
       return P.listPrompts(a, params);
     case "think/prompt":
       return P.getPrompt(a, params.get("slug") || "");
+    case "think/study-overview":
+      return (await import("./study-community")).getStudyOverview(a, params);
+    case "think/study-thoughts":
+      return (await import("./study-community")).getStudyThoughts(a, params);
+    case "think/study-feed":
+      return (await import("./study-community")).getStudyFeed(a, params);
+    case "notes/study-progress":
+      ensure(a, 401, "session_required");
+      return (await import("./study-material-progress")).getStudyProgress(
+        a,
+        params,
+      );
     case "notes/verse-list":
       return (await import("./verse-notes")).listVerseNotes(a, params);
     case "notes/text-get":
@@ -59,6 +71,8 @@ export async function communityWrite(a: Actor, path: string, input: unknown) {
   const V = await import("./verse-notes");
   const T = await import("./lesson-texts");
   const I = await import("./daily-insight-service");
+  const S = await import("./study-community");
+  const SP = await import("./study-material-progress");
   const handlers: Record<
     string,
     (a: Actor, input: unknown) => Promise<unknown>
@@ -74,6 +88,9 @@ export async function communityWrite(a: Actor, path: string, input: unknown) {
     "think/comment": P.addReplyComment,
     "think/comment-delete": P.deleteReplyComment,
     "think/heart": P.toggleHeart,
+    "think/study-thought": S.saveStudyThought,
+    "think/study-thought-delete": S.deleteStudyThought,
+    "notes/study-progress-save": SP.saveStudyProgress,
     "notes/verse-save": V.saveVerseNote,
     "notes/verse-delete": V.deleteVerseNote,
     "notes/verse-heart": V.toggleVerseHeart,

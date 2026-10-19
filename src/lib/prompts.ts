@@ -18,6 +18,7 @@ export type Prompt = {
   created_at: string;
   reply_count: number;
   mine: boolean;
+  study_day?: number | null;
 };
 export type ReplyComment = {
   id: string;
@@ -40,6 +41,7 @@ export type Reply = {
 };
 const iso = (v: unknown) => new Date(v as string).toISOString();
 const PROMPT_SELECT = `select p.id,p.slug,p.title,p.question,p.reading_text,p.source_url,p.reference_label,p.week,p.author,p.poster_path,p.created_at,p.created_by,
+ (select s.day from ggc.study_prompt_assignments s where s.prompt_id=p.id) as study_day,
  (select count(*) from ggc.prompt_replies r where r.prompt_id=p.id and r.status='published')::int as reply_count from ggc.prompts p`;
 type PromptRow = Omit<Prompt, "mine"> & { created_by: string };
 function shapePrompt(row: PromptRow, a: Actor | null): Prompt {
@@ -128,6 +130,7 @@ const promptInput = z.object({
     .optional(),
   reference_label: z.string().trim().max(200).optional(),
   week: z.number().int().min(1).max(52).nullable().optional(),
+  study_day: z.number().int().min(1).max(7).nullable().optional(),
   author,
   poster_path: z
     .string()
@@ -170,6 +173,17 @@ export async function savePrompt(a: Actor, input: unknown) {
           [...values, a.id],
         )
       )[0].id;
+    }
+    if (v.study_day !== undefined) {
+      const { assignStudyQuestion } = await import("./study-community");
+      await assignStudyQuestion(db, a, id, v.week ?? null, v.study_day);
+    } else {
+      // Older editors do not send a day. Preserve the assignment unless its
+      // week changed, so historical API clients cannot create stale metadata.
+      await db.query(
+        "delete from ggc.study_prompt_assignments where prompt_id=$1 and week is distinct from $2::int",
+        [id, v.week ?? null],
+      );
     }
     return shapePrompt(
       (await db.query<PromptRow>(`${PROMPT_SELECT} where p.id=$1`, [id]))[0],

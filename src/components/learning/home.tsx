@@ -17,9 +17,10 @@ import { RecommendedDiscussion } from "./recommended-discussion";
 import { useStudyDate } from "../use-study-date";
 import { Announcements } from "./announcements";
 import { HomeCommunity } from "./home-community";
+import { cfmPlan } from "@/lib/cfm-study-plan";
 import { DailyInsightHome } from "./daily-insight";
 export function HomePage() {
-  const { tl, locale, t, uiLang, weeks } = useApp();
+  const { tl, locale, t, uiLang, weeks, ready, boot, reload, error } = useApp();
   const date = useStudyDate();
   if (!date)
     return (
@@ -33,6 +34,27 @@ export function HomePage() {
   const day = dayIndex(w, date);
   return (
     <div className="page home">
+      {ready && !boot && (
+        <p className="notice">
+          {t(
+            "학습 기록 연결이 원활하지 않습니다. 공식 원문 읽기는 계속 이용할 수 있습니다.",
+            "Learning records are unavailable. You can continue reading official sources.",
+          )}{" "}
+          <button
+            type="button"
+            className="text-button"
+            onClick={() => reload().catch(error)}
+          >
+            {t("다시 연결", "Reconnect")}
+          </button>
+        </p>
+      )}
+      <Link className="button secondary" href={`/week/${cfmPlan.week}/day/1`}>
+        {t(
+          "10월 19~25일 · 원문으로 매일 학습하기",
+          "October 19–25 · Study the official sources each day",
+        )}
+      </Link>
       <div className="eyebrow">
         <span>{t("와서 나를 따르라", "COME, FOLLOW ME")}</span>
         <span>2026 · {t("구약전서", "OLD TESTAMENT")}</span>
