@@ -27,7 +27,21 @@ Windows에서는 `1_설치확인.cmd`(설치·검사·조립), `2_DB업데이트
 | `NEXT_PUBLIC_SITE_URL` | | 비우면 접속 주소를 자동 사용 |
 | `OPENAI_API_KEY`, `OPENAI_MODEL` | | 비우면 AI 기능 꺼짐 (비용 0) |
 
-## 데이터베이스
+## 원문 기반 7일 학습
+
+43주차(2026-10-19~25) `/week/43/day/1`부터 새 원문 읽기 화면을 사용합니다.
+기존 학습·개인 기록은 같은 주소의 `?view=notes`에서 유지합니다.
+원문은 공식 사이트 iframe과 원본 링크로 제공하며, 일차별 위치 정보만 앱에 보관합니다.
+
+- [매일 분량 배분 방법과 누락 검사 기준](docs/study/cfm-distribution-method.md)
+- [43주차 전체 원문 단위 조사표](docs/study/2026-week-43-source-inventory.csv)
+
+오늘의 질문 배정, 원문 범위별 생각, 자료별 완료 기록에는 추가 마이그레이션
+`20261018010000_study_community.sql`, `20261018020000_study_material_progress.sql`이 필요합니다.
+이 마이그레이션은 새 표만 추가하며 기존 본문·댓글·개인 기록은 수정하지 않습니다.
+운영 적용 전에 아래 DB 업데이트 절차를 따르세요. 다른 주차의 배분은 아직 등록하지 않았습니다.
+
+## 데이터베이스 업데이트
 
 기존 gospel-class Supabase(`ggc` 스키마)를 함께 씁니다. 새 마이그레이션 `supabase/migrations/20260927000000_ward_community.sql`은 표 추가만 합니다.
 운영 DB 적용: `npm run db:update` (포스터 버킷 `ggc-posters`도 함께 만듭니다).

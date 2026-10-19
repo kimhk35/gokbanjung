@@ -11,6 +11,7 @@ export function contentSecurityPolicy(dev: boolean) {
     "img-src 'self' data: blob: https://*.supabase.co",
     "font-src 'self' data: blob:",
     "connect-src 'self' https://*.supabase.co",
+    "frame-src https://www.churchofjesuschrist.org",
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'",

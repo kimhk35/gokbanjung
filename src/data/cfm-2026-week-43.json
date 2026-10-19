@@ -1,0 +1,5855 @@
+{
+  "version": 6,
+  "week": 43,
+  "dates": "2026-10-19/2026-10-25",
+  "days": [
+    {
+      "day": 1,
+      "shortTitle": "선지자의 부름",
+      "question": "하나님이 주시는 부름과 선지자의 권고에 어떻게 응답할까요?",
+      "familyQuestion": "선지자 사진에서 무엇을 발견했나요?",
+      "familyActivity": "선지자 사진을 보며 아는 점 나누기",
+      "adultTasks": [
+        {
+          "id": "t001",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 선지자의 부름",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "figure1_p1",
+          "endAnchor": "figure8",
+          "units": [
+            "manual#reference1",
+            "manual#short_reference1",
+            "manual#figure1_p1",
+            "manual#title_number1",
+            "manual#title1",
+            "manual#p1",
+            "manual#p2",
+            "manual#p3",
+            "manual#title2",
+            "manual#scripture_title1",
+            "manual#title3",
+            "manual#p4",
+            "manual#p5",
+            "manual#p6",
+            "manual#figure8"
+          ],
+          "sourceIds": [
+            "reference1",
+            "short_reference1",
+            "figure1_p1",
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "title2",
+            "scripture_title1",
+            "title3",
+            "p4",
+            "p5",
+            "p6",
+            "figure8"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "figure1_p1",
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "title2",
+            "scripture_title1",
+            "title3",
+            "p4",
+            "p5",
+            "p6"
+          ]
+        },
+        {
+          "id": "video-1:adult",
+          "sourceId": "video",
+          "kind": "video",
+          "label": "선지자 영상",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "figure8",
+          "endAnchor": "figure8",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [],
+          "noteLinks": []
+        },
+        {
+          "id": "t037",
+          "sourceId": "jer1",
+          "kind": "scripture",
+          "label": "예레미야 1장 전체 · 19절",
+          "path": "/study/scriptures/ot/jer/1",
+          "sourceLang": "kor",
+          "anchor": "",
+          "endAnchor": "p19",
+          "units": [
+            "jer1#title1",
+            "jer1#title_number1",
+            "jer1#p1",
+            "jer1#p2",
+            "jer1#p3",
+            "jer1#title2",
+            "jer1#p4",
+            "jer1#p5",
+            "jer1#p6",
+            "jer1#p7",
+            "jer1#p8",
+            "jer1#p9",
+            "jer1#p10",
+            "jer1#title3",
+            "jer1#p11",
+            "jer1#p12",
+            "jer1#p13",
+            "jer1#p14",
+            "jer1#p15",
+            "jer1#p16",
+            "jer1#p17",
+            "jer1#p18",
+            "jer1#p19",
+            "jer1#note1_p1"
+          ],
+          "sourceIds": [
+            "title1",
+            "title_number1",
+            "p1",
+            "p2",
+            "p3",
+            "title2",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "title3",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "note1_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p12"
+            }
+          ],
+          "selectedIds": [
+            "title1",
+            "title_number1",
+            "p1",
+            "p2",
+            "p3",
+            "title2",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "title3",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19"
+          ]
+        },
+        {
+          "id": "t040",
+          "sourceId": "jer7",
+          "kind": "scripture",
+          "label": "예레미야 7:1–7 · 선지자의 권고",
+          "path": "/study/scriptures/ot/jer/7",
+          "sourceLang": "kor",
+          "anchor": "title_number1",
+          "endAnchor": "p7",
+          "units": [
+            "jer7#title_number1",
+            "jer7#title1",
+            "jer7#p1",
+            "jer7#p2",
+            "jer7#p3",
+            "jer7#p4",
+            "jer7#p5",
+            "jer7#p6",
+            "jer7#p7"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7"
+          ]
+        },
+        {
+          "id": "t045",
+          "sourceId": "jer20",
+          "kind": "scripture",
+          "label": "예레미야 20장 전체 · 18절",
+          "path": "/study/scriptures/ot/jer/20",
+          "sourceLang": "kor",
+          "anchor": "",
+          "endAnchor": "p18",
+          "units": [
+            "jer20#title_number1",
+            "jer20#title1",
+            "jer20#p1",
+            "jer20#p2",
+            "jer20#p3",
+            "jer20#p4",
+            "jer20#p5",
+            "jer20#p6",
+            "jer20#title2",
+            "jer20#p7",
+            "jer20#p8",
+            "jer20#p9",
+            "jer20#p10",
+            "jer20#p11",
+            "jer20#p12",
+            "jer20#p13",
+            "jer20#p14",
+            "jer20#p15",
+            "jer20#p16",
+            "jer20#p17",
+            "jer20#p18",
+            "jer20#note1_p1"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "title2",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "note1_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p3"
+            }
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "title2",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18"
+          ]
+        },
+        {
+          "id": "t046",
+          "sourceId": "aof",
+          "kind": "scripture",
+          "label": "신앙개조 제6조·제9조",
+          "path": "/study/scriptures/pgp/a-of-f/1",
+          "sourceLang": "kor",
+          "anchor": "p6",
+          "endAnchor": "p9",
+          "units": [
+            "aof#p6",
+            "aof#p9"
+          ],
+          "sourceIds": [
+            "p6",
+            "p9"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p6",
+            "p9"
+          ]
+        },
+        {
+          "id": "t015",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_tZVxV",
+          "endAnchor": "p_m6Cua",
+          "units": [
+            "helps#p_tZVxV",
+            "helps#p_daLhf",
+            "helps#p_kLBIL",
+            "helps#p_lRyXa",
+            "helps#p_iZTAw",
+            "helps#p_lq2ij",
+            "helps#p_v78LL",
+            "helps#p_fTexW",
+            "helps#p_oKofa",
+            "helps#p_tRA4n",
+            "helps#p_lKudp",
+            "helps#p_dwzib",
+            "helps#p_nJ6DP",
+            "helps#p_mkR5L",
+            "helps#p_wqawm",
+            "helps#p_wjnRy",
+            "helps#p_qKN4e",
+            "helps#p_atEMM",
+            "helps#p_m6Cua",
+            "helps#p_rIeZK",
+            "helps#p_iuwsO",
+            "helps#p_eAguA",
+            "helps#p_prguU",
+            "helps#p_pUW9o",
+            "helps#p_pjmGZ"
+          ],
+          "sourceIds": [
+            "p_tZVxV",
+            "p_daLhf",
+            "p_kLBIL",
+            "p_lRyXa",
+            "p_iZTAw",
+            "p_lq2ij",
+            "p_v78LL",
+            "p_fTexW",
+            "p_oKofa",
+            "p_tRA4n",
+            "p_lKudp",
+            "p_dwzib",
+            "p_nJ6DP",
+            "p_mkR5L",
+            "p_wqawm",
+            "p_wjnRy",
+            "p_qKN4e",
+            "p_atEMM",
+            "p_m6Cua",
+            "p_rIeZK",
+            "p_iuwsO",
+            "p_eAguA",
+            "p_prguU",
+            "p_pUW9o",
+            "p_pjmGZ"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p_lKudp"
+            },
+            {
+              "note": "note2",
+              "owner": "p_lKudp"
+            },
+            {
+              "note": "note3",
+              "owner": "p_lKudp"
+            },
+            {
+              "note": "note4",
+              "owner": "p_lKudp"
+            },
+            {
+              "note": "note5",
+              "owner": "p_dwzib"
+            }
+          ],
+          "selectedIds": [
+            "p_tZVxV",
+            "p_daLhf",
+            "p_kLBIL",
+            "p_lRyXa",
+            "p_iZTAw",
+            "p_lq2ij",
+            "p_v78LL",
+            "p_fTexW",
+            "p_oKofa",
+            "p_tRA4n",
+            "p_lKudp",
+            "p_dwzib",
+            "p_nJ6DP",
+            "p_mkR5L",
+            "p_wqawm",
+            "p_wjnRy",
+            "p_qKN4e",
+            "p_atEMM",
+            "p_m6Cua"
+          ]
+        },
+        {
+          "id": "t024",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_nyCSS",
+          "endAnchor": "p_vg26D",
+          "units": [
+            "helps#p_nyCSS",
+            "helps#p_kxSSQ",
+            "helps#p_rCvef",
+            "helps#p_jn3xQ",
+            "helps#p_vg26D",
+            "helps#p_aUW4A",
+            "helps#p_zg8rP",
+            "helps#p_c21Z6",
+            "helps#p_rtj8Z",
+            "helps#p_xdAMH",
+            "helps#p_dpuHj",
+            "helps#p_w8xih"
+          ],
+          "sourceIds": [
+            "p_nyCSS",
+            "p_kxSSQ",
+            "p_rCvef",
+            "p_jn3xQ",
+            "p_vg26D",
+            "p_aUW4A",
+            "p_zg8rP",
+            "p_c21Z6",
+            "p_rtj8Z",
+            "p_xdAMH",
+            "p_dpuHj",
+            "p_w8xih"
+          ],
+          "noteLinks": [
+            {
+              "note": "note34",
+              "owner": "p_rCvef"
+            },
+            {
+              "note": "note35",
+              "owner": "p_jn3xQ"
+            },
+            {
+              "note": "note36",
+              "owner": "p_jn3xQ"
+            },
+            {
+              "note": "note37",
+              "owner": "p_jn3xQ"
+            },
+            {
+              "note": "note38",
+              "owner": "p_jn3xQ"
+            },
+            {
+              "note": "note39",
+              "owner": "p_jn3xQ"
+            },
+            {
+              "note": "note40",
+              "owner": "p_vg26D"
+            }
+          ],
+          "selectedIds": [
+            "p_nyCSS",
+            "p_kxSSQ",
+            "p_rCvef",
+            "p_jn3xQ",
+            "p_vg26D"
+          ]
+        },
+        {
+          "id": "t061",
+          "sourceId": "gathering",
+          "kind": "talk",
+          "label": "흩어진 이스라엘의 집합 · 예레미야와 집합의 배경",
+          "path": "/study/general-conference/2006/10/the-gathering-of-scattered-israel",
+          "sourceLang": "kor",
+          "anchor": "title1",
+          "endAnchor": "p3",
+          "units": [
+            "gathering#main",
+            "gathering#title1",
+            "gathering#p1",
+            "gathering#p2",
+            "gathering#kicker1",
+            "gathering#p3",
+            "gathering#notetitle1"
+          ],
+          "sourceIds": [
+            "main",
+            "title1",
+            "p1",
+            "p2",
+            "kicker1",
+            "p3",
+            "notetitle1"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "title1",
+            "p1",
+            "p2",
+            "kicker1",
+            "p3",
+            "notetitle1"
+          ]
+        },
+        {
+          "id": "t079",
+          "sourceId": "holland",
+          "kind": "talk",
+          "label": "“A Teacher Come from God” · 하나님께로부터 오신 선생 · 영어 전체",
+          "path": "/study/general-conference/1998/04/a-teacher-come-from-god",
+          "sourceLang": "eng",
+          "anchor": "title1",
+          "endAnchor": "p27",
+          "units": [
+            "holland#main",
+            "holland#title1",
+            "holland#p1",
+            "holland#p2",
+            "holland#kicker1",
+            "holland#p3",
+            "holland#p4",
+            "holland#p5",
+            "holland#p6",
+            "holland#p7",
+            "holland#p8",
+            "holland#p9",
+            "holland#p10",
+            "holland#p11",
+            "holland#p12",
+            "holland#p13",
+            "holland#p14",
+            "holland#p15",
+            "holland#p16",
+            "holland#p17",
+            "holland#p18",
+            "holland#p19",
+            "holland#p20",
+            "holland#p21",
+            "holland#p22",
+            "holland#p23",
+            "holland#p24",
+            "holland#p25",
+            "holland#p26",
+            "holland#p27",
+            "holland#notetitle1",
+            "holland#note1_p1",
+            "holland#note2_p1",
+            "holland#note3_p1",
+            "holland#note4_p1",
+            "holland#note5_p1",
+            "holland#note6_p1",
+            "holland#note7_p1",
+            "holland#note8_p1",
+            "holland#note9_p1",
+            "holland#note10_p1",
+            "holland#note11_p1",
+            "holland#note12_p1",
+            "holland#note13_p1",
+            "holland#note14_p1",
+            "holland#note15_p1",
+            "holland#note16_p1",
+            "holland#note17_p1",
+            "holland#note18_p1",
+            "holland#note19_p1",
+            "holland#note20_p1",
+            "holland#note21_p1",
+            "holland#note22_p1",
+            "holland#note23_p1",
+            "holland#note24_p1",
+            "holland#note25_p1"
+          ],
+          "sourceIds": [
+            "main",
+            "title1",
+            "p1",
+            "p2",
+            "kicker1",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "notetitle1",
+            "note1_p1",
+            "note2_p1",
+            "note3_p1",
+            "note4_p1",
+            "note5_p1",
+            "note6_p1",
+            "note7_p1",
+            "note8_p1",
+            "note9_p1",
+            "note10_p1",
+            "note11_p1",
+            "note12_p1",
+            "note13_p1",
+            "note14_p1",
+            "note15_p1",
+            "note16_p1",
+            "note17_p1",
+            "note18_p1",
+            "note19_p1",
+            "note20_p1",
+            "note21_p1",
+            "note22_p1",
+            "note23_p1",
+            "note24_p1",
+            "note25_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p3"
+            },
+            {
+              "note": "note2",
+              "owner": "p6"
+            },
+            {
+              "note": "note3",
+              "owner": "p7"
+            },
+            {
+              "note": "note4",
+              "owner": "p7"
+            },
+            {
+              "note": "note5",
+              "owner": "p8"
+            },
+            {
+              "note": "note6",
+              "owner": "p8"
+            },
+            {
+              "note": "note7",
+              "owner": "p8"
+            },
+            {
+              "note": "note8",
+              "owner": "p11"
+            },
+            {
+              "note": "note9",
+              "owner": "p13"
+            },
+            {
+              "note": "note10",
+              "owner": "p13"
+            },
+            {
+              "note": "note11",
+              "owner": "p14"
+            },
+            {
+              "note": "note12",
+              "owner": "p14"
+            },
+            {
+              "note": "note13",
+              "owner": "p16"
+            },
+            {
+              "note": "note14",
+              "owner": "p16"
+            },
+            {
+              "note": "note15",
+              "owner": "p17"
+            },
+            {
+              "note": "note16",
+              "owner": "p18"
+            },
+            {
+              "note": "note17",
+              "owner": "p19"
+            },
+            {
+              "note": "note18",
+              "owner": "p19"
+            },
+            {
+              "note": "note19",
+              "owner": "p21"
+            },
+            {
+              "note": "note20",
+              "owner": "p22"
+            },
+            {
+              "note": "note21",
+              "owner": "p22"
+            },
+            {
+              "note": "note22",
+              "owner": "p24"
+            },
+            {
+              "note": "note23",
+              "owner": "p25"
+            },
+            {
+              "note": "note24",
+              "owner": "p26"
+            },
+            {
+              "note": "note25",
+              "owner": "p26"
+            }
+          ],
+          "selectedIds": [
+            "title1",
+            "p1",
+            "p2",
+            "kicker1",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "notetitle1"
+          ]
+        },
+        {
+          "id": "activity-1:adult",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "배운 내용 돌아보기 · 학습 메모",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "figure1_p1",
+          "endAnchor": "figure8",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "figure1_p1",
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "title2",
+            "scripture_title1",
+            "title3",
+            "p4",
+            "p5",
+            "p6"
+          ],
+          "noteLinks": []
+        }
+      ],
+      "familyTasks": [
+        {
+          "id": "t011",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 선지자 사진으로 이야기하기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "scripture_title6",
+          "endAnchor": "p22",
+          "units": [
+            "manual#scripture_title6",
+            "manual#title9",
+            "manual#p22"
+          ],
+          "sourceIds": [
+            "scripture_title6",
+            "title9",
+            "p22"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "scripture_title6",
+            "title9",
+            "p22"
+          ]
+        },
+        {
+          "id": "t033",
+          "sourceId": "children",
+          "kind": "supplement",
+          "label": "어린이 추가 자료 목록",
+          "path": "/study/manual/games-stories-activities/2026/october/43-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_l6Qo6",
+          "endAnchor": "p_xpi4h",
+          "units": [
+            "children#p_l6Qo6",
+            "children#p_fjGtZ",
+            "children#p_xpi4h"
+          ],
+          "sourceIds": [
+            "p_l6Qo6",
+            "p_fjGtZ",
+            "p_xpi4h"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p_l6Qo6",
+            "p_fjGtZ",
+            "p_xpi4h"
+          ]
+        },
+        {
+          "id": "activity-1:family",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "선지자 사진을 보며 아는 점 나누기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "scripture_title6",
+          "endAnchor": "p22",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "scripture_title6",
+            "title9",
+            "p22"
+          ],
+          "noteLinks": []
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "shortTitle": "정체성 발견",
+      "question": "태어나기 전부터 나를 아셨다는 사실은 나에 대해 무엇을 알려 줄까요?",
+      "familyQuestion": "하나님 아버지께서 나를 아신다는 사실은 어떤 느낌을 주나요?",
+      "familyActivity": "아기 사진과 전세에 관한 노래",
+      "adultTasks": [
+        {
+          "id": "t002",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 정체성 발견",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "scripture_title2",
+          "endAnchor": "p9",
+          "units": [
+            "manual#scripture_title2",
+            "manual#title4",
+            "manual#p7",
+            "manual#p8",
+            "manual#p9"
+          ],
+          "sourceIds": [
+            "scripture_title2",
+            "title4",
+            "p7",
+            "p8",
+            "p9"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "scripture_title2",
+            "title4",
+            "p7",
+            "p8",
+            "p9"
+          ]
+        },
+        {
+          "id": "t047",
+          "sourceId": "alma13",
+          "kind": "scripture",
+          "label": "앨마서 13:1–4",
+          "path": "/study/scriptures/bofm/alma/13",
+          "sourceLang": "kor",
+          "anchor": "p1",
+          "endAnchor": "p4",
+          "units": [
+            "alma13#p1",
+            "alma13#p2",
+            "alma13#p3",
+            "alma13#p4"
+          ],
+          "sourceIds": [
+            "p1",
+            "p2",
+            "p3",
+            "p4"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p1",
+            "p2",
+            "p3",
+            "p4"
+          ]
+        },
+        {
+          "id": "t048",
+          "sourceId": "dc138",
+          "kind": "scripture",
+          "label": "교리와 성약 138:53–56",
+          "path": "/study/scriptures/dc-testament/dc/138",
+          "sourceLang": "kor",
+          "anchor": "p53",
+          "endAnchor": "p56",
+          "units": [
+            "dc138#p53",
+            "dc138#p54",
+            "dc138#p55",
+            "dc138#p56"
+          ],
+          "sourceIds": [
+            "p53",
+            "p54",
+            "p55",
+            "p56"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p53",
+            "p54",
+            "p55",
+            "p56"
+          ]
+        },
+        {
+          "id": "t049",
+          "sourceId": "abr3",
+          "kind": "scripture",
+          "label": "아브라함서 3:22–23",
+          "path": "/study/scriptures/pgp/abr/3",
+          "sourceLang": "kor",
+          "anchor": "p22",
+          "endAnchor": "p23",
+          "units": [
+            "abr3#p22",
+            "abr3#p23"
+          ],
+          "sourceIds": [
+            "p22",
+            "p23"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p22",
+            "p23"
+          ]
+        },
+        {
+          "id": "t016",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_jVyjx",
+          "endAnchor": "p_cD9MP",
+          "units": [
+            "helps#p_jVyjx",
+            "helps#p_xv3sT",
+            "helps#p_hJzZ7",
+            "helps#p_cD9MP",
+            "helps#p_r6e0k",
+            "helps#p_q4CIU",
+            "helps#p_zCfX1"
+          ],
+          "sourceIds": [
+            "p_jVyjx",
+            "p_xv3sT",
+            "p_hJzZ7",
+            "p_cD9MP",
+            "p_r6e0k",
+            "p_q4CIU",
+            "p_zCfX1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note6",
+              "owner": "p_hJzZ7"
+            },
+            {
+              "note": "note7",
+              "owner": "p_hJzZ7"
+            },
+            {
+              "note": "note8",
+              "owner": "p_cD9MP"
+            }
+          ],
+          "selectedIds": [
+            "p_jVyjx",
+            "p_xv3sT",
+            "p_hJzZ7",
+            "p_cD9MP"
+          ]
+        },
+        {
+          "id": "t051",
+          "sourceId": "corbitt",
+          "kind": "talk",
+          "label": "여러분은 이스라엘을 모을 수 있습니다! · 초대와 개인 경험 / 참된 정체성 / 그리스도를 믿는 신앙",
+          "path": "/study/general-conference/2021/04/32corbitt",
+          "sourceLang": "kor",
+          "anchor": "title1",
+          "endAnchor": "p7",
+          "units": [
+            "corbitt#main",
+            "corbitt#title1",
+            "corbitt#author1",
+            "corbitt#author2",
+            "corbitt#kicker1",
+            "corbitt#p1",
+            "corbitt#p2",
+            "corbitt#note_title1",
+            "corbitt#note1_p1",
+            "corbitt#note2_p1",
+            "corbitt#title2",
+            "corbitt#p3",
+            "corbitt#p13",
+            "corbitt#note3_p1",
+            "corbitt#note4_p1",
+            "corbitt#note5_p1",
+            "corbitt#note6_p1",
+            "corbitt#note7_p1",
+            "corbitt#note8_p1",
+            "corbitt#title3",
+            "corbitt#p4",
+            "corbitt#p14",
+            "corbitt#p15",
+            "corbitt#p5",
+            "corbitt#p6",
+            "corbitt#p16",
+            "corbitt#p7",
+            "corbitt#note9_p1",
+            "corbitt#note10_p1",
+            "corbitt#note11_p1",
+            "corbitt#note12_p1",
+            "corbitt#note13_p1",
+            "corbitt#note14_p1",
+            "corbitt#note15_p1",
+            "corbitt#note16_p1",
+            "corbitt#note17_p1",
+            "corbitt#note18_p1",
+            "corbitt#note19_p1",
+            "corbitt#note20_p1",
+            "corbitt#note21_p1",
+            "corbitt#note22_p1",
+            "corbitt#note23_p1",
+            "corbitt#note24_p1",
+            "corbitt#note25_p1",
+            "corbitt#note26_p1"
+          ],
+          "sourceIds": [
+            "main",
+            "title1",
+            "author1",
+            "author2",
+            "kicker1",
+            "p1",
+            "p2",
+            "note_title1",
+            "note1_p1",
+            "note2_p1",
+            "title2",
+            "p3",
+            "p13",
+            "note3_p1",
+            "note4_p1",
+            "note5_p1",
+            "note6_p1",
+            "note7_p1",
+            "note8_p1",
+            "title3",
+            "p4",
+            "p14",
+            "p15",
+            "p5",
+            "p6",
+            "p16",
+            "p7",
+            "note9_p1",
+            "note10_p1",
+            "note11_p1",
+            "note12_p1",
+            "note13_p1",
+            "note14_p1",
+            "note15_p1",
+            "note16_p1",
+            "note17_p1",
+            "note18_p1",
+            "note19_p1",
+            "note20_p1",
+            "note21_p1",
+            "note22_p1",
+            "note23_p1",
+            "note24_p1",
+            "note25_p1",
+            "note26_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p1"
+            },
+            {
+              "note": "note2",
+              "owner": "p2"
+            },
+            {
+              "note": "note3",
+              "owner": "p3"
+            },
+            {
+              "note": "note4",
+              "owner": "p3"
+            },
+            {
+              "note": "note5",
+              "owner": "p3"
+            },
+            {
+              "note": "note6",
+              "owner": "p3"
+            },
+            {
+              "note": "note7",
+              "owner": "p13"
+            },
+            {
+              "note": "note8",
+              "owner": "p13"
+            },
+            {
+              "note": "note9",
+              "owner": "p4"
+            },
+            {
+              "note": "note10",
+              "owner": "p4"
+            },
+            {
+              "note": "note11",
+              "owner": "p4"
+            },
+            {
+              "note": "note12",
+              "owner": "p14"
+            },
+            {
+              "note": "note13",
+              "owner": "p14"
+            },
+            {
+              "note": "note14",
+              "owner": "p14"
+            },
+            {
+              "note": "note15",
+              "owner": "p14"
+            },
+            {
+              "note": "note16",
+              "owner": "p14"
+            },
+            {
+              "note": "note17",
+              "owner": "p15"
+            },
+            {
+              "note": "note18",
+              "owner": "p15"
+            },
+            {
+              "note": "note19",
+              "owner": "p5"
+            },
+            {
+              "note": "note20",
+              "owner": "p6"
+            },
+            {
+              "note": "note21",
+              "owner": "p6"
+            },
+            {
+              "note": "note22",
+              "owner": "p6"
+            },
+            {
+              "note": "note23",
+              "owner": "p6"
+            },
+            {
+              "note": "note24",
+              "owner": "p16"
+            },
+            {
+              "note": "note25",
+              "owner": "p16"
+            },
+            {
+              "note": "note26",
+              "owner": "p7"
+            }
+          ],
+          "selectedIds": [
+            "title1",
+            "author1",
+            "author2",
+            "kicker1",
+            "p1",
+            "p2",
+            "note_title1",
+            "title2",
+            "p3",
+            "p13",
+            "title3",
+            "p4",
+            "p14",
+            "p15",
+            "p5",
+            "p6",
+            "p16",
+            "p7"
+          ]
+        },
+        {
+          "id": "t058",
+          "sourceId": "hope",
+          "kind": "talk",
+          "label": "이스라엘 시온 군대 · 서두·웬디 자매 말씀 전체",
+          "path": "/study/broadcasts/worldwide-devotional-for-young-adults/2018/06/hope-of-israel",
+          "sourceLang": "kor",
+          "anchor": "title1",
+          "endAnchor": "p56",
+          "units": [
+            "hope#main",
+            "hope#title1",
+            "hope#p1",
+            "hope#p2",
+            "hope#p3",
+            "hope#p4",
+            "hope#p5",
+            "hope#p6",
+            "hope#p7",
+            "hope#p8",
+            "hope#p9",
+            "hope#p10",
+            "hope#p11",
+            "hope#p12",
+            "hope#p13",
+            "hope#p14",
+            "hope#p15",
+            "hope#p16",
+            "hope#p17",
+            "hope#p18",
+            "hope#p19",
+            "hope#p20",
+            "hope#p21",
+            "hope#p22",
+            "hope#p23",
+            "hope#p24",
+            "hope#p25",
+            "hope#p26",
+            "hope#p27",
+            "hope#p28",
+            "hope#p29",
+            "hope#p30",
+            "hope#p31",
+            "hope#p32",
+            "hope#p33",
+            "hope#p34",
+            "hope#p35",
+            "hope#p36",
+            "hope#p37",
+            "hope#p38",
+            "hope#p39",
+            "hope#p40",
+            "hope#p41",
+            "hope#p42",
+            "hope#p43",
+            "hope#p44",
+            "hope#p45",
+            "hope#p46",
+            "hope#p47",
+            "hope#p48",
+            "hope#p49",
+            "hope#p50",
+            "hope#p51",
+            "hope#p52",
+            "hope#p53",
+            "hope#p54",
+            "hope#p55",
+            "hope#p56",
+            "hope#notetitle1",
+            "hope#note1_p1",
+            "hope#note2_p1"
+          ],
+          "sourceIds": [
+            "main",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34",
+            "p35",
+            "p36",
+            "p37",
+            "p38",
+            "p39",
+            "p40",
+            "p41",
+            "p42",
+            "p43",
+            "p44",
+            "p45",
+            "p46",
+            "p47",
+            "p48",
+            "p49",
+            "p50",
+            "p51",
+            "p52",
+            "p53",
+            "p54",
+            "p55",
+            "p56",
+            "notetitle1",
+            "note1_p1",
+            "note2_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p5"
+            },
+            {
+              "note": "note2",
+              "owner": "p23"
+            }
+          ],
+          "selectedIds": [
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34",
+            "p35",
+            "p36",
+            "p37",
+            "p38",
+            "p39",
+            "p40",
+            "p41",
+            "p42",
+            "p43",
+            "p44",
+            "p45",
+            "p46",
+            "p47",
+            "p48",
+            "p49",
+            "p50",
+            "p51",
+            "p52",
+            "p53",
+            "p54",
+            "p55",
+            "p56",
+            "notetitle1"
+          ]
+        },
+        {
+          "id": "t062",
+          "sourceId": "gathering",
+          "kind": "talk",
+          "label": "흩어진 이스라엘의 집합 · 아브라함의 성약 / 흩어짐",
+          "path": "/study/general-conference/2006/10/the-gathering-of-scattered-israel",
+          "sourceLang": "kor",
+          "anchor": "title2",
+          "endAnchor": "p5",
+          "units": [
+            "gathering#title2",
+            "gathering#p4",
+            "gathering#note1_p1",
+            "gathering#note2_p1",
+            "gathering#note3_p1",
+            "gathering#note4_p1",
+            "gathering#title3",
+            "gathering#p5",
+            "gathering#note5_p1",
+            "gathering#note6_p1"
+          ],
+          "sourceIds": [
+            "title2",
+            "p4",
+            "note1_p1",
+            "note2_p1",
+            "note3_p1",
+            "note4_p1",
+            "title3",
+            "p5",
+            "note5_p1",
+            "note6_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p4"
+            },
+            {
+              "note": "note2",
+              "owner": "p4"
+            },
+            {
+              "note": "note3",
+              "owner": "p4"
+            },
+            {
+              "note": "note4",
+              "owner": "p4"
+            },
+            {
+              "note": "note5",
+              "owner": "p5"
+            },
+            {
+              "note": "note6",
+              "owner": "p5"
+            }
+          ],
+          "selectedIds": [
+            "title2",
+            "p4",
+            "title3",
+            "p5"
+          ]
+        },
+        {
+          "id": "activity-2:adult",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "배운 내용 돌아보기 · 학습 메모",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "scripture_title2",
+          "endAnchor": "p9",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "scripture_title2",
+            "title4",
+            "p7",
+            "p8",
+            "p9"
+          ],
+          "noteLinks": []
+        }
+      ],
+      "familyTasks": [
+        {
+          "id": "t009",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 아기 사진·전세의 정체성",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "title7",
+          "endAnchor": "p20",
+          "units": [
+            "manual#title7",
+            "manual#scripture_title5",
+            "manual#title8",
+            "manual#p20"
+          ],
+          "sourceIds": [
+            "title7",
+            "scripture_title5",
+            "title8",
+            "p20"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "title7",
+            "scripture_title5",
+            "title8",
+            "p20"
+          ]
+        },
+        {
+          "id": "t031",
+          "sourceId": "children",
+          "kind": "supplement",
+          "label": "어린이 추가 자료 목록",
+          "path": "/study/manual/games-stories-activities/2026/october/43-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_fXyv6",
+          "endAnchor": "p_glRoF",
+          "units": [
+            "children#p_fXyv6",
+            "children#p_ehrC6",
+            "children#p_mHD9U",
+            "children#p_kCPD3",
+            "children#p_dC6LD",
+            "children#p_lBcph",
+            "children#p_j0WlU",
+            "children#p_wO5yB",
+            "children#p_glRoF"
+          ],
+          "sourceIds": [
+            "p_fXyv6",
+            "p_ehrC6",
+            "p_mHD9U",
+            "p_kCPD3",
+            "p_dC6LD",
+            "p_lBcph",
+            "p_j0WlU",
+            "p_wO5yB",
+            "p_glRoF"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p_fXyv6",
+            "p_ehrC6",
+            "p_mHD9U",
+            "p_kCPD3",
+            "p_dC6LD",
+            "p_lBcph",
+            "p_j0WlU",
+            "p_wO5yB",
+            "p_glRoF"
+          ]
+        },
+        {
+          "id": "activity-2:family",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "아기 사진과 전세에 관한 노래",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "title7",
+          "endAnchor": "p20",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "title7",
+            "scripture_title5",
+            "title8",
+            "p20"
+          ],
+          "noteLinks": []
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "shortTitle": "정체성의 적용",
+      "question": "하나님의 자녀라는 정체성을 기억하면 오늘의 선택이 어떻게 달라질까요?",
+      "familyQuestion": "태어나기 전의 삶에 대해 무엇을 배웠나요?",
+      "familyActivity": "안내서에서 누가·언제·무엇을 찾기",
+      "adultTasks": [
+        {
+          "id": "t003",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 정체성의 적용",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "p10",
+          "endAnchor": "p14",
+          "units": [
+            "manual#p10",
+            "manual#p11",
+            "manual#p12",
+            "manual#p13",
+            "manual#p14"
+          ],
+          "sourceIds": [
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14"
+          ]
+        },
+        {
+          "id": "t026",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_eC6nr",
+          "endAnchor": "p_dkVrh",
+          "units": [
+            "helps#p_eC6nr",
+            "helps#p_nIWLS",
+            "helps#p_s0LXH",
+            "helps#p_dkVrh"
+          ],
+          "sourceIds": [
+            "p_eC6nr",
+            "p_nIWLS",
+            "p_s0LXH",
+            "p_dkVrh"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p_eC6nr",
+            "p_nIWLS",
+            "p_s0LXH",
+            "p_dkVrh"
+          ]
+        },
+        {
+          "id": "t054",
+          "sourceId": "corbitt",
+          "kind": "talk",
+          "label": "여러분은 이스라엘을 모을 수 있습니다! · 어린이·청소년 프로그램과 결론",
+          "path": "/study/general-conference/2021/04/32corbitt",
+          "sourceLang": "kor",
+          "anchor": "title4",
+          "endAnchor": "p12",
+          "units": [
+            "corbitt#title4",
+            "corbitt#p8",
+            "corbitt#p17",
+            "corbitt#p18",
+            "corbitt#p9",
+            "corbitt#p10",
+            "corbitt#p11",
+            "corbitt#p12",
+            "corbitt#note27_p1",
+            "corbitt#note28_p1",
+            "corbitt#note29_p1",
+            "corbitt#note30_p1",
+            "corbitt#note31_p1",
+            "corbitt#note32_p1",
+            "corbitt#note33_p1",
+            "corbitt#note34_p1",
+            "corbitt#note35_p1",
+            "corbitt#note36_p1"
+          ],
+          "sourceIds": [
+            "title4",
+            "p8",
+            "p17",
+            "p18",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "note27_p1",
+            "note28_p1",
+            "note29_p1",
+            "note30_p1",
+            "note31_p1",
+            "note32_p1",
+            "note33_p1",
+            "note34_p1",
+            "note35_p1",
+            "note36_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note27",
+              "owner": "p8"
+            },
+            {
+              "note": "note28",
+              "owner": "p8"
+            },
+            {
+              "note": "note29",
+              "owner": "p17"
+            },
+            {
+              "note": "note30",
+              "owner": "p17"
+            },
+            {
+              "note": "note31",
+              "owner": "p17"
+            },
+            {
+              "note": "note32",
+              "owner": "p18"
+            },
+            {
+              "note": "note33",
+              "owner": "p18"
+            },
+            {
+              "note": "note34",
+              "owner": "p18"
+            },
+            {
+              "note": "note35",
+              "owner": "p9"
+            },
+            {
+              "note": "note36",
+              "owner": "p11"
+            }
+          ],
+          "selectedIds": [
+            "title4",
+            "p8",
+            "p17",
+            "p18",
+            "p9",
+            "p10",
+            "p11",
+            "p12"
+          ]
+        },
+        {
+          "id": "t055",
+          "sourceId": "decisions",
+          "kind": "talk",
+          "label": "영원을 위한 결정 · 전세와 영원한 선택 / 몸과 선택",
+          "path": "/study/general-conference/2013/10/decisions-for-eternity",
+          "sourceLang": "kor",
+          "anchor": "title1",
+          "endAnchor": "p15",
+          "units": [
+            "decisions#main",
+            "decisions#title1",
+            "decisions#p1",
+            "decisions#p2",
+            "decisions#kicker1",
+            "decisions#p3",
+            "decisions#p4",
+            "decisions#p5",
+            "decisions#p6",
+            "decisions#notetitle1",
+            "decisions#note1_p1",
+            "decisions#note2_p1",
+            "decisions#note3_p1",
+            "decisions#note4_p1",
+            "decisions#note5_p1",
+            "decisions#note6_p1",
+            "decisions#note7_p1",
+            "decisions#title2",
+            "decisions#p7",
+            "decisions#p8",
+            "decisions#p9",
+            "decisions#p10",
+            "decisions#p11",
+            "decisions#p12",
+            "decisions#p13",
+            "decisions#p14",
+            "decisions#p15",
+            "decisions#note8_p1",
+            "decisions#note9_p1",
+            "decisions#note10_p1",
+            "decisions#note11_p1",
+            "decisions#note12_p1",
+            "decisions#note13_p1",
+            "decisions#note14_p1"
+          ],
+          "sourceIds": [
+            "main",
+            "title1",
+            "p1",
+            "p2",
+            "kicker1",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "notetitle1",
+            "note1_p1",
+            "note2_p1",
+            "note3_p1",
+            "note4_p1",
+            "note5_p1",
+            "note6_p1",
+            "note7_p1",
+            "title2",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "note8_p1",
+            "note9_p1",
+            "note10_p1",
+            "note11_p1",
+            "note12_p1",
+            "note13_p1",
+            "note14_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p3"
+            },
+            {
+              "note": "note2",
+              "owner": "p3"
+            },
+            {
+              "note": "note3",
+              "owner": "p4"
+            },
+            {
+              "note": "note4",
+              "owner": "p4"
+            },
+            {
+              "note": "note5",
+              "owner": "p5"
+            },
+            {
+              "note": "note6",
+              "owner": "p5"
+            },
+            {
+              "note": "note7",
+              "owner": "p6"
+            },
+            {
+              "note": "note8",
+              "owner": "p7"
+            },
+            {
+              "note": "note9",
+              "owner": "p10"
+            },
+            {
+              "note": "note10",
+              "owner": "p10"
+            },
+            {
+              "note": "note11",
+              "owner": "p11"
+            },
+            {
+              "note": "note12",
+              "owner": "p12"
+            },
+            {
+              "note": "note13",
+              "owner": "p12"
+            },
+            {
+              "note": "note14",
+              "owner": "p13"
+            }
+          ],
+          "selectedIds": [
+            "title1",
+            "p1",
+            "p2",
+            "kicker1",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "notetitle1",
+            "title2",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15"
+          ]
+        },
+        {
+          "id": "t071",
+          "sourceId": "bangerter",
+          "kind": "talk",
+          "label": "봉사하도록 예임됨 · 예임을 배운 개인 경험 / 예임에 따라 생활하기",
+          "path": "/study/general-conference/2024/04/32bangerter",
+          "sourceLang": "kor",
+          "anchor": "title1",
+          "endAnchor": "p23",
+          "units": [
+            "bangerter#main",
+            "bangerter#title1",
+            "bangerter#author1",
+            "bangerter#author2",
+            "bangerter#kicker1",
+            "bangerter#p1",
+            "bangerter#p2",
+            "bangerter#p3",
+            "bangerter#p4",
+            "bangerter#p5",
+            "bangerter#p6",
+            "bangerter#p7",
+            "bangerter#p8",
+            "bangerter#p9",
+            "bangerter#note_title1",
+            "bangerter#note1_p1",
+            "bangerter#note2_p1",
+            "bangerter#note3_p1",
+            "bangerter#note4_p1",
+            "bangerter#note5_p1",
+            "bangerter#note6_p1",
+            "bangerter#note7_p1",
+            "bangerter#note8_p1",
+            "bangerter#note9_p1",
+            "bangerter#note10_p1",
+            "bangerter#note11_p1",
+            "bangerter#note12_p1",
+            "bangerter#note13_p1",
+            "bangerter#note14_p1",
+            "bangerter#p10",
+            "bangerter#p11",
+            "bangerter#p12",
+            "bangerter#p13",
+            "bangerter#p14",
+            "bangerter#p15",
+            "bangerter#p16",
+            "bangerter#p17",
+            "bangerter#p18",
+            "bangerter#p19",
+            "bangerter#p20",
+            "bangerter#p21",
+            "bangerter#p22",
+            "bangerter#p23",
+            "bangerter#note15_p1",
+            "bangerter#note16_p1",
+            "bangerter#note17_p1",
+            "bangerter#note18_p1",
+            "bangerter#note19_p1"
+          ],
+          "sourceIds": [
+            "main",
+            "title1",
+            "author1",
+            "author2",
+            "kicker1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "note_title1",
+            "note1_p1",
+            "note2_p1",
+            "note3_p1",
+            "note4_p1",
+            "note5_p1",
+            "note6_p1",
+            "note7_p1",
+            "note8_p1",
+            "note9_p1",
+            "note10_p1",
+            "note11_p1",
+            "note12_p1",
+            "note13_p1",
+            "note14_p1",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "note15_p1",
+            "note16_p1",
+            "note17_p1",
+            "note18_p1",
+            "note19_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p2"
+            },
+            {
+              "note": "note2",
+              "owner": "p5"
+            },
+            {
+              "note": "note3",
+              "owner": "p6"
+            },
+            {
+              "note": "note4",
+              "owner": "p6"
+            },
+            {
+              "note": "note5",
+              "owner": "p6"
+            },
+            {
+              "note": "note6",
+              "owner": "p7"
+            },
+            {
+              "note": "note7",
+              "owner": "p8"
+            },
+            {
+              "note": "note8",
+              "owner": "p8"
+            },
+            {
+              "note": "note9",
+              "owner": "p8"
+            },
+            {
+              "note": "note10",
+              "owner": "p8"
+            },
+            {
+              "note": "note11",
+              "owner": "p9"
+            },
+            {
+              "note": "note12",
+              "owner": "p9"
+            },
+            {
+              "note": "note13",
+              "owner": "p9"
+            },
+            {
+              "note": "note14",
+              "owner": "p9"
+            },
+            {
+              "note": "note15",
+              "owner": "p10"
+            },
+            {
+              "note": "note16",
+              "owner": "p10"
+            },
+            {
+              "note": "note17",
+              "owner": "p13"
+            },
+            {
+              "note": "note18",
+              "owner": "p22"
+            },
+            {
+              "note": "note19",
+              "owner": "p23"
+            }
+          ],
+          "selectedIds": [
+            "title1",
+            "author1",
+            "author2",
+            "kicker1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "note_title1",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23"
+          ]
+        },
+        {
+          "id": "t073",
+          "sourceId": "covenant",
+          "kind": "talk",
+          "label": "영원한 성약 · 영원한 성약의 시작 / 특별한 사랑과 자비",
+          "path": "/study/liahona/2022/10/04-the-everlasting-covenant",
+          "sourceLang": "kor",
+          "anchor": "title1",
+          "endAnchor": "figure3_p2",
+          "units": [
+            "covenant#reference1",
+            "covenant#title1",
+            "covenant#author1",
+            "covenant#author2",
+            "covenant#kicker1",
+            "covenant#figure1_p1",
+            "covenant#p1",
+            "covenant#p2",
+            "covenant#p3",
+            "covenant#p4",
+            "covenant#p5",
+            "covenant#p6",
+            "covenant#p7",
+            "covenant#p8",
+            "covenant#note_title1",
+            "covenant#note1_p1",
+            "covenant#note2_p1",
+            "covenant#title2",
+            "covenant#p9",
+            "covenant#p10",
+            "covenant#p11",
+            "covenant#p12",
+            "covenant#figure2_p1",
+            "covenant#figure2_p2",
+            "covenant#p13",
+            "covenant#p14",
+            "covenant#p15",
+            "covenant#p16",
+            "covenant#p17",
+            "covenant#p18",
+            "covenant#figure3_p1",
+            "covenant#figure3_p2",
+            "covenant#note3_p1",
+            "covenant#note4_p1"
+          ],
+          "sourceIds": [
+            "reference1",
+            "title1",
+            "author1",
+            "author2",
+            "kicker1",
+            "figure1_p1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "note_title1",
+            "note1_p1",
+            "note2_p1",
+            "title2",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "figure2_p1",
+            "figure2_p2",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "figure3_p1",
+            "figure3_p2",
+            "note3_p1",
+            "note4_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p2"
+            },
+            {
+              "note": "note2",
+              "owner": "p3"
+            },
+            {
+              "note": "note3",
+              "owner": "p9"
+            },
+            {
+              "note": "note4",
+              "owner": "p17"
+            }
+          ],
+          "selectedIds": [
+            "title1",
+            "author1",
+            "author2",
+            "kicker1",
+            "figure1_p1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "note_title1",
+            "title2",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "figure2_p1",
+            "figure2_p2",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "figure3_p1",
+            "figure3_p2"
+          ]
+        },
+        {
+          "id": "activity-3:adult",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "배운 내용 돌아보기 · 학습 메모",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "p10",
+          "endAnchor": "p14",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14"
+          ],
+          "noteLinks": []
+        }
+      ],
+      "familyTasks": [
+        {
+          "id": "t010",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 전세의 누가·언제·무엇",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "p21",
+          "endAnchor": "p21",
+          "units": [
+            "manual#p21"
+          ],
+          "sourceIds": [
+            "p21"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p21"
+          ]
+        },
+        {
+          "id": "t032",
+          "sourceId": "children",
+          "kind": "supplement",
+          "label": "어린이 추가 자료 목록",
+          "path": "/study/manual/games-stories-activities/2026/october/43-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_veZek",
+          "endAnchor": "p_g13I9",
+          "units": [
+            "children#p_veZek",
+            "children#p_g13I9"
+          ],
+          "sourceIds": [
+            "p_veZek",
+            "p_g13I9"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p_veZek",
+            "p_g13I9"
+          ]
+        },
+        {
+          "id": "activity-3:family",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "안내서에서 누가·언제·무엇을 찾기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "p21",
+          "endAnchor": "p21",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "p21"
+          ],
+          "noteLinks": []
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "shortTitle": "생수의 근원",
+      "question": "나는 어디에서 힘을 얻고 있으며, 구주께서 주시는 생수를 어떻게 얻을까요?",
+      "familyQuestion": "예수님께서 주시는 생수를 어떻게 얻을까요?",
+      "familyActivity": "용기에 물을 담아 생수 비유 살펴보기",
+      "adultTasks": [
+        {
+          "id": "t004",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 생수의 근원",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "figure2_p1",
+          "endAnchor": "p15",
+          "units": [
+            "manual#figure2_p1",
+            "manual#scripture_title3",
+            "manual#title5",
+            "manual#p15"
+          ],
+          "sourceIds": [
+            "figure2_p1",
+            "scripture_title3",
+            "title5",
+            "p15"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "figure2_p1",
+            "scripture_title3",
+            "title5",
+            "p15"
+          ]
+        },
+        {
+          "id": "t006",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 생수의 근원",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "figure3_p1",
+          "endAnchor": "figure3_p1",
+          "units": [
+            "manual#figure3_p1"
+          ],
+          "sourceIds": [
+            "figure3_p1"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "figure3_p1"
+          ]
+        },
+        {
+          "id": "t038",
+          "sourceId": "jer2",
+          "kind": "scripture",
+          "label": "예레미야 2장 전체 · 37절",
+          "path": "/study/scriptures/ot/jer/2",
+          "sourceLang": "kor",
+          "anchor": "",
+          "endAnchor": "p37",
+          "units": [
+            "jer2#title_number1",
+            "jer2#title1",
+            "jer2#p1",
+            "jer2#p2",
+            "jer2#p3",
+            "jer2#title2",
+            "jer2#p4",
+            "jer2#p5",
+            "jer2#p6",
+            "jer2#p7",
+            "jer2#p8",
+            "jer2#title3",
+            "jer2#p9",
+            "jer2#p10",
+            "jer2#p11",
+            "jer2#p12",
+            "jer2#p13",
+            "jer2#title4",
+            "jer2#p14",
+            "jer2#p15",
+            "jer2#p16",
+            "jer2#p17",
+            "jer2#p18",
+            "jer2#p19",
+            "jer2#title5",
+            "jer2#p20",
+            "jer2#p21",
+            "jer2#p22",
+            "jer2#p23",
+            "jer2#p24",
+            "jer2#p25",
+            "jer2#title6",
+            "jer2#p26",
+            "jer2#p27",
+            "jer2#p28",
+            "jer2#p29",
+            "jer2#p30",
+            "jer2#p31",
+            "jer2#p32",
+            "jer2#p33",
+            "jer2#p34",
+            "jer2#p35",
+            "jer2#p36",
+            "jer2#p37",
+            "jer2#note1_p1",
+            "jer2#note2_p1",
+            "jer2#note3_p1",
+            "jer2#note4_p1"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "title2",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "title3",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "title4",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "title5",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "title6",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34",
+            "p35",
+            "p36",
+            "p37",
+            "note1_p1",
+            "note2_p1",
+            "note3_p1",
+            "note4_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p6"
+            },
+            {
+              "note": "note2",
+              "owner": "p8"
+            },
+            {
+              "note": "note3",
+              "owner": "p18"
+            },
+            {
+              "note": "note4",
+              "owner": "p18"
+            }
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "title2",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "title3",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "title4",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "title5",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "title6",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34",
+            "p35",
+            "p36",
+            "p37"
+          ]
+        },
+        {
+          "id": "t017",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_gItCp",
+          "endAnchor": "p_rto7t",
+          "units": [
+            "helps#p_gItCp",
+            "helps#p_e8TTk",
+            "helps#p_clUDN",
+            "helps#p_rto7t",
+            "helps#p_cBLN2",
+            "helps#p_ou0zA",
+            "helps#p_wShK6"
+          ],
+          "sourceIds": [
+            "p_gItCp",
+            "p_e8TTk",
+            "p_clUDN",
+            "p_rto7t",
+            "p_cBLN2",
+            "p_ou0zA",
+            "p_wShK6"
+          ],
+          "noteLinks": [
+            {
+              "note": "note9",
+              "owner": "p_clUDN"
+            },
+            {
+              "note": "note10",
+              "owner": "p_rto7t"
+            },
+            {
+              "note": "note11",
+              "owner": "p_rto7t"
+            }
+          ],
+          "selectedIds": [
+            "p_gItCp",
+            "p_e8TTk",
+            "p_clUDN",
+            "p_rto7t"
+          ]
+        },
+        {
+          "id": "t057",
+          "sourceId": "decisions",
+          "kind": "talk",
+          "label": "영원을 위한 결정 · 영과 선택의 결과",
+          "path": "/study/general-conference/2013/10/decisions-for-eternity",
+          "sourceLang": "kor",
+          "anchor": "title3",
+          "endAnchor": "p28",
+          "units": [
+            "decisions#title3",
+            "decisions#p16",
+            "decisions#p17",
+            "decisions#p18",
+            "decisions#p19",
+            "decisions#p20",
+            "decisions#p21",
+            "decisions#p22",
+            "decisions#p23",
+            "decisions#p24",
+            "decisions#p25",
+            "decisions#p26",
+            "decisions#p27",
+            "decisions#p28",
+            "decisions#note15_p1",
+            "decisions#note16_p1",
+            "decisions#note17_p1",
+            "decisions#note18_p1",
+            "decisions#note19_p1",
+            "decisions#note20_p1",
+            "decisions#note21_p1",
+            "decisions#note22_p1",
+            "decisions#note23_p1",
+            "decisions#note24_p1",
+            "decisions#note25_p1",
+            "decisions#note26_p1",
+            "decisions#note27_p1",
+            "decisions#note28_p1",
+            "decisions#note29_p1",
+            "decisions#note30_p1",
+            "decisions#note31_p1",
+            "decisions#note32_p1",
+            "decisions#note33_p1",
+            "decisions#note34_p1",
+            "decisions#note35_p1",
+            "decisions#note36_p1",
+            "decisions#note37_p1",
+            "decisions#note38_p1",
+            "decisions#note39_p1",
+            "decisions#note40_p1",
+            "decisions#note41_p1",
+            "decisions#note42_p1"
+          ],
+          "sourceIds": [
+            "title3",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "note15_p1",
+            "note16_p1",
+            "note17_p1",
+            "note18_p1",
+            "note19_p1",
+            "note20_p1",
+            "note21_p1",
+            "note22_p1",
+            "note23_p1",
+            "note24_p1",
+            "note25_p1",
+            "note26_p1",
+            "note27_p1",
+            "note28_p1",
+            "note29_p1",
+            "note30_p1",
+            "note31_p1",
+            "note32_p1",
+            "note33_p1",
+            "note34_p1",
+            "note35_p1",
+            "note36_p1",
+            "note37_p1",
+            "note38_p1",
+            "note39_p1",
+            "note40_p1",
+            "note41_p1",
+            "note42_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note15",
+              "owner": "p16"
+            },
+            {
+              "note": "note16",
+              "owner": "p16"
+            },
+            {
+              "note": "note17",
+              "owner": "p16"
+            },
+            {
+              "note": "note18",
+              "owner": "p16"
+            },
+            {
+              "note": "note19",
+              "owner": "p17"
+            },
+            {
+              "note": "note20",
+              "owner": "p18"
+            },
+            {
+              "note": "note21",
+              "owner": "p18"
+            },
+            {
+              "note": "note22",
+              "owner": "p19"
+            },
+            {
+              "note": "note23",
+              "owner": "p19"
+            },
+            {
+              "note": "note24",
+              "owner": "p20"
+            },
+            {
+              "note": "note25",
+              "owner": "p20"
+            },
+            {
+              "note": "note26",
+              "owner": "p21"
+            },
+            {
+              "note": "note27",
+              "owner": "p21"
+            },
+            {
+              "note": "note28",
+              "owner": "p21"
+            },
+            {
+              "note": "note29",
+              "owner": "p22"
+            },
+            {
+              "note": "note30",
+              "owner": "p23"
+            },
+            {
+              "note": "note31",
+              "owner": "p23"
+            },
+            {
+              "note": "note32",
+              "owner": "p23"
+            },
+            {
+              "note": "note33",
+              "owner": "p24"
+            },
+            {
+              "note": "note34",
+              "owner": "p24"
+            },
+            {
+              "note": "note35",
+              "owner": "p24"
+            },
+            {
+              "note": "note36",
+              "owner": "p25"
+            },
+            {
+              "note": "note37",
+              "owner": "p25"
+            },
+            {
+              "note": "note38",
+              "owner": "p27"
+            },
+            {
+              "note": "note39",
+              "owner": "p27"
+            },
+            {
+              "note": "note40",
+              "owner": "p27"
+            },
+            {
+              "note": "note41",
+              "owner": "p28"
+            },
+            {
+              "note": "note42",
+              "owner": "p28"
+            }
+          ],
+          "selectedIds": [
+            "title3",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28"
+          ]
+        },
+        {
+          "id": "t064",
+          "sourceId": "gathering",
+          "kind": "talk",
+          "label": "흩어진 이스라엘의 집합 · 집합 / 교회와 배도 / 회복",
+          "path": "/study/general-conference/2006/10/the-gathering-of-scattered-israel",
+          "sourceLang": "kor",
+          "anchor": "title4",
+          "endAnchor": "p16",
+          "units": [
+            "gathering#title4",
+            "gathering#p6",
+            "gathering#p7",
+            "gathering#note7_p1",
+            "gathering#note8_p1",
+            "gathering#note9_p1",
+            "gathering#title5",
+            "gathering#p8",
+            "gathering#p9",
+            "gathering#p10",
+            "gathering#note10_p1",
+            "gathering#note11_p1",
+            "gathering#note12_p1",
+            "gathering#title6",
+            "gathering#p11",
+            "gathering#p12",
+            "gathering#p13",
+            "gathering#p14",
+            "gathering#p15",
+            "gathering#p16",
+            "gathering#note13_p1",
+            "gathering#note14_p1",
+            "gathering#note15_p1",
+            "gathering#note16_p1",
+            "gathering#note17_p1",
+            "gathering#note18_p1",
+            "gathering#note19_p1",
+            "gathering#note20_p1",
+            "gathering#note21_p1",
+            "gathering#note22_p1",
+            "gathering#note23_p1",
+            "gathering#note24_p1"
+          ],
+          "sourceIds": [
+            "title4",
+            "p6",
+            "p7",
+            "note7_p1",
+            "note8_p1",
+            "note9_p1",
+            "title5",
+            "p8",
+            "p9",
+            "p10",
+            "note10_p1",
+            "note11_p1",
+            "note12_p1",
+            "title6",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "note13_p1",
+            "note14_p1",
+            "note15_p1",
+            "note16_p1",
+            "note17_p1",
+            "note18_p1",
+            "note19_p1",
+            "note20_p1",
+            "note21_p1",
+            "note22_p1",
+            "note23_p1",
+            "note24_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note7",
+              "owner": "p6"
+            },
+            {
+              "note": "note8",
+              "owner": "p6"
+            },
+            {
+              "note": "note9",
+              "owner": "p7"
+            },
+            {
+              "note": "note10",
+              "owner": "p8"
+            },
+            {
+              "note": "note11",
+              "owner": "p8"
+            },
+            {
+              "note": "note12",
+              "owner": "p9"
+            },
+            {
+              "note": "note13",
+              "owner": "p11"
+            },
+            {
+              "note": "note14",
+              "owner": "p11"
+            },
+            {
+              "note": "note15",
+              "owner": "p13"
+            },
+            {
+              "note": "note16",
+              "owner": "p13"
+            },
+            {
+              "note": "note17",
+              "owner": "p14"
+            },
+            {
+              "note": "note18",
+              "owner": "p14"
+            },
+            {
+              "note": "note19",
+              "owner": "p15"
+            },
+            {
+              "note": "note20",
+              "owner": "p15"
+            },
+            {
+              "note": "note21",
+              "owner": "p16"
+            },
+            {
+              "note": "note22",
+              "owner": "p16"
+            },
+            {
+              "note": "note23",
+              "owner": "p16"
+            },
+            {
+              "note": "note24",
+              "owner": "p16"
+            }
+          ],
+          "selectedIds": [
+            "title4",
+            "p6",
+            "p7",
+            "title5",
+            "p8",
+            "p9",
+            "p10",
+            "title6",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16"
+          ]
+        },
+        {
+          "id": "t075",
+          "sourceId": "covenant",
+          "kind": "talk",
+          "label": "영원한 성약 · 성약의 중심이신 그리스도",
+          "path": "/study/liahona/2022/10/04-the-everlasting-covenant",
+          "sourceLang": "kor",
+          "anchor": "title3",
+          "endAnchor": "figure5_p1",
+          "units": [
+            "covenant#title3",
+            "covenant#p19",
+            "covenant#p20",
+            "covenant#p21",
+            "covenant#p22",
+            "covenant#p23",
+            "covenant#p24",
+            "covenant#p25",
+            "covenant#p26",
+            "covenant#p27",
+            "covenant#p28",
+            "covenant#figure4_p1",
+            "covenant#p29",
+            "covenant#p30",
+            "covenant#p31",
+            "covenant#p32",
+            "covenant#p33",
+            "covenant#p34",
+            "covenant#p35",
+            "covenant#p36",
+            "covenant#p37",
+            "covenant#figure5_p1",
+            "covenant#note5_p1",
+            "covenant#note6_p1",
+            "covenant#note7_p1",
+            "covenant#note8_p1"
+          ],
+          "sourceIds": [
+            "title3",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "figure4_p1",
+            "p29",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34",
+            "p35",
+            "p36",
+            "p37",
+            "figure5_p1",
+            "note5_p1",
+            "note6_p1",
+            "note7_p1",
+            "note8_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note5",
+              "owner": "p20"
+            },
+            {
+              "note": "note6",
+              "owner": "p21"
+            },
+            {
+              "note": "note7",
+              "owner": "p29"
+            },
+            {
+              "note": "note8",
+              "owner": "p31"
+            }
+          ],
+          "selectedIds": [
+            "title3",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "figure4_p1",
+            "p29",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34",
+            "p35",
+            "p36",
+            "p37",
+            "figure5_p1"
+          ]
+        },
+        {
+          "id": "activity-4:adult",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "배운 내용 돌아보기 · 학습 메모",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "figure2_p1",
+          "endAnchor": "p15",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "figure2_p1",
+            "scripture_title3",
+            "title5",
+            "p15"
+          ],
+          "noteLinks": []
+        }
+      ],
+      "familyTasks": [
+        {
+          "id": "shared-4",
+          "sourceId": "manual",
+          "kind": "shared",
+          "label": "기본 학습과 공유하는 원문 · 물과 용기로 배우는 생수",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "figure3_p1",
+          "endAnchor": "figure3_p1",
+          "units": [],
+          "sourceIds": [],
+          "noteLinks": [],
+          "selectedIds": [
+            "figure3_p1"
+          ]
+        },
+        {
+          "id": "activity-4:family",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "용기에 물을 담아 생수 비유 살펴보기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "figure3_p1",
+          "endAnchor": "figure3_p1",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "figure3_p1"
+          ],
+          "noteLinks": []
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "shortTitle": "진실한 예배",
+      "question": "내가 드리는 예배와 실제 행동이 일치하려면 무엇을 바꾸어야 할까요?",
+      "familyQuestion": "선지자는 어떤 일을 하나요?",
+      "familyActivity": "예레미야 1장의 성구를 골라 선지자 역할 나누기",
+      "adultTasks": [
+        {
+          "id": "t005",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 진실한 예배",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "p16",
+          "endAnchor": "p16",
+          "units": [
+            "manual#p16"
+          ],
+          "sourceIds": [
+            "p16"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p16"
+          ]
+        },
+        {
+          "id": "t008",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 진실한 예배",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "p_pLmhI",
+          "endAnchor": "p_eJ6oA",
+          "units": [
+            "manual#p_pLmhI",
+            "manual#p_zOueM",
+            "manual#p_wXIqV",
+            "manual#p_uG9Re",
+            "manual#p_eJ6oA"
+          ],
+          "sourceIds": [
+            "p_pLmhI",
+            "p_zOueM",
+            "p_wXIqV",
+            "p_uG9Re",
+            "p_eJ6oA"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p_pLmhI",
+            "p_zOueM",
+            "p_wXIqV",
+            "p_uG9Re",
+            "p_eJ6oA"
+          ]
+        },
+        {
+          "id": "t041",
+          "sourceId": "jer7",
+          "kind": "scripture",
+          "label": "예레미야 7:8–34 · 앞 7절은 1일차에서 읽음",
+          "path": "/study/scriptures/ot/jer/7",
+          "sourceLang": "kor",
+          "anchor": "p8",
+          "endAnchor": "p34",
+          "units": [
+            "jer7#p8",
+            "jer7#p9",
+            "jer7#p10",
+            "jer7#p11",
+            "jer7#p12",
+            "jer7#p13",
+            "jer7#p14",
+            "jer7#p15",
+            "jer7#title2",
+            "jer7#p16",
+            "jer7#p17",
+            "jer7#p18",
+            "jer7#p19",
+            "jer7#p20",
+            "jer7#p21",
+            "jer7#p22",
+            "jer7#p23",
+            "jer7#p24",
+            "jer7#p25",
+            "jer7#p26",
+            "jer7#p27",
+            "jer7#p28",
+            "jer7#title3",
+            "jer7#p29",
+            "jer7#p30",
+            "jer7#p31",
+            "jer7#p32",
+            "jer7#p33",
+            "jer7#p34",
+            "jer7#note1_p1",
+            "jer7#note2_p1"
+          ],
+          "sourceIds": [
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "title2",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "title3",
+            "p29",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34",
+            "note1_p1",
+            "note2_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p26"
+            },
+            {
+              "note": "note2",
+              "owner": "p28"
+            }
+          ],
+          "selectedIds": [
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "title2",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "title3",
+            "p29",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34"
+          ]
+        },
+        {
+          "id": "t043",
+          "sourceId": "jer17",
+          "kind": "scripture",
+          "label": "예레미야 17장 전체 · 27절",
+          "path": "/study/scriptures/ot/jer/17",
+          "sourceLang": "kor",
+          "anchor": "",
+          "endAnchor": "p27",
+          "units": [
+            "jer17#title_number1",
+            "jer17#title1",
+            "jer17#p1",
+            "jer17#p2",
+            "jer17#p3",
+            "jer17#p4",
+            "jer17#p5",
+            "jer17#p6",
+            "jer17#p7",
+            "jer17#p8",
+            "jer17#p9",
+            "jer17#p10",
+            "jer17#p11",
+            "jer17#title2",
+            "jer17#p12",
+            "jer17#p13",
+            "jer17#p14",
+            "jer17#p15",
+            "jer17#p16",
+            "jer17#p17",
+            "jer17#p18",
+            "jer17#title3",
+            "jer17#p19",
+            "jer17#p20",
+            "jer17#p21",
+            "jer17#p22",
+            "jer17#p23",
+            "jer17#p24",
+            "jer17#p25",
+            "jer17#p26",
+            "jer17#p27",
+            "jer17#note1_p1",
+            "jer17#note2_p1"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "title2",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "title3",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "note1_p1",
+            "note2_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p13"
+            },
+            {
+              "note": "note2",
+              "owner": "p26"
+            }
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "title2",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "title3",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27"
+          ]
+        },
+        {
+          "id": "t018",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_uvJKF",
+          "endAnchor": "p_s9xMS",
+          "units": [
+            "helps#p_uvJKF",
+            "helps#p_pU4P3",
+            "helps#p_s9xMS",
+            "helps#p_cWS55",
+            "helps#p_s9nEU",
+            "helps#p_aKNYl"
+          ],
+          "sourceIds": [
+            "p_uvJKF",
+            "p_pU4P3",
+            "p_s9xMS",
+            "p_cWS55",
+            "p_s9nEU",
+            "p_aKNYl"
+          ],
+          "noteLinks": [
+            {
+              "note": "note12",
+              "owner": "p_s9xMS"
+            },
+            {
+              "note": "note13",
+              "owner": "p_s9xMS"
+            },
+            {
+              "note": "note14",
+              "owner": "p_s9xMS"
+            }
+          ],
+          "selectedIds": [
+            "p_uvJKF",
+            "p_pU4P3",
+            "p_s9xMS"
+          ]
+        },
+        {
+          "id": "t020",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_rnKKQ",
+          "endAnchor": "p_f6Zdz",
+          "units": [
+            "helps#p_rnKKQ",
+            "helps#p_urwyJ",
+            "helps#p_w0CUY",
+            "helps#p_zjkcA",
+            "helps#p_yXuLv",
+            "helps#p_aWaVv",
+            "helps#p_uFXLL",
+            "helps#p_f6Zdz",
+            "helps#p_wfGXr",
+            "helps#p_cjBSi",
+            "helps#p_ij1yI",
+            "helps#p_q1IBo",
+            "helps#p_zfN0J",
+            "helps#p_p0YS5",
+            "helps#p_lJyvj",
+            "helps#p_c5XKU",
+            "helps#p_p04J3"
+          ],
+          "sourceIds": [
+            "p_rnKKQ",
+            "p_urwyJ",
+            "p_w0CUY",
+            "p_zjkcA",
+            "p_yXuLv",
+            "p_aWaVv",
+            "p_uFXLL",
+            "p_f6Zdz",
+            "p_wfGXr",
+            "p_cjBSi",
+            "p_ij1yI",
+            "p_q1IBo",
+            "p_zfN0J",
+            "p_p0YS5",
+            "p_lJyvj",
+            "p_c5XKU",
+            "p_p04J3"
+          ],
+          "noteLinks": [
+            {
+              "note": "note16",
+              "owner": "p_w0CUY"
+            },
+            {
+              "note": "note17",
+              "owner": "p_w0CUY"
+            },
+            {
+              "note": "note18",
+              "owner": "p_w0CUY"
+            },
+            {
+              "note": "note19",
+              "owner": "p_w0CUY"
+            },
+            {
+              "note": "note20",
+              "owner": "p_zjkcA"
+            },
+            {
+              "note": "note21",
+              "owner": "p_uFXLL"
+            },
+            {
+              "note": "note22",
+              "owner": "p_uFXLL"
+            },
+            {
+              "note": "note23",
+              "owner": "p_uFXLL"
+            },
+            {
+              "note": "note24",
+              "owner": "p_f6Zdz"
+            }
+          ],
+          "selectedIds": [
+            "p_rnKKQ",
+            "p_urwyJ",
+            "p_w0CUY",
+            "p_zjkcA",
+            "p_yXuLv",
+            "p_aWaVv",
+            "p_uFXLL",
+            "p_f6Zdz"
+          ]
+        },
+        {
+          "id": "t022",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_exQ0g",
+          "endAnchor": "p_f866U",
+          "units": [
+            "helps#p_exQ0g",
+            "helps#p_zRQwM",
+            "helps#p_f866U",
+            "helps#p_tUsVM",
+            "helps#p_jJNuA",
+            "helps#p_e3Hzd"
+          ],
+          "sourceIds": [
+            "p_exQ0g",
+            "p_zRQwM",
+            "p_f866U",
+            "p_tUsVM",
+            "p_jJNuA",
+            "p_e3Hzd"
+          ],
+          "noteLinks": [
+            {
+              "note": "note28",
+              "owner": "p_f866U"
+            },
+            {
+              "note": "note29",
+              "owner": "p_f866U"
+            },
+            {
+              "note": "note30",
+              "owner": "p_f866U"
+            }
+          ],
+          "selectedIds": [
+            "p_exQ0g",
+            "p_zRQwM",
+            "p_f866U"
+          ]
+        },
+        {
+          "id": "t027",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_sBQdG",
+          "endAnchor": "p_dDylI",
+          "units": [
+            "helps#p_sBQdG",
+            "helps#p_dDylI"
+          ],
+          "sourceIds": [
+            "p_sBQdG",
+            "p_dDylI"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p_sBQdG",
+            "p_dDylI"
+          ]
+        },
+        {
+          "id": "t029",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_eohyB",
+          "endAnchor": "fig_lg8lg",
+          "units": [
+            "helps#p_eohyB",
+            "helps#p_j8nQi",
+            "helps#p_zr8bb",
+            "helps#fig_lg8lg"
+          ],
+          "sourceIds": [
+            "p_eohyB",
+            "p_j8nQi",
+            "p_zr8bb",
+            "fig_lg8lg"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p_eohyB",
+            "p_j8nQi",
+            "p_zr8bb"
+          ]
+        },
+        {
+          "id": "video-5:adult",
+          "sourceId": "video",
+          "kind": "video",
+          "label": "안식일 영상",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "fig_lg8lg",
+          "endAnchor": "fig_lg8lg",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [],
+          "noteLinks": []
+        },
+        {
+          "id": "t076",
+          "sourceId": "covenant",
+          "kind": "talk",
+          "label": "영원한 성약 · 선교와 성약",
+          "path": "/study/liahona/2022/10/04-the-everlasting-covenant",
+          "sourceLang": "kor",
+          "anchor": "title4",
+          "endAnchor": "p45",
+          "units": [
+            "covenant#title4",
+            "covenant#p38",
+            "covenant#p39",
+            "covenant#p40",
+            "covenant#p41",
+            "covenant#p42",
+            "covenant#p43",
+            "covenant#p44",
+            "covenant#p45",
+            "covenant#note9_p1",
+            "covenant#note10_p1"
+          ],
+          "sourceIds": [
+            "title4",
+            "p38",
+            "p39",
+            "p40",
+            "p41",
+            "p42",
+            "p43",
+            "p44",
+            "p45",
+            "note9_p1",
+            "note10_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note9",
+              "owner": "p42"
+            },
+            {
+              "note": "note10",
+              "owner": "p45"
+            }
+          ],
+          "selectedIds": [
+            "title4",
+            "p38",
+            "p39",
+            "p40",
+            "p41",
+            "p42",
+            "p43",
+            "p44",
+            "p45"
+          ]
+        },
+        {
+          "id": "t080",
+          "sourceId": "packer",
+          "kind": "talk",
+          "label": "Why Stay Morally Clean · 도덕적으로 깨끗하게 생활하는 이유 · 영어 전체",
+          "path": "/study/general-conference/1972/04/why-stay-morally-clean",
+          "sourceLang": "eng",
+          "anchor": "title1",
+          "endAnchor": "p62",
+          "units": [
+            "packer#main",
+            "packer#title1",
+            "packer#p1",
+            "packer#p2",
+            "packer#p3",
+            "packer#p4",
+            "packer#p5",
+            "packer#p6",
+            "packer#p7",
+            "packer#p8",
+            "packer#p9",
+            "packer#p10",
+            "packer#p11",
+            "packer#p12",
+            "packer#p13",
+            "packer#p14",
+            "packer#p15",
+            "packer#p16",
+            "packer#p17",
+            "packer#p18",
+            "packer#p19",
+            "packer#p20",
+            "packer#p21",
+            "packer#p22",
+            "packer#p23",
+            "packer#p24",
+            "packer#p25",
+            "packer#p26",
+            "packer#p27",
+            "packer#p28",
+            "packer#p29",
+            "packer#p30",
+            "packer#p31",
+            "packer#p32",
+            "packer#p33",
+            "packer#p34",
+            "packer#p35",
+            "packer#p36",
+            "packer#p37",
+            "packer#p38",
+            "packer#p39",
+            "packer#p40",
+            "packer#p41",
+            "packer#p42",
+            "packer#p43",
+            "packer#p44",
+            "packer#p45",
+            "packer#p46",
+            "packer#p47",
+            "packer#p48",
+            "packer#p49",
+            "packer#p50",
+            "packer#p51",
+            "packer#p52",
+            "packer#p53",
+            "packer#p54",
+            "packer#p55",
+            "packer#p56",
+            "packer#p57",
+            "packer#p58",
+            "packer#p59",
+            "packer#p60",
+            "packer#p61",
+            "packer#p62"
+          ],
+          "sourceIds": [
+            "main",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34",
+            "p35",
+            "p36",
+            "p37",
+            "p38",
+            "p39",
+            "p40",
+            "p41",
+            "p42",
+            "p43",
+            "p44",
+            "p45",
+            "p46",
+            "p47",
+            "p48",
+            "p49",
+            "p50",
+            "p51",
+            "p52",
+            "p53",
+            "p54",
+            "p55",
+            "p56",
+            "p57",
+            "p58",
+            "p59",
+            "p60",
+            "p61",
+            "p62"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34",
+            "p35",
+            "p36",
+            "p37",
+            "p38",
+            "p39",
+            "p40",
+            "p41",
+            "p42",
+            "p43",
+            "p44",
+            "p45",
+            "p46",
+            "p47",
+            "p48",
+            "p49",
+            "p50",
+            "p51",
+            "p52",
+            "p53",
+            "p54",
+            "p55",
+            "p56",
+            "p57",
+            "p58",
+            "p59",
+            "p60",
+            "p61",
+            "p62"
+          ]
+        },
+        {
+          "id": "activity-5:adult",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "배운 내용 돌아보기 · 학습 메모",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "p16",
+          "endAnchor": "p16",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "p16"
+          ],
+          "noteLinks": []
+        }
+      ],
+      "familyTasks": [
+        {
+          "id": "t012",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 선지자의 역할을 성구로 찾기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "p23",
+          "endAnchor": "p23",
+          "units": [
+            "manual#p23"
+          ],
+          "sourceIds": [
+            "p23"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p23"
+          ]
+        },
+        {
+          "id": "t034",
+          "sourceId": "children",
+          "kind": "supplement",
+          "label": "어린이 추가 자료 목록",
+          "path": "/study/manual/games-stories-activities/2026/october/43-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_skiEA",
+          "endAnchor": "p_j4cO4",
+          "units": [
+            "children#p_skiEA",
+            "children#p_j4cO4"
+          ],
+          "sourceIds": [
+            "p_skiEA",
+            "p_j4cO4"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p_skiEA",
+            "p_j4cO4"
+          ]
+        },
+        {
+          "id": "activity-5:family",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "예레미야 1장의 성구를 골라 선지자 역할 나누기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "p23",
+          "endAnchor": "p23",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "p23"
+          ],
+          "noteLinks": []
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "shortTitle": "집합에 참여하기",
+      "question": "이스라엘의 집합은 왜 중요하며, 나는 누구의 한 걸음을 도울 수 있을까요?",
+      "familyQuestion": "누가 하나님 아버지께 돌아오도록 도울 수 있을까요?",
+      "familyActivity": "낚시·사냥 놀이와 집합 활동지 · 영상 3:32 별도 포함",
+      "adultTasks": [
+        {
+          "id": "t007",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 집합에 참여하기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "scripture_title4",
+          "endAnchor": "figure4_p1",
+          "units": [
+            "manual#scripture_title4",
+            "manual#title6",
+            "manual#p17",
+            "manual#p18",
+            "manual#p19",
+            "manual#figure4_p1"
+          ],
+          "sourceIds": [
+            "scripture_title4",
+            "title6",
+            "p17",
+            "p18",
+            "p19",
+            "figure4_p1"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "scripture_title4",
+            "title6",
+            "p17",
+            "p18",
+            "p19",
+            "figure4_p1"
+          ]
+        },
+        {
+          "id": "t039",
+          "sourceId": "jer3",
+          "kind": "scripture",
+          "label": "예레미야 3장 전체 · 25절",
+          "path": "/study/scriptures/ot/jer/3",
+          "sourceLang": "kor",
+          "anchor": "",
+          "endAnchor": "p25",
+          "units": [
+            "jer3#title_number1",
+            "jer3#title1",
+            "jer3#p1",
+            "jer3#p2",
+            "jer3#p3",
+            "jer3#p4",
+            "jer3#p5",
+            "jer3#title2",
+            "jer3#p6",
+            "jer3#p7",
+            "jer3#p8",
+            "jer3#p9",
+            "jer3#p10",
+            "jer3#p11",
+            "jer3#p12",
+            "jer3#p13",
+            "jer3#p14",
+            "jer3#p15",
+            "jer3#p16",
+            "jer3#p17",
+            "jer3#p18",
+            "jer3#title3",
+            "jer3#p19",
+            "jer3#p20",
+            "jer3#p21",
+            "jer3#p22",
+            "jer3#p23",
+            "jer3#p24",
+            "jer3#p25",
+            "jer3#note1_p1",
+            "jer3#note2_p1",
+            "jer3#note3_p1"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "title2",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "title3",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "note1_p1",
+            "note2_p1",
+            "note3_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p1"
+            },
+            {
+              "note": "note2",
+              "owner": "p4"
+            },
+            {
+              "note": "note3",
+              "owner": "p19"
+            }
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "title2",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "title3",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25"
+          ]
+        },
+        {
+          "id": "t042",
+          "sourceId": "jer16",
+          "kind": "scripture",
+          "label": "예레미야 16장 전체 · 21절",
+          "path": "/study/scriptures/ot/jer/16",
+          "sourceLang": "kor",
+          "anchor": "",
+          "endAnchor": "p21",
+          "units": [
+            "jer16#title_number1",
+            "jer16#title1",
+            "jer16#p1",
+            "jer16#p2",
+            "jer16#p3",
+            "jer16#p4",
+            "jer16#p5",
+            "jer16#p6",
+            "jer16#p7",
+            "jer16#p8",
+            "jer16#p9",
+            "jer16#p10",
+            "jer16#p11",
+            "jer16#p12",
+            "jer16#p13",
+            "jer16#title2",
+            "jer16#p14",
+            "jer16#p15",
+            "jer16#title3",
+            "jer16#p16",
+            "jer16#p17",
+            "jer16#p18",
+            "jer16#title4",
+            "jer16#p19",
+            "jer16#p20",
+            "jer16#p21"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "title2",
+            "p14",
+            "p15",
+            "title3",
+            "p16",
+            "p17",
+            "p18",
+            "title4",
+            "p19",
+            "p20",
+            "p21"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "title2",
+            "p14",
+            "p15",
+            "title3",
+            "p16",
+            "p17",
+            "p18",
+            "title4",
+            "p19",
+            "p20",
+            "p21"
+          ]
+        },
+        {
+          "id": "t019",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_rx1Ir",
+          "endAnchor": "p_f5ddl",
+          "units": [
+            "helps#p_rx1Ir",
+            "helps#p_keYy3",
+            "helps#p_f5ddl",
+            "helps#p_zKuTf"
+          ],
+          "sourceIds": [
+            "p_rx1Ir",
+            "p_keYy3",
+            "p_f5ddl",
+            "p_zKuTf"
+          ],
+          "noteLinks": [
+            {
+              "note": "note15",
+              "owner": "p_f5ddl"
+            }
+          ],
+          "selectedIds": [
+            "p_rx1Ir",
+            "p_keYy3",
+            "p_f5ddl"
+          ]
+        },
+        {
+          "id": "t021",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_uaIh2",
+          "endAnchor": "p_lA7Bx",
+          "units": [
+            "helps#p_uaIh2",
+            "helps#p_uIgS1",
+            "helps#p_pXguG",
+            "helps#p_lA7Bx",
+            "helps#p_o4ITz",
+            "helps#p_zbWUK",
+            "helps#p_hfC1T"
+          ],
+          "sourceIds": [
+            "p_uaIh2",
+            "p_uIgS1",
+            "p_pXguG",
+            "p_lA7Bx",
+            "p_o4ITz",
+            "p_zbWUK",
+            "p_hfC1T"
+          ],
+          "noteLinks": [
+            {
+              "note": "note25",
+              "owner": "p_pXguG"
+            },
+            {
+              "note": "note26",
+              "owner": "p_lA7Bx"
+            },
+            {
+              "note": "note27",
+              "owner": "p_lA7Bx"
+            }
+          ],
+          "selectedIds": [
+            "p_uaIh2",
+            "p_uIgS1",
+            "p_pXguG",
+            "p_lA7Bx"
+          ]
+        },
+        {
+          "id": "t028",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_kFjMx",
+          "endAnchor": "p_dJuOd",
+          "units": [
+            "helps#p_kFjMx",
+            "helps#p_dJuOd"
+          ],
+          "sourceIds": [
+            "p_kFjMx",
+            "p_dJuOd"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p_kFjMx",
+            "p_dJuOd"
+          ]
+        },
+        {
+          "id": "t030",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_sBo4o",
+          "endAnchor": "p_eGUag",
+          "units": [
+            "helps#p_sBo4o",
+            "helps#p_eGUag"
+          ],
+          "sourceIds": [
+            "p_sBo4o",
+            "p_eGUag"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p_sBo4o",
+            "p_eGUag"
+          ]
+        },
+        {
+          "id": "t059",
+          "sourceId": "hope",
+          "kind": "talk",
+          "label": "이스라엘 시온 군대 · 러셀 회장 · 집합의 의미와 초대",
+          "path": "/study/broadcasts/worldwide-devotional-for-young-adults/2018/06/hope-of-israel",
+          "sourceLang": "kor",
+          "anchor": "p57",
+          "endAnchor": "p89",
+          "units": [
+            "hope#p57",
+            "hope#p58",
+            "hope#p59",
+            "hope#p60",
+            "hope#p61",
+            "hope#p62",
+            "hope#p63",
+            "hope#p64",
+            "hope#p65",
+            "hope#p66",
+            "hope#p67",
+            "hope#p68",
+            "hope#p69",
+            "hope#p70",
+            "hope#p71",
+            "hope#p72",
+            "hope#p73",
+            "hope#p74",
+            "hope#p75",
+            "hope#p76",
+            "hope#p77",
+            "hope#p78",
+            "hope#p79",
+            "hope#p80",
+            "hope#p81",
+            "hope#p82",
+            "hope#p83",
+            "hope#p84",
+            "hope#p85",
+            "hope#p86",
+            "hope#p87",
+            "hope#p88",
+            "hope#p89",
+            "hope#note3_p1",
+            "hope#note4_p1",
+            "hope#note5_p1",
+            "hope#note6_p1",
+            "hope#note7_p1"
+          ],
+          "sourceIds": [
+            "p57",
+            "p58",
+            "p59",
+            "p60",
+            "p61",
+            "p62",
+            "p63",
+            "p64",
+            "p65",
+            "p66",
+            "p67",
+            "p68",
+            "p69",
+            "p70",
+            "p71",
+            "p72",
+            "p73",
+            "p74",
+            "p75",
+            "p76",
+            "p77",
+            "p78",
+            "p79",
+            "p80",
+            "p81",
+            "p82",
+            "p83",
+            "p84",
+            "p85",
+            "p86",
+            "p87",
+            "p88",
+            "p89",
+            "note3_p1",
+            "note4_p1",
+            "note5_p1",
+            "note6_p1",
+            "note7_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note3",
+              "owner": "p60"
+            },
+            {
+              "note": "note4",
+              "owner": "p61"
+            },
+            {
+              "note": "note5",
+              "owner": "p63"
+            },
+            {
+              "note": "note6",
+              "owner": "p89"
+            },
+            {
+              "note": "note7",
+              "owner": "p89"
+            }
+          ],
+          "selectedIds": [
+            "p57",
+            "p58",
+            "p59",
+            "p60",
+            "p61",
+            "p62",
+            "p63",
+            "p64",
+            "p65",
+            "p66",
+            "p67",
+            "p68",
+            "p69",
+            "p70",
+            "p71",
+            "p72",
+            "p73",
+            "p74",
+            "p75",
+            "p76",
+            "p77",
+            "p78",
+            "p79",
+            "p80",
+            "p81",
+            "p82",
+            "p83",
+            "p84",
+            "p85",
+            "p86",
+            "p87",
+            "p88",
+            "p89"
+          ]
+        },
+        {
+          "id": "t067",
+          "sourceId": "gathering",
+          "kind": "talk",
+          "label": "흩어진 이스라엘의 집합 · 때가 찬 경륜 / 장막 저편의 집합 / 참여와 성약의 약속",
+          "path": "/study/general-conference/2006/10/the-gathering-of-scattered-israel",
+          "sourceLang": "kor",
+          "anchor": "title7",
+          "endAnchor": "p28",
+          "units": [
+            "gathering#title7",
+            "gathering#p17",
+            "gathering#p18",
+            "gathering#p19",
+            "gathering#p20",
+            "gathering#p21",
+            "gathering#p22",
+            "gathering#p23",
+            "gathering#note25_p1",
+            "gathering#note26_p1",
+            "gathering#note27_p1",
+            "gathering#note28_p1",
+            "gathering#note29_p1",
+            "gathering#note30_p1",
+            "gathering#note31_p1",
+            "gathering#note32_p1",
+            "gathering#note33_p1",
+            "gathering#title8",
+            "gathering#p24",
+            "gathering#note34_p1",
+            "gathering#note35_p1",
+            "gathering#note36_p1",
+            "gathering#title9",
+            "gathering#p25",
+            "gathering#p26",
+            "gathering#p27",
+            "gathering#p28",
+            "gathering#note37_p1",
+            "gathering#note38_p1",
+            "gathering#note39_p1",
+            "gathering#note40_p1",
+            "gathering#note41_p1",
+            "gathering#note42_p1",
+            "gathering#note43_p1"
+          ],
+          "sourceIds": [
+            "title7",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "note25_p1",
+            "note26_p1",
+            "note27_p1",
+            "note28_p1",
+            "note29_p1",
+            "note30_p1",
+            "note31_p1",
+            "note32_p1",
+            "note33_p1",
+            "title8",
+            "p24",
+            "note34_p1",
+            "note35_p1",
+            "note36_p1",
+            "title9",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "note37_p1",
+            "note38_p1",
+            "note39_p1",
+            "note40_p1",
+            "note41_p1",
+            "note42_p1",
+            "note43_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note25",
+              "owner": "p18"
+            },
+            {
+              "note": "note26",
+              "owner": "p18"
+            },
+            {
+              "note": "note27",
+              "owner": "p19"
+            },
+            {
+              "note": "note28",
+              "owner": "p20"
+            },
+            {
+              "note": "note29",
+              "owner": "p21"
+            },
+            {
+              "note": "note30",
+              "owner": "p22"
+            },
+            {
+              "note": "note31",
+              "owner": "p23"
+            },
+            {
+              "note": "note32",
+              "owner": "p23"
+            },
+            {
+              "note": "note33",
+              "owner": "p23"
+            },
+            {
+              "note": "note34",
+              "owner": "p24"
+            },
+            {
+              "note": "note35",
+              "owner": "p24"
+            },
+            {
+              "note": "note36",
+              "owner": "p24"
+            },
+            {
+              "note": "note37",
+              "owner": "p25"
+            },
+            {
+              "note": "note38",
+              "owner": "p25"
+            },
+            {
+              "note": "note39",
+              "owner": "p26"
+            },
+            {
+              "note": "note40",
+              "owner": "p26"
+            },
+            {
+              "note": "note41",
+              "owner": "p26"
+            },
+            {
+              "note": "note42",
+              "owner": "p26"
+            },
+            {
+              "note": "note43",
+              "owner": "p26"
+            }
+          ],
+          "selectedIds": [
+            "title7",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "title8",
+            "p24",
+            "title9",
+            "p25",
+            "p26",
+            "p27",
+            "p28"
+          ]
+        },
+        {
+          "id": "activity-6:adult",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "배운 내용 돌아보기 · 학습 메모",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "scripture_title4",
+          "endAnchor": "figure4_p1",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "scripture_title4",
+            "title6",
+            "p17",
+            "p18",
+            "p19",
+            "figure4_p1"
+          ],
+          "noteLinks": []
+        }
+      ],
+      "familyTasks": [
+        {
+          "id": "t013",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 집합 놀이·영상·활동지",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "scripture_title7",
+          "endAnchor": "figure9",
+          "units": [
+            "manual#scripture_title7",
+            "manual#title10",
+            "manual#p24",
+            "manual#figure9"
+          ],
+          "sourceIds": [
+            "scripture_title7",
+            "title10",
+            "p24",
+            "figure9"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "scripture_title7",
+            "title10",
+            "p24"
+          ]
+        },
+        {
+          "id": "video-6:family",
+          "sourceId": "video",
+          "kind": "video",
+          "label": "어린이 영상",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "figure9",
+          "endAnchor": "figure9",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [],
+          "noteLinks": []
+        },
+        {
+          "id": "t035",
+          "sourceId": "children",
+          "kind": "supplement",
+          "label": "어린이 추가 자료 목록",
+          "path": "/study/manual/games-stories-activities/2026/october/43-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_vUcjN",
+          "endAnchor": "p_o5UFR",
+          "units": [
+            "children#p_vUcjN",
+            "children#p_yBPFe",
+            "children#p_wQb0d",
+            "children#p_xLppb",
+            "children#p_o5UFR"
+          ],
+          "sourceIds": [
+            "p_vUcjN",
+            "p_yBPFe",
+            "p_wQb0d",
+            "p_xLppb",
+            "p_o5UFR"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p_vUcjN",
+            "p_yBPFe",
+            "p_wQb0d",
+            "p_xLppb",
+            "p_o5UFR"
+          ]
+        },
+        {
+          "id": "activity-6:family",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "낚시·사냥 놀이와 집합 활동지 · 영상 3:32 별도 포함",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "scripture_title7",
+          "endAnchor": "figure9",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "scripture_title7",
+            "title10",
+            "p24"
+          ],
+          "noteLinks": []
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "shortTitle": "주님의 인도",
+      "question": "토기장이의 진흙처럼 주님의 인도를 받아들이기 위해 무엇을 내어드릴까요?",
+      "familyQuestion": "주님께서 나를 인도하시게 하려면 어떻게 할까요?",
+      "familyActivity": "진흙을 빚으며 주님의 인도에 대해 나누기",
+      "adultTasks": [
+        {
+          "id": "t014",
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 주님의 인도",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "scripture_title8",
+          "endAnchor": "figure6_figure1_p1",
+          "units": [
+            "manual#scripture_title8",
+            "manual#title11",
+            "manual#p25",
+            "manual#figure5_p1",
+            "manual#figure6_figure1_p1"
+          ],
+          "sourceIds": [
+            "scripture_title8",
+            "title11",
+            "p25",
+            "figure5_p1",
+            "figure6_figure1_p1"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "scripture_title8",
+            "title11",
+            "p25",
+            "figure5_p1",
+            "figure6_figure1_p1"
+          ]
+        },
+        {
+          "id": "t044",
+          "sourceId": "jer18",
+          "kind": "scripture",
+          "label": "예레미야 18장 전체 · 23절",
+          "path": "/study/scriptures/ot/jer/18",
+          "sourceLang": "kor",
+          "anchor": "",
+          "endAnchor": "p23",
+          "units": [
+            "jer18#title_number1",
+            "jer18#title1",
+            "jer18#p1",
+            "jer18#p2",
+            "jer18#p3",
+            "jer18#p4",
+            "jer18#p5",
+            "jer18#p6",
+            "jer18#p7",
+            "jer18#p8",
+            "jer18#p9",
+            "jer18#p10",
+            "jer18#p11",
+            "jer18#p12",
+            "jer18#title2",
+            "jer18#p13",
+            "jer18#p14",
+            "jer18#p15",
+            "jer18#p16",
+            "jer18#p17",
+            "jer18#title3",
+            "jer18#p18",
+            "jer18#p19",
+            "jer18#p20",
+            "jer18#p21",
+            "jer18#p22",
+            "jer18#p23"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "title2",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "title3",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "title2",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "title3",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23"
+          ]
+        },
+        {
+          "id": "t050",
+          "sourceId": "isa64",
+          "kind": "scripture",
+          "label": "이사야 64:8",
+          "path": "/study/scriptures/ot/isa/64",
+          "sourceLang": "kor",
+          "anchor": "p8",
+          "endAnchor": "p8",
+          "units": [
+            "isa64#p8"
+          ],
+          "sourceIds": [
+            "p8"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p8"
+          ]
+        },
+        {
+          "id": "t023",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_yLxhw",
+          "endAnchor": "p_rf3bq",
+          "units": [
+            "helps#p_yLxhw",
+            "helps#p_msp0t",
+            "helps#p_rf3bq",
+            "helps#p_tPHhg",
+            "helps#p_eNX7x",
+            "helps#p_kmQuV"
+          ],
+          "sourceIds": [
+            "p_yLxhw",
+            "p_msp0t",
+            "p_rf3bq",
+            "p_tPHhg",
+            "p_eNX7x",
+            "p_kmQuV"
+          ],
+          "noteLinks": [
+            {
+              "note": "note31",
+              "owner": "p_rf3bq"
+            },
+            {
+              "note": "note32",
+              "owner": "p_rf3bq"
+            },
+            {
+              "note": "note33",
+              "owner": "p_rf3bq"
+            }
+          ],
+          "selectedIds": [
+            "p_yLxhw",
+            "p_msp0t",
+            "p_rf3bq"
+          ]
+        },
+        {
+          "id": "t025",
+          "sourceId": "helps",
+          "kind": "supplement",
+          "label": "경전 도움말 전체 해설",
+          "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_qCN8x",
+          "endAnchor": "p_kbSx7",
+          "units": [
+            "helps#p_qCN8x",
+            "helps#p_aSJKh",
+            "helps#p_kbSx7"
+          ],
+          "sourceIds": [
+            "p_qCN8x",
+            "p_aSJKh",
+            "p_kbSx7"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p_qCN8x",
+            "p_aSJKh",
+            "p_kbSx7"
+          ]
+        },
+        {
+          "id": "t060",
+          "sourceId": "hope",
+          "kind": "talk",
+          "label": "이스라엘 시온 군대 · 다섯 가지 권유·결론",
+          "path": "/study/broadcasts/worldwide-devotional-for-young-adults/2018/06/hope-of-israel",
+          "sourceLang": "kor",
+          "anchor": "p90",
+          "endAnchor": "p120",
+          "units": [
+            "hope#p90",
+            "hope#p91",
+            "hope#p92",
+            "hope#p93",
+            "hope#p94",
+            "hope#p95",
+            "hope#p96",
+            "hope#p97",
+            "hope#p98",
+            "hope#p99",
+            "hope#p100",
+            "hope#p101",
+            "hope#p102",
+            "hope#p103",
+            "hope#p104",
+            "hope#p105",
+            "hope#p106",
+            "hope#p107",
+            "hope#p108",
+            "hope#p109",
+            "hope#p110",
+            "hope#p111",
+            "hope#p112",
+            "hope#p113",
+            "hope#p114",
+            "hope#p115",
+            "hope#p116",
+            "hope#p117",
+            "hope#p118",
+            "hope#p119",
+            "hope#p120",
+            "hope#note8_p1"
+          ],
+          "sourceIds": [
+            "p90",
+            "p91",
+            "p92",
+            "p93",
+            "p94",
+            "p95",
+            "p96",
+            "p97",
+            "p98",
+            "p99",
+            "p100",
+            "p101",
+            "p102",
+            "p103",
+            "p104",
+            "p105",
+            "p106",
+            "p107",
+            "p108",
+            "p109",
+            "p110",
+            "p111",
+            "p112",
+            "p113",
+            "p114",
+            "p115",
+            "p116",
+            "p117",
+            "p118",
+            "p119",
+            "p120",
+            "note8_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note8",
+              "owner": "p120"
+            }
+          ],
+          "selectedIds": [
+            "p90",
+            "p91",
+            "p92",
+            "p93",
+            "p94",
+            "p95",
+            "p96",
+            "p97",
+            "p98",
+            "p99",
+            "p100",
+            "p101",
+            "p102",
+            "p103",
+            "p104",
+            "p105",
+            "p106",
+            "p107",
+            "p108",
+            "p109",
+            "p110",
+            "p111",
+            "p112",
+            "p113",
+            "p114",
+            "p115",
+            "p116",
+            "p117",
+            "p118",
+            "p119",
+            "p120"
+          ]
+        },
+        {
+          "id": "t070",
+          "sourceId": "maynes",
+          "kind": "talk",
+          "label": "그리스도를 중심에 두는 삶의 기쁨 · 그리스도를 중심에 두는 삶 전체",
+          "path": "/study/general-conference/2015/10/the-joy-of-living-a-christ-centered-life",
+          "sourceLang": "kor",
+          "anchor": "title1",
+          "endAnchor": "p29",
+          "units": [
+            "maynes#main",
+            "maynes#title1",
+            "maynes#p1",
+            "maynes#p2",
+            "maynes#kicker1",
+            "maynes#p3",
+            "maynes#p4",
+            "maynes#p5",
+            "maynes#p6",
+            "maynes#p7",
+            "maynes#p8",
+            "maynes#p9",
+            "maynes#p10",
+            "maynes#p11",
+            "maynes#p12",
+            "maynes#p13",
+            "maynes#p14",
+            "maynes#p15",
+            "maynes#p16",
+            "maynes#p17",
+            "maynes#p18",
+            "maynes#p19",
+            "maynes#p20",
+            "maynes#p21",
+            "maynes#p22",
+            "maynes#p23",
+            "maynes#p24",
+            "maynes#p25",
+            "maynes#p26",
+            "maynes#p27",
+            "maynes#p28",
+            "maynes#p29",
+            "maynes#notetitle1",
+            "maynes#note1_p1",
+            "maynes#note2_p1",
+            "maynes#note3_p1",
+            "maynes#note4_p1",
+            "maynes#note5_p1"
+          ],
+          "sourceIds": [
+            "main",
+            "title1",
+            "p1",
+            "p2",
+            "kicker1",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "notetitle1",
+            "note1_p1",
+            "note2_p1",
+            "note3_p1",
+            "note4_p1",
+            "note5_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1",
+              "owner": "p11"
+            },
+            {
+              "note": "note2",
+              "owner": "p13"
+            },
+            {
+              "note": "note3",
+              "owner": "p17"
+            },
+            {
+              "note": "note4",
+              "owner": "p26"
+            },
+            {
+              "note": "note5",
+              "owner": "p27"
+            }
+          ],
+          "selectedIds": [
+            "title1",
+            "p1",
+            "p2",
+            "kicker1",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "notetitle1"
+          ]
+        },
+        {
+          "id": "t077",
+          "sourceId": "covenant",
+          "kind": "talk",
+          "label": "영원한 성약 · 약속과 특권 / 사랑의 길",
+          "path": "/study/liahona/2022/10/04-the-everlasting-covenant",
+          "sourceLang": "kor",
+          "anchor": "title5",
+          "endAnchor": "p60",
+          "units": [
+            "covenant#title5",
+            "covenant#p46",
+            "covenant#p47",
+            "covenant#figure6_p1",
+            "covenant#figure6_p2",
+            "covenant#p48",
+            "covenant#p49",
+            "covenant#p50",
+            "covenant#p51",
+            "covenant#p52",
+            "covenant#p53",
+            "covenant#p54",
+            "covenant#note11_p1",
+            "covenant#title6",
+            "covenant#p55",
+            "covenant#p56",
+            "covenant#p57",
+            "covenant#p58",
+            "covenant#p59",
+            "covenant#p60",
+            "covenant#note12_p1"
+          ],
+          "sourceIds": [
+            "title5",
+            "p46",
+            "p47",
+            "figure6_p1",
+            "figure6_p2",
+            "p48",
+            "p49",
+            "p50",
+            "p51",
+            "p52",
+            "p53",
+            "p54",
+            "note11_p1",
+            "title6",
+            "p55",
+            "p56",
+            "p57",
+            "p58",
+            "p59",
+            "p60",
+            "note12_p1"
+          ],
+          "noteLinks": [
+            {
+              "note": "note11",
+              "owner": "p50"
+            },
+            {
+              "note": "note12",
+              "owner": "p58"
+            }
+          ],
+          "selectedIds": [
+            "title5",
+            "p46",
+            "p47",
+            "figure6_p1",
+            "figure6_p2",
+            "p48",
+            "p49",
+            "p50",
+            "p51",
+            "p52",
+            "p53",
+            "p54",
+            "title6",
+            "p55",
+            "p56",
+            "p57",
+            "p58",
+            "p59",
+            "p60"
+          ]
+        },
+        {
+          "id": "activity-7:adult",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "배운 내용 돌아보기 · 학습 메모",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "scripture_title8",
+          "endAnchor": "figure6_figure1_p1",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "scripture_title8",
+            "title11",
+            "p25",
+            "figure5_p1",
+            "figure6_figure1_p1"
+          ],
+          "noteLinks": []
+        }
+      ],
+      "familyTasks": [
+        {
+          "id": "shared-7",
+          "sourceId": "manual",
+          "kind": "shared",
+          "label": "기본 학습과 공유하는 원문 · 토기장이와 진흙 활동",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "sec10",
+          "endAnchor": "p25",
+          "units": [],
+          "sourceIds": [],
+          "noteLinks": [],
+          "selectedIds": [
+            "scripture_title8",
+            "title11",
+            "p25"
+          ]
+        },
+        {
+          "id": "t036",
+          "sourceId": "children",
+          "kind": "supplement",
+          "label": "어린이 추가 자료 목록",
+          "path": "/study/manual/games-stories-activities/2026/october/43-jeremiah-1-3-7-16-18-20",
+          "sourceLang": "kor",
+          "anchor": "p_yPeNt",
+          "endAnchor": "p_fjmcz",
+          "units": [
+            "children#p_yPeNt",
+            "children#p_okghO",
+            "children#p_lQfbf",
+            "children#p_i3zI8",
+            "children#p_avEaq",
+            "children#p_fjmcz"
+          ],
+          "sourceIds": [
+            "p_yPeNt",
+            "p_okghO",
+            "p_lQfbf",
+            "p_i3zI8",
+            "p_avEaq",
+            "p_fjmcz"
+          ],
+          "noteLinks": [],
+          "selectedIds": [
+            "p_yPeNt",
+            "p_okghO",
+            "p_lQfbf",
+            "p_i3zI8",
+            "p_avEaq",
+            "p_fjmcz"
+          ]
+        },
+        {
+          "id": "activity-7:family",
+          "sourceId": "activity",
+          "kind": "activity",
+          "label": "진흙을 빚으며 주님의 인도에 대해 나누기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+          "sourceLang": "kor",
+          "anchor": "sec10",
+          "endAnchor": "p25",
+          "units": [],
+          "sourceIds": [],
+          "selectedIds": [
+            "scripture_title8",
+            "title11",
+            "p25"
+          ],
+          "noteLinks": []
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "corbitt",
+      "path": "/study/general-conference/2021/04/32corbitt",
+      "lang": "kor",
+      "title": "여러분은 이스라엘을 모을 수 있습니다!"
+    },
+    {
+      "id": "decisions",
+      "path": "/study/general-conference/2013/10/decisions-for-eternity",
+      "lang": "kor",
+      "title": "영원을 위한 결정"
+    },
+    {
+      "id": "hope",
+      "path": "/study/broadcasts/worldwide-devotional-for-young-adults/2018/06/hope-of-israel",
+      "lang": "kor",
+      "title": "이스라엘 시온 군대"
+    },
+    {
+      "id": "gathering",
+      "path": "/study/general-conference/2006/10/the-gathering-of-scattered-israel",
+      "lang": "kor",
+      "title": "흩어진 이스라엘의 집합"
+    },
+    {
+      "id": "maynes",
+      "path": "/study/general-conference/2015/10/the-joy-of-living-a-christ-centered-life",
+      "lang": "kor",
+      "title": "그리스도를 중심에 두는 삶의 기쁨"
+    },
+    {
+      "id": "bangerter",
+      "path": "/study/general-conference/2024/04/32bangerter",
+      "lang": "kor",
+      "title": "봉사하도록 예임됨"
+    },
+    {
+      "id": "jer1",
+      "path": "/study/scriptures/ot/jer/1",
+      "lang": "kor",
+      "title": "예레미야 1장"
+    },
+    {
+      "id": "jer2",
+      "path": "/study/scriptures/ot/jer/2",
+      "lang": "kor",
+      "title": "예레미야 2장"
+    },
+    {
+      "id": "jer3",
+      "path": "/study/scriptures/ot/jer/3",
+      "lang": "kor",
+      "title": "예레미야 3장"
+    },
+    {
+      "id": "jer7",
+      "path": "/study/scriptures/ot/jer/7",
+      "lang": "kor",
+      "title": "예레미야 7장"
+    },
+    {
+      "id": "jer16",
+      "path": "/study/scriptures/ot/jer/16",
+      "lang": "kor",
+      "title": "예레미야 16장"
+    },
+    {
+      "id": "jer17",
+      "path": "/study/scriptures/ot/jer/17",
+      "lang": "kor",
+      "title": "예레미야 17장"
+    },
+    {
+      "id": "jer18",
+      "path": "/study/scriptures/ot/jer/18",
+      "lang": "kor",
+      "title": "예레미야 18장"
+    },
+    {
+      "id": "jer20",
+      "path": "/study/scriptures/ot/jer/20",
+      "lang": "kor",
+      "title": "예레미야 20장"
+    },
+    {
+      "id": "aof",
+      "path": "/study/scriptures/pgp/a-of-f/1",
+      "lang": "kor",
+      "title": "신 앙 개 조 예수 그리스도 후기 성도 교회"
+    },
+    {
+      "id": "alma13",
+      "path": "/study/scriptures/bofm/alma/13",
+      "lang": "kor",
+      "title": "앨마서 13:1–4"
+    },
+    {
+      "id": "dc138",
+      "path": "/study/scriptures/dc-testament/dc/138",
+      "lang": "kor",
+      "title": "교리와 성약 138:53–56"
+    },
+    {
+      "id": "abr3",
+      "path": "/study/scriptures/pgp/abr/3",
+      "lang": "kor",
+      "title": "아브라함서 3:22–23"
+    },
+    {
+      "id": "isa64",
+      "path": "/study/scriptures/ot/isa/64",
+      "lang": "kor",
+      "title": "이사야 64:8"
+    },
+    {
+      "id": "manual",
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/43",
+      "lang": "kor",
+      "title": "예레미야 1~3장; 7장; 16~18장; 20장"
+    },
+    {
+      "id": "helps",
+      "path": "/study/manual/scripture-helps-old-testament/41-jeremiah-1-3-7-16-18-20",
+      "lang": "kor",
+      "title": "예레미야 1~3장; 7장; 16~18장; 20장"
+    },
+    {
+      "id": "children",
+      "path": "/study/manual/games-stories-activities/2026/october/43-jeremiah-1-3-7-16-18-20",
+      "lang": "kor",
+      "title": "예레미야 1~3장; 7장; 16~18장; 20장"
+    },
+    {
+      "id": "covenant",
+      "path": "/study/liahona/2022/10/04-the-everlasting-covenant",
+      "lang": "kor",
+      "title": "영원한 성약"
+    },
+    {
+      "id": "holland",
+      "path": "/study/general-conference/1998/04/a-teacher-come-from-god",
+      "lang": "eng",
+      "title": "“A Teacher Come from God”"
+    },
+    {
+      "id": "packer",
+      "path": "/study/general-conference/1972/04/why-stay-morally-clean",
+      "lang": "eng",
+      "title": "Why Stay Morally Clean"
+    }
+  ],
+  "audit": {
+    "sourceCount": 25,
+    "unitCount": 1117,
+    "verseCount": 217,
+    "messageCount": 9,
+    "missing": 0,
+    "duplicates": 0
+  }
+}

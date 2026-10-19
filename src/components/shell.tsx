@@ -29,6 +29,8 @@ import { canManageRecords } from "@/lib/access";
 export function Shell({ children }: { children: ReactNode }) {
   const { uiLang, setLang, t, tl, boot } = useApp();
   const path = usePathname();
+  const studyReader = /^\/week\/43\/day\/[1-7]$/.test(path);
+  const focusedEntry = studyReader || path.startsWith("/p/");
   const [dark, setDark] = useState(false);
   const [menu, setMenu] = useState(false);
   const [textSize, setTextSize] = useState("large");
@@ -63,7 +65,7 @@ export function Shell({ children }: { children: ReactNode }) {
       ? path === "/"
       : (groups[href] || [href]).some((p) => path.startsWith(p));
   return (
-    <>
+    <div className={studyReader ? "study-reader-shell" : undefined}>
       <a className="skip" href="#main">
         {t("본문으로 건너뛰기", "Skip to content")}
       </a>
@@ -207,7 +209,9 @@ export function Shell({ children }: { children: ReactNode }) {
         </label>
       </div>
       <main id="main">
-        {[
+        {studyReader ||
+        path === "/" ||
+        [
           "/account",
           "/admin",
           "/teacher",
@@ -231,8 +235,8 @@ export function Shell({ children }: { children: ReactNode }) {
           </GuestGate>
         )}
       </main>
-      <AnnouncementPopup />
-      <DailyInsightPopup />
+      {!focusedEntry && <AnnouncementPopup />}
+      {!focusedEntry && <DailyInsightPopup />}
       <footer>
         <span>
           {t("곡반정와드 복음교리반", "Gokbanjeong Ward Gospel Doctrine")}
@@ -341,6 +345,6 @@ export function Shell({ children }: { children: ReactNode }) {
           </p>
         )}
       </Modal>
-    </>
+    </div>
   );
 }

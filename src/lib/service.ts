@@ -53,6 +53,15 @@ export async function readData(
   }
   const availableTeachers =
     path === "bootstrap" ? await teachers(a.course_id) : [];
+  const materialCompletions =
+    path === "journey"
+      ? await privileged((db) =>
+          db.query<{ week: number; day: number }>(
+            "select week,day from ggc.study_day_completion where owner_id=$1",
+            [a.id],
+          ),
+        )
+      : [];
   return asActor(a, async (db) => {
     const week = weekSchema.parse(params.get("week") || 38);
     switch (path) {
@@ -118,9 +127,16 @@ export async function readData(
           reflections: await db.query(
             "select week,day,content,updated_at from ggc.reflections order by week desc,day desc",
           ),
-          progress: await db.query(
-            "select week,day from ggc.lesson_progress order by week,day",
-          ),
+          progress: [
+            ...new Map(
+              [
+                ...(await db.query<{ week: number; day: number }>(
+                  "select week,day from ggc.lesson_progress order by week,day",
+                )),
+                ...materialCompletions,
+              ].map((p) => [`${p.week}:${p.day}`, p]),
+            ).values(),
+          ].sort((a, b) => a.week - b.week || a.day - b.day),
           bookmarks: await db.query("select id,week from ggc.bookmarks"),
           questions: await db.query(
             "select week,content from ggc.personal_questions order by week desc",

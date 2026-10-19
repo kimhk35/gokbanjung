@@ -14,6 +14,7 @@ type Form = {
   source_url: string;
   reference_label: string;
   week: number | null;
+  study_day: number | null;
   poster_path: string | null;
 };
 const blank: Form = {
@@ -23,6 +24,7 @@ const blank: Form = {
   source_url: "",
   reference_label: "",
   week: null,
+  study_day: null,
   poster_path: null,
 };
 type EditorProps = {
@@ -30,6 +32,8 @@ type EditorProps = {
   onOpenChange: (v: boolean) => void;
   prompt: Prompt | null;
   onSaved: (p: Prompt) => void;
+  initialWeek?: number;
+  initialDay?: number;
 };
 // Mounted only while open, so each opening starts from the prompt's values.
 export function PromptEditor(props: EditorProps) {
@@ -48,8 +52,14 @@ export function PromptEditor(props: EditorProps) {
     </Modal>
   );
 }
-function PromptForm({ onOpenChange, prompt, onSaved }: EditorProps) {
-  const { tl, t, lang, weeks, error, notify } = useApp();
+function PromptForm({
+  onOpenChange,
+  prompt,
+  onSaved,
+  initialWeek,
+  initialDay,
+}: EditorProps) {
+  const { tl, t, weeks, error, notify } = useApp();
   const [form, setForm] = useState<Form>(() =>
     prompt
       ? {
@@ -59,9 +69,10 @@ function PromptForm({ onOpenChange, prompt, onSaved }: EditorProps) {
           source_url: prompt.source_url || "",
           reference_label: prompt.reference_label || "",
           week: prompt.week,
+          study_day: prompt.study_day ?? null,
           poster_path: prompt.poster_path,
         }
-      : blank,
+      : { ...blank, week: initialWeek ?? null, study_day: initialDay ?? null },
   );
   const [busy, setBusy] = useState(false);
   const set = <K extends keyof Form>(k: K, v: Form[K]) =>
@@ -71,6 +82,7 @@ function PromptForm({ onOpenChange, prompt, onSaved }: EditorProps) {
     setForm((f) => ({
       ...f,
       week: w ? w.number : null,
+      study_day: w ? f.study_day : null,
       source_url: w?.sourceUrl || f.source_url,
       reference_label: w ? tl(w.reference) : f.reference_label,
     }));
@@ -124,6 +136,34 @@ function PromptForm({ onOpenChange, prompt, onSaved }: EditorProps) {
             </option>
           ))}
         </select>
+      </label>
+      <label className="field">
+        {t("오늘의 질문으로 표시할 일차 (선택)", "Study day (optional)")}
+        <select
+          value={form.study_day ?? ""}
+          disabled={!form.week}
+          onChange={(e) =>
+            set("study_day", e.target.value ? Number(e.target.value) : null)
+          }
+        >
+          <option value="">
+            {t(
+              "주간 질문 · 일차 지정 안 함",
+              "Weekly question · no assigned day",
+            )}
+          </option>
+          {Array.from({ length: 7 }, (_, i) => (
+            <option key={i + 1} value={i + 1}>
+              {t("{day}일차", "Day {day}", { day: i + 1 })}
+            </option>
+          ))}
+        </select>
+        <small className="muted">
+          {t(
+            "해당 일차의 질문은 하나이며, 기존 질문을 수정해도 공유 링크는 유지됩니다.",
+            "One question per day. Editing preserves its share link.",
+          )}
+        </small>
       </label>
       <label className="field">
         {t("제목", "Title")}
