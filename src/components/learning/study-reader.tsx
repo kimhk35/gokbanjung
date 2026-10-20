@@ -32,6 +32,89 @@ type ReaderProps = {
   initialSource?: string;
   initialAnchor?: string;
 };
+
+function StudySourceFrame({
+  url,
+  title,
+  onRetry,
+}: {
+  url: string;
+  title: string;
+  onRetry: () => void;
+}) {
+  const { t } = useApp();
+  const [waiting, setWaiting] = useState(true);
+  const [slow, setSlow] = useState(false);
+  useEffect(() => {
+    const timer = window.setTimeout(() => setSlow(true), 12000);
+    return () => window.clearTimeout(timer);
+  }, []);
+  const openLabel = t("새 창에서 원문 읽기 ↗", "Read source in a new tab ↗");
+  return (
+    <>
+      <div className="study-source-tools">
+        <div>
+          <strong>{title}</strong>
+          <span>
+            {t(
+              "본문이 보이지 않으면 새 창에서 같은 범위를 읽어 주세요.",
+              "If the text is blank you can read the same range in a new tab.",
+            )}
+          </span>
+        </div>
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          {openLabel}
+        </a>
+        <button type="button" onClick={onRetry}>
+          {t("원문 다시 불러오기", "Reload source")}
+        </button>
+      </div>
+      <div className="study-source-frames">
+        <iframe
+          src={url}
+          title={title}
+          referrerPolicy="strict-origin-when-cross-origin"
+          // A cross-origin load event does not prove the source rendered.
+          // Keep the source link and retry action visible after this event too.
+          onLoad={() => setWaiting(false)}
+        />
+        {waiting && (
+          <div className="study-source-loading">
+            <div>
+              <p role="status">
+                {slow
+                  ? t(
+                      "원문 연결이 지연되고 있습니다.",
+                      "The source is taking longer to load.",
+                    )
+                  : t(
+                      "공식 원문을 불러오고 있습니다.",
+                      "Loading the official source.",
+                    )}
+              </p>
+              <strong>{title}</strong>
+              <p>
+                {t(
+                  "잠시 기다리거나 새 창에서 읽을 수 있습니다. 돌아와서 생각을 나눠 주세요.",
+                  "You can wait or read in a new tab then return to share a thought.",
+                )}
+              </p>
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                {openLabel}
+              </a>
+              {slow && (
+                <button type="button" onClick={() => setWaiting(false)}>
+                  {t("안내 닫기", "Dismiss notice")}
+                </button>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
+
 export function StudyReader(props: ReaderProps) {
   const { boot } = useApp();
   return (
@@ -445,14 +528,12 @@ function Reader({
               </button>
             </div>
           )}
-          <div className="study-source-frames">
-            <iframe
-              key={`${task.id}:${uiLang}:${jump}`}
-              src={sourceUrl}
-              title={task.label}
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
-          </div>
+          <StudySourceFrame
+            key={`${task.id}:${uiLang}:${sourceUrl}:${jump}`}
+            url={sourceUrl}
+            title={task.label}
+            onRetry={() => setJump((n) => n + 1)}
+          />
           {rangeCount > 0 && (
             <button
               type="button"
