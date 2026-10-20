@@ -158,6 +158,80 @@ body:has(.study-reader-shell) {
   flex: 1;
   position: relative;
 }
+.study-source-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+.study-source-tools > div {
+  flex: 1;
+  min-width: 180px;
+}
+.study-source-tools strong,
+.study-source-tools span {
+  display: block;
+  font-size: 12px;
+}
+.study-source-tools span {
+  margin-top: 3px;
+  color: var(--muted);
+}
+.study-source-tools a,
+.study-source-loading a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--navy);
+  color: var(--surface);
+  text-decoration: none;
+  font-size: 13px;
+}
+.study-source-tools button {
+  font-size: 12px;
+}
+.study-source-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  overflow: auto;
+  background: var(--surface);
+}
+.study-source-loading > div {
+  width: min(100%, 460px);
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--bg);
+}
+.study-source-loading p {
+  line-height: 1.7;
+  font-size: 14px;
+  margin: 0 0 14px;
+}
+.study-source-loading strong {
+  display: block;
+  margin-bottom: 10px;
+}
+.study-source-loading button {
+  margin: 8px 0 0 8px;
+  font-size: 12px;
+}
+.study-source-tools a:focus-visible,
+.study-source-loading a:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 3px;
+}
 .study-source-frames iframe {
   border: 0;
   width: 100%;
@@ -630,6 +704,21 @@ body:has(.study-reader-shell) {
   font-size: 13px;
 }
 @media (max-width: 900px) {
+  .study-source-tools {
+    padding: 6px 8px;
+    gap: 6px;
+  }
+  .study-source-tools > div {
+    flex-basis: 100%;
+  }
+  .study-source-tools a,
+  .study-source-tools button {
+    flex: 1;
+    font-size: 12px;
+  }
+  .study-source-loading > div {
+    padding: 18px;
+  }
   .study-reader-top {
     padding: 4px 8px;
     gap: 5px;
