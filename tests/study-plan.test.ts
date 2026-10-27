@@ -3,6 +3,11 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import {
   cfmPlan,
+  getStudyPlan,
+  hasStudyPlan,
+  isStudyReaderPath,
+  studyDayTitle,
+  studyFamilyTitle,
   studySourceLanguage,
   studySourceUrl,
   studyTasks,
@@ -117,4 +122,84 @@ test("study percentages count confirmed materials, independent of optional repli
     ).percent,
     0,
   );
+});
+
+test("registered weeks keep their own tasks, titles and progress denominators", () => {
+  const next = getStudyPlan(44)!;
+  assert.equal(getStudyPlan(43), cfmPlan);
+  assert.equal(next.week, 44);
+  assert.equal(next.dates, "2026-10-26/2026-11-01");
+  assert.equal(hasStudyPlan(44), true);
+  assert.equal(getStudyPlan(45), undefined);
+  assert.deepEqual(studyTasks(1, "adult", 45), []);
+  assert.equal(next.days.length, 7);
+  const previousIds = cfmPlan.days
+    .flatMap((d) => [...d.adultTasks, ...d.familyTasks])
+    .map((t) => t.id);
+  for (const day of next.days) {
+    assert.ok(day.adultTasks.length > 0 && day.familyTasks.length > 0);
+    assert.equal(studyTasks(day.day, "adult", 44), day.adultTasks);
+    assert.equal(materialPercent(day.day, "adult", previousIds, 44).count, 0);
+    assert.equal(
+      materialPercent(
+        day.day,
+        "adult",
+        day.adultTasks.map((t) => t.id),
+        44,
+      ).percent,
+      100,
+    );
+    assert.notEqual(
+      studyDayTitle(day, 44, true),
+      studyDayTitle(cfmPlan.days[day.day - 1], 43, true),
+    );
+    assert.notEqual(
+      studyFamilyTitle(day, 44),
+      studyFamilyTitle(cfmPlan.days[day.day - 1], 43),
+    );
+  }
+});
+
+test("public reader shell follows the plan registry and keeps other routes in the existing flow", () => {
+  for (const week of [43, 44])
+    for (let day = 1; day <= 7; day++)
+      assert.equal(isStudyReaderPath(`/week/${week}/day/${day}`), true);
+  for (const path of [
+    "/week/45/day/1",
+    "/week/44/day/0",
+    "/week/44/day/8",
+    "/week/44/day/11",
+    "/week/44",
+    "/week/44/text",
+  ])
+    assert.equal(isStudyReaderPath(path), false, path);
+  // usePathname omits the query. The page still applies its existing GuestGate
+  // when view=notes, while the shell preserves the week 43 focused layout.
+  assert.equal(
+    isStudyReaderPath(
+      new URL("https://example.test/week/43/day/1?view=notes").pathname,
+    ),
+    true,
+  );
+});
+
+test("week 44 source URLs retain verified anchors instead of week 43 context offsets", () => {
+  for (const day of getStudyPlan(44)!.days)
+    for (const task of [...day.adultTasks, ...day.familyTasks]) {
+      const start = new URL(studySourceUrl(task, "ko", false, 44));
+      const end = new URL(studySourceUrl(task, "ko", true, 44));
+      assert.equal(start.hash, task.anchor ? `#${task.anchor}` : "");
+      const last = task.selectedIds.at(-1) || task.endAnchor;
+      assert.equal(end.hash, last ? `#${last}` : "");
+      assert.equal(
+        start.searchParams.get("id"),
+        task.selectedIds.join(",") || null,
+      );
+      assert.equal(end.searchParams.get("id"), start.searchParams.get("id"));
+      if (task.sourceLanguageLocked)
+        for (const lang of ["ko", "en", "es", "fil"] as const)
+          assert.equal(studySourceLanguage(task, lang), task.sourceLang);
+      if (task.path.endsWith("old-testament-2026/44"))
+        assert.equal(new URL(studySourceUrl(task, "ko")).hash, start.hash);
+    }
 });

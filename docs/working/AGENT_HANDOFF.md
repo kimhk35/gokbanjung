@@ -994,3 +994,87 @@ credential-state error before any source files were uploaded. Starting a fresh
 script runtime did not recover browser access. Nothing has been committed or
 deployed. The reviewed 29-file overlay is supplied as Gokbanjung_Neon_Update.zip
 for one manual GitHub upload preserving its directory structure.
+
+## Week 44 allocation and local preview — 2026-10-25
+
+User requested adding the distribution-method review improvements and showing
+next week's allocation. Branch `codex/main-baseline-20261025` starts at remote
+main `52bf17b`. Existing untracked HTML mockups are preserved. No commit, push,
+production database changes, or public deployment was performed.
+
+Added finite source/link scope, workload comparison and independent source-review
+templates to `docs/study/cfm-distribution-method.md`. The actual week report is
+`docs/study/2026-week-44-plan.md`, with independent source metadata, source-link
+decisions and assignment CSV next to it. Official weekly heading/body explicitly
+includes Jeremiah36–39; the old Helps36–38 heading is documented. Local curriculum
+and seed display now include39 without updating existing production records.
+
+Week44:41 public official documents,1,363 scoped text/metadata units owned once,
+0 missing/duplicate/extra assignments; basic64 tasks/1,050 units, family27/313.
+Weekly9 chapters include297 logical verses, including merged Korean32:3–5 and
+33:10–11 paragraphs. Additional comparisons/verses bring the total to352.
+All source bodies remain official; app data holds positions/labels only. Raw HTML
+and temporary inspected text stay under ignored `test-results/week44/`.
+`scripts/study/audit-sources.py` collects position/count/hash metadata;
+`build-week-44.py` encodes this week's reviewed boundaries and rebuilds the data.
+
+Limits: Korean source positions are locked across UI languages. Ballard's
+inspected Korean path returned404 and the linked English text is included.
+Named English songs retain English. Source text inventory excludes image/PDF
+interiors and video transcripts. The76:22 teacher broadcast has5 metadata units
+and a full-player link, not a transcript audit. Total study time is not balanced
+or participant-timed; see the daily counts and stated burden in the week report.
+
+Added registered-week lookup and week-aware reader, shell, progress validation,
+questions and local draft keys while preserving43 IDs/data. Home shows the
+current week and available next week. Shell previously matched43 only; now it
+uses the same plan registry so44 is public/read-first too.
+
+Verification: full98 tests,97 pass/1 unchanged date-dependent AI quiz failure.
+On Sunday2026-10-25 daily quizScope has0 chapters, on Monday10-26 it has1; the
+same Sunday failure was already documented on10-18. New study/source/progress/
+community tests pass. Webpack production build passes, including TypeScript and
+33 static pages. Scoped ESLint passes; Shell retains its pre-existing setDark
+effect error, also reproduced against the baseline source. Build-generated
+tsconfig additions for the temporary output directory were removed afterward.
+
+Actual Chrome browser checks:44 direct guest entry; Korean language;7 daily
+first-source URLs; day1 p1–p3 selected and p4 unselected; End keeps selection and
+positions p3 at108px in the source frame. Family day7 preserves its own range.
+Responsive emulation1280x900 and390x844 has no horizontal overflow; mobile range
+composer is reachable by keyboard,16px input, and private draft survives closing
+and reopening. Test draft was cleared without posting. Physical touch/device
+testing, all41 materials' rendered start/end borders and all translations remain
+unverified. The dev-tools indicator overlapped the mobile bottom button during
+one coordinate click; keyboard activation worked. This is development UI only.
+
+Local server: session56555, `http://127.0.0.1:3000/week/44/day/1`.
+Uses isolated `.local-db/week44-preview-20261025` with production DB/Auth/AI vars
+cleared. Guest/session/bootstrap, home,43 and44 routes return200;52 weeks loaded
+and44 reference shows36–39. `localhost` can carry unrelated old Supabase cookies
+on this machine, so the verified address uses127.0.0.1. Browser deliverable stays
+open on44 day1. Proofs: `test-results/week44/reader-desktop.png` and
+`reader-mobile.png`. No private records or real member posts were read/created.
+
+## Week 44: remove repeated reading entries — 2026-10-26
+
+User requested full coverage with every assigned source position appearing once.
+Version2 removes only family shared shortcuts `w44-t019` (day3 repeats day2)
+and `w44-t020` (day5 repeats day6). Family activities remain on all7 days;
+day3 now uses its own covenant story and scripture-play materials. Retired IDs
+19/20 are reserved by the generator, preserving all other89 task objects and
+existing progress mappings. Basic64 + family25 retain all1,363 units/41 sources.
+
+Added a regression that checks the actual `studySourceUrl` selections, not just
+primary ownership: every selected position belongs to that task and appears once
+across all days/tracks. It failed against version1 and passes after the change.
+Independent cached-HTML DOM/descendant comparison confirms no repeated selected
+ranges, no missing/extra source units, and exact CSV/JSON/report correspondence.
+Official source quotations, internal reference links and surrounding iframe
+context remain intact. Transcript/image/PDF scope limits above are unchanged.
+
+Verification:17 targeted study/source/progress/community tests pass; TypeScript
+and scoped ESLint pass. Local44 page responded200 from the detached preview server restarted
+on10-26 (the old session56555 is no longer current). A fresh UI check was blocked
+by the browser URL security policy; no alternate browser workaround was used.
+Previous10-25 screenshots are historical, not proofs of this correction.

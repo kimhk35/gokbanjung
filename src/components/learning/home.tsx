@@ -17,7 +17,7 @@ import { RecommendedDiscussion } from "./recommended-discussion";
 import { useStudyDate } from "../use-study-date";
 import { Announcements } from "./announcements";
 import { HomeCommunity } from "./home-community";
-import { cfmPlan } from "@/lib/cfm-study-plan";
+import { hasStudyPlan } from "@/lib/cfm-study-plan";
 import { DailyInsightHome } from "./daily-insight";
 export function HomePage() {
   const { tl, locale, t, uiLang, weeks, ready, boot, reload, error } = useApp();
@@ -32,6 +32,7 @@ export function HomePage() {
     weeks.find((w) => w.start <= date && w.end >= date) ||
     (date < weeks[0].start ? weeks[0] : weeks.at(-1)!);
   const day = dayIndex(w, date);
+  const nextWeek = weeks.find((candidate) => candidate.number === w.number + 1);
   return (
     <div className="page home">
       {ready && !boot && (
@@ -49,12 +50,30 @@ export function HomePage() {
           </button>
         </p>
       )}
-      <Link className="button secondary" href={`/week/${cfmPlan.week}/day/1`}>
-        {t(
-          "10월 19~25일 · 원문으로 매일 학습하기",
-          "October 19–25 · Study the official sources each day",
+      <div className="button-row">
+        {hasStudyPlan(w.number) && (
+          <Link
+            className="button secondary"
+            href={`/week/${w.number}/day/${day}`}
+          >
+            {t(
+              "이번 주 · 원문으로 매일 학습하기",
+              "This week · Study the official sources each day",
+            )}
+          </Link>
         )}
-      </Link>
+        {nextWeek && hasStudyPlan(nextWeek.number) && (
+          <Link
+            className="button secondary"
+            href={`/week/${nextWeek.number}/day/1`}
+          >
+            {t("다음 주", "Next week")} ·{" "}
+            {nextWeek.start.slice(5).replace("-", ".")}–
+            {nextWeek.end.slice(5).replace("-", ".")} ·{" "}
+            {t("7일 분량 보기", "View the seven-day plan")}
+          </Link>
+        )}
+      </div>
       <div className="eyebrow">
         <span>{t("와서 나를 따르라", "COME, FOLLOW ME")}</span>
         <span>2026 · {t("구약전서", "OLD TESTAMENT")}</span>
