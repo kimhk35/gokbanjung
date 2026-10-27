@@ -1,4 +1,5 @@
 import approved from "@/data/cfm-2026-week-43.json";
+import week44 from "@/data/cfm-2026-week-44.json";
 import type { UiLang } from "./i18n";
 import { churchLangCode } from "./i18n";
 
@@ -10,6 +11,7 @@ export type StudyTask = {
   label: string;
   path: string;
   sourceLang: string;
+  sourceLanguageLocked?: boolean;
   anchor: string;
   endAnchor: string;
   units: string[];
@@ -20,16 +22,40 @@ export type StudyTask = {
 export type StudyDay = {
   day: number;
   shortTitle: string;
+  shortTitleEn?: string;
+  familyTitle?: string;
+  familyTitleEn?: string;
   question: string;
   familyQuestion: string;
   familyActivity: string;
   adultTasks: StudyTask[];
   familyTasks: StudyTask[];
 };
-export const cfmPlan = approved as typeof approved & { days: StudyDay[] };
-export const hasStudyPlan = (week: number) => week === cfmPlan.week;
-export const studyTasks = (day: number, track: StudyTrack): StudyTask[] =>
-  cfmPlan.days.find((d) => d.day === day)?.[
+export type StudyPlan = {
+  version: number;
+  week: number;
+  dates: string;
+  days: StudyDay[];
+};
+// Preserve the original export and task IDs for existing week 43 records.
+export const cfmPlan: StudyPlan = approved;
+const plans: Readonly<Record<number, StudyPlan>> = {
+  43: cfmPlan,
+  44: week44,
+};
+export const getStudyPlan = (week: number): StudyPlan | undefined =>
+  plans[week];
+export const hasStudyPlan = (week: number) => !!getStudyPlan(week);
+export function isStudyReaderPath(path: string) {
+  const route = path.match(/^\/week\/(\d+)\/day\/[1-7]$/);
+  return !!route && hasStudyPlan(Number(route[1]));
+}
+export const studyTasks = (
+  day: number,
+  track: StudyTrack,
+  week = cfmPlan.week,
+): StudyTask[] =>
+  getStudyPlan(week)?.days.find((d) => d.day === day)?.[
     track === "adult" ? "adultTasks" : "familyTasks"
   ] || [];
 export const dayTitles = [
@@ -51,9 +77,29 @@ export const familyTitles = [
   ["진흙 빚기", "Shaping clay"],
 ];
 
+export function studyDayTitle(day: StudyDay, week: number, english = false) {
+  return english
+    ? day.shortTitleEn ||
+        (week === 43 ? dayTitles[day.day - 1] : day.shortTitle)
+    : day.shortTitle;
+}
+export function studyFamilyTitle(day: StudyDay, week: number, english = false) {
+  return english
+    ? day.familyTitleEn ||
+        (week === 43
+          ? familyTitles[day.day - 1][1]
+          : `Family activity · Day ${day.day}`)
+    : day.familyTitle ||
+        (week === 43
+          ? familyTitles[day.day - 1][0]
+          : `가족 활동 · ${day.day}일차`);
+}
+
 // Uses the Church reader's own paragraph selection (blue lines). No source text
 // is copied or rewritten, and a start/end jump retains the entire selected range.
 export function studySourceLanguage(task: StudyTask, uiLang: UiLang) {
+  // A new allocation may have verified only one translation's paragraph IDs.
+  if (task.sourceLanguageLocked) return task.sourceLang;
   // Generated paragraph IDs differ by translation. Do not point an English
   // reader at Korean random IDs and pretend the blue range is still verified.
   if (task.sourceLang === "eng") return "eng";
@@ -64,10 +110,16 @@ export function studySourceLanguage(task: StudyTask, uiLang: UiLang) {
     return task.sourceLang;
   return churchLangCode(uiLang);
 }
-export function studySourceUrl(task: StudyTask, uiLang: UiLang, end = false) {
+export function studySourceUrl(
+  task: StudyTask,
+  uiLang: UiLang,
+  end = false,
+  week = Number(task.path.match(/old-testament-2026\/(\d+)$/)?.[1]) ||
+    cfmPlan.week,
+) {
   const lang = studySourceLanguage(task, uiLang);
   let anchor = end ? task.selectedIds.at(-1) || task.endAnchor : task.anchor;
-  if (anchor === "p_qvIof")
+  if (week === 43 && anchor === "p_qvIof")
     anchor =
       (
         {
@@ -77,7 +129,7 @@ export function studySourceUrl(task: StudyTask, uiLang: UiLang, end = false) {
           tgl: "p_t7eEo",
         } as Record<string, string>
       )[lang] || anchor;
-  const manual = task.path.endsWith("old-testament-2026/43");
+  const manual = /old-testament-2026\/\d+$/.test(task.path);
   const context: Record<string, string> = {
     sec2: "scripture_title1",
     sec3: "scripture_title2",
@@ -100,10 +152,16 @@ export function studySourceUrl(task: StudyTask, uiLang: UiLang, end = false) {
     scripture_title2: "scripture_title2",
     scripture_title4: "scripture_title4",
   };
-  let hash = manual ? context[anchor] || anchor : anchor;
-  if (!manual && /^p\d+$/.test(anchor) && Number(anchor.slice(1)) > 1)
+  let hash = week === 43 && manual ? context[anchor] || anchor : anchor;
+  if (
+    week === 43 &&
+    !manual &&
+    /^p\d+$/.test(anchor) &&
+    Number(anchor.slice(1)) > 1
+  )
     hash = "p" + Math.max(1, Number(anchor.slice(1)) - 2);
   if (
+    week === 43 &&
     task.path.includes("/2018/06/hope-of-israel") &&
     ["p57", "p90"].includes(anchor)
   )
@@ -120,8 +178,9 @@ export function materialPercent(
   day: number,
   track: StudyTrack,
   completed: readonly string[],
+  week = cfmPlan.week,
 ) {
-  const ids = studyTasks(day, track).map((t) => t.id);
+  const ids = studyTasks(day, track, week).map((t) => t.id);
   const count = ids.filter((id) => completed.includes(id)).length;
   return {
     count,

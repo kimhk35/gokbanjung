@@ -26,6 +26,7 @@ export default async function Page({
   )
     return (
       <StudyReader
+        week={Number(p.number)}
         day={Number(p.day)}
         initialTrack={query.track === "family" ? "family" : "adult"}
         initialSource={query.source}

@@ -30,7 +30,7 @@ export async function saveStudyProgress(a: Actor, input: unknown) {
     .parse(input);
   ensure(
     hasStudyPlan(v.week) &&
-      studyTasks(v.day, v.track).some((t) => t.id === v.task_id),
+      studyTasks(v.day, v.track, v.week).some((t) => t.id === v.task_id),
     400,
     "invalid_input",
   );
@@ -49,7 +49,7 @@ export async function saveStudyProgress(a: Actor, input: unknown) {
     // Separate from the old reflection/practice completion and reward triggers.
     // Never fabricate a reflection or overwrite a legacy completion to mark read.
     if (v.track === "adult") {
-      const required = studyTasks(v.day, "adult").map((t) => t.id);
+      const required = studyTasks(v.day, "adult", v.week).map((t) => t.id);
       const rows = await db.query<{ task_id: string }>(
         "select task_id from ggc.study_material_progress where owner_id=$1 and week=$2 and day=$3 and track='adult'",
         [a.id, v.week, v.day],

@@ -137,3 +137,62 @@ test("new basic completion updates calendar without requiring a reply; family an
     [2],
   );
 });
+
+test("consecutive weeks validate their own tasks and isolate material and day completion", async () => {
+  const a = await guest();
+  const previous = studyTasks(1, "adult", 43);
+  const next = studyTasks(1, "adult", 44);
+  const save = (week: number, task_id: string, complete = true) =>
+    saveStudyProgress(a, { week, day: 1, track: "adult", task_id, complete });
+  await assert.rejects(
+    save(44, previous[0].id),
+    (e) => e instanceof AppError && e.status === 400,
+  );
+  await assert.rejects(
+    save(43, next[0].id),
+    (e) => e instanceof AppError && e.status === 400,
+  );
+  for (const task of next) await save(44, task.id);
+  assert.equal(
+    (await getStudyProgress(a, new URLSearchParams({ week: "44" }))).items
+      .length,
+    next.length,
+  );
+  assert.equal(
+    (await getStudyProgress(a, new URLSearchParams({ week: "43" }))).items
+      .length,
+    0,
+  );
+  const completedWeeks = () =>
+    privileged(async (db) =>
+      (
+        await db.query<{ week: number }>(
+          "select week from ggc.study_day_completion where owner_id=$1 and day=1 order by week",
+          [a.id],
+        )
+      ).map((r) => r.week),
+    );
+  assert.deepEqual(
+    await completedWeeks(),
+    [44],
+    "week 44 completion uses week 44 required materials",
+  );
+  for (const task of previous) await save(43, task.id);
+  assert.deepEqual(await completedWeeks(), [43, 44]);
+  await save(44, next[0].id, false);
+  assert.deepEqual(await completedWeeks(), [43]);
+  assert.equal(
+    (await getStudyProgress(a, new URLSearchParams({ week: "43" }))).items
+      .length,
+    previous.length,
+  );
+  await assert.rejects(
+    saveStudyProgress(a, {
+      week: 44,
+      day: 1,
+      track: "family",
+      task_id: next[0].id,
+      complete: true,
+    }),
+  );
+});
