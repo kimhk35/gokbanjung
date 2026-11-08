@@ -9,15 +9,15 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import { useApp } from "../provider";
-import { dayIndex, reading } from "@/lib/curriculum";
-import { recommendedQuestion } from "@/lib/recommendations";
+import { dayIndex } from "@/lib/curriculum";
+import { dailyStudyContent } from "@/lib/daily-study";
 import { Recommendation } from "./recommendation";
 import { ContinueLearning } from "./continue-learning";
 import { RecommendedDiscussion } from "./recommended-discussion";
 import { useStudyDate } from "../use-study-date";
 import { Announcements } from "./announcements";
 import { HomeCommunity } from "./home-community";
-import { hasStudyPlan } from "@/lib/cfm-study-plan";
+import { getStudyDay, dailyStudyHref } from "@/lib/cfm-study-plan";
 import { DailyInsightHome } from "./daily-insight";
 export function HomePage() {
   const { tl, locale, t, uiLang, weeks, ready, boot, reload, error } = useApp();
@@ -32,6 +32,9 @@ export function HomePage() {
     weeks.find((w) => w.start <= date && w.end >= date) ||
     (date < weeks[0].start ? weeks[0] : weeks.at(-1)!);
   const day = dayIndex(w, date);
+  const allocated = getStudyDay(w.number, day);
+  const studyHref = dailyStudyHref(w.number, day);
+  const study = dailyStudyContent(w, day, uiLang);
   const nextWeek = weeks.find((candidate) => candidate.number === w.number + 1);
   return (
     <div className="page home">
@@ -51,21 +54,18 @@ export function HomePage() {
         </p>
       )}
       <div className="button-row">
-        {hasStudyPlan(w.number) && (
-          <Link
-            className="button secondary"
-            href={`/week/${w.number}/day/${day}`}
-          >
+        {allocated && (
+          <Link className="button secondary" href={studyHref}>
             {t(
               "이번 주 · 원문으로 매일 학습하기",
               "This week · Study the official sources each day",
             )}
           </Link>
         )}
-        {nextWeek && hasStudyPlan(nextWeek.number) && (
+        {nextWeek && getStudyDay(nextWeek.number, 1) && (
           <Link
             className="button secondary"
-            href={`/week/${nextWeek.number}/day/1`}
+            href={dailyStudyHref(nextWeek.number, 1)}
           >
             {t("다음 주", "Next week")} ·{" "}
             {nextWeek.start.slice(5).replace("-", ".")}–
@@ -103,10 +103,7 @@ export function HomePage() {
               "and live the gospel at home and in daily life.",
             )}
           </p>
-          <Link
-            className="button primary"
-            href={`/week/${w.number}/day/${day}`}
-          >
+          <Link className="button primary" href={studyHref}>
             {t("오늘의 학습 시작하기", "Begin today’s learning")}
             <ArrowRight size={19} />
           </Link>
@@ -143,7 +140,7 @@ export function HomePage() {
       <ContinueLearning />
       <Announcements />
       <RecommendedDiscussion week={w} />
-      <Recommendation week={w} day={day} />
+      {!allocated && <Recommendation week={w} day={day} />}
       <section
         className="rhythm"
         aria-label={t("학습의 흐름", "Learning rhythm")}
@@ -194,15 +191,15 @@ export function HomePage() {
             {
               icon: BookOpen,
               label: t("오늘의 말씀", "Today’s reading"),
-              body: reading(w, day, uiLang),
-              href: `/week/${w.number}/day/${day}`,
+              body: study.topic,
+              href: studyHref,
               n: "01",
             },
             {
               icon: Feather,
               label: t("오늘의 질문", "Today’s question"),
-              body: recommendedQuestion(w, day, uiLang).question,
-              href: `/week/${w.number}/day/${day}`,
+              body: study.question,
+              href: studyHref,
               n: "02",
             },
             {

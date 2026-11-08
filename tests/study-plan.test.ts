@@ -4,6 +4,9 @@ import { readFileSync } from "node:fs";
 import {
   cfmPlan,
   getStudyPlan,
+  getStudyDay,
+  findStudyDay,
+  dailyStudyHref,
   hasStudyPlan,
   isStudyReaderPath,
   studyDayTitle,
@@ -161,7 +164,7 @@ test("registered weeks keep their own tasks, titles and progress denominators", 
 });
 
 test("public reader shell follows the plan registry and keeps other routes in the existing flow", () => {
-  for (const week of [43, 44])
+  for (const week of [43, 44, 46])
     for (let day = 1; day <= 7; day++)
       assert.equal(isStudyReaderPath(`/week/${week}/day/${day}`), true);
   for (const path of [
@@ -181,6 +184,37 @@ test("public reader shell follows the plan registry and keeps other routes in th
     ),
     true,
   );
+});
+
+test("daily entry uses the allocation when ready and the existing lesson otherwise", () => {
+  for (const week of [43, 44, 46]) {
+    for (let day = 1; day <= 7; day++) {
+      assert.equal(getStudyDay(week, day)?.day, day);
+      assert.equal(
+        dailyStudyHref(week, day),
+        `/week/${week}/day/${day}?track=adult`,
+      );
+    }
+  }
+  for (const week of [45, 47]) {
+    assert.equal(getStudyDay(week, 7), undefined);
+    assert.equal(dailyStudyHref(week, 7), `/week/${week}/day/7?view=notes`);
+  }
+});
+
+test("partly allocated weeks resolve by day number and fall back for missing or empty days", () => {
+  const plan = getStudyPlan(46)!;
+  const day3 = { ...plan.days[2], familyTasks: [] };
+  const partial = {
+    ...plan,
+    days: [plan.days[0], day3, { ...plan.days[4], adultTasks: [] }],
+  };
+  assert.equal(findStudyDay(partial, 3), day3);
+  assert.equal(findStudyDay(partial, 2), undefined);
+  assert.equal(findStudyDay(partial, 5), undefined);
+  for (const invalid of [0, 8, 1.5, NaN])
+    assert.equal(findStudyDay(partial, invalid), undefined);
+  assert.equal(findStudyDay(undefined, 1), undefined);
 });
 
 test("week 44 source URLs retain verified anchors instead of week 43 context offsets", () => {

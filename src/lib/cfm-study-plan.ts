@@ -48,9 +48,21 @@ const plans: Readonly<Record<number, StudyPlan>> = {
 export const getStudyPlan = (week: number): StudyPlan | undefined =>
   plans[week];
 export const hasStudyPlan = (week: number) => !!getStudyPlan(week);
+// A registered week may still be partly allocated. The basic course is the
+// entry point; optional family materials do not determine day availability.
+export function findStudyDay(plan: StudyPlan | undefined, day: number) {
+  if (!Number.isInteger(day) || day < 1 || day > 7) return undefined;
+  const allocated = plan?.days.find((entry) => entry.day === day);
+  return allocated?.adultTasks.length ? allocated : undefined;
+}
+export const getStudyDay = (week: number, day: number) =>
+  findStudyDay(getStudyPlan(week), day);
+export function dailyStudyHref(week: number, day: number) {
+  return `/week/${week}/day/${day}?${getStudyDay(week, day) ? "track=adult" : "view=notes"}`;
+}
 export function isStudyReaderPath(path: string) {
-  const route = path.match(/^\/week\/(\d+)\/day\/[1-7]$/);
-  return !!route && hasStudyPlan(Number(route[1]));
+  const route = path.match(/^\/week\/(\d+)\/day\/([1-7])$/);
+  return !!route && !!getStudyDay(Number(route[1]), Number(route[2]));
 }
 export const studyTasks = (
   day: number,

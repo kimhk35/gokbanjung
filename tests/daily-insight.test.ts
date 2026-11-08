@@ -9,6 +9,11 @@ process.env.LOCAL_DATABASE_PATH = await mkdtemp(
   path.join(tmpdir(), "ggc-insight-"),
 );
 const { autoInsight } = await import("../src/lib/daily-insight");
+const { getStudyDay, studyDayTitle } =
+  await import("../src/lib/cfm-study-plan");
+const { currentWeek, dayIndex, reading } =
+  await import("../src/lib/curriculum");
+const { recommendedQuestion } = await import("../src/lib/recommendations");
 const D = await import("../src/lib/daily-insight-service");
 const { privileged } = await import("../src/lib/db");
 const { AppError } = await import("../src/lib/errors");
@@ -43,6 +48,44 @@ test("automatic card is also written in Spanish and Filipino", () => {
       assert.notEqual(card[lang][k], card.en[k], `${lang} ${k}`);
 });
 
+test("daily cards describe the allocated day's materials and question, including Sunday", () => {
+  for (const [date, expected] of [
+    ["2026-10-31", "예레미야 39"],
+    ["2026-11-14", "다니엘 6"],
+    ["2026-11-15", "다니엘 7"],
+  ]) {
+    const card = autoInsight(date)!;
+    const day = getStudyDay(card.week, card.day)!;
+    assert.equal(card.ko.title, day.shortTitle);
+    assert.equal(card.ko.question, day.question);
+    assert.ok(card.ko.topic.includes(expected), card.ko.topic);
+    assert.ok(card.ko.topic.includes(`자료 ${day.adultTasks.length}개`));
+    for (const task of day.adultTasks.filter(
+      (task) => task.kind === "scripture",
+    ))
+      assert.ok(card.ko.topic.includes(task.label));
+    // Missing translations follow the reader's title fallback, never a
+    // different question from the old chapter-splitting scheme.
+    assert.equal(card.en.question, studyDayTitle(day, card.week, true));
+  }
+});
+
+test("unallocated dates keep their own legacy reading and question", () => {
+  for (const date of ["2026-11-08", "2026-11-16"]) {
+    const week = currentWeek(date)!;
+    const day = dayIndex(week, date);
+    const card = autoInsight(date)!;
+    assert.equal(card.week, week.number);
+    for (const lang of ["ko", "en", "es", "fil"] as const) {
+      assert.equal(card[lang].topic, reading(week, day, lang));
+      assert.equal(
+        card[lang].question,
+        recommendedQuestion(week, day, lang).question,
+      );
+    }
+  }
+});
+
 async function make(role: Actor["role"]): Promise<Actor> {
   const kind = role === "GUEST" ? "guest" : "user";
   return privileged(
@@ -58,35 +101,40 @@ async function make(role: Actor["role"]): Promise<Actor> {
 const status = (code: number) => (e: unknown) =>
   e instanceof AppError && e.status === code;
 
-test("teachers override a day; everyone sees the override; reset returns to automatic", async () => {
-  const teacher = await make("TEACHER"),
-    guest = await make("GUEST");
-  const q = new URLSearchParams({ date: "2026-09-30" });
-  const before = await D.getDailyInsight(guest, q);
-  assert.equal(before.custom, null);
-  assert.equal(before.canEdit, false);
-  const custom = {
-    date: "2026-09-30",
-    title: "영적 신호등",
-    question: "내가 다시 주님께 돌아서는 신호는?",
-    topic: "이사야 28~30장",
-    message: "매일 주님과 가까이",
-    image_path: null,
-  };
-  await assert.rejects(D.saveDailyInsight(guest, custom), status(403));
-  await assert.rejects(
-    D.saveDailyInsight(teacher, { ...custom, image_path: "javascript:x" }),
-  );
-  await D.saveDailyInsight(teacher, custom);
-  const after = await D.getDailyInsight(guest, q);
-  assert.equal(after.custom?.question, custom.question);
-  assert.equal(after.auto?.week, 40);
-  await D.saveDailyInsight(teacher, { ...custom, message: "수정됨" });
-  assert.equal((await D.getDailyInsight(null, q)).custom?.message, "수정됨");
-  await D.resetDailyInsight(teacher, { date: "2026-09-30" });
-  assert.equal((await D.getDailyInsight(null, q)).custom, null);
-  await assert.rejects(
-    D.getDailyInsight(null, new URLSearchParams({ date: "2026-13-40" })),
-    status(400),
-  );
-});
+for (const date of ["2026-09-30", "2026-11-14"])
+  test(`teachers override ${date}; everyone sees the override; reset returns to automatic`, async () => {
+    const teacher = await make("TEACHER"),
+      guest = await make("GUEST");
+    const q = new URLSearchParams({ date });
+    const before = await D.getDailyInsight(guest, q);
+    assert.equal(before.custom, null);
+    assert.equal(before.canEdit, false);
+    const custom = {
+      date,
+      title: "영적 신호등",
+      question: "내가 다시 주님께 돌아서는 신호는?",
+      topic: "이사야 28~30장",
+      message: "매일 주님과 가까이",
+      image_path: null,
+    };
+    await assert.rejects(D.saveDailyInsight(guest, custom), status(403));
+    await assert.rejects(
+      D.saveDailyInsight(teacher, { ...custom, image_path: "javascript:x" }),
+    );
+    await D.saveDailyInsight(teacher, custom);
+    const after = await D.getDailyInsight(guest, q);
+    assert.equal(after.custom?.question, custom.question);
+    assert.equal(after.auto?.week, currentWeek(date)!.number);
+    await D.saveDailyInsight(teacher, { ...custom, message: "수정됨" });
+    assert.equal((await D.getDailyInsight(null, q)).custom?.message, "수정됨");
+    await D.resetDailyInsight(teacher, { date });
+    assert.equal((await D.getDailyInsight(null, q)).custom, null);
+    assert.equal(
+      (await D.getDailyInsight(null, q)).auto?.ko.question,
+      autoInsight(date)!.ko.question,
+    );
+    await assert.rejects(
+      D.getDailyInsight(null, new URLSearchParams({ date: "2026-13-40" })),
+      status(400),
+    );
+  });

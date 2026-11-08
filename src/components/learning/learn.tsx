@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useApp } from "../provider";
 import { api } from "@/lib/client";
+import { canManageRecords } from "@/lib/access";
 import {
   prompts,
   reading,
@@ -239,7 +240,7 @@ export function WeekPage({ number }: { number: number }) {
   const w = weeks.find((w) => w.number === number);
   const [completed, setCompleted] = useState<number[]>([]);
   useEffect(() => {
-    if (boot)
+    if (boot && canManageRecords(boot.actor))
       api<{ progress: { week: number; day: number }[] }>("journey")
         .then((d) =>
           setCompleted(
@@ -391,19 +392,22 @@ export function LessonPage({ number, day }: { number: number; day: number }) {
       )
         .then((d) => setInitial(d?.content || {}))
         .catch(error);
-      api<{
-        questions: { week: number; content: string }[];
-        progress: { week: number; day: number }[];
-      }>("journey")
-        .then((d) => {
-          setPrior(
-            d.questions.find((q) => q.week === number - 1)?.content || "",
-          );
-          setComplete(
-            d.progress.some((p) => p.week === number && p.day === day),
-          );
-        })
-        .catch(error);
+      // Reading and reflections remain available to guests; saved-record
+      // history is only fetched for accounts allowed to manage those records.
+      if (canManageRecords(boot.actor))
+        api<{
+          questions: { week: number; content: string }[];
+          progress: { week: number; day: number }[];
+        }>("journey")
+          .then((d) => {
+            setPrior(
+              d.questions.find((q) => q.week === number - 1)?.content || "",
+            );
+            setComplete(
+              d.progress.some((p) => p.week === number && p.day === day),
+            );
+          })
+          .catch(error);
     }
   }, [boot, number, day]);
   const draft = useDraft(

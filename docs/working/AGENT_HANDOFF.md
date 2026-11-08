@@ -1126,3 +1126,91 @@ The user asked about an apparent gap in the original manual: `p5` is day3,
 `p6` day5 and `p7` day1. Each is allocated once; the official iframe retains
 other days' surrounding context. The user accepted that explanation and the
 allocation. Do not remove or repeat those paragraphs to fill visual gaps.
+
+## Home entry and reader guide — 2026-11-08
+
+Current branch `codex/study-reader-main` starts at `b9ad286`, after week46 PR #4
+merged into `codex/main-baseline-20261025`; initial UI work was prepared on
+`codex/home-study-plan-fallback`. PR #3 to main remained open when checked.
+Delivery remains Git/PR only; these exact branches disable Vercel Git
+deployments. No production database changes or deployment.
+
+Both home start buttons use `dailyStudyHref`: an allocated day opens the basic
+source reader, while missing/empty basic allocations use the existing lesson.
+Home/card metadata uses the same day through `dailyStudyContent`; Korean labels
+and question come from the allocation. Non-Korean text follows the reader's
+existing translated-title fallback, pending question/label translations. Teacher
+card overrides still win. The card refreshes against the same Korea-date rule
+as home. Nov8/week45 stays in the legacy flow; Nov9/week46 opens Daniel day1.
+Do not redirect an unallocated date into a different week just because it exists.
+
+`getStudyDay` resolves by day number, not array position. Routing and shell use
+the same availability rule. Empty family material lists fall back to basic and
+hide the family chip; the optional family track does not gate a basic day.
+Audited source JSON, anchors, task IDs and progress semantics were not changed.
+
+Reader controls now have at least44px targets,14px supporting text and16px mobile
+bottom actions. The user selected the overview mockup and approved applying it.
+The actual reader now shows all four spotlights together: day, progress, share,
+next material. Short labels and arrows sit near the measured controls over a
+dimmed screen; there is no detached step card. Any click closes the guide and
+is consumed before underlying buttons/iframe can act. Escape, Enter/Space and
+focus trapping/restoration use Radix. The stable wrapper survives guest bootstrap.
+Dismissal stores `ggc_study_reader_guide:v2=seen` in localStorage; the new version
+appears once even if the previous v1 modal was tested. The top help control
+replays it. Clearing storage/new browsers can show it again; unavailable storage
+cannot persist dismissal. Opening/closing never marks material complete.
+`study-guide-layout.ts` places notes around controls, each other and the central
+dismiss hint; ResizeObserver/viewport changes keep arrows attached.
+
+Verification: the earlier30 daily-insight/source-allocation/progress/community
+tests remain relevant; those inputs were not changed by the new guide. Latest
+geometry tests8/8, guide/layout/test ESLint, TypeScript and webpack build(33pages)
+passed on Node24.22.1. Earlier broader scoped ESLint had only2 existing img
+warnings in daily-insight.tsx. Earlier local checks covered both home hrefs,
+legacy guest entry, day switching, next material(0→9% persisted), and recoverable
+drafts without posting. New-guide browser checks covered first display, replay,
+reload persistence, Tab trapping, Escape and help focus restoration. Clicking
+the spotlight over Next closed only the guide: next2/11 and progress9% remained.
+1280×720,390×844,320×568 and667×375 viewport emulation showed four visible notes;
+the narrow landscape hint/label overlap was fixed and rechecked. No clipped
+notes or horizontal overflow were observed; phone hardware was not tested. On mobile,
+the range explanation is visually hidden to keep the start/end buttons in one
+row, but remains available to screen readers. Source iframe text is unchanged.
+The official Church iframe still emits its own hydration/observer errors while
+rendering; the external-source fallback remains available. Screenshot evidence:
+ignored `test-results/home-reader/overview-guide.png` (actual implementation).
+Local preview continues
+on127.0.0.1:3000 using the separate week46-preview database.
+
+The user reviewed the local result and explicitly authorized one consolidated
+PR targeting main and closing PR3. Publish the final reader, layout helper and
+tests together on `codex/study-reader-main`; retain the existing week44/46
+commits. This approval does not include merging main or deploying to Vercel.
+Standalone HTML mockups and unrelated tsconfig working-tree state are excluded.
+
+### Review feedback and consolidated PR preparation
+
+The user rejected the detached modal placement, compared a dimmed screen with
+arrow labels, then selected the overview variant and approved implementation.
+The comparison (`reader-arrow-guide.html`) remains outside the repository in
+the thread visualization directory; the actual app now implements the overview
+behavior described above.
+
+The home CTA works locally. The confusing approval toast came from legacy
+WeekPage/LessonPage fetching privileged `journey` history for guests. Both
+fetches now use `canManageRecords(boot.actor)`; reading/reflection requests are
+unchanged and no permissions were granted. TypeScript and existing permission/
+lesson tests9/9 passed. Existing learn.tsx ESLint2errors/4warnings are unchanged
+from HEAD; no new lint issue was introduced by this guard.
+
+The user approved one replacement PR to main and closing PR3 as superseded.
+Prepared branch `codex/study-reader-main` inherits `b9ad286`, including44
+(`1d6d674`) and46 (`8aeac30`), so do not duplicate them with cherry-picks.
+After fetch, origin/main remained `52bf17b`; this base is an ancestor, with no
+commits behind and3 ahead (two feature commits plus PR4 merge). GitHub PR3 is
+still open, head b9ad286. The exact new branch is excluded from Vercel Git
+deployments. Do not merge PR3; create a single PR targeting main and close PR3
+as superseded after the replacement exists. The new arrow design is implemented
+and locally verified. No production database changes or Vercel deployment are
+part of this publication. Existing unrelated files remain intact.

@@ -49,10 +49,12 @@ body:has(.study-reader-shell) {
   cursor: not-allowed;
 }
 .study-reader button:focus-visible,
-.study-reader select:focus-visible {
+.study-reader select:focus-visible,
+.study-reader a:focus-visible {
   outline: 3px solid var(--navy);
   outline-offset: 2px;
 }
+
 .study-reader button[aria-pressed="true"],
 .study-reader .study-primary,
 .study-reader .study-question-button {
@@ -835,5 +837,250 @@ body:has(.study-reader-shell) {
   }
   .study-progress-table {
     font-size: 12px;
+  }
+}
+
+/* Reader controls stay readable without changing the official iframe text. */
+.study-reader {
+  font-size: 16px;
+}
+.study-reader button,
+.study-reader select,
+.study-reader .study-question-composer input,
+.study-reader .study-community-composer input {
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 15px;
+}
+.study-reader .study-reader-top select {
+  min-width: 0;
+  font-size: 16px;
+}
+.study-reader .study-brand,
+.study-reader .study-official {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.study-reader .study-reader-top .study-question-button,
+.study-reader .study-reader-top > button,
+.study-reader .study-range-chips button,
+.study-reader .study-reader-scopes > button,
+.study-reader .study-source-tools button,
+.study-reader .study-community-tabs button,
+.study-reader .study-community-question-select button,
+.study-reader .study-question-details .button-row .button,
+.study-reader .study-reader-bottom button {
+  font-size: 15px;
+}
+.study-reader .study-progress-chip,
+.study-reader .study-thought-bubble {
+  font-size: 14px !important;
+}
+.study-reader .study-position,
+.study-reader .study-source-tools span,
+.study-reader .study-source-tools a,
+.study-reader .study-source-loading button,
+.study-reader .study-language-note,
+.study-reader .study-gentle,
+.study-reader .study-connection,
+.study-reader .study-reader-bottom > span:not(.sr-only),
+.study-reader .study-community-context small,
+.study-reader .study-thought-card small,
+.study-reader .study-thought-card time,
+.study-reader .study-community-composer label,
+.study-reader .study-community-composer .muted,
+.study-reader .study-question-poster summary {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.study-reader .study-position,
+.study-reader .study-source-tools span,
+.study-reader .study-language-note {
+  color: var(--ink);
+}
+.study-reader .study-source-tools strong {
+  font-size: 15px;
+  line-height: 1.4;
+}
+.study-reader .study-gentle button,
+.study-reader .study-connection button {
+  min-height: 44px;
+  font-size: 14px;
+}
+.study-reader .study-guide-launch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.study-question-label-short {
+  display: none;
+}
+.study-materials-list,
+.study-materials-list button,
+.study-progress-table,
+.study-progress-table button,
+.study-progress-checks label {
+  font-size: 16px;
+}
+.study-materials-list summary,
+.study-materials-list details a {
+  min-height: 44px;
+  font-size: 14px;
+}
+.study-materials-list details a {
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.study-guide-screen {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: 110;
+  overflow: hidden;
+  color: #fff6dc;
+  background: transparent;
+  cursor: pointer;
+  touch-action: none;
+}
+.study-guide-drawing {
+  position: absolute;
+  inset: 0;
+  color: #ffe1a0;
+  pointer-events: none;
+}
+.study-guide-outline {
+  fill: none;
+  stroke: #fff6dc;
+  stroke-width: 2px;
+}
+.study-guide-arrow {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2px;
+  stroke-linecap: round;
+}
+.study-guide-note {
+  position: absolute;
+  width: 240px;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff6dc;
+  text-shadow: 0 1px 5px #102128;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  pointer-events: none;
+}
+.study-guide-note strong,
+.study-guide-note span {
+  display: block;
+}
+.study-guide-note strong {
+  font-weight: 600;
+}
+.study-guide-dismiss {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 24px;
+  color: #fff6dc;
+  background: #102128d9;
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+}
+.study-guide-dismiss svg {
+  flex-shrink: 0;
+}
+.study-guide-dismiss:focus-visible {
+  outline: 2px solid #ffe1a0;
+  outline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+  .study-position-detail {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+  .study-reader .study-reader-top {
+    gap: 4px;
+  }
+  .study-reader .study-reader-top > button {
+    padding: 6px 8px;
+  }
+  .study-reader .study-brand {
+    min-width: 44px;
+  }
+  .study-reader .study-reader-top .study-official {
+    max-width: 60px;
+    min-width: 52px;
+    font-size: 14px;
+  }
+  .study-guide-launch span,
+  .study-question-label-long {
+    display: none;
+  }
+  .study-question-label-short {
+    display: inline;
+  }
+  .study-reader .study-reader-top .study-guide-launch {
+    padding: 8px;
+  }
+  .study-reader .study-reader-bottom button {
+    padding: 8px 10px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .study-guide-note {
+    width: calc((100vw - 36px) / 2);
+    font-size: 17px;
+  }
+  .study-guide-dismiss {
+    font-size: 14px;
+  }
+}
+@media (max-width: 360px) {
+  .study-reader .study-reader-top .study-brand,
+  .study-reader .study-reader-top .study-official {
+    display: none;
+  }
+}
+@media (max-height: 600px) {
+  .study-reader .study-source-tools span {
+    display: none;
+  }
+  .study-reader .study-source-tools strong {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
