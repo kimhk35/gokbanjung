@@ -1078,3 +1078,51 @@ and scoped ESLint pass. Local44 page responded200 from the detached preview serv
 on10-26 (the old session56555 is no longer current). A fresh UI check was blocked
 by the browser URL security policy; no alternate browser workaround was used.
 Previous10-25 screenshots are historical, not proofs of this correction.
+
+## Week 46: Daniel 1–7 — 2026-11-08
+
+User requested the same complete, non-overlapping seven-day allocation for
+Nov 9–15, then explicitly limited delivery to Git push + PR (no Vercel release).
+Branch `codex/daniel-week-46` starts at `1d6d674` on the still-open week44 PR #3;
+the new PR targets `codex/main-baseline-20261025` so its diff contains week46 only.
+`vercel.json` disables Git-triggered deployment for this exact new branch, per
+[Vercel's documented branch setting](https://vercel.com/docs/project-configuration/git-configuration#git.deploymentEnabled).
+No deployment or production database write was performed.
+
+See [week46 plan and evidence](../study/2026-week-46-plan.md), source JSON,
+inventory/links/media CSVs and `scripts/study/build-week-46.py`. All56 sources,
+1,614 scoped body/heading/note/metadata units, 224 Daniel verses and 118 extra
+verses have exactly one allocation. Basic74 + family37 =111 tasks; actual
+selected positions are unique across days/tracks. Raw HTML and text remain in
+ignored `test-results/week46`. Eight sources use verified English originals.
+Image/PDF interiors, audio and video transcripts are not audited. Repeated
+story films are alternatives, not additional required viewing.
+
+The auditor now recognizes only exact mobile card-label copies of their own
+table headers. Helps duplicated two heading IDs five times each; unrelated
+duplicate IDs still fail. Synthetic conflict checks passed; all41 week44 raw
+cache outputs were unchanged. Week43 raw cache was unavailable for comparison,
+but existing43/44 app data and IDs remain unchanged.
+
+Verification: independent source→manifest and manifest→CSV/plan/actual DOM
+range checks found zero missing, extra or duplicate units. Targeted22 tests,
+TypeScript, scoped ESLint and webpack build(33pages) passed on Node24.22.1.
+Full suite103/104: known Sunday AI quiz failure at `tests/ai-flows.test.ts:284`
+because 2026-11-08 daily scope is empty. Nov9 correctly resolves to Daniel1;
+unrelated quiz code was not changed. Project Node22 was not available on PATH.
+
+Local browser samples: day1 direct entry, day7 switch with17 basic materials,
+day2 family switch with6 materials, and Gospel Art Book90–95 selected real
+`p7..p18`. Start control opened the first-vision picture with a blue selection
+and `p7.active-item`. Official iframe emitted its own React hydration/observer
+errors; its text/image still rendered and the external-source fallback remains.
+All111 URLs were DOM-audited, not all manually browsed; no phone/physical-device
+coverage or public post was claimed. Local API bootstrap/guest worked under
+development with a separate `.local-db/week46-preview` database. Production
+mode correctly rejected that local DB, so browser QA used the dev server.
+Detached launcher PID37788 serves127.0.0.1:3000, logs in `test-results/week46/`.
+
+The user asked about an apparent gap in the original manual: `p5` is day3,
+`p6` day5 and `p7` day1. Each is allocated once; the official iframe retains
+other days' surrounding context. The user accepted that explanation and the
+allocation. Do not remove or repeat those paragraphs to fill visual gaps.

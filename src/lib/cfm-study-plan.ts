@@ -1,5 +1,6 @@
 import approved from "@/data/cfm-2026-week-43.json";
 import week44 from "@/data/cfm-2026-week-44.json";
+import week46 from "@/data/cfm-2026-week-46.json";
 import type { UiLang } from "./i18n";
 import { churchLangCode } from "./i18n";
 
@@ -42,6 +43,7 @@ export const cfmPlan: StudyPlan = approved;
 const plans: Readonly<Record<number, StudyPlan>> = {
   43: cfmPlan,
   44: week44,
+  46: week46,
 };
 export const getStudyPlan = (week: number): StudyPlan | undefined =>
   plans[week];

@@ -68,6 +68,35 @@ def normalized(node):
     return re.sub(r"\s+", " ", node.text()).strip()
 
 
+def repeated_table_header(node):
+    """Recognize plain-text mobile card labels copied from the same table header.
+
+    Church vertical-axis tables repeat their column headings in every mobile
+    card, including the heading IDs. Keep the original heading once. Other
+    duplicate IDs, different text, links, notes and media remain audit errors.
+    """
+    if node.tag != "p" or not node.attrs.get("id"):
+        return False
+    parents = list(node.parents())
+    if not any(p.tag == "div" and "card-label" in p.attrs.get("class", "").split() for p in parents):
+        return False
+    table = next((p for p in parents if p.tag == "table"), None)
+    if table is None or "vertical-axis" not in table.attrs.get("class", "").split():
+        return False
+    # Do not collapse references or embedded content just because their words
+    # happen to match; these need an explicit source review.
+    if any(child.tag in {"a", "img", "video", "audio", "iframe", "sup"} or
+           (child is not node and child.attrs.get("id")) for child in node.walk()):
+        return False
+    originals = [
+        candidate for candidate in table.walk()
+        if candidate.tag == node.tag and candidate.attrs.get("id") == node.attrs["id"]
+        and any(p.tag == "thead" and next((a for a in p.parents() if a.tag == "table"), None) is table for p in candidate.parents())
+        and next((p for p in candidate.parents() if p.tag == "table"), None) is table
+    ]
+    return len(originals) == 1 and normalized(originals[0]) == normalized(node)
+
+
 def inspect(source, out):
     url = "https://www.churchofjesuschrist.org" + source["path"] + "?lang=" + source["lang"]
     cache = out / (source["id"] + ".html")
@@ -81,9 +110,13 @@ def inspect(source, out):
     if not main:
         raise ValueError(source["id"] + ": no main article")
     units, links, media = [], [], []
+    repeated_headers = {}
     for e in main.walk():
         anchor = e.attrs.get("id")
         if anchor and e.tag in {"p", "h1", "h2", "h3", "h4", "h5", "h6", "figcaption", "li"}:
+            if repeated_table_header(e):
+                repeated_headers[anchor] = repeated_headers.get(anchor, 0) + 1
+                continue
             # Lists with paragraph children have their own stable paragraph IDs.
             if e.tag == "li" and any(c is not e and c.tag in {"p", "li"} and c.attrs.get("id") for c in e.walk()):
                 continue
@@ -101,11 +134,14 @@ def inspect(source, out):
             media.append({"tag": e.tag, "id": anchor, "alt": e.attrs.get("alt", ""), "owner": next((p.attrs["id"] for p in e.parents() if p.attrs.get("id")), "main")})
     anchors = [u["anchor"] for u in units]
     if len(anchors) != len(set(anchors)):
-        raise ValueError(source["id"] + ": duplicate source anchors")
+        duplicates = sorted({anchor for anchor in anchors if anchors.count(anchor) > 1})
+        raise ValueError(source["id"] + ": duplicate source anchors: " + ", ".join(duplicates))
     for unit in units:
         unit["noteOwners"] = list(dict.fromkeys(a["owner"] for a in links if unit["note"] and a["href"].split("#")[-1] == unit["noteGroup"]))
     durations = sorted(set(int(m[1])*60+int(m[2]) for e in main.walk() if e.tag == "div" and (m := re.fullmatch(r"(\d{1,3}):(\d{2})", normalized(e)))))
     result = {**source, "url": url, "htmlSha256": hashlib.sha256(html.encode()).hexdigest(), "allIds": [e.attrs["id"] for e in main.walk() if e.attrs.get("id")], "units": units, "links": links, "media": media, "durationSeconds": durations}
+    if repeated_headers:
+        result["ignoredRepeatedTableHeaders"] = repeated_headers
     (out / (source["id"] + ".json")).write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     return {"id": source["id"], "units": len(units), "chars": sum(u["chars"] for u in units), "notes": sum(u["note"] for u in units), "links": len(links)}
 
