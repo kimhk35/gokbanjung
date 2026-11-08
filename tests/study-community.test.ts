@@ -238,3 +238,56 @@ test("public feed includes stable question links and published replies only; tab
     0,
   );
 });
+
+test("consecutive weeks keep question links, replies and identical passage anchors separate", async () => {
+  const teacher = await actor("TEACHER"),
+    guest = await actor("GUEST");
+  const original = await P.savePrompt(teacher, prompt(43, 7));
+  const next = await P.savePrompt(teacher, prompt(44, 1));
+  await P.addReply(guest, {
+    id: randomUUID(),
+    prompt_id: next.id,
+    body: "다음 주의 응답",
+  });
+  const priorOverview = await S.getStudyOverview(guest, params());
+  const nextOverview = await S.getStudyOverview(guest, params({ week: "44" }));
+  assert.ok(priorOverview.questions.some((q) => q.id === original.id));
+  assert.ok(!priorOverview.questions.some((q) => q.id === next.id));
+  assert.deepEqual(priorOverview.answeredDays, []);
+  assert.deepEqual(nextOverview.answeredDays, [1]);
+  assert.equal((await P.getPrompt(null, original.slug)).prompt.id, original.id);
+  const samePassage = {
+    ...place,
+    path: "/study/scriptures/ot/jer/31",
+    anchor: "p3",
+  };
+  const previousThought = await S.saveStudyThought(guest, {
+    ...samePassage,
+    id: randomUUID(),
+    body: "이번 주",
+    visibility: "public",
+  });
+  const nextThought = await S.saveStudyThought(guest, {
+    ...samePassage,
+    week: 44,
+    id: randomUUID(),
+    body: "다음 주",
+    visibility: "public",
+  });
+  const range = { path: samePassage.path, anchor: samePassage.anchor };
+  assert.deepEqual(
+    (await S.getStudyThoughts(null, params(range))).items.map((t) => t.id),
+    [previousThought.id],
+  );
+  assert.deepEqual(
+    (
+      await S.getStudyThoughts(null, params({ ...range, week: "44" }))
+    ).items.map((t) => t.id),
+    [nextThought.id],
+  );
+  assert.ok(
+    !(await S.getStudyFeed(null, params())).items.some(
+      (t) => t.id === nextThought.id,
+    ),
+  );
+});

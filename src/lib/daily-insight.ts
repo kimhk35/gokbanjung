@@ -1,7 +1,7 @@
 // "오늘의 Insight": a daily card built from the curriculum (no AI, no cost).
 // Teachers can replace any day's text or picture (daily-insight-service.ts).
-import { curriculum, dayIndex, reading } from "./curriculum";
-import { recommendedQuestion } from "./recommendations";
+import { curriculum, dayIndex } from "./curriculum";
+import { dailyStudyContent } from "./daily-study";
 import { cardBackgrounds } from "./card-backgrounds";
 import { localeOf, translate, type UiLang } from "./i18n";
 
@@ -25,17 +25,21 @@ export function autoInsight(date: string): AutoInsight | null {
   if (!week) return null;
   const day = dayIndex(week, date);
   const text = (lang: UiLang): InsightText => {
-    const rec = recommendedQuestion(week, day, lang);
+    const study = dailyStudyContent(week, day, lang);
     const weekday = new Date(`${date}T00:00:00Z`).toLocaleDateString(
       localeOf(lang),
       { weekday: "short", timeZone: "UTC" },
     );
     const title = translate(lang, week.title.ko, week.title.en);
     return {
-      kicker: translate(lang, "{day}일차 ({weekday})", "Day {day} ({weekday})", undefined, { day, weekday }),
-      title: rec.theme,
-      question: rec.question,
-      topic: reading(week, day, lang),
+      kicker: translate(
+        lang,
+        "{day}일차 ({weekday})",
+        "Day {day} ({weekday})",
+        undefined,
+        { day, weekday },
+      ),
+      ...study,
       message: `“${title.replace(/^[“"]+|[”"]+$/g, "")}” · ${translate(lang, week.reference.ko, week.reference.en)}`,
     };
   };

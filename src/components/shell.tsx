@@ -26,10 +26,11 @@ import { GuestGate } from "./account";
 import { AnnouncementPopup } from "./announcement-popup";
 import { loginStatus } from "@/lib/login-status";
 import { canManageRecords } from "@/lib/access";
+import { isStudyReaderPath } from "@/lib/cfm-study-plan";
 export function Shell({ children }: { children: ReactNode }) {
   const { uiLang, setLang, t, tl, boot } = useApp();
   const path = usePathname();
-  const studyReader = /^\/week\/43\/day\/[1-7]$/.test(path);
+  const studyReader = isStudyReaderPath(path);
   const focusedEntry = studyReader || path.startsWith("/p/");
   const [dark, setDark] = useState(false);
   const [menu, setMenu] = useState(false);

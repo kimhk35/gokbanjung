@@ -1,6 +1,6 @@
 import { LessonPage } from "@/components/learning/learn";
 import { StudyReader } from "@/components/learning/study-reader";
-import { hasStudyPlan } from "@/lib/cfm-study-plan";
+import { getStudyDay, dailyStudyHref } from "@/lib/cfm-study-plan";
 import { GuestGate } from "@/components/account";
 import Link from "next/link";
 export default async function Page({
@@ -17,15 +17,11 @@ export default async function Page({
 }) {
   const p = await params;
   const query = await searchParams;
-  if (
-    hasStudyPlan(Number(p.number)) &&
-    Number.isInteger(Number(p.day)) &&
-    Number(p.day) >= 1 &&
-    Number(p.day) <= 7 &&
-    query.view !== "notes"
-  )
+  const allocated = getStudyDay(Number(p.number), Number(p.day));
+  if (allocated && query.view !== "notes")
     return (
       <StudyReader
+        week={Number(p.number)}
         day={Number(p.day)}
         initialTrack={query.track === "family" ? "family" : "adult"}
         initialSource={query.source}
@@ -39,9 +35,12 @@ export default async function Page({
       day={Number(p.day)}
     />
   );
-  return hasStudyPlan(Number(p.number)) ? (
+  return allocated ? (
     <GuestGate>
-      <Link className="back-link" href={`/week/${p.number}/day/${p.day}`}>
+      <Link
+        className="back-link"
+        href={dailyStudyHref(Number(p.number), Number(p.day))}
+      >
         ← 원문 읽기 · Official reader
       </Link>
       {legacy}

@@ -994,3 +994,223 @@ credential-state error before any source files were uploaded. Starting a fresh
 script runtime did not recover browser access. Nothing has been committed or
 deployed. The reviewed 29-file overlay is supplied as Gokbanjung_Neon_Update.zip
 for one manual GitHub upload preserving its directory structure.
+
+## Week 44 allocation and local preview — 2026-10-25
+
+User requested adding the distribution-method review improvements and showing
+next week's allocation. Branch `codex/main-baseline-20261025` starts at remote
+main `52bf17b`. Existing untracked HTML mockups are preserved. No commit, push,
+production database changes, or public deployment was performed.
+
+Added finite source/link scope, workload comparison and independent source-review
+templates to `docs/study/cfm-distribution-method.md`. The actual week report is
+`docs/study/2026-week-44-plan.md`, with independent source metadata, source-link
+decisions and assignment CSV next to it. Official weekly heading/body explicitly
+includes Jeremiah36–39; the old Helps36–38 heading is documented. Local curriculum
+and seed display now include39 without updating existing production records.
+
+Week44:41 public official documents,1,363 scoped text/metadata units owned once,
+0 missing/duplicate/extra assignments; basic64 tasks/1,050 units, family27/313.
+Weekly9 chapters include297 logical verses, including merged Korean32:3–5 and
+33:10–11 paragraphs. Additional comparisons/verses bring the total to352.
+All source bodies remain official; app data holds positions/labels only. Raw HTML
+and temporary inspected text stay under ignored `test-results/week44/`.
+`scripts/study/audit-sources.py` collects position/count/hash metadata;
+`build-week-44.py` encodes this week's reviewed boundaries and rebuilds the data.
+
+Limits: Korean source positions are locked across UI languages. Ballard's
+inspected Korean path returned404 and the linked English text is included.
+Named English songs retain English. Source text inventory excludes image/PDF
+interiors and video transcripts. The76:22 teacher broadcast has5 metadata units
+and a full-player link, not a transcript audit. Total study time is not balanced
+or participant-timed; see the daily counts and stated burden in the week report.
+
+Added registered-week lookup and week-aware reader, shell, progress validation,
+questions and local draft keys while preserving43 IDs/data. Home shows the
+current week and available next week. Shell previously matched43 only; now it
+uses the same plan registry so44 is public/read-first too.
+
+Verification: full98 tests,97 pass/1 unchanged date-dependent AI quiz failure.
+On Sunday2026-10-25 daily quizScope has0 chapters, on Monday10-26 it has1; the
+same Sunday failure was already documented on10-18. New study/source/progress/
+community tests pass. Webpack production build passes, including TypeScript and
+33 static pages. Scoped ESLint passes; Shell retains its pre-existing setDark
+effect error, also reproduced against the baseline source. Build-generated
+tsconfig additions for the temporary output directory were removed afterward.
+
+Actual Chrome browser checks:44 direct guest entry; Korean language;7 daily
+first-source URLs; day1 p1–p3 selected and p4 unselected; End keeps selection and
+positions p3 at108px in the source frame. Family day7 preserves its own range.
+Responsive emulation1280x900 and390x844 has no horizontal overflow; mobile range
+composer is reachable by keyboard,16px input, and private draft survives closing
+and reopening. Test draft was cleared without posting. Physical touch/device
+testing, all41 materials' rendered start/end borders and all translations remain
+unverified. The dev-tools indicator overlapped the mobile bottom button during
+one coordinate click; keyboard activation worked. This is development UI only.
+
+Local server: session56555, `http://127.0.0.1:3000/week/44/day/1`.
+Uses isolated `.local-db/week44-preview-20261025` with production DB/Auth/AI vars
+cleared. Guest/session/bootstrap, home,43 and44 routes return200;52 weeks loaded
+and44 reference shows36–39. `localhost` can carry unrelated old Supabase cookies
+on this machine, so the verified address uses127.0.0.1. Browser deliverable stays
+open on44 day1. Proofs: `test-results/week44/reader-desktop.png` and
+`reader-mobile.png`. No private records or real member posts were read/created.
+
+## Week 44: remove repeated reading entries — 2026-10-26
+
+User requested full coverage with every assigned source position appearing once.
+Version2 removes only family shared shortcuts `w44-t019` (day3 repeats day2)
+and `w44-t020` (day5 repeats day6). Family activities remain on all7 days;
+day3 now uses its own covenant story and scripture-play materials. Retired IDs
+19/20 are reserved by the generator, preserving all other89 task objects and
+existing progress mappings. Basic64 + family25 retain all1,363 units/41 sources.
+
+Added a regression that checks the actual `studySourceUrl` selections, not just
+primary ownership: every selected position belongs to that task and appears once
+across all days/tracks. It failed against version1 and passes after the change.
+Independent cached-HTML DOM/descendant comparison confirms no repeated selected
+ranges, no missing/extra source units, and exact CSV/JSON/report correspondence.
+Official source quotations, internal reference links and surrounding iframe
+context remain intact. Transcript/image/PDF scope limits above are unchanged.
+
+Verification:17 targeted study/source/progress/community tests pass; TypeScript
+and scoped ESLint pass. Local44 page responded200 from the detached preview server restarted
+on10-26 (the old session56555 is no longer current). A fresh UI check was blocked
+by the browser URL security policy; no alternate browser workaround was used.
+Previous10-25 screenshots are historical, not proofs of this correction.
+
+## Week 46: Daniel 1–7 — 2026-11-08
+
+User requested the same complete, non-overlapping seven-day allocation for
+Nov 9–15, then explicitly limited delivery to Git push + PR (no Vercel release).
+Branch `codex/daniel-week-46` starts at `1d6d674` on the still-open week44 PR #3;
+the new PR targets `codex/main-baseline-20261025` so its diff contains week46 only.
+`vercel.json` disables Git-triggered deployment for this exact new branch, per
+[Vercel's documented branch setting](https://vercel.com/docs/project-configuration/git-configuration#git.deploymentEnabled).
+No deployment or production database write was performed.
+
+See [week46 plan and evidence](../study/2026-week-46-plan.md), source JSON,
+inventory/links/media CSVs and `scripts/study/build-week-46.py`. All56 sources,
+1,614 scoped body/heading/note/metadata units, 224 Daniel verses and 118 extra
+verses have exactly one allocation. Basic74 + family37 =111 tasks; actual
+selected positions are unique across days/tracks. Raw HTML and text remain in
+ignored `test-results/week46`. Eight sources use verified English originals.
+Image/PDF interiors, audio and video transcripts are not audited. Repeated
+story films are alternatives, not additional required viewing.
+
+The auditor now recognizes only exact mobile card-label copies of their own
+table headers. Helps duplicated two heading IDs five times each; unrelated
+duplicate IDs still fail. Synthetic conflict checks passed; all41 week44 raw
+cache outputs were unchanged. Week43 raw cache was unavailable for comparison,
+but existing43/44 app data and IDs remain unchanged.
+
+Verification: independent source→manifest and manifest→CSV/plan/actual DOM
+range checks found zero missing, extra or duplicate units. Targeted22 tests,
+TypeScript, scoped ESLint and webpack build(33pages) passed on Node24.22.1.
+Full suite103/104: known Sunday AI quiz failure at `tests/ai-flows.test.ts:284`
+because 2026-11-08 daily scope is empty. Nov9 correctly resolves to Daniel1;
+unrelated quiz code was not changed. Project Node22 was not available on PATH.
+
+Local browser samples: day1 direct entry, day7 switch with17 basic materials,
+day2 family switch with6 materials, and Gospel Art Book90–95 selected real
+`p7..p18`. Start control opened the first-vision picture with a blue selection
+and `p7.active-item`. Official iframe emitted its own React hydration/observer
+errors; its text/image still rendered and the external-source fallback remains.
+All111 URLs were DOM-audited, not all manually browsed; no phone/physical-device
+coverage or public post was claimed. Local API bootstrap/guest worked under
+development with a separate `.local-db/week46-preview` database. Production
+mode correctly rejected that local DB, so browser QA used the dev server.
+Detached launcher PID37788 serves127.0.0.1:3000, logs in `test-results/week46/`.
+
+The user asked about an apparent gap in the original manual: `p5` is day3,
+`p6` day5 and `p7` day1. Each is allocated once; the official iframe retains
+other days' surrounding context. The user accepted that explanation and the
+allocation. Do not remove or repeat those paragraphs to fill visual gaps.
+
+## Home entry and reader guide — 2026-11-08
+
+Current branch `codex/study-reader-main` starts at `b9ad286`, after week46 PR #4
+merged into `codex/main-baseline-20261025`; initial UI work was prepared on
+`codex/home-study-plan-fallback`. PR #3 to main remained open when checked.
+Delivery remains Git/PR only; these exact branches disable Vercel Git
+deployments. No production database changes or deployment.
+
+Both home start buttons use `dailyStudyHref`: an allocated day opens the basic
+source reader, while missing/empty basic allocations use the existing lesson.
+Home/card metadata uses the same day through `dailyStudyContent`; Korean labels
+and question come from the allocation. Non-Korean text follows the reader's
+existing translated-title fallback, pending question/label translations. Teacher
+card overrides still win. The card refreshes against the same Korea-date rule
+as home. Nov8/week45 stays in the legacy flow; Nov9/week46 opens Daniel day1.
+Do not redirect an unallocated date into a different week just because it exists.
+
+`getStudyDay` resolves by day number, not array position. Routing and shell use
+the same availability rule. Empty family material lists fall back to basic and
+hide the family chip; the optional family track does not gate a basic day.
+Audited source JSON, anchors, task IDs and progress semantics were not changed.
+
+Reader controls now have at least44px targets,14px supporting text and16px mobile
+bottom actions. The user selected the overview mockup and approved applying it.
+The actual reader now shows all four spotlights together: day, progress, share,
+next material. Short labels and arrows sit near the measured controls over a
+dimmed screen; there is no detached step card. Any click closes the guide and
+is consumed before underlying buttons/iframe can act. Escape, Enter/Space and
+focus trapping/restoration use Radix. The stable wrapper survives guest bootstrap.
+Dismissal stores `ggc_study_reader_guide:v2=seen` in localStorage; the new version
+appears once even if the previous v1 modal was tested. The top help control
+replays it. Clearing storage/new browsers can show it again; unavailable storage
+cannot persist dismissal. Opening/closing never marks material complete.
+`study-guide-layout.ts` places notes around controls, each other and the central
+dismiss hint; ResizeObserver/viewport changes keep arrows attached.
+
+Verification: the earlier30 daily-insight/source-allocation/progress/community
+tests remain relevant; those inputs were not changed by the new guide. Latest
+geometry tests8/8, guide/layout/test ESLint, TypeScript and webpack build(33pages)
+passed on Node24.22.1. Earlier broader scoped ESLint had only2 existing img
+warnings in daily-insight.tsx. Earlier local checks covered both home hrefs,
+legacy guest entry, day switching, next material(0→9% persisted), and recoverable
+drafts without posting. New-guide browser checks covered first display, replay,
+reload persistence, Tab trapping, Escape and help focus restoration. Clicking
+the spotlight over Next closed only the guide: next2/11 and progress9% remained.
+1280×720,390×844,320×568 and667×375 viewport emulation showed four visible notes;
+the narrow landscape hint/label overlap was fixed and rechecked. No clipped
+notes or horizontal overflow were observed; phone hardware was not tested. On mobile,
+the range explanation is visually hidden to keep the start/end buttons in one
+row, but remains available to screen readers. Source iframe text is unchanged.
+The official Church iframe still emits its own hydration/observer errors while
+rendering; the external-source fallback remains available. Screenshot evidence:
+ignored `test-results/home-reader/overview-guide.png` (actual implementation).
+Local preview continues
+on127.0.0.1:3000 using the separate week46-preview database.
+
+The user reviewed the local result and explicitly authorized one consolidated
+PR targeting main and closing PR3. Publish the final reader, layout helper and
+tests together on `codex/study-reader-main`; retain the existing week44/46
+commits. This approval does not include merging main or deploying to Vercel.
+Standalone HTML mockups and unrelated tsconfig working-tree state are excluded.
+
+### Review feedback and consolidated PR preparation
+
+The user rejected the detached modal placement, compared a dimmed screen with
+arrow labels, then selected the overview variant and approved implementation.
+The comparison (`reader-arrow-guide.html`) remains outside the repository in
+the thread visualization directory; the actual app now implements the overview
+behavior described above.
+
+The home CTA works locally. The confusing approval toast came from legacy
+WeekPage/LessonPage fetching privileged `journey` history for guests. Both
+fetches now use `canManageRecords(boot.actor)`; reading/reflection requests are
+unchanged and no permissions were granted. TypeScript and existing permission/
+lesson tests9/9 passed. Existing learn.tsx ESLint2errors/4warnings are unchanged
+from HEAD; no new lint issue was introduced by this guard.
+
+The user approved one replacement PR to main and closing PR3 as superseded.
+Prepared branch `codex/study-reader-main` inherits `b9ad286`, including44
+(`1d6d674`) and46 (`8aeac30`), so do not duplicate them with cherry-picks.
+After fetch, origin/main remained `52bf17b`; this base is an ancestor, with no
+commits behind and3 ahead (two feature commits plus PR4 merge). GitHub PR3 is
+still open, head b9ad286. The exact new branch is excluded from Vercel Git
+deployments. Do not merge PR3; create a single PR targeting main and close PR3
+as superseded after the replacement exists. The new arrow design is implemented
+and locally verified. No production database changes or Vercel deployment are
+part of this publication. Existing unrelated files remain intact.

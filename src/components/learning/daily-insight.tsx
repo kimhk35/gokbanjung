@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Download, Pencil, Sun } from "lucide-react";
@@ -13,6 +13,8 @@ import { uploadPoster } from "@/lib/image-compress";
 import type { AutoInsight, InsightText } from "@/lib/daily-insight";
 import type { UiLang } from "@/lib/i18n";
 import type { CustomInsight } from "@/lib/daily-insight-service";
+import { dailyStudyHref } from "@/lib/cfm-study-plan";
+import { useStudyDate } from "../use-study-date";
 
 type Data = {
   date: string;
@@ -38,14 +40,22 @@ function cardText(d: Data, lang: UiLang): InsightText | null {
 
 export function useDailyInsight() {
   const { boot, error } = useApp();
+  const date = useStudyDate();
   const [data, setData] = useState<Data | null>(null);
+  const request = useRef(0);
   const load = useCallback(() => {
-    api<Data>("insight/today").then(setData).catch(error);
-  }, [error]);
+    if (!date) return;
+    const token = ++request.current;
+    api<Data>(`insight/today?date=${date}`)
+      .then((result) => {
+        if (token === request.current) setData(result);
+      })
+      .catch(error);
+  }, [date, error]);
   useEffect(() => {
     if (boot) load();
   }, [boot, load]);
-  return { data, reload: load };
+  return { data: data?.date === date ? data : null, reload: load };
 }
 
 async function saveImage(
@@ -188,7 +198,7 @@ export function DailyInsightCard({
         {data.auto && (
           <Link
             className="button"
-            href={`/week/${data.auto.week}/day/${data.auto.day}`}
+            href={dailyStudyHref(data.auto.week, data.auto.day)}
           >
             <Sun size={18} /> {t("오늘 학습 시작", "Start today’s study")}
           </Link>
@@ -294,7 +304,11 @@ function InsightForm({
   return (
     <div className="event-form">
       <p className="muted">
-        {t("{date} 하루만 바뀝니다. 비워 둔 칸은 표시하지 않아요.", "Changes only {date}. Empty fields are hidden.", { date: data.date })}
+        {t(
+          "{date} 하루만 바뀝니다. 비워 둔 칸은 표시하지 않아요.",
+          "Changes only {date}. Empty fields are hidden.",
+          { date: data.date },
+        )}
       </p>
       <label className="field">
         {t("제목", "Title")}

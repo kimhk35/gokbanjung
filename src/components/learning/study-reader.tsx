@@ -1,25 +1,32 @@
 "use client";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type Ref } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { BookOpen, Check, MessageCircle, X } from "lucide-react";
+import { BookOpen, Check, CircleHelp, MessageCircle, X } from "lucide-react";
 import { useApp } from "../provider";
 import { api } from "@/lib/client";
 import {
-  cfmPlan,
-  dayTitles,
-  familyTitles,
+  getStudyPlan,
+  getStudyDay,
+  dailyStudyHref,
+  studyDayTitle,
+  studyFamilyTitle,
   materialPercent,
   studySourceLanguage,
   studySourceUrl,
   studyTasks,
   type StudyTrack,
+  type StudyDay,
 } from "@/lib/cfm-study-plan";
 import type { MaterialProgress } from "@/lib/study-material-progress";
 import type { Prompt } from "@/lib/prompts";
 import { Modal } from "../ui/dialog";
 import { StudyCommunityPanel } from "./study-community-panel";
 import { useLocalDraft } from "../use-local-draft";
+import {
+  StudyReaderGuide,
+  type StudyReaderGuideHandle,
+} from "./study-reader-guide";
 
 type Overview = {
   questions: (Prompt & { study_day: number | null })[];
@@ -27,6 +34,7 @@ type Overview = {
   canAuthor: boolean;
 };
 type ReaderProps = {
+  week: number;
   day: number;
   initialTrack?: StudyTrack;
   initialSource?: string;
@@ -116,27 +124,70 @@ function StudySourceFrame({
 }
 
 export function StudyReader(props: ReaderProps) {
-  const { boot } = useApp();
+  const { boot, t } = useApp();
+  const guide = useRef<StudyReaderGuideHandle>(null);
+  const reader = useRef<HTMLDivElement>(null);
+  const day = getStudyDay(props.week, props.day);
+  if (!day)
+    return (
+      <div className="page">
+        <p>
+          {t(
+            "이 날짜의 새 배분은 아직 준비되지 않았습니다.",
+            "The new allocation for this day is not ready yet.",
+          )}
+        </p>
+        <Link
+          className="button"
+          href={`/week/${props.week}/day/${props.day}?view=notes`}
+        >
+          {t("기존 학습 범위 열기", "Open the existing study range")}
+        </Link>
+      </div>
+    );
+  const initialTrack =
+    props.initialTrack === "family" && day.familyTasks.length
+      ? "family"
+      : "adult";
   return (
-    <Reader
-      key={`${boot?.actor.id || "public"}:${props.day}:${props.initialTrack}:${props.initialSource}:${props.initialAnchor}`}
-      {...props}
-    />
+    <>
+      <Reader
+        key={`${boot?.actor.id || "public"}:${props.week}:${props.day}:${initialTrack}:${props.initialSource}:${props.initialAnchor}`}
+        {...props}
+        initialTrack={initialTrack}
+        studyDay={day}
+        readerRef={reader}
+        onGuide={() => guide.current?.open()}
+      />
+      <StudyReaderGuide
+        controllerRef={guide}
+        readerRef={reader}
+        contextKey={`${boot?.actor.id || "public"}:${props.week}:${props.day}`}
+      />
+    </>
   );
 }
 function Reader({
+  week,
   day: selectedDay,
   initialTrack = "adult",
   initialSource,
   initialAnchor,
-}: ReaderProps) {
+  studyDay: day,
+  readerRef,
+  onGuide,
+}: ReaderProps & {
+  studyDay: StudyDay;
+  readerRef: Ref<HTMLDivElement>;
+  onGuide: () => void;
+}) {
   const { uiLang, setLang, t, boot, ready, reload, error } = useApp();
   const router = useRouter();
   const [track, setTrack] = useState<StudyTrack>(initialTrack);
   const [step, setStep] = useState(() =>
     Math.max(
       0,
-      studyTasks(selectedDay, initialTrack).findIndex(
+      studyTasks(selectedDay, initialTrack, week).findIndex(
         (item) =>
           item.path === initialSource &&
           ((item.anchor || "main") === initialAnchor ||
@@ -165,13 +216,13 @@ function Reader({
   const communityRequest = useRef(0);
   const rangeRequest = useRef(0);
   const progressRequest = useRef(0);
-  const day = cfmPlan.days[selectedDay - 1];
-  const tasks = studyTasks(selectedDay, track);
+  const plan = getStudyPlan(week)!;
+  const tasks = studyTasks(selectedDay, track, week);
   const task = tasks[Math.min(step, tasks.length - 1)];
   const completed = progress
     .filter((p) => p.day === selectedDay && p.track === track)
     .map((p) => p.task_id);
-  const stats = materialPercent(selectedDay, track, completed);
+  const stats = materialPercent(selectedDay, track, completed, week);
   const source = {
     path: task.path,
     anchor:
@@ -192,13 +243,13 @@ function Reader({
     };
   }, []);
   const notes = useLocalDraft(
-    boot ? `${boot.actor.id}:cfm:43:${selectedDay}:${track}` : null,
+    boot ? `${boot.actor.id}:cfm:${week}:${selectedDay}:${track}` : null,
     { body: "" },
   );
   const connectionOK = !!boot && progressLoaded && !saveUnavailable;
   const refreshCommunity = useCallback(() => {
     const token = ++communityRequest.current;
-    api<Overview>("think/study-overview?week=43")
+    api<Overview>(`think/study-overview?week=${week}`)
       .then((d) => {
         if (alive.current && token === communityRequest.current) setOverview(d);
       })
@@ -206,10 +257,10 @@ function Reader({
         if (alive.current && token === communityRequest.current)
           setOverview(null);
       });
-  }, []);
+  }, [week]);
   const refreshRange = useCallback(() => {
     const params = new URLSearchParams({
-      week: "43",
+      week: String(week),
       path: sourcePath,
       anchor: sourceAnchor,
     });
@@ -224,12 +275,12 @@ function Reader({
         if (alive.current && token === rangeRequest.current)
           setRangeData({ key, count: 0 });
       });
-  }, [sourcePath, sourceAnchor]);
+  }, [week, sourcePath, sourceAnchor]);
   useEffect(() => {
     let current = true;
     if (!boot) return;
     const token = ++progressRequest.current;
-    api<{ items: MaterialProgress[] }>("notes/study-progress?week=43")
+    api<{ items: MaterialProgress[] }>(`notes/study-progress?week=${week}`)
       .then((d) => {
         if (current && token === progressRequest.current) {
           setProgress(d.items);
@@ -244,7 +295,7 @@ function Reader({
     return () => {
       current = false;
     };
-  }, [boot]);
+  }, [boot, week]);
   useEffect(() => {
     refreshCommunity();
   }, [boot, refreshCommunity]);
@@ -263,7 +314,7 @@ function Reader({
     if (boot)
       try {
         localStorage.setItem(
-          `ggc_cfm_invite:${boot.actor.id}:43`,
+          `ggc_cfm_invite:${boot.actor.id}:${week}`,
           JSON.stringify(next),
         );
       } catch {}
@@ -280,7 +331,7 @@ function Reader({
     ++progressRequest.current;
     try {
       await api("notes/study-progress-save", {
-        week: 43,
+        week,
         day: dayNo,
         track: course,
         task_id: taskId,
@@ -304,11 +355,13 @@ function Reader({
         next
           .filter((p) => p.day === dayNo && p.track === course)
           .map((p) => p.task_id),
+        week,
       );
       let priorDismissed: number[] = [];
       try {
         priorDismissed = JSON.parse(
-          localStorage.getItem(`ggc_cfm_invite:${boot!.actor.id}:43`) || "[]",
+          localStorage.getItem(`ggc_cfm_invite:${boot!.actor.id}:${week}`) ||
+            "[]",
         );
       } catch {}
       if (
@@ -349,14 +402,17 @@ function Reader({
     )
       setProgressOpen(true);
   }
-  const sourceUrl = studySourceUrl(task, uiLang, boundary === "end");
+  const sourceUrl = studySourceUrl(task, uiLang, boundary === "end", week);
   return (
-    <div className={`study-reader ${panel ? "has-community" : ""}`}>
+    <div
+      ref={readerRef}
+      className={`study-reader ${panel ? "has-community" : ""}`}
+    >
       <header className="study-reader-top">
         <Link
-          href="/week/43"
+          href={`/week/${week}`}
           className="study-brand"
-          aria-label={t("주간 학습으로", "Back to week")}
+          aria-label={t("{week}주차 학습으로", "Back to week {week}", { week })}
         >
           <BookOpen size={20} />
           <span>{t("곡반정와드", "Ward study")}</span>
@@ -366,29 +422,47 @@ function Reader({
         </label>
         <select
           id="study-day"
+          data-study-guide="day"
           value={selectedDay}
           disabled={busy}
           onChange={(e) =>
-            router.replace(`/week/43/day/${e.target.value}?track=${track}`, {
-              scroll: false,
-            })
+            router.replace(
+              getStudyDay(week, Number(e.target.value))
+                ? `/week/${week}/day/${e.target.value}?track=${track}`
+                : dailyStudyHref(week, Number(e.target.value)),
+              {
+                scroll: false,
+              },
+            )
           }
         >
-          {cfmPlan.days.map((d) => (
-            <option key={d.day} value={d.day}>
-              {t("{day}일차", "Day {day}", { day: d.day })} ·{" "}
-              {t(d.shortTitle, dayTitles[d.day - 1])}
-              {materialPercent(
-                d.day,
-                "adult",
-                progress
-                  .filter((p) => p.day === d.day && p.track === "adult")
-                  .map((p) => p.task_id),
-              ).percent === 100
-                ? " ✓"
-                : ""}
-            </option>
-          ))}
+          {Array.from({ length: 7 }, (_, index) => index + 1).map(
+            (dayNumber) => {
+              const d = getStudyDay(week, dayNumber);
+              return (
+                <option key={dayNumber} value={dayNumber}>
+                  {t("{week}주 · {day}일차", "Week {week} · Day {day}", {
+                    week,
+                    day: dayNumber,
+                  })}{" "}
+                  ·{" "}
+                  {d
+                    ? t(studyDayTitle(d, week), studyDayTitle(d, week, true))
+                    : t("기존 학습", "Existing study")}
+                  {materialPercent(
+                    dayNumber,
+                    "adult",
+                    progress
+                      .filter((p) => p.day === dayNumber && p.track === "adult")
+                      .map((p) => p.task_id),
+                    week,
+                  ).percent === 100
+                    ? " ✓"
+                    : ""}
+                </option>
+              );
+            },
+          )}
         </select>
         <button
           type="button"
@@ -396,7 +470,12 @@ function Reader({
           aria-expanded={panel === "question"}
           onClick={() => setPanel(panel === "question" ? null : "question")}
         >
-          {t("오늘의 질문", "Today’s question")}
+          <span className="study-question-label-long">
+            {t("오늘의 질문", "Today’s question")}
+          </span>
+          <span className="study-question-label-short">
+            {t("질문", "Question")}
+          </span>
         </button>
         <a
           className="study-official"
@@ -404,10 +483,21 @@ function Reader({
           target="_blank"
           rel="noreferrer"
         >
-          {t("원본·개인 주석 ↗", "Source · personal notes ↗")}
+          {t("원문·주석 ↗", "Source · notes ↗")}
         </a>
         <button type="button" onClick={() => setMaterialsOpen(true)}>
           {t("자료", "Materials")}
+        </button>
+        <button
+          type="button"
+          className="study-guide-launch"
+          data-study-guide="help"
+          onClick={onGuide}
+          aria-label={t("읽기 안내 다시 보기", "Replay the reading guide")}
+          title={t("읽기 안내", "Reading guide")}
+        >
+          <CircleHelp size={21} aria-hidden="true" />
+          <span>{t("사용 안내", "Guide")}</span>
         </button>
         <Link
           className="study-exit"
@@ -422,35 +512,40 @@ function Reader({
         aria-label={t("오늘의 학습 범위", "Today’s study ranges")}
       >
         <div className="study-range-chips">
-          {(["adult", "family"] as const).map((course) => (
-            <button
-              key={course}
-              type="button"
-              disabled={busy}
-              aria-pressed={track === course}
-              onClick={() => {
-                setTrack(course);
-                setStep(0);
-                setBoundary("start");
-              }}
-              title={course === "adult" ? day.question : day.familyActivity}
-            >
-              {course === "adult"
-                ? t("기본", "Basic")
-                : t("어린이·가족", "Children · family")}{" "}
-              ·{" "}
-              {course === "adult"
-                ? t(day.shortTitle, dayTitles[selectedDay - 1])
-                : t(
-                    familyTitles[selectedDay - 1][0],
-                    familyTitles[selectedDay - 1][1],
-                  )}
-            </button>
-          ))}
+          {(["adult", "family"] as const)
+            .filter(
+              (course) => course === "adult" || day.familyTasks.length > 0,
+            )
+            .map((course) => (
+              <button
+                key={course}
+                type="button"
+                disabled={busy}
+                aria-pressed={track === course}
+                onClick={() => {
+                  setTrack(course);
+                  setStep(0);
+                  setBoundary("start");
+                }}
+                title={course === "adult" ? day.question : day.familyActivity}
+              >
+                {course === "adult"
+                  ? t("기본", "Basic")
+                  : t("어린이·가족", "Children · family")}{" "}
+                ·{" "}
+                {course === "adult"
+                  ? t(studyDayTitle(day, week), studyDayTitle(day, week, true))
+                  : t(
+                      studyFamilyTitle(day, week),
+                      studyFamilyTitle(day, week, true),
+                    )}
+              </button>
+            ))}
         </div>
         <button
           type="button"
           className="study-progress-chip"
+          data-study-guide="progress"
           onClick={() => setProgressOpen(true)}
           aria-label={t(
             "학습 진행률 {percent}퍼센트 보기",
@@ -461,7 +556,11 @@ function Reader({
           {t("오늘 {percent}%", "Today {percent}%", { percent: stats.percent })}
         </button>
         <span className="study-position">
-          {step + 1}/{tasks.length} · {t("파란 선 범위", "Blue-line range")}
+          {step + 1}/{tasks.length}
+          <span className="study-position-detail">
+            {" "}
+            · {t("파란 선 범위", "Blue-line range")}
+          </span>
         </span>
         <button
           type="button"
@@ -553,7 +652,7 @@ function Reader({
         </section>
         {panel && (
           <StudyCommunityPanel
-            week={43}
+            week={week}
             day={selectedDay}
             track={track}
             source={source}
@@ -589,16 +688,22 @@ function Reader({
         <button
           type="button"
           className="study-primary"
+          data-study-guide="share"
           onClick={() => setPanel("range")}
         >
           {t("생각 나누기", "Share a thought")}
         </button>
         <span>
           {track === "adult"
-            ? t(day.question, dayTitles[selectedDay - 1])
+            ? t(day.question, studyDayTitle(day, week, true))
             : t(day.familyQuestion, "What did your family notice?")}
         </span>
-        <button type="button" onClick={next} disabled={!connectionOK || busy}>
+        <button
+          type="button"
+          data-study-guide="next"
+          onClick={next}
+          disabled={!connectionOK || busy}
+        >
           {step === tasks.length - 1
             ? t("오늘 학습 완료 확인", "Review today’s completion")
             : t(
@@ -667,6 +772,8 @@ function Reader({
                           selectedIds: [note.owner],
                         },
                         uiLang,
+                        false,
+                        week,
                       )}
                       target="_blank"
                       rel="noreferrer"
@@ -685,7 +792,7 @@ function Reader({
             "If embedding is unavailable, use the source link above. Church Account annotations are managed on the official site.",
           )}
         </p>
-        <Link href={`/week/43/day/${selectedDay}?view=notes`}>
+        <Link href={`/week/${week}/day/${selectedDay}?view=notes`}>
           {t(
             "기존 학습 화면·개인 기록 열기",
             "Open existing lesson and personal records",
@@ -713,15 +820,18 @@ function Reader({
             </tr>
           </thead>
           <tbody>
-            {cfmPlan.days.map((d) => (
+            {plan.days.map((d) => (
               <tr key={d.day}>
                 <th>
                   <button
                     type="button"
                     onClick={() => {
-                      router.replace(`/week/43/day/${d.day}?track=${track}`, {
-                        scroll: false,
-                      });
+                      router.replace(
+                        `/week/${week}/day/${d.day}?track=${track}`,
+                        {
+                          scroll: false,
+                        },
+                      );
                       setProgressOpen(false);
                     }}
                   >
@@ -735,6 +845,7 @@ function Reader({
                     progress
                       .filter((p) => p.day === d.day && p.track === course)
                       .map((p) => p.task_id),
+                    week,
                   );
                   return (
                     <td key={course}>
@@ -802,7 +913,7 @@ function Reader({
           disabled={!boot}
           onChange={(e) => notes.setField("body", e.target.value)}
         />
-        <Link href={`/week/43/day/${selectedDay}?view=notes`}>
+        <Link href={`/week/${week}/day/${selectedDay}?view=notes`}>
           {t("기존 개인 기록 열기", "Open existing personal records")}
         </Link>
       </Modal>
