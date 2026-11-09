@@ -9,12 +9,14 @@ export function Modal({
   description,
   open,
   onOpenChange,
+  onCloseAutoFocus,
   children,
 }: {
   title: string;
   description?: string;
   open: boolean;
   onOpenChange: (v: boolean) => void;
+  onCloseAutoFocus?: (event: Event) => void;
   children: ReactNode;
 }) {
   const { t } = useApp();
@@ -22,7 +24,7 @@ export function Modal({
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Portal>
         <Dialog.Overlay className="overlay" />
-        <Dialog.Content className="modal">
+        <Dialog.Content className="modal" onCloseAutoFocus={onCloseAutoFocus}>
           <Dialog.Title className="modal-title">{title}</Dialog.Title>
           {/* Without a description the generic hint is for screen readers only. */}
           <Dialog.Description className={description ? undefined : "sr-only"}>
