@@ -8,13 +8,22 @@ import {
   useImperativeHandle,
   useRef,
   useState,
+  useSyncExternalStore,
   type Ref,
   type RefObject,
 } from "react";
 import { layoutStudyGuide, type GuideRect } from "@/lib/study-guide-layout";
 import { useApp } from "../provider";
 
-const STORAGE_KEY = "ggc_study_reader_guide:v2";
+const STORAGE_KEY = "ggc_study_reader_guide:v3";
+const MOBILE_QUERY = "(max-width: 900px)";
+function subscribeMobile(onChange: () => void) {
+  const query = window.matchMedia(MOBILE_QUERY);
+  query.addEventListener("change", onChange);
+  return () => query.removeEventListener("change", onChange);
+}
+const isMobile = () => window.matchMedia(MOBILE_QUERY).matches;
+const serverMobile = () => false;
 const LABELS = [
   {
     target: "day",
@@ -37,9 +46,43 @@ const LABELS = [
     body: ["다음 자료로 가요.", "Mark it read and continue."],
   },
 ] as const;
+const MOBILE_LABELS = [
+  LABELS[0],
+  {
+    target: "focus",
+    title: ["더 넓게 읽기", "More room to read"],
+    body: ["원문이 넓게 보여요.", "Make more room for the source."],
+  },
+  LABELS[2],
+  LABELS[3],
+] as const;
+
+// Both desktop and mobile controls can exist in the DOM. Do not highlight a
+// hidden copy or return focus to help inside a closed mobile tools menu.
+function visibleControl(reader: HTMLElement | null, target: string) {
+  return Array.from(
+    reader?.querySelectorAll<HTMLElement>(`[data-study-guide="${target}"]`) ||
+      [],
+  ).find((element) => {
+    const rect = element.getBoundingClientRect();
+    const style = window.getComputedStyle(element);
+    return (
+      rect.width > 0 &&
+      rect.height > 0 &&
+      rect.right > 0 &&
+      rect.bottom > 0 &&
+      rect.left < window.innerWidth &&
+      rect.top < window.innerHeight &&
+      style.display !== "none" &&
+      style.visibility !== "hidden" &&
+      style.visibility !== "collapse"
+    );
+  });
+}
 
 export type StudyReaderGuideHandle = { open: () => void };
 type GuideView = {
+  mobile: boolean;
   width: number;
   height: number;
   targets: { id: string; rect: GuideRect }[];
@@ -57,8 +100,11 @@ export function StudyReaderGuide({
   contextKey: string;
 }) {
   const { t, uiLang } = useApp();
+  const mobile = useSyncExternalStore(subscribeMobile, isMobile, serverMobile);
+  const labels = mobile ? MOBILE_LABELS : LABELS;
   const [open, setOpen] = useState(false);
   const [view, setView] = useState<GuideView | null>(null);
+  const currentView = view?.mobile === mobile ? view : null;
   const screen = useRef<HTMLDivElement>(null);
   const closeButton = useRef<HTMLButtonElement>(null);
   const labelRefs = useRef(new Map<string, HTMLDivElement>());
@@ -95,10 +141,8 @@ export function StudyReaderGuide({
       frame = requestAnimationFrame(() => {
         const bounds = screen.current?.getBoundingClientRect();
         if (!bounds?.width || !bounds.height) return;
-        const entries = LABELS.flatMap(({ target }) => {
-          const control = readerRef.current?.querySelector<HTMLElement>(
-            `[data-study-guide="${target}"]`,
-          );
+        const entries = labels.flatMap(({ target }) => {
+          const control = visibleControl(readerRef.current, target);
           const note = labelRefs.current.get(target);
           if (!control || !note) return [];
           const rect = control.getBoundingClientRect();
@@ -128,6 +172,7 @@ export function StudyReaderGuide({
             ]
           : [];
         setView({
+          mobile,
           width: bounds.width,
           height: bounds.height,
           targets: entries.map((entry) => ({
@@ -147,10 +192,8 @@ export function StudyReaderGuide({
     if (screen.current) observer.observe(screen.current);
     if (closeButton.current) observer.observe(closeButton.current);
     if (readerRef.current) observer.observe(readerRef.current);
-    for (const { target } of LABELS) {
-      const control = readerRef.current?.querySelector(
-        `[data-study-guide="${target}"]`,
-      );
+    for (const { target } of labels) {
+      const control = visibleControl(readerRef.current, target);
       if (control) observer.observe(control);
       const note = labelRefs.current.get(target);
       if (note) observer.observe(note);
@@ -165,7 +208,7 @@ export function StudyReaderGuide({
       window.removeEventListener("scroll", measure, true);
       window.visualViewport?.removeEventListener("resize", measure);
     };
-  }, [open, readerRef, contextKey, uiLang]);
+  }, [open, readerRef, contextKey, uiLang, labels, mobile]);
 
   const finish = () => {
     try {
@@ -189,9 +232,17 @@ export function StudyReaderGuide({
           }}
           onCloseAutoFocus={(event) => {
             event.preventDefault();
-            readerRef.current
-              ?.querySelector<HTMLElement>('[data-study-guide="help"]')
-              ?.focus({ preventScroll: true });
+            for (const target of ["help", "tools", "focus"]) {
+              const control = visibleControl(readerRef.current, target);
+              if (
+                control &&
+                !control.matches(":disabled") &&
+                !control.closest("[inert]")
+              ) {
+                control.focus({ preventScroll: true });
+                break;
+              }
+            }
           }}
           onClick={(event) => {
             // Consume clicks above the iframe and highlighted controls. Opening
@@ -221,11 +272,11 @@ export function StudyReaderGuide({
                 maskUnits="userSpaceOnUse"
                 x="0"
                 y="0"
-                width={view?.width || "100%"}
-                height={view?.height || "100%"}
+                width={currentView?.width || "100%"}
+                height={currentView?.height || "100%"}
               >
                 <rect width="100%" height="100%" fill="white" />
-                {view?.targets.map(({ id, rect }) => (
+                {currentView?.targets.map(({ id, rect }) => (
                   <rect
                     key={id}
                     x={rect.left - 5}
@@ -263,7 +314,7 @@ export function StudyReaderGuide({
               fillOpacity=".72"
               mask={`url(#${maskId})`}
             />
-            {view?.targets.map(({ id, rect }) => (
+            {currentView?.targets.map(({ id, rect }) => (
               <rect
                 key={id}
                 className="study-guide-outline"
@@ -274,7 +325,7 @@ export function StudyReaderGuide({
                 rx="11"
               />
             ))}
-            {view?.labels.map(({ id, from, to }) => {
+            {currentView?.labels.map(({ id, from, to }) => {
               const vertical =
                 Math.abs(from.y - to.y) > Math.abs(from.x - to.x);
               const cx = vertical ? to.x : from.x;
@@ -289,8 +340,8 @@ export function StudyReaderGuide({
               );
             })}
           </svg>
-          {LABELS.map(({ target, title, body }) => {
-            const placement = view?.labels.find(
+          {labels.map(({ target, title, body }) => {
+            const placement = currentView?.labels.find(
               (item) => item.id === target,
             )?.label;
             return (

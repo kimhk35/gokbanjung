@@ -2,7 +2,17 @@
 import { useCallback, useEffect, useRef, useState, type Ref } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { BookOpen, Check, CircleHelp, MessageCircle, X } from "lucide-react";
+import * as Dialog from "@radix-ui/react-dialog";
+import {
+  BookOpen,
+  Check,
+  CircleHelp,
+  Maximize2,
+  MessageCircle,
+  Minimize2,
+  MoreHorizontal,
+  X,
+} from "lucide-react";
 import { useApp } from "../provider";
 import { api } from "@/lib/client";
 import {
@@ -83,7 +93,7 @@ function StudySourceFrame({
           title={title}
           referrerPolicy="strict-origin-when-cross-origin"
           // A cross-origin load event does not prove the source rendered.
-          // Keep the source link and retry action visible after this event too.
+          // Source and retry actions remain available in mobile reading tools.
           onLoad={() => setWaiting(false)}
         />
         {waiting && (
@@ -196,6 +206,11 @@ function Reader({
     ),
   );
   const [materialsOpen, setMaterialsOpen] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(false);
+  const [readingFocus, setReadingFocus] = useState(false);
+  const toolsTrigger = useRef<HTMLButtonElement>(null);
+  const daySelect = useRef<HTMLSelectElement>(null);
+  const pendingToolAction = useRef<(() => void) | null>(null);
   const [progressOpen, setProgressOpen] = useState(false);
   const [notesOpen, setNotesOpen] = useState(false);
   const [panel, setPanel] = useState<
@@ -403,10 +418,25 @@ function Reader({
       setProgressOpen(true);
   }
   const sourceUrl = studySourceUrl(task, uiLang, boundary === "end", week);
+  function toolAction(action: () => void) {
+    // Open the next panel after this dialog releases its focus trap.
+    pendingToolAction.current = action;
+    setToolsOpen(false);
+  }
+  function showGuide() {
+    setReadingFocus(false);
+    onGuide();
+  }
+  function returnToReader(event: Event) {
+    event.preventDefault();
+    if (toolsTrigger.current?.getClientRects().length)
+      toolsTrigger.current.focus({ preventScroll: true });
+    else daySelect.current?.focus({ preventScroll: true });
+  }
   return (
     <div
       ref={readerRef}
-      className={`study-reader ${panel ? "has-community" : ""}`}
+      className={`study-reader ${panel ? "has-community" : ""} ${readingFocus ? "is-reading-focused" : ""}`}
     >
       <header className="study-reader-top">
         <Link
@@ -421,6 +451,7 @@ function Reader({
           {t("학습 일차", "Study day")}
         </label>
         <select
+          ref={daySelect}
           id="study-day"
           data-study-guide="day"
           value={selectedDay}
@@ -464,6 +495,43 @@ function Reader({
             },
           )}
         </select>
+        <span className="study-focus-title study-mobile-control">
+          <span>{task.label}</span>
+          <small>
+            {step + 1}/{tasks.length}
+          </small>
+        </span>
+        <button
+          type="button"
+          className="study-focus-toggle study-mobile-control"
+          data-study-guide="focus"
+          aria-pressed={readingFocus}
+          aria-label={
+            readingFocus
+              ? t("도구 펼치기", "Show reading tools")
+              : t("넓게 읽기", "Expand reading space")
+          }
+          onClick={() => setReadingFocus((value) => !value)}
+        >
+          {readingFocus ? (
+            <Minimize2 size={20} aria-hidden="true" />
+          ) : (
+            <Maximize2 size={20} aria-hidden="true" />
+          )}
+          <span>{t("도구 펼치기", "Show tools")}</span>
+        </button>
+        <button
+          ref={toolsTrigger}
+          type="button"
+          className="study-tools-toggle study-mobile-control"
+          data-study-guide="tools"
+          aria-label={t("읽기 도구 더보기", "More reading tools")}
+          aria-expanded={toolsOpen}
+          aria-haspopup="dialog"
+          onClick={() => setToolsOpen(true)}
+        >
+          <MoreHorizontal size={22} aria-hidden="true" />
+        </button>
         <button
           type="button"
           className="study-question-button"
@@ -485,14 +553,18 @@ function Reader({
         >
           {t("원문·주석 ↗", "Source · notes ↗")}
         </a>
-        <button type="button" onClick={() => setMaterialsOpen(true)}>
+        <button
+          type="button"
+          className="study-materials-toggle"
+          onClick={() => setMaterialsOpen(true)}
+        >
           {t("자료", "Materials")}
         </button>
         <button
           type="button"
           className="study-guide-launch"
           data-study-guide="help"
-          onClick={onGuide}
+          onClick={showGuide}
           aria-label={t("읽기 안내 다시 보기", "Replay the reading guide")}
           title={t("읽기 안내", "Reading guide")}
         >
@@ -507,6 +579,12 @@ function Reader({
           <X size={20} />
         </Link>
       </header>
+      <div className="study-mobile-context study-mobile-control">
+        <span>{task.label}</span>
+        <small>
+          {step + 1}/{tasks.length}
+        </small>
+      </div>
       <nav
         className="study-reader-scopes"
         aria-label={t("오늘의 학습 범위", "Today’s study ranges")}
@@ -716,10 +794,149 @@ function Reader({
           {status}
         </span>
       </footer>
+      <Dialog.Root open={toolsOpen} onOpenChange={setToolsOpen}>
+        <Dialog.Portal>
+          <Dialog.Overlay className="overlay study-tools-overlay" />
+          <Dialog.Content
+            className="study-tools-sheet"
+            onCloseAutoFocus={(event) => {
+              event.preventDefault();
+              const action = pendingToolAction.current;
+              pendingToolAction.current = null;
+              if (action)
+                requestAnimationFrame(() => {
+                  // The next dialog should return focus to a mounted control.
+                  if (toolsTrigger.current?.getClientRects().length)
+                    toolsTrigger.current.focus({ preventScroll: true });
+                  else daySelect.current?.focus({ preventScroll: true });
+                  action();
+                });
+              else if (toolsTrigger.current?.getClientRects().length)
+                toolsTrigger.current.focus();
+              else daySelect.current?.focus();
+            }}
+          >
+            <Dialog.Title>{t("읽기 도구", "Reading tools")}</Dialog.Title>
+            <Dialog.Description>
+              {task.label} · {step + 1}/{tasks.length}
+            </Dialog.Description>
+            <Dialog.Close
+              className="study-tools-close"
+              aria-label={t("닫기", "Close")}
+            >
+              <X size={22} aria-hidden="true" />
+            </Dialog.Close>
+            {day.familyTasks.length > 0 && (
+              <div
+                className="study-tools-tracks"
+                role="group"
+                aria-label={t("학습 과정", "Study track")}
+              >
+                {(["adult", "family"] as const).map((course) => (
+                  <button
+                    key={course}
+                    type="button"
+                    disabled={busy}
+                    aria-pressed={track === course}
+                    onClick={() =>
+                      toolAction(() => {
+                        setTrack(course);
+                        setStep(0);
+                        setBoundary("start");
+                      })
+                    }
+                  >
+                    {course === "adult"
+                      ? t("기본", "Basic")
+                      : t("어린이·가족", "Children · family")}
+                  </button>
+                ))}
+              </div>
+            )}
+            <div className="study-tools-actions">
+              <button
+                type="button"
+                onClick={() => toolAction(() => setMaterialsOpen(true))}
+              >
+                {t("오늘의 자료", "Today’s materials")}{" "}
+                <span>{tasks.length}</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => toolAction(() => setPanel("question"))}
+              >
+                {t("오늘의 질문", "Today’s question")}
+              </button>
+              <button
+                type="button"
+                onClick={() => toolAction(() => setProgressOpen(true))}
+              >
+                {t("오늘의 진행률", "Today’s progress")}{" "}
+                <span>{stats.percent}%</span>
+              </button>
+              <div className="study-tools-boundaries">
+                <button
+                  type="button"
+                  onClick={() =>
+                    toolAction(() => {
+                      setBoundary("start");
+                      setJump((n) => n + 1);
+                    })
+                  }
+                >
+                  {t("시작 보기 ↑", "Start ↑")}
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    toolAction(() => {
+                      setBoundary("end");
+                      setJump((n) => n + 1);
+                    })
+                  }
+                >
+                  {t("끝 보기 ↓", "End ↓")}
+                </button>
+              </div>
+              <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
+                {t("새 창에서 원문 읽기 ↗", "Read source in a new tab ↗")}
+              </a>
+              <button
+                type="button"
+                onClick={() => toolAction(() => setJump((n) => n + 1))}
+              >
+                {t("원문 다시 불러오기", "Reload source")}
+              </button>
+              <button
+                type="button"
+                data-study-guide="help"
+                onClick={() => toolAction(showGuide)}
+              >
+                {t("사용 안내", "Reading guide")}
+              </button>
+              <Link href={`/week/${week}`}>
+                {t("이번 주 학습으로", "Back to this week")}
+              </Link>
+            </div>
+            <button
+              type="button"
+              className="study-tools-focus"
+              onClick={() =>
+                toolAction(() => setReadingFocus((value) => !value))
+              }
+            >
+              {readingFocus
+                ? t("도구 펼치기", "Show reading tools")
+                : t("넓게 읽기", "Expand reading space")}
+            </button>
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog.Root>
       <Modal
         title={t("오늘의 자료", "Today’s materials")}
         open={materialsOpen}
         onOpenChange={setMaterialsOpen}
+        onCloseAutoFocus={returnToReader}
       >
         <label className="field">
           {t("표시 언어", "Display language")}
@@ -803,6 +1020,7 @@ function Reader({
         title={t("나의 학습 진행", "My learning progress")}
         open={progressOpen}
         onOpenChange={setProgressOpen}
+        onCloseAutoFocus={returnToReader}
       >
         <p>
           {t(
@@ -899,6 +1117,7 @@ function Reader({
         title={t("나만의 학습 메모", "Private learning notes")}
         open={notesOpen}
         onOpenChange={setNotesOpen}
+        onCloseAutoFocus={returnToReader}
       >
         <p>
           {t(

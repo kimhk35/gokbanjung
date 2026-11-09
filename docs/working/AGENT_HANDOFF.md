@@ -1214,3 +1214,37 @@ deployments. Do not merge PR3; create a single PR targeting main and close PR3
 as superseded after the replacement exists. The new arrow design is implemented
 and locally verified. No production database changes or Vercel deployment are
 part of this publication. Existing unrelated files remain intact.
+
+## Mobile reading space — 2026-11-09
+
+PR3 was closed and replacement PR5 was created, then merged into main at
+`a305e86`. The approved mobile follow-up is on
+`codex/mobile-reader-focus`, branched from that main commit. Delivery remains
+Git/PR only; the new branch is also excluded from Vercel automatic deployments.
+
+At <=900px, the reader now has a 56px header and 32px material context row.
+Courses, progress, materials, question, source open/retry, start/end and help
+are available through the More reading tools sheet. The persistent source
+fallback row is hidden on mobile, but fallback actions remain in the sheet and
+the source-loading notice. Desktop keeps its existing controls. Expanded
+reading uses a 48px header and retains Share / Read-next actions. It changes
+layout only: the iframe's key/src is not changed by focus or sheet toggles.
+There is no attempt to intercept cross-origin scrolling or remove Church UI.
+
+The overview guide uses day/focus/share/next on mobile and the existing desktop
+targets. Its v3 dismissal is once per browser, with replay in the tools sheet.
+Hidden controls are excluded, and focus returns to a visible control. The
+shared Modal has an optional close-focus handler used by reader dialogs to
+return keyboard users to More after opening materials or progress.
+
+Verification: 15 guide-layout/material-progress/community tests, scoped ESLint,
+TypeScript and webpack build (33 pages) passed on Node24.22.1. Local browser
+emulation checked 390x844 and320x568, plus1280x720 desktop controls. At390x844,
+source frame heights were698px normally and738px expanded. The selected
+`figure1_p1` and scroll offset442 stayed unchanged across a focus toggle.
+Materials/progress dialogs, Escape focus restoration, mobile guide replay,
+draft recovery without posting, and Next2/11→3/11 while remaining expanded
+worked. The isolated local progress endpoint returned200. Physical phones and
+production were not tested; the official cross-origin page remains external.
+Local dev uses `.local-db/week46-preview`, PID3792,127.0.0.1:3000. Screenshot
+evidence is in ignored `test-results/mobile-reader/`.
