@@ -32,7 +32,9 @@ export async function requestTeacher(
     3600,
   );
 
-  let userId = a.id;
+  // The application always belongs to the current actor, so same-browser guest records stay attached.
+  const userId = a.id;
+  let authUserId: string | undefined;
   let client: AccountAuthClient | undefined;
   if (signedIn) {
     const current = await session.auth.getUser();
@@ -47,6 +49,10 @@ export async function requestTeacher(
     v.name = a.nickname || value.username;
     // Linked member actor IDs may differ from the Auth ID; actor() already resolved them.
   } else {
+    const linked = await privileged((db) =>
+      db.query("select 1 from ggc.account_requests where actor_id=$1", [a.id]),
+    );
+    ensure(!linked.length, 409, "account_exists");
     client = admin || adminAuthClient();
     const created = await client.auth.admin.createUser({
       email: v.email,
@@ -54,25 +60,39 @@ export async function requestTeacher(
       email_confirm: true,
     });
     ensure(!created.error && created.data.user, 400, "teacher_request_failed");
-    userId = created.data.user.id;
+    authUserId = created.data.user.id;
   }
   try {
     await privileged(async (db) => {
-      if (!signedIn)
-        await db.query(
-          "insert into ggc.actors(id,kind,role,nickname,course_id) values($1,'user','TEACHER_PENDING',$2,$3)",
-          [userId, v.name, a.course_id],
-        );
       const target = (
-        await db.query("select role from ggc.actors where id=$1 for update", [
-          userId,
-        ])
+        await db.query(
+          "select kind,role from ggc.actors where id=$1 for update",
+          [userId],
+        )
       )[0];
       ensure(
         target && !["ADMIN", "TEACHER"].includes(String(target.role)),
         400,
         "invalid_transition",
       );
+      if (!signedIn) {
+        ensure(target.kind === "guest" && authUserId, 400, "invalid_transition");
+        // Re-check under the row lock so concurrent requests cannot link twice.
+        const linked = await db.query(
+          "select 1 from ggc.account_requests where actor_id=$1",
+          [userId],
+        );
+        ensure(!linked.length, 409, "account_exists");
+        // Approval of the teacher application also approves this sign-in link.
+        await db.query(
+          "insert into ggc.account_requests(user_id,actor_id,email) values($1,$2,$3)",
+          [authUserId, userId, v.email],
+        );
+        await db.query(
+          "update ggc.actors set role='TEACHER_PENDING',nickname=$2 where id=$1",
+          [userId, v.name],
+        );
+      }
       const application = await db.query(
         "insert into ggc.teacher_applications(user_id,name,email,ward,message) values($1,$2,$3,'곡반정와드','') on conflict(user_id) do nothing returning id",
         [userId, v.name, v.email],
@@ -81,7 +101,7 @@ export async function requestTeacher(
     });
   } catch (e) {
     // Compensate only for the Auth account created by this request, never an existing user.
-    if (client) await client.auth.admin.deleteUser(userId);
+    if (client && authUserId) await client.auth.admin.deleteUser(authUserId);
     throw e;
   }
   return { ok: true, status: "pending" as const };

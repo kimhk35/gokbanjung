@@ -47,6 +47,13 @@ test("ID signup, admin approval/reset/removal, and private lesson images", async
     kind: "user",
     role: "MEMBER",
   };
+  // Teacher applications attach to the applying guest actor.
+  const applicant: Actor = {
+    ...base,
+    id: randomUUID(),
+    kind: "guest",
+    role: "GUEST",
+  };
   const teacherId = randomUUID();
   let created = 0,
     reset = 0;
@@ -84,7 +91,7 @@ test("ID signup, admin approval/reset/removal, and private lesson images", async
     },
   } as unknown as AccountAuthClient;
   await privileged(async (db) => {
-    for (const a of [admin, guest, member])
+    for (const a of [admin, guest, member, applicant])
       await db.query(
         "insert into ggc.actors(id,kind,role,nickname,course_id) values($1,$2,$3,$4,$5)",
         [a.id, a.kind, a.role, a.nickname, a.course_id],
@@ -94,7 +101,7 @@ test("ID signup, admin approval/reset/removal, and private lesson images", async
   assert.equal(displayLoginId(usernameEmail("teacher_01")), "teacher_01");
   assert.throws(() => usernameEmail("bad id"));
   await requestTeacher(
-    guest,
+    applicant,
     { username: "Teacher_01", password: "MyPassword123!" },
     client,
     client,
@@ -104,18 +111,18 @@ test("ID signup, admin approval/reset/removal, and private lesson images", async
       (
         await db.query(
           "select * from ggc.teacher_applications where user_id=$1",
-          [teacherId],
+          [applicant.id],
         )
       )[0],
   );
   assert.equal(app.status, "pending");
   assert.equal(
-    (await teachers(base.course_id)).some((t) => t.id === teacherId),
+    (await teachers(base.course_id)).some((t) => t.id === applicant.id),
     false,
   );
   const pending: Actor = {
     ...base,
-    id: teacherId,
+    id: applicant.id,
     role: "TEACHER_PENDING",
     kind: "user",
   };
@@ -129,12 +136,12 @@ test("ID signup, admin approval/reset/removal, and private lesson images", async
   await writeData(admin, "approve-teacher", { id: app.id, status: "approved" });
   const teacher: Actor = { ...pending, role: "TEACHER" };
   assert.equal(
-    (await teachers(base.course_id)).some((t) => t.id === teacherId),
+    (await teachers(base.course_id)).some((t) => t.id === applicant.id),
     true,
   );
   await adminResetPassword(
     admin,
-    { actor_id: teacherId, mode: "temporary", password: "NewSecret123!" },
+    { actor_id: applicant.id, mode: "temporary", password: "NewSecret123!" },
     "https://unused.invalid",
     client,
   );
@@ -142,7 +149,7 @@ test("ID signup, admin approval/reset/removal, and private lesson images", async
   await assert.rejects(
     adminResetPassword(
       teacher,
-      { actor_id: teacherId, mode: "temporary", password: "NewSecret123!" },
+      { actor_id: applicant.id, mode: "temporary", password: "NewSecret123!" },
       "",
       client,
     ),
@@ -185,12 +192,12 @@ test("ID signup, admin approval/reset/removal, and private lesson images", async
   );
   await privileged(async (db) => {
     await db.query("update ggc.actors set teacher_id=$1 where id=$2", [
-      teacherId,
+      applicant.id,
       guest.id,
     ]);
     await db.query(
       "insert into ggc.reflections(owner_id,week,day,content) values($1,38,1,$2)",
-      [teacherId, JSON.stringify({ text: "keep me" })],
+      [applicant.id, JSON.stringify({ text: "keep me" })],
     );
   });
   await assert.rejects(
@@ -204,15 +211,15 @@ test("ID signup, admin approval/reset/removal, and private lesson images", async
     "stale teacher session must lose access",
   );
   assert.equal(
-    (await teachers(base.course_id)).some((t) => t.id === teacherId),
+    (await teachers(base.course_id)).some((t) => t.id === applicant.id),
     false,
   );
   const after = await privileged(async (db) => ({
     a: (
-      await db.query("select role from ggc.actors where id=$1", [teacherId])
+      await db.query("select role from ggc.actors where id=$1", [applicant.id])
     )[0],
     records: await db.query("select * from ggc.reflections where owner_id=$1", [
-      teacherId,
+      applicant.id,
     ]),
     g: (
       await db.query("select teacher_id from ggc.actors where id=$1", [
