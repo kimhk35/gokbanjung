@@ -4,7 +4,7 @@ import { actor } from "@/lib/auth";
 import { privileged } from "@/lib/db";
 import { MATERIAL_MAX, storeFile } from "@/lib/file-storage";
 import { requireAdmin, rateLimit } from "@/lib/service";
-import { AppError, ensure } from "@/lib/errors";
+import { AppError, ensure, serverFailure } from "@/lib/errors";
 import { sameOrigin } from "@/lib/site-url";
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -90,6 +90,9 @@ export async function POST(req: NextRequest) {
     });
     return NextResponse.json(data[0]);
   } catch (error) {
+    const failure = serverFailure(error);
+    if (failure)
+      return NextResponse.json({ error: failure.code }, { status: failure.status });
     return NextResponse.json(
       { error: error instanceof AppError ? error.code : "upload_failed" },
       { status: error instanceof AppError ? error.status : 500 },

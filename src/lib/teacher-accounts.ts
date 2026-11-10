@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { createHash } from "node:crypto";
-import type { AccountAuthClient } from "./database-auth";
+import { authFailure, type AccountAuthClient } from "./database-auth";
 import type { Actor } from "./types";
 import { privileged } from "./db";
 import { ensure } from "./errors";
@@ -59,7 +59,8 @@ export async function requestTeacher(
       password: v.password!,
       email_confirm: true,
     });
-    ensure(!created.error && created.data.user, 400, "teacher_request_failed");
+    if (created.error || !created.data.user)
+      throw authFailure(created.error, "teacher_request_failed");
     authUserId = created.data.user.id;
   }
   try {

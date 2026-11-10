@@ -1,5 +1,9 @@
 import { z } from "zod";
-import { databaseAuthClient, type AccountAuthClient } from "./database-auth";
+import {
+  authFailure,
+  databaseAuthClient,
+  type AccountAuthClient,
+} from "./database-auth";
 import { privileged } from "./db";
 import { ensure, AppError } from "./errors";
 import { rateLimit, requireAdmin } from "./service";
@@ -50,7 +54,8 @@ export async function requestAccount(
           email: v.email,
           password: v.password,
         });
-  ensure(!result.error && result.data.user, 400, "account_request_failed");
+  if (result.error || !result.data.user)
+    throw authFailure(result.error, "account_request_failed");
   if (a.kind !== "guest")
     ensure(result.data.user.id === a.id, 403, "forbidden");
   try {

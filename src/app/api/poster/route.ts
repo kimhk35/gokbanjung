@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { randomUUID } from "node:crypto";
 import { actor } from "@/lib/auth";
 import { rateLimit } from "@/lib/service";
-import { AppError, ensure } from "@/lib/errors";
+import { AppError, ensure, serverFailure } from "@/lib/errors";
 import { sameOrigin } from "@/lib/site-url";
 import { POSTER_MAX, sniffImage } from "@/lib/poster";
 import { privileged } from "@/lib/db";
@@ -59,6 +59,9 @@ export async function POST(req: NextRequest) {
   } catch (e) {
     if (e instanceof AppError)
       return NextResponse.json({ error: e.code }, { status: e.status });
+    const failure = serverFailure(e);
+    if (failure)
+      return NextResponse.json({ error: failure.code }, { status: failure.status });
     console.error("poster_failed", { category: "internal" });
     return NextResponse.json({ error: "server_error" }, { status: 500 });
   }

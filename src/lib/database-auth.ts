@@ -114,6 +114,19 @@ export function databaseAuth() {
   return instance;
 }
 
+// Report a provider rejection by cause. Only a provider duplicate means the ID is taken.
+export function authFailure(error: unknown, fallback: string) {
+  if (error instanceof AppError) return error;
+  if (isAPIError(error)) {
+    const code = String((error.body as { code?: string } | undefined)?.code || "");
+    if (code.startsWith("USER_ALREADY_EXISTS"))
+      return new AppError(409, "username_taken");
+    if (code.startsWith("PASSWORD_") || code.startsWith("INVALID_EMAIL"))
+      return new AppError(400, "invalid_input");
+    if (error.statusCode === 429) return new AppError(429, "rate_limited");
+  }
+  return new AppError(400, fallback);
+}
 async function userResult(
   fn: () => Promise<AuthUser | null>,
 ): Promise<UserResult> {
@@ -237,7 +250,7 @@ export async function verifyCreatedAuthUser(db: DB, user: AuthUser) {
     "select id from public.ggc_auth_user where id=$1 and email=$2",
     [user.id, user.email!],
   );
-  ensure(rows.length === 1, 409, "account_exists");
+  ensure(rows.length === 1, 409, "username_taken");
 }
 export async function updateDatabasePassword(
   db: DB,

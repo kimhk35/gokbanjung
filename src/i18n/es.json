@@ -1456,5 +1456,15 @@
  "Run을 누릅니다. 아래 결과에 '완료: …'가 나오면 끝입니다.": "Pulsa Run. Termina cuando el resultado muestre «완료: …».",
  "Supabase 프로젝트 주소": "Dirección del proyecto de Supabase",
  "supabase.com에 로그인 → 복음교리반 프로젝트를 엽니다.": "Inicia sesión en supabase.com y abre el proyecto de Doctrina del Evangelio.",
- "vercel.com에 로그인 → Add New → Project → gokbanjung 옆 Import.": "Inicia sesión en vercel.com → Add New → Project → Import junto a gokbanjung."
+ "vercel.com에 로그인 → Add New → Project → gokbanjung 옆 Import.": "Inicia sesión en vercel.com → Add New → Project → Import junto a gokbanjung.",
+ "교사 신청을 완료하지 못했습니다. 잠시 후 다시 시도하고, 계속되면 관리자에게 알려 주세요.": "No se pudo completar la solicitud. Inténtalo de nuevo y avisa al administrador si el problema continúa.",
+ "계정 신청을 완료하지 못했습니다. 잠시 후 다시 시도하고, 계속되면 관리자에게 알려 주세요.": "No se pudo completar la solicitud de cuenta. Inténtalo de nuevo y avisa al administrador si el problema continúa.",
+ "교사 계정을 만들지 못했습니다. 잠시 후 다시 시도해 주세요.": "No se pudo crear la cuenta de maestro. Inténtalo de nuevo.",
+ "이 브라우저에서 이미 신청한 계정이 있습니다. 관리자 승인 후 그 아이디로 로그인해 주세요.": "Este navegador ya tiene una solicitud de cuenta. Inicia sesión con ese ID después de la aprobación.",
+ "이미 사용 중인 아이디입니다. 다른 아이디를 입력해 주세요.": "Este ID ya está en uso. Elige otro ID.",
+ "아직 관리자 승인 전이거나 사용이 중지된 계정입니다. 관리자에게 문의해 주세요.": "Esta cuenta está pendiente de aprobación o fue suspendida. Comunícate con el administrador.",
+ "로그인 기능이 아직 준비되지 않았습니다. 관리자에게 서버 설정 점검을 요청해 주세요.": "El inicio de sesión aún no está listo. Pide al administrador que revise la configuración del servidor.",
+ "계정 저장소에 연결하지 못했습니다. 서버 설정을 점검해 주세요.": "No se pudo conectar con la base de datos de cuentas. Revisa la configuración del servidor.",
+ "서버 데이터베이스 업데이트가 아직 적용되지 않았습니다. 관리자에게 알려 주세요.": "Aún no se ha aplicado una actualización de la base de datos del servidor. Avisa al administrador.",
+ "일시적인 연결 문제입니다. 잠시 후 다시 시도해 주세요.": "Hay un problema temporal de conexión. Inténtalo de nuevo en un momento."
 }

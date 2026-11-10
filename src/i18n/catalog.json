@@ -1456,5 +1456,15 @@
  "Run을 누릅니다. 아래 결과에 '완료: …'가 나오면 끝입니다.": "Press Run. Done when the result shows '완료: …'.",
  "Supabase 프로젝트 주소": "Supabase project address",
  "supabase.com에 로그인 → 복음교리반 프로젝트를 엽니다.": "Sign in to supabase.com and open the Gospel Doctrine project.",
- "vercel.com에 로그인 → Add New → Project → gokbanjung 옆 Import.": "Sign in to vercel.com → Add New → Project → Import next to gokbanjung."
+ "vercel.com에 로그인 → Add New → Project → gokbanjung 옆 Import.": "Sign in to vercel.com → Add New → Project → Import next to gokbanjung.",
+ "교사 신청을 완료하지 못했습니다. 잠시 후 다시 시도하고, 계속되면 관리자에게 알려 주세요.": "The application could not be completed. Please try again, and tell the administrator if it keeps failing.",
+ "계정 신청을 완료하지 못했습니다. 잠시 후 다시 시도하고, 계속되면 관리자에게 알려 주세요.": "The account request could not be completed. Please try again, and tell the administrator if it keeps failing.",
+ "교사 계정을 만들지 못했습니다. 잠시 후 다시 시도해 주세요.": "The teacher account could not be created. Please try again.",
+ "이 브라우저에서 이미 신청한 계정이 있습니다. 관리자 승인 후 그 아이디로 로그인해 주세요.": "This browser already has an account request. Sign in with that ID after approval.",
+ "이미 사용 중인 아이디입니다. 다른 아이디를 입력해 주세요.": "This ID is already in use. Please choose another ID.",
+ "아직 관리자 승인 전이거나 사용이 중지된 계정입니다. 관리자에게 문의해 주세요.": "This account is awaiting approval or has been suspended. Please contact the administrator.",
+ "로그인 기능이 아직 준비되지 않았습니다. 관리자에게 서버 설정 점검을 요청해 주세요.": "Sign-in is not ready yet. Ask the administrator to check the server settings.",
+ "계정 저장소에 연결하지 못했습니다. 서버 설정을 점검해 주세요.": "The account database could not be reached. Please check the server settings.",
+ "서버 데이터베이스 업데이트가 아직 적용되지 않았습니다. 관리자에게 알려 주세요.": "A server database update has not been applied yet. Please tell the administrator.",
+ "일시적인 연결 문제입니다. 잠시 후 다시 시도해 주세요.": "There is a temporary connection problem. Please try again shortly."
 }

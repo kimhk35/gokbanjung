@@ -1456,5 +1456,15 @@
  "Run을 누릅니다. 아래 결과에 '완료: …'가 나오면 끝입니다.": "Pindutin ang Run. Tapos na kapag ipinakita ng resulta ang '완료: …'.",
  "Supabase 프로젝트 주소": "Address ng proyekto sa Supabase",
  "supabase.com에 로그인 → 복음교리반 프로젝트를 엽니다.": "Mag-sign in sa supabase.com at buksan ang proyekto ng Doktrina ng Ebanghelyo.",
- "vercel.com에 로그인 → Add New → Project → gokbanjung 옆 Import.": "Mag-sign in sa vercel.com → Add New → Project → Import sa tabi ng gokbanjung."
+ "vercel.com에 로그인 → Add New → Project → gokbanjung 옆 Import.": "Mag-sign in sa vercel.com → Add New → Project → Import sa tabi ng gokbanjung.",
+ "교사 신청을 완료하지 못했습니다. 잠시 후 다시 시도하고, 계속되면 관리자에게 알려 주세요.": "Hindi natapos ang aplikasyon. Pakisubukang muli, at sabihan ang administrator kung patuloy itong pumapalya.",
+ "계정 신청을 완료하지 못했습니다. 잠시 후 다시 시도하고, 계속되면 관리자에게 알려 주세요.": "Hindi natapos ang kahilingan sa account. Pakisubukang muli, at sabihan ang administrator kung patuloy itong pumapalya.",
+ "교사 계정을 만들지 못했습니다. 잠시 후 다시 시도해 주세요.": "Hindi nagawa ang account ng guro. Pakisubukang muli.",
+ "이 브라우저에서 이미 신청한 계정이 있습니다. 관리자 승인 후 그 아이디로 로그인해 주세요.": "May kahilingan na sa account mula sa browser na ito. Mag-sign in gamit ang ID na iyon pagkatapos maaprubahan.",
+ "이미 사용 중인 아이디입니다. 다른 아이디를 입력해 주세요.": "Ginagamit na ang ID na ito. Pumili ng ibang ID.",
+ "아직 관리자 승인 전이거나 사용이 중지된 계정입니다. 관리자에게 문의해 주세요.": "Naghihintay pa ng pag-apruba o sinuspinde ang account na ito. Makipag-ugnayan sa administrator.",
+ "로그인 기능이 아직 준비되지 않았습니다. 관리자에게 서버 설정 점검을 요청해 주세요.": "Hindi pa handa ang pag-sign in. Hilingin sa administrator na suriin ang mga setting ng server.",
+ "계정 저장소에 연결하지 못했습니다. 서버 설정을 점검해 주세요.": "Hindi maabot ang database ng mga account. Pakisuri ang mga setting ng server.",
+ "서버 데이터베이스 업데이트가 아직 적용되지 않았습니다. 관리자에게 알려 주세요.": "Hindi pa nailalapat ang isang update sa database ng server. Pakisabihan ang administrator.",
+ "일시적인 연결 문제입니다. 잠시 후 다시 시도해 주세요.": "May pansamantalang problema sa koneksyon. Pakisubukang muli mamaya."
 }

@@ -69,7 +69,7 @@ test("database auth signs in UUID users and revokes sessions on logout and passw
     });
     await assert.rejects(
       verifyCreatedAuthUser(db, duplicate.user),
-      /account_exists/,
+      /username_taken/,
     );
     assert.equal(
       (await db.query("select count(*)::int as n from public.ggc_auth_user"))[0]

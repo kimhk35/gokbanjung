@@ -5,7 +5,7 @@ import { connection } from "next/server";
 import { actor, createGuest, authClient } from "@/lib/auth";
 import { readData, writeData, rateLimit, requireAdmin } from "@/lib/service";
 import { generate, reviewAi } from "@/lib/ai";
-import { AppError, ensure } from "@/lib/errors";
+import { AppError, ensure, serverFailure } from "@/lib/errors";
 import { privileged } from "@/lib/db";
 import { checkAiConnection } from "@/lib/openai-config";
 import { sameOrigin, siteOrigin } from "@/lib/site-url";
@@ -241,7 +241,7 @@ async function handle(
         !["ADMIN", "TEACHER", "MEMBER"].includes(signed.role)
       ) {
         await auth.auth.signOut();
-        throw new AppError(403, "approval_required");
+        throw new AppError(403, "approval_pending");
       }
       return json({ ok: true });
     }
@@ -280,11 +280,10 @@ async function handle(
         password: value.password,
         email_confirm: true,
       });
-      ensure(
-        !created.error && created.data.user,
-        400,
-        "teacher_creation_failed",
-      );
+      if (created.error || !created.data.user) {
+        const { authFailure } = await import("@/lib/database-auth");
+        throw authFailure(created.error, "teacher_creation_failed");
+      }
       const teacherId = created.data.user.id;
       try {
         await privileged(async (db) => {
@@ -380,12 +379,12 @@ async function handle(
       return json({ error: error.code }, error.status);
     if (error instanceof z.ZodError || error instanceof SyntaxError)
       return json({ error: "invalid_input" }, 400);
+    const failure = serverFailure(error);
+    if (failure) return json({ error: failure.code }, failure.status);
     const dbCode =
       error && typeof error === "object" && "code" in error
         ? String(error.code)
         : "";
-    if (["42501", "23503", "23514", "P0001"].includes(dbCode))
-      return json({ error: "forbidden" }, 403);
     // Do not log SQL parameters, private reflections, credentials, or uploads.
     console.error("request_failed", { category: dbCode || "internal" });
     return json({ error: "server_error" }, 500);
