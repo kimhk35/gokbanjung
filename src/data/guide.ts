@@ -409,12 +409,12 @@ export const GUIDE: GuideSection[] = [
         "Left menu SQL Editor → New query.",
       ),
       L(
-        "운영자가 제공한 Neon 로그인과 파일 저장소 업데이트 SQL을 열어 전부 복사한 후 편집기에 붙여 넣습니다.",
-        "Copy the supplied Neon account and file-storage update SQL into the editor.",
+        "폴더의 DB업데이트_SQL편집기용.sql을 메모장으로 열어 전부 복사(Ctrl+A, Ctrl+C) → 편집기에 붙여 넣기.",
+        "Open DB업데이트_SQL편집기용.sql in Notepad, copy everything (Ctrl+A, Ctrl+C) and paste it into the editor.",
       ),
       L(
-        "Run을 누른 후 오류 없이 실행됐는지 확인합니다.",
-        "Press Run and check that it completes without errors.",
+        "Run을 누릅니다. 아래 결과에 '완료: …'가 나오면 끝입니다.",
+        "Press Run. Done when the result shows '완료: …'.",
       ),
     ],
     note: L(
