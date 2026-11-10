@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { mkdtemp } from "node:fs/promises";
 import { randomUUID } from "node:crypto";
-import type { SupabaseClient } from "@supabase/supabase-js";
+import type { AccountAuthClient } from "../src/lib/database-auth";
 import type { Actor } from "../src/lib/types";
 import { privileged, asActor } from "../src/lib/db";
 import { requestTeacher, removeTeacher } from "../src/lib/teacher-accounts";
@@ -82,7 +82,7 @@ test("ID signup, admin approval/reset/removal, and private lesson images", async
         },
       },
     },
-  } as unknown as SupabaseClient;
+  } as unknown as AccountAuthClient;
   await privileged(async (db) => {
     for (const a of [admin, guest, member])
       await db.query(

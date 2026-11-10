@@ -260,14 +260,6 @@ async function handle(
     if (path === "admin/create-teacher") {
       const a = await actor();
       await requireAdmin(a);
-      const serviceKey =
-        process.env.SUPABASE_SECRET_KEY ||
-        process.env.SUPABASE_SERVICE_ROLE_KEY;
-      ensure(
-        process.env.NEXT_PUBLIC_SUPABASE_URL && serviceKey,
-        503,
-        "admin_auth_unavailable",
-      );
       const { usernameSchema, usernameEmail } = await import("@/lib/login-id");
       const { passwordSchema } = await import("@/lib/account-security");
       const submitted = z
@@ -281,13 +273,9 @@ async function handle(
         message: "관리자가 직접 생성한 교사 계정입니다.",
       };
       await rateLimit("admin-create-teacher:" + a.id, 20, 3600);
-      const { createClient } = await import("@supabase/supabase-js");
-      const supabase = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        serviceKey!,
-        { auth: { persistSession: false, autoRefreshToken: false } },
-      );
-      const created = await supabase.auth.admin.createUser({
+      const { adminAuthClient } = await import("@/lib/account-security");
+      const accounts = adminAuthClient();
+      const created = await accounts.auth.admin.createUser({
         email: value.email,
         password: value.password,
         email_confirm: true,
@@ -332,7 +320,7 @@ async function handle(
         });
       } catch (error) {
         // Keep Auth and application roles in sync if database setup fails.
-        await supabase.auth.admin.deleteUser(teacherId);
+        await accounts.auth.admin.deleteUser(teacherId);
         throw error;
       }
       return json({ id: teacherId, name: value.name, email: value.email });

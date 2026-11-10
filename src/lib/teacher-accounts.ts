@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { createHash } from "node:crypto";
-import type { SupabaseClient } from "@supabase/supabase-js";
+import type { AccountAuthClient } from "./database-auth";
 import type { Actor } from "./types";
 import { privileged } from "./db";
 import { ensure } from "./errors";
@@ -11,8 +11,8 @@ import { usernameSchema, usernameEmail } from "./login-id";
 export async function requestTeacher(
   a: Actor,
   input: unknown,
-  session: SupabaseClient,
-  admin?: SupabaseClient,
+  session: AccountAuthClient,
+  admin?: AccountAuthClient,
 ) {
   ensure(a.role !== "ADMIN" && a.role !== "TEACHER", 400, "invalid_transition");
   const value = z
@@ -33,7 +33,7 @@ export async function requestTeacher(
   );
 
   let userId = a.id;
-  let client: SupabaseClient | undefined;
+  let client: AccountAuthClient | undefined;
   if (signedIn) {
     const current = await session.auth.getUser();
     ensure(!current.error && !!current.data.user, 403, "forbidden");

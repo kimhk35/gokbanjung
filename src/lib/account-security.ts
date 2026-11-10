@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { databaseAuthClient, type AccountAuthClient } from "./database-auth";
 import { privileged } from "./db";
 import { ensure, AppError } from "./errors";
 import { rateLimit, requireAdmin } from "./service";
@@ -11,40 +11,14 @@ export const accountRequestSchema = z.object({
   username: usernameSchema,
   password: passwordSchema,
 });
-export function publicAuthClient() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key =
-    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  ensure(url && key, 503, "auth_unavailable");
-  return createClient(url, key, {
-    auth: {
-      flowType: "implicit",
-      persistSession: false,
-      autoRefreshToken: false,
-      detectSessionInUrl: false,
-    },
-  });
-}
-export function adminAuthClient() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key =
-    process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
-  ensure(url && key, 503, "admin_auth_unavailable");
-  return createClient(url, key, {
-    auth: {
-      persistSession: false,
-      autoRefreshToken: false,
-      detectSessionInUrl: false,
-    },
-  });
-}
+export function publicAuthClient() { return databaseAuthClient(); }
+export function adminAuthClient() { return databaseAuthClient(); }
 export async function requestAccount(
   a: Actor,
   input: unknown,
-  auth: SupabaseClient,
+  auth: AccountAuthClient,
   origin: string,
-  admin?: SupabaseClient,
+  admin?: AccountAuthClient,
 ) {
   ensure(
     !a.account_status && (a.kind === "guest" || a.role === "TEACHER_PENDING"),
@@ -101,7 +75,7 @@ export async function sendPasswordReset(
   emailInput: unknown,
   origin: string,
   requestKey: string,
-  client?: SupabaseClient,
+  client?: AccountAuthClient,
 ) {
   const email = z.email().parse(emailInput).trim().toLowerCase();
   const digest = createHash("sha256").update(email).digest("hex");
@@ -129,7 +103,7 @@ export async function adminResetPassword(
   a: Actor,
   input: unknown,
   origin: string,
-  client?: SupabaseClient,
+  client?: AccountAuthClient,
 ) {
   await requireAdmin(a);
   const v = z
@@ -155,7 +129,7 @@ export async function adminResetPassword(
 }
 
 // Let an administrator approve legacy requests without requiring an old verification email.
-export async function confirmForApproval(a: Actor, path: string, input: unknown, client?: SupabaseClient) {
+export async function confirmForApproval(a: Actor, path: string, input: unknown, client?: AccountAuthClient) {
   await requireAdmin(a);
   const value = z.object({id:z.uuid().optional(),user_id:z.uuid().optional(),status:z.literal("approved")}).parse(input);
   const target = await privileged(async db => {

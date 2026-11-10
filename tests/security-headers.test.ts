@@ -7,7 +7,9 @@ test("production pages may not turn text into code (no unsafe-eval)", () => {
   assert.match(prod, /script-src 'self' 'unsafe-inline';/);
   assert.doesNotMatch(prod, /unsafe-eval/);
   assert.match(prod, /frame-ancestors 'none'/);
-  assert.match(prod, /img-src 'self' data: blob: https:\/\/\*\.supabase\.co/);
+  assert.match(prod, /img-src 'self' data: blob:;/);
+  assert.match(prod, /connect-src 'self';/);
+  assert.doesNotMatch(prod, /supabase\.co/);
 });
 test("the local development server keeps eval for hot reload", () => {
   assert.match(contentSecurityPolicy(true), /script-src 'self' 'unsafe-inline' 'unsafe-eval';/);

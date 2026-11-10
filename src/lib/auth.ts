@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import { randomBytes, createHash } from "node:crypto";
-import { createServerClient } from "@supabase/ssr";
+import { NextResponse } from "next/server";
+import { databaseAuthClient } from "./database-auth";
 import { privileged } from "./db";
 import type { Actor } from "./types";
 import { AppError } from "./errors";
@@ -16,33 +17,21 @@ export function hash(token: string) {
 }
 export async function authClient() {
   const store = await cookies();
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key =
-    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (!url || !key) throw new AppError(503, "auth_unavailable");
-  return createServerClient(url, key, {
-    cookies: {
-      getAll: () => store.getAll(),
-      setAll: (items) =>
-        items.forEach(({ name, value, options }) =>
-          store.set(name, value, {
-            ...options,
-            httpOnly: true,
-            sameSite: "lax",
-            secure: process.env.NODE_ENV === "production",
-          }),
-        ),
+  return databaseAuthClient({
+    headers: async () => new Headers({ cookie: store.toString() }),
+    apply: async (headers) => {
+      const response = new NextResponse(null, { headers });
+      for (const cookie of response.cookies.getAll()) store.set(cookie);
     },
   });
 }
 export async function actor(): Promise<Actor> {
   const store = await cookies();
-  if (store.getAll().some((c) => c.name.startsWith("sb-"))) {
-    const supabase = await authClient();
+  if (store.getAll().some((c) => c.name.includes("ggc_auth.session_token"))) {
+    const client = await authClient();
     const {
       data: { user },
-    } = await supabase.auth.getUser();
+    } = await client.auth.getUser();
     if (user && !user.is_anonymous) {
       return privileged(async (db) => {
         const linked = (

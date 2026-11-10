@@ -371,8 +371,8 @@ export const GUIDE: GuideSection[] = [
         "Sign in to vercel.com → Add New → Project → Import next to gokbanjung.",
       ),
       L(
-        "Environment Variables에 필수 4개를 넣습니다. 값은 기존 gokbanjeong-gospel-class 프로젝트의 Settings → Environment Variables에서 복사합니다.",
-        "Add the 4 required Environment Variables, copying the values from the existing gokbanjeong-gospel-class project's Settings → Environment Variables.",
+        "Environment Variables에 Neon의 DATABASE_URL을 넣습니다. 로그인과 파일도 같은 DB를 사용합니다.",
+        "Add the Neon DATABASE_URL. Accounts and files use the same database.",
       ),
       L(
         "Deploy를 누르고 1~2분 기다린 뒤 나온 주소로 접속해 봅니다.",
@@ -386,24 +386,8 @@ export const GUIDE: GuideSection[] = [
           L("DATABASE_URL", "DATABASE_URL"),
           L("데이터 창고 접속 주소", "Database connection address"),
         ],
-        [
-          L("NEXT_PUBLIC_SUPABASE_URL", "NEXT_PUBLIC_SUPABASE_URL"),
-          L("Supabase 프로젝트 주소", "Supabase project address"),
-        ],
-        [
-          L(
-            "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY",
-            "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY",
-          ),
-          L("공개 키", "Public key"),
-        ],
-        [
-          L("SUPABASE_SERVICE_ROLE_KEY", "SUPABASE_SERVICE_ROLE_KEY"),
-          L(
-            "서버 전용 키 (다른 사람에게 보이면 안 됨)",
-            "Server-only key (keep secret)",
-          ),
-        ],
+        [L("BETTER_AUTH_SECRET (선택)", "BETTER_AUTH_SECRET (optional)"),
+          L("비우면 서버 전용 표에 서명 키를 자동 생성합니다.", "Leave blank to generate a signing key in a server-only table.")],
       ],
     },
     note: L(
@@ -417,20 +401,20 @@ export const GUIDE: GuideSection[] = [
     title: L("데이터 창고 업데이트 (한 번만)", "Database update (once)"),
     steps: [
       L(
-        "supabase.com에 로그인 → 복음교리반 프로젝트를 엽니다.",
-        "Sign in to supabase.com and open the Gospel Doctrine project.",
+        "Neon에 로그인 → 연결한 프로젝트를 엽니다.",
+        "Sign in to Neon and open the connected project.",
       ),
       L(
         "왼쪽 메뉴 SQL Editor → New query(새 쿼리).",
         "Left menu SQL Editor → New query.",
       ),
       L(
-        "폴더의 DB업데이트_SQL편집기용.sql을 메모장으로 열어 전부 복사(Ctrl+A, Ctrl+C) → 편집기에 붙여 넣기.",
-        "Open DB업데이트_SQL편집기용.sql in Notepad, copy everything (Ctrl+A, Ctrl+C) and paste it into the editor.",
+        "운영자가 제공한 Neon 로그인과 파일 저장소 업데이트 SQL을 열어 전부 복사한 후 편집기에 붙여 넣습니다.",
+        "Copy the supplied Neon account and file-storage update SQL into the editor.",
       ),
       L(
-        "Run을 누릅니다. 아래 결과에 '완료: …'가 나오면 끝입니다.",
-        "Press Run. Done when the result shows '완료: …'.",
+        "Run을 누른 후 오류 없이 실행됐는지 확인합니다.",
+        "Press Run and check that it completes without errors.",
       ),
     ],
     note: L(

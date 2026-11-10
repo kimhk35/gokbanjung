@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { mkdtemp } from "node:fs/promises";
 import { randomUUID } from "node:crypto";
-import type { SupabaseClient } from "@supabase/supabase-js";
+import type { AccountAuthClient } from "../src/lib/database-auth";
 import { privileged } from "../src/lib/db";
 import {
   requestAccount,
@@ -91,7 +91,7 @@ test("ID/password account request preserves guest ownership; password management
         },
       },
     },
-  } as unknown as SupabaseClient;
+  } as unknown as AccountAuthClient;
   assert.deepEqual(
     await requestAccount(
       guest,

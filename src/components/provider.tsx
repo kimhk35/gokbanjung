@@ -213,8 +213,8 @@ const errors: Record<string, Localized> = {
     en: "Teacher sign-in has not been configured yet.",
   },
   admin_auth_unavailable: {
-    ko: "교사 계정 생성용 Supabase 비밀 키가 아직 설정되지 않았습니다.",
-    en: "The Supabase secret key for creating teacher accounts is not configured.",
+    ko: "계정 저장소 연결을 확인해 주세요.",
+    en: "Please check the account database connection.",
   },
   teacher_creation_failed: {
     ko: "교사 계정을 만들지 못했습니다. 이미 사용 중인 아이디인지 확인해 주세요.",
