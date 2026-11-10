@@ -195,18 +195,6 @@ async function handle(
     }
     if (path === "auth/reset-email")
       throw new AppError(400, "admin_reset_required");
-    if (path === "auth/recovery-session") {
-      const tokens = z
-        .object({
-          access_token: z.string().min(20).max(12000),
-          refresh_token: z.string().min(10).max(12000),
-        })
-        .parse(input);
-      const client = await authClient();
-      const result = await client.auth.setSession(tokens);
-      ensure(!result.error && result.data.user, 400, "recovery_expired");
-      return json({ ok: true });
-    }
     if (path === "auth/change-password") {
       const { passwordSchema } = await import("@/lib/account-security");
       const password = passwordSchema.parse(input.password);

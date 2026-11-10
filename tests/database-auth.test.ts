@@ -114,10 +114,30 @@ test("database auth signs in UUID users and revokes sessions on logout and passw
       }),
       null,
     );
+    // An administrator resetting someone else keeps their own session.
+    const adminEmail = "admin1@accounts.gokbanjeong.invalid";
+    await auth.api.signUpEmail({
+      body: { email: adminEmail, password: "AdminPassword123!", name: "Admin" },
+    });
+    const adminLogin = await auth.api.signInEmail({
+      body: { email: adminEmail, password: "AdminPassword123!" },
+      returnHeaders: true,
+    });
+    const adminHeaders = new Headers({
+      cookie: adminLogin.headers
+        .getSetCookie()
+        .map((x) => x.split(";")[0])
+        .join("; "),
+    });
     await updateDatabasePassword(
       db,
       signup.response.user.id,
       "ReplacementPassword123!",
+    );
+    assert.equal(
+      (await auth.api.getSession({ headers: adminHeaders }))?.user.email,
+      adminEmail,
+      "resetting another account keeps the administrator signed in",
     );
     assert.equal(
       await auth.api.getSession({ headers }),

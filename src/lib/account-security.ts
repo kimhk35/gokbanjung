@@ -5,9 +5,8 @@ import {
   type AccountAuthClient,
 } from "./database-auth";
 import { privileged } from "./db";
-import { ensure, AppError } from "./errors";
+import { ensure } from "./errors";
 import { rateLimit, requireAdmin } from "./service";
-import { createHash } from "node:crypto";
 import type { Actor } from "./types";
 import { usernameSchema, usernameEmail } from "./login-id";
 export const passwordSchema = z.string().min(10).max(128);
@@ -75,25 +74,6 @@ export async function requestAccount(
     throw e;
   }
   return { ok: true, confirmEmail: false };
-}
-export async function sendPasswordReset(
-  emailInput: unknown,
-  origin: string,
-  requestKey: string,
-  client?: AccountAuthClient,
-) {
-  const email = z.email().parse(emailInput).trim().toLowerCase();
-  const digest = createHash("sha256").update(email).digest("hex");
-  await rateLimit("recovery-email:" + digest, 3, 3600);
-  await rateLimit("recovery-sender:" + requestKey, 10, 3600);
-  const result = await (
-    client || publicAuthClient()
-  ).auth.resetPasswordForEmail(email, {
-    redirectTo: `${origin}/auth/reset-password`,
-  });
-  if (result.error) throw new AppError(503, "reset_email_failed");
-  // Identical response whether or not an account exists.
-  return { ok: true };
 }
 export async function accountSecurityList(a: Actor) {
   await requireAdmin(a);

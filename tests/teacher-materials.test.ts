@@ -146,6 +146,12 @@ test("ID signup, admin approval/reset/removal, and private lesson images", async
     client,
   );
   assert.equal(reset, 1);
+  const afterReset = await privileged(async (db) => ({
+    actor: (await db.query("select kind,role from ggc.actors where id=$1", [applicant.id]))[0],
+    link: (await db.query("select status from ggc.account_requests where actor_id=$1", [applicant.id]))[0],
+  }));
+  assert.deepEqual(afterReset.actor, { kind: "user", role: "TEACHER" }, "reset keeps the role");
+  assert.equal(afterReset.link.status, "approved", "reset keeps approval");
   await assert.rejects(
     adminResetPassword(
       teacher,

@@ -196,17 +196,13 @@ const errors: Record<string, Localized> = {
     ko: "계정 신청을 완료하지 못했습니다. 잠시 후 다시 시도하고, 계속되면 관리자에게 알려 주세요.",
     en: "The account request could not be completed. Please try again, and tell the administrator if it keeps failing.",
   },
-  reset_email_failed: {
-    ko: "재설정 메일을 보내지 못했습니다. 잠시 후 다시 시도해 주세요. 계속 실패하면 관리자가 Supabase 이메일 발송 설정과 한도를 확인해야 합니다.",
-    en: "Reset email could not be sent. Retry later; the administrator may need to check Supabase email settings and limits.",
-  },
   recovery_expired: {
-    ko: "재설정 링크가 만료되었거나 로그인 확인이 필요합니다. 새 재설정 메일을 요청해 주세요.",
-    en: "The reset link expired or sign-in is required. Request a new reset email.",
+    ko: "로그인 상태가 확인되지 않습니다. 다시 로그인한 뒤 비밀번호를 변경해 주세요.",
+    en: "Your sign-in could not be confirmed. Sign in again, then change your password.",
   },
   password_update_failed: {
-    ko: "비밀번호를 변경하지 못했습니다. 이전과 다른 10자 이상의 비밀번호를 사용하고, 링크가 만료됐다면 새 메일을 요청하세요.",
-    en: "Password update failed. Use a different password with at least 10 characters, or request a fresh reset link.",
+    ko: "비밀번호를 변경하지 못했습니다. 10~128자 비밀번호인지 확인하고 다시 시도해 주세요.",
+    en: "The password could not be changed. Check that it has 10–128 characters and try again.",
   },
   ai_invalid_response: {
     ko: "AI 응답 형식을 읽지 못했습니다. 잠시 후 다시 생성해 주세요.",
