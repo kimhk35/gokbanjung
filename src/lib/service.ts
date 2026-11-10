@@ -47,7 +47,8 @@ export async function readData(
     await requireAdmin(a);
     return privileged((db) =>
       db.query(
-        "select r.user_id,r.email,r.status,r.created_at,a.nickname from ggc.account_requests r join ggc.actors a on a.id=r.actor_id order by r.created_at desc",
+        "select r.user_id,r.email,r.status,r.created_at,a.nickname from ggc.account_requests r join ggc.actors a on a.id=r.actor_id where a.course_id=$1 order by r.created_at desc",
+        [a.course_id],
       ),
     );
   }
@@ -233,7 +234,8 @@ export async function readData(
         await requireAdmin(a);
         return {
           applications: await db.query(
-            "select * from ggc.teacher_applications order by created_at desc",
+            "select t.* from ggc.teacher_applications t join ggc.actors target on target.id=t.user_id where target.course_id=$1 order by t.created_at desc",
+            [a.course_id],
           ),
           usage: await db.query(
             "select feature,status,count(*)::int as calls,sum(tokens_input)::int as tokens_input,sum(tokens_output)::int as tokens_output from ggc.ai_generations group by feature,status",
@@ -285,8 +287,8 @@ export async function writeData(a: Actor, path: string, input: unknown) {
     return privileged(async (db) => {
       const row = (
         await db.query(
-          "update ggc.account_requests set status=$1,reviewed_by=$2 where user_id=$3 returning actor_id",
-          [v.status, a.id, v.user_id],
+          "update ggc.account_requests r set status=$1,reviewed_by=$2 from ggc.actors target where r.user_id=$3 and target.id=r.actor_id and target.course_id=$4 and target.role<>'ADMIN' returning r.actor_id",
+          [v.status, a.id, v.user_id, a.course_id],
         )
       )[0];
       ensure(row, 404, "not_found");
@@ -344,11 +346,11 @@ export async function writeData(a: Actor, path: string, input: unknown) {
         )
       )[0];
       ensure(app, 404, "not_found");
-      await db.query("update ggc.actors set role=$1,nickname=$2 where id=$3", [
-        v.status === "approved" ? "TEACHER" : "TEACHER_PENDING",
-        String(app.name),
-        String(app.user_id),
-      ]);
+      // Rejecting or suspending a teacher must not remove an approved member's own records.
+      await db.query(
+        "update ggc.actors set role=case when $1::boolean then 'TEACHER' when kind='user' and role in ('MEMBER','TEACHER') then 'MEMBER' else 'TEACHER_PENDING' end,nickname=$2 where id=$3",
+        [v.status === "approved", String(app.name), String(app.user_id)],
+      );
       if (v.status === "approved") {
         // Teacher approval also grants personal record access; no second application is required.
         await db.query(

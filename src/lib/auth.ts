@@ -2,7 +2,7 @@ import { cookies } from "next/headers";
 import { randomBytes, createHash } from "node:crypto";
 import { NextResponse } from "next/server";
 import { databaseAuthClient } from "./database-auth";
-import { privileged } from "./db";
+import { privileged, type DB } from "./db";
 import type { Actor } from "./types";
 import { AppError } from "./errors";
 export const cookieOptions = {
@@ -25,6 +25,35 @@ export async function authClient() {
     },
   });
 }
+// Resolve the application actor for a provider user on every request, so approval
+// changes apply to sessions that were issued earlier.
+export async function resolveAuthActor(
+  db: DB,
+  user: { id: string; email?: string },
+): Promise<Actor> {
+  const linked = (
+    await db.query(
+      "select a.id,a.kind,a.role,a.nickname,a.course_id,a.teacher_id,r.status as account_status from ggc.account_requests r join ggc.actors a on a.id=r.actor_id where r.user_id=$1",
+      [user.id],
+    )
+  )[0];
+  if (linked) {
+    // Re-evaluate approval on every request; never trust editable metadata.
+    if (linked.account_status !== "approved")
+      return { ...linked, kind: "guest", role: "GUEST" } as Actor;
+    return linked as Actor;
+  }
+  await db.query(
+    "insert into ggc.actors(id,kind,role,nickname) values($1,'user','TEACHER_PENDING',$2) on conflict(id) do nothing",
+    [user.id, user.email?.split("@")[0] || "Teacher"],
+  );
+  return (
+    await db.query(
+      "select id,kind,role,nickname,course_id,teacher_id from ggc.actors where id=$1",
+      [user.id],
+    )
+  )[0] as Actor;
+}
 export async function actor(): Promise<Actor> {
   const store = await cookies();
   if (store.getAll().some((c) => c.name.includes("ggc_auth.session_token"))) {
@@ -33,30 +62,7 @@ export async function actor(): Promise<Actor> {
       data: { user },
     } = await client.auth.getUser();
     if (user && !user.is_anonymous) {
-      return privileged(async (db) => {
-        const linked = (
-          await db.query(
-            "select a.id,a.kind,a.role,a.nickname,a.course_id,a.teacher_id,r.status as account_status from ggc.account_requests r join ggc.actors a on a.id=r.actor_id where r.user_id=$1",
-            [user.id],
-          )
-        )[0];
-        if (linked) {
-          // Re-evaluate approval on every request; never trust editable metadata.
-          if (linked.account_status !== "approved")
-            return { ...linked, kind: "guest", role: "GUEST" } as Actor;
-          return linked as Actor;
-        }
-        await db.query(
-          "insert into ggc.actors(id,kind,role,nickname) values($1,'user','TEACHER_PENDING',$2) on conflict(id) do nothing",
-          [user.id, user.email?.split("@")[0] || "Teacher"],
-        );
-        return (
-          await db.query(
-            "select id,kind,role,nickname,course_id,teacher_id from ggc.actors where id=$1",
-            [user.id],
-          )
-        )[0] as Actor;
-      });
+      return privileged((db) => resolveAuthActor(db, user));
     }
   }
   const token = store.get("ggc_guest")?.value;
