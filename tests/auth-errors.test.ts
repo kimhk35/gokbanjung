@@ -95,3 +95,20 @@ test("signup paths surface the provider reason", async () => {
   const links = await privileged((db) => db.query("select 1 from ggc.account_requests"));
   assert.equal(links.length, 0, "failed signups leave no links");
 });
+
+test("sign-in availability follows the database connection, not Supabase settings", async () => {
+  const { authConfigured } = await import("../src/lib/database-auth");
+  const saved = { ...process.env };
+  try {
+    delete process.env.DATABASE_URL;
+    process.env.NEXT_PUBLIC_SUPABASE_URL = "https://old.supabase.co";
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY = "old";
+    assert.equal(authConfigured(), false);
+    delete process.env.NEXT_PUBLIC_SUPABASE_URL;
+    delete process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+    process.env.DATABASE_URL = "postgresql://user@db.example.com/app";
+    assert.equal(authConfigured(), true);
+  } finally {
+    process.env = saved;
+  }
+});

@@ -90,6 +90,10 @@ export async function resolveSessionSecret(db: DB, override?: string) {
   ensure(row?.value.length >= 32, 503, "auth_unavailable");
   return row.value;
 }
+// Accounts live in the application database; Supabase settings are no longer used.
+export function authConfigured() {
+  return !!process.env.DATABASE_URL?.trim();
+}
 let instance: Promise<ReturnType<typeof configureDatabaseAuth>> | undefined;
 export function databaseAuth() {
   if (!instance)

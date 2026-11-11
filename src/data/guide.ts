@@ -627,8 +627,8 @@ export const GUIDE: GuideSection[] = [
             "Image storage is not connected",
           ),
           L(
-            "2_DB업데이트.cmd를 실행하고, SUPABASE_SERVICE_ROLE_KEY가 들어 있는지 확인합니다.",
-            "Run 2_DB업데이트.cmd and check SUPABASE_SERVICE_ROLE_KEY is set.",
+            "2_DB업데이트.cmd를 실행해 파일 저장소 업데이트가 적용됐는지 확인합니다.",
+            "Run 2_DB업데이트.cmd to make sure the file storage update is applied.",
           ),
         ],
         [

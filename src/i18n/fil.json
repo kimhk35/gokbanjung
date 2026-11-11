@@ -1473,5 +1473,6 @@
  "비밀번호 변경": "Palitan ang password",
  "확인하고 있습니다…": "Sinusuri…",
  "비밀번호 변경은 로그인한 뒤에 할 수 있습니다.": "Mag-sign in muna bago palitan ang iyong password.",
- "현재 로그인된 계정의 비밀번호를 변경합니다. 변경하면 모든 기기에서 로그아웃됩니다.": "Palitan ang password ng naka-sign in na account. Masa-sign out ka sa lahat ng device."
+ "현재 로그인된 계정의 비밀번호를 변경합니다. 변경하면 모든 기기에서 로그아웃됩니다.": "Palitan ang password ng naka-sign in na account. Masa-sign out ka sa lahat ng device.",
+ "2_DB업데이트.cmd를 실행해 파일 저장소 업데이트가 적용됐는지 확인합니다.": "Patakbuhin ang 2_DB업데이트.cmd para matiyak na nailapat ang update sa imbakan ng file."
 }

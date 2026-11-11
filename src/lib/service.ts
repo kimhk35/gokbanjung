@@ -1,3 +1,4 @@
+import { authConfigured } from "./database-auth";
 import { z } from "zod";
 import { asActor, privileged, type DB } from "./db";
 import { ensure, AppError } from "./errors";
@@ -89,11 +90,7 @@ export async function readData(
             process.env.OPENAI_API_KEY?.trim() ||
             process.env.OPEN_API_KEY?.trim()
           ),
-          authAvailable: !!(
-            process.env.NEXT_PUBLIC_SUPABASE_URL &&
-            (process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
-              process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)
-          ),
+          authAvailable: authConfigured(),
           persistent: !!process.env.DATABASE_URL,
         };
       case "reflection":

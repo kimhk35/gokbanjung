@@ -1473,5 +1473,6 @@
  "비밀번호 변경": "Cambiar contraseña",
  "확인하고 있습니다…": "Comprobando…",
  "비밀번호 변경은 로그인한 뒤에 할 수 있습니다.": "Inicia sesión antes de cambiar tu contraseña.",
- "현재 로그인된 계정의 비밀번호를 변경합니다. 변경하면 모든 기기에서 로그아웃됩니다.": "Cambia la contraseña de la cuenta con sesión iniciada. Se cerrará la sesión en todos los dispositivos."
+ "현재 로그인된 계정의 비밀번호를 변경합니다. 변경하면 모든 기기에서 로그아웃됩니다.": "Cambia la contraseña de la cuenta con sesión iniciada. Se cerrará la sesión en todos los dispositivos.",
+ "2_DB업데이트.cmd를 실행해 파일 저장소 업데이트가 적용됐는지 확인합니다.": "Ejecuta 2_DB업데이트.cmd para comprobar que se aplicó la actualización del almacenamiento de archivos."
 }
