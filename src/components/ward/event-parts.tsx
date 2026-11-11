@@ -5,6 +5,7 @@ import { useApp } from "../provider";
 import { ORGANIZATIONS, ZONE, dayKey, onDay } from "@/lib/ward-model";
 import { posterUrl } from "@/lib/poster";
 import type { WardEvent } from "@/lib/ward-events";
+import { PosterImage } from "../poster-image";
 
 export function orgLabel(id: string, t: (ko: string, en: string) => string) {
   const o = ORGANIZATIONS.find((x) => x[0] === id);
@@ -51,7 +52,13 @@ export function EventCard({
   const body = (
     <>
       {poster && (
-        <img className="event-thumb" src={poster} alt="" loading="lazy" />
+        <PosterImage
+          className="event-thumb"
+          src={poster}
+          alt=""
+          loading="lazy"
+          fallback={null}
+        />
       )}
       <div className="event-card-body">
         <div className="event-tags">

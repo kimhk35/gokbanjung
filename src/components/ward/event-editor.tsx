@@ -8,6 +8,7 @@ import { uploadPoster } from "@/lib/image-compress";
 import { posterUrl } from "@/lib/poster";
 import type { WardEvent } from "@/lib/ward-events";
 import { EventCard } from "./event-parts";
+import { PosterImage } from "../poster-image";
 
 type Form = {
   title: string;
@@ -236,10 +237,11 @@ function EditorForm({
               "Poster (optional, PNG/JPG/WebP ≤ 5 MB)",
             )}
             {form.poster_path && (
-              <img
+              <PosterImage
                 className="poster-preview"
                 src={posterUrl(form.poster_path) || ""}
                 alt=""
+                editing
               />
             )}
             <div className="button-row">

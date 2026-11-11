@@ -1474,5 +1474,7 @@
  "확인하고 있습니다…": "Checking…",
  "비밀번호 변경은 로그인한 뒤에 할 수 있습니다.": "Sign in before changing your password.",
  "현재 로그인된 계정의 비밀번호를 변경합니다. 변경하면 모든 기기에서 로그아웃됩니다.": "Change the password for the signed-in account. You will be signed out on every device.",
- "2_DB업데이트.cmd를 실행해 파일 저장소 업데이트가 적용됐는지 확인합니다.": "Run 2_DB업데이트.cmd to make sure the file storage update is applied."
+ "2_DB업데이트.cmd를 실행해 파일 저장소 업데이트가 적용됐는지 확인합니다.": "Run 2_DB업데이트.cmd to make sure the file storage update is applied.",
+ "포스터 이미지를 불러올 수 없습니다.": "The poster image is unavailable.",
+ "포스터 이미지를 불러올 수 없습니다. 다시 올려 주세요.": "The poster image is unavailable. Please upload it again."
 }

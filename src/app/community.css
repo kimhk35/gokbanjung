@@ -215,6 +215,19 @@ a.event-card:hover {
   background: var(--soft);
   margin: 12px 0;
 }
+/* Shown instead of a broken image when a stored poster file is missing. */
+.poster-missing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+  padding: 14px 16px;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  background: var(--soft);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
 .event-description {
   margin: 16px 0;
   line-height: 1.8;
