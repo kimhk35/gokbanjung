@@ -13,6 +13,7 @@
     "db:update": "node scripts/update-database.mjs",
     "guide:build": "node --import tsx scripts/guide-html.ts",
     "db:editor-sql": "node scripts/editor-sql.mjs",
+    "account:reconnect": "node --import tsx scripts/reconnect-account.mts",
     "i18n:extract": "node --import tsx scripts/i18n-extract.ts",
     "i18n:merge": "node scripts/i18n-merge.mjs"
   },
