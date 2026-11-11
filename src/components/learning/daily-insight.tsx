@@ -15,6 +15,7 @@ import type { UiLang } from "@/lib/i18n";
 import type { CustomInsight } from "@/lib/daily-insight-service";
 import { dailyStudyHref } from "@/lib/cfm-study-plan";
 import { useStudyDate } from "../use-study-date";
+import { PosterImage } from "../poster-image";
 
 type Data = {
   date: string;
@@ -160,6 +161,8 @@ export function DailyInsightCard({
   onEdit?: () => void;
 }) {
   const { t, uiLang } = useApp();
+  // A custom picture whose file is gone falls back to the text card.
+  const [imageFailed, setImageFailed] = useState(false);
   const text = cardText(data, uiLang);
   if (!text) return null;
   const image = data.custom?.image_path
@@ -171,8 +174,13 @@ export function DailyInsightCard({
       className="daily-insight"
       style={art ? { ["--insight-art" as string]: `url(${art})` } : undefined}
     >
-      {image ? (
-        <img className="daily-insight-image" src={image} alt={text.question} />
+      {image && !imageFailed ? (
+        <img
+          className="daily-insight-image"
+          src={image}
+          alt={text.question}
+          onError={() => setImageFailed(true)}
+        />
       ) : (
         <>
           <header>
@@ -350,10 +358,11 @@ function InsightForm({
           "Card picture (optional; shown as the whole card)",
         )}
         {form.image_path && (
-          <img
+          <PosterImage
             className="poster-preview"
             src={posterUrl(form.image_path) || ""}
             alt=""
+            editing
           />
         )}
         <div className="button-row">

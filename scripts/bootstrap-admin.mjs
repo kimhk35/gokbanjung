@@ -59,6 +59,15 @@ try {
     const [linked] =
       await tx`select actor_id from ggc.account_requests where user_id=${user.id}`;
     const id = linked?.actor_id || user.id;
+    // First-administrator setup only. Re-running for the same administrator is safe;
+    // promoting another account after an administrator exists is refused.
+    const [other] =
+      await tx`select 1 from ggc.actors where role='ADMIN' and id<>${id} limit 1`;
+    if (other) {
+      const error = new Error("An administrator already exists.");
+      error.code = "admin_exists";
+      throw error;
+    }
     await tx`insert into ggc.actors(id,kind,role,nickname) values(${id},'user','ADMIN','관리자') on conflict(id) do update set kind='user',role='ADMIN'`;
     await tx`update ggc.account_requests set status='approved',reviewed_by=${id} where user_id=${user.id}`;
     await tx`delete from ggc.guest_sessions where actor_id=${id}`;
@@ -68,10 +77,15 @@ try {
     "Administrator ready. Sign in at /admin. Existing passwords were preserved.",
   );
 } catch (error) {
-  console.error(
-    "Administrator setup failed. Category:",
-    error.code || "configuration",
-  );
+  if (error.code === "admin_exists")
+    console.error(
+      "An administrator already exists. Sign in as that administrator and use account management instead.",
+    );
+  else
+    console.error(
+      "Administrator setup failed. Category:",
+      error.code || "configuration",
+    );
   process.exitCode = 1;
 } finally {
   await sql.end();

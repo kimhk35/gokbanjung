@@ -46,6 +46,22 @@ type Context = {
 };
 const C = createContext<Context | null>(null);
 const phase2Errors: Record<string, Localized> = {
+  service_unavailable: {
+    ko: "일시적인 연결 문제입니다. 잠시 후 다시 시도해 주세요.",
+    en: "There is a temporary connection problem. Please try again shortly.",
+  },
+  setup_required: {
+    ko: "서버 데이터베이스 업데이트가 아직 적용되지 않았습니다. 관리자에게 알려 주세요.",
+    en: "A server database update has not been applied yet. Please tell the administrator.",
+  },
+  approval_pending: {
+    ko: "아직 관리자 승인 전이거나 사용이 중지된 계정입니다. 관리자에게 문의해 주세요.",
+    en: "This account is awaiting approval or has been suspended. Please contact the administrator.",
+  },
+  username_taken: {
+    ko: "이미 사용 중인 아이디입니다. 다른 아이디를 입력해 주세요.",
+    en: "This ID is already in use. Please choose another ID.",
+  },
   no_questions: {
     ko: "파일에서 문항을 찾지 못했어요. 문항 앞에 1. 2. 같은 번호가 있는지 확인해 주세요.",
     en: "No questions were found. Check that questions are numbered like 1. 2.",
@@ -85,8 +101,8 @@ const errors: Record<string, Localized> = {
     en: "Please use the teacher application form.",
   },
   teacher_request_failed: {
-    ko: "교사 신청을 완료하지 못했습니다. 이미 사용 중인 아이디인지 확인해 주세요.",
-    en: "Application could not be completed. Check whether the ID is already in use.",
+    ko: "교사 신청을 완료하지 못했습니다. 잠시 후 다시 시도하고, 계속되면 관리자에게 알려 주세요.",
+    en: "The application could not be completed. Please try again, and tell the administrator if it keeps failing.",
   },
   admin_reset_required: {
     ko: "비밀번호 초기화는 관리자에게 요청해 주세요.",
@@ -157,8 +173,8 @@ const errors: Record<string, Localized> = {
     en: "Record management requires sign-in and administrator approval.",
   },
   account_exists: {
-    ko: "이미 신청한 계정이 있습니다. 해당 이메일로 로그인해 주세요.",
-    en: "An account request already exists. Sign in with that email.",
+    ko: "이 브라우저에서 이미 신청한 계정이 있습니다. 관리자 승인 후 그 아이디로 로그인해 주세요.",
+    en: "This browser already has an account request. Sign in with that ID after approval.",
   },
   quiz_generating: {
     ko: "퀴즈를 준비 중입니다. 잠시 후 시작 버튼을 다시 눌러 주세요.",
@@ -177,20 +193,16 @@ const errors: Record<string, Localized> = {
     en: "AI generation failed. Ask the administrator to check the API key, limits and billing.",
   },
   account_request_failed: {
-    ko: "계정 신청에 실패했습니다. 이메일 형식, 비밀번호 조건 또는 기존 가입 여부를 확인해 주세요.",
-    en: "Account request failed. Check the email, password requirements or an existing account.",
-  },
-  reset_email_failed: {
-    ko: "재설정 메일을 보내지 못했습니다. 잠시 후 다시 시도해 주세요. 계속 실패하면 관리자가 Supabase 이메일 발송 설정과 한도를 확인해야 합니다.",
-    en: "Reset email could not be sent. Retry later; the administrator may need to check Supabase email settings and limits.",
+    ko: "계정 신청을 완료하지 못했습니다. 잠시 후 다시 시도하고, 계속되면 관리자에게 알려 주세요.",
+    en: "The account request could not be completed. Please try again, and tell the administrator if it keeps failing.",
   },
   recovery_expired: {
-    ko: "재설정 링크가 만료되었거나 로그인 확인이 필요합니다. 새 재설정 메일을 요청해 주세요.",
-    en: "The reset link expired or sign-in is required. Request a new reset email.",
+    ko: "로그인 상태가 확인되지 않습니다. 다시 로그인한 뒤 비밀번호를 변경해 주세요.",
+    en: "Your sign-in could not be confirmed. Sign in again, then change your password.",
   },
   password_update_failed: {
-    ko: "비밀번호를 변경하지 못했습니다. 이전과 다른 10자 이상의 비밀번호를 사용하고, 링크가 만료됐다면 새 메일을 요청하세요.",
-    en: "Password update failed. Use a different password with at least 10 characters, or request a fresh reset link.",
+    ko: "비밀번호를 변경하지 못했습니다. 10~128자 비밀번호인지 확인하고 다시 시도해 주세요.",
+    en: "The password could not be changed. Check that it has 10–128 characters and try again.",
   },
   ai_invalid_response: {
     ko: "AI 응답 형식을 읽지 못했습니다. 잠시 후 다시 생성해 주세요.",
@@ -209,16 +221,16 @@ const errors: Record<string, Localized> = {
     en: "You do not have permission for this action.",
   },
   auth_unavailable: {
-    ko: "교사 로그인 연결이 아직 설정되지 않았습니다.",
-    en: "Teacher sign-in has not been configured yet.",
+    ko: "로그인 기능이 아직 준비되지 않았습니다. 관리자에게 서버 설정 점검을 요청해 주세요.",
+    en: "Sign-in is not ready yet. Ask the administrator to check the server settings.",
   },
   admin_auth_unavailable: {
-    ko: "교사 계정 생성용 Supabase 비밀 키가 아직 설정되지 않았습니다.",
-    en: "The Supabase secret key for creating teacher accounts is not configured.",
+    ko: "계정 저장소에 연결하지 못했습니다. 서버 설정을 점검해 주세요.",
+    en: "The account database could not be reached. Please check the server settings.",
   },
   teacher_creation_failed: {
-    ko: "교사 계정을 만들지 못했습니다. 이미 사용 중인 아이디인지 확인해 주세요.",
-    en: "The teacher account could not be created. Check whether the ID is already in use.",
+    ko: "교사 계정을 만들지 못했습니다. 잠시 후 다시 시도해 주세요.",
+    en: "The teacher account could not be created. Please try again.",
   },
   ai_unavailable: {
     ko: "AI 기능 연결이 아직 설정되지 않았습니다.",

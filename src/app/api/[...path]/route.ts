@@ -5,7 +5,7 @@ import { connection } from "next/server";
 import { actor, createGuest, authClient } from "@/lib/auth";
 import { readData, writeData, rateLimit, requireAdmin } from "@/lib/service";
 import { generate, reviewAi } from "@/lib/ai";
-import { AppError, ensure } from "@/lib/errors";
+import { AppError, ensure, serverFailure } from "@/lib/errors";
 import { privileged } from "@/lib/db";
 import { checkAiConnection } from "@/lib/openai-config";
 import { sameOrigin, siteOrigin } from "@/lib/site-url";
@@ -195,18 +195,6 @@ async function handle(
     }
     if (path === "auth/reset-email")
       throw new AppError(400, "admin_reset_required");
-    if (path === "auth/recovery-session") {
-      const tokens = z
-        .object({
-          access_token: z.string().min(20).max(12000),
-          refresh_token: z.string().min(10).max(12000),
-        })
-        .parse(input);
-      const client = await authClient();
-      const result = await client.auth.setSession(tokens);
-      ensure(!result.error && result.data.user, 400, "recovery_expired");
-      return json({ ok: true });
-    }
     if (path === "auth/change-password") {
       const { passwordSchema } = await import("@/lib/account-security");
       const password = passwordSchema.parse(input.password);
@@ -241,7 +229,7 @@ async function handle(
         !["ADMIN", "TEACHER", "MEMBER"].includes(signed.role)
       ) {
         await auth.auth.signOut();
-        throw new AppError(403, "approval_required");
+        throw new AppError(403, "approval_pending");
       }
       return json({ ok: true });
     }
@@ -260,14 +248,6 @@ async function handle(
     if (path === "admin/create-teacher") {
       const a = await actor();
       await requireAdmin(a);
-      const serviceKey =
-        process.env.SUPABASE_SECRET_KEY ||
-        process.env.SUPABASE_SERVICE_ROLE_KEY;
-      ensure(
-        process.env.NEXT_PUBLIC_SUPABASE_URL && serviceKey,
-        503,
-        "admin_auth_unavailable",
-      );
       const { usernameSchema, usernameEmail } = await import("@/lib/login-id");
       const { passwordSchema } = await import("@/lib/account-security");
       const submitted = z
@@ -281,22 +261,17 @@ async function handle(
         message: "관리자가 직접 생성한 교사 계정입니다.",
       };
       await rateLimit("admin-create-teacher:" + a.id, 20, 3600);
-      const { createClient } = await import("@supabase/supabase-js");
-      const supabase = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        serviceKey!,
-        { auth: { persistSession: false, autoRefreshToken: false } },
-      );
-      const created = await supabase.auth.admin.createUser({
+      const { adminAuthClient } = await import("@/lib/account-security");
+      const accounts = adminAuthClient();
+      const created = await accounts.auth.admin.createUser({
         email: value.email,
         password: value.password,
         email_confirm: true,
       });
-      ensure(
-        !created.error && created.data.user,
-        400,
-        "teacher_creation_failed",
-      );
+      if (created.error || !created.data.user) {
+        const { authFailure } = await import("@/lib/database-auth");
+        throw authFailure(created.error, "teacher_creation_failed");
+      }
       const teacherId = created.data.user.id;
       try {
         await privileged(async (db) => {
@@ -332,7 +307,7 @@ async function handle(
         });
       } catch (error) {
         // Keep Auth and application roles in sync if database setup fails.
-        await supabase.auth.admin.deleteUser(teacherId);
+        await accounts.auth.admin.deleteUser(teacherId);
         throw error;
       }
       return json({ id: teacherId, name: value.name, email: value.email });
@@ -392,12 +367,12 @@ async function handle(
       return json({ error: error.code }, error.status);
     if (error instanceof z.ZodError || error instanceof SyntaxError)
       return json({ error: "invalid_input" }, 400);
+    const failure = serverFailure(error);
+    if (failure) return json({ error: failure.code }, failure.status);
     const dbCode =
       error && typeof error === "object" && "code" in error
         ? String(error.code)
         : "";
-    if (["42501", "23503", "23514", "P0001"].includes(dbCode))
-      return json({ error: "forbidden" }, 403);
     // Do not log SQL parameters, private reflections, credentials, or uploads.
     console.error("request_failed", { category: dbCode || "internal" });
     return json({ error: "server_error" }, 500);

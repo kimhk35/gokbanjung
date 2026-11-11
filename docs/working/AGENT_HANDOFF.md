@@ -1248,3 +1248,41 @@ worked. The isolated local progress endpoint returned200. Physical phones and
 production were not tested; the official cross-origin page remains external.
 Local dev uses `.local-db/week46-preview`, PID3792,127.0.0.1:3000. Screenshot
 evidence is in ignored `test-results/mobile-reader/`.
+
+## Auth, approval and poster restore — 2026-11-12
+
+Branch `claude/auth-restore` (from `3c3bf50`). The 2026-10-20 Neon update was
+never committed; its 29 files were found locally (`Gokbanjung_Neon_Update`)
+and ported file by file. Scripts already matched main; README and this file
+were extended, not replaced. Nothing was applied to production.
+
+Root causes of the reported outage: `boot.authAvailable` still required the
+deleted Supabase settings, so the teacher application and sign-in buttons were
+disabled; the server code still called Supabase Auth/Storage; the SQL editor
+file lacked the auth and file-storage migrations.
+
+Beyond the port: a guest teacher application now links the same guest actor
+through `ggc.account_requests` instead of creating a second actor; teacher
+rejection/suspension keeps member access; account approvals and lists are
+course-scoped; provider failures map to `username_taken`, `invalid_input`,
+`rate_limited`, `approval_pending`, `setup_required` or `service_unavailable`
+instead of a generic "ID in use"; the unusable reset-mail flow is replaced by
+admin reset plus signed-in change; first-admin setup refuses when another
+administrator exists; `npm run account:reconnect` reattaches Supabase-era
+admins/teachers/members to their existing actor with a new ID; missing poster
+bytes render a notice; better-auth is 1.7.19 (1.7.11 was in the range of
+advisories fixed in 1.7.16).
+
+Verification: 126 node tests, TypeScript and build pass; lint has no new
+findings (20 errors/51 warnings vs 21/58 at `3c3bf50`). On local PostgreSQL
+17.11 with synthetic legacy records, `db:update` and the editor SQL ran twice
+on legacy, fresh and partially updated DBs; every pre-existing table kept the
+same row count and content digest. First-admin and reconnect tools were run
+against it, including concurrent runs. A Playwright run (Chromium, desktop and
+390x844) against a production build passed 16 scenarios covering the
+instruction's cases 1-9 and 11-17. Physical phones, Vercel and production were
+not tested. Operational steps and approvals: `2026-11-12-auth-restore-operations-plan.md`.
+Old Supabase passwords and poster/material bytes cannot be restored.
+
+Not addressed here: `npm audit` still reports Next.js and other existing
+advisories; about 140 UI strings are missing from `src/i18n/catalog.json`.

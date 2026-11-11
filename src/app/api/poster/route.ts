@@ -2,9 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { randomUUID } from "node:crypto";
 import { actor } from "@/lib/auth";
 import { rateLimit } from "@/lib/service";
-import { AppError, ensure } from "@/lib/errors";
+import { AppError, ensure, serverFailure } from "@/lib/errors";
 import { sameOrigin } from "@/lib/site-url";
-import { POSTER_BUCKET, POSTER_MAX, sniffImage } from "@/lib/poster";
+import { POSTER_MAX, sniffImage } from "@/lib/poster";
+import { privileged } from "@/lib/db";
+import { storeFile } from "@/lib/file-storage";
 import { canCreateEvents } from "@/lib/ward-events";
 import { canAuthor } from "@/lib/prompts";
 export const runtime = "nodejs";
@@ -29,10 +31,6 @@ export async function POST(req: NextRequest) {
       "forbidden",
     );
     await rateLimit("poster:" + a.id, 30, 3600);
-    const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const key =
-      process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
-    ensure(url && key, 503, "storage_unavailable");
     ensure(
       Number(req.headers.get("content-length") || 0) <= POSTER_MAX + 16384,
       413,
@@ -44,18 +42,16 @@ export async function POST(req: NextRequest) {
     const ext = sniffImage(buffer);
     ensure(ext, 400, "invalid_file");
     const path = `${kind}/${randomUUID()}.${ext}`;
-    const { createClient } = await import("@supabase/supabase-js");
-    const supabase = createClient(url!, key!, {
-      auth: { persistSession: false, autoRefreshToken: false },
-    });
-    const { error } = await supabase.storage
-      .from(POSTER_BUCKET)
-      .upload(path, buffer, {
+    await privileged((db) =>
+      storeFile(db, {
+        bucket: "posters",
+        path,
+        createdBy: a.id,
+        filename: `poster.${ext}`,
         contentType: TYPES[ext],
-        cacheControl: "31536000",
-        upsert: false,
-      });
-    ensure(!error, 503, "storage_unavailable");
+        buffer,
+      }),
+    );
     return NextResponse.json(
       { path },
       { headers: { "Cache-Control": "no-store" } },
@@ -63,6 +59,9 @@ export async function POST(req: NextRequest) {
   } catch (e) {
     if (e instanceof AppError)
       return NextResponse.json({ error: e.code }, { status: e.status });
+    const failure = serverFailure(e);
+    if (failure)
+      return NextResponse.json({ error: failure.code }, { status: failure.status });
     console.error("poster_failed", { category: "internal" });
     return NextResponse.json({ error: "server_error" }, { status: 500 });
   }

@@ -5,7 +5,8 @@
       "codex/daniel-week-46": false,
       "codex/home-study-plan-fallback": false,
       "codex/study-reader-main": false,
-      "codex/mobile-reader-focus": false
+      "codex/mobile-reader-focus": false,
+      "claude/auth-restore": false
     }
   },
   "framework": "nextjs",

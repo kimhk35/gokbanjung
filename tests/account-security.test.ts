@@ -2,13 +2,12 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { mkdtemp } from "node:fs/promises";
 import { randomUUID } from "node:crypto";
-import type { SupabaseClient } from "@supabase/supabase-js";
+import type { AccountAuthClient } from "../src/lib/database-auth";
 import { privileged } from "../src/lib/db";
 import {
   requestAccount,
   adminResetPassword,
   accountSecurityList,
-  sendPasswordReset,
 } from "../src/lib/account-security";
 import type { Actor } from "../src/lib/types";
 test("ID/password account request preserves guest ownership; password management is admin-only and scoped", async () => {
@@ -40,8 +39,7 @@ test("ID/password account request preserves guest ownership; password management
       [guest.id, JSON.stringify({ recommended: "Existing guest writing" })],
     );
   });
-  let updates = 0,
-    mails = 0;
+  let updates = 0;
   const client = {
     auth: {
       unusedSignUp: async (input: {
@@ -58,18 +56,6 @@ test("ID/password account request preserves guest ownership; password management
           error: null,
           data: { user: { id: userId, identities: [{}] }, session: null },
         };
-      },
-      resetPasswordForEmail: async (
-        email: string,
-        options: { redirectTo: string },
-      ) => {
-        mails++;
-        assert.equal(email, "learner@accounts.gokbanjeong.invalid");
-        assert.equal(
-          options.redirectTo,
-          "https://example.com/auth/reset-password",
-        );
-        return { error: null };
       },
       admin: {
         createUser: async (input:{email:string;password:string;email_confirm:boolean})=>{
@@ -91,7 +77,7 @@ test("ID/password account request preserves guest ownership; password management
         },
       },
     },
-  } as unknown as SupabaseClient;
+  } as unknown as AccountAuthClient;
   assert.deepEqual(
     await requestAccount(
       guest,
@@ -157,13 +143,6 @@ test("ID/password account request preserves guest ownership; password management
     client,
   );
   assert.equal(updates, 1);
-  await sendPasswordReset(
-    "learner@accounts.gokbanjeong.invalid",
-    "https://example.com",
-    "fixture-sender",
-    client,
-  );
-  assert.equal(mails, 1);
   assert.equal(
     (
       await privileged((db) =>
