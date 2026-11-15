@@ -1292,3 +1292,30 @@ physical phones and production were not tested. Evidence/logs are ignored under
 Preview remains http://127.0.0.1:3000/week/47/day/1?track=adult on the existing
 isolated `.local-db/week46-preview` dev server. The branch is disabled for Vercel
 Git deployments in vercel.json. No production writes or deployment were made.
+
+## 2026-11-15 — Verified English reader sources
+
+User approved fixing English UI with Korean-only source pages. Weeks 44, 46,
+and 47 now resolve all 307 assigned materials to audited English editions.
+See docs/study/2026-english-{44,46,47}-audit.md and their source manifests.
+The variants map logical verses, translated paragraph boundaries and actual
+English footnote owners; original range fingerprints reject stale mappings.
+Canonical task IDs/ranges remain the basis of progress, saved positions and
+shared discussion anchors. Labels and existing reading notes also use English.
+Week 43 legacy handling and unverified Spanish/Filipino fallback are unchanged.
+The English manual's Bible Dictionary links differ from the assigned Guide to
+the Scriptures inventory; that distinction and video/transcript limits are
+documented, without silently adding new required readings.
+
+Verification: all 72 reading/card/community/progress tests pass, including 12
+new English/range checks. Full suite 150/151 passes; the same pre-existing
+AI-flow daily-quiz source_unavailable failure described above remains.
+Per-task scripture verse equality, source body/note coverage, no duplication,
+range endpoints and unchanged completion/cursor state are checked. Scoped
+ESLint, TypeScript and production webpack build pass using Node 24.22.1.
+Local browser verified home English -> today's week 46 manual, next-week
+entry -> resumed week 47 scripture, Next, Korean/English switching without
+progress loss, English note URLs, end-boundary reload, 390/1280px layouts.
+Evidence: ignored test-results/week47/english-reader-fixed.jpg and english-*
+test/build logs. This is local emulation, not physical-device or production QA.
+Added to the existing PR #8 branch; no Vercel deployment or production DB writes.

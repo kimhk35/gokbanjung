@@ -125,7 +125,8 @@ test("week 46 actual blue selections cover all scoped bodies without repeated so
   const opened: string[] = [];
   for (const task of tasks) {
     const source = sourceById.get(task.sourceId)!;
-    for (const lang of ["ko", "en", "es", "fil"] as const) {
+    // English translations are audited separately against their own IDs.
+    for (const lang of ["ko", "es", "fil"] as const) {
       const start = new URL(studySourceUrl(task, lang, false, 46));
       const end = new URL(studySourceUrl(task, lang, true, 46));
       assert.equal(start.origin, "https://www.churchofjesuschrist.org");

@@ -30,6 +30,8 @@ import {
   studyFamilyTitle,
   materialPercent,
   studySourceLanguage,
+  studySourceEdition,
+  studySourceNoteUrl,
   studySourceUrl,
   studyTasks,
   studyRelatedTasks,
@@ -271,10 +273,11 @@ function Reader({
     tasks.findIndex((item) => item.id === position?.taskId),
   );
   const task = tasks[step];
+  const edition = studySourceEdition(task, uiLang);
   const boundary = position?.boundary || "start";
   const related = studyRelatedTasks(task, week);
   const materialLabel = positionReady
-    ? task.label
+    ? edition.label
     : t("읽던 자료 확인 중…", "Finding your reading position…");
   function jumpToBoundary(value: ReadingBoundary) {
     selectPosition(task.id, value);
@@ -288,7 +291,7 @@ function Reader({
       task.selectedIds[0] ||
       task.anchor ||
       "main",
-    label: task.label,
+    label: edition.label,
   };
   const sourcePath = source.path,
     sourceAnchor = source.anchor;
@@ -685,7 +688,7 @@ function Reader({
           type="button"
           disabled={!positionReady}
           onClick={() => jumpToBoundary("start")}
-          title={task.selectedIds[0] || task.anchor}
+          title={edition.selectedIds[0] || edition.anchor}
         >
           {t("시작 보기 ↑", "Start ↑")}
         </button>
@@ -693,7 +696,7 @@ function Reader({
           type="button"
           disabled={!positionReady}
           onClick={() => jumpToBoundary("end")}
-          title={task.selectedIds.at(-1) || task.endAnchor}
+          title={edition.selectedIds.at(-1) || edition.endAnchor}
         >
           {t("끝 보기 ↓", "End ↓")}
         </button>
@@ -737,18 +740,18 @@ function Reader({
             )}
           {positionReady && task.kind === "activity" && (
             <div className="study-activity">
-              <strong>{task.label}</strong>
+              <strong>{edition.label}</strong>
               <p>{track === "adult" ? day.question : day.familyQuestion}</p>
               <button type="button" onClick={() => setNotesOpen(true)}>
                 {t("나만의 학습 메모", "Private learning notes")}
               </button>
             </div>
           )}
-          {positionReady && (task.readingNote || related.length > 0) && (
+          {positionReady && (edition.readingNote || related.length > 0) && (
             <details key={task.id} className="study-related-reading">
               <summary>{t("연결해서 읽기", "Read in context")}</summary>
               <div>
-                {task.readingNote && <p>{task.readingNote}</p>}
+                {edition.readingNote && <p>{edition.readingNote}</p>}
                 {related.length > 0 && (
                   <ul>
                     {related.map((item) => (
@@ -776,7 +779,7 @@ function Reader({
                           {item.track === "adult"
                             ? t("기본", "Basic")
                             : t("어린이·가족", "Children · family")}{" "}
-                          · {item.task.label}
+                          · {studySourceEdition(item.task, uiLang).label}
                         </Link>
                       </li>
                     ))}
@@ -789,7 +792,7 @@ function Reader({
             <StudySourceFrame
               key={`${task.id}:${uiLang}:${sourceUrl}:${jump}`}
               url={sourceUrl}
-              title={task.label}
+              title={edition.label}
               onRetry={() => setJump((n) => n + 1)}
             />
           ) : (
@@ -1042,50 +1045,46 @@ function Reader({
           )}
         </p>
         <ol className="study-materials-list">
-          {tasks.map((item, i) => (
-            <li key={item.id}>
-              <button
-                type="button"
-                aria-current={positionReady && i === step ? "step" : undefined}
-                disabled={!boot && !ready}
-                onClick={() => {
-                  selectPosition(item.id);
-                  setMaterialsOpen(false);
-                }}
-              >
-                {completed.includes(item.id) ? "✓ " : ""}
-                {item.label}
-              </button>
-              {item.noteLinks.length > 0 && (
-                <details>
-                  <summary>
-                    {t("각주 {count}개", "{count} notes", {
-                      count: item.noteLinks.length,
-                    })}
-                  </summary>
-                  {item.noteLinks.map((note) => (
-                    <a
-                      key={note.note}
-                      href={studySourceUrl(
-                        {
-                          ...item,
-                          anchor: note.owner,
-                          selectedIds: [note.owner],
-                        },
-                        uiLang,
-                        false,
-                        week,
-                      )}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {note.note} ↗{" "}
-                    </a>
-                  ))}
-                </details>
-              )}
-            </li>
-          ))}
+          {tasks.map((item, i) => {
+            const material = studySourceEdition(item, uiLang);
+            return (
+              <li key={item.id}>
+                <button
+                  type="button"
+                  aria-current={
+                    positionReady && i === step ? "step" : undefined
+                  }
+                  disabled={!boot && !ready}
+                  onClick={() => {
+                    selectPosition(item.id);
+                    setMaterialsOpen(false);
+                  }}
+                >
+                  {completed.includes(item.id) ? "✓ " : ""}
+                  {material.label}
+                </button>
+                {material.noteLinks.length > 0 && (
+                  <details>
+                    <summary>
+                      {t("각주 {count}개", "{count} notes", {
+                        count: material.noteLinks.length,
+                      })}
+                    </summary>
+                    {material.noteLinks.map((note) => (
+                      <a
+                        key={note.note}
+                        href={studySourceNoteUrl(item, note, uiLang, week)}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {note.note} ↗{" "}
+                      </a>
+                    ))}
+                  </details>
+                )}
+              </li>
+            );
+          })}
         </ol>
         <p className="muted">
           {t(
@@ -1186,7 +1185,7 @@ function Reader({
                   void mark(item.id, selectedDay, track, e.target.checked)
                 }
               />
-              {item.label}
+              {studySourceEdition(item, uiLang).label}
             </label>
           ))}
         </div>

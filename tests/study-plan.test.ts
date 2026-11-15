@@ -232,7 +232,10 @@ test("week 44 source URLs retain verified anchors instead of week 43 context off
       assert.equal(end.searchParams.get("id"), start.searchParams.get("id"));
       if (task.sourceLanguageLocked)
         for (const lang of ["ko", "en", "es", "fil"] as const)
-          assert.equal(studySourceLanguage(task, lang), task.sourceLang);
+          assert.equal(
+            studySourceLanguage(task, lang),
+            lang === "en" ? "eng" : task.sourceLang,
+          );
       if (task.path.endsWith("old-testament-2026/44"))
         assert.equal(new URL(studySourceUrl(task, "ko")).hash, start.hash);
     }

@@ -1,0 +1,4923 @@
+{
+  "version": 1,
+  "week": 44,
+  "lang": "eng",
+  "reviewed": "2026-11-15",
+  "counts": {
+    "sources": 41,
+    "tasks": 89,
+    "selectedBodyUnits": 1084,
+    "attachedNoteUnits": 487,
+    "missingBodyUnits": 0,
+    "duplicateBodyUnits": 0,
+    "duplicateNoteUnits": 0,
+    "verseSetMismatches": 0,
+    "fallbackTasks": 0
+  },
+  "checks": [
+    "reviewed source hashes",
+    "canonical task signatures",
+    "actual English bodies",
+    "exact scoped English body coverage",
+    "no body or note duplication",
+    "English note ownership",
+    "logical scripture verse equality",
+    "source order and range endpoints"
+  ],
+  "tasks": [
+    {
+      "taskId": "w44-t001",
+      "day": 1,
+      "track": "adultTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "figure1_p1",
+        "title_number1",
+        "title1",
+        "p1",
+        "p2",
+        "title2",
+        "scripture_title1",
+        "title3",
+        "p3"
+      ],
+      "englishSelectedIds": [
+        "figure1_p1",
+        "title_number1",
+        "title1",
+        "p1",
+        "p2",
+        "title2",
+        "scripture_title1",
+        "title3",
+        "p3"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t009",
+      "day": 1,
+      "track": "adultTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "p_h066E",
+        "p_a8DzN"
+      ],
+      "englishSelectedIds": [
+        "p_zPEti",
+        "p_cNrs4"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t021",
+      "day": 1,
+      "track": "adultTasks",
+      "sourceId": "jer31",
+      "method": "complete matching scripture chapter and verse set; English headings and notes",
+      "originalSelectedIds": [
+        "title_number1",
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "title2",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "title3",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "title4",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38",
+        "p39",
+        "p40"
+      ],
+      "englishSelectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38",
+        "p39",
+        "p40"
+      ],
+      "logicalVerses": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    },
+    {
+      "taskId": "w44-t022",
+      "day": 1,
+      "track": "adultTasks",
+      "sourceId": "jer33",
+      "method": "complete matching scripture chapter and verse set; English headings and notes",
+      "originalSelectedIds": [
+        "title_number1",
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26"
+      ],
+      "englishSelectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26"
+      ],
+      "logicalVerses": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "taskId": "w44-t032",
+      "day": 1,
+      "track": "adultTasks",
+      "sourceId": "jer1",
+      "method": "same logical scripture verses, read from the published verse labels",
+      "originalSelectedIds": [
+        "p10"
+      ],
+      "englishSelectedIds": [
+        "p10"
+      ],
+      "logicalVerses": [
+        10
+      ]
+    },
+    {
+      "taskId": "w44-t046",
+      "day": 1,
+      "track": "adultTasks",
+      "sourceId": "andersen",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_xCZdn",
+        "p_ks9eS",
+        "p_qFFZG",
+        "p_ggZII",
+        "p_iJBUv",
+        "p_yV1hm",
+        "p_bpaqQ",
+        "p_oLJ4z",
+        "p_gDlbX",
+        "p_tY3Bt",
+        "p_s1DCx",
+        "p_cD13D"
+      ],
+      "englishSelectedIds": [
+        "p_xCZdn",
+        "p_ks9eS",
+        "p_qFFZG",
+        "p_ggZII",
+        "p_iJBUv",
+        "p_yV1hm",
+        "p_bpaqQ",
+        "p_oLJ4z",
+        "p_gDlbX",
+        "p_tY3Bt",
+        "p_s1DCx",
+        "p_cD13D"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t049",
+      "day": 1,
+      "track": "adultTasks",
+      "sourceId": "ballard",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17"
+      ],
+      "englishSelectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t052",
+      "day": 1,
+      "track": "adultTasks",
+      "sourceId": "teaching",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "figure1_title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5"
+      ],
+      "englishSelectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "figure1_title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t061",
+      "day": 1,
+      "track": "adultTasks",
+      "sourceId": "helps",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_iC85z",
+        "p_nEb9V",
+        "p_vJUMV",
+        "p_xmoQY",
+        "p_vN9bo",
+        "p_eOkVp",
+        "p_bR0Da",
+        "p_mYh4b",
+        "p_vpvLz",
+        "p_qsVOq",
+        "p_ykktb",
+        "p_mQk4G"
+      ],
+      "englishSelectedIds": [
+        "p_iC85z",
+        "p_nEb9V",
+        "p_vJUMV",
+        "p_xmoQY",
+        "p_vN9bo",
+        "p_eOkVp",
+        "p_bR0Da",
+        "p_mYh4b",
+        "p_vpvLz",
+        "p_qsVOq",
+        "p_ykktb",
+        "p_mQk4G"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t063",
+      "day": 1,
+      "track": "adultTasks",
+      "sourceId": "helps",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_fhz6w",
+        "p_tBlT0",
+        "p_cIcQC"
+      ],
+      "englishSelectedIds": [
+        "p_fhz6w",
+        "p_tBlT0",
+        "p_cIcQC"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t068",
+      "day": 1,
+      "track": "adultTasks",
+      "sourceId": "helps",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_kEAPN",
+        "p_j5r1v",
+        "p_u2eko"
+      ],
+      "englishSelectedIds": [
+        "p_kEAPN",
+        "p_j5r1v",
+        "p_u2eko"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t071",
+      "day": 1,
+      "track": "adultTasks",
+      "sourceId": "helps",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_vlpPz",
+        "p_qld33",
+        "p_wCiP1"
+      ],
+      "englishSelectedIds": [
+        "p_vlpPz",
+        "p_qld33",
+        "p_wCiP1"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t013",
+      "day": 1,
+      "track": "familyTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "title9",
+        "scripture_title7",
+        "title10",
+        "p27"
+      ],
+      "englishSelectedIds": [
+        "title9",
+        "scripture_title7",
+        "title10",
+        "p27"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t074",
+      "day": 1,
+      "track": "familyTasks",
+      "sourceId": "children",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_rnkYB",
+        "p_tiEdD",
+        "p_eEtcG",
+        "p_f5awd",
+        "p_lfdno",
+        "p_sYtFM",
+        "p_hbBik",
+        "p_enls9"
+      ],
+      "englishSelectedIds": [
+        "p_rnkYB",
+        "p_tiEdD",
+        "p_eEtcG",
+        "p_f5awd",
+        "p_lfdno",
+        "p_sYtFM",
+        "p_hbBik",
+        "p_enls9"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t081",
+      "day": 1,
+      "track": "familyTasks",
+      "sourceId": "family-source-1",
+      "method": "same complete official article/song, including its English front matter and ending",
+      "originalSelectedIds": [
+        "p_l2pAA",
+        "p_e6xqu",
+        "p_zdjO3",
+        "p_dBuYO",
+        "p_qBLne",
+        "p_qToLn",
+        "p_i6FPH",
+        "p_juuc5",
+        "p_lri6i",
+        "p_tKI1E",
+        "p_tpe4N",
+        "p_zvQL3",
+        "p_rEDYY",
+        "p_yVAGl"
+      ],
+      "englishSelectedIds": [
+        "p_l2pAA",
+        "p_e6xqu",
+        "p_zdjO3",
+        "p_dBuYO",
+        "p_qBLne",
+        "p_qToLn",
+        "p_i6FPH",
+        "p_juuc5",
+        "p_lri6i",
+        "p_tKI1E",
+        "p_tpe4N",
+        "p_zvQL3",
+        "p_rEDYY",
+        "p_yVAGl"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t002",
+      "day": 2,
+      "track": "adultTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "scripture_title2",
+        "title4",
+        "p4"
+      ],
+      "englishSelectedIds": [
+        "scripture_title2",
+        "title4",
+        "p4"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t023",
+      "day": 2,
+      "track": "adultTasks",
+      "sourceId": "jer32",
+      "method": "complete matching scripture chapter and verse set; English headings and notes",
+      "originalSelectedIds": [
+        "title_number1",
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "title2",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "title3",
+        "p36",
+        "p37",
+        "p38",
+        "p39",
+        "p40",
+        "p41",
+        "p42",
+        "p43",
+        "p44"
+      ],
+      "englishSelectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38",
+        "p39",
+        "p40",
+        "p41",
+        "p42",
+        "p43",
+        "p44"
+      ],
+      "logicalVerses": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    },
+    {
+      "taskId": "w44-t038",
+      "day": 2,
+      "track": "adultTasks",
+      "sourceId": "gs-covenant",
+      "method": "complete matching scripture chapter and verse set; English headings and notes",
+      "originalSelectedIds": [
+        "title1",
+        "title2",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13"
+      ],
+      "englishSelectedIds": [
+        "title1",
+        "title2",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t039",
+      "day": 2,
+      "track": "adultTasks",
+      "sourceId": "walker",
+      "method": "same complete official article/song, including its English front matter and ending",
+      "originalSelectedIds": [
+        "p_k4p9l",
+        "p_qWZ3j",
+        "p_pA54L",
+        "p_fmWjP",
+        "p_sHZUU",
+        "p_wqXYP",
+        "p_jWrMp",
+        "p_d7a3h",
+        "p_j8kly",
+        "p_kBt4o",
+        "p_l0MZg",
+        "p_kqNTr",
+        "p_i6LW7",
+        "p_aDRsI",
+        "p_zffLY"
+      ],
+      "englishSelectedIds": [
+        "p_k4p9l",
+        "p_qWZ3j",
+        "p_pA54L",
+        "p_fmWjP",
+        "p_sHZUU",
+        "p_wqXYP",
+        "p_jWrMp",
+        "p_d7a3h",
+        "p_j8kly",
+        "p_kBt4o",
+        "p_l0MZg",
+        "p_kqNTr",
+        "p_i6LW7",
+        "p_aDRsI",
+        "p_zffLY"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t040",
+      "day": 2,
+      "track": "adultTasks",
+      "sourceId": "bednar",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "title1",
+        "author1",
+        "author2",
+        "kicker1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "title2",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p41"
+      ],
+      "englishSelectedIds": [
+        "title1",
+        "author1",
+        "author2",
+        "kicker1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "title2",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p41"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t055",
+      "day": 2,
+      "track": "adultTasks",
+      "sourceId": "teaching",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "title9",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17"
+      ],
+      "englishSelectedIds": [
+        "title9",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t062",
+      "day": 2,
+      "track": "adultTasks",
+      "sourceId": "helps",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_sNjLc",
+        "p_an5HJ",
+        "p_v5i2Y",
+        "p_aU1pc",
+        "p_r3JS6",
+        "p_oOFJy"
+      ],
+      "englishSelectedIds": [
+        "p_sNjLc",
+        "p_an5HJ",
+        "p_v5i2Y",
+        "p_aU1pc",
+        "p_r3JS6",
+        "p_oOFJy"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t014",
+      "day": 2,
+      "track": "familyTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "scripture_title8",
+        "title11",
+        "p28"
+      ],
+      "englishSelectedIds": [
+        "scripture_title8",
+        "title11",
+        "p28"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t036",
+      "day": 2,
+      "track": "familyTasks",
+      "sourceId": "mosiah18",
+      "method": "same logical scripture verses, read from the published verse labels",
+      "originalSelectedIds": [
+        "p10",
+        "p13"
+      ],
+      "englishSelectedIds": [
+        "p10",
+        "p13"
+      ],
+      "logicalVerses": [
+        10,
+        13
+      ]
+    },
+    {
+      "taskId": "w44-t075",
+      "day": 2,
+      "track": "familyTasks",
+      "sourceId": "children",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_yPll4",
+        "p_xZjpz",
+        "p_eKpQ2"
+      ],
+      "englishSelectedIds": [
+        "p_yPll4",
+        "p_xZjpz",
+        "p_eKpQ2"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t082",
+      "day": 2,
+      "track": "familyTasks",
+      "sourceId": "family-source-2",
+      "method": "same complete official article/song, including its English front matter and ending",
+      "originalSelectedIds": [
+        "series_title1",
+        "title1",
+        "figure1_p1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "aside1_p1"
+      ],
+      "englishSelectedIds": [
+        "series_title1",
+        "title1",
+        "figure1_p1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "aside1_p1"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t003",
+      "day": 3,
+      "track": "adultTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11"
+      ],
+      "englishSelectedIds": [
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t008",
+      "day": 3,
+      "track": "adultTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "figure3_p1"
+      ],
+      "englishSelectedIds": [
+        "figure3_p1"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t041",
+      "day": 3,
+      "track": "adultTasks",
+      "sourceId": "bednar",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "title3",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "title4",
+        "p27",
+        "p28",
+        "p29",
+        "p43",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p42",
+        "title5",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38",
+        "p39",
+        "p40"
+      ],
+      "englishSelectedIds": [
+        "title3",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "title4",
+        "p27",
+        "p28",
+        "p29",
+        "p43",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p42",
+        "title5",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38",
+        "p39",
+        "p40"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t042",
+      "day": 3,
+      "track": "adultTasks",
+      "sourceId": "christofferson",
+      "method": "explicit translated paragraph merge: study/prayer ends p9; service/protection starts p10",
+      "originalSelectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "kicker1",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14"
+      ],
+      "englishSelectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "kicker1",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t053",
+      "day": 3,
+      "track": "adultTasks",
+      "sourceId": "teaching",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "title3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8"
+      ],
+      "englishSelectedIds": [
+        "title3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t059",
+      "day": 3,
+      "track": "adultTasks",
+      "sourceId": "evening",
+      "method": "same video player and title metadata only; transcript remains unaudited",
+      "originalSelectedIds": [
+        "title1"
+      ],
+      "englishSelectedIds": [
+        "title1"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t069",
+      "day": 3,
+      "track": "adultTasks",
+      "sourceId": "helps",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_j8YB3",
+        "p_xILBZ"
+      ],
+      "englishSelectedIds": [
+        "p_j8YB3",
+        "p_xILBZ"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t076",
+      "day": 3,
+      "track": "familyTasks",
+      "sourceId": "children",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_k5yTi",
+        "p_cQnKB"
+      ],
+      "englishSelectedIds": [
+        "p_k5yTi",
+        "p_cQnKB"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t083",
+      "day": 3,
+      "track": "familyTasks",
+      "sourceId": "family-source-3",
+      "method": "same complete official article/song, including its English front matter and ending",
+      "originalSelectedIds": [
+        "series_title1",
+        "title1",
+        "author1",
+        "p_xzMK1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "title2",
+        "p7",
+        "p8",
+        "figure1_p1"
+      ],
+      "englishSelectedIds": [
+        "series_title1",
+        "title1",
+        "author1",
+        "p_xzMK1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "title2",
+        "p7",
+        "p8",
+        "figure1_p1"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t084",
+      "day": 3,
+      "track": "familyTasks",
+      "sourceId": "family-source-4",
+      "method": "same complete official article/song, including its English front matter and ending",
+      "originalSelectedIds": [
+        "p_tEraC",
+        "p_filkr",
+        "p_mi76O",
+        "p_nrQ2o",
+        "p_hIQvw",
+        "p_cgTZX",
+        "p_zqGOz",
+        "p_kQBKH",
+        "p_yAtIw",
+        "p_lpM3z",
+        "p_l6DBf",
+        "p_egicd",
+        "p_cjW36",
+        "p_rDrbz",
+        "p_wEY5y",
+        "p_gjK1H",
+        "p_imOD0",
+        "p_jLCPx",
+        "p_hbLMp",
+        "p_qeLEB",
+        "p_mFN2P",
+        "p_bBSBB",
+        "p_lVPOi",
+        "p_l0Pqx",
+        "p_hVmfM",
+        "p_uJSsp",
+        "p_q5EeA",
+        "p_n76T0",
+        "p_emJa0",
+        "p_emCAY",
+        "p_dvk7j",
+        "p_edosC",
+        "p_pzwbq",
+        "p_jzc7r",
+        "p_cuMi9",
+        "p_vdtl3",
+        "p_lFHAj",
+        "p_k1SBe",
+        "p_xpoDK",
+        "p_ikOy4",
+        "p_a290d",
+        "p_dMXI0",
+        "p_vLJsv",
+        "p_agc8k",
+        "p_iEGQE",
+        "p_b9lOr",
+        "p_jfOab",
+        "p_akQUV",
+        "p_klm4Y",
+        "p_lRIrk"
+      ],
+      "englishSelectedIds": [
+        "p_tEraC",
+        "p_filkr",
+        "p_mi76O",
+        "p_nrQ2o",
+        "p_hIQvw",
+        "p_cgTZX",
+        "p_zqGOz",
+        "p_kQBKH",
+        "p_yAtIw",
+        "p_lpM3z",
+        "p_l6DBf",
+        "p_egicd",
+        "p_cjW36",
+        "p_rDrbz",
+        "p_wEY5y",
+        "p_gjK1H",
+        "p_imOD0",
+        "p_jLCPx",
+        "p_hbLMp",
+        "p_qeLEB",
+        "p_mFN2P",
+        "p_bBSBB",
+        "p_lVPOi",
+        "p_l0Pqx",
+        "p_hVmfM",
+        "p_uJSsp",
+        "p_q5EeA",
+        "p_n76T0",
+        "p_emJa0",
+        "p_emCAY",
+        "p_dvk7j",
+        "p_edosC",
+        "p_pzwbq",
+        "p_jzc7r",
+        "p_cuMi9",
+        "p_vdtl3",
+        "p_lFHAj",
+        "p_k1SBe",
+        "p_xpoDK",
+        "p_ikOy4",
+        "p_a290d",
+        "p_dMXI0",
+        "p_vLJsv",
+        "p_agc8k",
+        "p_iEGQE",
+        "p_b9lOr",
+        "p_jfOab",
+        "p_akQUV",
+        "p_klm4Y",
+        "p_lRIrk"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t004",
+      "day": 4,
+      "track": "adultTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "scripture_title3",
+        "title5",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18"
+      ],
+      "englishSelectedIds": [
+        "scripture_title3",
+        "title5",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t010",
+      "day": 4,
+      "track": "adultTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "p_jYLoa"
+      ],
+      "englishSelectedIds": [
+        "p_iImft"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t024",
+      "day": 4,
+      "track": "adultTasks",
+      "sourceId": "jer36",
+      "method": "complete matching scripture chapter and verse set; English headings and notes",
+      "originalSelectedIds": [
+        "title_number1",
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "title2",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "title3",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "title4",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32"
+      ],
+      "englishSelectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32"
+      ],
+      "logicalVerses": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "taskId": "w44-t043",
+      "day": 4,
+      "track": "adultTasks",
+      "sourceId": "christofferson",
+      "method": "explicit translated paragraph merge: study/prayer ends p9; service/protection starts p10",
+      "originalSelectedIds": [
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22"
+      ],
+      "englishSelectedIds": [
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t047",
+      "day": 4,
+      "track": "adultTasks",
+      "sourceId": "andersen",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_d7CYq",
+        "p_hAVuM",
+        "p_xoSys",
+        "p_tgQr4",
+        "p_uMbV8",
+        "p_m2pTM",
+        "p_ndnRA",
+        "p_faSlJ",
+        "p_ukugf",
+        "p_k5Wa6",
+        "p_jGfYH",
+        "p_j6bkL",
+        "p_ncqO5",
+        "p_dTGIO",
+        "p_wKlc2",
+        "p_cDHEu",
+        "p_eYX5p",
+        "p_wrN5Y",
+        "p_uoF0G",
+        "p_c7lm9",
+        "p_oyGrM",
+        "p_uCh6y",
+        "p_kw5EP",
+        "p_grC8N"
+      ],
+      "englishSelectedIds": [
+        "p_d7CYq",
+        "p_hAVuM",
+        "p_xoSys",
+        "p_tgQr4",
+        "p_uMbV8",
+        "p_m2pTM",
+        "p_ndnRA",
+        "p_faSlJ",
+        "p_ukugf",
+        "p_k5Wa6",
+        "p_jGfYH",
+        "p_j6bkL",
+        "p_ncqO5",
+        "p_dTGIO",
+        "p_wKlc2",
+        "p_cDHEu",
+        "p_eYX5p",
+        "p_wrN5Y",
+        "p_uoF0G",
+        "p_c7lm9",
+        "p_oyGrM",
+        "p_uCh6y",
+        "p_kw5EP",
+        "p_grC8N"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t050",
+      "day": 4,
+      "track": "adultTasks",
+      "sourceId": "ballard",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26"
+      ],
+      "englishSelectedIds": [
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t054",
+      "day": 4,
+      "track": "adultTasks",
+      "sourceId": "teaching",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "title6",
+        "p9",
+        "p10",
+        "p11",
+        "p12"
+      ],
+      "englishSelectedIds": [
+        "title6",
+        "p9",
+        "p10",
+        "p11",
+        "p12"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t064",
+      "day": 4,
+      "track": "adultTasks",
+      "sourceId": "helps",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_s91JQ",
+        "p_xuXRk",
+        "p_jtDSy",
+        "p_u59Zl"
+      ],
+      "englishSelectedIds": [
+        "p_s91JQ",
+        "p_xuXRk",
+        "p_jtDSy",
+        "p_u59Zl"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t015",
+      "day": 4,
+      "track": "familyTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "scripture_title9",
+        "title12",
+        "p29",
+        "p30"
+      ],
+      "englishSelectedIds": [
+        "scripture_title9",
+        "title12",
+        "p29",
+        "p30"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t077",
+      "day": 4,
+      "track": "familyTasks",
+      "sourceId": "children",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_iLeB6",
+        "p_qyDGx",
+        "p_apVae"
+      ],
+      "englishSelectedIds": [
+        "p_iLeB6",
+        "p_qyDGx",
+        "p_apVae"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t085",
+      "day": 4,
+      "track": "familyTasks",
+      "sourceId": "family-source-5",
+      "method": "same complete official article/song, including its English front matter and ending",
+      "originalSelectedIds": [
+        "title1",
+        "subtitle1"
+      ],
+      "englishSelectedIds": [
+        "title1",
+        "subtitle1"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t005",
+      "day": 5,
+      "track": "adultTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "scripture_title4",
+        "title6",
+        "p19"
+      ],
+      "englishSelectedIds": [
+        "scripture_title4",
+        "title6",
+        "p19"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t011",
+      "day": 5,
+      "track": "adultTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "p_opNyv"
+      ],
+      "englishSelectedIds": [
+        "p_mgM61"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t025",
+      "day": 5,
+      "track": "adultTasks",
+      "sourceId": "jer37",
+      "method": "complete matching scripture chapter and verse set; English headings and notes",
+      "originalSelectedIds": [
+        "title_number1",
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "title2",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21"
+      ],
+      "englishSelectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21"
+      ],
+      "logicalVerses": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "taskId": "w44-t026",
+      "day": 5,
+      "track": "adultTasks",
+      "sourceId": "jer38",
+      "method": "complete matching scripture chapter and verse set; English headings and notes",
+      "originalSelectedIds": [
+        "title_number1",
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "title2",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28"
+      ],
+      "englishSelectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28"
+      ],
+      "logicalVerses": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "taskId": "w44-t027",
+      "day": 5,
+      "track": "adultTasks",
+      "sourceId": "ne1",
+      "method": "complete matching scripture chapter and verse set; English headings and notes",
+      "originalSelectedIds": [
+        "title1",
+        "subtitle1",
+        "intro1",
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20"
+      ],
+      "englishSelectedIds": [
+        "title1",
+        "subtitle1",
+        "intro1",
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20"
+      ],
+      "logicalVerses": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "taskId": "w44-t044",
+      "day": 5,
+      "track": "adultTasks",
+      "sourceId": "cook",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "kicker1",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18"
+      ],
+      "englishSelectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "kicker1",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t056",
+      "day": 5,
+      "track": "adultTasks",
+      "sourceId": "teaching",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "figure4_p1",
+        "title12",
+        "p18",
+        "p19",
+        "p20",
+        "p21"
+      ],
+      "englishSelectedIds": [
+        "figure4_p1",
+        "title12",
+        "p18",
+        "p19",
+        "p20",
+        "p21"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t065",
+      "day": 5,
+      "track": "adultTasks",
+      "sourceId": "helps",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_ij6vo",
+        "p_lQPti",
+        "p_bzMPb",
+        "p_bJxdh"
+      ],
+      "englishSelectedIds": [
+        "p_ij6vo",
+        "p_lQPti",
+        "p_bzMPb",
+        "p_bJxdh"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t078",
+      "day": 5,
+      "track": "familyTasks",
+      "sourceId": "children",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_pMOBU",
+        "p_krRKV",
+        "p_aBCLk",
+        "p_qLpVg"
+      ],
+      "englishSelectedIds": [
+        "p_pMOBU",
+        "p_krRKV",
+        "p_aBCLk",
+        "p_qLpVg"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t086",
+      "day": 5,
+      "track": "familyTasks",
+      "sourceId": "family-source-6",
+      "method": "same complete official article/song, including its English front matter and ending",
+      "originalSelectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "figure1_p11",
+        "figure1_p12",
+        "figure1_p13",
+        "figure1_p14",
+        "figure1_p15",
+        "figure1_p16",
+        "figure1_p17",
+        "figure1_p18",
+        "figure1_p19",
+        "figure1_p20",
+        "figure1_p21",
+        "figure1_p22",
+        "figure1_p23",
+        "figure1_p24",
+        "figure1_p25",
+        "figure1_p26",
+        "figure1_p27",
+        "figure1_p28",
+        "figure1_p29",
+        "figure1_p30",
+        "figure1_p31",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "englishSelectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "figure1_p11",
+        "figure1_p12",
+        "figure1_p13",
+        "figure1_p14",
+        "figure1_p15",
+        "figure1_p16",
+        "figure1_p17",
+        "figure1_p18",
+        "figure1_p19",
+        "figure1_p20",
+        "figure1_p21",
+        "figure1_p22",
+        "figure1_p23",
+        "figure1_p24",
+        "figure1_p25",
+        "figure1_p26",
+        "figure1_p27",
+        "figure1_p28",
+        "figure1_p29",
+        "figure1_p30",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t087",
+      "day": 5,
+      "track": "familyTasks",
+      "sourceId": "family-source-7",
+      "method": "same complete official article/song, including its English front matter and ending",
+      "originalSelectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "kicker1",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "aside1_p1",
+        "figure1_p1"
+      ],
+      "englishSelectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "kicker1",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "aside1_p1",
+        "figure1_p1"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t006",
+      "day": 6,
+      "track": "adultTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "scripture_title5",
+        "title7",
+        "p20",
+        "p21",
+        "figure2_p1"
+      ],
+      "englishSelectedIds": [
+        "scripture_title5",
+        "title7",
+        "p20",
+        "p21",
+        "figure2_p1"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t012",
+      "day": 6,
+      "track": "adultTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "p_mJlX6"
+      ],
+      "englishSelectedIds": [
+        "p_mPtvc"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t028",
+      "day": 6,
+      "track": "adultTasks",
+      "sourceId": "jer39",
+      "method": "complete matching scripture chapter and verse set; English headings and notes",
+      "originalSelectedIds": [
+        "title_number1",
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "title2",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "title3",
+        "p15",
+        "p16",
+        "p17",
+        "p18"
+      ],
+      "englishSelectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18"
+      ],
+      "logicalVerses": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "taskId": "w44-t029",
+      "day": 6,
+      "track": "adultTasks",
+      "sourceId": "ne2",
+      "method": "complete matching scripture chapter and verse set; English headings and notes",
+      "originalSelectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24"
+      ],
+      "englishSelectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24"
+      ],
+      "logicalVerses": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "taskId": "w44-t045",
+      "day": 6,
+      "track": "adultTasks",
+      "sourceId": "cook",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32"
+      ],
+      "englishSelectedIds": [
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t057",
+      "day": 6,
+      "track": "adultTasks",
+      "sourceId": "teaching",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "title15",
+        "p22",
+        "p23",
+        "p24",
+        "p25"
+      ],
+      "englishSelectedIds": [
+        "title15",
+        "p22",
+        "p23",
+        "p24",
+        "p25"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t066",
+      "day": 6,
+      "track": "adultTasks",
+      "sourceId": "helps",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_njRFQ",
+        "p_laDE6",
+        "p_aRp9u",
+        "p_wKkt2",
+        "p_mZQH1"
+      ],
+      "englishSelectedIds": [
+        "p_njRFQ",
+        "p_laDE6",
+        "p_aRp9u",
+        "p_wKkt2",
+        "p_mZQH1"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t070",
+      "day": 6,
+      "track": "adultTasks",
+      "sourceId": "helps",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_q9bEn",
+        "p_rjgmG"
+      ],
+      "englishSelectedIds": [
+        "p_q9bEn",
+        "p_rjgmG"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t072",
+      "day": 6,
+      "track": "adultTasks",
+      "sourceId": "helps",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_fxxkg"
+      ],
+      "englishSelectedIds": [
+        "p_fxxkg"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t016",
+      "day": 6,
+      "track": "familyTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "scripture_title10",
+        "title13",
+        "p31"
+      ],
+      "englishSelectedIds": [
+        "scripture_title10",
+        "title13",
+        "p31"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t018",
+      "day": 6,
+      "track": "familyTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "figure5_figure1_p1"
+      ],
+      "englishSelectedIds": [
+        "figure5_figure1_p1"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t079",
+      "day": 6,
+      "track": "familyTasks",
+      "sourceId": "children",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_nHjO6",
+        "p_xyhkQ"
+      ],
+      "englishSelectedIds": [
+        "p_nHjO6",
+        "p_xyhkQ"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t088",
+      "day": 6,
+      "track": "familyTasks",
+      "sourceId": "family-source-8",
+      "method": "same complete official article/song, including its English front matter and ending",
+      "originalSelectedIds": [
+        "p_rLg9v",
+        "p_jNeiN",
+        "p_yjYrd",
+        "p_oFVIi",
+        "p_omN0M",
+        "p_a32ER",
+        "p_fwuSK",
+        "p_hsKr5",
+        "p_g7jgU",
+        "p_baWKw",
+        "p_awsVq",
+        "p_t2Jqq",
+        "p_dp1qZ",
+        "p_v6cgf",
+        "p_ju4oV",
+        "p_vgQez",
+        "p_cqQ4K",
+        "p_sKtFo",
+        "p_gD4aT",
+        "p_jpEN7",
+        "p_v4pIq",
+        "p_bE6g5",
+        "p_pkPIm",
+        "p_y8riD",
+        "p_gjFB6",
+        "p_pxVHI",
+        "p_zDMsJ",
+        "p_atEZK",
+        "p_rNrk9",
+        "p_cX3Jw",
+        "p_sbqct",
+        "p_s1c70",
+        "p_jqqRA",
+        "p_y6w3P",
+        "p_vXdw1",
+        "p_gZ6Vv",
+        "p_tpSaJ"
+      ],
+      "englishSelectedIds": [
+        "p_rLg9v",
+        "p_jNeiN",
+        "p_yjYrd",
+        "p_oFVIi",
+        "p_omN0M",
+        "p_a32ER",
+        "p_fwuSK",
+        "p_hsKr5",
+        "p_g7jgU",
+        "p_baWKw",
+        "p_awsVq",
+        "p_t2Jqq",
+        "p_dp1qZ",
+        "p_v6cgf",
+        "p_ju4oV",
+        "p_vgQez",
+        "p_cqQ4K",
+        "p_sKtFo",
+        "p_gD4aT",
+        "p_jpEN7",
+        "p_v4pIq",
+        "p_bE6g5",
+        "p_pkPIm",
+        "p_y8riD",
+        "p_gjFB6",
+        "p_pxVHI",
+        "p_zDMsJ",
+        "p_atEZK",
+        "p_rNrk9",
+        "p_cX3Jw",
+        "p_sbqct",
+        "p_s1c70",
+        "p_jqqRA",
+        "p_y6w3P",
+        "p_vXdw1",
+        "p_gZ6Vv",
+        "p_tpSaJ"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t089",
+      "day": 6,
+      "track": "familyTasks",
+      "sourceId": "family-source-9",
+      "method": "same complete official article/song, including its English front matter and ending",
+      "originalSelectedIds": [
+        "p_uoTze",
+        "p_xoq04",
+        "p_qIdkW",
+        "p_zfhJ0",
+        "p_vlz5g",
+        "p_xje2z",
+        "p_rB9Dm",
+        "p_dFEEl",
+        "p_iK8QA",
+        "p_eQ4B5",
+        "p_mi33x"
+      ],
+      "englishSelectedIds": [
+        "p_uoTze",
+        "p_xoq04",
+        "p_qIdkW",
+        "p_zfhJ0",
+        "p_vlz5g",
+        "p_xje2z",
+        "p_rB9Dm",
+        "p_dFEEl",
+        "p_iK8QA",
+        "p_mi33x"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t007",
+      "day": 7,
+      "track": "adultTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "scripture_title6",
+        "title8",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26"
+      ],
+      "englishSelectedIds": [
+        "scripture_title6",
+        "title8",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t030",
+      "day": 7,
+      "track": "adultTasks",
+      "sourceId": "lam1",
+      "method": "complete matching scripture chapter and verse set; English headings and notes",
+      "originalSelectedIds": [
+        "title1",
+        "title_number1",
+        "title2",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22"
+      ],
+      "englishSelectedIds": [
+        "title1",
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22"
+      ],
+      "logicalVerses": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "taskId": "w44-t031",
+      "day": 7,
+      "track": "adultTasks",
+      "sourceId": "lam3",
+      "method": "complete matching scripture chapter and verse set; English headings and notes",
+      "originalSelectedIds": [
+        "title_number1",
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38",
+        "p39",
+        "p40",
+        "p41",
+        "p42",
+        "p43",
+        "p44",
+        "p45",
+        "p46",
+        "p47",
+        "p48",
+        "p49",
+        "p50",
+        "p51",
+        "p52",
+        "p53",
+        "p54",
+        "p55",
+        "p56",
+        "p57",
+        "p58",
+        "p59",
+        "p60",
+        "p61",
+        "p62",
+        "p63",
+        "p64",
+        "p65",
+        "p66"
+      ],
+      "englishSelectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38",
+        "p39",
+        "p40",
+        "p41",
+        "p42",
+        "p43",
+        "p44",
+        "p45",
+        "p46",
+        "p47",
+        "p48",
+        "p49",
+        "p50",
+        "p51",
+        "p52",
+        "p53",
+        "p54",
+        "p55",
+        "p56",
+        "p57",
+        "p58",
+        "p59",
+        "p60",
+        "p61",
+        "p62",
+        "p63",
+        "p64",
+        "p65",
+        "p66"
+      ],
+      "logicalVerses": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ]
+    },
+    {
+      "taskId": "w44-t033",
+      "day": 7,
+      "track": "adultTasks",
+      "sourceId": "matt5",
+      "method": "same logical scripture verses, read from the published verse labels",
+      "originalSelectedIds": [
+        "p4"
+      ],
+      "englishSelectedIds": [
+        "p4"
+      ],
+      "logicalVerses": [
+        4
+      ]
+    },
+    {
+      "taskId": "w44-t034",
+      "day": 7,
+      "track": "adultTasks",
+      "sourceId": "james4",
+      "method": "same logical scripture verses, read from the published verse labels",
+      "originalSelectedIds": [
+        "p8",
+        "p9",
+        "p10"
+      ],
+      "englishSelectedIds": [
+        "p8",
+        "p9",
+        "p10"
+      ],
+      "logicalVerses": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "taskId": "w44-t035",
+      "day": 7,
+      "track": "adultTasks",
+      "sourceId": "alma36",
+      "method": "same logical scripture verses, read from the published verse labels",
+      "originalSelectedIds": [
+        "p17",
+        "p18",
+        "p19",
+        "p20"
+      ],
+      "englishSelectedIds": [
+        "p17",
+        "p18",
+        "p19",
+        "p20"
+      ],
+      "logicalVerses": [
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "taskId": "w44-t037",
+      "day": 7,
+      "track": "adultTasks",
+      "sourceId": "gs-lamentations",
+      "method": "complete matching scripture chapter and verse set; English headings and notes",
+      "originalSelectedIds": [
+        "title1",
+        "p1"
+      ],
+      "englishSelectedIds": [
+        "title1",
+        "p1"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t048",
+      "day": 7,
+      "track": "adultTasks",
+      "sourceId": "andersen",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_tW3aK",
+        "p_d2KzJ",
+        "p_fgWBK",
+        "p_tCyLv",
+        "p_mrk0W",
+        "p_ismTL",
+        "p_ozySr",
+        "p_yGHNd",
+        "p_w7ZMZ",
+        "p_hOAOT",
+        "p_nj0Gq",
+        "p_cNP4a",
+        "p_c99Af",
+        "p_rQEMQ",
+        "p_mcnVg",
+        "p_xRwlY",
+        "p_bBeHp",
+        "p_jSZqp",
+        "p_zFCbB"
+      ],
+      "englishSelectedIds": [
+        "p_tW3aK",
+        "p_d2KzJ",
+        "p_fgWBK",
+        "p_tCyLv",
+        "p_mrk0W",
+        "p_ismTL",
+        "p_ozySr",
+        "p_yGHNd",
+        "p_w7ZMZ",
+        "p_hOAOT",
+        "p_nj0Gq",
+        "p_cNP4a",
+        "p_c99Af",
+        "p_rQEMQ",
+        "p_mcnVg",
+        "p_xRwlY",
+        "p_bBeHp",
+        "p_jSZqp",
+        "p_zFCbB"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t051",
+      "day": 7,
+      "track": "adultTasks",
+      "sourceId": "ballard",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38"
+      ],
+      "englishSelectedIds": [
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t058",
+      "day": 7,
+      "track": "adultTasks",
+      "sourceId": "teaching",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "figure2_title1",
+        "figure2_p1",
+        "figure2_p2",
+        "figure2_p3",
+        "figure2_p4",
+        "figure2_p5",
+        "figure2_p6",
+        "figure2_p7",
+        "figure2_p8",
+        "figure2_p9",
+        "figure2_p10",
+        "figure2_p11",
+        "figure2_p12",
+        "figure2_p13",
+        "figure2_p14",
+        "figure2_p15",
+        "figure2_p16",
+        "figure2_p17"
+      ],
+      "englishSelectedIds": [
+        "figure2_title1",
+        "figure2_p1",
+        "figure2_p2",
+        "figure2_p3",
+        "figure2_p4",
+        "figure2_p5",
+        "figure2_p6",
+        "figure2_p7",
+        "figure2_p8",
+        "figure2_p9",
+        "figure2_p10",
+        "figure2_p11",
+        "figure2_p12",
+        "figure2_p13",
+        "figure2_p14",
+        "figure2_p15",
+        "figure2_p16",
+        "figure2_p17"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t060",
+      "day": 7,
+      "track": "adultTasks",
+      "sourceId": "hymn115",
+      "method": "same complete official article/song, including its English front matter and ending",
+      "originalSelectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "figure1_p11",
+        "figure1_p12",
+        "figure1_p13",
+        "figure1_p14",
+        "figure1_p15",
+        "p1",
+        "p2"
+      ],
+      "englishSelectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "figure1_p11",
+        "figure1_p12",
+        "figure1_p13",
+        "figure1_p14",
+        "figure1_p15",
+        "p1",
+        "p2"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t067",
+      "day": 7,
+      "track": "adultTasks",
+      "sourceId": "helps",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_vTb0z",
+        "p_hPv4Z",
+        "p_k2Tp8",
+        "p_tTIkH",
+        "p_cf5AA",
+        "p_vi5kl",
+        "p_h1yNe",
+        "p_i2Ouv",
+        "p_yPHEd"
+      ],
+      "englishSelectedIds": [
+        "p_vTb0z",
+        "p_hPv4Z",
+        "p_k2Tp8",
+        "p_tTIkH",
+        "p_cf5AA",
+        "p_vi5kl",
+        "p_h1yNe",
+        "p_i2Ouv",
+        "p_yPHEd"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t073",
+      "day": 7,
+      "track": "adultTasks",
+      "sourceId": "helps",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_tupmD"
+      ],
+      "englishSelectedIds": [
+        "p_tupmD"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t017",
+      "day": 7,
+      "track": "familyTasks",
+      "sourceId": "manual",
+      "method": "reviewed semantic section/paragraph mapping; five explicit help-link replacements",
+      "originalSelectedIds": [
+        "scripture_title11",
+        "title14",
+        "p32",
+        "p33",
+        "figure4_p1"
+      ],
+      "englishSelectedIds": [
+        "scripture_title11",
+        "title14",
+        "p32",
+        "p33",
+        "figure4_p1"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t080",
+      "day": 7,
+      "track": "familyTasks",
+      "sourceId": "children",
+      "method": "reviewed corresponding meanings, citations, and section boundaries",
+      "originalSelectedIds": [
+        "p_a9Bnn",
+        "p_pANWO",
+        "p_ozv3P",
+        "p_zxNuU"
+      ],
+      "englishSelectedIds": [
+        "p_a9Bnn",
+        "p_pANWO",
+        "p_ozv3P",
+        "p_zxNuU"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t090",
+      "day": 7,
+      "track": "familyTasks",
+      "sourceId": "family-source-10",
+      "method": "same complete official article/song, including its English front matter and ending",
+      "originalSelectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "kicker1",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "aside1_p1",
+        "aside2_p1",
+        "figure1_p1"
+      ],
+      "englishSelectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "kicker1",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "aside1_p1",
+        "aside2_p1",
+        "figure1_p1"
+      ],
+      "logicalVerses": []
+    },
+    {
+      "taskId": "w44-t091",
+      "day": 7,
+      "track": "familyTasks",
+      "sourceId": "family-song73",
+      "method": "same complete official article/song, including its English front matter and ending",
+      "originalSelectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "p1",
+        "p2"
+      ],
+      "englishSelectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "p1",
+        "p2"
+      ],
+      "logicalVerses": []
+    }
+  ],
+  "excludedNotes": [
+    {
+      "sourceId": "helps",
+      "anchor": "p_wKZD5",
+      "reason": "Unlinked Notes section heading, not a reading paragraph"
+    },
+    {
+      "sourceId": "walker",
+      "anchor": "p_z1LVJ",
+      "reason": "Unlinked Notes section heading, not a reading paragraph"
+    },
+    {
+      "sourceId": "bednar",
+      "anchor": "note_title1",
+      "reason": "Unlinked Notes section heading, not a reading paragraph"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note1_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note2_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note3_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note5_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note5_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note5_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note5_d_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note5_e_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note6_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note6_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note7_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note7_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note7_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note8_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note9_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note9_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note9_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note11_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note13_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note13_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note14_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note15_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note16_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note16_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note18_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note19_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "jer1",
+      "anchor": "note19_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note1_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note3_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note3_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note3_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note5_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note5_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note6_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note6_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note7_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note8_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note8_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note8_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note9_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note9_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note10_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note10_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note10_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note11_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note11_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note11_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note12_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note12_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note12_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note13_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note14_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note15_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note16_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note16_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note16_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note17_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note17_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note18_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note18_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note19_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note19_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note19_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note19_d_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note20_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note20_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note21_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note21_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note21_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note22_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note22_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note22_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note22_d_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note22_e_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note24_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note25_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note26_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note27_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note28_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note28_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note28_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note28_d_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note29_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note29_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note30_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note30_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note31_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note32_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note32_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note32_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note33_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note33_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note33_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note34_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note34_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note35_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note35_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note37_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note37_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note38_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note39_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note39_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note39_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note42_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note42_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note43_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note43_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note44_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note44_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note44_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note44_d_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note44_e_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note44_f_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note44_g_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note44_h_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note45_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note45_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note45_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note46_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note48_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note48_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note48_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "matt5",
+      "anchor": "note48_d_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note1_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note1_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note1_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note3_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note3_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note3_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note3_d_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note3_e_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note4_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note4_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note4_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note4_d_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note5_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note6_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note6_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note6_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note7_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note7_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note7_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note11_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note11_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note12_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note13_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note14_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note16_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note17_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note17_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "james4",
+      "anchor": "note17_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note1_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note2_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note2_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note2_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note3_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note3_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note3_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note4_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note4_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note5_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note5_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note5_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note5_d_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note6_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note7_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note7_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note10_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note11_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note12_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note12_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note12_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note13_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note13_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note13_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note14_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note15_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note15_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note16_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note16_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note22_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note22_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note23_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note23_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note24_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note24_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note24_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note24_d_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note25_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note25_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note26_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note26_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note27_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note27_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note28_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note28_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note28_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note28_d_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note28_e_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note29_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note30_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "alma36",
+      "anchor": "note30_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note1_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note2_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note2_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note4_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note4_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note7_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note8_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note8_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note9_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note9_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note9_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note9_d_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note14_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note15_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note16_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note16_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note17_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note18_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note18_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note18_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note19_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note19_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note20_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note21_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note21_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note21_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note22_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note23_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note24_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note24_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note25_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note25_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note25_c_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note26_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note26_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note27_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note28_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note29_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note30_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note30_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note31_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note33_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note34_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note34_b_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "mosiah18",
+      "anchor": "note35_a_p1",
+      "reason": "Footnote belongs only to verses outside the original assigned scope"
+    },
+    {
+      "sourceId": "andersen",
+      "anchor": "p_sCsjL",
+      "reason": "Unlinked Notes section heading, not a reading paragraph"
+    },
+    {
+      "sourceId": "christofferson",
+      "anchor": "notetitle1",
+      "reason": "Unlinked Notes section heading, not a reading paragraph"
+    },
+    {
+      "sourceId": "cook",
+      "anchor": "notetitle1",
+      "reason": "Unlinked Notes section heading, not a reading paragraph"
+    }
+  ],
+  "limitations": [
+    "Local source/data inspection only; browser blue-range verification is recorded separately by the lead.",
+    "An Evening with Elder David A. Bednar retains the original metadata/player-only scope; the full transcript was not audited.",
+    "Bibliographic reference1/short_reference1 and unlinked Notes headings are display metadata, not separately assigned reading units.",
+    "English notes are the official English edition's notes, not translations of Korean note IDs."
+  ]
+}

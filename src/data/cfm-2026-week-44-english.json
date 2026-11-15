@@ -1,0 +1,5687 @@
+{
+  "version": 1,
+  "week": 44,
+  "lang": "eng",
+  "tasks": {
+    "w44-t001": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "figure1_p1",
+      "endAnchor": "p3",
+      "selectedIds": [
+        "figure1_p1",
+        "title_number1",
+        "title1",
+        "p1",
+        "p2",
+        "title2",
+        "scripture_title1",
+        "title3",
+        "p3"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Introduction and restoration",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "figure1_p1",
+        "endAnchor": "p3",
+        "selectedIds": [
+          "figure1_p1",
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "title2",
+          "scripture_title1",
+          "title3",
+          "p3"
+        ]
+      }
+    },
+    "w44-t009": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "p_zPEti",
+      "endAnchor": "p_cNrs4",
+      "selectedIds": [
+        "p_zPEti",
+        "p_cNrs4"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Scripture Helps overview",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "p_h066E",
+        "endAnchor": "p_a8DzN",
+        "selectedIds": [
+          "p_h066E",
+          "p_a8DzN"
+        ]
+      }
+    },
+    "w44-t021": {
+      "path": "/study/scriptures/ot/jer/31",
+      "anchor": "title_number1",
+      "endAnchor": "p40",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38",
+        "p39",
+        "p40"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_b_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_c_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_d_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_b_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_b_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_b_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_c_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_d_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note15_a_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note16_a_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note17_a_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_b_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note18_a_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note19_a_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note20_a_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note21_a_p1",
+          "owner": "p21"
+        },
+        {
+          "note": "note22_a_p1",
+          "owner": "p22"
+        },
+        {
+          "note": "note28_a_p1",
+          "owner": "p28"
+        },
+        {
+          "note": "note28_b_p1",
+          "owner": "p28"
+        },
+        {
+          "note": "note28_c_p1",
+          "owner": "p28"
+        },
+        {
+          "note": "note28_d_p1",
+          "owner": "p28"
+        },
+        {
+          "note": "note29_a_p1",
+          "owner": "p29"
+        },
+        {
+          "note": "note30_a_p1",
+          "owner": "p30"
+        },
+        {
+          "note": "note30_b_p1",
+          "owner": "p30"
+        },
+        {
+          "note": "note31_a_p1",
+          "owner": "p31"
+        },
+        {
+          "note": "note31_b_p1",
+          "owner": "p31"
+        },
+        {
+          "note": "note31_c_p1",
+          "owner": "p31"
+        },
+        {
+          "note": "note32_a_p1",
+          "owner": "p32"
+        },
+        {
+          "note": "note33_a_p1",
+          "owner": "p33"
+        },
+        {
+          "note": "note33_b_p1",
+          "owner": "p33"
+        },
+        {
+          "note": "note33_c_p1",
+          "owner": "p33"
+        },
+        {
+          "note": "note34_a_p1",
+          "owner": "p34"
+        },
+        {
+          "note": "note34_b_p1",
+          "owner": "p34"
+        },
+        {
+          "note": "note35_a_p1",
+          "owner": "p35"
+        },
+        {
+          "note": "note35_b_p1",
+          "owner": "p35"
+        },
+        {
+          "note": "note35_c_p1",
+          "owner": "p35"
+        },
+        {
+          "note": "note36_a_p1",
+          "owner": "p36"
+        },
+        {
+          "note": "note38_a_p1",
+          "owner": "p38"
+        },
+        {
+          "note": "note39_a_p1",
+          "owner": "p39"
+        },
+        {
+          "note": "note40_a_p1",
+          "owner": "p40"
+        }
+      ],
+      "label": "Jeremiah 31 · Full reading",
+      "original": {
+        "path": "/study/scriptures/ot/jer/31",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p40",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "title2",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "title3",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "p27",
+          "p28",
+          "p29",
+          "p30",
+          "title4",
+          "p31",
+          "p32",
+          "p33",
+          "p34",
+          "p35",
+          "p36",
+          "p37",
+          "p38",
+          "p39",
+          "p40"
+        ]
+      }
+    },
+    "w44-t022": {
+      "path": "/study/scriptures/ot/jer/33",
+      "anchor": "title_number1",
+      "endAnchor": "p26",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26"
+      ],
+      "noteLinks": [
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note14_b_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note15_a_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note15_b_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note15_c_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note15_d_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note17_a_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note20_a_p1",
+          "owner": "p20"
+        }
+      ],
+      "label": "Jeremiah 33 · Full reading",
+      "original": {
+        "path": "/study/scriptures/ot/jer/33",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p26",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26"
+        ]
+      }
+    },
+    "w44-t032": {
+      "path": "/study/scriptures/ot/jer/1",
+      "anchor": "p10",
+      "endAnchor": "p10",
+      "selectedIds": [
+        "p10"
+      ],
+      "noteLinks": [
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_b_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_c_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_d_p1",
+          "owner": "p10"
+        }
+      ],
+      "label": "Jeremiah 1:10",
+      "original": {
+        "path": "/study/scriptures/ot/jer/1",
+        "sourceLang": "kor",
+        "anchor": "p10",
+        "endAnchor": "p10",
+        "selectedIds": [
+          "p10"
+        ]
+      }
+    },
+    "w44-t046": {
+      "path": "/study/general-conference/2024/10/12andersen",
+      "anchor": "p_xCZdn",
+      "endAnchor": "p_cD13D",
+      "selectedIds": [
+        "p_xCZdn",
+        "p_ks9eS",
+        "p_qFFZG",
+        "p_ggZII",
+        "p_iJBUv",
+        "p_yV1hm",
+        "p_bpaqQ",
+        "p_oLJ4z",
+        "p_gDlbX",
+        "p_tY3Bt",
+        "p_s1DCx",
+        "p_cD13D"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_p622W",
+          "owner": "p_iJBUv"
+        },
+        {
+          "note": "p_oJ8Mz",
+          "owner": "p_yV1hm"
+        },
+        {
+          "note": "p_v6fL4",
+          "owner": "p_bpaqQ"
+        },
+        {
+          "note": "p_h8qYZ",
+          "owner": "p_bpaqQ"
+        },
+        {
+          "note": "p_eh4zq",
+          "owner": "p_oLJ4z"
+        },
+        {
+          "note": "p_rApZW",
+          "owner": "p_tY3Bt"
+        },
+        {
+          "note": "p_o8QMO",
+          "owner": "p_s1DCx"
+        }
+      ],
+      "label": "The Triumph of Hope · Part 1/3 · Hope for eternal life",
+      "original": {
+        "path": "/study/general-conference/2024/10/12andersen",
+        "sourceLang": "kor",
+        "anchor": "p_xCZdn",
+        "endAnchor": "p_cD13D",
+        "selectedIds": [
+          "p_xCZdn",
+          "p_ks9eS",
+          "p_qFFZG",
+          "p_ggZII",
+          "p_iJBUv",
+          "p_yV1hm",
+          "p_bpaqQ",
+          "p_oLJ4z",
+          "p_gDlbX",
+          "p_tY3Bt",
+          "p_s1DCx",
+          "p_cD13D"
+        ]
+      }
+    },
+    "w44-t049": {
+      "path": "/study/general-conference/1992/10/the-joy-of-hope-fulfilled",
+      "anchor": "title1",
+      "endAnchor": "p17",
+      "selectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17"
+      ],
+      "noteLinks": [],
+      "label": "The Joy of Hope Fulfilled · Part 1/3 · Discouragement and the Lord’s invitation",
+      "original": {
+        "path": "/study/general-conference/1992/10/the-joy-of-hope-fulfilled",
+        "sourceLang": "eng",
+        "anchor": "title1",
+        "endAnchor": "p17",
+        "selectedIds": [
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17"
+        ]
+      }
+    },
+    "w44-t052": {
+      "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+      "anchor": "title1",
+      "endAnchor": "figure1_p5",
+      "selectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "p3",
+        "figure1_title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5"
+      ],
+      "noteLinks": [],
+      "label": "Invite Diligent Learning · Part 1/7 · Inviting learning",
+      "original": {
+        "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "figure1_p5",
+        "selectedIds": [
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "figure1_title1",
+          "figure1_p1",
+          "figure1_p2",
+          "figure1_p3",
+          "figure1_p4",
+          "figure1_p5"
+        ]
+      }
+    },
+    "w44-t061": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "anchor": "p_iC85z",
+      "endAnchor": "p_mQk4G",
+      "selectedIds": [
+        "p_iC85z",
+        "p_nEb9V",
+        "p_vJUMV",
+        "p_xmoQY",
+        "p_vN9bo",
+        "p_eOkVp",
+        "p_bR0Da",
+        "p_mYh4b",
+        "p_vpvLz",
+        "p_qsVOq",
+        "p_ykktb",
+        "p_mQk4G"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_dDhaB",
+          "owner": "p_mQk4G"
+        },
+        {
+          "note": "p_xQgRQ",
+          "owner": "p_mQk4G"
+        },
+        {
+          "note": "p_y6ebh",
+          "owner": "p_mQk4G"
+        },
+        {
+          "note": "p_n1QpM",
+          "owner": "p_mQk4G"
+        },
+        {
+          "note": "p_rN80X",
+          "owner": "p_mQk4G"
+        },
+        {
+          "note": "p_e9awn",
+          "owner": "p_mQk4G"
+        }
+      ],
+      "label": "Scripture Helps · Introduction and Rachel",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_iC85z",
+        "endAnchor": "p_mQk4G",
+        "selectedIds": [
+          "p_iC85z",
+          "p_nEb9V",
+          "p_vJUMV",
+          "p_xmoQY",
+          "p_vN9bo",
+          "p_eOkVp",
+          "p_bR0Da",
+          "p_mYh4b",
+          "p_vpvLz",
+          "p_qsVOq",
+          "p_ykktb",
+          "p_mQk4G"
+        ]
+      }
+    },
+    "w44-t063": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "anchor": "p_fhz6w",
+      "endAnchor": "p_cIcQC",
+      "selectedIds": [
+        "p_fhz6w",
+        "p_tBlT0",
+        "p_cIcQC"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_h9Ljc",
+          "owner": "p_cIcQC"
+        },
+        {
+          "note": "p_xjZSW",
+          "owner": "p_cIcQC"
+        },
+        {
+          "note": "p_hj3Of",
+          "owner": "p_cIcQC"
+        }
+      ],
+      "label": "Scripture Helps · The Branch of righteousness",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_fhz6w",
+        "endAnchor": "p_cIcQC",
+        "selectedIds": [
+          "p_fhz6w",
+          "p_tBlT0",
+          "p_cIcQC"
+        ]
+      }
+    },
+    "w44-t068": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "anchor": "p_kEAPN",
+      "endAnchor": "p_u2eko",
+      "selectedIds": [
+        "p_kEAPN",
+        "p_j5r1v",
+        "p_u2eko"
+      ],
+      "noteLinks": [],
+      "label": "Scripture Helps · Learn more: hope",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_kEAPN",
+        "endAnchor": "p_u2eko",
+        "selectedIds": [
+          "p_kEAPN",
+          "p_j5r1v",
+          "p_u2eko"
+        ]
+      }
+    },
+    "w44-t071": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "anchor": "p_vlpPz",
+      "endAnchor": "p_wCiP1",
+      "selectedIds": [
+        "p_vlpPz",
+        "p_qld33",
+        "p_wCiP1"
+      ],
+      "noteLinks": [],
+      "label": "Scripture Helps · Images: Jeremiah",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_vlpPz",
+        "endAnchor": "p_wCiP1",
+        "selectedIds": [
+          "p_vlpPz",
+          "p_qld33",
+          "p_wCiP1"
+        ]
+      }
+    },
+    "w44-t013": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "title9",
+      "endAnchor": "p27",
+      "selectedIds": [
+        "title9",
+        "scripture_title7",
+        "title10",
+        "p27"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Everlasting love",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "title9",
+        "endAnchor": "p27",
+        "selectedIds": [
+          "title9",
+          "scripture_title7",
+          "title10",
+          "p27"
+        ]
+      }
+    },
+    "w44-t074": {
+      "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+      "anchor": "p_rnkYB",
+      "endAnchor": "p_enls9",
+      "selectedIds": [
+        "p_rnkYB",
+        "p_tiEdD",
+        "p_eEtcG",
+        "p_f5awd",
+        "p_lfdno",
+        "p_sYtFM",
+        "p_hbBik",
+        "p_enls9"
+      ],
+      "noteLinks": [],
+      "label": "Additional Resources for Teaching Children · Introduction and everlasting love",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_rnkYB",
+        "endAnchor": "p_enls9",
+        "selectedIds": [
+          "p_rnkYB",
+          "p_tiEdD",
+          "p_eEtcG",
+          "p_f5awd",
+          "p_lfdno",
+          "p_sYtFM",
+          "p_hbBik",
+          "p_enls9"
+        ]
+      }
+    },
+    "w44-t081": {
+      "path": "/study/friend/2026/10/18-not-alone",
+      "anchor": "p_l2pAA",
+      "endAnchor": "p_yVAGl",
+      "selectedIds": [
+        "p_l2pAA",
+        "p_e6xqu",
+        "p_zdjO3",
+        "p_dBuYO",
+        "p_qBLne",
+        "p_qToLn",
+        "p_i6FPH",
+        "p_juuc5",
+        "p_lri6i",
+        "p_tKI1E",
+        "p_tpe4N",
+        "p_zvQL3",
+        "p_rEDYY",
+        "p_yVAGl"
+      ],
+      "noteLinks": [],
+      "label": "Not Alone · Full reading",
+      "original": {
+        "path": "/study/friend/2026/10/18-not-alone",
+        "sourceLang": "kor",
+        "anchor": "p_l2pAA",
+        "endAnchor": "p_yVAGl",
+        "selectedIds": [
+          "p_l2pAA",
+          "p_e6xqu",
+          "p_zdjO3",
+          "p_dBuYO",
+          "p_qBLne",
+          "p_qToLn",
+          "p_i6FPH",
+          "p_juuc5",
+          "p_lri6i",
+          "p_tKI1E",
+          "p_tpe4N",
+          "p_zvQL3",
+          "p_rEDYY",
+          "p_yVAGl"
+        ]
+      }
+    },
+    "w44-t002": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "scripture_title2",
+      "endAnchor": "p4",
+      "selectedIds": [
+        "scripture_title2",
+        "title4",
+        "p4"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · The new covenant",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "scripture_title2",
+        "endAnchor": "p4",
+        "selectedIds": [
+          "scripture_title2",
+          "title4",
+          "p4"
+        ]
+      }
+    },
+    "w44-t023": {
+      "path": "/study/scriptures/ot/jer/32",
+      "anchor": "title_number1",
+      "endAnchor": "p44",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38",
+        "p39",
+        "p40",
+        "p41",
+        "p42",
+        "p43",
+        "p44"
+      ],
+      "noteLinks": [
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_b_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note17_a_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note19_a_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note19_b_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note29_a_p1",
+          "owner": "p29"
+        },
+        {
+          "note": "note30_a_p1",
+          "owner": "p30"
+        },
+        {
+          "note": "note33_a_p1",
+          "owner": "p33"
+        },
+        {
+          "note": "note34_a_p1",
+          "owner": "p34"
+        },
+        {
+          "note": "note35_a_p1",
+          "owner": "p35"
+        },
+        {
+          "note": "note37_a_p1",
+          "owner": "p37"
+        },
+        {
+          "note": "note37_b_p1",
+          "owner": "p37"
+        },
+        {
+          "note": "note39_a_p1",
+          "owner": "p39"
+        },
+        {
+          "note": "note39_b_p1",
+          "owner": "p39"
+        },
+        {
+          "note": "note40_a_p1",
+          "owner": "p40"
+        },
+        {
+          "note": "note40_b_p1",
+          "owner": "p40"
+        },
+        {
+          "note": "note44_a_p1",
+          "owner": "p44"
+        },
+        {
+          "note": "note44_b_p1",
+          "owner": "p44"
+        },
+        {
+          "note": "note44_c_p1",
+          "owner": "p44"
+        }
+      ],
+      "label": "Jeremiah 32 · Full reading",
+      "original": {
+        "path": "/study/scriptures/ot/jer/32",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p44",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "title2",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "p27",
+          "p28",
+          "p29",
+          "p30",
+          "p31",
+          "p32",
+          "p33",
+          "p34",
+          "p35",
+          "title3",
+          "p36",
+          "p37",
+          "p38",
+          "p39",
+          "p40",
+          "p41",
+          "p42",
+          "p43",
+          "p44"
+        ]
+      }
+    },
+    "w44-t038": {
+      "path": "/study/scriptures/gs/new-and-everlasting-covenant",
+      "anchor": "title1",
+      "endAnchor": "p13",
+      "selectedIds": [
+        "title1",
+        "title2",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13"
+      ],
+      "noteLinks": [],
+      "label": "New and Everlasting Covenant · Full reading",
+      "original": {
+        "path": "/study/scriptures/gs/new-and-everlasting-covenant",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p13",
+        "selectedIds": [
+          "title1",
+          "title2",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13"
+        ]
+      }
+    },
+    "w44-t039": {
+      "path": "/study/general-conference/2026/04/48walker",
+      "anchor": "p_k4p9l",
+      "endAnchor": "p_zffLY",
+      "selectedIds": [
+        "p_k4p9l",
+        "p_qWZ3j",
+        "p_pA54L",
+        "p_fmWjP",
+        "p_sHZUU",
+        "p_wqXYP",
+        "p_jWrMp",
+        "p_d7a3h",
+        "p_j8kly",
+        "p_kBt4o",
+        "p_l0MZg",
+        "p_kqNTr",
+        "p_i6LW7",
+        "p_aDRsI",
+        "p_zffLY"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_xGHWs",
+          "owner": "p_wqXYP"
+        },
+        {
+          "note": "p_a4cmZ",
+          "owner": "p_jWrMp"
+        },
+        {
+          "note": "p_m49Mr",
+          "owner": "p_jWrMp"
+        },
+        {
+          "note": "p_yhaZR",
+          "owner": "p_jWrMp"
+        },
+        {
+          "note": "p_sekKI",
+          "owner": "p_d7a3h"
+        },
+        {
+          "note": "p_wjwgM",
+          "owner": "p_j8kly"
+        },
+        {
+          "note": "p_lnT8x",
+          "owner": "p_kBt4o"
+        },
+        {
+          "note": "p_bLJd6",
+          "owner": "p_l0MZg"
+        },
+        {
+          "note": "p_a3KJF",
+          "owner": "p_aDRsI"
+        }
+      ],
+      "label": "A Peculiar Treasure · Full reading",
+      "original": {
+        "path": "/study/general-conference/2026/04/48walker",
+        "sourceLang": "kor",
+        "anchor": "p_k4p9l",
+        "endAnchor": "p_zffLY",
+        "selectedIds": [
+          "p_k4p9l",
+          "p_qWZ3j",
+          "p_pA54L",
+          "p_fmWjP",
+          "p_sHZUU",
+          "p_wqXYP",
+          "p_jWrMp",
+          "p_d7a3h",
+          "p_j8kly",
+          "p_kBt4o",
+          "p_l0MZg",
+          "p_kqNTr",
+          "p_i6LW7",
+          "p_aDRsI",
+          "p_zffLY"
+        ]
+      }
+    },
+    "w44-t040": {
+      "path": "/study/general-conference/2023/04/57bednar",
+      "anchor": "title1",
+      "endAnchor": "p41",
+      "selectedIds": [
+        "title1",
+        "author1",
+        "author2",
+        "kicker1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "title2",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p41"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note5_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note6_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note7_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note8_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note9_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note10_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note11_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note12_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note13_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note14_p1",
+          "owner": "p16"
+        }
+      ],
+      "label": "Abide in Me, and I in You; Therefore Walk with Me · Part 1/2 · Abiding in the Lord",
+      "original": {
+        "path": "/study/general-conference/2023/04/57bednar",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p41",
+        "selectedIds": [
+          "title1",
+          "author1",
+          "author2",
+          "kicker1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "title2",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p41"
+        ]
+      }
+    },
+    "w44-t055": {
+      "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+      "anchor": "title9",
+      "endAnchor": "p17",
+      "selectedIds": [
+        "title9",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17"
+      ],
+      "noteLinks": [],
+      "label": "Invite Diligent Learning · Part 4/7 · Preparing to learn",
+      "original": {
+        "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+        "sourceLang": "kor",
+        "anchor": "title9",
+        "endAnchor": "p17",
+        "selectedIds": [
+          "title9",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17"
+        ]
+      }
+    },
+    "w44-t062": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "anchor": "p_sNjLc",
+      "endAnchor": "p_oOFJy",
+      "selectedIds": [
+        "p_sNjLc",
+        "p_an5HJ",
+        "p_v5i2Y",
+        "p_aU1pc",
+        "p_r3JS6",
+        "p_oOFJy"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_iyEuP",
+          "owner": "p_v5i2Y"
+        },
+        {
+          "note": "p_kg0Ix",
+          "owner": "p_v5i2Y"
+        },
+        {
+          "note": "p_iIbBx",
+          "owner": "p_v5i2Y"
+        },
+        {
+          "note": "p_zeI1c",
+          "owner": "p_v5i2Y"
+        },
+        {
+          "note": "p_auryR",
+          "owner": "p_v5i2Y"
+        },
+        {
+          "note": "p_ljqUa",
+          "owner": "p_oOFJy"
+        },
+        {
+          "note": "p_jalGP",
+          "owner": "p_oOFJy"
+        },
+        {
+          "note": "p_drUAe",
+          "owner": "p_oOFJy"
+        },
+        {
+          "note": "p_vJJL4",
+          "owner": "p_oOFJy"
+        }
+      ],
+      "label": "Scripture Helps · The new covenant and land purchase",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_sNjLc",
+        "endAnchor": "p_oOFJy",
+        "selectedIds": [
+          "p_sNjLc",
+          "p_an5HJ",
+          "p_v5i2Y",
+          "p_aU1pc",
+          "p_r3JS6",
+          "p_oOFJy"
+        ]
+      }
+    },
+    "w44-t014": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "scripture_title8",
+      "endAnchor": "p28",
+      "selectedIds": [
+        "scripture_title8",
+        "title11",
+        "p28"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Writing covenants on a heart",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "scripture_title8",
+        "endAnchor": "p28",
+        "selectedIds": [
+          "scripture_title8",
+          "title11",
+          "p28"
+        ]
+      }
+    },
+    "w44-t036": {
+      "path": "/study/scriptures/bofm/mosiah/18",
+      "anchor": "p10",
+      "endAnchor": "p13",
+      "selectedIds": [
+        "p10",
+        "p13"
+      ],
+      "noteLinks": [
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_b_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_c_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_b_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_c_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_d_p1",
+          "owner": "p13"
+        }
+      ],
+      "label": "Mosiah 18:10, 13",
+      "original": {
+        "path": "/study/scriptures/bofm/mosiah/18",
+        "sourceLang": "kor",
+        "anchor": "p10",
+        "endAnchor": "p13",
+        "selectedIds": [
+          "p10",
+          "p13"
+        ]
+      }
+    },
+    "w44-t075": {
+      "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+      "anchor": "p_yPll4",
+      "endAnchor": "p_eKpQ2",
+      "selectedIds": [
+        "p_yPll4",
+        "p_xZjpz",
+        "p_eKpQ2"
+      ],
+      "noteLinks": [],
+      "label": "Additional Resources for Teaching Children · Covenants and the stripling warriors",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_yPll4",
+        "endAnchor": "p_eKpQ2",
+        "selectedIds": [
+          "p_yPll4",
+          "p_xZjpz",
+          "p_eKpQ2"
+        ]
+      }
+    },
+    "w44-t082": {
+      "path": "/study/friend/2024/08/come-follow-me/18-the-stripling-warriors",
+      "anchor": "series_title1",
+      "endAnchor": "aside1_p1",
+      "selectedIds": [
+        "series_title1",
+        "title1",
+        "figure1_p1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "aside1_p1"
+      ],
+      "noteLinks": [],
+      "label": "The Stripling Warriors · Full reading",
+      "original": {
+        "path": "/study/friend/2024/08/come-follow-me/18-the-stripling-warriors",
+        "sourceLang": "kor",
+        "anchor": "series_title1",
+        "endAnchor": "aside1_p1",
+        "selectedIds": [
+          "series_title1",
+          "title1",
+          "figure1_p1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "aside1_p1"
+        ]
+      }
+    },
+    "w44-t003": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "p5",
+      "endAnchor": "p11",
+      "selectedIds": [
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Writing the covenant in our hearts",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "p5",
+        "endAnchor": "p11",
+        "selectedIds": [
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11"
+        ]
+      }
+    },
+    "w44-t008": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "figure3_p1",
+      "endAnchor": "figure3_p1",
+      "selectedIds": [
+        "figure3_p1"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Take responsibility for your learning",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "figure3_p1",
+        "endAnchor": "figure3_p1",
+        "selectedIds": [
+          "figure3_p1"
+        ]
+      }
+    },
+    "w44-t041": {
+      "path": "/study/general-conference/2023/04/57bednar",
+      "anchor": "title3",
+      "endAnchor": "p40",
+      "selectedIds": [
+        "title3",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "title4",
+        "p27",
+        "p28",
+        "p29",
+        "p43",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p42",
+        "title5",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38",
+        "p39",
+        "p40"
+      ],
+      "noteLinks": [
+        {
+          "note": "note15_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note16_p1",
+          "owner": "p21"
+        },
+        {
+          "note": "note17_p1",
+          "owner": "p22"
+        },
+        {
+          "note": "note18_p1",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p14",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p2",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p3",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p4",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p5",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p6",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p7",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p8",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p9",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p10",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p11",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p12",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p13",
+          "owner": "p23"
+        },
+        {
+          "note": "note19_p1",
+          "owner": "p24"
+        },
+        {
+          "note": "note20_p1",
+          "owner": "p24"
+        },
+        {
+          "note": "note21_p1",
+          "owner": "p24"
+        },
+        {
+          "note": "note22_p1",
+          "owner": "p25"
+        },
+        {
+          "note": "note23_p1",
+          "owner": "p26"
+        },
+        {
+          "note": "note24_p1",
+          "owner": "p27"
+        },
+        {
+          "note": "note25_p1",
+          "owner": "p32"
+        },
+        {
+          "note": "note26_p1",
+          "owner": "p33"
+        },
+        {
+          "note": "note27_p1",
+          "owner": "p33"
+        },
+        {
+          "note": "note28_p1",
+          "owner": "p42"
+        },
+        {
+          "note": "note29_p1",
+          "owner": "p36"
+        },
+        {
+          "note": "note30_p1",
+          "owner": "p40"
+        }
+      ],
+      "label": "Abide in Me, and I in You; Therefore Walk with Me · Part 2/2 · Planting the word and walking with Him",
+      "original": {
+        "path": "/study/general-conference/2023/04/57bednar",
+        "sourceLang": "kor",
+        "anchor": "title3",
+        "endAnchor": "p40",
+        "selectedIds": [
+          "title3",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "title4",
+          "p27",
+          "p28",
+          "p29",
+          "p43",
+          "p30",
+          "p31",
+          "p32",
+          "p33",
+          "p42",
+          "title5",
+          "p34",
+          "p35",
+          "p36",
+          "p37",
+          "p38",
+          "p39",
+          "p40"
+        ]
+      }
+    },
+    "w44-t042": {
+      "path": "/study/general-conference/2004/04/when-thou-art-converted",
+      "anchor": "title1",
+      "endAnchor": "p9",
+      "selectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "kicker1",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note2_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note3_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note4_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note5_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note6_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note7_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note8_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_p1",
+          "owner": "p9"
+        }
+      ],
+      "label": "When Thou Art Converted · Part 1/2 · Study and prayer",
+      "original": {
+        "path": "/study/general-conference/2004/04/when-thou-art-converted",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p14",
+        "selectedIds": [
+          "title1",
+          "p1",
+          "p2",
+          "kicker1",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14"
+        ]
+      }
+    },
+    "w44-t053": {
+      "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+      "anchor": "title3",
+      "endAnchor": "p8",
+      "selectedIds": [
+        "title3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8"
+      ],
+      "noteLinks": [],
+      "label": "Invite Diligent Learning · Part 2/7 · Responsibility for learning",
+      "original": {
+        "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+        "sourceLang": "kor",
+        "anchor": "title3",
+        "endAnchor": "p8",
+        "selectedIds": [
+          "title3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8"
+        ]
+      }
+    },
+    "w44-t059": {
+      "path": "/study/broadcasts/an-evening-with-the-general-authorities/2020/02/bednar-full",
+      "anchor": "title1",
+      "endAnchor": "title1",
+      "selectedIds": [
+        "title1"
+      ],
+      "noteLinks": [],
+      "label": "An Evening with Elder David A. Bednar · Full video 76:22 · transcript not audited",
+      "original": {
+        "path": "/study/broadcasts/an-evening-with-the-general-authorities/2020/02/bednar-full",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "title1",
+        "selectedIds": [
+          "title1"
+        ]
+      }
+    },
+    "w44-t069": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "anchor": "p_j8YB3",
+      "endAnchor": "p_xILBZ",
+      "selectedIds": [
+        "p_j8YB3",
+        "p_xILBZ"
+      ],
+      "noteLinks": [],
+      "label": "Scripture Helps · Learn more: the heart",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_j8YB3",
+        "endAnchor": "p_xILBZ",
+        "selectedIds": [
+          "p_j8YB3",
+          "p_xILBZ"
+        ]
+      }
+    },
+    "w44-t076": {
+      "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+      "anchor": "p_k5yTi",
+      "endAnchor": "p_cQnKB",
+      "selectedIds": [
+        "p_k5yTi",
+        "p_cQnKB"
+      ],
+      "noteLinks": [],
+      "label": "Additional Resources for Teaching Children · Living our covenants",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_k5yTi",
+        "endAnchor": "p_cQnKB",
+        "selectedIds": [
+          "p_k5yTi",
+          "p_cQnKB"
+        ]
+      }
+    },
+    "w44-t083": {
+      "path": "/study/friend/2025/02/02-covenants-with-god",
+      "anchor": "series_title1",
+      "endAnchor": "figure1_p1",
+      "selectedIds": [
+        "series_title1",
+        "title1",
+        "author1",
+        "p_xzMK1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "title2",
+        "p7",
+        "p8",
+        "figure1_p1"
+      ],
+      "noteLinks": [],
+      "label": "Covenants with God · Full reading",
+      "original": {
+        "path": "/study/friend/2025/02/02-covenants-with-god",
+        "sourceLang": "kor",
+        "anchor": "series_title1",
+        "endAnchor": "figure1_p1",
+        "selectedIds": [
+          "series_title1",
+          "title1",
+          "author1",
+          "p_xzMK1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "title2",
+          "p7",
+          "p8",
+          "figure1_p1"
+        ]
+      }
+    },
+    "w44-t084": {
+      "path": "/study/friend/2026/10/come-follow-me/23-weekly-scripture-fun",
+      "anchor": "p_tEraC",
+      "endAnchor": "p_lRIrk",
+      "selectedIds": [
+        "p_tEraC",
+        "p_filkr",
+        "p_mi76O",
+        "p_nrQ2o",
+        "p_hIQvw",
+        "p_cgTZX",
+        "p_zqGOz",
+        "p_kQBKH",
+        "p_yAtIw",
+        "p_lpM3z",
+        "p_l6DBf",
+        "p_egicd",
+        "p_cjW36",
+        "p_rDrbz",
+        "p_wEY5y",
+        "p_gjK1H",
+        "p_imOD0",
+        "p_jLCPx",
+        "p_hbLMp",
+        "p_qeLEB",
+        "p_mFN2P",
+        "p_bBSBB",
+        "p_lVPOi",
+        "p_l0Pqx",
+        "p_hVmfM",
+        "p_uJSsp",
+        "p_q5EeA",
+        "p_n76T0",
+        "p_emJa0",
+        "p_emCAY",
+        "p_dvk7j",
+        "p_edosC",
+        "p_pzwbq",
+        "p_jzc7r",
+        "p_cuMi9",
+        "p_vdtl3",
+        "p_lFHAj",
+        "p_k1SBe",
+        "p_xpoDK",
+        "p_ikOy4",
+        "p_a290d",
+        "p_dMXI0",
+        "p_vLJsv",
+        "p_agc8k",
+        "p_iEGQE",
+        "p_b9lOr",
+        "p_jfOab",
+        "p_akQUV",
+        "p_klm4Y",
+        "p_lRIrk"
+      ],
+      "noteLinks": [],
+      "label": "Weekly Scripture Fun — the linked October article · Full reading",
+      "original": {
+        "path": "/study/friend/2026/10/come-follow-me/23-weekly-scripture-fun",
+        "sourceLang": "kor",
+        "anchor": "p_tEraC",
+        "endAnchor": "p_lRIrk",
+        "selectedIds": [
+          "p_tEraC",
+          "p_filkr",
+          "p_mi76O",
+          "p_nrQ2o",
+          "p_hIQvw",
+          "p_cgTZX",
+          "p_zqGOz",
+          "p_kQBKH",
+          "p_yAtIw",
+          "p_lpM3z",
+          "p_l6DBf",
+          "p_egicd",
+          "p_cjW36",
+          "p_rDrbz",
+          "p_wEY5y",
+          "p_gjK1H",
+          "p_imOD0",
+          "p_jLCPx",
+          "p_hbLMp",
+          "p_qeLEB",
+          "p_mFN2P",
+          "p_bBSBB",
+          "p_lVPOi",
+          "p_l0Pqx",
+          "p_hVmfM",
+          "p_uJSsp",
+          "p_q5EeA",
+          "p_n76T0",
+          "p_emJa0",
+          "p_emCAY",
+          "p_dvk7j",
+          "p_edosC",
+          "p_pzwbq",
+          "p_jzc7r",
+          "p_cuMi9",
+          "p_vdtl3",
+          "p_lFHAj",
+          "p_k1SBe",
+          "p_xpoDK",
+          "p_ikOy4",
+          "p_a290d",
+          "p_dMXI0",
+          "p_vLJsv",
+          "p_agc8k",
+          "p_iEGQE",
+          "p_b9lOr",
+          "p_jfOab",
+          "p_akQUV",
+          "p_klm4Y",
+          "p_lRIrk"
+        ]
+      }
+    },
+    "w44-t004": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "scripture_title3",
+      "endAnchor": "p18",
+      "selectedIds": [
+        "scripture_title3",
+        "title5",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Responding to the scriptures",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "scripture_title3",
+        "endAnchor": "p18",
+        "selectedIds": [
+          "scripture_title3",
+          "title5",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18"
+        ]
+      }
+    },
+    "w44-t010": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "p_iImft",
+      "endAnchor": "p_iImft",
+      "selectedIds": [
+        "p_iImft"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Who was Baruch?",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "p_jYLoa",
+        "endAnchor": "p_jYLoa",
+        "selectedIds": [
+          "p_jYLoa"
+        ]
+      }
+    },
+    "w44-t024": {
+      "path": "/study/scriptures/ot/jer/36",
+      "anchor": "title_number1",
+      "endAnchor": "p32",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32"
+      ],
+      "noteLinks": [
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_b_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_b_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_b_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note16_a_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note22_a_p1",
+          "owner": "p22"
+        },
+        {
+          "note": "note26_a_p1",
+          "owner": "p26"
+        },
+        {
+          "note": "note26_b_p1",
+          "owner": "p26"
+        },
+        {
+          "note": "note28_a_p1",
+          "owner": "p28"
+        },
+        {
+          "note": "note32_a_p1",
+          "owner": "p32"
+        },
+        {
+          "note": "note32_b_p1",
+          "owner": "p32"
+        }
+      ],
+      "label": "Jeremiah 36 · Full reading",
+      "original": {
+        "path": "/study/scriptures/ot/jer/36",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p32",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "title2",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "title3",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "title4",
+          "p27",
+          "p28",
+          "p29",
+          "p30",
+          "p31",
+          "p32"
+        ]
+      }
+    },
+    "w44-t043": {
+      "path": "/study/general-conference/2004/04/when-thou-art-converted",
+      "anchor": "p10",
+      "endAnchor": "p16",
+      "selectedIds": [
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16"
+      ],
+      "noteLinks": [
+        {
+          "note": "note10_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note11_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note12_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note13_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note14_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note15_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note16_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note17_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note18_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note19_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note20_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note21_p1",
+          "owner": "p16"
+        }
+      ],
+      "label": "When Thou Art Converted · Part 2/2 · Service and protection",
+      "original": {
+        "path": "/study/general-conference/2004/04/when-thou-art-converted",
+        "sourceLang": "kor",
+        "anchor": "p15",
+        "endAnchor": "p22",
+        "selectedIds": [
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22"
+        ]
+      }
+    },
+    "w44-t047": {
+      "path": "/study/general-conference/2024/10/12andersen",
+      "anchor": "p_d7CYq",
+      "endAnchor": "p_grC8N",
+      "selectedIds": [
+        "p_d7CYq",
+        "p_hAVuM",
+        "p_xoSys",
+        "p_tgQr4",
+        "p_uMbV8",
+        "p_m2pTM",
+        "p_ndnRA",
+        "p_faSlJ",
+        "p_ukugf",
+        "p_k5Wa6",
+        "p_jGfYH",
+        "p_j6bkL",
+        "p_ncqO5",
+        "p_dTGIO",
+        "p_wKlc2",
+        "p_cDHEu",
+        "p_eYX5p",
+        "p_wrN5Y",
+        "p_uoF0G",
+        "p_c7lm9",
+        "p_oyGrM",
+        "p_uCh6y",
+        "p_kw5EP",
+        "p_grC8N"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_hiqek",
+          "owner": "p_hAVuM"
+        },
+        {
+          "note": "p_ep9CQ",
+          "owner": "p_xoSys"
+        },
+        {
+          "note": "p_muajM",
+          "owner": "p_xoSys"
+        },
+        {
+          "note": "p_ksCqa",
+          "owner": "p_xoSys"
+        },
+        {
+          "note": "p_y2C5T",
+          "owner": "p_tgQr4"
+        },
+        {
+          "note": "p_jmkq1",
+          "owner": "p_uMbV8"
+        },
+        {
+          "note": "p_pltNU",
+          "owner": "p_m2pTM"
+        },
+        {
+          "note": "p_tNlqi",
+          "owner": "p_ndnRA"
+        },
+        {
+          "note": "p_l5DFb",
+          "owner": "p_faSlJ"
+        },
+        {
+          "note": "p_dh63u",
+          "owner": "p_faSlJ"
+        },
+        {
+          "note": "p_gH0Fb",
+          "owner": "p_faSlJ"
+        },
+        {
+          "note": "p_n5oxp",
+          "owner": "p_jGfYH"
+        },
+        {
+          "note": "p_yryx1",
+          "owner": "p_j6bkL"
+        },
+        {
+          "note": "p_zZSYO",
+          "owner": "p_dTGIO"
+        },
+        {
+          "note": "p_qwlXk",
+          "owner": "p_wKlc2"
+        },
+        {
+          "note": "p_nLGZ1",
+          "owner": "p_cDHEu"
+        }
+      ],
+      "label": "The Triumph of Hope · Part 2/3 · God, hope, and the temple",
+      "original": {
+        "path": "/study/general-conference/2024/10/12andersen",
+        "sourceLang": "kor",
+        "anchor": "p_d7CYq",
+        "endAnchor": "p_grC8N",
+        "selectedIds": [
+          "p_d7CYq",
+          "p_hAVuM",
+          "p_xoSys",
+          "p_tgQr4",
+          "p_uMbV8",
+          "p_m2pTM",
+          "p_ndnRA",
+          "p_faSlJ",
+          "p_ukugf",
+          "p_k5Wa6",
+          "p_jGfYH",
+          "p_j6bkL",
+          "p_ncqO5",
+          "p_dTGIO",
+          "p_wKlc2",
+          "p_cDHEu",
+          "p_eYX5p",
+          "p_wrN5Y",
+          "p_uoF0G",
+          "p_c7lm9",
+          "p_oyGrM",
+          "p_uCh6y",
+          "p_kw5EP",
+          "p_grC8N"
+        ]
+      }
+    },
+    "w44-t050": {
+      "path": "/study/general-conference/1992/10/the-joy-of-hope-fulfilled",
+      "anchor": "p18",
+      "endAnchor": "p26",
+      "selectedIds": [
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26"
+      ],
+      "noteLinks": [],
+      "label": "The Joy of Hope Fulfilled · Part 2/3 · Nurturing hope through faith",
+      "original": {
+        "path": "/study/general-conference/1992/10/the-joy-of-hope-fulfilled",
+        "sourceLang": "eng",
+        "anchor": "p18",
+        "endAnchor": "p26",
+        "selectedIds": [
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26"
+        ]
+      }
+    },
+    "w44-t054": {
+      "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+      "anchor": "title6",
+      "endAnchor": "p12",
+      "selectedIds": [
+        "title6",
+        "p9",
+        "p10",
+        "p11",
+        "p12"
+      ],
+      "noteLinks": [],
+      "label": "Invite Diligent Learning · Part 3/7 · Daily scripture study",
+      "original": {
+        "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+        "sourceLang": "kor",
+        "anchor": "title6",
+        "endAnchor": "p12",
+        "selectedIds": [
+          "title6",
+          "p9",
+          "p10",
+          "p11",
+          "p12"
+        ]
+      }
+    },
+    "w44-t064": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "anchor": "p_s91JQ",
+      "endAnchor": "p_u59Zl",
+      "selectedIds": [
+        "p_s91JQ",
+        "p_xuXRk",
+        "p_jtDSy",
+        "p_u59Zl"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_i5pbB",
+          "owner": "p_jtDSy"
+        },
+        {
+          "note": "p_aVQOK",
+          "owner": "p_jtDSy"
+        },
+        {
+          "note": "p_mn3xD",
+          "owner": "p_jtDSy"
+        }
+      ],
+      "label": "Scripture Helps · Baruch",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_s91JQ",
+        "endAnchor": "p_u59Zl",
+        "selectedIds": [
+          "p_s91JQ",
+          "p_xuXRk",
+          "p_jtDSy",
+          "p_u59Zl"
+        ]
+      }
+    },
+    "w44-t015": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "scripture_title9",
+      "endAnchor": "p30",
+      "selectedIds": [
+        "scripture_title9",
+        "title12",
+        "p29",
+        "p30"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Acting out the scriptures",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "scripture_title9",
+        "endAnchor": "p30",
+        "selectedIds": [
+          "scripture_title9",
+          "title12",
+          "p29",
+          "p30"
+        ]
+      }
+    },
+    "w44-t077": {
+      "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+      "anchor": "p_iLeB6",
+      "endAnchor": "p_apVae",
+      "selectedIds": [
+        "p_iLeB6",
+        "p_qyDGx",
+        "p_apVae"
+      ],
+      "noteLinks": [],
+      "label": "Additional Resources for Teaching Children · Scriptures and coloring",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_iLeB6",
+        "endAnchor": "p_apVae",
+        "selectedIds": [
+          "p_iLeB6",
+          "p_qyDGx",
+          "p_apVae"
+        ]
+      }
+    },
+    "w44-t085": {
+      "path": "/study/manual/scripture-stories-coloring-book-book-of-mormon/the-golden-plates-from-moroni-to-joseph",
+      "anchor": "title1",
+      "endAnchor": "subtitle1",
+      "selectedIds": [
+        "title1",
+        "subtitle1"
+      ],
+      "noteLinks": [],
+      "label": "Moroni Buried the Gold Plates · Full reading",
+      "original": {
+        "path": "/study/manual/scripture-stories-coloring-book-book-of-mormon/the-golden-plates-from-moroni-to-joseph",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "subtitle1",
+        "selectedIds": [
+          "title1",
+          "subtitle1"
+        ]
+      }
+    },
+    "w44-t005": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "scripture_title4",
+      "endAnchor": "p19",
+      "selectedIds": [
+        "scripture_title4",
+        "title6",
+        "p19"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Following the prophets",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "scripture_title4",
+        "endAnchor": "p19",
+        "selectedIds": [
+          "scripture_title4",
+          "title6",
+          "p19"
+        ]
+      }
+    },
+    "w44-t011": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "p_mgM61",
+      "endAnchor": "p_mgM61",
+      "selectedIds": [
+        "p_mgM61"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Jeremiah 37 in context",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "p_opNyv",
+        "endAnchor": "p_opNyv",
+        "selectedIds": [
+          "p_opNyv"
+        ]
+      }
+    },
+    "w44-t025": {
+      "path": "/study/scriptures/ot/jer/37",
+      "anchor": "title_number1",
+      "endAnchor": "p21",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_c_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_d_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note7_b_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note15_a_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note15_b_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note16_a_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note21_a_p1",
+          "owner": "p21"
+        }
+      ],
+      "label": "Jeremiah 37 · Full reading",
+      "original": {
+        "path": "/study/scriptures/ot/jer/37",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p21",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "title2",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21"
+        ]
+      }
+    },
+    "w44-t026": {
+      "path": "/study/scriptures/ot/jer/38",
+      "anchor": "title_number1",
+      "endAnchor": "p28",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_b_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note19_a_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note19_b_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note23_a_p1",
+          "owner": "p23"
+        }
+      ],
+      "label": "Jeremiah 38 · Full reading",
+      "original": {
+        "path": "/study/scriptures/ot/jer/38",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p28",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "title2",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "p27",
+          "p28"
+        ]
+      }
+    },
+    "w44-t027": {
+      "path": "/study/scriptures/bofm/1-ne/1",
+      "anchor": "title1",
+      "endAnchor": "p20",
+      "selectedIds": [
+        "title1",
+        "subtitle1",
+        "intro1",
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_c_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_d_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_e_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_f_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_b_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_c_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_d_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_e_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_f_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_b_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_b_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_c_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note11_b_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_b_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_c_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note14_b_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note16_a_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_b_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_c_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note17_a_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_b_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_c_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_d_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note18_a_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note18_b_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note19_a_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note19_b_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note19_c_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note19_d_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note20_a_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note20_b_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note20_c_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note20_d_p1",
+          "owner": "p20"
+        }
+      ],
+      "label": "1 Nephi 1 · Full reading",
+      "original": {
+        "path": "/study/scriptures/bofm/1-ne/1",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p20",
+        "selectedIds": [
+          "title1",
+          "subtitle1",
+          "intro1",
+          "title_number1",
+          "study_summary1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20"
+        ]
+      }
+    },
+    "w44-t044": {
+      "path": "/study/general-conference/2013/10/lamentations-of-jeremiah-beware-of-bondage",
+      "anchor": "title1",
+      "endAnchor": "p18",
+      "selectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "kicker1",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note2_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note3_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note4_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note5_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note6_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note7_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note8_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note9_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note10_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note11_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note12_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note13_p1",
+          "owner": "p18"
+        }
+      ],
+      "label": "Lamentations of Jeremiah: Beware of Bondage · Part 1/2 · Jeremiah and Lehi",
+      "original": {
+        "path": "/study/general-conference/2013/10/lamentations-of-jeremiah-beware-of-bondage",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p18",
+        "selectedIds": [
+          "title1",
+          "p1",
+          "p2",
+          "kicker1",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18"
+        ]
+      }
+    },
+    "w44-t056": {
+      "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+      "anchor": "figure4_p1",
+      "endAnchor": "p21",
+      "selectedIds": [
+        "figure4_p1",
+        "title12",
+        "p18",
+        "p19",
+        "p20",
+        "p21"
+      ],
+      "noteLinks": [],
+      "label": "Invite Diligent Learning · Part 5/7 · Sharing truths",
+      "original": {
+        "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+        "sourceLang": "kor",
+        "anchor": "figure4_p1",
+        "endAnchor": "p21",
+        "selectedIds": [
+          "figure4_p1",
+          "title12",
+          "p18",
+          "p19",
+          "p20",
+          "p21"
+        ]
+      }
+    },
+    "w44-t065": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "anchor": "p_ij6vo",
+      "endAnchor": "p_bJxdh",
+      "selectedIds": [
+        "p_ij6vo",
+        "p_lQPti",
+        "p_bzMPb",
+        "p_bJxdh"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_hmrd7",
+          "owner": "p_bzMPb"
+        },
+        {
+          "note": "p_wS2oz",
+          "owner": "p_bzMPb"
+        },
+        {
+          "note": "p_l30Rh",
+          "owner": "p_bJxdh"
+        },
+        {
+          "note": "p_rGdDT",
+          "owner": "p_bJxdh"
+        },
+        {
+          "note": "p_rhgyU",
+          "owner": "p_bJxdh"
+        },
+        {
+          "note": "p_mOSir",
+          "owner": "p_bJxdh"
+        }
+      ],
+      "label": "Scripture Helps · The time of Zedekiah",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_ij6vo",
+        "endAnchor": "p_bJxdh",
+        "selectedIds": [
+          "p_ij6vo",
+          "p_lQPti",
+          "p_bzMPb",
+          "p_bJxdh"
+        ]
+      }
+    },
+    "w44-t078": {
+      "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+      "anchor": "p_pMOBU",
+      "endAnchor": "p_qLpVg",
+      "selectedIds": [
+        "p_pMOBU",
+        "p_krRKV",
+        "p_aBCLk",
+        "p_qLpVg"
+      ],
+      "noteLinks": [],
+      "label": "Additional Resources for Teaching Children · Songs and courage",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_pMOBU",
+        "endAnchor": "p_qLpVg",
+        "selectedIds": [
+          "p_pMOBU",
+          "p_krRKV",
+          "p_aBCLk",
+          "p_qLpVg"
+        ]
+      }
+    },
+    "w44-t086": {
+      "path": "/study/manual/childrens-songbook/nephis-courage",
+      "anchor": "song_number1",
+      "endAnchor": "p3",
+      "selectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "figure1_p11",
+        "figure1_p12",
+        "figure1_p13",
+        "figure1_p14",
+        "figure1_p15",
+        "figure1_p16",
+        "figure1_p17",
+        "figure1_p18",
+        "figure1_p19",
+        "figure1_p20",
+        "figure1_p21",
+        "figure1_p22",
+        "figure1_p23",
+        "figure1_p24",
+        "figure1_p25",
+        "figure1_p26",
+        "figure1_p27",
+        "figure1_p28",
+        "figure1_p29",
+        "figure1_p30",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "noteLinks": [],
+      "label": "Nephi’s Courage · Full reading",
+      "original": {
+        "path": "/study/manual/childrens-songbook/nephis-courage",
+        "sourceLang": "kor",
+        "anchor": "song_number1",
+        "endAnchor": "p3",
+        "selectedIds": [
+          "song_number1",
+          "title1",
+          "figure1_p1",
+          "figure1_p2",
+          "figure1_p3",
+          "figure1_p4",
+          "figure1_p5",
+          "figure1_p6",
+          "figure1_p7",
+          "figure1_p8",
+          "figure1_p9",
+          "figure1_p10",
+          "figure1_p11",
+          "figure1_p12",
+          "figure1_p13",
+          "figure1_p14",
+          "figure1_p15",
+          "figure1_p16",
+          "figure1_p17",
+          "figure1_p18",
+          "figure1_p19",
+          "figure1_p20",
+          "figure1_p21",
+          "figure1_p22",
+          "figure1_p23",
+          "figure1_p24",
+          "figure1_p25",
+          "figure1_p26",
+          "figure1_p27",
+          "figure1_p28",
+          "figure1_p29",
+          "figure1_p30",
+          "figure1_p31",
+          "p1",
+          "p2",
+          "p3"
+        ]
+      }
+    },
+    "w44-t087": {
+      "path": "/study/friend/2022/09/different-but-not-alone",
+      "anchor": "title1",
+      "endAnchor": "figure1_p1",
+      "selectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "kicker1",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "aside1_p1",
+        "figure1_p1"
+      ],
+      "noteLinks": [],
+      "label": "Different but Not Alone · Full reading",
+      "original": {
+        "path": "/study/friend/2022/09/different-but-not-alone",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "figure1_p1",
+        "selectedIds": [
+          "title1",
+          "p1",
+          "p2",
+          "kicker1",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "p27",
+          "p28",
+          "p29",
+          "p30",
+          "p31",
+          "p32",
+          "aside1_p1",
+          "figure1_p1"
+        ]
+      }
+    },
+    "w44-t006": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "scripture_title5",
+      "endAnchor": "figure2_p1",
+      "selectedIds": [
+        "scripture_title5",
+        "title7",
+        "p20",
+        "p21",
+        "figure2_p1"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Standing for what is right",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "scripture_title5",
+        "endAnchor": "figure2_p1",
+        "selectedIds": [
+          "scripture_title5",
+          "title7",
+          "p20",
+          "p21",
+          "figure2_p1"
+        ]
+      }
+    },
+    "w44-t012": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "p_mPtvc",
+      "endAnchor": "p_mPtvc",
+      "selectedIds": [
+        "p_mPtvc"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Zedekiah and Jeremiah’s warning",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "p_mJlX6",
+        "endAnchor": "p_mJlX6",
+        "selectedIds": [
+          "p_mJlX6"
+        ]
+      }
+    },
+    "w44-t028": {
+      "path": "/study/scriptures/ot/jer/39",
+      "anchor": "title_number1",
+      "endAnchor": "p18",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_c_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note5_b_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note5_c_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_b_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note7_b_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_b_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_c_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note18_a_p1",
+          "owner": "p18"
+        }
+      ],
+      "label": "Jeremiah 39 · Full reading",
+      "original": {
+        "path": "/study/scriptures/ot/jer/39",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p18",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "title2",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "title3",
+          "p15",
+          "p16",
+          "p17",
+          "p18"
+        ]
+      }
+    },
+    "w44-t029": {
+      "path": "/study/scriptures/bofm/1-ne/2",
+      "anchor": "title_number1",
+      "endAnchor": "p24",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_b_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_c_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_b_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note7_b_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note7_c_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note7_d_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_b_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note11_b_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note11_c_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note11_d_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_b_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_c_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_d_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_b_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note14_b_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note14_c_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note15_a_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note16_a_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_b_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_c_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_d_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_e_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_f_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note18_a_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note19_a_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note20_a_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note20_b_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note21_a_p1",
+          "owner": "p21"
+        },
+        {
+          "note": "note22_a_p1",
+          "owner": "p22"
+        },
+        {
+          "note": "note23_a_p1",
+          "owner": "p23"
+        },
+        {
+          "note": "note23_b_p1",
+          "owner": "p23"
+        },
+        {
+          "note": "note23_c_p1",
+          "owner": "p23"
+        },
+        {
+          "note": "note24_a_p1",
+          "owner": "p24"
+        },
+        {
+          "note": "note24_b_p1",
+          "owner": "p24"
+        }
+      ],
+      "label": "1 Nephi 2 · Full reading",
+      "original": {
+        "path": "/study/scriptures/bofm/1-ne/2",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p24",
+        "selectedIds": [
+          "title_number1",
+          "study_summary1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24"
+        ]
+      }
+    },
+    "w44-t045": {
+      "path": "/study/general-conference/2013/10/lamentations-of-jeremiah-beware-of-bondage",
+      "anchor": "p19",
+      "endAnchor": "p32",
+      "selectedIds": [
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32"
+      ],
+      "noteLinks": [
+        {
+          "note": "note14_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note15_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note16_p1",
+          "owner": "p22"
+        },
+        {
+          "note": "note17_p1",
+          "owner": "p23"
+        },
+        {
+          "note": "note18_p1",
+          "owner": "p24"
+        },
+        {
+          "note": "note19_p1",
+          "owner": "p25"
+        },
+        {
+          "note": "note20_p1",
+          "owner": "p30"
+        },
+        {
+          "note": "note21_p1",
+          "owner": "p30"
+        },
+        {
+          "note": "note22_p1",
+          "owner": "p30"
+        }
+      ],
+      "label": "Lamentations of Jeremiah: Beware of Bondage · Part 2/2 · Bondage and choices today",
+      "original": {
+        "path": "/study/general-conference/2013/10/lamentations-of-jeremiah-beware-of-bondage",
+        "sourceLang": "kor",
+        "anchor": "p19",
+        "endAnchor": "p32",
+        "selectedIds": [
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "p27",
+          "p28",
+          "p29",
+          "p30",
+          "p31",
+          "p32"
+        ]
+      }
+    },
+    "w44-t057": {
+      "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+      "anchor": "title15",
+      "endAnchor": "p25",
+      "selectedIds": [
+        "title15",
+        "p22",
+        "p23",
+        "p24",
+        "p25"
+      ],
+      "noteLinks": [],
+      "label": "Invite Diligent Learning · Part 6/7 · Living what we learn",
+      "original": {
+        "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+        "sourceLang": "kor",
+        "anchor": "title15",
+        "endAnchor": "p25",
+        "selectedIds": [
+          "title15",
+          "p22",
+          "p23",
+          "p24",
+          "p25"
+        ]
+      }
+    },
+    "w44-t066": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "anchor": "p_njRFQ",
+      "endAnchor": "p_mZQH1",
+      "selectedIds": [
+        "p_njRFQ",
+        "p_laDE6",
+        "p_aRp9u",
+        "p_wKkt2",
+        "p_mZQH1"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_yZoGe",
+          "owner": "p_aRp9u"
+        },
+        {
+          "note": "p_cfmRm",
+          "owner": "p_mZQH1"
+        },
+        {
+          "note": "p_c9EKB",
+          "owner": "p_mZQH1"
+        },
+        {
+          "note": "p_uWGN9",
+          "owner": "p_mZQH1"
+        }
+      ],
+      "label": "Scripture Helps · Prophecy fulfilled",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_njRFQ",
+        "endAnchor": "p_mZQH1",
+        "selectedIds": [
+          "p_njRFQ",
+          "p_laDE6",
+          "p_aRp9u",
+          "p_wKkt2",
+          "p_mZQH1"
+        ]
+      }
+    },
+    "w44-t070": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "anchor": "p_q9bEn",
+      "endAnchor": "p_rjgmG",
+      "selectedIds": [
+        "p_q9bEn",
+        "p_rjgmG"
+      ],
+      "noteLinks": [],
+      "label": "Scripture Helps · Learn more: bondage",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_q9bEn",
+        "endAnchor": "p_rjgmG",
+        "selectedIds": [
+          "p_q9bEn",
+          "p_rjgmG"
+        ]
+      }
+    },
+    "w44-t072": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "anchor": "p_fxxkg",
+      "endAnchor": "p_fxxkg",
+      "selectedIds": [
+        "p_fxxkg"
+      ],
+      "noteLinks": [],
+      "label": "Scripture Helps · Image: Ebed-melech",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_fxxkg",
+        "endAnchor": "p_fxxkg",
+        "selectedIds": [
+          "p_fxxkg"
+        ]
+      }
+    },
+    "w44-t016": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "scripture_title10",
+      "endAnchor": "p31",
+      "selectedIds": [
+        "scripture_title10",
+        "title13",
+        "p31"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · The courage of Ebed-melech",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "scripture_title10",
+        "endAnchor": "p31",
+        "selectedIds": [
+          "scripture_title10",
+          "title13",
+          "p31"
+        ]
+      }
+    },
+    "w44-t018": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "figure5_figure1_p1",
+      "endAnchor": "figure5_figure1_p1",
+      "selectedIds": [
+        "figure5_figure1_p1"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Ebed-melech picture and activity",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "figure5_figure1_p1",
+        "endAnchor": "figure5_figure1_p1",
+        "selectedIds": [
+          "figure5_figure1_p1"
+        ]
+      }
+    },
+    "w44-t079": {
+      "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+      "anchor": "p_nHjO6",
+      "endAnchor": "p_xyhkQ",
+      "selectedIds": [
+        "p_nHjO6",
+        "p_xyhkQ"
+      ],
+      "noteLinks": [],
+      "label": "Additional Resources for Teaching Children · Stories of courage",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_nHjO6",
+        "endAnchor": "p_xyhkQ",
+        "selectedIds": [
+          "p_nHjO6",
+          "p_xyhkQ"
+        ]
+      }
+    },
+    "w44-t088": {
+      "path": "/study/friend/2026/10/17-traviss-song",
+      "anchor": "p_rLg9v",
+      "endAnchor": "p_tpSaJ",
+      "selectedIds": [
+        "p_rLg9v",
+        "p_jNeiN",
+        "p_yjYrd",
+        "p_oFVIi",
+        "p_omN0M",
+        "p_a32ER",
+        "p_fwuSK",
+        "p_hsKr5",
+        "p_g7jgU",
+        "p_baWKw",
+        "p_awsVq",
+        "p_t2Jqq",
+        "p_dp1qZ",
+        "p_v6cgf",
+        "p_ju4oV",
+        "p_vgQez",
+        "p_cqQ4K",
+        "p_sKtFo",
+        "p_gD4aT",
+        "p_jpEN7",
+        "p_v4pIq",
+        "p_bE6g5",
+        "p_pkPIm",
+        "p_y8riD",
+        "p_gjFB6",
+        "p_pxVHI",
+        "p_zDMsJ",
+        "p_atEZK",
+        "p_rNrk9",
+        "p_cX3Jw",
+        "p_sbqct",
+        "p_s1c70",
+        "p_jqqRA",
+        "p_y6w3P",
+        "p_vXdw1",
+        "p_gZ6Vv",
+        "p_tpSaJ"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_r8q1C",
+          "owner": "p_s1c70"
+        }
+      ],
+      "label": "Travis’s Song · Full reading",
+      "original": {
+        "path": "/study/friend/2026/10/17-traviss-song",
+        "sourceLang": "kor",
+        "anchor": "p_rLg9v",
+        "endAnchor": "p_tpSaJ",
+        "selectedIds": [
+          "p_rLg9v",
+          "p_jNeiN",
+          "p_yjYrd",
+          "p_oFVIi",
+          "p_omN0M",
+          "p_a32ER",
+          "p_fwuSK",
+          "p_hsKr5",
+          "p_g7jgU",
+          "p_baWKw",
+          "p_awsVq",
+          "p_t2Jqq",
+          "p_dp1qZ",
+          "p_v6cgf",
+          "p_ju4oV",
+          "p_vgQez",
+          "p_cqQ4K",
+          "p_sKtFo",
+          "p_gD4aT",
+          "p_jpEN7",
+          "p_v4pIq",
+          "p_bE6g5",
+          "p_pkPIm",
+          "p_y8riD",
+          "p_gjFB6",
+          "p_pxVHI",
+          "p_zDMsJ",
+          "p_atEZK",
+          "p_rNrk9",
+          "p_cX3Jw",
+          "p_sbqct",
+          "p_s1c70",
+          "p_jqqRA",
+          "p_y6w3P",
+          "p_vXdw1",
+          "p_gZ6Vv",
+          "p_tpSaJ"
+        ]
+      }
+    },
+    "w44-t089": {
+      "path": "/study/friend/2026/10/come-follow-me/25-safe-in-the-fire",
+      "anchor": "p_uoTze",
+      "endAnchor": "p_mi33x",
+      "selectedIds": [
+        "p_uoTze",
+        "p_xoq04",
+        "p_qIdkW",
+        "p_zfhJ0",
+        "p_vlz5g",
+        "p_xje2z",
+        "p_rB9Dm",
+        "p_dFEEl",
+        "p_iK8QA",
+        "p_mi33x"
+      ],
+      "noteLinks": [],
+      "label": "Safe in the Fire · Full reading",
+      "original": {
+        "path": "/study/friend/2026/10/come-follow-me/25-safe-in-the-fire",
+        "sourceLang": "kor",
+        "anchor": "p_uoTze",
+        "endAnchor": "p_mi33x",
+        "selectedIds": [
+          "p_uoTze",
+          "p_xoq04",
+          "p_qIdkW",
+          "p_zfhJ0",
+          "p_vlz5g",
+          "p_xje2z",
+          "p_rB9Dm",
+          "p_dFEEl",
+          "p_iK8QA",
+          "p_eQ4B5",
+          "p_mi33x"
+        ]
+      }
+    },
+    "w44-t007": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "scripture_title6",
+      "endAnchor": "p26",
+      "selectedIds": [
+        "scripture_title6",
+        "title8",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Sorrow and mercy",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "scripture_title6",
+        "endAnchor": "p26",
+        "selectedIds": [
+          "scripture_title6",
+          "title8",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26"
+        ]
+      }
+    },
+    "w44-t030": {
+      "path": "/study/scriptures/ot/lam/1",
+      "anchor": "title1",
+      "endAnchor": "p22",
+      "selectedIds": [
+        "title1",
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_b_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_c_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_b_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_b_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note5_b_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_b_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_c_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_b_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_b_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_b_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note15_a_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note17_a_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note20_a_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note20_b_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note20_c_p1",
+          "owner": "p20"
+        }
+      ],
+      "label": "Lamentations 1 · Full reading",
+      "original": {
+        "path": "/study/scriptures/ot/lam/1",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p22",
+        "selectedIds": [
+          "title1",
+          "title_number1",
+          "title2",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22"
+        ]
+      }
+    },
+    "w44-t031": {
+      "path": "/study/scriptures/ot/lam/3",
+      "anchor": "title_number1",
+      "endAnchor": "p66",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38",
+        "p39",
+        "p40",
+        "p41",
+        "p42",
+        "p43",
+        "p44",
+        "p45",
+        "p46",
+        "p47",
+        "p48",
+        "p49",
+        "p50",
+        "p51",
+        "p52",
+        "p53",
+        "p54",
+        "p55",
+        "p56",
+        "p57",
+        "p58",
+        "p59",
+        "p60",
+        "p61",
+        "p62",
+        "p63",
+        "p64",
+        "p65",
+        "p66"
+      ],
+      "noteLinks": [
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note24_a_p1",
+          "owner": "p24"
+        },
+        {
+          "note": "note25_a_p1",
+          "owner": "p25"
+        },
+        {
+          "note": "note25_b_p1",
+          "owner": "p25"
+        },
+        {
+          "note": "note25_c_p1",
+          "owner": "p25"
+        },
+        {
+          "note": "note26_a_p1",
+          "owner": "p26"
+        },
+        {
+          "note": "note27_a_p1",
+          "owner": "p27"
+        },
+        {
+          "note": "note27_b_p1",
+          "owner": "p27"
+        },
+        {
+          "note": "note30_a_p1",
+          "owner": "p30"
+        },
+        {
+          "note": "note30_b_p1",
+          "owner": "p30"
+        },
+        {
+          "note": "note32_a_p1",
+          "owner": "p32"
+        },
+        {
+          "note": "note33_a_p1",
+          "owner": "p33"
+        },
+        {
+          "note": "note40_a_p1",
+          "owner": "p40"
+        },
+        {
+          "note": "note41_a_p1",
+          "owner": "p41"
+        },
+        {
+          "note": "note43_a_p1",
+          "owner": "p43"
+        },
+        {
+          "note": "note46_a_p1",
+          "owner": "p46"
+        },
+        {
+          "note": "note48_a_p1",
+          "owner": "p48"
+        },
+        {
+          "note": "note48_b_p1",
+          "owner": "p48"
+        },
+        {
+          "note": "note57_a_p1",
+          "owner": "p57"
+        },
+        {
+          "note": "note62_a_p1",
+          "owner": "p62"
+        }
+      ],
+      "label": "Lamentations 3 · Full reading",
+      "original": {
+        "path": "/study/scriptures/ot/lam/3",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p66",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "p27",
+          "p28",
+          "p29",
+          "p30",
+          "p31",
+          "p32",
+          "p33",
+          "p34",
+          "p35",
+          "p36",
+          "p37",
+          "p38",
+          "p39",
+          "p40",
+          "p41",
+          "p42",
+          "p43",
+          "p44",
+          "p45",
+          "p46",
+          "p47",
+          "p48",
+          "p49",
+          "p50",
+          "p51",
+          "p52",
+          "p53",
+          "p54",
+          "p55",
+          "p56",
+          "p57",
+          "p58",
+          "p59",
+          "p60",
+          "p61",
+          "p62",
+          "p63",
+          "p64",
+          "p65",
+          "p66"
+        ]
+      }
+    },
+    "w44-t033": {
+      "path": "/study/scriptures/nt/matt/5",
+      "anchor": "p4",
+      "endAnchor": "p4",
+      "selectedIds": [
+        "p4"
+      ],
+      "noteLinks": [
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_b_p1",
+          "owner": "p4"
+        }
+      ],
+      "label": "Matthew 5:4",
+      "original": {
+        "path": "/study/scriptures/nt/matt/5",
+        "sourceLang": "kor",
+        "anchor": "p4",
+        "endAnchor": "p4",
+        "selectedIds": [
+          "p4"
+        ]
+      }
+    },
+    "w44-t034": {
+      "path": "/study/scriptures/nt/james/4",
+      "anchor": "p8",
+      "endAnchor": "p10",
+      "selectedIds": [
+        "p8",
+        "p9",
+        "p10"
+      ],
+      "noteLinks": [
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_b_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_c_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_d_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_b_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_c_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        }
+      ],
+      "label": "James 4:8–10",
+      "original": {
+        "path": "/study/scriptures/nt/james/4",
+        "sourceLang": "kor",
+        "anchor": "p8",
+        "endAnchor": "p10",
+        "selectedIds": [
+          "p8",
+          "p9",
+          "p10"
+        ]
+      }
+    },
+    "w44-t035": {
+      "path": "/study/scriptures/bofm/alma/36",
+      "anchor": "p17",
+      "endAnchor": "p20",
+      "selectedIds": [
+        "p17",
+        "p18",
+        "p19",
+        "p20"
+      ],
+      "noteLinks": [
+        {
+          "note": "note17_a_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_b_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_c_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_d_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note18_a_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note18_b_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note18_c_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note18_d_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note18_e_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note19_a_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note19_b_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note20_a_p1",
+          "owner": "p20"
+        }
+      ],
+      "label": "Alma 36:17–20",
+      "original": {
+        "path": "/study/scriptures/bofm/alma/36",
+        "sourceLang": "kor",
+        "anchor": "p17",
+        "endAnchor": "p20",
+        "selectedIds": [
+          "p17",
+          "p18",
+          "p19",
+          "p20"
+        ]
+      }
+    },
+    "w44-t037": {
+      "path": "/study/scriptures/gs/lamentations-book-of",
+      "anchor": "title1",
+      "endAnchor": "p1",
+      "selectedIds": [
+        "title1",
+        "p1"
+      ],
+      "noteLinks": [],
+      "label": "Lamentations, Book of · Full reading",
+      "original": {
+        "path": "/study/scriptures/gs/lamentations-book-of",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p1",
+        "selectedIds": [
+          "title1",
+          "p1"
+        ]
+      }
+    },
+    "w44-t048": {
+      "path": "/study/general-conference/2024/10/12andersen",
+      "anchor": "p_tW3aK",
+      "endAnchor": "p_zFCbB",
+      "selectedIds": [
+        "p_tW3aK",
+        "p_d2KzJ",
+        "p_fgWBK",
+        "p_tCyLv",
+        "p_mrk0W",
+        "p_ismTL",
+        "p_ozySr",
+        "p_yGHNd",
+        "p_w7ZMZ",
+        "p_hOAOT",
+        "p_nj0Gq",
+        "p_cNP4a",
+        "p_c99Af",
+        "p_rQEMQ",
+        "p_mcnVg",
+        "p_xRwlY",
+        "p_bBeHp",
+        "p_jSZqp",
+        "p_zFCbB"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_zhmRm",
+          "owner": "p_w7ZMZ"
+        },
+        {
+          "note": "p_bxMXI",
+          "owner": "p_rQEMQ"
+        },
+        {
+          "note": "p_uSEAI",
+          "owner": "p_mcnVg"
+        },
+        {
+          "note": "p_lxb82",
+          "owner": "p_bBeHp"
+        },
+        {
+          "note": "p_mSpHx",
+          "owner": "p_zFCbB"
+        }
+      ],
+      "label": "The Triumph of Hope · Part 3/3 · Hope in adversity",
+      "original": {
+        "path": "/study/general-conference/2024/10/12andersen",
+        "sourceLang": "kor",
+        "anchor": "p_tW3aK",
+        "endAnchor": "p_zFCbB",
+        "selectedIds": [
+          "p_tW3aK",
+          "p_d2KzJ",
+          "p_fgWBK",
+          "p_tCyLv",
+          "p_mrk0W",
+          "p_ismTL",
+          "p_ozySr",
+          "p_yGHNd",
+          "p_w7ZMZ",
+          "p_hOAOT",
+          "p_nj0Gq",
+          "p_cNP4a",
+          "p_c99Af",
+          "p_rQEMQ",
+          "p_mcnVg",
+          "p_xRwlY",
+          "p_bBeHp",
+          "p_jSZqp",
+          "p_zFCbB"
+        ]
+      }
+    },
+    "w44-t051": {
+      "path": "/study/general-conference/1992/10/the-joy-of-hope-fulfilled",
+      "anchor": "p27",
+      "endAnchor": "p38",
+      "selectedIds": [
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38"
+      ],
+      "noteLinks": [],
+      "label": "The Joy of Hope Fulfilled · Part 3/3 · Experiences and testimony",
+      "original": {
+        "path": "/study/general-conference/1992/10/the-joy-of-hope-fulfilled",
+        "sourceLang": "eng",
+        "anchor": "p27",
+        "endAnchor": "p38",
+        "selectedIds": [
+          "p27",
+          "p28",
+          "p29",
+          "p30",
+          "p31",
+          "p32",
+          "p33",
+          "p34",
+          "p35",
+          "p36",
+          "p37",
+          "p38"
+        ]
+      }
+    },
+    "w44-t058": {
+      "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+      "anchor": "figure2_title1",
+      "endAnchor": "figure2_p17",
+      "selectedIds": [
+        "figure2_title1",
+        "figure2_p1",
+        "figure2_p2",
+        "figure2_p3",
+        "figure2_p4",
+        "figure2_p5",
+        "figure2_p6",
+        "figure2_p7",
+        "figure2_p8",
+        "figure2_p9",
+        "figure2_p10",
+        "figure2_p11",
+        "figure2_p12",
+        "figure2_p13",
+        "figure2_p14",
+        "figure2_p15",
+        "figure2_p16",
+        "figure2_p17"
+      ],
+      "noteLinks": [],
+      "label": "Invite Diligent Learning · Part 7/7 · Ways to apply learning",
+      "original": {
+        "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+        "sourceLang": "kor",
+        "anchor": "figure2_title1",
+        "endAnchor": "figure2_p17",
+        "selectedIds": [
+          "figure2_title1",
+          "figure2_p1",
+          "figure2_p2",
+          "figure2_p3",
+          "figure2_p4",
+          "figure2_p5",
+          "figure2_p6",
+          "figure2_p7",
+          "figure2_p8",
+          "figure2_p9",
+          "figure2_p10",
+          "figure2_p11",
+          "figure2_p12",
+          "figure2_p13",
+          "figure2_p14",
+          "figure2_p15",
+          "figure2_p16",
+          "figure2_p17"
+        ]
+      }
+    },
+    "w44-t060": {
+      "path": "/study/manual/hymns/come-ye-disconsolate",
+      "anchor": "song_number1",
+      "endAnchor": "p2",
+      "selectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "figure1_p11",
+        "figure1_p12",
+        "figure1_p13",
+        "figure1_p14",
+        "figure1_p15",
+        "p1",
+        "p2"
+      ],
+      "noteLinks": [],
+      "label": "Come, Ye Disconsolate · Full reading",
+      "original": {
+        "path": "/study/manual/hymns/come-ye-disconsolate",
+        "sourceLang": "eng",
+        "anchor": "song_number1",
+        "endAnchor": "p2",
+        "selectedIds": [
+          "song_number1",
+          "title1",
+          "figure1_p1",
+          "figure1_p2",
+          "figure1_p3",
+          "figure1_p4",
+          "figure1_p5",
+          "figure1_p6",
+          "figure1_p7",
+          "figure1_p8",
+          "figure1_p9",
+          "figure1_p10",
+          "figure1_p11",
+          "figure1_p12",
+          "figure1_p13",
+          "figure1_p14",
+          "figure1_p15",
+          "p1",
+          "p2"
+        ]
+      }
+    },
+    "w44-t067": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "anchor": "p_vTb0z",
+      "endAnchor": "p_yPHEd",
+      "selectedIds": [
+        "p_vTb0z",
+        "p_hPv4Z",
+        "p_k2Tp8",
+        "p_tTIkH",
+        "p_cf5AA",
+        "p_vi5kl",
+        "p_h1yNe",
+        "p_i2Ouv",
+        "p_yPHEd"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_hBHiQ",
+          "owner": "p_k2Tp8"
+        },
+        {
+          "note": "p_btrXf",
+          "owner": "p_k2Tp8"
+        },
+        {
+          "note": "p_f7hPZ",
+          "owner": "p_tTIkH"
+        },
+        {
+          "note": "p_m00Ob",
+          "owner": "p_yPHEd"
+        }
+      ],
+      "label": "Scripture Helps · Lamentations: poetry and imagery",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_vTb0z",
+        "endAnchor": "p_yPHEd",
+        "selectedIds": [
+          "p_vTb0z",
+          "p_hPv4Z",
+          "p_k2Tp8",
+          "p_tTIkH",
+          "p_cf5AA",
+          "p_vi5kl",
+          "p_h1yNe",
+          "p_i2Ouv",
+          "p_yPHEd"
+        ]
+      }
+    },
+    "w44-t073": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "anchor": "p_tupmD",
+      "endAnchor": "p_tupmD",
+      "selectedIds": [
+        "p_tupmD"
+      ],
+      "noteLinks": [],
+      "label": "Scripture Helps · Image: Jeremiah’s lament",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_tupmD",
+        "endAnchor": "p_tupmD",
+        "selectedIds": [
+          "p_tupmD"
+        ]
+      }
+    },
+    "w44-t017": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "anchor": "scripture_title11",
+      "endAnchor": "figure4_p1",
+      "selectedIds": [
+        "scripture_title11",
+        "title14",
+        "p32",
+        "p33",
+        "figure4_p1"
+      ],
+      "noteLinks": [],
+      "label": "Weekly manual · Forgiveness and hope",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+        "sourceLang": "kor",
+        "anchor": "scripture_title11",
+        "endAnchor": "figure4_p1",
+        "selectedIds": [
+          "scripture_title11",
+          "title14",
+          "p32",
+          "p33",
+          "figure4_p1"
+        ]
+      }
+    },
+    "w44-t080": {
+      "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+      "anchor": "p_a9Bnn",
+      "endAnchor": "p_zxNuU",
+      "selectedIds": [
+        "p_a9Bnn",
+        "p_pANWO",
+        "p_ozv3P",
+        "p_zxNuU"
+      ],
+      "noteLinks": [],
+      "label": "Additional Resources for Teaching Children · Forgiveness and hope",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+        "sourceLang": "kor",
+        "anchor": "p_a9Bnn",
+        "endAnchor": "p_zxNuU",
+        "selectedIds": [
+          "p_a9Bnn",
+          "p_pANWO",
+          "p_ozv3P",
+          "p_zxNuU"
+        ]
+      }
+    },
+    "w44-t090": {
+      "path": "/study/friend/2022/08/repentance-is-a-good-thing",
+      "anchor": "title1",
+      "endAnchor": "figure1_p1",
+      "selectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "kicker1",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "aside1_p1",
+        "aside2_p1",
+        "figure1_p1"
+      ],
+      "noteLinks": [],
+      "label": "Repentance Is a Good Thing! · Full reading",
+      "original": {
+        "path": "/study/friend/2022/08/repentance-is-a-good-thing",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "figure1_p1",
+        "selectedIds": [
+          "title1",
+          "p1",
+          "p2",
+          "kicker1",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "aside1_p1",
+          "aside2_p1",
+          "figure1_p1"
+        ]
+      }
+    },
+    "w44-t091": {
+      "path": "/study/manual/childrens-songbook/help-us-o-god-to-understand",
+      "anchor": "song_number1",
+      "endAnchor": "p2",
+      "selectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "p1",
+        "p2"
+      ],
+      "noteLinks": [],
+      "label": "Help Us, O God, to Understand · Full reading",
+      "original": {
+        "path": "/study/manual/childrens-songbook/help-us-o-god-to-understand",
+        "sourceLang": "eng",
+        "anchor": "song_number1",
+        "endAnchor": "p2",
+        "selectedIds": [
+          "song_number1",
+          "title1",
+          "figure1_p1",
+          "figure1_p2",
+          "figure1_p3",
+          "figure1_p4",
+          "figure1_p5",
+          "figure1_p6",
+          "figure1_p7",
+          "figure1_p8",
+          "figure1_p9",
+          "figure1_p10",
+          "p1",
+          "p2"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+task,source,day,track,originalStart,originalEnd,englishStart,englishEnd,method
+w46-t001,manual,1,adult,figure1_p1,p4,figure1_p1,p4,reviewed five link replacements; same-meaning section boundaries
+w46-t004,manual,1,adult,p7,p7,p7,p7,reviewed five link replacements; same-meaning section boundaries
+w46-t009,manual,1,adult,p_nB6xw,p_e7qM9,p_pcUeL,p_aOreu,reviewed five link replacements; same-meaning section boundaries
+w46-t013,manual,1,family,figure5_p1,p17,figure5_p1,p17,reviewed five link replacements; same-meaning section boundaries
+w46-t007,manual,2,adult,scripture_title2,p10,scripture_title2,p10,reviewed five link replacements; same-meaning section boundaries
+w46-t011,manual,2,adult,figure8,figure8,figure8,figure8,reviewed five link replacements; same-meaning section boundaries
+w46-t014,manual,2,family,scripture_title7,p18,scripture_title7,p18,reviewed five link replacements; same-meaning section boundaries
+w46-t002,manual,3,adult,p5,p5,p5,p5,reviewed five link replacements; same-meaning section boundaries
+w46-t006,manual,3,adult,figure3_p1,figure3_p1,figure3_p1,figure3_p1,reviewed five link replacements; same-meaning section boundaries
+w46-t012,manual,3,family,title7,p16,title7,p16,reviewed five link replacements; same-meaning section boundaries
+w46-t005,manual,4,adult,figure2_p1,figure2_p1,figure2_p1,figure2_p1,reviewed five link replacements; same-meaning section boundaries
+w46-t003,manual,5,adult,p6,p6,p6,p6,reviewed five link replacements; same-meaning section boundaries
+w46-t015,manual,6,family,scripture_title8,p19,scripture_title8,p19,reviewed five link replacements; same-meaning section boundaries
+w46-t008,manual,7,adult,scripture_title4,p14,scripture_title4,p14,reviewed five link replacements; same-meaning section boundaries
+w46-t010,manual,7,adult,p_iRdkd,p_grqLE,p_tbV44,p_f6Sjz,reviewed five link replacements; same-meaning section boundaries
+w46-t016,manual,7,family,figure6_p1,figure7_figure1_p1,figure6_p1,figure7_figure1_p1,reviewed five link replacements; same-meaning section boundaries
+w46-t017,dan1,1,adult,title1,p21,title1,p21,logical verses 1–21; original chapter-heading ownership
+w46-t024,kings24,1,adult,p10,p16,p10,p16,logical verses 10–16; original chapter-heading ownership
+w46-t025,gs-daniel,1,adult,title1,p5,title1,p5,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t044,uchtdorf,1,adult,title1,p33,title1,p33,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t045,uchtdorf,3,adult,title4,p57,title4,p57,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t051,jones,1,adult,title1,p14,title1,p14,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t052,jones,4,adult,p15,p30,p15,p30,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t065,helps,1,adult,p_xdz1R,p_xDhbD,p_xdz1R,p_xDhbD,reviewed question/activity/caption meaning and destination references
+w46-t071,helps,1,adult,p_mYyIN,p_ncWCc,p_mYyIN,p_ncWCc,reviewed question/activity/caption meaning and destination references
+w46-t076,helps,1,adult,p_l5TQX,p_eJRQ2,p_l5TQX,p_eJRQ2,reviewed question/activity/caption meaning and destination references
+w46-t066,helps,2,adult,p_x2Z3u,p_dc32C,p_x2Z3u,p_dc32C,reviewed question/activity/caption meaning and destination references
+w46-t073,helps,2,adult,p_ckDZc,p_loyNd,p_ckDZc,p_loyNd,reviewed question/activity/caption meaning and destination references
+w46-t074,helps,2,adult,p_u9Faf,p_gFGqE,p_u9Faf,p_gFGqE,reviewed question/activity/caption meaning and destination references
+w46-t077,helps,2,adult,p_a3nBq,p_a3nBq,p_a3nBq,p_a3nBq,reviewed question/activity/caption meaning and destination references
+w46-t067,helps,3,adult,p_k1zfT,p_zeOfZ,p_k1zfT,p_zeOfZ,reviewed question/activity/caption meaning and destination references
+w46-t072,helps,3,adult,p_vfwgQ,p_vfwgQ,p_vfwgQ,p_vfwgQ,reviewed question/activity/caption meaning and destination references
+w46-t078,helps,3,adult,p_lLYmJ,p_lLYmJ,p_lLYmJ,p_lLYmJ,reviewed question/activity/caption meaning and destination references
+w46-t080,helps,3,adult,p_uR2Px,p_uR2Px,p_uR2Px,p_uR2Px,reviewed question/activity/caption meaning and destination references
+w46-t068,helps,5,adult,p_zHeQk,p_gIsfu,p_zHeQk,p_gIsfu,reviewed question/activity/caption meaning and destination references
+w46-t079,helps,5,adult,p_kYzwE,p_kYzwE,p_kYzwE,p_kYzwE,reviewed question/activity/caption meaning and destination references
+w46-t081,helps,5,adult,p_kULiF,p_kULiF,p_kULiF,p_kULiF,reviewed question/activity/caption meaning and destination references
+w46-t069,helps,6,adult,p_kdD6m,p_y6CMt,p_kdD6m,p_y6CMt,reviewed question/activity/caption meaning and destination references
+w46-t082,helps,6,adult,p_kgjXm,p_oC4Ek,p_kgjXm,p_oC4Ek,reviewed question/activity/caption meaning and destination references
+w46-t070,helps,7,adult,p_fidhQ,p_bjpgB,p_fidhQ,p_cxFO0,reviewed question/activity/caption meaning and destination references
+w46-t075,helps,7,adult,p_zJkvd,p_tGgeb,p_zJkvd,p_tGgeb,reviewed question/activity/caption meaning and destination references
+w46-t042,dc89,1,family,title_number1,p9,title_number1,p9,logical verses 1–9; original chapter-heading ownership
+w46-t043,dc89,7,family,p10,p21,p10,p21,logical verses 10–21; original chapter-heading ownership
+w46-t085,children,1,family,p_dZp2j,p_oIFdt,p_dZp2j,p_oIFdt,reviewed question/activity/caption meaning and destination references
+w46-t087,children,1,family,p_owaLY,p_owaLY,p_owaLY,p_owaLY,reviewed question/activity/caption meaning and destination references
+w46-t088,children,2,family,p_qJ5Jk,p_oBTqe,p_qJ5Jk,p_oBTqe,reviewed question/activity/caption meaning and destination references
+w46-t083,children,3,family,p_n0pTJ,p_v1lGd,p_n0pTJ,p_v1lGd,reviewed question/activity/caption meaning and destination references
+w46-t086,children,4,family,p_iLWoH,p_lk1fM,p_iLWoH,p_lk1fM,reviewed question/activity/caption meaning and destination references
+w46-t084,children,5,family,p_m8ugZ,p_cE5Fz,p_m8ugZ,p_cE5Fz,reviewed question/activity/caption meaning and destination references
+w46-t089,children,6,family,p_jAVjR,p_e3I1Q,p_jAVjR,p_e3I1Q,reviewed question/activity/caption meaning and destination references
+w46-t090,children,7,family,p_eFwSl,p_eFwSl,p_eFwSl,p_eFwSl,reviewed question/activity/caption meaning and destination references
+w46-t091,story-friends,1,family,title_number1,p12,title_number1,p12,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t092,song-wisdom,1,family,song_number1,p1,song_number1,p1,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t093,family-body,1,family,p_w8Aqf,p_mFJQT,p_w8Aqf,p_mFJQT,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t108,art-ot,1,family,p45,p46,p45,figure23_p1,"same numbered artwork, title and scripture references; include English artist captions"
+w46-t109,art-ot,3,family,p49,p50,p49,figure25_p1,"same numbered artwork, title and scripture references; include English artist captions"
+w46-t110,art-ot,6,family,p51,p52,p51,figure26_p1,"same numbered artwork, title and scripture references; include English artist captions"
+w46-t018,dan2,2,adult,title_number1,p49,title_number1,p49,logical verses 1–49; original chapter-heading ownership
+w46-t046,church,2,adult,title1,p17,title1,p17,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t047,church,5,adult,p18,p30,p18,p30,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t054,bednar,2,adult,p_qFnSt,p_ey7Gw,p_qFnSt,p_ey7Gw,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t055,bednar,4,adult,p_uD4qs,p_iQAGM,p_uD4qs,p_iQAGM,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t056,bednar,7,adult,p_d4VR5,p_a91gK,p_d4VR5,p_a91gK,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t059,eyring-witness,2,adult,title1,p16,title1,p16,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t060,eyring-witness,5,adult,title2,p27,title2,p27,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t061,eyring-witness,6,adult,title4,p41,title4,p41,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t062,hymn-nations,2,adult,song_number1,p2,song_number1,p2,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t094,story-dream,2,family,title_number1,p12,title_number1,p12,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t095,family-church,2,family,title1,p5,title1,p5,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t104,family-fun,2,family,p_vuQIl,p_bAXFA,p_vuQIl,p_bAXFA,English original; same body hashes and stable activity headings
+w46-t105,family-fun,5,family,p_zhN10,p_sFjUI,p_zhN10,p_sFjUI,English original; same body hashes and stable activity headings
+w46-t106,family-fun,6,family,p_anJk9,p_iYNI8,p_anJk9,p_iYNI8,English original; same body hashes and stable activity headings
+w46-t107,family-fun,7,family,p_uyKg5,p_nAy7j,p_uyKg5,p_nAy7j,English original; same body hashes and stable activity headings
+w46-t111,art-history,2,family,p7,p18,p7,figure9_p1,"same numbered artwork, title and scripture references; include English artist captions"
+w46-t019,dan3,3,adult,title_number1,p30,title_number1,p30,logical verses 1–30; original chapter-heading ownership
+w46-t026,alma14,3,adult,p8,p13,p8,p13,logical verses 8–13; original chapter-heading ownership
+w46-t053,simmons,3,adult,title1,p37,title1,p38,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t063,hymn-choose,3,family,song_number1,p2,song_number1,p2,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t096,story-fire,3,family,title_number1,p13,title_number1,p13,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t097,color-fire,3,family,title1,subtitle1,title1,subtitle1,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t020,dan4,4,adult,title_number1,p37,title_number1,p37,logical verses 1–37; original chapter-heading ownership
+w46-t027,nephi26,4,adult,p33,p33,p33,p33,logical verses 33; original chapter-heading ownership
+w46-t049,worship,4,adult,p_vOpkv,p_aq1kl,p_vOpkv,p_aq1kl,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t050,worship,5,adult,p_q2fmd,p_lwIJL,p_q2fmd,p_lwIJL,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t098,family-margo,4,family,p_xXSEx,p_bd4dW,p_xXSEx,p_bd4dW,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t099,family-guide,4,family,p_kxBOS,p_aRNdR,p_kxBOS,p_aRNdR,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t021,dan5,5,adult,title_number1,p31,title_number1,p31,logical verses 1–31; original chapter-heading ownership
+w46-t057,rasband,5,adult,title1,p14,title1,p14,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t058,rasband,7,adult,p15,p26,p15,p26,"reviewed boundary meaning, complete paragraph sequence and scripture references"
+w46-t100,family-esther,5,family,p_aVvoM,p_tCNUw,p_aVvoM,p_tCNUw,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t022,dan6,6,adult,title_number1,p28,title_number1,p28,logical verses 1–28; original chapter-heading ownership
+w46-t028,phil2,6,adult,p8,p8,p8,p8,logical verses 8; original chapter-heading ownership
+w46-t029,luke23,6,adult,p13,p33,p13,p33,"logical verses 13–24, 33; original chapter-heading ownership"
+w46-t030,matt27,6,adult,p59,p66,p59,p66,logical verses 59–66; original chapter-heading ownership
+w46-t031,cor15,6,adult,p3,p4,p3,p4,logical verses 3–4; original chapter-heading ownership
+w46-t040,mark14,6,adult,p55,p55,p55,p55,logical verses 55; original chapter-heading ownership
+w46-t041,mark14,7,adult,p61,p64,p61,p64,logical verses 61–64; original chapter-heading ownership
+w46-t048,eyring,6,adult,p_yD854,p_gbfaC,p_yD854,p_gbfaC,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t101,story-lions,6,family,title_number1,p12,title_number1,p12,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t102,song-pray,6,family,song_number1,p1,song_number1,p1,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t023,dan7,7,adult,title_number1,p28,title_number1,p28,logical verses 1–28; original chapter-heading ownership
+w46-t032,moses6,7,adult,p57,p57,p57,p57,logical verses 57; original chapter-heading ownership
+w46-t033,matt25,7,adult,p31,p31,p31,p31,logical verses 31; original chapter-heading ownership
+w46-t034,mark9,7,adult,p31,p31,p31,p31,logical verses 31; original chapter-heading ownership
+w46-t035,mark10,7,adult,p45,p45,p45,p45,logical verses 45; original chapter-heading ownership
+w46-t036,dc121,7,adult,p29,p46,p29,p46,"logical verses 29, 46; original chapter-heading ownership"
+w46-t037,dc49,7,adult,p6,p6,p6,p6,logical verses 6; original chapter-heading ownership
+w46-t038,mark15,7,adult,title_number1,p47,title_number1,p47,logical verses 1–47; original chapter-heading ownership
+w46-t039,gs-son-of-man,7,adult,title1,p1,title1,p1,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t064,hymn-adam,7,adult,song_number1,p2,song_number1,p2,"complete corresponding English article/song/story, including changed paragraph grouping"
+w46-t103,color-lions,7,family,title1,subtitle1,title1,subtitle1,"complete corresponding English article/song/story, including changed paragraph grouping"
