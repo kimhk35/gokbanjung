@@ -53,6 +53,8 @@ test("daily cards describe the allocated day's materials and question, including
     ["2026-10-31", "예레미야 39"],
     ["2026-11-14", "다니엘 6"],
     ["2026-11-15", "다니엘 7"],
+    ["2026-11-16", "호세아 1"],
+    ["2026-11-22", "요엘 3"],
   ]) {
     const card = autoInsight(date)!;
     const day = getStudyDay(card.week, card.day)!;
@@ -71,7 +73,7 @@ test("daily cards describe the allocated day's materials and question, including
 });
 
 test("unallocated dates keep their own legacy reading and question", () => {
-  for (const date of ["2026-11-08", "2026-11-16"]) {
+  for (const date of ["2026-11-08", "2026-11-23"]) {
     const week = currentWeek(date)!;
     const day = dayIndex(week, date);
     const card = autoInsight(date)!;

@@ -1248,3 +1248,47 @@ worked. The isolated local progress endpoint returned200. Physical phones and
 production were not tested; the official cross-origin page remains external.
 Local dev uses `.local-db/week46-preview`, PID3792,127.0.0.1:3000. Screenshot
 evidence is in ignored `test-results/mobile-reader/`.
+
+## Week 47 connected readings and resume — 2026-11-15
+
+Branch `codex/week47-connected-reading` is based on `origin/main` at `3c3bf50`
+(PR6 merged). The Nov9 question edits in week46 JSON/generator and the teacher
+signup investigation above predate this work and are not included in this PR.
+
+Week47 (Nov16–22), Hosea1–6/10–14 and Joel, is registered in the daily reader.
+See [allocation and source audit](../study/2026-week-47-plan.md):52 sources,
+1,124 unique units,107 tasks (72 basic/35 family),all223 weekly verses in basic.
+Independent raw-HTML checks found no omitted/duplicate source units or expanded
+DOM selections.30 new reading instructions have their actual targets immediately
+after them;23 reuse/continuation rows link to existing owners without counting
+them twice. The method now documents this instruction-to-reading constraint.
+The 61:29 Bednar video has no Korean transcript;its day has less text, but daily
+burden is not equal. Two family sources use audited English positions.
+
+Reader positions are browser-local, versioned, and isolated by actor/week/day/
+track. A valid explicit source+anchor wins over a saved stable task ID/source
+signature, then loaded server progress supplies the first unread task. Restore
+never marks a task complete. Delayed requests cannot overwrite a newer selection.
+Only material and explicit start/end boundary are remembered, not pixel scroll
+inside the external iframe. Related links pin their origin in native history;
+useSearchParams keeps Back restoration correct even with cached server props.
+Progress completion continues through the existing DB API with no migration.
+
+Verification:60 reading/card/community/progress tests pass;scoped ESLint and
+TypeScript pass;Next16.3.5 webpack production build passes (33 static pages),
+using Node24.22.1 and no production credentials. Full suite:138/139 pass. The
+unchanged AI-flow test fails at quiz-service.ts:81 because daily quizScope for
+2026-11-15 returns reference `Daniel 1–7` but zero parsed chapters;quiz source,
+curriculum and that test are unchanged. Do not describe the full suite as green.
+
+Local browser QA:Next→correct scripture, reload resume, per-day/per-track
+isolation, explicit-link priority, same-day related link→Back (including end
+boundary),320/390px mobile and1280px desktop passed. A transient Turbopack HMR
+module-cache error during data edits cleared after reload. Official source
+renders and selected ranges were sampled;video playback/captions,PDF internals,
+physical phones and production were not tested. Evidence/logs are ignored under
+`test-results/week47/`, including `connected-reading-mobile.jpg`.
+
+Preview remains http://127.0.0.1:3000/week/47/day/1?track=adult on the existing
+isolated `.local-db/week46-preview` dev server. The branch is disabled for Vercel
+Git deployments in vercel.json. No production writes or deployment were made.

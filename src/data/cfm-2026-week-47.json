@@ -1,0 +1,5988 @@
+{
+  "version": 1,
+  "week": 47,
+  "dates": "2026-11-16/2026-11-22",
+  "days": [
+    {
+      "day": 1,
+      "shortTitle": "다시 맺는 사랑의 성약",
+      "shortTitleEn": "Love and a renewed covenant",
+      "question": "주님께서 나와 맺으신 성약을 기억할 때, 그분께 돌아가기 위해 어떤 선택을 할 수 있나요?",
+      "familyTitle": "약속과 성약을 지켜요",
+      "familyTitleEn": "Keeping promises and covenants",
+      "familyQuestion": "나는 어떤 약속을 지킬 수 있나요?",
+      "familyActivity": "기본 과정에서 읽은 호세아 2:19~20을 떠올리며 서로 지킬 수 있는 약속 하나를 정합니다.",
+      "adultTasks": [
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 주간 도입과 선지자 안내",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title_number1",
+          "endAnchor": "p3",
+          "units": [
+            "manual#reference1",
+            "manual#short_reference1",
+            "manual#title_number1",
+            "manual#title1",
+            "manual#p1",
+            "manual#p2",
+            "manual#p3"
+          ],
+          "sourceIds": [
+            "reference1",
+            "short_reference1",
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3"
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3"
+          ],
+          "noteLinks": [],
+          "id": "w47-t001"
+        },
+        {
+          "sourceId": "gs-hosea",
+          "kind": "scripture",
+          "label": "경전 안내서 · 호세아 · 전체",
+          "path": "/study/scriptures/gs/hosea",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title1",
+          "endAnchor": "p2",
+          "units": [
+            "gs-hosea#title1",
+            "gs-hosea#p1",
+            "gs-hosea#title2",
+            "gs-hosea#p2"
+          ],
+          "sourceIds": [
+            "title1",
+            "p1",
+            "title2",
+            "p2"
+          ],
+          "selectedIds": [
+            "title1",
+            "p1",
+            "title2",
+            "p2"
+          ],
+          "noteLinks": [],
+          "id": "w47-t002"
+        },
+        {
+          "sourceId": "gs-joel",
+          "kind": "scripture",
+          "label": "경전 안내서 · 요엘 · 전체",
+          "path": "/study/scriptures/gs/joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title1",
+          "endAnchor": "p4",
+          "units": [
+            "gs-joel#title1",
+            "gs-joel#p1",
+            "gs-joel#title2",
+            "gs-joel#p2",
+            "gs-joel#p3",
+            "gs-joel#p4"
+          ],
+          "sourceIds": [
+            "title1",
+            "p1",
+            "title2",
+            "p2",
+            "p3",
+            "p4"
+          ],
+          "selectedIds": [
+            "title1",
+            "p1",
+            "title2",
+            "p2",
+            "p3",
+            "p4"
+          ],
+          "noteLinks": [],
+          "id": "w47-t003"
+        },
+        {
+          "sourceId": "helps",
+          "kind": "reading",
+          "label": "도움말 · 소선지자와 호세아의 배경",
+          "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_eVr84",
+          "endAnchor": "p_plcYD",
+          "units": [
+            "helps#p_eVr84",
+            "helps#p_xCy8g",
+            "helps#p_cDmAn",
+            "helps#p_zVucV",
+            "helps#p_y8JJR",
+            "helps#p_vGBik",
+            "helps#p_l2ctu",
+            "helps#p_lT3BR",
+            "helps#p_jhoBl",
+            "helps#p_dlia0",
+            "helps#p_pq8wz",
+            "helps#p_xB0cz",
+            "helps#p_sgubb",
+            "helps#p_bNx6Y",
+            "helps#p_b90V6",
+            "helps#p_dexIi",
+            "helps#p_hdPGS",
+            "helps#p_wdZLp",
+            "helps#p_sUfNz",
+            "helps#p_wD24O",
+            "helps#p_arwvr",
+            "helps#p_wfiDR",
+            "helps#p_xz99I",
+            "helps#p_py5j5",
+            "helps#p_wrROL",
+            "helps#p_zbpKv",
+            "helps#p_wIlzW",
+            "helps#p_dCXOn",
+            "helps#p_kV1cn",
+            "helps#p_eJ8z2",
+            "helps#p_k333N",
+            "helps#p_dFrjw",
+            "helps#p_rGvDZ",
+            "helps#p_iGQbx",
+            "helps#p_dLvKA",
+            "helps#p_qJz5P",
+            "helps#p_wPp6Z",
+            "helps#p_q9xCq",
+            "helps#p_esDUg",
+            "helps#p_c14mK",
+            "helps#p_mWoTV",
+            "helps#p_gTnn0",
+            "helps#p_whYRV",
+            "helps#p_pE9hv",
+            "helps#p_trq6D",
+            "helps#p_eGo7U",
+            "helps#p_kUDMD",
+            "helps#p_b41LS",
+            "helps#p_eJGOw",
+            "helps#p_vh7uE",
+            "helps#p_zKrQw",
+            "helps#p_lhgxJ",
+            "helps#p_kkj6H",
+            "helps#p_uXThs",
+            "helps#p_arK0c",
+            "helps#p_qHJNW",
+            "helps#p_iyu1u",
+            "helps#p_pbk5N",
+            "helps#p_wZlzL",
+            "helps#p_u2YK4",
+            "helps#p_plcYD",
+            "helps#p_mqcv5",
+            "helps#p_cIooD",
+            "helps#p_mGNhB",
+            "helps#p_pFQ8A",
+            "helps#p_rb6jG",
+            "helps#p_bugNd",
+            "helps#p_usLDM"
+          ],
+          "sourceIds": [
+            "p_eVr84",
+            "p_xCy8g",
+            "p_cDmAn",
+            "p_zVucV",
+            "p_y8JJR",
+            "p_vGBik",
+            "p_l2ctu",
+            "p_lT3BR",
+            "p_jhoBl",
+            "p_dlia0",
+            "p_pq8wz",
+            "p_xB0cz",
+            "p_sgubb",
+            "p_bNx6Y",
+            "p_b90V6",
+            "p_dexIi",
+            "p_hdPGS",
+            "p_wdZLp",
+            "p_sUfNz",
+            "p_wD24O",
+            "p_arwvr",
+            "p_wfiDR",
+            "p_xz99I",
+            "p_py5j5",
+            "p_wrROL",
+            "p_zbpKv",
+            "p_wIlzW",
+            "p_dCXOn",
+            "p_kV1cn",
+            "p_eJ8z2",
+            "p_k333N",
+            "p_dFrjw",
+            "p_rGvDZ",
+            "p_iGQbx",
+            "p_dLvKA",
+            "p_qJz5P",
+            "p_wPp6Z",
+            "p_q9xCq",
+            "p_esDUg",
+            "p_c14mK",
+            "p_mWoTV",
+            "p_gTnn0",
+            "p_whYRV",
+            "p_pE9hv",
+            "p_trq6D",
+            "p_eGo7U",
+            "p_kUDMD",
+            "p_b41LS",
+            "p_eJGOw",
+            "p_vh7uE",
+            "p_zKrQw",
+            "p_lhgxJ",
+            "p_kkj6H",
+            "p_uXThs",
+            "p_arK0c",
+            "p_qHJNW",
+            "p_iyu1u",
+            "p_pbk5N",
+            "p_wZlzL",
+            "p_u2YK4",
+            "p_plcYD",
+            "p_mqcv5",
+            "p_cIooD",
+            "p_mGNhB",
+            "p_pFQ8A",
+            "p_rb6jG",
+            "p_bugNd",
+            "p_usLDM"
+          ],
+          "selectedIds": [
+            "p_eVr84",
+            "p_xCy8g",
+            "p_cDmAn",
+            "p_zVucV",
+            "p_y8JJR",
+            "p_vGBik",
+            "p_l2ctu",
+            "p_lT3BR",
+            "p_jhoBl",
+            "p_dlia0",
+            "p_pq8wz",
+            "p_xB0cz",
+            "p_sgubb",
+            "p_bNx6Y",
+            "p_b90V6",
+            "p_dexIi",
+            "p_hdPGS",
+            "p_wdZLp",
+            "p_sUfNz",
+            "p_wD24O",
+            "p_arwvr",
+            "p_wfiDR",
+            "p_xz99I",
+            "p_py5j5",
+            "p_wrROL",
+            "p_zbpKv",
+            "p_wIlzW",
+            "p_dCXOn",
+            "p_kV1cn",
+            "p_eJ8z2",
+            "p_k333N",
+            "p_dFrjw",
+            "p_rGvDZ",
+            "p_iGQbx",
+            "p_dLvKA",
+            "p_qJz5P",
+            "p_wPp6Z",
+            "p_q9xCq",
+            "p_esDUg",
+            "p_c14mK",
+            "p_mWoTV",
+            "p_gTnn0",
+            "p_whYRV",
+            "p_pE9hv",
+            "p_trq6D",
+            "p_eGo7U",
+            "p_kUDMD",
+            "p_b41LS",
+            "p_eJGOw",
+            "p_vh7uE",
+            "p_zKrQw",
+            "p_lhgxJ",
+            "p_kkj6H",
+            "p_uXThs",
+            "p_arK0c",
+            "p_qHJNW",
+            "p_iyu1u",
+            "p_pbk5N",
+            "p_wZlzL",
+            "p_u2YK4",
+            "p_plcYD"
+          ],
+          "noteLinks": [
+            {
+              "note": "p_cIooD",
+              "owner": "p_xB0cz"
+            },
+            {
+              "note": "p_mGNhB",
+              "owner": "p_sgubb"
+            },
+            {
+              "note": "p_pFQ8A",
+              "owner": "p_qHJNW"
+            },
+            {
+              "note": "p_rb6jG",
+              "owner": "p_iyu1u"
+            },
+            {
+              "note": "p_bugNd",
+              "owner": "p_iyu1u"
+            },
+            {
+              "note": "p_usLDM",
+              "owner": "p_pbk5N"
+            }
+          ],
+          "id": "w47-t004"
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 호세아 1~3장을 읽으며 성약 생각하기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title2",
+          "endAnchor": "p4",
+          "units": [
+            "manual#title2",
+            "manual#scripture_title1",
+            "manual#title3",
+            "manual#p4"
+          ],
+          "sourceIds": [
+            "title2",
+            "scripture_title1",
+            "title3",
+            "p4"
+          ],
+          "selectedIds": [
+            "title2",
+            "scripture_title1",
+            "title3",
+            "p4"
+          ],
+          "noteLinks": [],
+          "id": "w47-t005"
+        },
+        {
+          "sourceId": "hos1",
+          "kind": "scripture",
+          "label": "호세아 1장 · 전체",
+          "path": "/study/scriptures/ot/hosea/1",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title1",
+          "endAnchor": "p11",
+          "units": [
+            "hos1#title1",
+            "hos1#title_number1",
+            "hos1#p1",
+            "hos1#title2",
+            "hos1#p2",
+            "hos1#p3",
+            "hos1#p4",
+            "hos1#p5",
+            "hos1#p6",
+            "hos1#p7",
+            "hos1#p8",
+            "hos1#p9",
+            "hos1#title3",
+            "hos1#p10",
+            "hos1#p11",
+            "hos1#note1_p1",
+            "hos1#note2_p1"
+          ],
+          "sourceIds": [
+            "title1",
+            "title_number1",
+            "p1",
+            "title2",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "title3",
+            "p10",
+            "p11",
+            "note1_p1",
+            "note2_p1"
+          ],
+          "selectedIds": [
+            "title1",
+            "title_number1",
+            "p1",
+            "title2",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "title3",
+            "p10",
+            "p11"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1_p1",
+              "owner": "p6"
+            },
+            {
+              "note": "note2_p1",
+              "owner": "p9"
+            }
+          ],
+          "id": "w47-t006"
+        },
+        {
+          "sourceId": "hos2",
+          "kind": "scripture",
+          "label": "호세아 2장 · 전체",
+          "path": "/study/scriptures/ot/hosea/2",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title_number1",
+          "endAnchor": "p23",
+          "units": [
+            "hos2#title_number1",
+            "hos2#p1",
+            "hos2#title1",
+            "hos2#p2",
+            "hos2#p3",
+            "hos2#p4",
+            "hos2#p5",
+            "hos2#p6",
+            "hos2#p7",
+            "hos2#p8",
+            "hos2#p9",
+            "hos2#p10",
+            "hos2#p11",
+            "hos2#p12",
+            "hos2#p13",
+            "hos2#title2",
+            "hos2#p14",
+            "hos2#p15",
+            "hos2#p16",
+            "hos2#p17",
+            "hos2#p18",
+            "hos2#p19",
+            "hos2#p20",
+            "hos2#p21",
+            "hos2#p22",
+            "hos2#p23",
+            "hos2#note1_p1",
+            "hos2#note2_p1",
+            "hos2#note3_p1",
+            "hos2#note4_p1",
+            "hos2#note5_p1",
+            "hos2#note6_p1"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "p1",
+            "title1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "title2",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "note1_p1",
+            "note2_p1",
+            "note3_p1",
+            "note4_p1",
+            "note5_p1",
+            "note6_p1"
+          ],
+          "selectedIds": [
+            "title_number1",
+            "p1",
+            "title1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "title2",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1_p1",
+              "owner": "p1"
+            },
+            {
+              "note": "note2_p1",
+              "owner": "p1"
+            },
+            {
+              "note": "note3_p1",
+              "owner": "p8"
+            },
+            {
+              "note": "note4_p1",
+              "owner": "p15"
+            },
+            {
+              "note": "note5_p1",
+              "owner": "p16"
+            },
+            {
+              "note": "note6_p1",
+              "owner": "p22"
+            }
+          ],
+          "id": "w47-t007"
+        },
+        {
+          "sourceId": "hos3",
+          "kind": "scripture",
+          "label": "호세아 3장 · 전체",
+          "path": "/study/scriptures/ot/hosea/3",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title_number1",
+          "endAnchor": "p5",
+          "units": [
+            "hos3#title_number1",
+            "hos3#title1",
+            "hos3#p1",
+            "hos3#p2",
+            "hos3#p3",
+            "hos3#p4",
+            "hos3#p5"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5"
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5"
+          ],
+          "noteLinks": [],
+          "id": "w47-t008"
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 고멜 그림과 설명",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "figure1_p1",
+          "endAnchor": "figure1_p1",
+          "units": [
+            "manual#figure1_p1"
+          ],
+          "sourceIds": [
+            "figure1_p1"
+          ],
+          "selectedIds": [
+            "figure1_p1"
+          ],
+          "noteLinks": [],
+          "id": "w47-t009"
+        },
+        {
+          "sourceId": "helps",
+          "kind": "reading",
+          "label": "도움말 · 성약의 결혼과 하나님의 자녀",
+          "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_iHsEv",
+          "endAnchor": "p_tAmkM",
+          "units": [
+            "helps#p_iHsEv",
+            "helps#p_aWyUG",
+            "helps#p_z2Yum",
+            "helps#p_gbGxL",
+            "helps#p_niD4P",
+            "helps#p_wThcB",
+            "helps#p_kV94q",
+            "helps#p_hvDHC",
+            "helps#p_qrbxF",
+            "helps#p_exmeo",
+            "helps#p_lWJ7q",
+            "helps#p_tAmkM",
+            "helps#p_swkmd",
+            "helps#p_xnqDf",
+            "helps#p_mrh8u",
+            "helps#p_sqRfN",
+            "helps#p_xNB1M",
+            "helps#p_kZkWQ",
+            "helps#p_lpIpi",
+            "helps#p_lZeh8",
+            "helps#p_wyHPC",
+            "helps#p_i6yrD",
+            "helps#p_jQf4u",
+            "helps#p_aoSoA",
+            "helps#p_fw824"
+          ],
+          "sourceIds": [
+            "p_iHsEv",
+            "p_aWyUG",
+            "p_z2Yum",
+            "p_gbGxL",
+            "p_niD4P",
+            "p_wThcB",
+            "p_kV94q",
+            "p_hvDHC",
+            "p_qrbxF",
+            "p_exmeo",
+            "p_lWJ7q",
+            "p_tAmkM",
+            "p_swkmd",
+            "p_xnqDf",
+            "p_mrh8u",
+            "p_sqRfN",
+            "p_xNB1M",
+            "p_kZkWQ",
+            "p_lpIpi",
+            "p_lZeh8",
+            "p_wyHPC",
+            "p_i6yrD",
+            "p_jQf4u",
+            "p_aoSoA",
+            "p_fw824"
+          ],
+          "selectedIds": [
+            "p_iHsEv",
+            "p_aWyUG",
+            "p_z2Yum",
+            "p_gbGxL",
+            "p_niD4P",
+            "p_wThcB",
+            "p_kV94q",
+            "p_hvDHC",
+            "p_qrbxF",
+            "p_exmeo",
+            "p_lWJ7q",
+            "p_tAmkM"
+          ],
+          "noteLinks": [
+            {
+              "note": "p_swkmd",
+              "owner": "p_gbGxL"
+            },
+            {
+              "note": "p_xnqDf",
+              "owner": "p_gbGxL"
+            },
+            {
+              "note": "p_mrh8u",
+              "owner": "p_gbGxL"
+            },
+            {
+              "note": "p_sqRfN",
+              "owner": "p_kV94q"
+            },
+            {
+              "note": "p_xNB1M",
+              "owner": "p_kV94q"
+            },
+            {
+              "note": "p_kZkWQ",
+              "owner": "p_kV94q"
+            },
+            {
+              "note": "p_lpIpi",
+              "owner": "p_kV94q"
+            },
+            {
+              "note": "p_lZeh8",
+              "owner": "p_hvDHC"
+            },
+            {
+              "note": "p_wyHPC",
+              "owner": "p_hvDHC"
+            },
+            {
+              "note": "p_i6yrD",
+              "owner": "p_hvDHC"
+            },
+            {
+              "note": "p_jQf4u",
+              "owner": "p_hvDHC"
+            },
+            {
+              "note": "p_aoSoA",
+              "owner": "p_lWJ7q"
+            },
+            {
+              "note": "p_fw824",
+              "owner": "p_tAmkM"
+            }
+          ],
+          "readingNote": "호세아 1~3장은 바로 앞 기본 과정에서 읽었습니다. 같은 본문을 떠올리며 질문을 살펴보세요.",
+          "id": "w47-t010",
+          "relatedTaskIds": [
+            "w47-t006",
+            "w47-t007",
+            "w47-t008"
+          ]
+        },
+        {
+          "sourceId": "helps",
+          "kind": "reading",
+          "label": "도움말 · 성약의 관계와 변함없는 사랑",
+          "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_cbpuH",
+          "endAnchor": "p_hSarS",
+          "units": [
+            "helps#p_cbpuH",
+            "helps#p_ipdfD",
+            "helps#p_eVrdb",
+            "helps#p_w2JmT",
+            "helps#p_qfbZN",
+            "helps#p_lAM03",
+            "helps#p_i8CcC",
+            "helps#p_hSarS",
+            "helps#p_wUWSD",
+            "helps#p_rlgv0",
+            "helps#p_sDkoJ",
+            "helps#p_th6eu",
+            "helps#p_jmmFi",
+            "helps#p_x6pki",
+            "helps#p_rxboK",
+            "helps#p_q14C8"
+          ],
+          "sourceIds": [
+            "p_cbpuH",
+            "p_ipdfD",
+            "p_eVrdb",
+            "p_w2JmT",
+            "p_qfbZN",
+            "p_lAM03",
+            "p_i8CcC",
+            "p_hSarS",
+            "p_wUWSD",
+            "p_rlgv0",
+            "p_sDkoJ",
+            "p_th6eu",
+            "p_jmmFi",
+            "p_x6pki",
+            "p_rxboK",
+            "p_q14C8"
+          ],
+          "selectedIds": [
+            "p_cbpuH",
+            "p_ipdfD",
+            "p_eVrdb",
+            "p_w2JmT",
+            "p_qfbZN",
+            "p_lAM03",
+            "p_i8CcC",
+            "p_hSarS"
+          ],
+          "noteLinks": [
+            {
+              "note": "p_wUWSD",
+              "owner": "p_eVrdb"
+            },
+            {
+              "note": "p_rlgv0",
+              "owner": "p_eVrdb"
+            },
+            {
+              "note": "p_sDkoJ",
+              "owner": "p_eVrdb"
+            },
+            {
+              "note": "p_th6eu",
+              "owner": "p_i8CcC"
+            },
+            {
+              "note": "p_jmmFi",
+              "owner": "p_i8CcC"
+            },
+            {
+              "note": "p_x6pki",
+              "owner": "p_hSarS"
+            },
+            {
+              "note": "p_rxboK",
+              "owner": "p_hSarS"
+            },
+            {
+              "note": "p_q14C8",
+              "owner": "p_hSarS"
+            }
+          ],
+          "readingNote": "호세아 2장은 오늘 기본 과정에서 이미 읽은 본문입니다. 관련 본문으로 돌아가 살펴볼 수 있습니다.",
+          "id": "w47-t011",
+          "relatedTaskIds": [
+            "w47-t007"
+          ]
+        }
+      ],
+      "familyTasks": [
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "가족 교재 · 성약 지키기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title6",
+          "endAnchor": "p21",
+          "units": [
+            "manual#title6",
+            "manual#scripture_title4",
+            "manual#title7",
+            "manual#p21"
+          ],
+          "sourceIds": [
+            "title6",
+            "scripture_title4",
+            "title7",
+            "p21"
+          ],
+          "selectedIds": [
+            "title6",
+            "scripture_title4",
+            "title7",
+            "p21"
+          ],
+          "noteLinks": [],
+          "readingNote": "호세아 2:19~20은 오늘 기본 과정의 호세아 2장에 있습니다. 먼저 그 본문을 함께 읽은 뒤 활동하세요.",
+          "id": "w47-t012",
+          "relatedTaskIds": [
+            "w47-t007"
+          ]
+        },
+        {
+          "sourceId": "children",
+          "kind": "reading",
+          "label": "어린이 자료 · 도입과 성약 이야기",
+          "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_trGKY",
+          "endAnchor": "p_k2Cgg",
+          "units": [
+            "children#p_trGKY",
+            "children#p_mdTTF",
+            "children#p_fECgb",
+            "children#p_ltUQG",
+            "children#p_buEeQ",
+            "children#p_sHmsK",
+            "children#p_wr1f6",
+            "children#p_k2Cgg"
+          ],
+          "sourceIds": [
+            "p_trGKY",
+            "p_mdTTF",
+            "p_fECgb",
+            "p_ltUQG",
+            "p_buEeQ",
+            "p_sHmsK",
+            "p_wr1f6",
+            "p_k2Cgg"
+          ],
+          "selectedIds": [
+            "p_trGKY",
+            "p_mdTTF",
+            "p_fECgb",
+            "p_ltUQG",
+            "p_buEeQ",
+            "p_sHmsK",
+            "p_wr1f6",
+            "p_k2Cgg"
+          ],
+          "noteLinks": [],
+          "readingNote": "호세아 2:19~20은 오늘 기본 과정에서 읽는 같은 본문입니다.",
+          "id": "w47-t013",
+          "relatedTaskIds": [
+            "w47-t007"
+          ]
+        },
+        {
+          "sourceId": "elder-soares-speaks-to-children",
+          "kind": "reading",
+          "label": "소아레스 장로님과 어린이들의 대화 · 전체",
+          "path": "/study/friend/2021/12/elder-soares-speaks-to-children",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "series_title1",
+          "endAnchor": "aside1_p1",
+          "units": [
+            "elder-soares-speaks-to-children#series_title1",
+            "elder-soares-speaks-to-children#title1",
+            "elder-soares-speaks-to-children#kicker1",
+            "elder-soares-speaks-to-children#p1",
+            "elder-soares-speaks-to-children#p2",
+            "elder-soares-speaks-to-children#p3",
+            "elder-soares-speaks-to-children#p4",
+            "elder-soares-speaks-to-children#p5",
+            "elder-soares-speaks-to-children#p6",
+            "elder-soares-speaks-to-children#aside1_p1"
+          ],
+          "sourceIds": [
+            "series_title1",
+            "title1",
+            "kicker1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "aside1_p1"
+          ],
+          "selectedIds": [
+            "series_title1",
+            "title1",
+            "kicker1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "aside1_p1"
+          ],
+          "noteLinks": [],
+          "id": "w47-t014"
+        },
+        {
+          "sourceId": "family-spirit",
+          "kind": "reading",
+          "label": "연결 글의 다른 주차 활동 · 10/26~11/1 · 영어 원문",
+          "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+          "sourceLang": "eng",
+          "sourceLanguageLocked": true,
+          "anchor": "p_vuQIl",
+          "endAnchor": "p_bAXFA",
+          "units": [
+            "family-spirit#p_vuQIl",
+            "family-spirit#p_jhdzT",
+            "family-spirit#p_yQNGW",
+            "family-spirit#p_mYEyi",
+            "family-spirit#p_rJn7d",
+            "family-spirit#p_aUICa",
+            "family-spirit#p_gElNb",
+            "family-spirit#p_mQmmL",
+            "family-spirit#p_kYjO0",
+            "family-spirit#p_aHDj6",
+            "family-spirit#p_vvXf5",
+            "family-spirit#p_k49jd",
+            "family-spirit#p_oP6lm",
+            "family-spirit#p_bAXFA"
+          ],
+          "sourceIds": [
+            "p_vuQIl",
+            "p_jhdzT",
+            "p_yQNGW",
+            "p_mYEyi",
+            "p_rJn7d",
+            "p_aUICa",
+            "p_gElNb",
+            "p_mQmmL",
+            "p_kYjO0",
+            "p_aHDj6",
+            "p_vvXf5",
+            "p_k49jd",
+            "p_oP6lm",
+            "p_bAXFA"
+          ],
+          "selectedIds": [
+            "p_vuQIl",
+            "p_jhdzT",
+            "p_yQNGW",
+            "p_mYEyi",
+            "p_rJn7d",
+            "p_aUICa",
+            "p_gElNb",
+            "p_mQmmL",
+            "p_kYjO0",
+            "p_aHDj6",
+            "p_vvXf5",
+            "p_k49jd",
+            "p_oP6lm",
+            "p_bAXFA"
+          ],
+          "noteLinks": [],
+          "readingNote": "11월 연결 글 전체 중 다른 주차 활동입니다. 여기에 적힌 다른 주의 경전 장 전체를 이번 주 분량으로 추가하지는 않습니다.",
+          "id": "w47-t015"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "shortTitle": "돌아오라는 주님의 초대",
+      "shortTitleEn": "The Lord invites us to return",
+      "question": "주님의 사랑과 용서를 받아들이기 위해 오늘 내려놓을 것은 무엇인가요?",
+      "familyTitle": "주님께 다시 돌아가요",
+      "familyTitleEn": "Returning to the Lord",
+      "familyQuestion": "잘못했을 때 어떻게 다시 시작할까요?",
+      "familyActivity": "약속을 지키는 이야기와 연결 글의 활동을 살펴보고 잘못한 뒤 다시 시작하는 방법을 이야기합니다.",
+      "adultTasks": [
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 호세아 14장을 읽고 주님의 초대에 응답하기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p5",
+          "endAnchor": "p5",
+          "units": [
+            "manual#p5"
+          ],
+          "sourceIds": [
+            "p5"
+          ],
+          "selectedIds": [
+            "p5"
+          ],
+          "noteLinks": [],
+          "id": "w47-t016"
+        },
+        {
+          "sourceId": "hos14",
+          "kind": "scripture",
+          "label": "호세아 14장 · 전체",
+          "path": "/study/scriptures/ot/hosea/14",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title_number1",
+          "endAnchor": "p9",
+          "units": [
+            "hos14#title_number1",
+            "hos14#title1",
+            "hos14#p1",
+            "hos14#p2",
+            "hos14#p3",
+            "hos14#title2",
+            "hos14#p4",
+            "hos14#p5",
+            "hos14#p6",
+            "hos14#p7",
+            "hos14#p8",
+            "hos14#title3",
+            "hos14#p9"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "title2",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "title3",
+            "p9"
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "title2",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "title3",
+            "p9"
+          ],
+          "noteLinks": [],
+          "id": "w47-t017"
+        },
+        {
+          "sourceId": "come-unto-jesus",
+          "kind": "reading",
+          "label": "예수께 오라 · 전체",
+          "path": "/study/manual/hymns/come-unto-jesus",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "song_number1",
+          "endAnchor": "p2",
+          "units": [
+            "come-unto-jesus#song_number1",
+            "come-unto-jesus#title1",
+            "come-unto-jesus#figure1_p1",
+            "come-unto-jesus#figure1_p2",
+            "come-unto-jesus#figure1_p3",
+            "come-unto-jesus#figure1_p4",
+            "come-unto-jesus#figure1_p5",
+            "come-unto-jesus#figure1_p6",
+            "come-unto-jesus#figure1_p7",
+            "come-unto-jesus#figure1_p8",
+            "come-unto-jesus#figure1_p9",
+            "come-unto-jesus#figure1_p10",
+            "come-unto-jesus#figure1_p11",
+            "come-unto-jesus#figure1_p12",
+            "come-unto-jesus#figure1_p13",
+            "come-unto-jesus#figure1_p14",
+            "come-unto-jesus#figure1_p15",
+            "come-unto-jesus#figure1_p16",
+            "come-unto-jesus#figure1_p17",
+            "come-unto-jesus#figure1_p18",
+            "come-unto-jesus#p1",
+            "come-unto-jesus#p2"
+          ],
+          "sourceIds": [
+            "song_number1",
+            "title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "figure1_p6",
+            "figure1_p7",
+            "figure1_p8",
+            "figure1_p9",
+            "figure1_p10",
+            "figure1_p11",
+            "figure1_p12",
+            "figure1_p13",
+            "figure1_p14",
+            "figure1_p15",
+            "figure1_p16",
+            "figure1_p17",
+            "figure1_p18",
+            "p1",
+            "p2"
+          ],
+          "selectedIds": [
+            "song_number1",
+            "title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "figure1_p6",
+            "figure1_p7",
+            "figure1_p8",
+            "figure1_p9",
+            "figure1_p10",
+            "figure1_p11",
+            "figure1_p12",
+            "figure1_p13",
+            "figure1_p14",
+            "figure1_p15",
+            "figure1_p16",
+            "figure1_p17",
+            "figure1_p18",
+            "p1",
+            "p2"
+          ],
+          "noteLinks": [],
+          "id": "w47-t018"
+        },
+        {
+          "sourceId": "helps",
+          "kind": "reading",
+          "label": "도움말 · 하나님의 사랑에 관한 말씀",
+          "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_fmIv9",
+          "endAnchor": "p_j5T6c",
+          "units": [
+            "helps#p_fmIv9",
+            "helps#p_fmpyv",
+            "helps#p_j5T6c"
+          ],
+          "sourceIds": [
+            "p_fmIv9",
+            "p_fmpyv",
+            "p_j5T6c"
+          ],
+          "selectedIds": [
+            "p_fmIv9",
+            "p_fmpyv",
+            "p_j5T6c"
+          ],
+          "noteLinks": [],
+          "id": "w47-t019"
+        },
+        {
+          "sourceId": "45kearon",
+          "kind": "reading",
+          "label": "하나님의 목적은 여러분을 본향으로 데려오는 것입니다 · 전체",
+          "path": "/study/general-conference/2024/04/45kearon",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title1",
+          "endAnchor": "p27",
+          "units": [
+            "45kearon#title1",
+            "45kearon#author1",
+            "45kearon#author2",
+            "45kearon#kicker1",
+            "45kearon#p1",
+            "45kearon#p2",
+            "45kearon#p4",
+            "45kearon#p30",
+            "45kearon#p5",
+            "45kearon#p6",
+            "45kearon#p7",
+            "45kearon#p8",
+            "45kearon#p9",
+            "45kearon#p10",
+            "45kearon#p11",
+            "45kearon#p12",
+            "45kearon#p13",
+            "45kearon#p14",
+            "45kearon#p15",
+            "45kearon#p16",
+            "45kearon#p17",
+            "45kearon#p18",
+            "45kearon#p29",
+            "45kearon#p19",
+            "45kearon#p20",
+            "45kearon#p21",
+            "45kearon#p28",
+            "45kearon#p22",
+            "45kearon#p23",
+            "45kearon#p24",
+            "45kearon#p25",
+            "45kearon#p26",
+            "45kearon#p27",
+            "45kearon#note_title1",
+            "45kearon#note1_p1",
+            "45kearon#note2_p1",
+            "45kearon#note3_p1",
+            "45kearon#note4_p1",
+            "45kearon#note5_p1",
+            "45kearon#note6_p1",
+            "45kearon#note7_p1",
+            "45kearon#note8_p1",
+            "45kearon#note9_p1",
+            "45kearon#note10_p1",
+            "45kearon#note11_p1",
+            "45kearon#note12_p1",
+            "45kearon#note13_p1",
+            "45kearon#note14_p1",
+            "45kearon#note15_p1",
+            "45kearon#note16_p1",
+            "45kearon#note17_p1",
+            "45kearon#note18_p1",
+            "45kearon#note19_p1",
+            "45kearon#note20_p1",
+            "45kearon#note21_p1",
+            "45kearon#note22_p1",
+            "45kearon#note23_p1",
+            "45kearon#note24_p1",
+            "45kearon#note25_p1"
+          ],
+          "sourceIds": [
+            "title1",
+            "author1",
+            "author2",
+            "kicker1",
+            "p1",
+            "p2",
+            "p4",
+            "p30",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p29",
+            "p19",
+            "p20",
+            "p21",
+            "p28",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "note_title1",
+            "note1_p1",
+            "note2_p1",
+            "note3_p1",
+            "note4_p1",
+            "note5_p1",
+            "note6_p1",
+            "note7_p1",
+            "note8_p1",
+            "note9_p1",
+            "note10_p1",
+            "note11_p1",
+            "note12_p1",
+            "note13_p1",
+            "note14_p1",
+            "note15_p1",
+            "note16_p1",
+            "note17_p1",
+            "note18_p1",
+            "note19_p1",
+            "note20_p1",
+            "note21_p1",
+            "note22_p1",
+            "note23_p1",
+            "note24_p1",
+            "note25_p1"
+          ],
+          "selectedIds": [
+            "title1",
+            "author1",
+            "author2",
+            "kicker1",
+            "p1",
+            "p2",
+            "p4",
+            "p30",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p29",
+            "p19",
+            "p20",
+            "p21",
+            "p28",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1_p1",
+              "owner": "p5"
+            },
+            {
+              "note": "note2_p1",
+              "owner": "p5"
+            },
+            {
+              "note": "note3_p1",
+              "owner": "p5"
+            },
+            {
+              "note": "note4_p1",
+              "owner": "p6"
+            },
+            {
+              "note": "note5_p1",
+              "owner": "p9"
+            },
+            {
+              "note": "note6_p1",
+              "owner": "p9"
+            },
+            {
+              "note": "note7_p1",
+              "owner": "p9"
+            },
+            {
+              "note": "note8_p1",
+              "owner": "p9"
+            },
+            {
+              "note": "note9_p1",
+              "owner": "p11"
+            },
+            {
+              "note": "note10_p1",
+              "owner": "p13"
+            },
+            {
+              "note": "note11_p1",
+              "owner": "p13"
+            },
+            {
+              "note": "note12_p1",
+              "owner": "p14"
+            },
+            {
+              "note": "note13_p1",
+              "owner": "p14"
+            },
+            {
+              "note": "note14_p1",
+              "owner": "p14"
+            },
+            {
+              "note": "note15_p1",
+              "owner": "p15"
+            },
+            {
+              "note": "note16_p1",
+              "owner": "p15"
+            },
+            {
+              "note": "note17_p1",
+              "owner": "p17"
+            },
+            {
+              "note": "note18_p1",
+              "owner": "p29"
+            },
+            {
+              "note": "note19_p1",
+              "owner": "p19"
+            },
+            {
+              "note": "note20_p1",
+              "owner": "p20"
+            },
+            {
+              "note": "note21_p1",
+              "owner": "p20"
+            },
+            {
+              "note": "note22_p1",
+              "owner": "p21"
+            },
+            {
+              "note": "note23_p1",
+              "owner": "p28"
+            },
+            {
+              "note": "note24_p1",
+              "owner": "p23"
+            },
+            {
+              "note": "note25_p1",
+              "owner": "p25"
+            }
+          ],
+          "id": "w47-t020"
+        },
+        {
+          "sourceId": "helps",
+          "kind": "reading",
+          "label": "도움말 · 예수께 오라 음악 안내",
+          "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_qWHJd",
+          "endAnchor": "p_o6ILT",
+          "units": [
+            "helps#p_qWHJd",
+            "helps#p_aXczM",
+            "helps#p_o6ILT"
+          ],
+          "sourceIds": [
+            "p_qWHJd",
+            "p_aXczM",
+            "p_o6ILT"
+          ],
+          "selectedIds": [
+            "p_qWHJd",
+            "p_aXczM",
+            "p_o6ILT"
+          ],
+          "noteLinks": [],
+          "readingNote": "이 찬송은 오늘 앞부분에서 이미 살펴보았습니다. 다시 부르고 싶다면 연결된 찬송으로 돌아가세요.",
+          "id": "w47-t021",
+          "relatedTaskIds": [
+            "w47-t018"
+          ]
+        }
+      ],
+      "familyTasks": [
+        {
+          "sourceId": "children",
+          "kind": "reading",
+          "label": "어린이 자료 · 약속 지키기 안내",
+          "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_dqFQ5",
+          "endAnchor": "p_dqFQ5",
+          "units": [
+            "children#p_dqFQ5"
+          ],
+          "sourceIds": [
+            "p_dqFQ5"
+          ],
+          "selectedIds": [
+            "p_dqFQ5"
+          ],
+          "noteLinks": [],
+          "id": "w47-t022"
+        },
+        {
+          "sourceId": "keeping-his-promise",
+          "kind": "reading",
+          "label": "약속 지키기 · 전체",
+          "path": "/study/friend/2023/03/keeping-his-promise",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title1",
+          "endAnchor": "figure1_p1",
+          "units": [
+            "keeping-his-promise#reference1",
+            "keeping-his-promise#title1",
+            "keeping-his-promise#author1",
+            "keeping-his-promise#author2",
+            "keeping-his-promise#author3",
+            "keeping-his-promise#kicker1",
+            "keeping-his-promise#p27",
+            "keeping-his-promise#p1",
+            "keeping-his-promise#p2",
+            "keeping-his-promise#p3",
+            "keeping-his-promise#p4",
+            "keeping-his-promise#p5",
+            "keeping-his-promise#p6",
+            "keeping-his-promise#p7",
+            "keeping-his-promise#p8",
+            "keeping-his-promise#p9",
+            "keeping-his-promise#p10",
+            "keeping-his-promise#p11",
+            "keeping-his-promise#p12",
+            "keeping-his-promise#p13",
+            "keeping-his-promise#p14",
+            "keeping-his-promise#p15",
+            "keeping-his-promise#p16",
+            "keeping-his-promise#p17",
+            "keeping-his-promise#p18",
+            "keeping-his-promise#p19",
+            "keeping-his-promise#p20",
+            "keeping-his-promise#p21",
+            "keeping-his-promise#p22",
+            "keeping-his-promise#p23",
+            "keeping-his-promise#p24",
+            "keeping-his-promise#p25",
+            "keeping-his-promise#p26",
+            "keeping-his-promise#figure1_p1"
+          ],
+          "sourceIds": [
+            "reference1",
+            "title1",
+            "author1",
+            "author2",
+            "author3",
+            "kicker1",
+            "p27",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "figure1_p1"
+          ],
+          "selectedIds": [
+            "title1",
+            "author1",
+            "author2",
+            "author3",
+            "kicker1",
+            "p27",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "figure1_p1"
+          ],
+          "noteLinks": [],
+          "id": "w47-t023"
+        },
+        {
+          "sourceId": "family-spirit",
+          "kind": "reading",
+          "label": "연결 글의 다른 주차 활동 · 11/2~8 · 영어 원문",
+          "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+          "sourceLang": "eng",
+          "sourceLanguageLocked": true,
+          "anchor": "p_zhN10",
+          "endAnchor": "p_sFjUI",
+          "units": [
+            "family-spirit#p_zhN10",
+            "family-spirit#p_xgKA8",
+            "family-spirit#p_lNwtm",
+            "family-spirit#p_d1mbb",
+            "family-spirit#p_fSE4Z",
+            "family-spirit#p_kltLd",
+            "family-spirit#p_u8uim",
+            "family-spirit#p_kWoHu",
+            "family-spirit#p_uCE1G",
+            "family-spirit#p_sFjUI"
+          ],
+          "sourceIds": [
+            "p_zhN10",
+            "p_xgKA8",
+            "p_lNwtm",
+            "p_d1mbb",
+            "p_fSE4Z",
+            "p_kltLd",
+            "p_u8uim",
+            "p_kWoHu",
+            "p_uCE1G",
+            "p_sFjUI"
+          ],
+          "selectedIds": [
+            "p_zhN10",
+            "p_xgKA8",
+            "p_lNwtm",
+            "p_d1mbb",
+            "p_fSE4Z",
+            "p_kltLd",
+            "p_u8uim",
+            "p_kWoHu",
+            "p_uCE1G",
+            "p_sFjUI"
+          ],
+          "noteLinks": [],
+          "readingNote": "11월 연결 글의 다른 주차 활동입니다. 그 주의 경전 장 전체는 이번 주 필수 범위에 포함하지 않습니다.",
+          "id": "w47-t024"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "shortTitle": "겉모양보다 마음의 충실함",
+      "shortTitleEn": "Faithfulness of the heart",
+      "question": "겉으로 보이는 신앙과 내 마음의 충실함이 일치하도록 무엇을 바꿀 수 있나요?",
+      "familyTitle": "예수님을 노래해요",
+      "familyTitleEn": "Singing about Jesus",
+      "familyQuestion": "예수님을 생각하면 어떤 노래를 부르고 싶나요?",
+      "familyActivity": "예수님에 관한 색칠 자료를 보며 그분을 기리는 노래를 부르고 마음으로 주님을 따른다는 뜻을 나눕니다.",
+      "adultTasks": [
+        {
+          "sourceId": "hos4",
+          "kind": "scripture",
+          "label": "호세아 4장 · 전체",
+          "path": "/study/scriptures/ot/hosea/4",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title_number1",
+          "endAnchor": "p19",
+          "units": [
+            "hos4#title_number1",
+            "hos4#title1",
+            "hos4#p1",
+            "hos4#p2",
+            "hos4#p3",
+            "hos4#p4",
+            "hos4#p5",
+            "hos4#title2",
+            "hos4#p6",
+            "hos4#p7",
+            "hos4#p8",
+            "hos4#p9",
+            "hos4#p10",
+            "hos4#title3",
+            "hos4#p11",
+            "hos4#p12",
+            "hos4#p13",
+            "hos4#p14",
+            "hos4#p15",
+            "hos4#p16",
+            "hos4#p17",
+            "hos4#p18",
+            "hos4#p19"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "title2",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "title3",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19"
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "title2",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "title3",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19"
+          ],
+          "noteLinks": [],
+          "id": "w47-t025"
+        },
+        {
+          "sourceId": "hos5",
+          "kind": "scripture",
+          "label": "호세아 5장 · 전체",
+          "path": "/study/scriptures/ot/hosea/5",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title_number1",
+          "endAnchor": "p15",
+          "units": [
+            "hos5#title_number1",
+            "hos5#title1",
+            "hos5#p1",
+            "hos5#p2",
+            "hos5#p3",
+            "hos5#p4",
+            "hos5#p5",
+            "hos5#p6",
+            "hos5#p7",
+            "hos5#title2",
+            "hos5#p8",
+            "hos5#p9",
+            "hos5#p10",
+            "hos5#p11",
+            "hos5#p12",
+            "hos5#p13",
+            "hos5#p14",
+            "hos5#p15",
+            "hos5#note1_p1"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "title2",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "note1_p1"
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "title2",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1_p1",
+              "owner": "p13"
+            }
+          ],
+          "id": "w47-t026"
+        },
+        {
+          "sourceId": "hos6",
+          "kind": "scripture",
+          "label": "호세아 6:1~3 · 돌아가자는 초대",
+          "path": "/study/scriptures/ot/hosea/6",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title_number1",
+          "endAnchor": "p3",
+          "units": [
+            "hos6#title_number1",
+            "hos6#title1",
+            "hos6#p1",
+            "hos6#p2",
+            "hos6#p3"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3"
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3"
+          ],
+          "noteLinks": [],
+          "id": "w47-t027"
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 충실함을 물에 비유한 세 본문 비교하기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "scripture_title2",
+          "endAnchor": "p6",
+          "units": [
+            "manual#scripture_title2",
+            "manual#title4",
+            "manual#p6"
+          ],
+          "sourceIds": [
+            "scripture_title2",
+            "title4",
+            "p6"
+          ],
+          "selectedIds": [
+            "scripture_title2",
+            "title4",
+            "p6"
+          ],
+          "noteLinks": [],
+          "id": "w47-t028"
+        },
+        {
+          "sourceId": "hos6",
+          "kind": "scripture",
+          "label": "호세아 6:4~7 · 인애와 충실함",
+          "path": "/study/scriptures/ot/hosea/6",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p4",
+          "endAnchor": "p7",
+          "units": [
+            "hos6#p4",
+            "hos6#p5",
+            "hos6#p6",
+            "hos6#p7"
+          ],
+          "sourceIds": [
+            "p4",
+            "p5",
+            "p6",
+            "p7"
+          ],
+          "selectedIds": [
+            "p4",
+            "p5",
+            "p6",
+            "p7"
+          ],
+          "noteLinks": [],
+          "id": "w47-t029"
+        },
+        {
+          "sourceId": "isa-48",
+          "kind": "scripture",
+          "label": "이사야 48:18 · 전체",
+          "path": "/study/scriptures/ot/isa/48",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p18",
+          "endAnchor": "p18",
+          "units": [
+            "isa-48#p18"
+          ],
+          "sourceIds": [
+            "p18"
+          ],
+          "selectedIds": [
+            "p18"
+          ],
+          "noteLinks": [],
+          "id": "w47-t030"
+        },
+        {
+          "sourceId": "1-ne-2",
+          "kind": "scripture",
+          "label": "니파이전서 2:9~10 · 전체",
+          "path": "/study/scriptures/bofm/1-ne/2",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p9",
+          "endAnchor": "p10",
+          "units": [
+            "1-ne-2#p9",
+            "1-ne-2#p10"
+          ],
+          "sourceIds": [
+            "p9",
+            "p10"
+          ],
+          "selectedIds": [
+            "p9",
+            "p10"
+          ],
+          "noteLinks": [],
+          "id": "w47-t031"
+        },
+        {
+          "sourceId": "hos6",
+          "kind": "scripture",
+          "label": "호세아 6:8~11 · 나머지 본문",
+          "path": "/study/scriptures/ot/hosea/6",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p8",
+          "endAnchor": "p11",
+          "units": [
+            "hos6#p8",
+            "hos6#p9",
+            "hos6#p10",
+            "hos6#p11"
+          ],
+          "sourceIds": [
+            "p8",
+            "p9",
+            "p10",
+            "p11"
+          ],
+          "selectedIds": [
+            "p8",
+            "p9",
+            "p10",
+            "p11"
+          ],
+          "noteLinks": [],
+          "id": "w47-t032"
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 예수님이 인용하신 말씀 살펴보기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p7",
+          "endAnchor": "p7",
+          "units": [
+            "manual#p7"
+          ],
+          "sourceIds": [
+            "p7"
+          ],
+          "selectedIds": [
+            "p7"
+          ],
+          "noteLinks": [],
+          "id": "w47-t033"
+        },
+        {
+          "sourceId": "matt-9",
+          "kind": "scripture",
+          "label": "마태복음 9장 10~13절 · 전체",
+          "path": "/study/scriptures/nt/matt/9",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p10",
+          "endAnchor": "p13",
+          "units": [
+            "matt-9#p10",
+            "matt-9#p11",
+            "matt-9#p12",
+            "matt-9#p13",
+            "matt-9#note1_p1",
+            "matt-9#note1a_p1"
+          ],
+          "sourceIds": [
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "note1_p1",
+            "note1a_p1"
+          ],
+          "selectedIds": [
+            "p10",
+            "p11",
+            "p12",
+            "p13"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1_p1",
+              "owner": "p10"
+            },
+            {
+              "note": "note1a_p1",
+              "owner": "p13"
+            }
+          ],
+          "id": "w47-t034"
+        },
+        {
+          "sourceId": "matt-12",
+          "kind": "scripture",
+          "label": "마태복음 12:1~8 · 전체",
+          "path": "/study/scriptures/nt/matt/12",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p1",
+          "endAnchor": "p8",
+          "units": [
+            "matt-12#p1",
+            "matt-12#p2",
+            "matt-12#p3",
+            "matt-12#p4",
+            "matt-12#p5",
+            "matt-12#p6",
+            "matt-12#p7",
+            "matt-12#p8",
+            "matt-12#note1a_p1",
+            "matt-12#note2b_p1",
+            "matt-12#note3c_p1"
+          ],
+          "sourceIds": [
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "note1a_p1",
+            "note2b_p1",
+            "note3c_p1"
+          ],
+          "selectedIds": [
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1a_p1",
+              "owner": "p3"
+            },
+            {
+              "note": "note2b_p1",
+              "owner": "p5"
+            },
+            {
+              "note": "note3c_p1",
+              "owner": "p7"
+            }
+          ],
+          "id": "w47-t035"
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 요엘의 마음을 찢으라는 권유",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p8",
+          "endAnchor": "p8",
+          "units": [
+            "manual#p8"
+          ],
+          "sourceIds": [
+            "p8"
+          ],
+          "selectedIds": [
+            "p8"
+          ],
+          "noteLinks": [],
+          "id": "w47-t036"
+        },
+        {
+          "sourceId": "joel2",
+          "kind": "scripture",
+          "label": "요엘 2:12~13 · 마음을 다해 돌아오기",
+          "path": "/study/scriptures/ot/joel/2",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p12",
+          "endAnchor": "p13",
+          "units": [
+            "joel2#p12",
+            "joel2#p13"
+          ],
+          "sourceIds": [
+            "p12",
+            "p13"
+          ],
+          "selectedIds": [
+            "p12",
+            "p13"
+          ],
+          "noteLinks": [],
+          "id": "w47-t037"
+        },
+        {
+          "sourceId": "helps",
+          "kind": "reading",
+          "label": "도움말 · 인애를 원하시는 하나님",
+          "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_eXOqV",
+          "endAnchor": "p_zOBVI",
+          "units": [
+            "helps#p_eXOqV",
+            "helps#p_kmfQy",
+            "helps#p_p9G5P",
+            "helps#p_zOBVI",
+            "helps#p_os1k4",
+            "helps#p_fB8Yq",
+            "helps#p_vgxXt",
+            "helps#p_xXt4H"
+          ],
+          "sourceIds": [
+            "p_eXOqV",
+            "p_kmfQy",
+            "p_p9G5P",
+            "p_zOBVI",
+            "p_os1k4",
+            "p_fB8Yq",
+            "p_vgxXt",
+            "p_xXt4H"
+          ],
+          "selectedIds": [
+            "p_eXOqV",
+            "p_kmfQy",
+            "p_p9G5P",
+            "p_zOBVI"
+          ],
+          "noteLinks": [
+            {
+              "note": "p_os1k4",
+              "owner": "p_p9G5P"
+            },
+            {
+              "note": "p_fB8Yq",
+              "owner": "p_p9G5P"
+            },
+            {
+              "note": "p_vgxXt",
+              "owner": "p_p9G5P"
+            },
+            {
+              "note": "p_xXt4H",
+              "owner": "p_zOBVI"
+            }
+          ],
+          "readingNote": "호세아 6:6~7과 예수님의 인용은 오늘 앞부분에서 읽었습니다.",
+          "id": "w47-t038",
+          "relatedTaskIds": [
+            "w47-t029",
+            "w47-t034",
+            "w47-t035"
+          ]
+        },
+        {
+          "sourceId": "helps",
+          "kind": "reading",
+          "label": "도움말 · 요엘과 마음을 찢는 회개",
+          "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_tP5r2",
+          "endAnchor": "p_nz0yU",
+          "units": [
+            "helps#p_tP5r2",
+            "helps#p_z3Klf",
+            "helps#p_uWxDL",
+            "helps#p_rY7pJ",
+            "helps#p_dblhD",
+            "helps#p_nz0yU",
+            "helps#p_reRgb",
+            "helps#p_n09fC",
+            "helps#p_bTpLK",
+            "helps#p_yitoV",
+            "helps#p_kxyQs",
+            "helps#p_jtgGH"
+          ],
+          "sourceIds": [
+            "p_tP5r2",
+            "p_z3Klf",
+            "p_uWxDL",
+            "p_rY7pJ",
+            "p_dblhD",
+            "p_nz0yU",
+            "p_reRgb",
+            "p_n09fC",
+            "p_bTpLK",
+            "p_yitoV",
+            "p_kxyQs",
+            "p_jtgGH"
+          ],
+          "selectedIds": [
+            "p_tP5r2",
+            "p_z3Klf",
+            "p_uWxDL",
+            "p_rY7pJ",
+            "p_dblhD",
+            "p_nz0yU"
+          ],
+          "noteLinks": [
+            {
+              "note": "p_reRgb",
+              "owner": "p_uWxDL"
+            },
+            {
+              "note": "p_n09fC",
+              "owner": "p_uWxDL"
+            },
+            {
+              "note": "p_bTpLK",
+              "owner": "p_nz0yU"
+            },
+            {
+              "note": "p_yitoV",
+              "owner": "p_nz0yU"
+            },
+            {
+              "note": "p_kxyQs",
+              "owner": "p_nz0yU"
+            },
+            {
+              "note": "p_jtgGH",
+              "owner": "p_nz0yU"
+            }
+          ],
+          "readingNote": "요엘 2:12~13은 바로 앞에서 읽은 본문입니다.",
+          "id": "w47-t039",
+          "relatedTaskIds": [
+            "w47-t037"
+          ]
+        },
+        {
+          "sourceId": "09-teach-by-the-spirit",
+          "kind": "reading",
+          "label": "영으로 가르친다 · 1/4 준비와 예수님의 모범",
+          "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title1",
+          "endAnchor": "p3",
+          "units": [
+            "09-teach-by-the-spirit#reference1",
+            "09-teach-by-the-spirit#short_reference1",
+            "09-teach-by-the-spirit#title1",
+            "09-teach-by-the-spirit#p1",
+            "09-teach-by-the-spirit#p2",
+            "09-teach-by-the-spirit#figure1_title1",
+            "09-teach-by-the-spirit#figure1_p1",
+            "09-teach-by-the-spirit#figure1_p2",
+            "09-teach-by-the-spirit#figure1_p3",
+            "09-teach-by-the-spirit#figure1_p4",
+            "09-teach-by-the-spirit#figure1_p5",
+            "09-teach-by-the-spirit#title3",
+            "09-teach-by-the-spirit#p3"
+          ],
+          "sourceIds": [
+            "reference1",
+            "short_reference1",
+            "title1",
+            "p1",
+            "p2",
+            "figure1_title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "title3",
+            "p3"
+          ],
+          "selectedIds": [
+            "title1",
+            "p1",
+            "p2",
+            "figure1_title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "title3",
+            "p3"
+          ],
+          "noteLinks": [],
+          "readingNote": "이 연결 글의 상단에는 4분 17초 학습 영상이 함께 제공됩니다. 마태복음을 살펴보라는 질문 뒤에 해당 성구가 이어집니다.",
+          "id": "w47-t040"
+        },
+        {
+          "sourceId": "matt-4",
+          "kind": "scripture",
+          "label": "마태복음 4:1~11 · 전체",
+          "path": "/study/scriptures/nt/matt/4",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p1",
+          "endAnchor": "p11",
+          "units": [
+            "matt-4#p1",
+            "matt-4#p2",
+            "matt-4#p3",
+            "matt-4#p4",
+            "matt-4#p5",
+            "matt-4#p6",
+            "matt-4#p7",
+            "matt-4#p8",
+            "matt-4#p9",
+            "matt-4#p10",
+            "matt-4#p11",
+            "matt-4#note1a_p1",
+            "matt-4#note2b_p1",
+            "matt-4#note3c_p1",
+            "matt-4#note4d_p1"
+          ],
+          "sourceIds": [
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "note1a_p1",
+            "note2b_p1",
+            "note3c_p1",
+            "note4d_p1"
+          ],
+          "selectedIds": [
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1a_p1",
+              "owner": "p4"
+            },
+            {
+              "note": "note2b_p1",
+              "owner": "p6"
+            },
+            {
+              "note": "note3c_p1",
+              "owner": "p7"
+            },
+            {
+              "note": "note4d_p1",
+              "owner": "p10"
+            }
+          ],
+          "id": "w47-t041"
+        },
+        {
+          "sourceId": "09-teach-by-the-spirit",
+          "kind": "reading",
+          "label": "영으로 가르친다 · 2/4 준비와 사람의 필요",
+          "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p4",
+          "endAnchor": "p11",
+          "units": [
+            "09-teach-by-the-spirit#p4",
+            "09-teach-by-the-spirit#p5",
+            "09-teach-by-the-spirit#p6",
+            "09-teach-by-the-spirit#title6",
+            "09-teach-by-the-spirit#p7",
+            "09-teach-by-the-spirit#p9",
+            "09-teach-by-the-spirit#p10",
+            "09-teach-by-the-spirit#p11"
+          ],
+          "sourceIds": [
+            "p4",
+            "p5",
+            "p6",
+            "title6",
+            "p7",
+            "p9",
+            "p10",
+            "p11"
+          ],
+          "selectedIds": [
+            "p4",
+            "p5",
+            "p6",
+            "title6",
+            "p7",
+            "p9",
+            "p10",
+            "p11"
+          ],
+          "noteLinks": [],
+          "readingNote": "영으로 가르치는 글의 앞부분입니다. 성신을 초대하는 환경과 간증에 관한 나머지는 5일차와 7일차에 이어집니다.",
+          "id": "w47-t042",
+          "relatedTaskIds": [
+            "w47-t065",
+            "w47-t091"
+          ]
+        }
+      ],
+      "familyTasks": [
+        {
+          "sourceId": "children",
+          "kind": "reading",
+          "label": "어린이 자료 · 예수님에 관해 노래하기 안내",
+          "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_bhV0C",
+          "endAnchor": "p_bhV0C",
+          "units": [
+            "children#p_bhV0C"
+          ],
+          "sourceIds": [
+            "p_bhV0C"
+          ],
+          "selectedIds": [
+            "p_bhV0C"
+          ],
+          "noteLinks": [],
+          "id": "w47-t043"
+        },
+        {
+          "sourceId": "32-i-can-sing-about-jesus",
+          "kind": "reading",
+          "label": "나는 예수 그리스도에 대해 노래할 수 있어요 · 전체",
+          "path": "/study/friend/2023/12/for-little-friends/32-i-can-sing-about-jesus",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title1",
+          "endAnchor": "p1",
+          "units": [
+            "32-i-can-sing-about-jesus#reference1",
+            "32-i-can-sing-about-jesus#title1",
+            "32-i-can-sing-about-jesus#figure1_p1",
+            "32-i-can-sing-about-jesus#p1"
+          ],
+          "sourceIds": [
+            "reference1",
+            "title1",
+            "figure1_p1",
+            "p1"
+          ],
+          "selectedIds": [
+            "title1",
+            "figure1_p1",
+            "p1"
+          ],
+          "noteLinks": [],
+          "id": "w47-t044"
+        },
+        {
+          "sourceId": "family-spirit",
+          "kind": "reading",
+          "label": "연결 글의 다른 주차 활동 · 11/9~15 · 영어 원문",
+          "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+          "sourceLang": "eng",
+          "sourceLanguageLocked": true,
+          "anchor": "p_anJk9",
+          "endAnchor": "p_iYNI8",
+          "units": [
+            "family-spirit#p_anJk9",
+            "family-spirit#p_fS2hh",
+            "family-spirit#p_mQKpv",
+            "family-spirit#p_wOCbo",
+            "family-spirit#p_wR0r5",
+            "family-spirit#p_j5j4x",
+            "family-spirit#p_orGkE",
+            "family-spirit#p_f113Y",
+            "family-spirit#p_mPjYP",
+            "family-spirit#p_iYNI8"
+          ],
+          "sourceIds": [
+            "p_anJk9",
+            "p_fS2hh",
+            "p_mQKpv",
+            "p_wOCbo",
+            "p_wR0r5",
+            "p_j5j4x",
+            "p_orGkE",
+            "p_f113Y",
+            "p_mPjYP",
+            "p_iYNI8"
+          ],
+          "selectedIds": [
+            "p_anJk9",
+            "p_fS2hh",
+            "p_mQKpv",
+            "p_wOCbo",
+            "p_wR0r5",
+            "p_j5j4x",
+            "p_orGkE",
+            "p_f113Y",
+            "p_mPjYP",
+            "p_iYNI8"
+          ],
+          "noteLinks": [],
+          "readingNote": "지난주 다니엘 활동이 들어 있는 월간 글의 일부입니다. 이번 주 기본 과정의 새 성구 분량은 아닙니다.",
+          "id": "w47-t045"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "shortTitle": "지금 주님을 찾고 영을 구하기",
+      "shortTitleEn": "Seek the Lord and His Spirit now",
+      "question": "지금 주님을 찾고 성신을 구하기 위해 어떤 시간을 마련할 수 있나요?",
+      "familyTitle": "지금 주님을 찾아요",
+      "familyTitleEn": "Seeking the Lord now",
+      "familyQuestion": "언제 어디서 주님을 찾을 수 있나요?",
+      "familyActivity": "호세아 10:12를 기본 과정에서 읽은 뒤 시계를 만들고 언제 어디서 주님을 찾을 수 있는지 이야기합니다.",
+      "adultTasks": [
+        {
+          "sourceId": "hos10",
+          "kind": "scripture",
+          "label": "호세아 10장 · 전체",
+          "path": "/study/scriptures/ot/hosea/10",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title_number1",
+          "endAnchor": "p15",
+          "units": [
+            "hos10#title_number1",
+            "hos10#title1",
+            "hos10#p1",
+            "hos10#p2",
+            "hos10#p3",
+            "hos10#p4",
+            "hos10#p5",
+            "hos10#p6",
+            "hos10#p7",
+            "hos10#p8",
+            "hos10#title2",
+            "hos10#p9",
+            "hos10#p10",
+            "hos10#p11",
+            "hos10#p12",
+            "hos10#p13",
+            "hos10#p14",
+            "hos10#p15",
+            "hos10#note1_p1",
+            "hos10#note2_p1"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "title2",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "note1_p1",
+            "note2_p1"
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "title2",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1_p1",
+              "owner": "p5"
+            },
+            {
+              "note": "note2_p1",
+              "owner": "p6"
+            }
+          ],
+          "id": "w47-t046"
+        },
+        {
+          "sourceId": "hos11",
+          "kind": "scripture",
+          "label": "호세아 11장 · 전체",
+          "path": "/study/scriptures/ot/hosea/11",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title_number1",
+          "endAnchor": "p12",
+          "units": [
+            "hos11#title_number1",
+            "hos11#title1",
+            "hos11#p1",
+            "hos11#p2",
+            "hos11#p3",
+            "hos11#p4",
+            "hos11#p5",
+            "hos11#p6",
+            "hos11#p7",
+            "hos11#p8",
+            "hos11#p9",
+            "hos11#p10",
+            "hos11#p11",
+            "hos11#title2",
+            "hos11#p12"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "title2",
+            "p12"
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "title2",
+            "p12"
+          ],
+          "noteLinks": [],
+          "id": "w47-t047"
+        },
+        {
+          "sourceId": "hos12",
+          "kind": "scripture",
+          "label": "호세아 12장 · 전체",
+          "path": "/study/scriptures/ot/hosea/12",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title_number1",
+          "endAnchor": "p14",
+          "units": [
+            "hos12#title_number1",
+            "hos12#p1",
+            "hos12#p2",
+            "hos12#p3",
+            "hos12#p4",
+            "hos12#p5",
+            "hos12#p6",
+            "hos12#title1",
+            "hos12#p7",
+            "hos12#p8",
+            "hos12#p9",
+            "hos12#p10",
+            "hos12#p11",
+            "hos12#p12",
+            "hos12#p13",
+            "hos12#p14"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "title1",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14"
+          ],
+          "selectedIds": [
+            "title_number1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "title1",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14"
+          ],
+          "noteLinks": [],
+          "id": "w47-t048"
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 성신을 받으라는 권유와 베드나 장로의 인용",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p16",
+          "endAnchor": "p18",
+          "units": [
+            "manual#p16",
+            "manual#p17",
+            "manual#p18"
+          ],
+          "sourceIds": [
+            "p16",
+            "p17",
+            "p18"
+          ],
+          "selectedIds": [
+            "p16",
+            "p17",
+            "p18"
+          ],
+          "noteLinks": [],
+          "id": "w47-t049"
+        },
+        {
+          "sourceId": "bednar-discussion",
+          "kind": "video",
+          "label": "데이비드 에이 베드나 장로 토론 · 전체",
+          "path": "/study/broadcasts/an-evening-with-the-general-authorities/2020/02/bednar-discussion",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title1",
+          "endAnchor": "p106",
+          "units": [
+            "bednar-discussion#title1",
+            "bednar-discussion#subtitle1",
+            "bednar-discussion#author1",
+            "bednar-discussion#author2",
+            "bednar-discussion#p106"
+          ],
+          "sourceIds": [
+            "title1",
+            "subtitle1",
+            "author1",
+            "author2",
+            "p106"
+          ],
+          "selectedIds": [
+            "title1",
+            "subtitle1",
+            "author1",
+            "author2",
+            "p106"
+          ],
+          "noteLinks": [],
+          "readingNote": "한국어 원문은 영상으로 제공되며 글 전문은 제공되지 않습니다. 전체 영상은 61분 29초이며, 앞 교재에 실린 인용문과 함께 살펴보세요.",
+          "id": "w47-t050"
+        }
+      ],
+      "familyTasks": [
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "가족 교재 · 지금 주님을 찾기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "scripture_title5",
+          "endAnchor": "p23",
+          "units": [
+            "manual#scripture_title5",
+            "manual#title8",
+            "manual#p22",
+            "manual#p23"
+          ],
+          "sourceIds": [
+            "scripture_title5",
+            "title8",
+            "p22",
+            "p23"
+          ],
+          "selectedIds": [
+            "scripture_title5",
+            "title8",
+            "p22",
+            "p23"
+          ],
+          "noteLinks": [],
+          "readingNote": "호세아 10:12는 오늘 기본 과정의 호세아 10장에서 읽습니다. 그 본문을 함께 읽은 뒤 시계와 씨앗 활동을 해 보세요.",
+          "id": "w47-t051",
+          "relatedTaskIds": [
+            "w47-t046"
+          ]
+        },
+        {
+          "sourceId": "anytime-anywhere",
+          "kind": "reading",
+          "label": "Anytime, Anywhere · 전체",
+          "path": "/study/music/hymns-for-home-and-church/anytime-anywhere",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "song_number1",
+          "endAnchor": "p2",
+          "units": [
+            "anytime-anywhere#song_number1",
+            "anytime-anywhere#title1",
+            "anytime-anywhere#figure1_p1",
+            "anytime-anywhere#figure1_p2",
+            "anytime-anywhere#figure1_p3",
+            "anytime-anywhere#figure1_p4",
+            "anytime-anywhere#figure1_p5",
+            "anytime-anywhere#figure1_p6",
+            "anytime-anywhere#figure1_p7",
+            "anytime-anywhere#figure1_p8",
+            "anytime-anywhere#figure1_p9",
+            "anytime-anywhere#figure1_p10",
+            "anytime-anywhere#figure1_p11",
+            "anytime-anywhere#figure1_p12",
+            "anytime-anywhere#p1",
+            "anytime-anywhere#p2"
+          ],
+          "sourceIds": [
+            "song_number1",
+            "title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "figure1_p6",
+            "figure1_p7",
+            "figure1_p8",
+            "figure1_p9",
+            "figure1_p10",
+            "figure1_p11",
+            "figure1_p12",
+            "p1",
+            "p2"
+          ],
+          "selectedIds": [
+            "song_number1",
+            "title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "figure1_p6",
+            "figure1_p7",
+            "figure1_p8",
+            "figure1_p9",
+            "figure1_p10",
+            "figure1_p11",
+            "figure1_p12",
+            "p1",
+            "p2"
+          ],
+          "noteLinks": [],
+          "id": "w47-t052"
+        },
+        {
+          "sourceId": "children",
+          "kind": "reading",
+          "label": "어린이 자료 · 사랑의 빛 안에 걸어가고",
+          "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_s5zFS",
+          "endAnchor": "p_bmgXd",
+          "units": [
+            "children#p_s5zFS",
+            "children#p_hMhRa",
+            "children#p_bmgXd"
+          ],
+          "sourceIds": [
+            "p_s5zFS",
+            "p_hMhRa",
+            "p_bmgXd"
+          ],
+          "selectedIds": [
+            "p_s5zFS",
+            "p_hMhRa",
+            "p_bmgXd"
+          ],
+          "noteLinks": [],
+          "readingNote": "호세아 10:12는 오늘 기본 과정에 배정되어 있습니다.",
+          "id": "w47-t053",
+          "relatedTaskIds": [
+            "w47-t046"
+          ]
+        },
+        {
+          "sourceId": "teach-me-to-walk-in-the-light",
+          "kind": "reading",
+          "label": "사랑의 빛 안에 걸어가고 · 전체",
+          "path": "/study/manual/childrens-songbook/teach-me-to-walk-in-the-light",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "song_number1",
+          "endAnchor": "p2",
+          "units": [
+            "teach-me-to-walk-in-the-light#song_number1",
+            "teach-me-to-walk-in-the-light#title1",
+            "teach-me-to-walk-in-the-light#figure1_p1",
+            "teach-me-to-walk-in-the-light#figure1_p2",
+            "teach-me-to-walk-in-the-light#figure1_p3",
+            "teach-me-to-walk-in-the-light#figure1_p4",
+            "teach-me-to-walk-in-the-light#figure1_p5",
+            "teach-me-to-walk-in-the-light#figure1_p6",
+            "teach-me-to-walk-in-the-light#figure1_p7",
+            "teach-me-to-walk-in-the-light#figure1_p8",
+            "teach-me-to-walk-in-the-light#figure1_p9",
+            "teach-me-to-walk-in-the-light#figure1_p10",
+            "teach-me-to-walk-in-the-light#figure1_p11",
+            "teach-me-to-walk-in-the-light#figure1_p12",
+            "teach-me-to-walk-in-the-light#figure1_p13",
+            "teach-me-to-walk-in-the-light#figure1_p14",
+            "teach-me-to-walk-in-the-light#figure1_p15",
+            "teach-me-to-walk-in-the-light#figure1_p16",
+            "teach-me-to-walk-in-the-light#figure1_p17",
+            "teach-me-to-walk-in-the-light#p1",
+            "teach-me-to-walk-in-the-light#p2"
+          ],
+          "sourceIds": [
+            "song_number1",
+            "title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "figure1_p6",
+            "figure1_p7",
+            "figure1_p8",
+            "figure1_p9",
+            "figure1_p10",
+            "figure1_p11",
+            "figure1_p12",
+            "figure1_p13",
+            "figure1_p14",
+            "figure1_p15",
+            "figure1_p16",
+            "figure1_p17",
+            "p1",
+            "p2"
+          ],
+          "selectedIds": [
+            "song_number1",
+            "title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "figure1_p6",
+            "figure1_p7",
+            "figure1_p8",
+            "figure1_p9",
+            "figure1_p10",
+            "figure1_p11",
+            "figure1_p12",
+            "figure1_p13",
+            "figure1_p14",
+            "figure1_p15",
+            "figure1_p16",
+            "figure1_p17",
+            "p1",
+            "p2"
+          ],
+          "noteLinks": [],
+          "id": "w47-t054"
+        },
+        {
+          "sourceId": "children",
+          "kind": "video",
+          "label": "어린이 영상 · 지금 주님을 찾을 때 0:35",
+          "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_rRJB3",
+          "endAnchor": "p_rRJB3",
+          "units": [
+            "children#p_rRJB3"
+          ],
+          "sourceIds": [
+            "p_rRJB3"
+          ],
+          "selectedIds": [
+            "p_rRJB3"
+          ],
+          "noteLinks": [],
+          "readingNote": "이 문장 바로 아래 공식 플레이어에서 35초 영상을 볼 수 있습니다. 자막 전문은 제공되지 않습니다.",
+          "id": "w47-t055"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "shortTitle": "구속주를 따르며 영을 맞이하기",
+      "shortTitleEn": "Follow the Redeemer and receive the Spirit",
+      "question": "예수 그리스도를 구속주로 신뢰하며 성신을 맞이하려면 어떤 마음과 행동이 필요한가요?",
+      "familyTitle": "예수님은 나의 구속주예요",
+      "familyTitleEn": "Jesus is my Redeemer",
+      "familyQuestion": "예수님은 나를 어떻게 도와주시나요?",
+      "familyActivity": "기본 과정의 호세아 13:4,14를 떠올리며 예수님께서 우리를 한 명씩 사랑하신다는 이야기를 읽습니다.",
+      "adultTasks": [
+        {
+          "sourceId": "hos13",
+          "kind": "scripture",
+          "label": "호세아 13장 · 전체",
+          "path": "/study/scriptures/ot/hosea/13",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title_number1",
+          "endAnchor": "p16",
+          "units": [
+            "hos13#title_number1",
+            "hos13#title1",
+            "hos13#p1",
+            "hos13#p2",
+            "hos13#p3",
+            "hos13#p4",
+            "hos13#p5",
+            "hos13#p6",
+            "hos13#p7",
+            "hos13#p8",
+            "hos13#p9",
+            "hos13#p10",
+            "hos13#p11",
+            "hos13#p12",
+            "hos13#p13",
+            "hos13#p14",
+            "hos13#p15",
+            "hos13#p16",
+            "hos13#note1_p1"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "note1_p1"
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1_p1",
+              "owner": "p1"
+            }
+          ],
+          "id": "w47-t056"
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 성신을 더 풍성히 받는 원리와 모사이야서의 사례",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p12",
+          "endAnchor": "p13",
+          "units": [
+            "manual#p12",
+            "manual#p13"
+          ],
+          "sourceIds": [
+            "p12",
+            "p13"
+          ],
+          "selectedIds": [
+            "p12",
+            "p13"
+          ],
+          "noteLinks": [],
+          "id": "w47-t057"
+        },
+        {
+          "sourceId": "mosiah-4",
+          "kind": "scripture",
+          "label": "모사이야서 4:1~3, 19~20 · 전체",
+          "path": "/study/scriptures/bofm/mosiah/4",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p1",
+          "endAnchor": "p20",
+          "units": [
+            "mosiah-4#p1",
+            "mosiah-4#p2",
+            "mosiah-4#p3",
+            "mosiah-4#p19",
+            "mosiah-4#p20",
+            "mosiah-4#note1a_p1",
+            "mosiah-4#note2a_p1",
+            "mosiah-4#note2b_p1",
+            "mosiah-4#note2c_p1",
+            "mosiah-4#note2d_p1",
+            "mosiah-4#note3a_p1",
+            "mosiah-4#note3b_p1",
+            "mosiah-4#note3c_p1",
+            "mosiah-4#note20a_p1"
+          ],
+          "sourceIds": [
+            "p1",
+            "p2",
+            "p3",
+            "p19",
+            "p20",
+            "note1a_p1",
+            "note2a_p1",
+            "note2b_p1",
+            "note2c_p1",
+            "note2d_p1",
+            "note3a_p1",
+            "note3b_p1",
+            "note3c_p1",
+            "note20a_p1"
+          ],
+          "selectedIds": [
+            "p1",
+            "p2",
+            "p3",
+            "p19",
+            "p20"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1a_p1",
+              "owner": "p1"
+            },
+            {
+              "note": "note2a_p1",
+              "owner": "p2"
+            },
+            {
+              "note": "note2b_p1",
+              "owner": "p2"
+            },
+            {
+              "note": "note2c_p1",
+              "owner": "p2"
+            },
+            {
+              "note": "note2d_p1",
+              "owner": "p2"
+            },
+            {
+              "note": "note3a_p1",
+              "owner": "p3"
+            },
+            {
+              "note": "note3b_p1",
+              "owner": "p3"
+            },
+            {
+              "note": "note3c_p1",
+              "owner": "p3"
+            },
+            {
+              "note": "note20a_p1",
+              "owner": "p20"
+            }
+          ],
+          "id": "w47-t058"
+        },
+        {
+          "sourceId": "mosiah-18",
+          "kind": "scripture",
+          "label": "모사이야서 18:7~11 · 전체",
+          "path": "/study/scriptures/bofm/mosiah/18",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p7",
+          "endAnchor": "p11",
+          "units": [
+            "mosiah-18#p7",
+            "mosiah-18#p8",
+            "mosiah-18#p9",
+            "mosiah-18#p10",
+            "mosiah-18#p11",
+            "mosiah-18#note7a_p1",
+            "mosiah-18#note8a_p1",
+            "mosiah-18#note8b_p1",
+            "mosiah-18#note8c_p1",
+            "mosiah-18#note9a_p1",
+            "mosiah-18#note9b_p1",
+            "mosiah-18#note9c_p1",
+            "mosiah-18#note10a_p1",
+            "mosiah-18#note10b_p1"
+          ],
+          "sourceIds": [
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "note7a_p1",
+            "note8a_p1",
+            "note8b_p1",
+            "note8c_p1",
+            "note9a_p1",
+            "note9b_p1",
+            "note9c_p1",
+            "note10a_p1",
+            "note10b_p1"
+          ],
+          "selectedIds": [
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11"
+          ],
+          "noteLinks": [
+            {
+              "note": "note7a_p1",
+              "owner": "p7"
+            },
+            {
+              "note": "note8a_p1",
+              "owner": "p8"
+            },
+            {
+              "note": "note8b_p1",
+              "owner": "p8"
+            },
+            {
+              "note": "note8c_p1",
+              "owner": "p8"
+            },
+            {
+              "note": "note9a_p1",
+              "owner": "p9"
+            },
+            {
+              "note": "note9b_p1",
+              "owner": "p9"
+            },
+            {
+              "note": "note9c_p1",
+              "owner": "p9"
+            },
+            {
+              "note": "note10a_p1",
+              "owner": "p10"
+            },
+            {
+              "note": "note10b_p1",
+              "owner": "p10"
+            }
+          ],
+          "id": "w47-t059"
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 힐라맨서에서 성신을 받는 원리 찾기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p14",
+          "endAnchor": "p14",
+          "units": [
+            "manual#p14"
+          ],
+          "sourceIds": [
+            "p14"
+          ],
+          "selectedIds": [
+            "p14"
+          ],
+          "noteLinks": [],
+          "id": "w47-t060"
+        },
+        {
+          "sourceId": "hel-6",
+          "kind": "scripture",
+          "label": "힐라맨서 6:34~36 · 전체",
+          "path": "/study/scriptures/bofm/hel/6",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p34",
+          "endAnchor": "p36",
+          "units": [
+            "hel-6#p34",
+            "hel-6#p35",
+            "hel-6#p36",
+            "hel-6#note35a_p1"
+          ],
+          "sourceIds": [
+            "p34",
+            "p35",
+            "p36",
+            "note35a_p1"
+          ],
+          "selectedIds": [
+            "p34",
+            "p35",
+            "p36"
+          ],
+          "noteLinks": [
+            {
+              "note": "note35a_p1",
+              "owner": "p35"
+            }
+          ],
+          "id": "w47-t061"
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 교리와 성약에서 약속 찾기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p15",
+          "endAnchor": "p15",
+          "units": [
+            "manual#p15"
+          ],
+          "sourceIds": [
+            "p15"
+          ],
+          "selectedIds": [
+            "p15"
+          ],
+          "noteLinks": [],
+          "id": "w47-t062"
+        },
+        {
+          "sourceId": "dc-19",
+          "kind": "scripture",
+          "label": "교리와 성약 19:37~41 · 전체",
+          "path": "/study/scriptures/dc-testament/dc/19",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p37",
+          "endAnchor": "p41",
+          "units": [
+            "dc-19#p37",
+            "dc-19#p38",
+            "dc-19#p39",
+            "dc-19#p40",
+            "dc-19#p41",
+            "dc-19#note37a_p1",
+            "dc-19#note37b_p1",
+            "dc-19#note38a_p1",
+            "dc-19#note38b_p1",
+            "dc-19#note41a_p1",
+            "dc-19#note41b_p1"
+          ],
+          "sourceIds": [
+            "p37",
+            "p38",
+            "p39",
+            "p40",
+            "p41",
+            "note37a_p1",
+            "note37b_p1",
+            "note38a_p1",
+            "note38b_p1",
+            "note41a_p1",
+            "note41b_p1"
+          ],
+          "selectedIds": [
+            "p37",
+            "p38",
+            "p39",
+            "p40",
+            "p41"
+          ],
+          "noteLinks": [
+            {
+              "note": "note37a_p1",
+              "owner": "p37"
+            },
+            {
+              "note": "note37b_p1",
+              "owner": "p37"
+            },
+            {
+              "note": "note38a_p1",
+              "owner": "p38"
+            },
+            {
+              "note": "note38b_p1",
+              "owner": "p38"
+            },
+            {
+              "note": "note41a_p1",
+              "owner": "p41"
+            },
+            {
+              "note": "note41b_p1",
+              "owner": "p41"
+            }
+          ],
+          "id": "w47-t063"
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 영으로 배울 환경을 마련하기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p20",
+          "endAnchor": "p20",
+          "units": [
+            "manual#p20"
+          ],
+          "sourceIds": [
+            "p20"
+          ],
+          "selectedIds": [
+            "p20"
+          ],
+          "noteLinks": [],
+          "id": "w47-t064"
+        },
+        {
+          "sourceId": "09-teach-by-the-spirit",
+          "kind": "reading",
+          "label": "영으로 가르친다 · 3/4 성신을 느낄 환경과 개인 계시",
+          "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title9",
+          "endAnchor": "p19",
+          "units": [
+            "09-teach-by-the-spirit#title9",
+            "09-teach-by-the-spirit#p12",
+            "09-teach-by-the-spirit#p13",
+            "09-teach-by-the-spirit#p14",
+            "09-teach-by-the-spirit#p15",
+            "09-teach-by-the-spirit#figure4_p1",
+            "09-teach-by-the-spirit#title12",
+            "09-teach-by-the-spirit#p16",
+            "09-teach-by-the-spirit#p17",
+            "09-teach-by-the-spirit#p18",
+            "09-teach-by-the-spirit#p19"
+          ],
+          "sourceIds": [
+            "title9",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "figure4_p1",
+            "title12",
+            "p16",
+            "p17",
+            "p18",
+            "p19"
+          ],
+          "selectedIds": [
+            "title9",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "figure4_p1",
+            "title12",
+            "p16",
+            "p17",
+            "p18",
+            "p19"
+          ],
+          "noteLinks": [],
+          "readingNote": "글의 준비와 학습자의 필요에 관한 앞부분은 3일차, 간증에 관한 뒷부분은 7일차에 이어집니다.",
+          "id": "w47-t065",
+          "relatedTaskIds": [
+            "w47-t040",
+            "w47-t042",
+            "w47-t091"
+          ]
+        }
+      ],
+      "familyTasks": [
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "가족 교재 · 나의 구주와 구속주",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "scripture_title6",
+          "endAnchor": "p25",
+          "units": [
+            "manual#scripture_title6",
+            "manual#title9",
+            "manual#p24",
+            "manual#p25"
+          ],
+          "sourceIds": [
+            "scripture_title6",
+            "title9",
+            "p24",
+            "p25"
+          ],
+          "selectedIds": [
+            "scripture_title6",
+            "title9",
+            "p24",
+            "p25"
+          ],
+          "noteLinks": [],
+          "readingNote": "호세아 13:4,14는 오늘 기본 과정의 호세아 13장에서 읽습니다. 같은 성구를 함께 떠올리며 그림과 뜻을 나누세요.",
+          "id": "w47-t066",
+          "relatedTaskIds": [
+            "w47-t056"
+          ]
+        },
+        {
+          "sourceId": "children",
+          "kind": "reading",
+          "label": "어린이 자료 · 구주와 구속주",
+          "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_vWFMz",
+          "endAnchor": "p_yfrfM",
+          "units": [
+            "children#p_vWFMz",
+            "children#p_yfrfM"
+          ],
+          "sourceIds": [
+            "p_vWFMz",
+            "p_yfrfM"
+          ],
+          "selectedIds": [
+            "p_vWFMz",
+            "p_yfrfM"
+          ],
+          "noteLinks": [],
+          "readingNote": "이 주제의 호세아 본문과 노래 활동은 각각 기본 과정 5일차와 가족 과정 3일차에 있습니다.",
+          "id": "w47-t067",
+          "relatedTaskIds": [
+            "w47-t056",
+            "w47-t044"
+          ]
+        },
+        {
+          "sourceId": "children",
+          "kind": "reading",
+          "label": "어린이 자료 · 한 명씩 축복하신 예수님 안내",
+          "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_tkjkE",
+          "endAnchor": "p_tkjkE",
+          "units": [
+            "children#p_tkjkE"
+          ],
+          "sourceIds": [
+            "p_tkjkE"
+          ],
+          "selectedIds": [
+            "p_tkjkE"
+          ],
+          "noteLinks": [],
+          "id": "w47-t068"
+        },
+        {
+          "sourceId": "17-jesus-blessed-one-by-one",
+          "kind": "reading",
+          "label": "예수님은 한 명씩 축복하셨어요 · 전체",
+          "path": "/study/friend/2024/10/come-follow-me/17-jesus-blessed-one-by-one",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "series_title1",
+          "endAnchor": "aside1_p1",
+          "units": [
+            "17-jesus-blessed-one-by-one#reference1",
+            "17-jesus-blessed-one-by-one#series_title1",
+            "17-jesus-blessed-one-by-one#title1",
+            "17-jesus-blessed-one-by-one#figure1_p1",
+            "17-jesus-blessed-one-by-one#p1",
+            "17-jesus-blessed-one-by-one#p2",
+            "17-jesus-blessed-one-by-one#p3",
+            "17-jesus-blessed-one-by-one#p4",
+            "17-jesus-blessed-one-by-one#aside1_p1"
+          ],
+          "sourceIds": [
+            "reference1",
+            "series_title1",
+            "title1",
+            "figure1_p1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "aside1_p1"
+          ],
+          "selectedIds": [
+            "series_title1",
+            "title1",
+            "figure1_p1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "aside1_p1"
+          ],
+          "noteLinks": [],
+          "id": "w47-t069"
+        },
+        {
+          "sourceId": "family-spirit",
+          "kind": "reading",
+          "label": "연결 글의 다른 주차 활동 · 11/23~29 · 영어 원문",
+          "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+          "sourceLang": "eng",
+          "sourceLanguageLocked": true,
+          "anchor": "p_qas3k",
+          "endAnchor": "p_nAy7j",
+          "units": [
+            "family-spirit#p_qas3k",
+            "family-spirit#p_qGM9I",
+            "family-spirit#p_lZoTI",
+            "family-spirit#p_xqIzo",
+            "family-spirit#p_gSd3y",
+            "family-spirit#p_wMNqU",
+            "family-spirit#p_jRIsC",
+            "family-spirit#p_p6RON",
+            "family-spirit#p_mlpd5",
+            "family-spirit#p_nAy7j"
+          ],
+          "sourceIds": [
+            "p_qas3k",
+            "p_qGM9I",
+            "p_lZoTI",
+            "p_xqIzo",
+            "p_gSd3y",
+            "p_wMNqU",
+            "p_jRIsC",
+            "p_p6RON",
+            "p_mlpd5",
+            "p_nAy7j"
+          ],
+          "selectedIds": [
+            "p_qas3k",
+            "p_qGM9I",
+            "p_lZoTI",
+            "p_xqIzo",
+            "p_gSd3y",
+            "p_wMNqU",
+            "p_jRIsC",
+            "p_p6RON",
+            "p_mlpd5",
+            "p_nAy7j"
+          ],
+          "noteLinks": [],
+          "readingNote": "다음 주 요나 활동이 들어 있는 월간 글의 일부입니다. 이번 주 기본 과정에 요나서 장 전체를 추가하지 않습니다.",
+          "id": "w47-t070"
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "shortTitle": "모든 사람에게 부어 주시는 영",
+      "shortTitleEn": "The Spirit poured out on all people",
+      "question": "하나님께서 모든 사람에게 영을 주신다는 약속을 내 삶에서 어떻게 경험하나요?",
+      "familyTitle": "성신의 느낌을 알아보아요",
+      "familyTitleEn": "Recognizing the Holy Ghost",
+      "familyQuestion": "성신을 느낄 때 마음은 어떤가요?",
+      "familyActivity": "요엘 2:28~29를 기본 과정에서 읽은 뒤 물을 붓는 활동과 노래로 성신의 선물을 이야기합니다.",
+      "adultTasks": [
+        {
+          "sourceId": "joel1",
+          "kind": "scripture",
+          "label": "요엘 1장 · 전체",
+          "path": "/study/scriptures/ot/joel/1",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title1",
+          "endAnchor": "p20",
+          "units": [
+            "joel1#title1",
+            "joel1#title_number1",
+            "joel1#p1",
+            "joel1#title2",
+            "joel1#p2",
+            "joel1#p3",
+            "joel1#p4",
+            "joel1#p5",
+            "joel1#p6",
+            "joel1#p7",
+            "joel1#p8",
+            "joel1#p9",
+            "joel1#p10",
+            "joel1#p11",
+            "joel1#p12",
+            "joel1#p13",
+            "joel1#p14",
+            "joel1#p15",
+            "joel1#p16",
+            "joel1#p17",
+            "joel1#p18",
+            "joel1#p19",
+            "joel1#p20"
+          ],
+          "sourceIds": [
+            "title1",
+            "title_number1",
+            "p1",
+            "title2",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20"
+          ],
+          "selectedIds": [
+            "title1",
+            "title_number1",
+            "p1",
+            "title2",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20"
+          ],
+          "noteLinks": [],
+          "id": "w47-t071"
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 요엘 2장의 마지막 날과 성신의 약속",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "scripture_title3",
+          "endAnchor": "p9",
+          "units": [
+            "manual#scripture_title3",
+            "manual#title5",
+            "manual#p9"
+          ],
+          "sourceIds": [
+            "scripture_title3",
+            "title5",
+            "p9"
+          ],
+          "selectedIds": [
+            "scripture_title3",
+            "title5",
+            "p9"
+          ],
+          "noteLinks": [],
+          "readingNote": "회개를 권유하는 12~13절은 3일차에서 읽었습니다. 오늘은 2장의 나머지 본문을 읽습니다.",
+          "id": "w47-t072",
+          "relatedTaskIds": [
+            "w47-t037"
+          ]
+        },
+        {
+          "sourceId": "joel2",
+          "kind": "scripture",
+          "label": "요엘 2:1~11 · 여호와의 날",
+          "path": "/study/scriptures/ot/joel/2",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title_number1",
+          "endAnchor": "title4",
+          "units": [
+            "joel2#title_number1",
+            "joel2#title1",
+            "joel2#p1",
+            "joel2#p2",
+            "joel2#p3",
+            "joel2#p4",
+            "joel2#p5",
+            "joel2#p6",
+            "joel2#p7",
+            "joel2#p8",
+            "joel2#p9",
+            "joel2#p10",
+            "joel2#p11",
+            "joel2#title2",
+            "joel2#title3",
+            "joel2#title4",
+            "joel2#note1_p1",
+            "joel2#note2_p1"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "title2",
+            "title3",
+            "title4",
+            "note1_p1",
+            "note2_p1"
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "title2",
+            "title3",
+            "title4"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1_p1",
+              "owner": "p4"
+            },
+            {
+              "note": "note2_p1",
+              "owner": "p8"
+            }
+          ],
+          "id": "w47-t073"
+        },
+        {
+          "sourceId": "joel2",
+          "kind": "scripture",
+          "label": "요엘 2:14~32 · 회복과 성신의 약속",
+          "path": "/study/scriptures/ot/joel/2",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p14",
+          "endAnchor": "p32",
+          "units": [
+            "joel2#p14",
+            "joel2#p15",
+            "joel2#p16",
+            "joel2#p17",
+            "joel2#p18",
+            "joel2#p19",
+            "joel2#p20",
+            "joel2#p21",
+            "joel2#p22",
+            "joel2#p23",
+            "joel2#p24",
+            "joel2#p25",
+            "joel2#p26",
+            "joel2#p27",
+            "joel2#p28",
+            "joel2#p29",
+            "joel2#p30",
+            "joel2#p31",
+            "joel2#p32",
+            "joel2#note3_p1",
+            "joel2#note4_p1",
+            "joel2#note5_p1"
+          ],
+          "sourceIds": [
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "p30",
+            "p31",
+            "p32",
+            "note3_p1",
+            "note4_p1",
+            "note5_p1"
+          ],
+          "selectedIds": [
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "p30",
+            "p31",
+            "p32"
+          ],
+          "noteLinks": [
+            {
+              "note": "note3_p1",
+              "owner": "p17"
+            },
+            {
+              "note": "note4_p1",
+              "owner": "p18"
+            },
+            {
+              "note": "note5_p1",
+              "owner": "p28"
+            }
+          ],
+          "id": "w47-t074"
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 요엘의 예언을 인용한 두 사건",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p10",
+          "endAnchor": "p10",
+          "units": [
+            "manual#p10"
+          ],
+          "sourceIds": [
+            "p10"
+          ],
+          "selectedIds": [
+            "p10"
+          ],
+          "noteLinks": [],
+          "readingNote": "요엘 2:28~32는 바로 앞에서 읽었습니다. 이제 두 사건의 본문을 차례로 비교하세요.",
+          "id": "w47-t075",
+          "relatedTaskIds": [
+            "w47-t074"
+          ]
+        },
+        {
+          "sourceId": "js-h-1",
+          "kind": "scripture",
+          "label": "조셉 스미스—역사 1:41 · 전체",
+          "path": "/study/scriptures/pgp/js-h/1",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p41",
+          "endAnchor": "p41",
+          "units": [
+            "js-h-1#p41",
+            "js-h-1#note41a_p1",
+            "js-h-1#note41b_p1"
+          ],
+          "sourceIds": [
+            "p41",
+            "note41a_p1",
+            "note41b_p1"
+          ],
+          "selectedIds": [
+            "p41"
+          ],
+          "noteLinks": [
+            {
+              "note": "note41a_p1",
+              "owner": "p41"
+            },
+            {
+              "note": "note41b_p1",
+              "owner": "p41"
+            }
+          ],
+          "id": "w47-t076"
+        },
+        {
+          "sourceId": "acts-2",
+          "kind": "scripture",
+          "label": "사도행전 2:1~21 · 전체",
+          "path": "/study/scriptures/nt/acts/2",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p1",
+          "endAnchor": "p21",
+          "units": [
+            "acts-2#p1",
+            "acts-2#p2",
+            "acts-2#p3",
+            "acts-2#p4",
+            "acts-2#p5",
+            "acts-2#p6",
+            "acts-2#p7",
+            "acts-2#p8",
+            "acts-2#p9",
+            "acts-2#p10",
+            "acts-2#p11",
+            "acts-2#p12",
+            "acts-2#p13",
+            "acts-2#p14",
+            "acts-2#p15",
+            "acts-2#p16",
+            "acts-2#p17",
+            "acts-2#p18",
+            "acts-2#p19",
+            "acts-2#p20",
+            "acts-2#p21",
+            "acts-2#note1_p1",
+            "acts-2#note1a_p1"
+          ],
+          "sourceIds": [
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "note1_p1",
+            "note1a_p1"
+          ],
+          "selectedIds": [
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1_p1",
+              "owner": "p15"
+            },
+            {
+              "note": "note1a_p1",
+              "owner": "p17"
+            }
+          ],
+          "id": "w47-t077"
+        },
+        {
+          "sourceId": "helps",
+          "kind": "reading",
+          "label": "도움말 · 요엘의 예언과 영을 부어 주시는 약속",
+          "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_x3Os3",
+          "endAnchor": "p_oh5Pn",
+          "units": [
+            "helps#p_x3Os3",
+            "helps#p_riDQb",
+            "helps#p_kD80z",
+            "helps#p_adIzb",
+            "helps#p_oTYVJ",
+            "helps#p_rDFtJ",
+            "helps#p_bp9bk",
+            "helps#p_oh5Pn",
+            "helps#p_lQPQG",
+            "helps#p_uCDC4",
+            "helps#p_rPad5",
+            "helps#p_tu4Zl"
+          ],
+          "sourceIds": [
+            "p_x3Os3",
+            "p_riDQb",
+            "p_kD80z",
+            "p_adIzb",
+            "p_oTYVJ",
+            "p_rDFtJ",
+            "p_bp9bk",
+            "p_oh5Pn",
+            "p_lQPQG",
+            "p_uCDC4",
+            "p_rPad5",
+            "p_tu4Zl"
+          ],
+          "selectedIds": [
+            "p_x3Os3",
+            "p_riDQb",
+            "p_kD80z",
+            "p_adIzb",
+            "p_oTYVJ",
+            "p_rDFtJ",
+            "p_bp9bk",
+            "p_oh5Pn"
+          ],
+          "noteLinks": [
+            {
+              "note": "p_lQPQG",
+              "owner": "p_kD80z"
+            },
+            {
+              "note": "p_uCDC4",
+              "owner": "p_adIzb"
+            },
+            {
+              "note": "p_rPad5",
+              "owner": "p_adIzb"
+            },
+            {
+              "note": "p_tu4Zl",
+              "owner": "p_bp9bk"
+            }
+          ],
+          "readingNote": "요엘의 약속과 두 사건은 오늘 앞부분에서 읽었습니다. 같은 본문을 떠올리며 설명을 살펴보세요.",
+          "id": "w47-t078",
+          "relatedTaskIds": [
+            "w47-t074",
+            "w47-t076",
+            "w47-t077"
+          ]
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 계시를 받는 능력에 관한 넬슨 회장의 말씀",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p11",
+          "endAnchor": "p11",
+          "units": [
+            "manual#p11"
+          ],
+          "sourceIds": [
+            "p11"
+          ],
+          "selectedIds": [
+            "p11"
+          ],
+          "noteLinks": [],
+          "id": "w47-t079"
+        },
+        {
+          "sourceId": "revelation-for-the-church-revelation-for-our-lives",
+          "kind": "reading",
+          "label": "교회를 위한 계시와 우리 삶을 위한 계시 · 전체",
+          "path": "/study/general-conference/2018/04/revelation-for-the-church-revelation-for-our-lives",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title1",
+          "endAnchor": "p41",
+          "units": [
+            "revelation-for-the-church-revelation-for-our-lives#title1",
+            "revelation-for-the-church-revelation-for-our-lives#p1",
+            "revelation-for-the-church-revelation-for-our-lives#kicker1",
+            "revelation-for-the-church-revelation-for-our-lives#p2",
+            "revelation-for-the-church-revelation-for-our-lives#p3",
+            "revelation-for-the-church-revelation-for-our-lives#p4",
+            "revelation-for-the-church-revelation-for-our-lives#p5",
+            "revelation-for-the-church-revelation-for-our-lives#p6",
+            "revelation-for-the-church-revelation-for-our-lives#p7",
+            "revelation-for-the-church-revelation-for-our-lives#p8",
+            "revelation-for-the-church-revelation-for-our-lives#p9",
+            "revelation-for-the-church-revelation-for-our-lives#p10",
+            "revelation-for-the-church-revelation-for-our-lives#p11",
+            "revelation-for-the-church-revelation-for-our-lives#p12",
+            "revelation-for-the-church-revelation-for-our-lives#p13",
+            "revelation-for-the-church-revelation-for-our-lives#p14",
+            "revelation-for-the-church-revelation-for-our-lives#p15",
+            "revelation-for-the-church-revelation-for-our-lives#p16",
+            "revelation-for-the-church-revelation-for-our-lives#p17",
+            "revelation-for-the-church-revelation-for-our-lives#p18",
+            "revelation-for-the-church-revelation-for-our-lives#p19",
+            "revelation-for-the-church-revelation-for-our-lives#p20",
+            "revelation-for-the-church-revelation-for-our-lives#p21",
+            "revelation-for-the-church-revelation-for-our-lives#p22",
+            "revelation-for-the-church-revelation-for-our-lives#p23",
+            "revelation-for-the-church-revelation-for-our-lives#p24",
+            "revelation-for-the-church-revelation-for-our-lives#p25",
+            "revelation-for-the-church-revelation-for-our-lives#p26",
+            "revelation-for-the-church-revelation-for-our-lives#p27",
+            "revelation-for-the-church-revelation-for-our-lives#p28",
+            "revelation-for-the-church-revelation-for-our-lives#p29",
+            "revelation-for-the-church-revelation-for-our-lives#p30",
+            "revelation-for-the-church-revelation-for-our-lives#p31",
+            "revelation-for-the-church-revelation-for-our-lives#p32",
+            "revelation-for-the-church-revelation-for-our-lives#p33",
+            "revelation-for-the-church-revelation-for-our-lives#p34",
+            "revelation-for-the-church-revelation-for-our-lives#p35",
+            "revelation-for-the-church-revelation-for-our-lives#p36",
+            "revelation-for-the-church-revelation-for-our-lives#p37",
+            "revelation-for-the-church-revelation-for-our-lives#p38",
+            "revelation-for-the-church-revelation-for-our-lives#p39",
+            "revelation-for-the-church-revelation-for-our-lives#p40",
+            "revelation-for-the-church-revelation-for-our-lives#p41",
+            "revelation-for-the-church-revelation-for-our-lives#notetitle1",
+            "revelation-for-the-church-revelation-for-our-lives#note1_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note2_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note3_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note4_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note5_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note6_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note7_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note8_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note9_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note10_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note11_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note12_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note13_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note14_p1",
+            "revelation-for-the-church-revelation-for-our-lives#note15_p1"
+          ],
+          "sourceIds": [
+            "title1",
+            "p1",
+            "kicker1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34",
+            "p35",
+            "p36",
+            "p37",
+            "p38",
+            "p39",
+            "p40",
+            "p41",
+            "notetitle1",
+            "note1_p1",
+            "note2_p1",
+            "note3_p1",
+            "note4_p1",
+            "note5_p1",
+            "note6_p1",
+            "note7_p1",
+            "note8_p1",
+            "note9_p1",
+            "note10_p1",
+            "note11_p1",
+            "note12_p1",
+            "note13_p1",
+            "note14_p1",
+            "note15_p1"
+          ],
+          "selectedIds": [
+            "title1",
+            "p1",
+            "kicker1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "p22",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34",
+            "p35",
+            "p36",
+            "p37",
+            "p38",
+            "p39",
+            "p40",
+            "p41"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1_p1",
+              "owner": "p2"
+            },
+            {
+              "note": "note2_p1",
+              "owner": "p2"
+            },
+            {
+              "note": "note3_p1",
+              "owner": "p11"
+            },
+            {
+              "note": "note4_p1",
+              "owner": "p15"
+            },
+            {
+              "note": "note5_p1",
+              "owner": "p17"
+            },
+            {
+              "note": "note6_p1",
+              "owner": "p22"
+            },
+            {
+              "note": "note7_p1",
+              "owner": "p25"
+            },
+            {
+              "note": "note8_p1",
+              "owner": "p27"
+            },
+            {
+              "note": "note9_p1",
+              "owner": "p29"
+            },
+            {
+              "note": "note10_p1",
+              "owner": "p30"
+            },
+            {
+              "note": "note11_p1",
+              "owner": "p31"
+            },
+            {
+              "note": "note12_p1",
+              "owner": "p32"
+            },
+            {
+              "note": "note13_p1",
+              "owner": "p33"
+            },
+            {
+              "note": "note14_p1",
+              "owner": "p34"
+            },
+            {
+              "note": "note15_p1",
+              "owner": "p39"
+            }
+          ],
+          "id": "w47-t080"
+        },
+        {
+          "sourceId": "helps",
+          "kind": "reading",
+          "label": "도움말 · 같은 계시 말씀 안내",
+          "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_ws2IN",
+          "endAnchor": "p_bY7tI",
+          "units": [
+            "helps#p_ws2IN",
+            "helps#p_bY7tI"
+          ],
+          "sourceIds": [
+            "p_ws2IN",
+            "p_bY7tI"
+          ],
+          "selectedIds": [
+            "p_ws2IN",
+            "p_bY7tI"
+          ],
+          "noteLinks": [],
+          "readingNote": "도움말에서 권하는 넬슨 회장 말씀은 바로 앞에서 읽은 동일한 글입니다. 새 필수 읽기를 추가하지 않습니다.",
+          "id": "w47-t081",
+          "relatedTaskIds": [
+            "w47-t080"
+          ]
+        },
+        {
+          "sourceId": "helps",
+          "kind": "reading",
+          "label": "도움말 · 타는 듯한 하나님의 영 찬송 안내",
+          "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_u7bOc",
+          "endAnchor": "p_u7bOc",
+          "units": [
+            "helps#p_u7bOc"
+          ],
+          "sourceIds": [
+            "p_u7bOc"
+          ],
+          "selectedIds": [
+            "p_u7bOc"
+          ],
+          "noteLinks": [],
+          "id": "w47-t082"
+        },
+        {
+          "sourceId": "spirit-of-god",
+          "kind": "reading",
+          "label": "타는 듯한 하나님의 영 · 전체",
+          "path": "/study/manual/hymns/the-spirit-of-god",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "song_number1",
+          "endAnchor": "p2",
+          "units": [
+            "spirit-of-god#song_number1",
+            "spirit-of-god#title1",
+            "spirit-of-god#figure1_p1",
+            "spirit-of-god#figure1_p2",
+            "spirit-of-god#figure1_p3",
+            "spirit-of-god#figure1_p4",
+            "spirit-of-god#figure1_p5",
+            "spirit-of-god#figure1_p6",
+            "spirit-of-god#figure1_p7",
+            "spirit-of-god#figure1_p8",
+            "spirit-of-god#figure1_p9",
+            "spirit-of-god#figure1_p10",
+            "spirit-of-god#figure1_p11",
+            "spirit-of-god#figure1_p12",
+            "spirit-of-god#figure1_p13",
+            "spirit-of-god#figure1_p14",
+            "spirit-of-god#figure1_p15",
+            "spirit-of-god#figure1_p16",
+            "spirit-of-god#figure1_p17",
+            "spirit-of-god#figure1_p18",
+            "spirit-of-god#figure1_p19",
+            "spirit-of-god#figure1_p20",
+            "spirit-of-god#figure1_p21",
+            "spirit-of-god#figure1_p22",
+            "spirit-of-god#figure1_p23",
+            "spirit-of-god#figure1_p24",
+            "spirit-of-god#figure1_p25",
+            "spirit-of-god#figure1_p26",
+            "spirit-of-god#figure1_p27",
+            "spirit-of-god#figure1_p28",
+            "spirit-of-god#figure1_p29",
+            "spirit-of-god#figure1_p30",
+            "spirit-of-god#figure1_p31",
+            "spirit-of-god#figure1_p32",
+            "spirit-of-god#figure1_p33",
+            "spirit-of-god#figure1_p34",
+            "spirit-of-god#figure1_p35",
+            "spirit-of-god#figure1_p36",
+            "spirit-of-god#figure1_p37",
+            "spirit-of-god#figure1_p38",
+            "spirit-of-god#figure1_p39",
+            "spirit-of-god#p1",
+            "spirit-of-god#p2"
+          ],
+          "sourceIds": [
+            "song_number1",
+            "title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "figure1_p6",
+            "figure1_p7",
+            "figure1_p8",
+            "figure1_p9",
+            "figure1_p10",
+            "figure1_p11",
+            "figure1_p12",
+            "figure1_p13",
+            "figure1_p14",
+            "figure1_p15",
+            "figure1_p16",
+            "figure1_p17",
+            "figure1_p18",
+            "figure1_p19",
+            "figure1_p20",
+            "figure1_p21",
+            "figure1_p22",
+            "figure1_p23",
+            "figure1_p24",
+            "figure1_p25",
+            "figure1_p26",
+            "figure1_p27",
+            "figure1_p28",
+            "figure1_p29",
+            "figure1_p30",
+            "figure1_p31",
+            "figure1_p32",
+            "figure1_p33",
+            "figure1_p34",
+            "figure1_p35",
+            "figure1_p36",
+            "figure1_p37",
+            "figure1_p38",
+            "figure1_p39",
+            "p1",
+            "p2"
+          ],
+          "selectedIds": [
+            "song_number1",
+            "title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "figure1_p6",
+            "figure1_p7",
+            "figure1_p8",
+            "figure1_p9",
+            "figure1_p10",
+            "figure1_p11",
+            "figure1_p12",
+            "figure1_p13",
+            "figure1_p14",
+            "figure1_p15",
+            "figure1_p16",
+            "figure1_p17",
+            "figure1_p18",
+            "figure1_p19",
+            "figure1_p20",
+            "figure1_p21",
+            "figure1_p22",
+            "figure1_p23",
+            "figure1_p24",
+            "figure1_p25",
+            "figure1_p26",
+            "figure1_p27",
+            "figure1_p28",
+            "figure1_p29",
+            "figure1_p30",
+            "figure1_p31",
+            "figure1_p32",
+            "figure1_p33",
+            "figure1_p34",
+            "figure1_p35",
+            "figure1_p36",
+            "figure1_p37",
+            "figure1_p38",
+            "figure1_p39",
+            "p1",
+            "p2"
+          ],
+          "noteLinks": [],
+          "id": "w47-t083"
+        }
+      ],
+      "familyTasks": [
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "가족 교재 · 성신을 부어 주시는 약속",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "scripture_title7",
+          "endAnchor": "p26",
+          "units": [
+            "manual#scripture_title7",
+            "manual#title10",
+            "manual#p26"
+          ],
+          "sourceIds": [
+            "scripture_title7",
+            "title10",
+            "p26"
+          ],
+          "selectedIds": [
+            "scripture_title7",
+            "title10",
+            "p26"
+          ],
+          "noteLinks": [],
+          "readingNote": "요엘 2:28~29는 오늘 기본 과정의 요엘 2:14~32에 있습니다. 먼저 함께 읽은 뒤 물을 붓는 활동을 해 보세요.",
+          "id": "w47-t084",
+          "relatedTaskIds": [
+            "w47-t074"
+          ]
+        },
+        {
+          "sourceId": "children",
+          "kind": "reading",
+          "label": "어린이 자료 · 고요하고 작은 음성 안내",
+          "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_cqvLW",
+          "endAnchor": "p_mfaZe",
+          "units": [
+            "children#p_cqvLW",
+            "children#p_umTcF",
+            "children#p_mfaZe"
+          ],
+          "sourceIds": [
+            "p_cqvLW",
+            "p_umTcF",
+            "p_mfaZe"
+          ],
+          "selectedIds": [
+            "p_cqvLW",
+            "p_umTcF",
+            "p_mfaZe"
+          ],
+          "noteLinks": [],
+          "readingNote": "요엘 2:28~29는 오늘 기본 과정에서 읽습니다. 아래 노래는 한국어 원문이 제공되지 않아 영어 노래책으로 연결됩니다.",
+          "id": "w47-t085",
+          "relatedTaskIds": [
+            "w47-t074"
+          ]
+        },
+        {
+          "sourceId": "still-small-voice",
+          "kind": "reading",
+          "label": "The Still Small Voice · 전체 · 영어 원문",
+          "path": "/study/manual/childrens-songbook/the-still-small-voice",
+          "sourceLang": "eng",
+          "sourceLanguageLocked": true,
+          "anchor": "song_number1",
+          "endAnchor": "p1",
+          "units": [
+            "still-small-voice#song_number1",
+            "still-small-voice#title1",
+            "still-small-voice#figure1_p1",
+            "still-small-voice#figure1_p2",
+            "still-small-voice#figure1_p3",
+            "still-small-voice#figure1_p4",
+            "still-small-voice#figure1_p5",
+            "still-small-voice#figure1_p6",
+            "still-small-voice#figure1_p7",
+            "still-small-voice#figure1_p8",
+            "still-small-voice#p1"
+          ],
+          "sourceIds": [
+            "song_number1",
+            "title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "figure1_p6",
+            "figure1_p7",
+            "figure1_p8",
+            "p1"
+          ],
+          "selectedIds": [
+            "song_number1",
+            "title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "figure1_p6",
+            "figure1_p7",
+            "figure1_p8",
+            "p1"
+          ],
+          "noteLinks": [],
+          "id": "w47-t086"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "shortTitle": "영의 속삭임을 듣고 행하기",
+      "shortTitleEn": "Hear and act on the Spirit’s promptings",
+      "question": "성신의 속삭임을 더 잘 알아듣고 그에 따라 행동하기 위해 무엇을 실천하겠나요?",
+      "familyTitle": "성신을 초대하는 상자를 만들어요",
+      "familyTitleEn": "Making an Invite the Spirit box",
+      "familyQuestion": "우리 가족은 어떻게 성신을 초대할까요?",
+      "familyActivity": "성신에 관한 세 성구를 차례로 읽고, 노래·기도·경전·봉사로 영을 초대하는 상자를 만듭니다.",
+      "adultTasks": [
+        {
+          "sourceId": "joel3",
+          "kind": "scripture",
+          "label": "요엘 3장 · 전체",
+          "path": "/study/scriptures/ot/joel/3",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title_number1",
+          "endAnchor": "p21",
+          "units": [
+            "joel3#title_number1",
+            "joel3#title1",
+            "joel3#p1",
+            "joel3#p2",
+            "joel3#p3",
+            "joel3#p4",
+            "joel3#p5",
+            "joel3#p6",
+            "joel3#p7",
+            "joel3#p8",
+            "joel3#p9",
+            "joel3#p10",
+            "joel3#p11",
+            "joel3#p12",
+            "joel3#p13",
+            "joel3#title2",
+            "joel3#p14",
+            "joel3#p15",
+            "joel3#p16",
+            "joel3#p17",
+            "joel3#p18",
+            "joel3#p19",
+            "joel3#p20",
+            "joel3#p21",
+            "joel3#note1_p1"
+          ],
+          "sourceIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "title2",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21",
+            "note1_p1"
+          ],
+          "selectedIds": [
+            "title_number1",
+            "title1",
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "p9",
+            "p10",
+            "p11",
+            "p12",
+            "p13",
+            "title2",
+            "p14",
+            "p15",
+            "p16",
+            "p17",
+            "p18",
+            "p19",
+            "p20",
+            "p21"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1_p1",
+              "owner": "p21"
+            }
+          ],
+          "id": "w47-t087"
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 영의 속삭임과 적진 영상",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p19",
+          "endAnchor": "p19",
+          "units": [
+            "manual#p19"
+          ],
+          "sourceIds": [
+            "p19"
+          ],
+          "selectedIds": [
+            "p19"
+          ],
+          "noteLinks": [],
+          "id": "w47-t088"
+        },
+        {
+          "sourceId": "25stevenson",
+          "kind": "reading",
+          "label": "영의 속삭임 · 전체",
+          "path": "/study/general-conference/2023/10/25stevenson",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title1",
+          "endAnchor": "p39",
+          "units": [
+            "25stevenson#title1",
+            "25stevenson#author1",
+            "25stevenson#author2",
+            "25stevenson#kicker1",
+            "25stevenson#title2",
+            "25stevenson#p1",
+            "25stevenson#p2",
+            "25stevenson#title3",
+            "25stevenson#p3",
+            "25stevenson#p4",
+            "25stevenson#p5",
+            "25stevenson#p6",
+            "25stevenson#p7",
+            "25stevenson#p8",
+            "25stevenson#title4",
+            "25stevenson#p9",
+            "25stevenson#p10",
+            "25stevenson#title5",
+            "25stevenson#p11",
+            "25stevenson#p12",
+            "25stevenson#p13",
+            "25stevenson#title6",
+            "25stevenson#p14",
+            "25stevenson#p15",
+            "25stevenson#p16",
+            "25stevenson#title7",
+            "25stevenson#p17",
+            "25stevenson#p18",
+            "25stevenson#p19",
+            "25stevenson#title8",
+            "25stevenson#p20",
+            "25stevenson#p21",
+            "25stevenson#p22",
+            "25stevenson#title9",
+            "25stevenson#p23",
+            "25stevenson#p24",
+            "25stevenson#p25",
+            "25stevenson#p26",
+            "25stevenson#p27",
+            "25stevenson#p28",
+            "25stevenson#p29",
+            "25stevenson#title10",
+            "25stevenson#p30",
+            "25stevenson#p31",
+            "25stevenson#p32",
+            "25stevenson#p33",
+            "25stevenson#p34",
+            "25stevenson#p35",
+            "25stevenson#p36",
+            "25stevenson#p37",
+            "25stevenson#p38",
+            "25stevenson#p39",
+            "25stevenson#note_title1",
+            "25stevenson#note1_p1",
+            "25stevenson#note2_p1",
+            "25stevenson#note3_p1",
+            "25stevenson#note4_p1",
+            "25stevenson#note5_p1",
+            "25stevenson#note6_p1",
+            "25stevenson#note7_p1",
+            "25stevenson#note8_p1",
+            "25stevenson#note9_p1",
+            "25stevenson#note10_p1",
+            "25stevenson#note11_p1",
+            "25stevenson#note12_p1",
+            "25stevenson#note13_p1"
+          ],
+          "sourceIds": [
+            "title1",
+            "author1",
+            "author2",
+            "kicker1",
+            "title2",
+            "p1",
+            "p2",
+            "title3",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "title4",
+            "p9",
+            "p10",
+            "title5",
+            "p11",
+            "p12",
+            "p13",
+            "title6",
+            "p14",
+            "p15",
+            "p16",
+            "title7",
+            "p17",
+            "p18",
+            "p19",
+            "title8",
+            "p20",
+            "p21",
+            "p22",
+            "title9",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "title10",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34",
+            "p35",
+            "p36",
+            "p37",
+            "p38",
+            "p39",
+            "note_title1",
+            "note1_p1",
+            "note2_p1",
+            "note3_p1",
+            "note4_p1",
+            "note5_p1",
+            "note6_p1",
+            "note7_p1",
+            "note8_p1",
+            "note9_p1",
+            "note10_p1",
+            "note11_p1",
+            "note12_p1",
+            "note13_p1"
+          ],
+          "selectedIds": [
+            "title1",
+            "author1",
+            "author2",
+            "kicker1",
+            "title2",
+            "p1",
+            "p2",
+            "title3",
+            "p3",
+            "p4",
+            "p5",
+            "p6",
+            "p7",
+            "p8",
+            "title4",
+            "p9",
+            "p10",
+            "title5",
+            "p11",
+            "p12",
+            "p13",
+            "title6",
+            "p14",
+            "p15",
+            "p16",
+            "title7",
+            "p17",
+            "p18",
+            "p19",
+            "title8",
+            "p20",
+            "p21",
+            "p22",
+            "title9",
+            "p23",
+            "p24",
+            "p25",
+            "p26",
+            "p27",
+            "p28",
+            "p29",
+            "title10",
+            "p30",
+            "p31",
+            "p32",
+            "p33",
+            "p34",
+            "p35",
+            "p36",
+            "p37",
+            "p38",
+            "p39"
+          ],
+          "noteLinks": [
+            {
+              "note": "note1_p1",
+              "owner": "p3"
+            },
+            {
+              "note": "note2_p1",
+              "owner": "p3"
+            },
+            {
+              "note": "note3_p1",
+              "owner": "p5"
+            },
+            {
+              "note": "note4_p1",
+              "owner": "p6"
+            },
+            {
+              "note": "note5_p1",
+              "owner": "p8"
+            },
+            {
+              "note": "note6_p1",
+              "owner": "p11"
+            },
+            {
+              "note": "note7_p1",
+              "owner": "p16"
+            },
+            {
+              "note": "note8_p1",
+              "owner": "p20"
+            },
+            {
+              "note": "note9_p1",
+              "owner": "p20"
+            },
+            {
+              "note": "note10_p1",
+              "owner": "p21"
+            },
+            {
+              "note": "note11_p1",
+              "owner": "p23"
+            },
+            {
+              "note": "note12_p1",
+              "owner": "p29"
+            },
+            {
+              "note": "note13_p1",
+              "owner": "p35"
+            }
+          ],
+          "id": "w47-t089"
+        },
+        {
+          "sourceId": "enemy-territory",
+          "kind": "video",
+          "label": "적진 · 전체",
+          "path": "/study/video/mormon-messages-for-youth/2012-06-006-enemy-territory",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title1",
+          "endAnchor": "p1",
+          "units": [
+            "enemy-territory#title1",
+            "enemy-territory#p1"
+          ],
+          "sourceIds": [
+            "title1",
+            "p1"
+          ],
+          "selectedIds": [
+            "title1",
+            "p1"
+          ],
+          "noteLinks": [],
+          "readingNote": "한국어 공식 영상은 3분 38초입니다. 이 페이지에는 영상과 소개문이 제공됩니다.",
+          "id": "w47-t090"
+        },
+        {
+          "sourceId": "09-teach-by-the-spirit",
+          "kind": "reading",
+          "label": "영으로 가르친다 · 4/4 간증의 모범 살펴보기",
+          "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "title15",
+          "endAnchor": "p20",
+          "units": [
+            "09-teach-by-the-spirit#title15",
+            "09-teach-by-the-spirit#p20"
+          ],
+          "sourceIds": [
+            "title15",
+            "p20"
+          ],
+          "selectedIds": [
+            "title15",
+            "p20"
+          ],
+          "noteLinks": [],
+          "id": "w47-t091"
+        },
+        {
+          "sourceId": "john-11",
+          "kind": "scripture",
+          "label": "요한복음 11:25~27 · 전체",
+          "path": "/study/scriptures/nt/john/11",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p25",
+          "endAnchor": "p27",
+          "units": [
+            "john-11#p25",
+            "john-11#p26",
+            "john-11#p27"
+          ],
+          "sourceIds": [
+            "p25",
+            "p26",
+            "p27"
+          ],
+          "selectedIds": [
+            "p25",
+            "p26",
+            "p27"
+          ],
+          "noteLinks": [],
+          "id": "w47-t092"
+        },
+        {
+          "sourceId": "09-teach-by-the-spirit",
+          "kind": "reading",
+          "label": "영으로 가르친다 · 간증과 배운 것 적용하기",
+          "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p21",
+          "endAnchor": "figure2_p10",
+          "units": [
+            "09-teach-by-the-spirit#p21",
+            "09-teach-by-the-spirit#p22",
+            "09-teach-by-the-spirit#p23",
+            "09-teach-by-the-spirit#figure2_title1",
+            "09-teach-by-the-spirit#figure2_p1",
+            "09-teach-by-the-spirit#figure2_p2",
+            "09-teach-by-the-spirit#figure2_p3",
+            "09-teach-by-the-spirit#figure2_p4",
+            "09-teach-by-the-spirit#figure2_p5",
+            "09-teach-by-the-spirit#figure2_p6",
+            "09-teach-by-the-spirit#figure2_p7",
+            "09-teach-by-the-spirit#figure2_p8",
+            "09-teach-by-the-spirit#figure2_p9",
+            "09-teach-by-the-spirit#figure2_p10"
+          ],
+          "sourceIds": [
+            "p21",
+            "p22",
+            "p23",
+            "figure2_title1",
+            "figure2_p1",
+            "figure2_p2",
+            "figure2_p3",
+            "figure2_p4",
+            "figure2_p5",
+            "figure2_p6",
+            "figure2_p7",
+            "figure2_p8",
+            "figure2_p9",
+            "figure2_p10"
+          ],
+          "selectedIds": [
+            "p21",
+            "p22",
+            "p23",
+            "figure2_title1",
+            "figure2_p1",
+            "figure2_p2",
+            "figure2_p3",
+            "figure2_p4",
+            "figure2_p5",
+            "figure2_p6",
+            "figure2_p7",
+            "figure2_p8",
+            "figure2_p9",
+            "figure2_p10"
+          ],
+          "noteLinks": [],
+          "readingNote": "이로써 3일차부터 나누어 읽은 연결 글 전체를 마칩니다.",
+          "id": "w47-t093",
+          "relatedTaskIds": [
+            "w47-t040",
+            "w47-t042",
+            "w47-t065"
+          ]
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "교재 · 경전 도움말의 연결 안내",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_uHXgV",
+          "endAnchor": "p_jgY1j",
+          "units": [
+            "manual#p_uHXgV",
+            "manual#p_uFn2M",
+            "manual#p_rB12K",
+            "manual#p_jgY1j"
+          ],
+          "sourceIds": [
+            "p_uHXgV",
+            "p_uFn2M",
+            "p_rB12K",
+            "p_jgY1j"
+          ],
+          "selectedIds": [
+            "p_uHXgV",
+            "p_uFn2M",
+            "p_rB12K",
+            "p_jgY1j"
+          ],
+          "noteLinks": [],
+          "readingNote": "소선지자의 배경과 하나님의 자녀에 관한 설명은 1일차에 읽었습니다. 같은 도움말을 다시 필수 읽기로 넣지 않았습니다.",
+          "id": "w47-t094",
+          "relatedTaskIds": [
+            "w47-t004",
+            "w47-t010"
+          ]
+        },
+        {
+          "sourceId": "helps",
+          "kind": "reading",
+          "label": "도움말 · 구주 그림과 설명",
+          "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_xywpk",
+          "endAnchor": "p_uooFo",
+          "units": [
+            "helps#p_xywpk",
+            "helps#p_uooFo"
+          ],
+          "sourceIds": [
+            "p_xywpk",
+            "p_uooFo"
+          ],
+          "selectedIds": [
+            "p_xywpk",
+            "p_uooFo"
+          ],
+          "noteLinks": [],
+          "id": "w47-t095"
+        }
+      ],
+      "familyTasks": [
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "가족 교재 · 성신에 관한 세 가지 성구 읽기",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p27",
+          "endAnchor": "p27",
+          "units": [
+            "manual#p27"
+          ],
+          "sourceIds": [
+            "p27"
+          ],
+          "selectedIds": [
+            "p27"
+          ],
+          "noteLinks": [],
+          "readingNote": "요엘 2:28~29는 기본 과정 6일차에서 읽었습니다. 오늘은 이어지는 세 성구를 함께 읽습니다.",
+          "id": "w47-t096",
+          "relatedTaskIds": [
+            "w47-t074"
+          ]
+        },
+        {
+          "sourceId": "john-14",
+          "kind": "scripture",
+          "label": "요한복음 14:16 · 전체",
+          "path": "/study/scriptures/nt/john/14",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p16",
+          "endAnchor": "p16",
+          "units": [
+            "john-14#p16"
+          ],
+          "sourceIds": [
+            "p16"
+          ],
+          "selectedIds": [
+            "p16"
+          ],
+          "noteLinks": [],
+          "id": "w47-t097"
+        },
+        {
+          "sourceId": "moro-10",
+          "kind": "scripture",
+          "label": "모로나이서 10:5 · 전체",
+          "path": "/study/scriptures/bofm/moro/10",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p5",
+          "endAnchor": "p5",
+          "units": [
+            "moro-10#p5",
+            "moro-10#note5a_p1",
+            "moro-10#note5b_p1"
+          ],
+          "sourceIds": [
+            "p5",
+            "note5a_p1",
+            "note5b_p1"
+          ],
+          "selectedIds": [
+            "p5"
+          ],
+          "noteLinks": [
+            {
+              "note": "note5a_p1",
+              "owner": "p5"
+            },
+            {
+              "note": "note5b_p1",
+              "owner": "p5"
+            }
+          ],
+          "id": "w47-t098"
+        },
+        {
+          "sourceId": "dc-42",
+          "kind": "scripture",
+          "label": "교리와 성약 42:17 · 전체",
+          "path": "/study/scriptures/dc-testament/dc/42",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p17",
+          "endAnchor": "p17",
+          "units": [
+            "dc-42#p17"
+          ],
+          "sourceIds": [
+            "p17"
+          ],
+          "selectedIds": [
+            "p17"
+          ],
+          "noteLinks": [],
+          "id": "w47-t099"
+        },
+        {
+          "sourceId": "children",
+          "kind": "reading",
+          "label": "어린이 자료 · 성신 색칠 활동 안내",
+          "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_f54lp",
+          "endAnchor": "p_f54lp",
+          "units": [
+            "children#p_f54lp"
+          ],
+          "sourceIds": [
+            "p_f54lp"
+          ],
+          "selectedIds": [
+            "p_f54lp"
+          ],
+          "noteLinks": [],
+          "id": "w47-t100"
+        },
+        {
+          "sourceId": "i-can-feel-the-holy-ghost",
+          "kind": "reading",
+          "label": "나는 성신을 느껴요 · 전체",
+          "path": "/study/friend/2022/07/i-can-feel-the-holy-ghost",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "series_title1",
+          "endAnchor": "figure1_p1",
+          "units": [
+            "i-can-feel-the-holy-ghost#series_title1",
+            "i-can-feel-the-holy-ghost#title1",
+            "i-can-feel-the-holy-ghost#p1",
+            "i-can-feel-the-holy-ghost#figure1_p1"
+          ],
+          "sourceIds": [
+            "series_title1",
+            "title1",
+            "p1",
+            "figure1_p1"
+          ],
+          "selectedIds": [
+            "series_title1",
+            "title1",
+            "p1",
+            "figure1_p1"
+          ],
+          "noteLinks": [],
+          "id": "w47-t101"
+        },
+        {
+          "sourceId": "children",
+          "kind": "reading",
+          "label": "어린이 자료 · 성신을 초대하는 상자 안내",
+          "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "p_sqejF",
+          "endAnchor": "p_sqejF",
+          "units": [
+            "children#p_sqejF"
+          ],
+          "sourceIds": [
+            "p_sqejF"
+          ],
+          "selectedIds": [
+            "p_sqejF"
+          ],
+          "noteLinks": [],
+          "id": "w47-t102"
+        },
+        {
+          "sourceId": "family-spirit",
+          "kind": "reading",
+          "label": "이번 주 연결 활동 · 하나님께서 영을 주실 거예요 · 영어 원문",
+          "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+          "sourceLang": "eng",
+          "sourceLanguageLocked": true,
+          "anchor": "p_uyKg5",
+          "endAnchor": "p_tSxUJ",
+          "units": [
+            "family-spirit#p_uyKg5",
+            "family-spirit#p_oQeT4",
+            "family-spirit#p_tSxUJ"
+          ],
+          "sourceIds": [
+            "p_uyKg5",
+            "p_oQeT4",
+            "p_tSxUJ"
+          ],
+          "selectedIds": [
+            "p_uyKg5",
+            "p_oQeT4",
+            "p_tSxUJ"
+          ],
+          "noteLinks": [],
+          "id": "w47-t103"
+        },
+        {
+          "sourceId": "family-spirit",
+          "kind": "reading",
+          "label": "이번 주 연결 활동 · 성신 노래 부르기 · 영어 원문",
+          "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+          "sourceLang": "eng",
+          "sourceLanguageLocked": true,
+          "anchor": "p_aIMzs",
+          "endAnchor": "p_aIMzs",
+          "units": [
+            "family-spirit#p_aIMzs"
+          ],
+          "sourceIds": [
+            "p_aIMzs"
+          ],
+          "selectedIds": [
+            "p_aIMzs"
+          ],
+          "noteLinks": [],
+          "id": "w47-t104"
+        },
+        {
+          "sourceId": "song-holy-ghost",
+          "kind": "reading",
+          "label": "성신 · 전체",
+          "path": "/study/manual/childrens-songbook/the-holy-ghost",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "song_number1",
+          "endAnchor": "p1",
+          "units": [
+            "song-holy-ghost#song_number1",
+            "song-holy-ghost#title1",
+            "song-holy-ghost#figure1_p1",
+            "song-holy-ghost#figure1_p2",
+            "song-holy-ghost#figure1_p3",
+            "song-holy-ghost#figure1_p4",
+            "song-holy-ghost#figure1_p5",
+            "song-holy-ghost#figure1_p6",
+            "song-holy-ghost#figure1_p7",
+            "song-holy-ghost#figure1_p8",
+            "song-holy-ghost#figure1_p9",
+            "song-holy-ghost#figure1_p10",
+            "song-holy-ghost#figure1_p11",
+            "song-holy-ghost#p1"
+          ],
+          "sourceIds": [
+            "song_number1",
+            "title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "figure1_p6",
+            "figure1_p7",
+            "figure1_p8",
+            "figure1_p9",
+            "figure1_p10",
+            "figure1_p11",
+            "p1"
+          ],
+          "selectedIds": [
+            "song_number1",
+            "title1",
+            "figure1_p1",
+            "figure1_p2",
+            "figure1_p3",
+            "figure1_p4",
+            "figure1_p5",
+            "figure1_p6",
+            "figure1_p7",
+            "figure1_p8",
+            "figure1_p9",
+            "figure1_p10",
+            "figure1_p11",
+            "p1"
+          ],
+          "noteLinks": [],
+          "id": "w47-t105"
+        },
+        {
+          "sourceId": "family-spirit",
+          "kind": "reading",
+          "label": "이번 주 연결 활동 · 성신을 초대하는 상자 만들기 · 영어 원문",
+          "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+          "sourceLang": "eng",
+          "sourceLanguageLocked": true,
+          "anchor": "p_dVECq",
+          "endAnchor": "p_rgsK8",
+          "units": [
+            "family-spirit#p_dVECq",
+            "family-spirit#p_wH2DG",
+            "family-spirit#p_uWQ47",
+            "family-spirit#p_sqGkf",
+            "family-spirit#p_gwzrT",
+            "family-spirit#p_w9cHn",
+            "family-spirit#p_zrWZy",
+            "family-spirit#p_rO2fh",
+            "family-spirit#p_sl16R",
+            "family-spirit#p_qId3v",
+            "family-spirit#p_hQ9Lf",
+            "family-spirit#p_opfQS",
+            "family-spirit#p_u9Bpc",
+            "family-spirit#p_dGbRk",
+            "family-spirit#p_rgsK8"
+          ],
+          "sourceIds": [
+            "p_dVECq",
+            "p_wH2DG",
+            "p_uWQ47",
+            "p_sqGkf",
+            "p_gwzrT",
+            "p_w9cHn",
+            "p_zrWZy",
+            "p_rO2fh",
+            "p_sl16R",
+            "p_qId3v",
+            "p_hQ9Lf",
+            "p_opfQS",
+            "p_u9Bpc",
+            "p_dGbRk",
+            "p_rgsK8"
+          ],
+          "selectedIds": [
+            "p_dVECq",
+            "p_wH2DG",
+            "p_uWQ47",
+            "p_sqGkf",
+            "p_gwzrT",
+            "p_w9cHn",
+            "p_zrWZy",
+            "p_rO2fh",
+            "p_sl16R",
+            "p_qId3v",
+            "p_hQ9Lf",
+            "p_opfQS",
+            "p_u9Bpc",
+            "p_dGbRk",
+            "p_rgsK8"
+          ],
+          "noteLinks": [],
+          "readingNote": "이 활동의 요엘 2:28은 기본 과정 6일차에 배정된 같은 성구입니다. 그림 속 글씨와 오려 쓰는 활동지는 공식 원문에서 확인하세요.",
+          "id": "w47-t106",
+          "relatedTaskIds": [
+            "w47-t074"
+          ]
+        },
+        {
+          "sourceId": "manual",
+          "kind": "manual",
+          "label": "가족 교재 · 추가 자료와 구주 그림",
+          "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+          "sourceLang": "kor",
+          "sourceLanguageLocked": true,
+          "anchor": "figure2_p1",
+          "endAnchor": "figure7_figure1_p1",
+          "units": [
+            "manual#figure2_p1",
+            "manual#figure7_figure1_p1"
+          ],
+          "sourceIds": [
+            "figure2_p1",
+            "figure7_figure1_p1"
+          ],
+          "selectedIds": [
+            "figure2_p1",
+            "figure7_figure1_p1"
+          ],
+          "noteLinks": [],
+          "id": "w47-t107"
+        }
+      ]
+    }
+  ]
+}

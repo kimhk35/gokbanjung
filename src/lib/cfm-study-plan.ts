@@ -1,6 +1,7 @@
 import approved from "@/data/cfm-2026-week-43.json";
 import week44 from "@/data/cfm-2026-week-44.json";
 import week46 from "@/data/cfm-2026-week-46.json";
+import week47 from "@/data/cfm-2026-week-47.json";
 import type { UiLang } from "./i18n";
 import { churchLangCode } from "./i18n";
 
@@ -19,6 +20,8 @@ export type StudyTask = {
   sourceIds: string[];
   selectedIds: string[];
   noteLinks: { note: string; owner: string }[];
+  readingNote?: string;
+  relatedTaskIds?: string[];
 };
 export type StudyDay = {
   day: number;
@@ -44,6 +47,7 @@ const plans: Readonly<Record<number, StudyPlan>> = {
   43: cfmPlan,
   44: week44,
   46: week46,
+  47: week47,
 };
 export const getStudyPlan = (week: number): StudyPlan | undefined =>
   plans[week];
@@ -72,6 +76,35 @@ export const studyTasks = (
   getStudyPlan(week)?.days.find((d) => d.day === day)?.[
     track === "adult" ? "adultTasks" : "familyTasks"
   ] || [];
+
+// Optional references navigate to a passage's existing allocation. They are
+// not extra reading tasks and never contribute to the completion denominator.
+export function studyRelatedTasks(task: StudyTask, week: number) {
+  const wanted = [...new Set(task.relatedTaskIds || [])].filter(
+    (id) => id !== task.id,
+  );
+  const plan = getStudyPlan(week);
+  if (!plan) return [];
+  const locations = plan.days.flatMap((day) =>
+    (["adult", "family"] as const).flatMap((track) =>
+      day[track === "adult" ? "adultTasks" : "familyTasks"].map((item) => ({
+        day: day.day,
+        track,
+        task: item,
+      })),
+    ),
+  );
+  return wanted.flatMap((id) => {
+    const target = locations.find((location) => location.task.id === id);
+    if (!target) return [];
+    const query = new URLSearchParams({
+      track: target.track,
+      source: target.task.path,
+      anchor: target.task.anchor || "main",
+    });
+    return [{ ...target, href: `/week/${week}/day/${target.day}?${query}` }];
+  });
+}
 export const dayTitles = [
   "A prophet’s calling",
   "Known by God",
