@@ -1,0 +1,6016 @@
+{
+  "version": 1,
+  "week": 47,
+  "lang": "eng",
+  "tasks": {
+    "w47-t001": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "title_number1",
+      "endAnchor": "p3",
+      "selectedIds": [
+        "title_number1",
+        "title1",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Introduction and the prophets",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p3",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3"
+        ]
+      },
+      "readingNote": "The English manual links to the Bible Dictionary here. This plan retains the assigned Guide to the Scriptures entries. The Bible Dictionary links remain available in the official manual."
+    },
+    "w47-t002": {
+      "path": "/study/scriptures/gs/hosea",
+      "anchor": "title1",
+      "endAnchor": "p2",
+      "selectedIds": [
+        "title1",
+        "p1",
+        "title2",
+        "p2"
+      ],
+      "noteLinks": [],
+      "label": "Hosea · Complete source",
+      "original": {
+        "path": "/study/scriptures/gs/hosea",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p2",
+        "selectedIds": [
+          "title1",
+          "p1",
+          "title2",
+          "p2"
+        ]
+      }
+    },
+    "w47-t003": {
+      "path": "/study/scriptures/gs/joel",
+      "anchor": "title1",
+      "endAnchor": "p4",
+      "selectedIds": [
+        "title1",
+        "p1",
+        "title2",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "noteLinks": [],
+      "label": "Joel · Complete source",
+      "original": {
+        "path": "/study/scriptures/gs/joel",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p4",
+        "selectedIds": [
+          "title1",
+          "p1",
+          "title2",
+          "p2",
+          "p3",
+          "p4"
+        ]
+      }
+    },
+    "w47-t004": {
+      "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+      "anchor": "p_eVr84",
+      "endAnchor": "p_plcYD",
+      "selectedIds": [
+        "p_eVr84",
+        "p_xCy8g",
+        "p_cDmAn",
+        "p_zVucV",
+        "p_y8JJR",
+        "p_vGBik",
+        "p_l2ctu",
+        "p_lT3BR",
+        "p_jhoBl",
+        "p_dlia0",
+        "p_pq8wz",
+        "p_xB0cz",
+        "p_sgubb",
+        "p_bNx6Y",
+        "p_b90V6",
+        "p_dexIi",
+        "p_hdPGS",
+        "p_wdZLp",
+        "p_sUfNz",
+        "p_wD24O",
+        "p_arwvr",
+        "p_wfiDR",
+        "p_xz99I",
+        "p_py5j5",
+        "p_wrROL",
+        "p_zbpKv",
+        "p_wIlzW",
+        "p_dCXOn",
+        "p_kV1cn",
+        "p_eJ8z2",
+        "p_k333N",
+        "p_dFrjw",
+        "p_rGvDZ",
+        "p_iGQbx",
+        "p_dLvKA",
+        "p_qJz5P",
+        "p_wPp6Z",
+        "p_q9xCq",
+        "p_esDUg",
+        "p_c14mK",
+        "p_mWoTV",
+        "p_gTnn0",
+        "p_whYRV",
+        "p_pE9hv",
+        "p_trq6D",
+        "p_eGo7U",
+        "p_kUDMD",
+        "p_b41LS",
+        "p_eJGOw",
+        "p_vh7uE",
+        "p_zKrQw",
+        "p_lhgxJ",
+        "p_kkj6H",
+        "p_uXThs",
+        "p_arK0c",
+        "p_qHJNW",
+        "p_iyu1u",
+        "p_pbk5N",
+        "p_wZlzL",
+        "p_u2YK4",
+        "p_plcYD"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_cIooD",
+          "owner": "p_xB0cz"
+        },
+        {
+          "note": "p_mGNhB",
+          "owner": "p_sgubb"
+        },
+        {
+          "note": "p_pFQ8A",
+          "owner": "p_qHJNW"
+        },
+        {
+          "note": "p_rb6jG",
+          "owner": "p_iyu1u"
+        },
+        {
+          "note": "p_bugNd",
+          "owner": "p_iyu1u"
+        },
+        {
+          "note": "p_usLDM",
+          "owner": "p_pbk5N"
+        }
+      ],
+      "label": "Scripture Helps · The minor prophets and Hosea’s background",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_eVr84",
+        "endAnchor": "p_plcYD",
+        "selectedIds": [
+          "p_eVr84",
+          "p_xCy8g",
+          "p_cDmAn",
+          "p_zVucV",
+          "p_y8JJR",
+          "p_vGBik",
+          "p_l2ctu",
+          "p_lT3BR",
+          "p_jhoBl",
+          "p_dlia0",
+          "p_pq8wz",
+          "p_xB0cz",
+          "p_sgubb",
+          "p_bNx6Y",
+          "p_b90V6",
+          "p_dexIi",
+          "p_hdPGS",
+          "p_wdZLp",
+          "p_sUfNz",
+          "p_wD24O",
+          "p_arwvr",
+          "p_wfiDR",
+          "p_xz99I",
+          "p_py5j5",
+          "p_wrROL",
+          "p_zbpKv",
+          "p_wIlzW",
+          "p_dCXOn",
+          "p_kV1cn",
+          "p_eJ8z2",
+          "p_k333N",
+          "p_dFrjw",
+          "p_rGvDZ",
+          "p_iGQbx",
+          "p_dLvKA",
+          "p_qJz5P",
+          "p_wPp6Z",
+          "p_q9xCq",
+          "p_esDUg",
+          "p_c14mK",
+          "p_mWoTV",
+          "p_gTnn0",
+          "p_whYRV",
+          "p_pE9hv",
+          "p_trq6D",
+          "p_eGo7U",
+          "p_kUDMD",
+          "p_b41LS",
+          "p_eJGOw",
+          "p_vh7uE",
+          "p_zKrQw",
+          "p_lhgxJ",
+          "p_kkj6H",
+          "p_uXThs",
+          "p_arK0c",
+          "p_qHJNW",
+          "p_iyu1u",
+          "p_pbk5N",
+          "p_wZlzL",
+          "p_u2YK4",
+          "p_plcYD"
+        ]
+      }
+    },
+    "w47-t005": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "title2",
+      "endAnchor": "p4",
+      "selectedIds": [
+        "title2",
+        "scripture_title1",
+        "title3",
+        "p4"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Covenants in Hosea 1–3",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "title2",
+        "endAnchor": "p4",
+        "selectedIds": [
+          "title2",
+          "scripture_title1",
+          "title3",
+          "p4"
+        ]
+      }
+    },
+    "w47-t006": {
+      "path": "/study/scriptures/ot/hosea/1",
+      "anchor": "title1",
+      "endAnchor": "p11",
+      "selectedIds": [
+        "title1",
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_b_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_b_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_b_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_c_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note7_b_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note7_c_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_b_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_c_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_d_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        }
+      ],
+      "label": "Hosea 1:1–11",
+      "original": {
+        "path": "/study/scriptures/ot/hosea/1",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p11",
+        "selectedIds": [
+          "title1",
+          "title_number1",
+          "p1",
+          "title2",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "title3",
+          "p10",
+          "p11"
+        ]
+      }
+    },
+    "w47-t007": {
+      "path": "/study/scriptures/ot/hosea/2",
+      "anchor": "title_number1",
+      "endAnchor": "p23",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_b_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_c_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_d_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note5_b_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note11_b_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note11_c_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note11_d_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note11_e_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_b_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note15_a_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note15_b_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note16_a_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_b_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_c_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note17_a_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note18_a_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note18_b_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note18_c_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note19_a_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note20_a_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note23_a_p1",
+          "owner": "p23"
+        },
+        {
+          "note": "note23_b_p1",
+          "owner": "p23"
+        },
+        {
+          "note": "note23_c_p1",
+          "owner": "p23"
+        },
+        {
+          "note": "note23_d_p1",
+          "owner": "p23"
+        }
+      ],
+      "label": "Hosea 2:1–23",
+      "original": {
+        "path": "/study/scriptures/ot/hosea/2",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p23",
+        "selectedIds": [
+          "title_number1",
+          "p1",
+          "title1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "title2",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23"
+        ]
+      }
+    },
+    "w47-t008": {
+      "path": "/study/scriptures/ot/hosea/3",
+      "anchor": "title_number1",
+      "endAnchor": "p5",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note5_b_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note5_c_p1",
+          "owner": "p5"
+        }
+      ],
+      "label": "Hosea 3:1–5",
+      "original": {
+        "path": "/study/scriptures/ot/hosea/3",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p5",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5"
+        ]
+      }
+    },
+    "w47-t009": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "figure1_p1",
+      "endAnchor": "figure1_p1",
+      "selectedIds": [
+        "figure1_p1"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Gomer Rescued",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "figure1_p1",
+        "endAnchor": "figure1_p1",
+        "selectedIds": [
+          "figure1_p1"
+        ]
+      }
+    },
+    "w47-t010": {
+      "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+      "anchor": "p_iHsEv",
+      "endAnchor": "p_tAmkM",
+      "selectedIds": [
+        "p_iHsEv",
+        "p_aWyUG",
+        "p_z2Yum",
+        "p_gbGxL",
+        "p_niD4P",
+        "p_wThcB",
+        "p_kV94q",
+        "p_hvDHC",
+        "p_qrbxF",
+        "p_exmeo",
+        "p_lWJ7q",
+        "p_tAmkM"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_swkmd",
+          "owner": "p_gbGxL"
+        },
+        {
+          "note": "p_xnqDf",
+          "owner": "p_gbGxL"
+        },
+        {
+          "note": "p_mrh8u",
+          "owner": "p_gbGxL"
+        },
+        {
+          "note": "p_sqRfN",
+          "owner": "p_kV94q"
+        },
+        {
+          "note": "p_xNB1M",
+          "owner": "p_kV94q"
+        },
+        {
+          "note": "p_kZkWQ",
+          "owner": "p_kV94q"
+        },
+        {
+          "note": "p_lpIpi",
+          "owner": "p_kV94q"
+        },
+        {
+          "note": "p_lZeh8",
+          "owner": "p_hvDHC"
+        },
+        {
+          "note": "p_wyHPC",
+          "owner": "p_hvDHC"
+        },
+        {
+          "note": "p_i6yrD",
+          "owner": "p_hvDHC"
+        },
+        {
+          "note": "p_jQf4u",
+          "owner": "p_hvDHC"
+        },
+        {
+          "note": "p_aoSoA",
+          "owner": "p_lWJ7q"
+        },
+        {
+          "note": "p_fw824",
+          "owner": "p_tAmkM"
+        }
+      ],
+      "label": "Scripture Helps · Covenant marriage and God’s children",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_iHsEv",
+        "endAnchor": "p_tAmkM",
+        "selectedIds": [
+          "p_iHsEv",
+          "p_aWyUG",
+          "p_z2Yum",
+          "p_gbGxL",
+          "p_niD4P",
+          "p_wThcB",
+          "p_kV94q",
+          "p_hvDHC",
+          "p_qrbxF",
+          "p_exmeo",
+          "p_lWJ7q",
+          "p_tAmkM"
+        ]
+      },
+      "readingNote": "Hosea 1–3 was read just before this in today’s basic course. Consider these questions using the same passages."
+    },
+    "w47-t011": {
+      "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+      "anchor": "p_cbpuH",
+      "endAnchor": "p_hSarS",
+      "selectedIds": [
+        "p_cbpuH",
+        "p_ipdfD",
+        "p_eVrdb",
+        "p_w2JmT",
+        "p_qfbZN",
+        "p_lAM03",
+        "p_i8CcC",
+        "p_hSarS"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_wUWSD",
+          "owner": "p_eVrdb"
+        },
+        {
+          "note": "p_rlgv0",
+          "owner": "p_eVrdb"
+        },
+        {
+          "note": "p_sDkoJ",
+          "owner": "p_eVrdb"
+        },
+        {
+          "note": "p_th6eu",
+          "owner": "p_i8CcC"
+        },
+        {
+          "note": "p_jmmFi",
+          "owner": "p_i8CcC"
+        },
+        {
+          "note": "p_x6pki",
+          "owner": "p_hSarS"
+        },
+        {
+          "note": "p_rxboK",
+          "owner": "p_hSarS"
+        },
+        {
+          "note": "p_q14C8",
+          "owner": "p_hSarS"
+        }
+      ],
+      "label": "Scripture Helps · Covenant love and mercy",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_cbpuH",
+        "endAnchor": "p_hSarS",
+        "selectedIds": [
+          "p_cbpuH",
+          "p_ipdfD",
+          "p_eVrdb",
+          "p_w2JmT",
+          "p_qfbZN",
+          "p_lAM03",
+          "p_i8CcC",
+          "p_hSarS"
+        ]
+      },
+      "readingNote": "Hosea 2 is already part of today’s basic reading. Use the link if you wish to return to it."
+    },
+    "w47-t012": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "title6",
+      "endAnchor": "p21",
+      "selectedIds": [
+        "title6",
+        "scripture_title4",
+        "title7",
+        "p21"
+      ],
+      "noteLinks": [],
+      "label": "Family study · Keeping covenants",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "title6",
+        "endAnchor": "p21",
+        "selectedIds": [
+          "title6",
+          "scripture_title4",
+          "title7",
+          "p21"
+        ]
+      },
+      "readingNote": "Hosea 2:19–20 is in today’s basic reading of Hosea 2. Read it together before doing the activity."
+    },
+    "w47-t013": {
+      "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+      "anchor": "p_trGKY",
+      "endAnchor": "p_k2Cgg",
+      "selectedIds": [
+        "p_trGKY",
+        "p_mdTTF",
+        "p_fECgb",
+        "p_ltUQG",
+        "p_buEeQ",
+        "p_sHmsK",
+        "p_wr1f6",
+        "p_k2Cgg"
+      ],
+      "noteLinks": [],
+      "label": "Children’s resources · Covenants",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_trGKY",
+        "endAnchor": "p_k2Cgg",
+        "selectedIds": [
+          "p_trGKY",
+          "p_mdTTF",
+          "p_fECgb",
+          "p_ltUQG",
+          "p_buEeQ",
+          "p_sHmsK",
+          "p_wr1f6",
+          "p_k2Cgg"
+        ]
+      },
+      "readingNote": "Hosea 2:19–20 is the same passage assigned in today’s basic course."
+    },
+    "w47-t014": {
+      "path": "/study/friend/2021/12/elder-soares-speaks-to-children",
+      "anchor": "series_title1",
+      "endAnchor": "aside1_p1",
+      "selectedIds": [
+        "series_title1",
+        "title1",
+        "kicker1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "aside1_p1"
+      ],
+      "noteLinks": [],
+      "label": "Elder Soares Speaks to Children · Complete source",
+      "original": {
+        "path": "/study/friend/2021/12/elder-soares-speaks-to-children",
+        "sourceLang": "kor",
+        "anchor": "series_title1",
+        "endAnchor": "aside1_p1",
+        "selectedIds": [
+          "series_title1",
+          "title1",
+          "kicker1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "aside1_p1"
+        ]
+      }
+    },
+    "w47-t015": {
+      "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+      "anchor": "p_vuQIl",
+      "endAnchor": "p_bAXFA",
+      "selectedIds": [
+        "p_vuQIl",
+        "p_jhdzT",
+        "p_yQNGW",
+        "p_mYEyi",
+        "p_rJn7d",
+        "p_aUICa",
+        "p_gElNb",
+        "p_mQmmL",
+        "p_kYjO0",
+        "p_aHDj6",
+        "p_vvXf5",
+        "p_k49jd",
+        "p_oP6lm",
+        "p_bAXFA"
+      ],
+      "noteLinks": [],
+      "label": "Other weeks in the linked article · October 26–November 1",
+      "original": {
+        "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+        "sourceLang": "eng",
+        "anchor": "p_vuQIl",
+        "endAnchor": "p_bAXFA",
+        "selectedIds": [
+          "p_vuQIl",
+          "p_jhdzT",
+          "p_yQNGW",
+          "p_mYEyi",
+          "p_rJn7d",
+          "p_aUICa",
+          "p_gElNb",
+          "p_mQmmL",
+          "p_kYjO0",
+          "p_aHDj6",
+          "p_vvXf5",
+          "p_k49jd",
+          "p_oP6lm",
+          "p_bAXFA"
+        ]
+      },
+      "readingNote": "This is another week’s activity within the complete linked November article. Its other weekly chapters are not added to this week’s required reading."
+    },
+    "w47-t016": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "p5",
+      "endAnchor": "p5",
+      "selectedIds": [
+        "p5"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Return to the Lord: Hosea 14",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "p5",
+        "endAnchor": "p5",
+        "selectedIds": [
+          "p5"
+        ]
+      }
+    },
+    "w47-t017": {
+      "path": "/study/scriptures/ot/hosea/14",
+      "anchor": "title_number1",
+      "endAnchor": "p9",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_b_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_b_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_c_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_d_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_b_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_c_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_d_p1",
+          "owner": "p9"
+        }
+      ],
+      "label": "Hosea 14:1–9",
+      "original": {
+        "path": "/study/scriptures/ot/hosea/14",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p9",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "title2",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "title3",
+          "p9"
+        ]
+      }
+    },
+    "w47-t018": {
+      "path": "/study/manual/hymns/come-unto-jesus",
+      "anchor": "song_number1",
+      "endAnchor": "p2",
+      "selectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "figure1_p11",
+        "figure1_p12",
+        "figure1_p13",
+        "figure1_p14",
+        "figure1_p15",
+        "figure1_p16",
+        "figure1_p17",
+        "figure1_p18",
+        "p1",
+        "p2"
+      ],
+      "noteLinks": [],
+      "label": "Come unto Jesus · Complete source",
+      "original": {
+        "path": "/study/manual/hymns/come-unto-jesus",
+        "sourceLang": "kor",
+        "anchor": "song_number1",
+        "endAnchor": "p2",
+        "selectedIds": [
+          "song_number1",
+          "title1",
+          "figure1_p1",
+          "figure1_p2",
+          "figure1_p3",
+          "figure1_p4",
+          "figure1_p5",
+          "figure1_p6",
+          "figure1_p7",
+          "figure1_p8",
+          "figure1_p9",
+          "figure1_p10",
+          "figure1_p11",
+          "figure1_p12",
+          "figure1_p13",
+          "figure1_p14",
+          "figure1_p15",
+          "figure1_p16",
+          "figure1_p17",
+          "figure1_p18",
+          "p1",
+          "p2"
+        ]
+      }
+    },
+    "w47-t019": {
+      "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+      "anchor": "p_fmIv9",
+      "endAnchor": "p_j5T6c",
+      "selectedIds": [
+        "p_fmIv9",
+        "p_fmpyv",
+        "p_j5T6c"
+      ],
+      "noteLinks": [],
+      "label": "Scripture Helps · God’s love and mercy",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_fmIv9",
+        "endAnchor": "p_j5T6c",
+        "selectedIds": [
+          "p_fmIv9",
+          "p_fmpyv",
+          "p_j5T6c"
+        ]
+      }
+    },
+    "w47-t020": {
+      "path": "/study/general-conference/2024/04/45kearon",
+      "anchor": "title1",
+      "endAnchor": "p27",
+      "selectedIds": [
+        "title1",
+        "author1",
+        "author2",
+        "kicker1",
+        "p1",
+        "p2",
+        "p4",
+        "p30",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p29",
+        "p19",
+        "p20",
+        "p21",
+        "p28",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note2_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note3_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note4_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note5_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note6_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note7_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note8_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note10_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note11_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note12_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note13_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note14_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note15_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note16_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note17_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note18_p1",
+          "owner": "p29"
+        },
+        {
+          "note": "note19_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note20_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note21_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note22_p1",
+          "owner": "p21"
+        },
+        {
+          "note": "note23_p1",
+          "owner": "p28"
+        },
+        {
+          "note": "note24_p1",
+          "owner": "p23"
+        },
+        {
+          "note": "note25_p1",
+          "owner": "p25"
+        }
+      ],
+      "label": "God’s Intent Is to Bring You Home · Complete source",
+      "original": {
+        "path": "/study/general-conference/2024/04/45kearon",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p27",
+        "selectedIds": [
+          "title1",
+          "author1",
+          "author2",
+          "kicker1",
+          "p1",
+          "p2",
+          "p4",
+          "p30",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p29",
+          "p19",
+          "p20",
+          "p21",
+          "p28",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "p27"
+        ]
+      }
+    },
+    "w47-t021": {
+      "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+      "anchor": "p_qWHJd",
+      "endAnchor": "p_o6ILT",
+      "selectedIds": [
+        "p_qWHJd",
+        "p_aXczM",
+        "p_o6ILT"
+      ],
+      "noteLinks": [],
+      "label": "Scripture Helps · Come unto Jesus",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_qWHJd",
+        "endAnchor": "p_o6ILT",
+        "selectedIds": [
+          "p_qWHJd",
+          "p_aXczM",
+          "p_o6ILT"
+        ]
+      },
+      "readingNote": "This hymn was assigned earlier today. Use the link if you would like to sing it again."
+    },
+    "w47-t022": {
+      "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+      "anchor": "p_dqFQ5",
+      "endAnchor": "p_dqFQ5",
+      "selectedIds": [
+        "p_dqFQ5"
+      ],
+      "noteLinks": [],
+      "label": "Children’s resources · Keeping His Promise",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_dqFQ5",
+        "endAnchor": "p_dqFQ5",
+        "selectedIds": [
+          "p_dqFQ5"
+        ]
+      }
+    },
+    "w47-t023": {
+      "path": "/study/friend/2023/03/keeping-his-promise",
+      "anchor": "title1",
+      "endAnchor": "figure1_p1",
+      "selectedIds": [
+        "title1",
+        "author1",
+        "author2",
+        "author3",
+        "kicker1",
+        "p27",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "figure1_p1"
+      ],
+      "noteLinks": [],
+      "label": "Keeping His Promise · Complete source",
+      "original": {
+        "path": "/study/friend/2023/03/keeping-his-promise",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "figure1_p1",
+        "selectedIds": [
+          "title1",
+          "author1",
+          "author2",
+          "author3",
+          "kicker1",
+          "p27",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "figure1_p1"
+        ]
+      }
+    },
+    "w47-t024": {
+      "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+      "anchor": "p_zhN10",
+      "endAnchor": "p_sFjUI",
+      "selectedIds": [
+        "p_zhN10",
+        "p_xgKA8",
+        "p_lNwtm",
+        "p_d1mbb",
+        "p_fSE4Z",
+        "p_kltLd",
+        "p_u8uim",
+        "p_kWoHu",
+        "p_uCE1G",
+        "p_sFjUI"
+      ],
+      "noteLinks": [],
+      "label": "Other weeks in the linked article · November 2–8",
+      "original": {
+        "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+        "sourceLang": "eng",
+        "anchor": "p_zhN10",
+        "endAnchor": "p_sFjUI",
+        "selectedIds": [
+          "p_zhN10",
+          "p_xgKA8",
+          "p_lNwtm",
+          "p_d1mbb",
+          "p_fSE4Z",
+          "p_kltLd",
+          "p_u8uim",
+          "p_kWoHu",
+          "p_uCE1G",
+          "p_sFjUI"
+        ]
+      },
+      "readingNote": "This is another week’s activity in the full November article. Its weekly chapters are not added to this week’s required reading."
+    },
+    "w47-t025": {
+      "path": "/study/scriptures/ot/hosea/4",
+      "anchor": "title_number1",
+      "endAnchor": "p19",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_c_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_b_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_c_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_d_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_e_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_b_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_c_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_d_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_b_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_c_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note15_a_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note15_b_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note17_a_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note18_a_p1",
+          "owner": "p18"
+        }
+      ],
+      "label": "Hosea 4:1–19",
+      "original": {
+        "path": "/study/scriptures/ot/hosea/4",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p19",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "title2",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "title3",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19"
+        ]
+      }
+    },
+    "w47-t026": {
+      "path": "/study/scriptures/ot/hosea/5",
+      "anchor": "title_number1",
+      "endAnchor": "p15",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15"
+      ],
+      "noteLinks": [
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_b_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_c_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_d_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note15_a_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note15_b_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note15_c_p1",
+          "owner": "p15"
+        }
+      ],
+      "label": "Hosea 5:1–15",
+      "original": {
+        "path": "/study/scriptures/ot/hosea/5",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p15",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "title2",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15"
+        ]
+      }
+    },
+    "w47-t027": {
+      "path": "/study/scriptures/ot/hosea/6",
+      "anchor": "title_number1",
+      "endAnchor": "p3",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_b_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        }
+      ],
+      "label": "Hosea 6:1–3",
+      "original": {
+        "path": "/study/scriptures/ot/hosea/6",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p3",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3"
+        ]
+      }
+    },
+    "w47-t028": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "scripture_title2",
+      "endAnchor": "p6",
+      "selectedIds": [
+        "scripture_title2",
+        "title4",
+        "p6"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Compare three images of faithfulness",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "scripture_title2",
+        "endAnchor": "p6",
+        "selectedIds": [
+          "scripture_title2",
+          "title4",
+          "p6"
+        ]
+      }
+    },
+    "w47-t029": {
+      "path": "/study/scriptures/ot/hosea/6",
+      "anchor": "p4",
+      "endAnchor": "p7",
+      "selectedIds": [
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "noteLinks": [
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_b_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_c_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_d_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note7_b_p1",
+          "owner": "p7"
+        }
+      ],
+      "label": "Hosea 6:4–7",
+      "original": {
+        "path": "/study/scriptures/ot/hosea/6",
+        "sourceLang": "kor",
+        "anchor": "p4",
+        "endAnchor": "p7",
+        "selectedIds": [
+          "p4",
+          "p5",
+          "p6",
+          "p7"
+        ]
+      }
+    },
+    "w47-t030": {
+      "path": "/study/scriptures/ot/isa/48",
+      "anchor": "p18",
+      "endAnchor": "p18",
+      "selectedIds": [
+        "p18"
+      ],
+      "noteLinks": [
+        {
+          "note": "note18_a_p1",
+          "owner": "p18"
+        }
+      ],
+      "label": "Isaiah 48:18",
+      "original": {
+        "path": "/study/scriptures/ot/isa/48",
+        "sourceLang": "kor",
+        "anchor": "p18",
+        "endAnchor": "p18",
+        "selectedIds": [
+          "p18"
+        ]
+      }
+    },
+    "w47-t031": {
+      "path": "/study/scriptures/bofm/1-ne/2",
+      "anchor": "p9",
+      "endAnchor": "p10",
+      "selectedIds": [
+        "p9",
+        "p10"
+      ],
+      "noteLinks": [
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_b_p1",
+          "owner": "p10"
+        }
+      ],
+      "label": "1 Nephi 2:9–10",
+      "original": {
+        "path": "/study/scriptures/bofm/1-ne/2",
+        "sourceLang": "kor",
+        "anchor": "p9",
+        "endAnchor": "p10",
+        "selectedIds": [
+          "p9",
+          "p10"
+        ]
+      }
+    },
+    "w47-t032": {
+      "path": "/study/scriptures/ot/hosea/6",
+      "anchor": "p8",
+      "endAnchor": "p11",
+      "selectedIds": [
+        "p8",
+        "p9",
+        "p10",
+        "p11"
+      ],
+      "noteLinks": [
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        }
+      ],
+      "label": "Hosea 6:8–11",
+      "original": {
+        "path": "/study/scriptures/ot/hosea/6",
+        "sourceLang": "kor",
+        "anchor": "p8",
+        "endAnchor": "p11",
+        "selectedIds": [
+          "p8",
+          "p9",
+          "p10",
+          "p11"
+        ]
+      }
+    },
+    "w47-t033": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "p7",
+      "endAnchor": "p7",
+      "selectedIds": [
+        "p7"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Jesus quotes Hosea",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "p7",
+        "endAnchor": "p7",
+        "selectedIds": [
+          "p7"
+        ]
+      }
+    },
+    "w47-t034": {
+      "path": "/study/scriptures/nt/matt/9",
+      "anchor": "p10",
+      "endAnchor": "p13",
+      "selectedIds": [
+        "p10",
+        "p11",
+        "p12",
+        "p13"
+      ],
+      "noteLinks": [
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_b_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_c_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_d_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_e_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_f_p1",
+          "owner": "p13"
+        }
+      ],
+      "label": "Matthew 9:10–13",
+      "original": {
+        "path": "/study/scriptures/nt/matt/9",
+        "sourceLang": "kor",
+        "anchor": "p10",
+        "endAnchor": "p13",
+        "selectedIds": [
+          "p10",
+          "p11",
+          "p12",
+          "p13"
+        ]
+      }
+    },
+    "w47-t035": {
+      "path": "/study/scriptures/nt/matt/12",
+      "anchor": "p1",
+      "endAnchor": "p8",
+      "selectedIds": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_c_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_b_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        }
+      ],
+      "label": "Matthew 12:1–8",
+      "original": {
+        "path": "/study/scriptures/nt/matt/12",
+        "sourceLang": "kor",
+        "anchor": "p1",
+        "endAnchor": "p8",
+        "selectedIds": [
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8"
+        ]
+      }
+    },
+    "w47-t036": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "p8",
+      "endAnchor": "p8",
+      "selectedIds": [
+        "p8"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Rend your heart",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "p8",
+        "endAnchor": "p8",
+        "selectedIds": [
+          "p8"
+        ]
+      }
+    },
+    "w47-t037": {
+      "path": "/study/scriptures/ot/joel/2",
+      "anchor": "p12",
+      "endAnchor": "p13",
+      "selectedIds": [
+        "p12",
+        "p13"
+      ],
+      "noteLinks": [
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_b_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_c_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_b_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_c_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_d_p1",
+          "owner": "p13"
+        }
+      ],
+      "label": "Joel 2:12–13",
+      "original": {
+        "path": "/study/scriptures/ot/joel/2",
+        "sourceLang": "kor",
+        "anchor": "p12",
+        "endAnchor": "p13",
+        "selectedIds": [
+          "p12",
+          "p13"
+        ]
+      }
+    },
+    "w47-t038": {
+      "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+      "anchor": "p_eXOqV",
+      "endAnchor": "p_zOBVI",
+      "selectedIds": [
+        "p_eXOqV",
+        "p_kmfQy",
+        "p_p9G5P",
+        "p_zOBVI"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_os1k4",
+          "owner": "p_p9G5P"
+        },
+        {
+          "note": "p_fB8Yq",
+          "owner": "p_p9G5P"
+        },
+        {
+          "note": "p_vgxXt",
+          "owner": "p_p9G5P"
+        },
+        {
+          "note": "p_xXt4H",
+          "owner": "p_zOBVI"
+        }
+      ],
+      "label": "Scripture Helps · Mercy, not sacrifice",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_eXOqV",
+        "endAnchor": "p_zOBVI",
+        "selectedIds": [
+          "p_eXOqV",
+          "p_kmfQy",
+          "p_p9G5P",
+          "p_zOBVI"
+        ]
+      },
+      "readingNote": "Hosea 6:6–7 and the Savior’s quotations were read earlier today."
+    },
+    "w47-t039": {
+      "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+      "anchor": "p_tP5r2",
+      "endAnchor": "p_nz0yU",
+      "selectedIds": [
+        "p_tP5r2",
+        "p_z3Klf",
+        "p_uWxDL",
+        "p_rY7pJ",
+        "p_dblhD",
+        "p_nz0yU"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_reRgb",
+          "owner": "p_uWxDL"
+        },
+        {
+          "note": "p_n09fC",
+          "owner": "p_uWxDL"
+        },
+        {
+          "note": "p_bTpLK",
+          "owner": "p_nz0yU"
+        },
+        {
+          "note": "p_yitoV",
+          "owner": "p_nz0yU"
+        },
+        {
+          "note": "p_kxyQs",
+          "owner": "p_nz0yU"
+        },
+        {
+          "note": "p_jtgGH",
+          "owner": "p_nz0yU"
+        }
+      ],
+      "label": "Scripture Helps · Joel and a repentant heart",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_tP5r2",
+        "endAnchor": "p_nz0yU",
+        "selectedIds": [
+          "p_tP5r2",
+          "p_z3Klf",
+          "p_uWxDL",
+          "p_rY7pJ",
+          "p_dblhD",
+          "p_nz0yU"
+        ]
+      },
+      "readingNote": "Joel 2:12–13 is the passage read just before this."
+    },
+    "w47-t040": {
+      "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+      "anchor": "title1",
+      "endAnchor": "p3",
+      "selectedIds": [
+        "title1",
+        "p1",
+        "p2",
+        "figure1_title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "title3",
+        "p3"
+      ],
+      "noteLinks": [],
+      "label": "Teach by the Spirit · 1/4 Preparation and the Savior’s example",
+      "original": {
+        "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p3",
+        "selectedIds": [
+          "title1",
+          "p1",
+          "p2",
+          "figure1_title1",
+          "figure1_p1",
+          "figure1_p2",
+          "figure1_p3",
+          "figure1_p4",
+          "figure1_p5",
+          "title3",
+          "p3"
+        ]
+      },
+      "readingNote": "A 4-minute 17-second learning video is provided at the top of this article. The assigned Matthew passage follows the question about it."
+    },
+    "w47-t041": {
+      "path": "/study/scriptures/nt/matt/4",
+      "anchor": "p1",
+      "endAnchor": "p11",
+      "selectedIds": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_c_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_b_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_c_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_b_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_b_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_c_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_d_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_e_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note5_b_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_b_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_b_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_b_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note11_b_p1",
+          "owner": "p11"
+        }
+      ],
+      "label": "Matthew 4:1–11",
+      "original": {
+        "path": "/study/scriptures/nt/matt/4",
+        "sourceLang": "kor",
+        "anchor": "p1",
+        "endAnchor": "p11",
+        "selectedIds": [
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11"
+        ]
+      }
+    },
+    "w47-t042": {
+      "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+      "anchor": "p4",
+      "endAnchor": "p11",
+      "selectedIds": [
+        "p4",
+        "p5",
+        "p6",
+        "title6",
+        "p7",
+        "p9",
+        "p10",
+        "p11"
+      ],
+      "noteLinks": [],
+      "label": "Teach by the Spirit · 2/4 Preparation and learners’ needs",
+      "original": {
+        "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+        "sourceLang": "kor",
+        "anchor": "p4",
+        "endAnchor": "p11",
+        "selectedIds": [
+          "p4",
+          "p5",
+          "p6",
+          "title6",
+          "p7",
+          "p9",
+          "p10",
+          "p11"
+        ]
+      },
+      "readingNote": "This is the beginning of the complete teaching article. The sections on inviting the Spirit and testimony continue on days 5 and 7."
+    },
+    "w47-t043": {
+      "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+      "anchor": "p_bhV0C",
+      "endAnchor": "p_bhV0C",
+      "selectedIds": [
+        "p_bhV0C"
+      ],
+      "noteLinks": [],
+      "label": "Children’s resources · Singing about Jesus",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_bhV0C",
+        "endAnchor": "p_bhV0C",
+        "selectedIds": [
+          "p_bhV0C"
+        ]
+      }
+    },
+    "w47-t044": {
+      "path": "/study/friend/2023/12/for-little-friends/32-i-can-sing-about-jesus",
+      "anchor": "title1",
+      "endAnchor": "p1",
+      "selectedIds": [
+        "title1",
+        "figure1_p1",
+        "p1"
+      ],
+      "noteLinks": [],
+      "label": "I Can Sing about Jesus Christ · Complete source",
+      "original": {
+        "path": "/study/friend/2023/12/for-little-friends/32-i-can-sing-about-jesus",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p1",
+        "selectedIds": [
+          "title1",
+          "figure1_p1",
+          "p1"
+        ]
+      }
+    },
+    "w47-t045": {
+      "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+      "anchor": "p_anJk9",
+      "endAnchor": "p_iYNI8",
+      "selectedIds": [
+        "p_anJk9",
+        "p_fS2hh",
+        "p_mQKpv",
+        "p_wOCbo",
+        "p_wR0r5",
+        "p_j5j4x",
+        "p_orGkE",
+        "p_f113Y",
+        "p_mPjYP",
+        "p_iYNI8"
+      ],
+      "noteLinks": [],
+      "label": "Other weeks in the linked article · November 9–15",
+      "original": {
+        "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+        "sourceLang": "eng",
+        "anchor": "p_anJk9",
+        "endAnchor": "p_iYNI8",
+        "selectedIds": [
+          "p_anJk9",
+          "p_fS2hh",
+          "p_mQKpv",
+          "p_wOCbo",
+          "p_wR0r5",
+          "p_j5j4x",
+          "p_orGkE",
+          "p_f113Y",
+          "p_mPjYP",
+          "p_iYNI8"
+        ]
+      },
+      "readingNote": "This part of the monthly article contains last week’s Daniel activity. It is not a new scripture assignment in this week’s basic course."
+    },
+    "w47-t046": {
+      "path": "/study/scriptures/ot/hosea/10",
+      "anchor": "title_number1",
+      "endAnchor": "p15",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_c_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_d_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_b_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_b_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_c_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_d_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_b_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_b_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_c_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_b_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_c_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note14_b_p1",
+          "owner": "p14"
+        }
+      ],
+      "label": "Hosea 10:1–15",
+      "original": {
+        "path": "/study/scriptures/ot/hosea/10",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p15",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "title2",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15"
+        ]
+      }
+    },
+    "w47-t047": {
+      "path": "/study/scriptures/ot/hosea/11",
+      "anchor": "title_number1",
+      "endAnchor": "p12",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_c_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_b_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note7_b_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_b_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_b_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        }
+      ],
+      "label": "Hosea 11:1–12",
+      "original": {
+        "path": "/study/scriptures/ot/hosea/11",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p12",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "title2",
+          "p12"
+        ]
+      }
+    },
+    "w47-t048": {
+      "path": "/study/scriptures/ot/hosea/12",
+      "anchor": "title_number1",
+      "endAnchor": "p14",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_b_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_c_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_d_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_b_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_b_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        }
+      ],
+      "label": "Hosea 12:1–14",
+      "original": {
+        "path": "/study/scriptures/ot/hosea/12",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p14",
+        "selectedIds": [
+          "title_number1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "title1",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14"
+        ]
+      }
+    },
+    "w47-t049": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "p16",
+      "endAnchor": "p18",
+      "selectedIds": [
+        "p16",
+        "p17",
+        "p18"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Elder Bednar on receiving the Holy Ghost",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "p16",
+        "endAnchor": "p18",
+        "selectedIds": [
+          "p16",
+          "p17",
+          "p18"
+        ]
+      }
+    },
+    "w47-t050": {
+      "path": "/study/broadcasts/an-evening-with-the-general-authorities/2020/02/bednar-discussion",
+      "anchor": "title1",
+      "endAnchor": "p1",
+      "selectedIds": [
+        "title1",
+        "subtitle1",
+        "author1",
+        "author2",
+        "p1"
+      ],
+      "noteLinks": [],
+      "label": "Elder David A. Bednar Discussion · Complete source",
+      "original": {
+        "path": "/study/broadcasts/an-evening-with-the-general-authorities/2020/02/bednar-discussion",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p106",
+        "selectedIds": [
+          "title1",
+          "subtitle1",
+          "author1",
+          "author2",
+          "p106"
+        ]
+      },
+      "readingNote": "The official source provides a video, not a written transcript. The full discussion is 61 minutes 29 seconds. Consider it with the quotation in the preceding manual section."
+    },
+    "w47-t051": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "scripture_title5",
+      "endAnchor": "p23",
+      "selectedIds": [
+        "scripture_title5",
+        "title8",
+        "p22",
+        "p23"
+      ],
+      "noteLinks": [],
+      "label": "Family study · It is time to seek the Lord",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "scripture_title5",
+        "endAnchor": "p23",
+        "selectedIds": [
+          "scripture_title5",
+          "title8",
+          "p22",
+          "p23"
+        ]
+      },
+      "readingNote": "Hosea 10:12 is in today’s basic reading of Hosea 10. Read it together before the clock and planting activities."
+    },
+    "w47-t052": {
+      "path": "/study/music/hymns-for-home-and-church/anytime-anywhere",
+      "anchor": "song_number1",
+      "endAnchor": "p2",
+      "selectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "figure1_p11",
+        "figure1_p12",
+        "figure1_p13",
+        "figure1_p14",
+        "p1",
+        "p2"
+      ],
+      "noteLinks": [],
+      "label": "Anytime, Anywhere · Complete source",
+      "original": {
+        "path": "/study/music/hymns-for-home-and-church/anytime-anywhere",
+        "sourceLang": "kor",
+        "anchor": "song_number1",
+        "endAnchor": "p2",
+        "selectedIds": [
+          "song_number1",
+          "title1",
+          "figure1_p1",
+          "figure1_p2",
+          "figure1_p3",
+          "figure1_p4",
+          "figure1_p5",
+          "figure1_p6",
+          "figure1_p7",
+          "figure1_p8",
+          "figure1_p9",
+          "figure1_p10",
+          "figure1_p11",
+          "figure1_p12",
+          "p1",
+          "p2"
+        ]
+      }
+    },
+    "w47-t053": {
+      "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+      "anchor": "p_s5zFS",
+      "endAnchor": "p_bmgXd",
+      "selectedIds": [
+        "p_s5zFS",
+        "p_hMhRa",
+        "p_bmgXd"
+      ],
+      "noteLinks": [],
+      "label": "Children’s resources · Teach Me to Walk in the Light",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_s5zFS",
+        "endAnchor": "p_bmgXd",
+        "selectedIds": [
+          "p_s5zFS",
+          "p_hMhRa",
+          "p_bmgXd"
+        ]
+      },
+      "readingNote": "Hosea 10:12 is assigned in today’s basic course."
+    },
+    "w47-t054": {
+      "path": "/study/manual/childrens-songbook/teach-me-to-walk-in-the-light",
+      "anchor": "song_number1",
+      "endAnchor": "p2",
+      "selectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "figure1_p11",
+        "figure1_p12",
+        "figure1_p13",
+        "figure1_p14",
+        "figure1_p15",
+        "figure1_p16",
+        "figure1_p17",
+        "p1",
+        "p2"
+      ],
+      "noteLinks": [],
+      "label": "Teach Me to Walk in the Light · Complete source",
+      "original": {
+        "path": "/study/manual/childrens-songbook/teach-me-to-walk-in-the-light",
+        "sourceLang": "kor",
+        "anchor": "song_number1",
+        "endAnchor": "p2",
+        "selectedIds": [
+          "song_number1",
+          "title1",
+          "figure1_p1",
+          "figure1_p2",
+          "figure1_p3",
+          "figure1_p4",
+          "figure1_p5",
+          "figure1_p6",
+          "figure1_p7",
+          "figure1_p8",
+          "figure1_p9",
+          "figure1_p10",
+          "figure1_p11",
+          "figure1_p12",
+          "figure1_p13",
+          "figure1_p14",
+          "figure1_p15",
+          "figure1_p16",
+          "figure1_p17",
+          "p1",
+          "p2"
+        ]
+      }
+    },
+    "w47-t055": {
+      "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+      "anchor": "p_rRJB3",
+      "endAnchor": "p_rRJB3",
+      "selectedIds": [
+        "p_rRJB3"
+      ],
+      "noteLinks": [],
+      "label": "Children’s video · Time to Seek the Lord · 0:35",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_rRJB3",
+        "endAnchor": "p_rRJB3",
+        "selectedIds": [
+          "p_rRJB3"
+        ]
+      },
+      "readingNote": "The official 35-second player appears directly below this sentence. A written transcript is not provided."
+    },
+    "w47-t056": {
+      "path": "/study/scriptures/ot/hosea/13",
+      "anchor": "title_number1",
+      "endAnchor": "p16",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_b_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_c_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note5_b_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_b_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_b_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_b_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_b_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note11_b_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_b_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_c_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note14_b_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note14_c_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note14_d_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note14_e_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note14_f_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note15_a_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note16_a_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_b_p1",
+          "owner": "p16"
+        }
+      ],
+      "label": "Hosea 13:1–16",
+      "original": {
+        "path": "/study/scriptures/ot/hosea/13",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p16",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16"
+        ]
+      }
+    },
+    "w47-t057": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "p12",
+      "endAnchor": "p13",
+      "selectedIds": [
+        "p12",
+        "p13"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Receiving the Spirit: examples in Mosiah",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "p12",
+        "endAnchor": "p13",
+        "selectedIds": [
+          "p12",
+          "p13"
+        ]
+      }
+    },
+    "w47-t058": {
+      "path": "/study/scriptures/bofm/mosiah/4",
+      "anchor": "p1",
+      "endAnchor": "p20",
+      "selectedIds": [
+        "p1",
+        "p2",
+        "p3",
+        "p19",
+        "p20"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_c_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_b_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_c_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_d_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_e_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_f_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_b_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_c_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_d_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note19_a_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note20_a_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note20_b_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note20_c_p1",
+          "owner": "p20"
+        }
+      ],
+      "label": "Mosiah 4:1–3, 19–20",
+      "original": {
+        "path": "/study/scriptures/bofm/mosiah/4",
+        "sourceLang": "kor",
+        "anchor": "p1",
+        "endAnchor": "p20",
+        "selectedIds": [
+          "p1",
+          "p2",
+          "p3",
+          "p19",
+          "p20"
+        ]
+      }
+    },
+    "w47-t059": {
+      "path": "/study/scriptures/bofm/mosiah/18",
+      "anchor": "p7",
+      "endAnchor": "p11",
+      "selectedIds": [
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11"
+      ],
+      "noteLinks": [
+        {
+          "note": "note7_a_p1",
+          "owner": "p7"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note8_b_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_b_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_c_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note9_d_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_b_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_c_p1",
+          "owner": "p10"
+        }
+      ],
+      "label": "Mosiah 18:7–11",
+      "original": {
+        "path": "/study/scriptures/bofm/mosiah/18",
+        "sourceLang": "kor",
+        "anchor": "p7",
+        "endAnchor": "p11",
+        "selectedIds": [
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11"
+        ]
+      }
+    },
+    "w47-t060": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "p14",
+      "endAnchor": "p14",
+      "selectedIds": [
+        "p14"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Receiving the Spirit: Helaman",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "p14",
+        "endAnchor": "p14",
+        "selectedIds": [
+          "p14"
+        ]
+      }
+    },
+    "w47-t061": {
+      "path": "/study/scriptures/bofm/hel/6",
+      "anchor": "p34",
+      "endAnchor": "p36",
+      "selectedIds": [
+        "p34",
+        "p35",
+        "p36"
+      ],
+      "noteLinks": [
+        {
+          "note": "note34_a_p1",
+          "owner": "p34"
+        },
+        {
+          "note": "note35_a_p1",
+          "owner": "p35"
+        },
+        {
+          "note": "note36_a_p1",
+          "owner": "p36"
+        },
+        {
+          "note": "note36_b_p1",
+          "owner": "p36"
+        }
+      ],
+      "label": "Helaman 6:34–36",
+      "original": {
+        "path": "/study/scriptures/bofm/hel/6",
+        "sourceLang": "kor",
+        "anchor": "p34",
+        "endAnchor": "p36",
+        "selectedIds": [
+          "p34",
+          "p35",
+          "p36"
+        ]
+      }
+    },
+    "w47-t062": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "p15",
+      "endAnchor": "p15",
+      "selectedIds": [
+        "p15"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Receiving the Spirit: Doctrine and Covenants",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "p15",
+        "endAnchor": "p15",
+        "selectedIds": [
+          "p15"
+        ]
+      }
+    },
+    "w47-t063": {
+      "path": "/study/scriptures/dc-testament/dc/19",
+      "anchor": "p37",
+      "endAnchor": "p41",
+      "selectedIds": [
+        "p37",
+        "p38",
+        "p39",
+        "p40",
+        "p41"
+      ],
+      "noteLinks": [
+        {
+          "note": "note37_a_p1",
+          "owner": "p37"
+        },
+        {
+          "note": "note37_b_p1",
+          "owner": "p37"
+        },
+        {
+          "note": "note38_a_p1",
+          "owner": "p38"
+        },
+        {
+          "note": "note38_b_p1",
+          "owner": "p38"
+        },
+        {
+          "note": "note38_c_p1",
+          "owner": "p38"
+        },
+        {
+          "note": "note39_a_p1",
+          "owner": "p39"
+        },
+        {
+          "note": "note39_b_p1",
+          "owner": "p39"
+        },
+        {
+          "note": "note40_a_p1",
+          "owner": "p40"
+        },
+        {
+          "note": "note41_a_p1",
+          "owner": "p41"
+        },
+        {
+          "note": "note41_b_p1",
+          "owner": "p41"
+        }
+      ],
+      "label": "Doctrine and Covenants 19:37–41",
+      "original": {
+        "path": "/study/scriptures/dc-testament/dc/19",
+        "sourceLang": "kor",
+        "anchor": "p37",
+        "endAnchor": "p41",
+        "selectedIds": [
+          "p37",
+          "p38",
+          "p39",
+          "p40",
+          "p41"
+        ]
+      }
+    },
+    "w47-t064": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "p20",
+      "endAnchor": "p20",
+      "selectedIds": [
+        "p20"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · An environment for learning by the Spirit",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "p20",
+        "endAnchor": "p20",
+        "selectedIds": [
+          "p20"
+        ]
+      }
+    },
+    "w47-t065": {
+      "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+      "anchor": "title9",
+      "endAnchor": "p19",
+      "selectedIds": [
+        "title9",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "figure4_p1",
+        "title12",
+        "p16",
+        "p17",
+        "p18",
+        "p19"
+      ],
+      "noteLinks": [],
+      "label": "Teach by the Spirit · 3/4 An environment for the Spirit and personal revelation",
+      "original": {
+        "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+        "sourceLang": "kor",
+        "anchor": "title9",
+        "endAnchor": "p19",
+        "selectedIds": [
+          "title9",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "figure4_p1",
+          "title12",
+          "p16",
+          "p17",
+          "p18",
+          "p19"
+        ]
+      },
+      "readingNote": "The preparation and learners’ needs sections were assigned on day 3. The testimony section continues on day 7."
+    },
+    "w47-t066": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "scripture_title6",
+      "endAnchor": "p25",
+      "selectedIds": [
+        "scripture_title6",
+        "title9",
+        "p24",
+        "p25"
+      ],
+      "noteLinks": [],
+      "label": "Family study · Jesus is my Savior and Redeemer",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "scripture_title6",
+        "endAnchor": "p25",
+        "selectedIds": [
+          "scripture_title6",
+          "title9",
+          "p24",
+          "p25"
+        ]
+      },
+      "readingNote": "Hosea 13:4,14 is in today’s basic reading of Hosea 13. Recall those verses as you discuss the picture and their meaning."
+    },
+    "w47-t067": {
+      "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+      "anchor": "p_vWFMz",
+      "endAnchor": "p_yfrfM",
+      "selectedIds": [
+        "p_vWFMz",
+        "p_yfrfM"
+      ],
+      "noteLinks": [],
+      "label": "Children’s resources · Savior and Redeemer",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_vWFMz",
+        "endAnchor": "p_yfrfM",
+        "selectedIds": [
+          "p_vWFMz",
+          "p_yfrfM"
+        ]
+      },
+      "readingNote": "The Hosea passage is in day 5 of the basic course. The singing activity is in day 3 of the family course."
+    },
+    "w47-t068": {
+      "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+      "anchor": "p_tkjkE",
+      "endAnchor": "p_tkjkE",
+      "selectedIds": [
+        "p_tkjkE"
+      ],
+      "noteLinks": [],
+      "label": "Children’s resources · Jesus Blessed One by One",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_tkjkE",
+        "endAnchor": "p_tkjkE",
+        "selectedIds": [
+          "p_tkjkE"
+        ]
+      }
+    },
+    "w47-t069": {
+      "path": "/study/friend/2024/10/come-follow-me/17-jesus-blessed-one-by-one",
+      "anchor": "series_title1",
+      "endAnchor": "aside1_p1",
+      "selectedIds": [
+        "series_title1",
+        "title1",
+        "figure1_p1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "aside1_p1"
+      ],
+      "noteLinks": [],
+      "label": "Jesus Blessed One by One · Complete source",
+      "original": {
+        "path": "/study/friend/2024/10/come-follow-me/17-jesus-blessed-one-by-one",
+        "sourceLang": "kor",
+        "anchor": "series_title1",
+        "endAnchor": "aside1_p1",
+        "selectedIds": [
+          "series_title1",
+          "title1",
+          "figure1_p1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "aside1_p1"
+        ]
+      }
+    },
+    "w47-t070": {
+      "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+      "anchor": "p_qas3k",
+      "endAnchor": "p_nAy7j",
+      "selectedIds": [
+        "p_qas3k",
+        "p_qGM9I",
+        "p_lZoTI",
+        "p_xqIzo",
+        "p_gSd3y",
+        "p_wMNqU",
+        "p_jRIsC",
+        "p_p6RON",
+        "p_mlpd5",
+        "p_nAy7j"
+      ],
+      "noteLinks": [],
+      "label": "Other weeks in the linked article · November 23–29",
+      "original": {
+        "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+        "sourceLang": "eng",
+        "anchor": "p_qas3k",
+        "endAnchor": "p_nAy7j",
+        "selectedIds": [
+          "p_qas3k",
+          "p_qGM9I",
+          "p_lZoTI",
+          "p_xqIzo",
+          "p_gSd3y",
+          "p_wMNqU",
+          "p_jRIsC",
+          "p_p6RON",
+          "p_mlpd5",
+          "p_nAy7j"
+        ]
+      },
+      "readingNote": "This part of the monthly article contains next week’s Jonah activity. Entire chapters of Jonah are not added to this week’s basic reading."
+    },
+    "w47-t071": {
+      "path": "/study/scriptures/ot/joel/1",
+      "anchor": "title1",
+      "endAnchor": "p20",
+      "selectedIds": [
+        "title1",
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20"
+      ],
+      "noteLinks": [
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_b_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_b_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note6_b_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note8_a_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_b_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note14_b_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note15_a_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note16_a_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note17_a_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note19_a_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note20_a_p1",
+          "owner": "p20"
+        }
+      ],
+      "label": "Joel 1:1–20",
+      "original": {
+        "path": "/study/scriptures/ot/joel/1",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p20",
+        "selectedIds": [
+          "title1",
+          "title_number1",
+          "p1",
+          "title2",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20"
+        ]
+      }
+    },
+    "w47-t072": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "scripture_title3",
+      "endAnchor": "p9",
+      "selectedIds": [
+        "scripture_title3",
+        "title5",
+        "p9"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Joel 2 and the promise of the Spirit",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "scripture_title3",
+        "endAnchor": "p9",
+        "selectedIds": [
+          "scripture_title3",
+          "title5",
+          "p9"
+        ]
+      },
+      "readingNote": "The invitation to repent in verses 12–13 was assigned on day 3. Today covers the rest of Joel 2."
+    },
+    "w47-t073": {
+      "path": "/study/scriptures/ot/joel/2",
+      "anchor": "title_number1",
+      "endAnchor": "p11",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_b_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note1_c_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_b_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note5_b_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_b_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_c_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note10_d_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note11_b_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note11_c_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note11_d_p1",
+          "owner": "p11"
+        }
+      ],
+      "label": "Joel 2:1–11",
+      "original": {
+        "path": "/study/scriptures/ot/joel/2",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "title4",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "title2",
+          "title3",
+          "title4"
+        ]
+      }
+    },
+    "w47-t074": {
+      "path": "/study/scriptures/ot/joel/2",
+      "anchor": "p14",
+      "endAnchor": "p32",
+      "selectedIds": [
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32"
+      ],
+      "noteLinks": [
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note15_a_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note16_a_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note17_a_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_b_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_c_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note18_a_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note18_b_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note20_a_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note20_b_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note20_c_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note22_a_p1",
+          "owner": "p22"
+        },
+        {
+          "note": "note23_a_p1",
+          "owner": "p23"
+        },
+        {
+          "note": "note23_b_p1",
+          "owner": "p23"
+        },
+        {
+          "note": "note23_c_p1",
+          "owner": "p23"
+        },
+        {
+          "note": "note24_a_p1",
+          "owner": "p24"
+        },
+        {
+          "note": "note25_a_p1",
+          "owner": "p25"
+        },
+        {
+          "note": "note26_a_p1",
+          "owner": "p26"
+        },
+        {
+          "note": "note27_a_p1",
+          "owner": "p27"
+        },
+        {
+          "note": "note28_a_p1",
+          "owner": "p28"
+        },
+        {
+          "note": "note28_b_p1",
+          "owner": "p28"
+        },
+        {
+          "note": "note28_c_p1",
+          "owner": "p28"
+        },
+        {
+          "note": "note28_d_p1",
+          "owner": "p28"
+        },
+        {
+          "note": "note28_e_p1",
+          "owner": "p28"
+        },
+        {
+          "note": "note28_f_p1",
+          "owner": "p28"
+        },
+        {
+          "note": "note30_a_p1",
+          "owner": "p30"
+        },
+        {
+          "note": "note30_b_p1",
+          "owner": "p30"
+        },
+        {
+          "note": "note30_c_p1",
+          "owner": "p30"
+        },
+        {
+          "note": "note31_a_p1",
+          "owner": "p31"
+        },
+        {
+          "note": "note31_b_p1",
+          "owner": "p31"
+        },
+        {
+          "note": "note32_a_p1",
+          "owner": "p32"
+        },
+        {
+          "note": "note32_b_p1",
+          "owner": "p32"
+        },
+        {
+          "note": "note32_c_p1",
+          "owner": "p32"
+        },
+        {
+          "note": "note32_d_p1",
+          "owner": "p32"
+        },
+        {
+          "note": "note32_e_p1",
+          "owner": "p32"
+        },
+        {
+          "note": "note32_f_p1",
+          "owner": "p32"
+        },
+        {
+          "note": "note32_g_p1",
+          "owner": "p32"
+        },
+        {
+          "note": "note32_h_p1",
+          "owner": "p32"
+        },
+        {
+          "note": "note32_i_p1",
+          "owner": "p32"
+        }
+      ],
+      "label": "Joel 2:14–32",
+      "original": {
+        "path": "/study/scriptures/ot/joel/2",
+        "sourceLang": "kor",
+        "anchor": "p14",
+        "endAnchor": "p32",
+        "selectedIds": [
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "p27",
+          "p28",
+          "p29",
+          "p30",
+          "p31",
+          "p32"
+        ]
+      }
+    },
+    "w47-t075": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "p10",
+      "endAnchor": "p10",
+      "selectedIds": [
+        "p10"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Two events quoting Joel",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "p10",
+        "endAnchor": "p10",
+        "selectedIds": [
+          "p10"
+        ]
+      },
+      "readingNote": "Joel 2:28–32 was read just before this. Compare it with the accounts of these two events."
+    },
+    "w47-t076": {
+      "path": "/study/scriptures/pgp/js-h/1",
+      "anchor": "p41",
+      "endAnchor": "p41",
+      "selectedIds": [
+        "p41"
+      ],
+      "noteLinks": [
+        {
+          "note": "note41_a_p1",
+          "owner": "p41"
+        },
+        {
+          "note": "note41_b_p1",
+          "owner": "p41"
+        },
+        {
+          "note": "note41_c_p1",
+          "owner": "p41"
+        }
+      ],
+      "label": "Joseph Smith—History 1:41",
+      "original": {
+        "path": "/study/scriptures/pgp/js-h/1",
+        "sourceLang": "kor",
+        "anchor": "p41",
+        "endAnchor": "p41",
+        "selectedIds": [
+          "p41"
+        ]
+      }
+    },
+    "w47-t077": {
+      "path": "/study/scriptures/nt/acts/2",
+      "anchor": "p1",
+      "endAnchor": "p21",
+      "selectedIds": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_a_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_b_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_c_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note6_a_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note16_a_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note17_a_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_b_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_c_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_d_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_e_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note18_a_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note19_a_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note19_b_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note20_a_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note20_b_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note20_c_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note21_a_p1",
+          "owner": "p21"
+        }
+      ],
+      "label": "Acts 2:1–21",
+      "original": {
+        "path": "/study/scriptures/nt/acts/2",
+        "sourceLang": "kor",
+        "anchor": "p1",
+        "endAnchor": "p21",
+        "selectedIds": [
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21"
+        ]
+      }
+    },
+    "w47-t078": {
+      "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+      "anchor": "p_x3Os3",
+      "endAnchor": "p_oh5Pn",
+      "selectedIds": [
+        "p_x3Os3",
+        "p_riDQb",
+        "p_kD80z",
+        "p_adIzb",
+        "p_oTYVJ",
+        "p_rDFtJ",
+        "p_bp9bk",
+        "p_oh5Pn"
+      ],
+      "noteLinks": [
+        {
+          "note": "p_lQPQG",
+          "owner": "p_kD80z"
+        },
+        {
+          "note": "p_uCDC4",
+          "owner": "p_adIzb"
+        },
+        {
+          "note": "p_rPad5",
+          "owner": "p_adIzb"
+        },
+        {
+          "note": "p_tu4Zl",
+          "owner": "p_bp9bk"
+        }
+      ],
+      "label": "Scripture Helps · The Spirit poured out on all flesh",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_x3Os3",
+        "endAnchor": "p_oh5Pn",
+        "selectedIds": [
+          "p_x3Os3",
+          "p_riDQb",
+          "p_kD80z",
+          "p_adIzb",
+          "p_oTYVJ",
+          "p_rDFtJ",
+          "p_bp9bk",
+          "p_oh5Pn"
+        ]
+      },
+      "readingNote": "Joel’s promise and the two events were read earlier today. Use those passages as you consider these explanations."
+    },
+    "w47-t079": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "p11",
+      "endAnchor": "p11",
+      "selectedIds": [
+        "p11"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · President Nelson on revelation",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "p11",
+        "endAnchor": "p11",
+        "selectedIds": [
+          "p11"
+        ]
+      }
+    },
+    "w47-t080": {
+      "path": "/study/general-conference/2018/04/revelation-for-the-church-revelation-for-our-lives",
+      "anchor": "title1",
+      "endAnchor": "p41",
+      "selectedIds": [
+        "title1",
+        "p1",
+        "author2",
+        "kicker1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38",
+        "p39",
+        "p40",
+        "p41"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note3_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note4_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note5_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note6_p1",
+          "owner": "p22"
+        },
+        {
+          "note": "note7_p1",
+          "owner": "p25"
+        },
+        {
+          "note": "note8_p1",
+          "owner": "p27"
+        },
+        {
+          "note": "note9_p1",
+          "owner": "p29"
+        },
+        {
+          "note": "note10_p1",
+          "owner": "p30"
+        },
+        {
+          "note": "note11_p1",
+          "owner": "p31"
+        },
+        {
+          "note": "note12_p1",
+          "owner": "p32"
+        },
+        {
+          "note": "note13_p1",
+          "owner": "p33"
+        },
+        {
+          "note": "note14_p1",
+          "owner": "p34"
+        },
+        {
+          "note": "note15_p1",
+          "owner": "p39"
+        }
+      ],
+      "label": "Revelation for the Church, Revelation for Our Lives · Complete source",
+      "original": {
+        "path": "/study/general-conference/2018/04/revelation-for-the-church-revelation-for-our-lives",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p41",
+        "selectedIds": [
+          "title1",
+          "p1",
+          "kicker1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21",
+          "p22",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "p27",
+          "p28",
+          "p29",
+          "p30",
+          "p31",
+          "p32",
+          "p33",
+          "p34",
+          "p35",
+          "p36",
+          "p37",
+          "p38",
+          "p39",
+          "p40",
+          "p41"
+        ]
+      }
+    },
+    "w47-t081": {
+      "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+      "anchor": "p_ws2IN",
+      "endAnchor": "p_bY7tI",
+      "selectedIds": [
+        "p_ws2IN",
+        "p_bY7tI"
+      ],
+      "noteLinks": [],
+      "label": "Scripture Helps · The same message on revelation",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_ws2IN",
+        "endAnchor": "p_bY7tI",
+        "selectedIds": [
+          "p_ws2IN",
+          "p_bY7tI"
+        ]
+      },
+      "readingNote": "Scripture Helps recommends the same message by President Nelson that was read just before this. It is not a second required reading."
+    },
+    "w47-t082": {
+      "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+      "anchor": "p_u7bOc",
+      "endAnchor": "p_u7bOc",
+      "selectedIds": [
+        "p_u7bOc"
+      ],
+      "noteLinks": [],
+      "label": "Scripture Helps · The Spirit of God",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_u7bOc",
+        "endAnchor": "p_u7bOc",
+        "selectedIds": [
+          "p_u7bOc"
+        ]
+      }
+    },
+    "w47-t083": {
+      "path": "/study/manual/hymns/the-spirit-of-god",
+      "anchor": "song_number1",
+      "endAnchor": "p2",
+      "selectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "figure1_p11",
+        "figure1_p12",
+        "figure1_p13",
+        "figure1_p14",
+        "figure1_p15",
+        "figure1_p16",
+        "figure1_p17",
+        "figure1_p18",
+        "figure1_p19",
+        "figure1_p20",
+        "figure1_p21",
+        "figure1_p22",
+        "figure1_p23",
+        "figure1_p24",
+        "figure1_p25",
+        "figure1_p26",
+        "figure1_p27",
+        "figure1_p28",
+        "figure1_p29",
+        "figure1_p30",
+        "figure1_p31",
+        "figure1_p32",
+        "figure1_p33",
+        "figure1_p34",
+        "figure1_p35",
+        "figure1_p36",
+        "figure1_p37",
+        "figure1_p38",
+        "figure1_p39",
+        "p1",
+        "p2"
+      ],
+      "noteLinks": [],
+      "label": "The Spirit of God · Complete source",
+      "original": {
+        "path": "/study/manual/hymns/the-spirit-of-god",
+        "sourceLang": "kor",
+        "anchor": "song_number1",
+        "endAnchor": "p2",
+        "selectedIds": [
+          "song_number1",
+          "title1",
+          "figure1_p1",
+          "figure1_p2",
+          "figure1_p3",
+          "figure1_p4",
+          "figure1_p5",
+          "figure1_p6",
+          "figure1_p7",
+          "figure1_p8",
+          "figure1_p9",
+          "figure1_p10",
+          "figure1_p11",
+          "figure1_p12",
+          "figure1_p13",
+          "figure1_p14",
+          "figure1_p15",
+          "figure1_p16",
+          "figure1_p17",
+          "figure1_p18",
+          "figure1_p19",
+          "figure1_p20",
+          "figure1_p21",
+          "figure1_p22",
+          "figure1_p23",
+          "figure1_p24",
+          "figure1_p25",
+          "figure1_p26",
+          "figure1_p27",
+          "figure1_p28",
+          "figure1_p29",
+          "figure1_p30",
+          "figure1_p31",
+          "figure1_p32",
+          "figure1_p33",
+          "figure1_p34",
+          "figure1_p35",
+          "figure1_p36",
+          "figure1_p37",
+          "figure1_p38",
+          "figure1_p39",
+          "p1",
+          "p2"
+        ]
+      }
+    },
+    "w47-t084": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "scripture_title7",
+      "endAnchor": "p26",
+      "selectedIds": [
+        "scripture_title7",
+        "title10",
+        "p26"
+      ],
+      "noteLinks": [],
+      "label": "Family study · The promise of the Spirit",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "scripture_title7",
+        "endAnchor": "p26",
+        "selectedIds": [
+          "scripture_title7",
+          "title10",
+          "p26"
+        ]
+      },
+      "readingNote": "Joel 2:28–29 is in today’s basic reading of Joel 2:14–32. Read it together before the pouring activity."
+    },
+    "w47-t085": {
+      "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+      "anchor": "p_cqvLW",
+      "endAnchor": "p_mfaZe",
+      "selectedIds": [
+        "p_cqvLW",
+        "p_umTcF",
+        "p_mfaZe"
+      ],
+      "noteLinks": [],
+      "label": "Children’s resources · The Still Small Voice",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_cqvLW",
+        "endAnchor": "p_mfaZe",
+        "selectedIds": [
+          "p_cqvLW",
+          "p_umTcF",
+          "p_mfaZe"
+        ]
+      },
+      "readingNote": "Joel 2:28–29 is in today’s basic course. The assigned song is The Still Small Voice."
+    },
+    "w47-t086": {
+      "path": "/study/manual/childrens-songbook/the-still-small-voice",
+      "anchor": "song_number1",
+      "endAnchor": "p1",
+      "selectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "p1"
+      ],
+      "noteLinks": [],
+      "label": "The Still Small Voice · Complete source",
+      "original": {
+        "path": "/study/manual/childrens-songbook/the-still-small-voice",
+        "sourceLang": "eng",
+        "anchor": "song_number1",
+        "endAnchor": "p1",
+        "selectedIds": [
+          "song_number1",
+          "title1",
+          "figure1_p1",
+          "figure1_p2",
+          "figure1_p3",
+          "figure1_p4",
+          "figure1_p5",
+          "figure1_p6",
+          "figure1_p7",
+          "figure1_p8",
+          "p1"
+        ]
+      }
+    },
+    "w47-t087": {
+      "path": "/study/scriptures/ot/joel/3",
+      "anchor": "title_number1",
+      "endAnchor": "p21",
+      "selectedIds": [
+        "title_number1",
+        "study_summary1",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_a_p1",
+          "owner": "p1"
+        },
+        {
+          "note": "note2_a_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_b_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note2_c_p1",
+          "owner": "p2"
+        },
+        {
+          "note": "note4_a_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note4_b_p1",
+          "owner": "p4"
+        },
+        {
+          "note": "note9_a_p1",
+          "owner": "p9"
+        },
+        {
+          "note": "note10_a_p1",
+          "owner": "p10"
+        },
+        {
+          "note": "note11_a_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note12_a_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note12_b_p1",
+          "owner": "p12"
+        },
+        {
+          "note": "note13_a_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_b_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_c_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note13_d_p1",
+          "owner": "p13"
+        },
+        {
+          "note": "note14_a_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note14_b_p1",
+          "owner": "p14"
+        },
+        {
+          "note": "note15_a_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note15_b_p1",
+          "owner": "p15"
+        },
+        {
+          "note": "note16_a_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_b_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_c_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_d_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_e_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_f_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note17_a_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_b_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_c_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_d_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note18_a_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note18_b_p1",
+          "owner": "p18"
+        },
+        {
+          "note": "note19_a_p1",
+          "owner": "p19"
+        },
+        {
+          "note": "note21_a_p1",
+          "owner": "p21"
+        }
+      ],
+      "label": "Joel 3:1–21",
+      "original": {
+        "path": "/study/scriptures/ot/joel/3",
+        "sourceLang": "kor",
+        "anchor": "title_number1",
+        "endAnchor": "p21",
+        "selectedIds": [
+          "title_number1",
+          "title1",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "p9",
+          "p10",
+          "p11",
+          "p12",
+          "p13",
+          "title2",
+          "p14",
+          "p15",
+          "p16",
+          "p17",
+          "p18",
+          "p19",
+          "p20",
+          "p21"
+        ]
+      }
+    },
+    "w47-t088": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "p19",
+      "endAnchor": "p19",
+      "selectedIds": [
+        "p19"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Promptings and Enemy Territory",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "p19",
+        "endAnchor": "p19",
+        "selectedIds": [
+          "p19"
+        ]
+      }
+    },
+    "w47-t089": {
+      "path": "/study/general-conference/2023/10/25stevenson",
+      "anchor": "title1",
+      "endAnchor": "p39",
+      "selectedIds": [
+        "title1",
+        "author1",
+        "author2",
+        "kicker1",
+        "title2",
+        "p1",
+        "p2",
+        "title3",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "title4",
+        "p9",
+        "p10",
+        "title5",
+        "p11",
+        "p12",
+        "p13",
+        "title6",
+        "p14",
+        "p15",
+        "p16",
+        "title7",
+        "p17",
+        "p18",
+        "p19",
+        "title8",
+        "p20",
+        "p21",
+        "p22",
+        "title9",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "title10",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35",
+        "p36",
+        "p37",
+        "p38",
+        "p39"
+      ],
+      "noteLinks": [
+        {
+          "note": "note1_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note2_p1",
+          "owner": "p3"
+        },
+        {
+          "note": "note3_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note4_p1",
+          "owner": "p6"
+        },
+        {
+          "note": "note5_p1",
+          "owner": "p8"
+        },
+        {
+          "note": "note6_p1",
+          "owner": "p11"
+        },
+        {
+          "note": "note7_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note8_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note9_p1",
+          "owner": "p20"
+        },
+        {
+          "note": "note10_p1",
+          "owner": "p21"
+        },
+        {
+          "note": "note11_p1",
+          "owner": "p23"
+        },
+        {
+          "note": "note12_p1",
+          "owner": "p29"
+        },
+        {
+          "note": "note13_p1",
+          "owner": "p35"
+        }
+      ],
+      "label": "Promptings of the Spirit · Complete source",
+      "original": {
+        "path": "/study/general-conference/2023/10/25stevenson",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p39",
+        "selectedIds": [
+          "title1",
+          "author1",
+          "author2",
+          "kicker1",
+          "title2",
+          "p1",
+          "p2",
+          "title3",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7",
+          "p8",
+          "title4",
+          "p9",
+          "p10",
+          "title5",
+          "p11",
+          "p12",
+          "p13",
+          "title6",
+          "p14",
+          "p15",
+          "p16",
+          "title7",
+          "p17",
+          "p18",
+          "p19",
+          "title8",
+          "p20",
+          "p21",
+          "p22",
+          "title9",
+          "p23",
+          "p24",
+          "p25",
+          "p26",
+          "p27",
+          "p28",
+          "p29",
+          "title10",
+          "p30",
+          "p31",
+          "p32",
+          "p33",
+          "p34",
+          "p35",
+          "p36",
+          "p37",
+          "p38",
+          "p39"
+        ]
+      }
+    },
+    "w47-t090": {
+      "path": "/study/video/mormon-messages-for-youth/2012-06-006-enemy-territory",
+      "anchor": "title1",
+      "endAnchor": "p1",
+      "selectedIds": [
+        "title1",
+        "p1"
+      ],
+      "noteLinks": [],
+      "label": "Enemy Territory · Complete source",
+      "original": {
+        "path": "/study/video/mormon-messages-for-youth/2012-06-006-enemy-territory",
+        "sourceLang": "kor",
+        "anchor": "title1",
+        "endAnchor": "p1",
+        "selectedIds": [
+          "title1",
+          "p1"
+        ]
+      },
+      "readingNote": "The official video is 3 minutes 38 seconds. This page provides the video and a short introduction."
+    },
+    "w47-t091": {
+      "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+      "anchor": "title15",
+      "endAnchor": "p20",
+      "selectedIds": [
+        "title15",
+        "p20"
+      ],
+      "noteLinks": [],
+      "label": "Teach by the Spirit · 4/4 The Savior’s example of testimony",
+      "original": {
+        "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+        "sourceLang": "kor",
+        "anchor": "title15",
+        "endAnchor": "p20",
+        "selectedIds": [
+          "title15",
+          "p20"
+        ]
+      }
+    },
+    "w47-t092": {
+      "path": "/study/scriptures/nt/john/11",
+      "anchor": "p25",
+      "endAnchor": "p27",
+      "selectedIds": [
+        "p25",
+        "p26",
+        "p27"
+      ],
+      "noteLinks": [
+        {
+          "note": "note25_a_p1",
+          "owner": "p25"
+        },
+        {
+          "note": "note25_b_p1",
+          "owner": "p25"
+        },
+        {
+          "note": "note25_c_p1",
+          "owner": "p25"
+        },
+        {
+          "note": "note25_d_p1",
+          "owner": "p25"
+        },
+        {
+          "note": "note25_e_p1",
+          "owner": "p25"
+        },
+        {
+          "note": "note26_a_p1",
+          "owner": "p26"
+        },
+        {
+          "note": "note27_a_p1",
+          "owner": "p27"
+        }
+      ],
+      "label": "John 11:25–27",
+      "original": {
+        "path": "/study/scriptures/nt/john/11",
+        "sourceLang": "kor",
+        "anchor": "p25",
+        "endAnchor": "p27",
+        "selectedIds": [
+          "p25",
+          "p26",
+          "p27"
+        ]
+      }
+    },
+    "w47-t093": {
+      "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+      "anchor": "p21",
+      "endAnchor": "figure2_p10",
+      "selectedIds": [
+        "p21",
+        "p22",
+        "p23",
+        "figure2_title1",
+        "figure2_p1",
+        "figure2_p2",
+        "figure2_p3",
+        "figure2_p4",
+        "figure2_p5",
+        "figure2_p6",
+        "figure2_p7",
+        "figure2_p8",
+        "figure2_p9",
+        "figure2_p10"
+      ],
+      "noteLinks": [],
+      "label": "Teach by the Spirit · Testimony and applying what you learn",
+      "original": {
+        "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/09-teach-by-the-spirit",
+        "sourceLang": "kor",
+        "anchor": "p21",
+        "endAnchor": "figure2_p10",
+        "selectedIds": [
+          "p21",
+          "p22",
+          "p23",
+          "figure2_title1",
+          "figure2_p1",
+          "figure2_p2",
+          "figure2_p3",
+          "figure2_p4",
+          "figure2_p5",
+          "figure2_p6",
+          "figure2_p7",
+          "figure2_p8",
+          "figure2_p9",
+          "figure2_p10"
+        ]
+      },
+      "readingNote": "This completes the linked teaching article that began on day 3."
+    },
+    "w47-t094": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "p_uKbDf",
+      "endAnchor": "p_mMAH5",
+      "selectedIds": [
+        "p_uKbDf",
+        "p_sE1eb",
+        "p_uKuqA",
+        "p_mMAH5"
+      ],
+      "noteLinks": [],
+      "label": "Come, Follow Me · Links to Scripture Helps",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "p_uHXgV",
+        "endAnchor": "p_jgY1j",
+        "selectedIds": [
+          "p_uHXgV",
+          "p_uFn2M",
+          "p_rB12K",
+          "p_jgY1j"
+        ]
+      },
+      "readingNote": "The minor prophets and God’s children were explained on day 1. These links do not add another required reading of the same material."
+    },
+    "w47-t095": {
+      "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+      "anchor": "p_xywpk",
+      "endAnchor": "p_uooFo",
+      "selectedIds": [
+        "p_xywpk",
+        "p_uooFo"
+      ],
+      "noteLinks": [],
+      "label": "Scripture Helps · Savior image",
+      "original": {
+        "path": "/study/manual/scripture-helps-old-testament/45-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_xywpk",
+        "endAnchor": "p_uooFo",
+        "selectedIds": [
+          "p_xywpk",
+          "p_uooFo"
+        ]
+      }
+    },
+    "w47-t096": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "p27",
+      "endAnchor": "p27",
+      "selectedIds": [
+        "p27"
+      ],
+      "noteLinks": [],
+      "label": "Family study · Three scriptures about the Holy Ghost",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "p27",
+        "endAnchor": "p27",
+        "selectedIds": [
+          "p27"
+        ]
+      },
+      "readingNote": "Joel 2:28–29 was assigned in day 6 of the basic course. Today, read the following three passages together."
+    },
+    "w47-t097": {
+      "path": "/study/scriptures/nt/john/14",
+      "anchor": "p16",
+      "endAnchor": "p16",
+      "selectedIds": [
+        "p16"
+      ],
+      "noteLinks": [
+        {
+          "note": "note16_a_p1",
+          "owner": "p16"
+        },
+        {
+          "note": "note16_b_p1",
+          "owner": "p16"
+        }
+      ],
+      "label": "John 14:16",
+      "original": {
+        "path": "/study/scriptures/nt/john/14",
+        "sourceLang": "kor",
+        "anchor": "p16",
+        "endAnchor": "p16",
+        "selectedIds": [
+          "p16"
+        ]
+      }
+    },
+    "w47-t098": {
+      "path": "/study/scriptures/bofm/moro/10",
+      "anchor": "p5",
+      "endAnchor": "p5",
+      "selectedIds": [
+        "p5"
+      ],
+      "noteLinks": [
+        {
+          "note": "note5_a_p1",
+          "owner": "p5"
+        },
+        {
+          "note": "note5_b_p1",
+          "owner": "p5"
+        }
+      ],
+      "label": "Moroni 10:5",
+      "original": {
+        "path": "/study/scriptures/bofm/moro/10",
+        "sourceLang": "kor",
+        "anchor": "p5",
+        "endAnchor": "p5",
+        "selectedIds": [
+          "p5"
+        ]
+      }
+    },
+    "w47-t099": {
+      "path": "/study/scriptures/dc-testament/dc/42",
+      "anchor": "p17",
+      "endAnchor": "p17",
+      "selectedIds": [
+        "p17"
+      ],
+      "noteLinks": [
+        {
+          "note": "note17_a_p1",
+          "owner": "p17"
+        },
+        {
+          "note": "note17_b_p1",
+          "owner": "p17"
+        }
+      ],
+      "label": "Doctrine and Covenants 42:17",
+      "original": {
+        "path": "/study/scriptures/dc-testament/dc/42",
+        "sourceLang": "kor",
+        "anchor": "p17",
+        "endAnchor": "p17",
+        "selectedIds": [
+          "p17"
+        ]
+      }
+    },
+    "w47-t100": {
+      "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+      "anchor": "p_f54lp",
+      "endAnchor": "p_f54lp",
+      "selectedIds": [
+        "p_f54lp"
+      ],
+      "noteLinks": [],
+      "label": "Children’s resources · I Can Feel the Holy Ghost",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_f54lp",
+        "endAnchor": "p_f54lp",
+        "selectedIds": [
+          "p_f54lp"
+        ]
+      }
+    },
+    "w47-t101": {
+      "path": "/study/friend/2022/07/i-can-feel-the-holy-ghost",
+      "anchor": "series_title1",
+      "endAnchor": "figure1_p1",
+      "selectedIds": [
+        "series_title1",
+        "title1",
+        "p1",
+        "figure1_p1"
+      ],
+      "noteLinks": [],
+      "label": "I Can Feel the Holy Ghost · Complete source",
+      "original": {
+        "path": "/study/friend/2022/07/i-can-feel-the-holy-ghost",
+        "sourceLang": "kor",
+        "anchor": "series_title1",
+        "endAnchor": "figure1_p1",
+        "selectedIds": [
+          "series_title1",
+          "title1",
+          "p1",
+          "figure1_p1"
+        ]
+      }
+    },
+    "w47-t102": {
+      "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+      "anchor": "p_sqejF",
+      "endAnchor": "p_sqejF",
+      "selectedIds": [
+        "p_sqejF"
+      ],
+      "noteLinks": [],
+      "label": "Children’s resources · Invite the Spirit activity",
+      "original": {
+        "path": "/study/manual/games-stories-activities/2026/november/47-hosea-1-6-10-14-joel",
+        "sourceLang": "kor",
+        "anchor": "p_sqejF",
+        "endAnchor": "p_sqejF",
+        "selectedIds": [
+          "p_sqejF"
+        ]
+      }
+    },
+    "w47-t103": {
+      "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+      "anchor": "p_uyKg5",
+      "endAnchor": "p_tSxUJ",
+      "selectedIds": [
+        "p_uyKg5",
+        "p_oQeT4",
+        "p_tSxUJ"
+      ],
+      "noteLinks": [],
+      "label": "This week’s linked activity · God Will Bless Me with His Spirit",
+      "original": {
+        "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+        "sourceLang": "eng",
+        "anchor": "p_uyKg5",
+        "endAnchor": "p_tSxUJ",
+        "selectedIds": [
+          "p_uyKg5",
+          "p_oQeT4",
+          "p_tSxUJ"
+        ]
+      }
+    },
+    "w47-t104": {
+      "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+      "anchor": "p_aIMzs",
+      "endAnchor": "p_aIMzs",
+      "selectedIds": [
+        "p_aIMzs"
+      ],
+      "noteLinks": [],
+      "label": "This week’s linked activity · Sing The Holy Ghost",
+      "original": {
+        "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+        "sourceLang": "eng",
+        "anchor": "p_aIMzs",
+        "endAnchor": "p_aIMzs",
+        "selectedIds": [
+          "p_aIMzs"
+        ]
+      }
+    },
+    "w47-t105": {
+      "path": "/study/manual/childrens-songbook/the-holy-ghost",
+      "anchor": "song_number1",
+      "endAnchor": "p1",
+      "selectedIds": [
+        "song_number1",
+        "title1",
+        "figure1_p1",
+        "figure1_p2",
+        "figure1_p3",
+        "figure1_p4",
+        "figure1_p5",
+        "figure1_p6",
+        "figure1_p7",
+        "figure1_p8",
+        "figure1_p9",
+        "figure1_p10",
+        "figure1_p11",
+        "figure1_p12",
+        "figure1_p13",
+        "figure1_p14",
+        "figure1_p15",
+        "figure1_p16",
+        "figure1_p17",
+        "figure1_p18",
+        "figure1_p19",
+        "p1"
+      ],
+      "noteLinks": [],
+      "label": "The Holy Ghost · Complete source",
+      "original": {
+        "path": "/study/manual/childrens-songbook/the-holy-ghost",
+        "sourceLang": "kor",
+        "anchor": "song_number1",
+        "endAnchor": "p1",
+        "selectedIds": [
+          "song_number1",
+          "title1",
+          "figure1_p1",
+          "figure1_p2",
+          "figure1_p3",
+          "figure1_p4",
+          "figure1_p5",
+          "figure1_p6",
+          "figure1_p7",
+          "figure1_p8",
+          "figure1_p9",
+          "figure1_p10",
+          "figure1_p11",
+          "p1"
+        ]
+      }
+    },
+    "w47-t106": {
+      "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+      "anchor": "p_dVECq",
+      "endAnchor": "p_rgsK8",
+      "selectedIds": [
+        "p_dVECq",
+        "p_wH2DG",
+        "p_uWQ47",
+        "p_sqGkf",
+        "p_gwzrT",
+        "p_w9cHn",
+        "p_zrWZy",
+        "p_rO2fh",
+        "p_sl16R",
+        "p_qId3v",
+        "p_hQ9Lf",
+        "p_opfQS",
+        "p_u9Bpc",
+        "p_dGbRk",
+        "p_rgsK8"
+      ],
+      "noteLinks": [],
+      "label": "This week’s linked activity · Make an Invite the Spirit box",
+      "original": {
+        "path": "/study/friend/2026/11/come-follow-me/23-weekly-scripture-fun",
+        "sourceLang": "eng",
+        "anchor": "p_dVECq",
+        "endAnchor": "p_rgsK8",
+        "selectedIds": [
+          "p_dVECq",
+          "p_wH2DG",
+          "p_uWQ47",
+          "p_sqGkf",
+          "p_gwzrT",
+          "p_w9cHn",
+          "p_zrWZy",
+          "p_rO2fh",
+          "p_sl16R",
+          "p_qId3v",
+          "p_hQ9Lf",
+          "p_opfQS",
+          "p_u9Bpc",
+          "p_dGbRk",
+          "p_rgsK8"
+        ]
+      },
+      "readingNote": "Joel 2:28 is the same verse assigned in day 6 of the basic course. See the official page for the image lettering and cutout activity."
+    },
+    "w47-t107": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+      "anchor": "figure2_p1",
+      "endAnchor": "figure7_figure1_p1",
+      "selectedIds": [
+        "figure2_p1",
+        "figure7_figure1_p1"
+      ],
+      "noteLinks": [],
+      "label": "Family study · More resources and a picture of the Savior",
+      "original": {
+        "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/47",
+        "sourceLang": "kor",
+        "anchor": "figure2_p1",
+        "endAnchor": "figure7_figure1_p1",
+        "selectedIds": [
+          "figure2_p1",
+          "figure7_figure1_p1"
+        ]
+      }
+    }
+  }
+}

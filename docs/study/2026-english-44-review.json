@@ -1,0 +1,503 @@
+{
+  "version": 1,
+  "week": 44,
+  "reviewed": "2026-11-15",
+  "canonicalTaskSignaturesSha256": "e5b856533c50c1032ff2fce12ca38d09785c02c77a8ccae07418d7ab374a296d",
+  "sources": {
+    "manual": {
+      "path": "/study/manual/come-follow-me-for-home-and-church-old-testament-2026/44",
+      "originalLang": "kor",
+      "originalHtmlSha256": "b1a84d8bb81102eb2a4457187aea31a403a1ef308e753f5d28373e522c37e2aa",
+      "englishHtmlSha256": "15f125accce8c8af7c986ddbbc0f0dfba532df30725c89c49ba0af53e1987d98"
+    },
+    "helps": {
+      "path": "/study/manual/scripture-helps-old-testament/42-jeremiah-31-33-36-38-lamentations-1-3",
+      "originalLang": "kor",
+      "originalHtmlSha256": "0a2de272d87a22d6ae6374a41bf461b62ff5f71698c3b19ea63279027f46971e",
+      "englishHtmlSha256": "3f9492ed448e4fbaedafbc708fbb22b688bdb633791ab3a41d913bf844c4f786"
+    },
+    "gs-lamentations": {
+      "path": "/study/scriptures/gs/lamentations-book-of",
+      "originalLang": "kor",
+      "originalHtmlSha256": "03003ab5ff1773f8c62066f3ca27826e0b04785adb81e510c2c50c3c55ca331c",
+      "englishHtmlSha256": "0da0a0bdaa9c11748670ef903b6d53b82d9cf31ef65ad895ec361de37d393fbe"
+    },
+    "gs-covenant": {
+      "path": "/study/scriptures/gs/new-and-everlasting-covenant",
+      "originalLang": "kor",
+      "originalHtmlSha256": "49f9ff730a2eeeb242bf4c021fef06776bf5dabad50159837fbc0ff93ce59a42",
+      "englishHtmlSha256": "2960e8661b1ae81cd88b4248625c4176a3e36d589669024cde7f1e2838fab044"
+    },
+    "walker": {
+      "path": "/study/general-conference/2026/04/48walker",
+      "originalLang": "kor",
+      "originalHtmlSha256": "61999ed788b80828a92c52a217cb1b86b67cf94213d680fdb82419b04befdade",
+      "englishHtmlSha256": "2af496370ff7be1c7da5b4c21f3fa40e868ef32a18f8ee88617c8f20a810925b"
+    },
+    "bednar": {
+      "path": "/study/general-conference/2023/04/57bednar",
+      "originalLang": "kor",
+      "originalHtmlSha256": "f760d9219d6b0946094ce75e162b3310e62469a3b3f90c10379054742296176d",
+      "englishHtmlSha256": "b7208713126c00701b12df10e419c7b882a7ef856c2500cb0bfe94088ec75b77"
+    },
+    "jer31": {
+      "path": "/study/scriptures/ot/jer/31",
+      "originalLang": "kor",
+      "originalHtmlSha256": "04915f1494589e7e7813460269ade8031c0a3fd28d1e4c20caa475bc50338f18",
+      "englishHtmlSha256": "eceb68d094975d44610e7a366e817c71e98898d4bbf48f75664b45f3d2f5392a"
+    },
+    "jer32": {
+      "path": "/study/scriptures/ot/jer/32",
+      "originalLang": "kor",
+      "originalHtmlSha256": "f0c78f73eccfa1b7ca8409a0ca8b51aa4fe52f0fa26b244122464a696a3de77a",
+      "englishHtmlSha256": "c80393f4f54d8b36ae15091eb4f6a4529ca35b067be63b0827e2aaa8b4f40a7e"
+    },
+    "jer33": {
+      "path": "/study/scriptures/ot/jer/33",
+      "originalLang": "kor",
+      "originalHtmlSha256": "a7fc5ebbabb91d90df8d17dbc429e51c6f5eb59c5367a24b4885cb8e96f28f17",
+      "englishHtmlSha256": "007448bd93d4fdf2650aa24eb227b2f5eb58dbfe2615cbe66784eed3ff7b54c4"
+    },
+    "jer36": {
+      "path": "/study/scriptures/ot/jer/36",
+      "originalLang": "kor",
+      "originalHtmlSha256": "19c1080031a835cadca573d60d19a50388c7665ae887c2557ae762b325a3bae3",
+      "englishHtmlSha256": "9544634b7f2dfda7fea58677da42a2a2676f079f79e9dcbb34623b0ad5728e2b"
+    },
+    "jer37": {
+      "path": "/study/scriptures/ot/jer/37",
+      "originalLang": "kor",
+      "originalHtmlSha256": "b7a9aea991200a238aa1015624867145c7199a04a2ca17adc81451137878d26f",
+      "englishHtmlSha256": "36f1eb095fca0690c75b49884f978fcffd4acf7682008319a0252d93081e53ba"
+    },
+    "jer38": {
+      "path": "/study/scriptures/ot/jer/38",
+      "originalLang": "kor",
+      "originalHtmlSha256": "ba0a5315fee9e272e438485e84c58f028c6818c1496b20f5839e9f758126f09b",
+      "englishHtmlSha256": "3382a5393119635493086c0af0d15637021db8c6348719c00200ef0b723b706d"
+    },
+    "jer39": {
+      "path": "/study/scriptures/ot/jer/39",
+      "originalLang": "kor",
+      "originalHtmlSha256": "4f08986d43fe1c84b664fc2604c46870690ceca79db3311663458fdb69dfb141",
+      "englishHtmlSha256": "764df4bdb07aaca4a459bfd705a17e19047e8977ddfd68e4b4dd45d4b61e047a"
+    },
+    "lam1": {
+      "path": "/study/scriptures/ot/lam/1",
+      "originalLang": "kor",
+      "originalHtmlSha256": "6397f33f8c6e683c17857c10652721d02d1588156a1f1fdfdd92c890de197426",
+      "englishHtmlSha256": "4e8caf3cf1e62e30c4a931d8bc28b74e6ba8e4812eb7d8fe8eccfeab60a96fa1"
+    },
+    "lam3": {
+      "path": "/study/scriptures/ot/lam/3",
+      "originalLang": "kor",
+      "originalHtmlSha256": "d20b4d14b966b2a1ca0c0e3ff50808a2d554feeac8357a40957fcba031c29448",
+      "englishHtmlSha256": "5cc88e0d9355f31d4ac126f7659c18641ffc4671b47e4120635035c9da1bcf24"
+    },
+    "ne1": {
+      "path": "/study/scriptures/bofm/1-ne/1",
+      "originalLang": "kor",
+      "originalHtmlSha256": "482f68d26213ef8a6746ab93455c07f8fdebe6fe71afcb2d9d0d393501c09b20",
+      "englishHtmlSha256": "325e54c829b18cc9af0840ac4778d884b3df7a0c037c7e7b5a0fc8276faa8886"
+    },
+    "ne2": {
+      "path": "/study/scriptures/bofm/1-ne/2",
+      "originalLang": "kor",
+      "originalHtmlSha256": "e8a2cf4387e81c4414a8db7be2745ca27428c850e2489831530e5e6d0dbe6d9e",
+      "englishHtmlSha256": "c993e07510329e20223f84111027430d45ce6a946468a0cd956be96b6b804e26"
+    },
+    "jer1": {
+      "path": "/study/scriptures/ot/jer/1",
+      "originalLang": "kor",
+      "originalHtmlSha256": "4b4352bc5cfd0c5c2e308b421991f85dfdb23d7de4bdc1980e8e31e6ea9cc100",
+      "englishHtmlSha256": "a267e39b5ab75c2bb61abebc212928a2c3084a0fe828ec25410c3d1d3dc07f02"
+    },
+    "matt5": {
+      "path": "/study/scriptures/nt/matt/5",
+      "originalLang": "kor",
+      "originalHtmlSha256": "3eb884ce6221d40f9574994989f4775639e98a38111bd8729c957b61a5fd576e",
+      "englishHtmlSha256": "85d5e1b9ce8ca021e9d325ca62dae15a0b5b67deb2ea5f42e791e0c78dcc7dae"
+    },
+    "james4": {
+      "path": "/study/scriptures/nt/james/4",
+      "originalLang": "kor",
+      "originalHtmlSha256": "3f0f61d33fdbcfaa1aad5afec9ea4525368aaad828095d8cceed559d1bd8aba7",
+      "englishHtmlSha256": "1756a1572b2c34d4a35d7cfa39ae5c54d2e8f5d977a56f979ac623ff608caf77"
+    },
+    "alma36": {
+      "path": "/study/scriptures/bofm/alma/36",
+      "originalLang": "kor",
+      "originalHtmlSha256": "c7fdb85e159aecea61b5154ddd081e6fda3ddd8ccbf61e3a15aea031f58de703",
+      "englishHtmlSha256": "98e873f185572356428cc7017ed1d4464234b54484dbc7f05d81d783d6deeded"
+    },
+    "mosiah18": {
+      "path": "/study/scriptures/bofm/mosiah/18",
+      "originalLang": "kor",
+      "originalHtmlSha256": "e4f9cc7c724b46340e3b8b878cf989982721fef8c6d3fd2c23be915ef35a0f82",
+      "englishHtmlSha256": "e804672a1f64e9a921bfdb66fa840b24f5612fa0bb76bafaed3c033aea4ee993"
+    },
+    "andersen": {
+      "path": "/study/general-conference/2024/10/12andersen",
+      "originalLang": "kor",
+      "originalHtmlSha256": "9a25c451b9a64c2b8f9de4bc667150f5d8c3e915bf6c0a40055afa1271b40d10",
+      "englishHtmlSha256": "61b77919fec6c47816147412bc382a4102d92bc7801c16d84a5ca873c88b891c"
+    },
+    "christofferson": {
+      "path": "/study/general-conference/2004/04/when-thou-art-converted",
+      "originalLang": "kor",
+      "originalHtmlSha256": "f1022d4d7fbb06fc48b956123172bc6d78ed6e3ed5d59c3f3c406ec833797239",
+      "englishHtmlSha256": "9061cb65d44311743aaa91b9caf619b3fc059b74dddf51a26cde74088bbaeff3"
+    },
+    "cook": {
+      "path": "/study/general-conference/2013/10/lamentations-of-jeremiah-beware-of-bondage",
+      "originalLang": "kor",
+      "originalHtmlSha256": "d83400b8606562704124211702475fb5785f5db87f767501e7badbd0d548ddfc",
+      "englishHtmlSha256": "6a03a9045a4fd468fb69ce3dd4c9d7177cf1b3c28490017aa21d855a9585a30b"
+    },
+    "ballard": {
+      "path": "/study/general-conference/1992/10/the-joy-of-hope-fulfilled",
+      "originalLang": "eng",
+      "originalHtmlSha256": "1d04b303ab3dfa9ec217ac2519e894ad48d069b7e09a6cb576f3c332b1ad3d13",
+      "englishHtmlSha256": "0a94d1ae6541ce9ac61e075d59ae62513ce9332280aafa60d84c533604261e5f"
+    },
+    "evening": {
+      "path": "/study/broadcasts/an-evening-with-the-general-authorities/2020/02/bednar-full",
+      "originalLang": "kor",
+      "originalHtmlSha256": "e341da3c0ebfeb1c733052931212248c89ad2b9b3d19df9030a6dc280eb70070",
+      "englishHtmlSha256": "6113f47e03354dabfad8c4a0f714a2daf18e498c2cda83b3aab7ecf8ea70a1ce"
+    },
+    "teaching": {
+      "path": "/study/manual/teaching-in-the-saviors-way-2022/07-part-2/11-invite-diligent-learning",
+      "originalLang": "kor",
+      "originalHtmlSha256": "4a15c575eed0406263b1e033d28f5bdc1f8798686d0dfbe56a7dbb8645c2c49c",
+      "englishHtmlSha256": "5ddb7d2edf7748a33f2174f36388d505f0b0d9611ab961e738af6c99b77a3fe3"
+    },
+    "children": {
+      "path": "/study/manual/games-stories-activities/2026/october/44-jeremiah-31-33-36-39-lamentations-1-3",
+      "originalLang": "kor",
+      "originalHtmlSha256": "50acfafaaeea344cdd604dd7401c748d2ec9f2b55265df123a9fe18d0c78e293",
+      "englishHtmlSha256": "0bce388879a61f1eea0673e5d09813d94d43c9286ff63d5ecae7cb45dbbbfa19"
+    },
+    "family-source-1": {
+      "path": "/study/friend/2026/10/18-not-alone",
+      "originalLang": "kor",
+      "originalHtmlSha256": "c5e32c0bec7a6756b9785c7827c15c4508f966e7f9541827640394b9c551de2a",
+      "englishHtmlSha256": "2e17ea76060dc49105d3c662bacd390b1161d3561f00f2154f8bcf2f16985269"
+    },
+    "family-source-2": {
+      "path": "/study/friend/2024/08/come-follow-me/18-the-stripling-warriors",
+      "originalLang": "kor",
+      "originalHtmlSha256": "7b7778a121545045682ef9924ad532a7457fb26f340b3422a3ae65c8737786eb",
+      "englishHtmlSha256": "24ea353636ed679260183131d0f015533ffab75782d140e9780d98a3982fd04e"
+    },
+    "family-source-3": {
+      "path": "/study/friend/2025/02/02-covenants-with-god",
+      "originalLang": "kor",
+      "originalHtmlSha256": "c5e91cb31cdfd567aebe3c21ea49462af12dd01b5bffe4412e28c54e2372c66e",
+      "englishHtmlSha256": "92a4d6aa53248308d40aeed22c54d0deeb5d8eb1317c09d513ef5dab076e0fa3"
+    },
+    "family-source-4": {
+      "path": "/study/friend/2026/10/come-follow-me/23-weekly-scripture-fun",
+      "originalLang": "kor",
+      "originalHtmlSha256": "a8ebd0533c32e6b02f0543498acedc2b2fea1b8d158e38857bef532a4213cb7e",
+      "englishHtmlSha256": "d1d6c37149817c204f8776fddb917ab7e4199b704d2909f636764960def431df"
+    },
+    "family-source-5": {
+      "path": "/study/manual/scripture-stories-coloring-book-book-of-mormon/the-golden-plates-from-moroni-to-joseph",
+      "originalLang": "kor",
+      "originalHtmlSha256": "22ed980ffccbc6d746a654d890f1895cd9fad8f0d89178db30502802ec487644",
+      "englishHtmlSha256": "b442bd60fe2847d5bd225feac0582edceaf977803fc3d6dae9cf2d7b6e27b0d7"
+    },
+    "family-source-6": {
+      "path": "/study/manual/childrens-songbook/nephis-courage",
+      "originalLang": "kor",
+      "originalHtmlSha256": "f989c1dfa659d68fe060823e1091f6d420f755a35e922cb3bf38a70480f463e8",
+      "englishHtmlSha256": "f7335f0401ababc3fb007a2c60350c9f18b9d4c4c15cb5bf64a4e4380228ff59"
+    },
+    "family-source-7": {
+      "path": "/study/friend/2022/09/different-but-not-alone",
+      "originalLang": "kor",
+      "originalHtmlSha256": "066f438ee8f3d3d95155f2c8d5db1e3640c4fd1382f434670a29f964eb351ef7",
+      "englishHtmlSha256": "94e71ba884f000636a6817c4961f935e53f1478a4f63b863d700165b8d1ad319"
+    },
+    "family-source-8": {
+      "path": "/study/friend/2026/10/17-traviss-song",
+      "originalLang": "kor",
+      "originalHtmlSha256": "321f5ce510ff27b83c5f21c58ef657e23e8a968dcc8774322c282c653fe2dba3",
+      "englishHtmlSha256": "a4ad3ad9ebd9195544ceb55753c8370cca3e6fc76a558b8ddbfc32c6e2a51120"
+    },
+    "family-source-9": {
+      "path": "/study/friend/2026/10/come-follow-me/25-safe-in-the-fire",
+      "originalLang": "kor",
+      "originalHtmlSha256": "6ec7326fdbb82adcb4f686bd7f188556e72c199ed57e88592ede7f65065da940",
+      "englishHtmlSha256": "f336426343923795316ce5cd95fcc539bb150e3cbd2b3fdac4c8eae1fc75b2d1"
+    },
+    "family-source-10": {
+      "path": "/study/friend/2022/08/repentance-is-a-good-thing",
+      "originalLang": "kor",
+      "originalHtmlSha256": "7517cf6942eeae1eb9d0e1b14ab80ec477cdb098d74a54a76c6a262e83a477e0",
+      "englishHtmlSha256": "f27a3079d0a93f8f482416076707ae1b5585865a91479bd326b8cabbf843f711"
+    },
+    "hymn115": {
+      "path": "/study/manual/hymns/come-ye-disconsolate",
+      "originalLang": "eng",
+      "originalHtmlSha256": "8c797e1ac3a2441f41c51b1aec870b88fbc73a758cbb7f4189128567ed45d23b",
+      "englishHtmlSha256": "ac8033ec648d2012b63062c0575bbb1eadb8de899ffc715e1a61e1a031a2a950"
+    },
+    "family-song73": {
+      "path": "/study/manual/childrens-songbook/help-us-o-god-to-understand",
+      "originalLang": "eng",
+      "originalHtmlSha256": "af7b9cc31042423338333d05bf0d6991943f200833729148638c9f979628d833",
+      "englishHtmlSha256": "7a7aaf82a5385a0e50ab187c6a3c57d207a1364dd92f8561904e61940c87ea97"
+    }
+  },
+  "semanticDecisions": [
+    {
+      "sourceId": "manual",
+      "method": "Reviewed both languages by section meanings, scripture references, question lists, captions and family activities. Regular IDs correspond; five help-link IDs differ.",
+      "anchorReplacements": {
+        "p_h066E": "p_zPEti",
+        "p_jYLoa": "p_iImft",
+        "p_opNyv": "p_mgM61",
+        "p_mJlX6": "p_mPtvc",
+        "p_a8DzN": "p_cNrs4"
+      }
+    },
+    {
+      "sourceId": "helps",
+      "method": "All 55 body units compared by meaning and linked scripture/talk context: Rachel; new covenant; purchase; Branch; Baruch; Zedekiah; Lamentations; three talks; images. Generated IDs are stable here, but stability was not used as proof."
+    },
+    {
+      "sourceId": "children",
+      "method": "All 26 resource-list body units compared by scripture headings and named linked stories/songs. Corresponding IDs match after review."
+    },
+    {
+      "sourceId": "bednar",
+      "method": "The complete 51-unit body was compared by meaning, cited scripture and outline. Part 1 ends at p41 (ways to abide); part 2 starts title3 (And I in You). IDs match after review."
+    },
+    {
+      "sourceId": "cook",
+      "method": "The complete 34-unit body was compared by meaning and historical/scriptural references. Part 1 ends p18 (lessons of Israel captivity); part 2 starts p19 (forms of present bondage). IDs match after review."
+    },
+    {
+      "sourceId": "andersen",
+      "method": "All 55 body units, including generated IDs, were compared by meaning and outline. Part boundaries p_cD13D/p_d7CYq and p_grC8N/p_tW3aK keep hope for eternal life, hope/temples, and tragedy/testimony intact."
+    },
+    {
+      "sourceId": "teaching",
+      "method": "All 58 parsed body/metadata units compared by meaning, scripture references, learner actions and questions. Seven existing section boundaries retain the same IDs after review."
+    },
+    {
+      "sourceId": "christofferson",
+      "method": "The translations merge different paragraphs. Full text of the merged study/prayer and service/sacrifice boundaries was compared. Canonical task 042 maps through English p9; task 043 begins English p10.",
+      "groups": [
+        {
+          "original": [
+            "p5",
+            "p6"
+          ],
+          "english": [
+            "p5"
+          ],
+          "topic": "Conversion and Jeremiah 31:33"
+        },
+        {
+          "original": [
+            "p7"
+          ],
+          "english": [
+            "p6"
+          ],
+          "topic": "Opening the heart"
+        },
+        {
+          "original": [
+            "p8"
+          ],
+          "english": [
+            "p7"
+          ],
+          "topic": "Submission instead of pride"
+        },
+        {
+          "original": [
+            "p9",
+            "p10",
+            "p11"
+          ],
+          "english": [
+            "p8"
+          ],
+          "topic": "Studying and pondering scripture"
+        },
+        {
+          "original": [
+            "p12",
+            "p13",
+            "p14"
+          ],
+          "english": [
+            "p9"
+          ],
+          "topic": "Prayer and the love of Christ"
+        },
+        {
+          "original": [
+            "p15",
+            "p16"
+          ],
+          "english": [
+            "p10",
+            "p11"
+          ],
+          "topic": "Service and the sacrifice of a contrite spirit"
+        },
+        {
+          "original": [
+            "p17"
+          ],
+          "english": [
+            "p12"
+          ],
+          "topic": "Removing impurity and developing habits"
+        },
+        {
+          "original": [
+            "p18"
+          ],
+          "english": [
+            "p13"
+          ],
+          "topic": "Protective armor"
+        },
+        {
+          "original": [
+            "p19"
+          ],
+          "english": [
+            "p14"
+          ],
+          "topic": "Zagreb missionaries"
+        },
+        {
+          "original": [
+            "p20",
+            "p21"
+          ],
+          "english": [
+            "p15"
+          ],
+          "topic": "Protection from evil"
+        },
+        {
+          "original": [
+            "p22"
+          ],
+          "english": [
+            "p16"
+          ],
+          "topic": "Closing invitation and testimony"
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "jer31",
+        "jer32",
+        "jer33",
+        "jer36",
+        "jer37",
+        "jer38",
+        "jer39",
+        "lam1",
+        "lam3",
+        "ne1",
+        "ne2"
+      ],
+      "method": "Each complete chapter retains exactly the logical verse set in the canonical allocation, including English chapter introductions/headings. Verse identity is checked from published verse labels.",
+      "mergedVerseChanges": [
+        {
+          "sourceId": "jer32",
+          "original": "p3",
+          "verses": [
+            3,
+            4,
+            5
+          ],
+          "english": [
+            "p3",
+            "p4",
+            "p5"
+          ]
+        },
+        {
+          "sourceId": "jer33",
+          "original": "p10",
+          "verses": [
+            10,
+            11
+          ],
+          "english": [
+            "p10",
+            "p11"
+          ]
+        }
+      ]
+    },
+    {
+      "sourceIds": [
+        "jer1",
+        "matt5",
+        "james4",
+        "alma36",
+        "mosiah18"
+      ],
+      "method": "Only the originally designated logical verses are selected; only English notes whose owners are those verses enter the scoped manifest."
+    },
+    {
+      "sourceIds": [
+        "ballard",
+        "hymn115",
+        "family-song73"
+      ],
+      "method": "Already-English original sources: every parsed unit anchor and text SHA-256 matches the newly retrieved English source."
+    },
+    {
+      "sourceIds": [
+        "gs-lamentations",
+        "gs-covenant",
+        "walker",
+        "family-source-1",
+        "family-source-2",
+        "family-source-3",
+        "family-source-4",
+        "family-source-5",
+        "family-source-6",
+        "family-source-7",
+        "family-source-8",
+        "family-source-9",
+        "family-source-10"
+      ],
+      "method": "A single original task owns the complete article/song. The counterpart was checked by official path, English title/topic and beginning/end. The entire English body and its attached notes remain one task; no paragraph cut is inferred by position."
+    },
+    {
+      "sourceId": "family-source-6",
+      "method": "All song lines compared: Korean copyright/permission paragraphs figure1_p30 and figure1_p31 are combined in English figure1_p30; Korean song number 64 corresponds to English 120."
+    },
+    {
+      "sourceIds": [
+        "family-source-7",
+        "family-source-10"
+      ],
+      "method": "All story paragraphs match corresponding IDs after semantic comparison; English adds reference1 bibliographic metadata excluded from selected text as elsewhere."
+    },
+    {
+      "sourceId": "family-source-9",
+      "method": "All story units compared. Korean-only p_eQ4B5 is a Scan prompt; the English edition omits that prompt and retains the final scripture-story resource direction. No story paragraph is dropped."
+    },
+    {
+      "sourceId": "evening",
+      "method": "Same official English video page, title and player. Retain title1 only as the original metadata selection. Transcript/subtitle completeness is not verified."
+    }
+  ]
+}
