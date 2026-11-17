@@ -164,7 +164,7 @@ test("registered weeks keep their own tasks, titles and progress denominators", 
 });
 
 test("public reader shell follows the plan registry and keeps other routes in the existing flow", () => {
-  for (const week of [43, 44, 46])
+  for (const week of [43, 44, 46, 47])
     for (let day = 1; day <= 7; day++)
       assert.equal(isStudyReaderPath(`/week/${week}/day/${day}`), true);
   for (const path of [
@@ -187,7 +187,7 @@ test("public reader shell follows the plan registry and keeps other routes in th
 });
 
 test("daily entry uses the allocation when ready and the existing lesson otherwise", () => {
-  for (const week of [43, 44, 46]) {
+  for (const week of [43, 44, 46, 47]) {
     for (let day = 1; day <= 7; day++) {
       assert.equal(getStudyDay(week, day)?.day, day);
       assert.equal(
@@ -196,7 +196,7 @@ test("daily entry uses the allocation when ready and the existing lesson otherwi
       );
     }
   }
-  for (const week of [45, 47]) {
+  for (const week of [45, 48]) {
     assert.equal(getStudyDay(week, 7), undefined);
     assert.equal(dailyStudyHref(week, 7), `/week/${week}/day/7?view=notes`);
   }
@@ -232,7 +232,10 @@ test("week 44 source URLs retain verified anchors instead of week 43 context off
       assert.equal(end.searchParams.get("id"), start.searchParams.get("id"));
       if (task.sourceLanguageLocked)
         for (const lang of ["ko", "en", "es", "fil"] as const)
-          assert.equal(studySourceLanguage(task, lang), task.sourceLang);
+          assert.equal(
+            studySourceLanguage(task, lang),
+            lang === "en" ? "eng" : task.sourceLang,
+          );
       if (task.path.endsWith("old-testament-2026/44"))
         assert.equal(new URL(studySourceUrl(task, "ko")).hash, start.hash);
     }

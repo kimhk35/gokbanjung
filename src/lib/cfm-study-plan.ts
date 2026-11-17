@@ -1,8 +1,10 @@
 import approved from "@/data/cfm-2026-week-43.json";
 import week44 from "@/data/cfm-2026-week-44.json";
 import week46 from "@/data/cfm-2026-week-46.json";
+import week47 from "@/data/cfm-2026-week-47.json";
 import type { UiLang } from "./i18n";
 import { churchLangCode } from "./i18n";
+import { verifiedEnglishSource } from "./study-source-editions";
 
 export type StudyTrack = "adult" | "family";
 export type StudyTask = {
@@ -19,6 +21,8 @@ export type StudyTask = {
   sourceIds: string[];
   selectedIds: string[];
   noteLinks: { note: string; owner: string }[];
+  readingNote?: string;
+  relatedTaskIds?: string[];
 };
 export type StudyDay = {
   day: number;
@@ -44,6 +48,7 @@ const plans: Readonly<Record<number, StudyPlan>> = {
   43: cfmPlan,
   44: week44,
   46: week46,
+  47: week47,
 };
 export const getStudyPlan = (week: number): StudyPlan | undefined =>
   plans[week];
@@ -72,6 +77,35 @@ export const studyTasks = (
   getStudyPlan(week)?.days.find((d) => d.day === day)?.[
     track === "adult" ? "adultTasks" : "familyTasks"
   ] || [];
+
+// Optional references navigate to a passage's existing allocation. They are
+// not extra reading tasks and never contribute to the completion denominator.
+export function studyRelatedTasks(task: StudyTask, week: number) {
+  const wanted = [...new Set(task.relatedTaskIds || [])].filter(
+    (id) => id !== task.id,
+  );
+  const plan = getStudyPlan(week);
+  if (!plan) return [];
+  const locations = plan.days.flatMap((day) =>
+    (["adult", "family"] as const).flatMap((track) =>
+      day[track === "adult" ? "adultTasks" : "familyTasks"].map((item) => ({
+        day: day.day,
+        track,
+        task: item,
+      })),
+    ),
+  );
+  return wanted.flatMap((id) => {
+    const target = locations.find((location) => location.task.id === id);
+    if (!target) return [];
+    const query = new URLSearchParams({
+      track: target.track,
+      source: target.task.path,
+      anchor: target.task.anchor || "main",
+    });
+    return [{ ...target, href: `/week/${week}/day/${target.day}?${query}` }];
+  });
+}
 export const dayTitles = [
   "A prophet’s calling",
   "Known by God",
@@ -112,6 +146,7 @@ export function studyFamilyTitle(day: StudyDay, week: number, english = false) {
 // Uses the Church reader's own paragraph selection (blue lines). No source text
 // is copied or rewritten, and a start/end jump retains the entire selected range.
 export function studySourceLanguage(task: StudyTask, uiLang: UiLang) {
+  if (uiLang === "en" && verifiedEnglishSource(task)) return "eng";
   // A new allocation may have verified only one translation's paragraph IDs.
   if (task.sourceLanguageLocked) return task.sourceLang;
   // Generated paragraph IDs differ by translation. Do not point an English
@@ -124,6 +159,14 @@ export function studySourceLanguage(task: StudyTask, uiLang: UiLang) {
     return task.sourceLang;
   return churchLangCode(uiLang);
 }
+
+// Translation changes only the displayed source. Allocation IDs, saved reading
+// positions, discussion anchors and completion requirements remain canonical.
+export function studySourceEdition(task: StudyTask, uiLang: UiLang): StudyTask {
+  const translation = uiLang === "en" ? verifiedEnglishSource(task) : undefined;
+  return translation ? { ...task, ...translation, sourceLang: "eng" } : task;
+}
+
 export function studySourceUrl(
   task: StudyTask,
   uiLang: UiLang,
@@ -132,7 +175,10 @@ export function studySourceUrl(
     cfmPlan.week,
 ) {
   const lang = studySourceLanguage(task, uiLang);
-  let anchor = end ? task.selectedIds.at(-1) || task.endAnchor : task.anchor;
+  const edition = studySourceEdition(task, uiLang);
+  let anchor = end
+    ? edition.selectedIds.at(-1) || edition.endAnchor
+    : edition.anchor;
   if (week === 43 && anchor === "p_qvIof")
     anchor =
       (
@@ -143,7 +189,7 @@ export function studySourceUrl(
           tgl: "p_t7eEo",
         } as Record<string, string>
       )[lang] || anchor;
-  const manual = /old-testament-2026\/\d+$/.test(task.path);
+  const manual = /old-testament-2026\/\d+$/.test(edition.path);
   const context: Record<string, string> = {
     sec2: "scripture_title1",
     sec3: "scripture_title2",
@@ -176,15 +222,34 @@ export function studySourceUrl(
     hash = "p" + Math.max(1, Number(anchor.slice(1)) - 2);
   if (
     week === 43 &&
-    task.path.includes("/2018/06/hope-of-israel") &&
+    edition.path.includes("/2018/06/hope-of-israel") &&
     ["p57", "p90"].includes(anchor)
   )
     hash = anchor === "p57" ? "p56" : "p89";
-  const url = new URL("https://www.churchofjesuschrist.org" + task.path);
+  const url = new URL("https://www.churchofjesuschrist.org" + edition.path);
   url.searchParams.set("lang", lang);
-  if (task.selectedIds.length)
-    url.searchParams.set("id", task.selectedIds.join(","));
+  if (edition.selectedIds.length)
+    url.searchParams.set("id", edition.selectedIds.join(","));
   if (hash) url.hash = hash;
+  return url.toString();
+}
+
+export function studySourceNoteUrl(
+  task: StudyTask,
+  note: { note: string; owner: string },
+  uiLang: UiLang,
+  week?: number,
+) {
+  const edition = studySourceEdition(task, uiLang);
+  const url = new URL(studySourceUrl(task, uiLang, false, week));
+  if (
+    edition.noteLinks.some(
+      (item) => item.note === note.note && item.owner === note.owner,
+    )
+  ) {
+    url.searchParams.set("id", note.owner);
+    url.hash = note.owner;
+  }
   return url.toString();
 }
 

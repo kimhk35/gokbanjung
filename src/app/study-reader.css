@@ -160,6 +160,55 @@ body:has(.study-reader-shell) {
   flex: 1;
   position: relative;
 }
+.study-position-loading {
+  flex: 1;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 12px;
+  padding: 24px;
+  text-align: center;
+  background: var(--surface);
+}
+.study-position-loading p {
+  margin: 0;
+}
+.study-related-reading {
+  flex-shrink: 0;
+  max-height: min(40dvh, 280px);
+  overflow: auto;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+  font-size: 14px;
+}
+.study-related-reading summary {
+  min-height: 44px;
+  padding: 10px 12px;
+  cursor: pointer;
+  color: var(--navy);
+  font-weight: 600;
+}
+.study-related-reading summary:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: -3px;
+}
+.study-related-reading > div {
+  padding: 0 12px 10px;
+}
+.study-related-reading p {
+  margin: 0 0 8px;
+  line-height: 1.6;
+}
+.study-related-reading ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.study-related-reading a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 6px 0;
+}
 .study-source-tools {
   display: flex;
   align-items: center;

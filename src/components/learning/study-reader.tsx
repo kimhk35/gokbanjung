@@ -1,7 +1,14 @@
 "use client";
-import { useCallback, useEffect, useRef, useState, type Ref } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type Ref,
+} from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import * as Dialog from "@radix-ui/react-dialog";
 import {
   BookOpen,
@@ -23,8 +30,11 @@ import {
   studyFamilyTitle,
   materialPercent,
   studySourceLanguage,
+  studySourceEdition,
+  studySourceNoteUrl,
   studySourceUrl,
   studyTasks,
+  studyRelatedTasks,
   type StudyTrack,
   type StudyDay,
 } from "@/lib/cfm-study-plan";
@@ -37,6 +47,13 @@ import {
   StudyReaderGuide,
   type StudyReaderGuideHandle,
 } from "./study-reader-guide";
+import { useStudyReaderPosition } from "./use-study-reader-position";
+import {
+  studyReaderReturnHref,
+  type ReadingBoundary,
+} from "@/lib/study-reader-position";
+
+const NO_COMPLETED_TASKS: readonly string[] = [];
 
 type Overview = {
   questions: (Prompt & { study_day: number | null })[];
@@ -135,6 +152,11 @@ function StudySourceFrame({
 
 export function StudyReader(props: ReaderProps) {
   const { boot, t } = useApp();
+  // Native history updates used by related links can restore a cached Server
+  // Page. Read the current URL so Back does not reuse its older source props.
+  const query = useSearchParams();
+  const initialSource = query.get("source") || undefined;
+  const initialAnchor = query.get("anchor") || undefined;
   const guide = useRef<StudyReaderGuideHandle>(null);
   const reader = useRef<HTMLDivElement>(null);
   const day = getStudyDay(props.week, props.day);
@@ -156,15 +178,17 @@ export function StudyReader(props: ReaderProps) {
       </div>
     );
   const initialTrack =
-    props.initialTrack === "family" && day.familyTasks.length
+    query.get("track") === "family" && day.familyTasks.length
       ? "family"
       : "adult";
   return (
     <>
       <Reader
-        key={`${boot?.actor.id || "public"}:${props.week}:${props.day}:${initialTrack}:${props.initialSource}:${props.initialAnchor}`}
+        key={`${boot?.actor.id || "public"}:${props.week}:${props.day}:${initialTrack}:${initialSource}:${initialAnchor}`}
         {...props}
         initialTrack={initialTrack}
+        initialSource={initialSource}
+        initialAnchor={initialAnchor}
         studyDay={day}
         readerRef={reader}
         onGuide={() => guide.current?.open()}
@@ -194,17 +218,6 @@ function Reader({
   const { uiLang, setLang, t, boot, ready, reload, error } = useApp();
   const router = useRouter();
   const [track, setTrack] = useState<StudyTrack>(initialTrack);
-  const [step, setStep] = useState(() =>
-    Math.max(
-      0,
-      studyTasks(selectedDay, initialTrack, week).findIndex(
-        (item) =>
-          item.path === initialSource &&
-          ((item.anchor || "main") === initialAnchor ||
-            item.selectedIds.includes(initialAnchor || "")),
-      ),
-    ),
-  );
   const [materialsOpen, setMaterialsOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
   const [readingFocus, setReadingFocus] = useState(false);
@@ -225,7 +238,6 @@ function Reader({
   const [invite, setInvite] = useState(false);
   const [dismissed, setDismissed] = useState<number[]>([]);
   const [status, setStatus] = useState("");
-  const [boundary, setBoundary] = useState<"start" | "end">("start");
   const [jump, setJump] = useState(0);
   const alive = useRef(true);
   const communityRequest = useRef(0);
@@ -233,10 +245,44 @@ function Reader({
   const progressRequest = useRef(0);
   const plan = getStudyPlan(week)!;
   const tasks = studyTasks(selectedDay, track, week);
-  const task = tasks[Math.min(step, tasks.length - 1)];
-  const completed = progress
-    .filter((p) => p.day === selectedDay && p.track === track)
-    .map((p) => p.task_id);
+  const completed = useMemo(
+    () =>
+      progress
+        .filter((p) => p.day === selectedDay && p.track === track)
+        .map((p) => p.task_id),
+    [progress, selectedDay, track],
+  );
+  const { position, select: selectPosition } = useStudyReaderPosition({
+    actorId: boot?.actor.id || null,
+    identityReady: !!boot || ready,
+    week,
+    day: selectedDay,
+    track,
+    tasks,
+    completed: progressLoaded
+      ? completed
+      : saveUnavailable || (ready && !boot)
+        ? NO_COMPLETED_TASKS
+        : undefined,
+    source: track === initialTrack ? initialSource : undefined,
+    anchor: track === initialTrack ? initialAnchor : undefined,
+  });
+  const positionReady = !!position;
+  const step = Math.max(
+    0,
+    tasks.findIndex((item) => item.id === position?.taskId),
+  );
+  const task = tasks[step];
+  const edition = studySourceEdition(task, uiLang);
+  const boundary = position?.boundary || "start";
+  const related = studyRelatedTasks(task, week);
+  const materialLabel = positionReady
+    ? edition.label
+    : t("읽던 자료 확인 중…", "Finding your reading position…");
+  function jumpToBoundary(value: ReadingBoundary) {
+    selectPosition(task.id, value);
+    setJump((n) => n + 1);
+  }
   const stats = materialPercent(selectedDay, track, completed, week);
   const source = {
     path: task.path,
@@ -245,7 +291,7 @@ function Reader({
       task.selectedIds[0] ||
       task.anchor ||
       "main",
-    label: task.label,
+    label: edition.label,
   };
   const sourcePath = source.path,
     sourceAnchor = source.anchor;
@@ -261,7 +307,8 @@ function Reader({
     boot ? `${boot.actor.id}:cfm:${week}:${selectedDay}:${track}` : null,
     { body: "" },
   );
-  const connectionOK = !!boot && progressLoaded && !saveUnavailable;
+  const connectionOK =
+    !!boot && progressLoaded && !saveUnavailable && positionReady;
   const refreshCommunity = useCallback(() => {
     const token = ++communityRequest.current;
     api<Overview>(`think/study-overview?week=${week}`)
@@ -315,8 +362,8 @@ function Reader({
     refreshCommunity();
   }, [boot, refreshCommunity]);
   useEffect(() => {
-    refreshRange();
-  }, [boot, refreshRange]);
+    if (positionReady) refreshRange();
+  }, [boot, refreshRange, positionReady]);
   const onCommunityChanged = () => {
     refreshCommunity();
     refreshRange();
@@ -407,10 +454,10 @@ function Reader({
     }
   }
   async function next() {
+    if (!position) return;
     if (!(await mark(task.id))) return;
     if (step < tasks.length - 1) {
-      setStep(step + 1);
-      setBoundary("start");
+      selectPosition(tasks[step + 1].id, "start", position);
     } else if (
       stats.count + (!completed.includes(task.id) ? 1 : 0) <
       stats.total
@@ -496,9 +543,9 @@ function Reader({
           )}
         </select>
         <span className="study-focus-title study-mobile-control">
-          <span>{task.label}</span>
+          <span>{materialLabel}</span>
           <small>
-            {step + 1}/{tasks.length}
+            {positionReady ? step + 1 : "–"}/{tasks.length}
           </small>
         </span>
         <button
@@ -547,7 +594,8 @@ function Reader({
         </button>
         <a
           className="study-official"
-          href={sourceUrl}
+          href={positionReady ? sourceUrl : undefined}
+          aria-disabled={!positionReady}
           target="_blank"
           rel="noreferrer"
         >
@@ -580,9 +628,9 @@ function Reader({
         </Link>
       </header>
       <div className="study-mobile-context study-mobile-control">
-        <span>{task.label}</span>
+        <span>{materialLabel}</span>
         <small>
-          {step + 1}/{tasks.length}
+          {positionReady ? step + 1 : "–"}/{tasks.length}
         </small>
       </div>
       <nav
@@ -600,11 +648,7 @@ function Reader({
                 type="button"
                 disabled={busy}
                 aria-pressed={track === course}
-                onClick={() => {
-                  setTrack(course);
-                  setStep(0);
-                  setBoundary("start");
-                }}
+                onClick={() => setTrack(course)}
                 title={course === "adult" ? day.question : day.familyActivity}
               >
                 {course === "adult"
@@ -634,7 +678,7 @@ function Reader({
           {t("오늘 {percent}%", "Today {percent}%", { percent: stats.percent })}
         </button>
         <span className="study-position">
-          {step + 1}/{tasks.length}
+          {positionReady ? step + 1 : "–"}/{tasks.length}
           <span className="study-position-detail">
             {" "}
             · {t("파란 선 범위", "Blue-line range")}
@@ -642,21 +686,17 @@ function Reader({
         </span>
         <button
           type="button"
-          onClick={() => {
-            setBoundary("start");
-            setJump((n) => n + 1);
-          }}
-          title={task.selectedIds[0] || task.anchor}
+          disabled={!positionReady}
+          onClick={() => jumpToBoundary("start")}
+          title={edition.selectedIds[0] || edition.anchor}
         >
           {t("시작 보기 ↑", "Start ↑")}
         </button>
         <button
           type="button"
-          onClick={() => {
-            setBoundary("end");
-            setJump((n) => n + 1);
-          }}
-          title={task.selectedIds.at(-1) || task.endAnchor}
+          disabled={!positionReady}
+          onClick={() => jumpToBoundary("end")}
+          title={edition.selectedIds.at(-1) || edition.endAnchor}
         >
           {t("끝 보기 ↓", "End ↓")}
         </button>
@@ -688,30 +728,84 @@ function Reader({
           className="study-reader-source"
           aria-label={t("공식 원문 읽기", "Read official source")}
         >
-          {uiLang !== "ko" && studySourceLanguage(task, uiLang) === "kor" && (
-            <p className="study-language-note">
-              {t(
-                "이 자료의 범위는 확인된 한국어 원문으로 표시합니다.",
-                "This material uses the audited Korean source to preserve its marked range.",
-              )}
-            </p>
-          )}
-          {task.kind === "activity" && (
+          {positionReady &&
+            uiLang !== "ko" &&
+            studySourceLanguage(task, uiLang) === "kor" && (
+              <p className="study-language-note">
+                {t(
+                  "이 자료의 범위는 확인된 한국어 원문으로 표시합니다.",
+                  "This material uses the audited Korean source to preserve its marked range.",
+                )}
+              </p>
+            )}
+          {positionReady && task.kind === "activity" && (
             <div className="study-activity">
-              <strong>{task.label}</strong>
+              <strong>{edition.label}</strong>
               <p>{track === "adult" ? day.question : day.familyQuestion}</p>
               <button type="button" onClick={() => setNotesOpen(true)}>
                 {t("나만의 학습 메모", "Private learning notes")}
               </button>
             </div>
           )}
-          <StudySourceFrame
-            key={`${task.id}:${uiLang}:${sourceUrl}:${jump}`}
-            url={sourceUrl}
-            title={task.label}
-            onRetry={() => setJump((n) => n + 1)}
-          />
-          {rangeCount > 0 && (
+          {positionReady && (edition.readingNote || related.length > 0) && (
+            <details key={task.id} className="study-related-reading">
+              <summary>{t("연결해서 읽기", "Read in context")}</summary>
+              <div>
+                {edition.readingNote && <p>{edition.readingNote}</p>}
+                {related.length > 0 && (
+                  <ul>
+                    {related.map((item) => (
+                      <li key={item.task.id}>
+                        <Link
+                          href={item.href}
+                          onNavigate={() => {
+                            // Preserve Next's history state and let Link push
+                            // normally. Back must restore this material, not
+                            // the linked task's newer same-day saved cursor.
+                            window.history.replaceState(
+                              window.history.state,
+                              "",
+                              studyReaderReturnHref({
+                                week,
+                                day: selectedDay,
+                                track,
+                                task,
+                                boundary,
+                              }),
+                            );
+                          }}
+                        >
+                          {t("{day}일차", "Day {day}", { day: item.day })} ·{" "}
+                          {item.track === "adult"
+                            ? t("기본", "Basic")
+                            : t("어린이·가족", "Children · family")}{" "}
+                          · {studySourceEdition(item.task, uiLang).label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </details>
+          )}
+          {positionReady ? (
+            <StudySourceFrame
+              key={`${task.id}:${uiLang}:${sourceUrl}:${jump}`}
+              url={sourceUrl}
+              title={edition.label}
+              onRetry={() => setJump((n) => n + 1)}
+            />
+          ) : (
+            <div className="study-position-loading">
+              <p role="status">{materialLabel}</p>
+              {(boot || ready) && (
+                <button type="button" onClick={() => setMaterialsOpen(true)}>
+                  {t("오늘의 자료 직접 선택", "Choose today’s material")}
+                </button>
+              )}
+            </div>
+          )}
+          {positionReady && rangeCount > 0 && (
             <button
               type="button"
               className="study-thought-bubble"
@@ -767,6 +861,7 @@ function Reader({
           type="button"
           className="study-primary"
           data-study-guide="share"
+          disabled={!positionReady}
           onClick={() => setPanel("range")}
         >
           {t("생각 나누기", "Share a thought")}
@@ -818,7 +913,7 @@ function Reader({
           >
             <Dialog.Title>{t("읽기 도구", "Reading tools")}</Dialog.Title>
             <Dialog.Description>
-              {task.label} · {step + 1}/{tasks.length}
+              {materialLabel} · {positionReady ? step + 1 : "–"}/{tasks.length}
             </Dialog.Description>
             <Dialog.Close
               className="study-tools-close"
@@ -838,13 +933,7 @@ function Reader({
                     type="button"
                     disabled={busy}
                     aria-pressed={track === course}
-                    onClick={() =>
-                      toolAction(() => {
-                        setTrack(course);
-                        setStep(0);
-                        setBoundary("start");
-                      })
-                    }
+                    onClick={() => toolAction(() => setTrack(course))}
                   >
                     {course === "adult"
                       ? t("기본", "Basic")
@@ -877,32 +966,30 @@ function Reader({
               <div className="study-tools-boundaries">
                 <button
                   type="button"
-                  onClick={() =>
-                    toolAction(() => {
-                      setBoundary("start");
-                      setJump((n) => n + 1);
-                    })
-                  }
+                  disabled={!positionReady}
+                  onClick={() => toolAction(() => jumpToBoundary("start"))}
                 >
                   {t("시작 보기 ↑", "Start ↑")}
                 </button>
                 <button
                   type="button"
-                  onClick={() =>
-                    toolAction(() => {
-                      setBoundary("end");
-                      setJump((n) => n + 1);
-                    })
-                  }
+                  disabled={!positionReady}
+                  onClick={() => toolAction(() => jumpToBoundary("end"))}
                 >
                   {t("끝 보기 ↓", "End ↓")}
                 </button>
               </div>
-              <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
+              <a
+                href={positionReady ? sourceUrl : undefined}
+                aria-disabled={!positionReady}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {t("새 창에서 원문 읽기 ↗", "Read source in a new tab ↗")}
               </a>
               <button
                 type="button"
+                disabled={!positionReady}
                 onClick={() => toolAction(() => setJump((n) => n + 1))}
               >
                 {t("원문 다시 불러오기", "Reload source")}
@@ -958,50 +1045,46 @@ function Reader({
           )}
         </p>
         <ol className="study-materials-list">
-          {tasks.map((item, i) => (
-            <li key={item.id}>
-              <button
-                type="button"
-                aria-current={i === step ? "step" : undefined}
-                onClick={() => {
-                  setStep(i);
-                  setBoundary("start");
-                  setMaterialsOpen(false);
-                }}
-              >
-                {completed.includes(item.id) ? "✓ " : ""}
-                {item.label}
-              </button>
-              {item.noteLinks.length > 0 && (
-                <details>
-                  <summary>
-                    {t("각주 {count}개", "{count} notes", {
-                      count: item.noteLinks.length,
-                    })}
-                  </summary>
-                  {item.noteLinks.map((note) => (
-                    <a
-                      key={note.note}
-                      href={studySourceUrl(
-                        {
-                          ...item,
-                          anchor: note.owner,
-                          selectedIds: [note.owner],
-                        },
-                        uiLang,
-                        false,
-                        week,
-                      )}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {note.note} ↗{" "}
-                    </a>
-                  ))}
-                </details>
-              )}
-            </li>
-          ))}
+          {tasks.map((item, i) => {
+            const material = studySourceEdition(item, uiLang);
+            return (
+              <li key={item.id}>
+                <button
+                  type="button"
+                  aria-current={
+                    positionReady && i === step ? "step" : undefined
+                  }
+                  disabled={!boot && !ready}
+                  onClick={() => {
+                    selectPosition(item.id);
+                    setMaterialsOpen(false);
+                  }}
+                >
+                  {completed.includes(item.id) ? "✓ " : ""}
+                  {material.label}
+                </button>
+                {material.noteLinks.length > 0 && (
+                  <details>
+                    <summary>
+                      {t("각주 {count}개", "{count} notes", {
+                        count: material.noteLinks.length,
+                      })}
+                    </summary>
+                    {material.noteLinks.map((note) => (
+                      <a
+                        key={note.note}
+                        href={studySourceNoteUrl(item, note, uiLang, week)}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {note.note} ↗{" "}
+                      </a>
+                    ))}
+                  </details>
+                )}
+              </li>
+            );
+          })}
         </ol>
         <p className="muted">
           {t(
@@ -1102,7 +1185,7 @@ function Reader({
                   void mark(item.id, selectedDay, track, e.target.checked)
                 }
               />
-              {item.label}
+              {studySourceEdition(item, uiLang).label}
             </label>
           ))}
         </div>

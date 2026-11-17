@@ -1,0 +1,108 @@
+﻿task,source,day,track,originalAnchor,originalEndAnchor,englishAnchor,englishEndAnchor,selectedParagraphs,ownedNotes,method
+w47-t001,manual,1,adult,title_number1,p3,title_number1,p3,5,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t002,gs-hosea,1,adult,title1,p2,title1,p2,4,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t003,gs-joel,1,adult,title1,p4,title1,p4,6,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t004,helps,1,adult,p_eVr84,p_plcYD,p_eVr84,p_plcYD,61,7,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t005,manual,1,adult,title2,p4,title2,p4,4,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t006,hos1,1,adult,title1,p11,title1,p11,14,18,logical verses 1–11; language-specific headings and footnotes
+w47-t007,hos2,1,adult,title_number1,p23,title_number1,p23,25,36,logical verses 1–23; language-specific headings and footnotes
+w47-t008,hos3,1,adult,title_number1,p5,title_number1,p5,7,5,logical verses 1–5; language-specific headings and footnotes
+w47-t009,manual,1,adult,figure1_p1,figure1_p1,figure1_p1,figure1_p1,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t010,helps,1,adult,p_iHsEv,p_tAmkM,p_iHsEv,p_tAmkM,12,13,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t011,helps,1,adult,p_cbpuH,p_hSarS,p_cbpuH,p_hSarS,8,8,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t012,manual,1,family,title6,p21,title6,p21,4,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t013,children,1,family,p_trGKY,p_k2Cgg,p_trGKY,p_k2Cgg,8,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t014,elder-soares-speaks-to-children,1,family,series_title1,aside1_p1,series_title1,aside1_p1,10,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t015,family-spirit,1,family,p_vuQIl,p_bAXFA,p_vuQIl,p_bAXFA,14,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t016,manual,2,adult,p5,p5,p5,p5,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t017,hos14,2,adult,title_number1,p9,title_number1,p9,11,14,logical verses 1–9; language-specific headings and footnotes
+w47-t018,come-unto-jesus,2,adult,song_number1,p2,song_number1,p2,22,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t019,helps,2,adult,p_fmIv9,p_j5T6c,p_fmIv9,p_j5T6c,3,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t020,45kearon,2,adult,title1,p27,title1,p27,33,26,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t021,helps,2,adult,p_qWHJd,p_o6ILT,p_qWHJd,p_o6ILT,3,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t022,children,2,family,p_dqFQ5,p_dqFQ5,p_dqFQ5,p_dqFQ5,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t023,keeping-his-promise,2,family,title1,figure1_p1,title1,figure1_p1,33,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t024,family-spirit,2,family,p_zhN10,p_sFjUI,p_zhN10,p_sFjUI,10,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t025,hos4,3,adult,title_number1,p19,title_number1,p19,21,25,logical verses 1–19; language-specific headings and footnotes
+w47-t026,hos5,3,adult,title_number1,p15,title_number1,p15,17,14,logical verses 1–15; language-specific headings and footnotes
+w47-t027,hos6,3,adult,title_number1,p3,title_number1,p3,5,4,logical verses 1–3; language-specific headings and footnotes
+w47-t028,manual,3,adult,scripture_title2,p6,scripture_title2,p6,3,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t029,hos6,3,adult,p4,p7,p4,p7,4,8,logical verses 4–7; language-specific headings and footnotes
+w47-t030,isa-48,3,adult,p18,p18,p18,p18,1,1,logical verses 18; language-specific headings and footnotes
+w47-t031,1-ne-2,3,adult,p9,p10,p9,p10,2,3,logical verses 9–10; language-specific headings and footnotes
+w47-t032,hos6,3,adult,p8,p11,p8,p11,4,2,logical verses 8–11; language-specific headings and footnotes
+w47-t033,manual,3,adult,p7,p7,p7,p7,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t034,matt-9,3,adult,p10,p13,p10,p13,4,7,logical verses 10–13; language-specific headings and footnotes
+w47-t035,matt-12,3,adult,p1,p8,p1,p8,8,10,logical verses 1–8; language-specific headings and footnotes
+w47-t036,manual,3,adult,p8,p8,p8,p8,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t037,joel2,3,adult,p12,p13,p12,p13,2,7,logical verses 12–13; language-specific headings and footnotes
+w47-t038,helps,3,adult,p_eXOqV,p_zOBVI,p_eXOqV,p_zOBVI,4,4,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t039,helps,3,adult,p_tP5r2,p_nz0yU,p_tP5r2,p_nz0yU,6,6,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t040,09-teach-by-the-spirit,3,adult,title1,p3,title1,p3,11,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t041,matt-4,3,adult,p1,p11,p1,p11,11,25,logical verses 1–11; language-specific headings and footnotes
+w47-t042,09-teach-by-the-spirit,3,adult,p4,p11,p4,p11,8,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t043,children,3,family,p_bhV0C,p_bhV0C,p_bhV0C,p_bhV0C,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t044,32-i-can-sing-about-jesus,3,family,title1,p1,title1,p1,3,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t045,family-spirit,3,family,p_anJk9,p_iYNI8,p_anJk9,p_iYNI8,10,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t046,hos10,4,adult,title_number1,p15,title_number1,p15,17,23,logical verses 1–15; language-specific headings and footnotes
+w47-t047,hos11,4,adult,title_number1,p12,title_number1,p12,14,17,logical verses 1–12; language-specific headings and footnotes
+w47-t048,hos12,4,adult,title_number1,p14,title_number1,p14,16,18,logical verses 1–14; language-specific headings and footnotes
+w47-t049,manual,4,adult,p16,p18,p16,p18,3,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t050,bednar-discussion,4,adult,title1,p106,title1,p1,5,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t051,manual,4,family,scripture_title5,p23,scripture_title5,p23,4,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t052,anytime-anywhere,4,family,song_number1,p2,song_number1,p2,18,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t053,children,4,family,p_s5zFS,p_bmgXd,p_s5zFS,p_bmgXd,3,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t054,teach-me-to-walk-in-the-light,4,family,song_number1,p2,song_number1,p2,21,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t055,children,4,family,p_rRJB3,p_rRJB3,p_rRJB3,p_rRJB3,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t056,hos13,5,adult,title_number1,p16,title_number1,p16,18,30,logical verses 1–16; language-specific headings and footnotes
+w47-t057,manual,5,adult,p12,p13,p12,p13,2,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t058,mosiah-4,5,adult,p1,p20,p1,p20,5,17,"logical verses 1–3, 19–20; language-specific headings and footnotes"
+w47-t059,mosiah-18,5,adult,p7,p11,p7,p11,5,10,logical verses 7–11; language-specific headings and footnotes
+w47-t060,manual,5,adult,p14,p14,p14,p14,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t061,hel-6,5,adult,p34,p36,p34,p36,3,4,logical verses 34–36; language-specific headings and footnotes
+w47-t062,manual,5,adult,p15,p15,p15,p15,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t063,dc-19,5,adult,p37,p41,p37,p41,5,10,logical verses 37–41; language-specific headings and footnotes
+w47-t064,manual,5,adult,p20,p20,p20,p20,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t065,09-teach-by-the-spirit,5,adult,title9,p19,title9,p19,11,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t066,manual,5,family,scripture_title6,p25,scripture_title6,p25,4,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t067,children,5,family,p_vWFMz,p_yfrfM,p_vWFMz,p_yfrfM,2,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t068,children,5,family,p_tkjkE,p_tkjkE,p_tkjkE,p_tkjkE,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t069,17-jesus-blessed-one-by-one,5,family,series_title1,aside1_p1,series_title1,aside1_p1,8,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t070,family-spirit,5,family,p_qas3k,p_nAy7j,p_qas3k,p_nAy7j,10,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t071,joel1,6,adult,title1,p20,title1,p20,23,19,logical verses 1–20; language-specific headings and footnotes
+w47-t072,manual,6,adult,scripture_title3,p9,scripture_title3,p9,3,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t073,joel2,6,adult,title_number1,title4,title_number1,p11,13,17,logical verses 1–11; language-specific headings and footnotes
+w47-t074,joel2,6,adult,p14,p32,p14,p32,19,39,logical verses 14–32; language-specific headings and footnotes
+w47-t075,manual,6,adult,p10,p10,p10,p10,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t076,js-h-1,6,adult,p41,p41,p41,p41,1,3,logical verses 41; language-specific headings and footnotes
+w47-t077,acts-2,6,adult,p1,p21,p1,p21,21,23,logical verses 1–21; language-specific headings and footnotes
+w47-t078,helps,6,adult,p_x3Os3,p_oh5Pn,p_x3Os3,p_oh5Pn,8,4,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t079,manual,6,adult,p11,p11,p11,p11,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t080,revelation-for-the-church-revelation-for-our-lives,6,adult,title1,p41,title1,p41,44,16,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t081,helps,6,adult,p_ws2IN,p_bY7tI,p_ws2IN,p_bY7tI,2,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t082,helps,6,adult,p_u7bOc,p_u7bOc,p_u7bOc,p_u7bOc,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t083,spirit-of-god,6,adult,song_number1,p2,song_number1,p2,43,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t084,manual,6,family,scripture_title7,p26,scripture_title7,p26,3,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t085,children,6,family,p_cqvLW,p_mfaZe,p_cqvLW,p_mfaZe,3,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t086,still-small-voice,6,family,song_number1,p1,song_number1,p1,11,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t087,joel3,7,adult,title_number1,p21,title_number1,p21,23,33,logical verses 1–21; language-specific headings and footnotes
+w47-t088,manual,7,adult,p19,p19,p19,p19,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t089,25stevenson,7,adult,title1,p39,title1,p39,52,14,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t090,enemy-territory,7,adult,title1,p1,title1,p1,2,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t091,09-teach-by-the-spirit,7,adult,title15,p20,title15,p20,2,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t092,john-11,7,adult,p25,p27,p25,p27,3,7,logical verses 25–27; language-specific headings and footnotes
+w47-t093,09-teach-by-the-spirit,7,adult,p21,figure2_p10,p21,figure2_p10,14,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t094,manual,7,adult,p_uHXgV,p_jgY1j,p_uKbDf,p_mMAH5,4,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t095,helps,7,adult,p_xywpk,p_uooFo,p_xywpk,p_uooFo,2,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t096,manual,7,family,p27,p27,p27,p27,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t097,john-14,7,family,p16,p16,p16,p16,1,2,logical verses 16; language-specific headings and footnotes
+w47-t098,moro-10,7,family,p5,p5,p5,p5,1,2,logical verses 5; language-specific headings and footnotes
+w47-t099,dc-42,7,family,p17,p17,p17,p17,1,2,logical verses 17; language-specific headings and footnotes
+w47-t100,children,7,family,p_f54lp,p_f54lp,p_f54lp,p_f54lp,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t101,i-can-feel-the-holy-ghost,7,family,series_title1,figure1_p1,series_title1,figure1_p1,4,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t102,children,7,family,p_sqejF,p_sqejF,p_sqejF,p_sqejF,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t103,family-spirit,7,family,p_uyKg5,p_tSxUJ,p_uyKg5,p_tSxUJ,3,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t104,family-spirit,7,family,p_aIMzs,p_aIMzs,p_aIMzs,p_aIMzs,1,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t105,song-holy-ghost,7,family,song_number1,p1,song_number1,p1,22,0,complete English article/song; no assumption of lyric paragraph equivalence
+w47-t106,family-spirit,7,family,p_dVECq,p_rgsK8,p_dVECq,p_rgsK8,15,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
+w47-t107,manual,7,family,figure2_p1,figure7_figure1_p1,figure2_p1,figure7_figure1_p1,2,0,reviewed parallel body order and topic; explicit language-specific ID aliases where needed
