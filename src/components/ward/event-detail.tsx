@@ -12,6 +12,7 @@ import type { WardEvent } from "@/lib/ward-events";
 import { EventCard } from "./event-parts";
 import { EventEditor } from "./event-editor";
 import { dayKey } from "@/lib/ward-model";
+import { PosterImage } from "../poster-image";
 
 export async function share(
   title: string,
@@ -96,7 +97,7 @@ export function EventDetail({ slug }: { slug: string }) {
         <ArrowLeft size={18} /> {t("와드 일정", "Ward calendar")}
       </Link>
       {poster && (
-        <img
+        <PosterImage
           className="event-poster"
           src={poster}
           alt={t("일정 포스터", "Event poster")}

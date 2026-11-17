@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { randomUUID } from "node:crypto";
 import { actor } from "@/lib/auth";
-import { asActor } from "@/lib/db";
+import { privileged } from "@/lib/db";
+import { MATERIAL_MAX, storeFile } from "@/lib/file-storage";
 import { requireAdmin, rateLimit } from "@/lib/service";
-import { AppError, ensure } from "@/lib/errors";
+import { AppError, ensure, serverFailure } from "@/lib/errors";
 import { sameOrigin } from "@/lib/site-url";
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -14,20 +15,14 @@ export async function POST(req: NextRequest) {
     await requireAdmin(a);
     await rateLimit("upload:" + a.id, 10, 3600);
     ensure(
-      process.env.NEXT_PUBLIC_SUPABASE_URL &&
-        process.env.SUPABASE_SERVICE_ROLE_KEY,
-      503,
-      "storage_unavailable",
-    );
-    ensure(
-      Number(req.headers.get("content-length") || 0) <= 4 * 1024 * 1024,
+      Number(req.headers.get("content-length") || 0) <= MATERIAL_MAX,
       413,
       "too_large",
     );
     const form = await req.formData();
     const file = form.get("file");
     ensure(
-      file instanceof File && file.size <= 4 * 1024 * 1024,
+      file instanceof File && file.size <= MATERIAL_MAX,
       413,
       "too_large",
     );
@@ -74,33 +69,30 @@ export async function POST(req: NextRequest) {
     }
     ensure(extracted.trim().length > 20, 400, "no_text");
     ensure(extracted.length <= 500000, 413, "too_large");
-    const { createClient } = await import("@supabase/supabase-js");
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      { auth: { persistSession: false, autoRefreshToken: false } },
-    );
     const storagePath = `${a.course_id}/${randomUUID()}.${ext}`;
-    const uploaded = await supabase.storage
-      .from("gospel-materials")
-      .upload(storagePath, buffer, {
-        contentType: file.type || "application/octet-stream",
-        upsert: false,
+    const types: Record<string, string> = {
+      pdf: "application/pdf",
+      docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      pptx: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      txt: "text/plain; charset=utf-8",
+      md: "text/markdown; charset=utf-8",
+    };
+    // Store the source file and resource together so a failed insert leaves no orphan.
+    const data = await privileged(async (db) => {
+      await storeFile(db, {
+        bucket: "materials", path: storagePath, createdBy: a.id,
+        filename: file.name, contentType: types[ext!], buffer,
       });
-    ensure(!uploaded.error, 502, "upload_failed");
-    try {
-      const data = await asActor(a, (db) =>
-        db.query(
-          "insert into ggc.resources(course_id,created_by,name,storage_path,extracted_text) values($1,$2,$3,$4,$5) returning id,name,status",
-          [a.course_id, a.id, file.name, storagePath, extracted],
-        ),
+      return db.query(
+        "insert into ggc.resources(course_id,created_by,name,storage_path,extracted_text) values($1,$2,$3,$4,$5) returning id,name,status",
+        [a.course_id, a.id, file.name, storagePath, extracted],
       );
-      return NextResponse.json(data[0]);
-    } catch (error) {
-      await supabase.storage.from("gospel-materials").remove([storagePath]);
-      throw error;
-    }
+    });
+    return NextResponse.json(data[0]);
   } catch (error) {
+    const failure = serverFailure(error);
+    if (failure)
+      return NextResponse.json({ error: failure.code }, { status: failure.status });
     return NextResponse.json(
       { error: error instanceof AppError ? error.code : "upload_failed" },
       { status: error instanceof AppError ? error.status : 500 },

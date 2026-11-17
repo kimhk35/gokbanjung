@@ -17,6 +17,7 @@ test("poster helpers", () => {
   assert.equal(sniffImage(new Uint8Array([0xff, 0xd8, 0xff, 0xe0])), "jpg");
   assert.equal(sniffImage(new TextEncoder().encode("RIFF\0\0\0\0WEBPVP8 ")), "webp");
   assert.equal(sniffImage(new TextEncoder().encode("<svg>")), null);
-  assert.equal(posterUrl("events/a.webp", "https://x.supabase.co"), "https://x.supabase.co/storage/v1/object/public/ggc-posters/events/a.webp");
-  assert.equal(posterUrl(null, "https://x.supabase.co"), null);
+  assert.equal(posterUrl("events/11111111-1111-1111-1111-111111111111.webp"), "/api/files/posters/events/11111111-1111-1111-1111-111111111111.webp");
+  assert.equal(posterUrl("../materials/private.pdf"), null);
+  assert.equal(posterUrl(null), null);
 });

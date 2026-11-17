@@ -19,10 +19,11 @@ export function sniffImage(b: Uint8Array): "png" | "jpg" | "webp" | null {
     return "webp";
   return null;
 }
-export function posterUrl(
-  path: string | null,
-  base = process.env.NEXT_PUBLIC_SUPABASE_URL,
-) {
-  if (!path || !base) return null;
-  return `${base.replace(/\/$/, "")}/storage/v1/object/public/${POSTER_BUCKET}/${path}`;
+export function posterUrl(path: string | null) {
+  if (
+    !path ||
+    !/^(events|prompts|insights)\/[a-f0-9-]{36}\.(webp|png|jpg)$/.test(path)
+  )
+    return null;
+  return `/api/files/posters/${path}`;
 }

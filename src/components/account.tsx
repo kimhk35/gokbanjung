@@ -258,6 +258,11 @@ export function AccountPage() {
           "Ask the administrator to reset your password.",
         )}
       </p>
+      {boot?.actor.kind === "user" && (
+        <Link className="button secondary" href="/auth/reset-password">
+          {t("비밀번호 변경", "Change password")}
+        </Link>
+      )}
       {(boot?.actor.kind === "user" || boot?.actor.account_status) && (
         <button
           className="button secondary"

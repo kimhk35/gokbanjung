@@ -1,6 +1,6 @@
 -- ================================================================
 -- 곡반정와드 통합 사이트(gokbanjung) 데이터 창고 업데이트
--- 사용법: Supabase → 복음교리반 프로젝트 → SQL Editor → New query
+-- 사용법: Neon → 연결한 프로젝트 → SQL Editor → New query
 --         → 이 파일 내용을 전부 붙여 넣기 → Run
 -- 기존 표와 기록은 건드리지 않고, 새 표만 추가합니다. 두 번 실행해도 안전합니다.
 -- 마지막 결과 칸에 "완료: ..." 가 나오면 성공입니다.
@@ -241,15 +241,89 @@ create table if not exists ggc.study_day_completion (
 alter table ggc.study_day_completion enable row level security;
 revoke all on ggc.study_day_completion from anon,authenticated;
 
--- 일정·질문 포스터 사진 보관함 (공개 읽기, 2MB, 사진만)
-do $$
-begin
-  if to_regclass('storage.buckets') is not null then
-    insert into storage.buckets(id,name,public,file_size_limit,allowed_mime_types)
-    values('ggc-posters','ggc-posters',true,2097152,array['image/webp','image/png','image/jpeg'])
-    on conflict(id) do nothing;
-  end if;
-end $$;
+-- 20261019030000_database_file_storage.sql
+-- Small files stay in the existing Postgres database. Only the server role can
+-- access bytes. The download route permits public posters and admin documents.
+create table if not exists ggc.stored_files (
+  bucket text not null check (bucket in ('posters','materials')),
+  path text not null check (length(path) between 1 and 300),
+  created_by uuid not null references ggc.actors(id),
+  filename text not null check (length(filename) between 1 and 255),
+  content_type text not null,
+  bytes bytea not null,
+  created_at timestamptz not null default now(),
+  primary key (bucket,path),
+  check (octet_length(bytes) between 1 and 4194304),
+  check (bucket <> 'posters' or (
+    octet_length(bytes) <= 2097152
+    and content_type in ('image/png','image/jpeg','image/webp')
+  ))
+);
+alter table ggc.stored_files enable row level security;
+revoke all on ggc.stored_files from public, anon, authenticated;
+
+-- 20261019040000_database_auth.sql
+-- Better Auth tables are server-only. Existing application identities stay in ggc.
+create table if not exists public.ggc_auth_user (
+  id text primary key,
+  name text not null,
+  email text not null unique,
+  "emailVerified" boolean not null default false,
+  image text,
+  "createdAt" timestamptz not null default now(),
+  "updatedAt" timestamptz not null default now()
+);
+create unique index if not exists ggc_auth_user_email_lower on public.ggc_auth_user(lower(email));
+create table if not exists public.ggc_auth_session (
+  id text primary key,
+  "expiresAt" timestamptz not null,
+  token text not null unique,
+  "createdAt" timestamptz not null default now(),
+  "updatedAt" timestamptz not null default now(),
+  "ipAddress" text,
+  "userAgent" text,
+  "userId" text not null references public.ggc_auth_user(id) on delete cascade
+);
+create index if not exists ggc_auth_session_user on public.ggc_auth_session("userId");
+create table if not exists public.ggc_auth_account (
+  id text primary key,
+  "accountId" text not null,
+  "providerId" text not null,
+  "userId" text not null references public.ggc_auth_user(id) on delete cascade,
+  "accessToken" text,
+  "refreshToken" text,
+  "idToken" text,
+  "accessTokenExpiresAt" timestamptz,
+  "refreshTokenExpiresAt" timestamptz,
+  scope text,
+  password text,
+  "createdAt" timestamptz not null default now(),
+  "updatedAt" timestamptz not null default now(),
+  unique("providerId", "accountId")
+);
+create index if not exists ggc_auth_account_user on public.ggc_auth_account("userId");
+create table if not exists public.ggc_auth_verification (
+  id text primary key,
+  identifier text not null,
+  value text not null,
+  "expiresAt" timestamptz not null,
+  "createdAt" timestamptz not null default now(),
+  "updatedAt" timestamptz not null default now()
+);
+create index if not exists ggc_auth_verification_identifier on public.ggc_auth_verification(identifier);
+alter table public.ggc_auth_user enable row level security;
+alter table public.ggc_auth_session enable row level security;
+alter table public.ggc_auth_account enable row level security;
+alter table public.ggc_auth_verification enable row level security;
+revoke all on public.ggc_auth_user, public.ggc_auth_session, public.ggc_auth_account, public.ggc_auth_verification from public, anon, authenticated;
+-- A stable server-only signing key avoids per-instance secrets on serverless hosts.
+-- BETTER_AUTH_SECRET may override it. Never grant this table to browser roles.
+create table if not exists public.ggc_auth_config (
+  id text primary key check (id='session_secret'),
+  value text not null check (length(value)>=32)
+);
+alter table public.ggc_auth_config enable row level security;
+revoke all on public.ggc_auth_config from public, anon, authenticated;
 
 select case
   when to_regclass('ggc.events') is not null
@@ -261,6 +335,9 @@ select case
    and to_regclass('ggc.study_range_thoughts') is not null
    and to_regclass('ggc.study_material_progress') is not null
    and to_regclass('ggc.study_day_completion') is not null
-  then '완료: 와드 일정·함께 생각하기·의견 달기 표가 준비되었습니다 (기존 기록 유지)'
+   and to_regclass('ggc.stored_files') is not null
+   and to_regclass('public.ggc_auth_user') is not null
+   and to_regclass('public.ggc_auth_session') is not null
+  then '완료: 와드 일정·함께 생각하기·의견 달기·로그인·파일 저장 표가 준비되었습니다 (기존 기록 유지)'
   else '실패: 표를 만들지 못했습니다'
 end as result;

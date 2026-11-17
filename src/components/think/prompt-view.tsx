@@ -15,6 +15,7 @@ import { useRefresh } from "../use-refresh";
 import { ReplyItem, rememberAuthor, useAuthorDefault } from "./reply-item";
 import { PresentMode, QueuePanel, usePresentQueue } from "./present-mode";
 import { PromptEditor } from "./prompt-editor";
+import { PosterImage } from "../poster-image";
 
 type View = { prompt: Prompt; replies: Reply[]; canAuthor: boolean };
 export function PromptView({
@@ -118,14 +119,14 @@ export function PromptView({
         (embedded ? (
           <details className="study-question-poster">
             <summary>{t("질문 포스터 보기", "View question poster")}</summary>
-            <img
+            <PosterImage
               className="event-poster"
               src={poster}
               alt={t("질문 포스터", "Question poster")}
             />
           </details>
         ) : (
-          <img
+          <PosterImage
             className="event-poster"
             src={poster}
             alt={t("질문 포스터", "Question poster")}
