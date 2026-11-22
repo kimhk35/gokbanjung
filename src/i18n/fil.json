@@ -1476,5 +1476,20 @@
  "현재 로그인된 계정의 비밀번호를 변경합니다. 변경하면 모든 기기에서 로그아웃됩니다.": "Palitan ang password ng naka-sign in na account. Masa-sign out ka sa lahat ng device.",
  "2_DB업데이트.cmd를 실행해 파일 저장소 업데이트가 적용됐는지 확인합니다.": "Patakbuhin ang 2_DB업데이트.cmd para matiyak na nailapat ang update sa imbakan ng file.",
  "포스터 이미지를 불러올 수 없습니다.": "Hindi maipakita ang larawan ng poster.",
- "포스터 이미지를 불러올 수 없습니다. 다시 올려 주세요.": "Hindi maipakita ang larawan ng poster. Pakiupload itong muli."
+ "포스터 이미지를 불러올 수 없습니다. 다시 올려 주세요.": "Hindi maipakita ang larawan ng poster. Pakiupload itong muli.",
+ "일요일은 쉬어 가세요": "Magpahinga sa Linggo",
+ "밀린 분량이 있다면 아래에서 요일을 골라 읽던 곳부터 이어 가세요.": "Para makahabol, pumili ng araw sa ibaba at ipagpatuloy ang pagbabasa kung saan ka huminto.",
+ "이번 주 읽기": "Mga babasahin ngayong linggo",
+ "휴식 · 이어 읽기": "Magpahinga o magpatuloy sa pagbabasa",
+ "쉼": "Pahinga",
+ "{done}/{total}개 읽음": "{done}/{total} babasahing natapos",
+ "읽기 완료": "Tapos nang basahin",
+ "일요일 · 휴식과 이어 읽기": "Linggo · Pahinga at pagkakataong makahabol",
+ "오늘은 쉬어 가세요. 밀린 분량은 읽던 요일에서 이어 갈 수 있어요.": "Magpahinga ngayon, o pumili ng naunang araw para magpatuloy kung saan ka huminto.",
+ "월~토 분량 보기": "Tingnan ang babasahin mula Lunes hanggang Sabado",
+ "이번 주 분량 이어 읽기": "Ipagpatuloy ang mga babasahin ngayong linggo",
+ "이번 주 이어 읽기": "Balikan ang mga babasahin ngayong linggo",
+ "월요일부터 토요일까지 읽고, 일요일에는 쉬거나 밀린 분량을 이어 읽으세요.": "Magbasa mula Lunes hanggang Sabado. Sa Linggo, magpahinga o balikan ang hindi pa nabasa.",
+ "월~토 중 이어서 읽을 날을 선택하세요.": "Pumili ng araw mula Lunes hanggang Sabado para magpatuloy sa pagbabasa.",
+ "{number}주차 {done}/{total}일 완료, {percent}%": "Linggo {number}: {done}/{total} araw na natapos, {percent}%"
 }

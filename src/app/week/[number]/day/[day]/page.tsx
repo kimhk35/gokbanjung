@@ -1,6 +1,7 @@
 import { LessonPage } from "@/components/learning/learn";
 import { StudyReader } from "@/components/learning/study-reader";
-import { getStudyDay, dailyStudyHref } from "@/lib/cfm-study-plan";
+import { getStudyDay, dailyStudyHref, isStudyRestDay } from "@/lib/cfm-study-plan";
+import { StudyRestDay } from "@/components/learning/study-rest-day";
 import { GuestGate } from "@/components/account";
 import Link from "next/link";
 export default async function Page({
@@ -17,30 +18,29 @@ export default async function Page({
 }) {
   const p = await params;
   const query = await searchParams;
-  const allocated = getStudyDay(Number(p.number), Number(p.day));
+  const week = Number(p.number);
+  const day = Number(p.day);
+  const rest = isStudyRestDay(week, day);
+  const track = query.track === "family" ? "family" : "adult";
+  if (rest && query.view !== "notes")
+    return <StudyRestDay week={week} track={track} />;
+  const allocated = getStudyDay(week, day);
   if (allocated && query.view !== "notes")
     return (
       <StudyReader
-        week={Number(p.number)}
-        day={Number(p.day)}
-        initialTrack={query.track === "family" ? "family" : "adult"}
+        week={week}
+        day={day}
+        initialTrack={track}
         initialSource={query.source}
         initialAnchor={query.anchor}
       />
     );
   const legacy = (
-    <LessonPage
-      key={p.number + "-" + p.day}
-      number={Number(p.number)}
-      day={Number(p.day)}
-    />
+    <LessonPage key={p.number + "-" + p.day} number={week} day={day} />
   );
-  return allocated ? (
+  return allocated || rest ? (
     <GuestGate>
-      <Link
-        className="back-link"
-        href={dailyStudyHref(Number(p.number), Number(p.day))}
-      >
+      <Link className="back-link" href={dailyStudyHref(week, day, track)}>
         ← 원문 읽기 · Official reader
       </Link>
       {legacy}

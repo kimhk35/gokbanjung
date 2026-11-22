@@ -1476,5 +1476,20 @@
  "현재 로그인된 계정의 비밀번호를 변경합니다. 변경하면 모든 기기에서 로그아웃됩니다.": "Cambia la contraseña de la cuenta con sesión iniciada. Se cerrará la sesión en todos los dispositivos.",
  "2_DB업데이트.cmd를 실행해 파일 저장소 업데이트가 적용됐는지 확인합니다.": "Ejecuta 2_DB업데이트.cmd para comprobar que se aplicó la actualización del almacenamiento de archivos.",
  "포스터 이미지를 불러올 수 없습니다.": "No se puede mostrar la imagen del póster.",
- "포스터 이미지를 불러올 수 없습니다. 다시 올려 주세요.": "No se puede mostrar la imagen del póster. Vuelve a subirla."
+ "포스터 이미지를 불러올 수 없습니다. 다시 올려 주세요.": "No se puede mostrar la imagen del póster. Vuelve a subirla.",
+ "일요일은 쉬어 가세요": "El domingo es un día de descanso",
+ "밀린 분량이 있다면 아래에서 요일을 골라 읽던 곳부터 이어 가세요.": "Para ponerte al día, elige un día y retoma la lectura donde la dejaste.",
+ "이번 주 읽기": "Lecturas de esta semana",
+ "휴식 · 이어 읽기": "Descansar o retomar la lectura",
+ "쉼": "Descanso",
+ "{done}/{total}개 읽음": "{done}/{total} materiales leídos",
+ "읽기 완료": "Lectura completada",
+ "일요일 · 휴식과 이어 읽기": "Domingo · Descanso y lecturas pendientes",
+ "오늘은 쉬어 가세요. 밀린 분량은 읽던 요일에서 이어 갈 수 있어요.": "Hoy puedes descansar o elegir un día anterior para retomar la lectura donde la dejaste.",
+ "월~토 분량 보기": "Ver las lecturas de lunes a sábado",
+ "이번 주 분량 이어 읽기": "Retomar las lecturas de esta semana",
+ "이번 주 이어 읽기": "Retomar las lecturas de esta semana",
+ "월요일부터 토요일까지 읽고, 일요일에는 쉬거나 밀린 분량을 이어 읽으세요.": "Lee de lunes a sábado. El domingo puedes descansar o retomar una lectura pendiente.",
+ "월~토 중 이어서 읽을 날을 선택하세요.": "Elige un día entre el lunes y el sábado para seguir leyendo.",
+ "{number}주차 {done}/{total}일 완료, {percent}%": "Semana {number}: {done}/{total} días completados, {percent}%"
 }

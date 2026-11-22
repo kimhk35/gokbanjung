@@ -19,6 +19,11 @@ body:has(.study-reader-shell) {
   padding: 0;
   margin: 0;
 }
+.study-rest-day,
+.study-reader-shell > main:has(.lesson-page) {
+  height: 100dvh;
+  overflow-y: auto;
+}
 .study-reader {
   height: 100dvh;
   display: flex;
@@ -1348,4 +1353,12 @@ body:has(.study-reader-shell) {
     white-space: nowrap;
     font-size: 14px;
   }
+}
+.study-print-link {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px 12px;
+  color: var(--navy);
+  text-decoration: underline;
 }

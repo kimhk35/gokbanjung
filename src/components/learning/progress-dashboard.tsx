@@ -24,8 +24,9 @@ export function ProgressDashboard({
   const weekDates = Array.from({ length: 7 }, (_, i) =>
     lessonDate(week.start, i + 1),
   );
+  const total = weekDates.filter((date) => scheduled.has(date)).length;
   const done = weekDates.filter((date) => complete.has(date)).length,
-    percent = Math.round((done / 7) * 100);
+    percent = total ? Math.round((done / total) * 100) : 0;
   const selectedMonth =
     month || (today?.startsWith("2026") ? today.slice(0, 7) : "2026-09");
   const monthInfo = months.find((m) => m.month === selectedMonth)!;
@@ -56,7 +57,7 @@ export function ProgressDashboard({
         <div
           className="progress-ring"
           role="img"
-          aria-label={t("{number}주차 {done}/7일 완료, {percent}%", "Week {number}: {done}/7 days completed, {percent}%", { number: week.number, done, percent })}
+          aria-label={t("{number}주차 {done}/{total}일 완료, {percent}%", "Week {number}: {done}/{total} days completed, {percent}%", { number: week.number, done, total, percent })}
         >
           <svg viewBox="0 0 120 120" aria-hidden="true">
             <circle
@@ -81,7 +82,7 @@ export function ProgressDashboard({
           </svg>
           <div>
             <strong>{percent}%</strong>
-            <small>{done} / 7</small>
+            <small>{done} / {total}</small>
           </div>
         </div>
         <div className="progress-week-content">
@@ -107,7 +108,7 @@ export function ProgressDashboard({
                 key={date}
                 href={`/week/${week.number}/day/${i + 1}`}
                 className={`${complete.has(date) ? "complete" : ""} ${new Date(date + "T00:00:00Z").getUTCDay() === 0 ? "sunday" : ""}`}
-                aria-label={`${date} ${complete.has(date) ? t("완료", "Complete") : t("학습하기", "Study")}`}
+                aria-label={`${date} ${!scheduled.has(date) ? t("휴식 · 이어 읽기", "Rest and catch up") : complete.has(date) ? t("완료", "Complete") : t("학습하기", "Study")}`}
               >
                 <small>
                   {new Date(date + "T00:00:00Z").toLocaleDateString(locale, {
@@ -116,7 +117,7 @@ export function ProgressDashboard({
                   })}
                 </small>
                 <strong>{Number(date.slice(-2))}</strong>
-                <span>{complete.has(date) ? "✓" : "○"}</span>
+                <span>{!scheduled.has(date) ? t("쉼", "Rest") : complete.has(date) ? "✓" : "○"}</span>
               </Link>
             ))}
           </div>

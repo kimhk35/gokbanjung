@@ -1,4 +1,5 @@
 import type { Week } from "./types";
+import { isStudyRestDay } from "./cfm-study-plan";
 export function lessonDate(start: string, day: number) {
   return new Date(Date.parse(start + "T00:00:00Z") + (day - 1) * 86400000)
     .toISOString()
@@ -10,13 +11,22 @@ export function studyProgress(
 ) {
   const scheduled = new Map<string, { week: number; day: number }>();
   for (const week of weeks)
-    for (let day = 1; day <= 7; day++)
-      scheduled.set(lessonDate(week.start, day), { week: week.number, day });
+    for (let day = 1; day <= 7; day++) {
+      if (!isStudyRestDay(week.number, day))
+        scheduled.set(lessonDate(week.start, day), { week: week.number, day });
+    }
   const complete = new Set<string>();
   for (const entry of progress) {
     const week = weeks.find((w) => w.number === entry.week);
-    if (week && Number.isInteger(entry.day) && entry.day >= 1 && entry.day <= 7)
-      complete.add(lessonDate(week.start, entry.day));
+    if (
+      week &&
+      Number.isInteger(entry.day) &&
+      entry.day >= 1 &&
+      entry.day <= 7
+    ) {
+      const date = lessonDate(week.start, entry.day);
+      if (scheduled.has(date)) complete.add(date);
+    }
   }
   const months = Array.from({ length: 12 }, (_, i) => {
     const month = `2026-${String(i + 1).padStart(2, "0")}`;

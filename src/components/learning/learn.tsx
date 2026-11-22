@@ -1,5 +1,6 @@
 "use client";
 import { lessonDate } from "@/lib/study-progress";
+import { getStudyDay, isStudyRestDay, studyDayTitle } from "@/lib/cfm-study-plan";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useApp } from "../provider";
@@ -238,6 +239,7 @@ export function LearnPage() {
 export function WeekPage({ number }: { number: number }) {
   const { uiLang, tl, weeks, t, boot, notify, error } = useApp();
   const w = weeks.find((w) => w.number === number);
+  const sundayRest = isStudyRestDay(number, 7);
   const [completed, setCompleted] = useState<number[]>([]);
   useEffect(() => {
     if (boot && canManageRecords(boot.actor))
@@ -283,7 +285,11 @@ export function WeekPage({ number }: { number: number }) {
             <ArrowUpRight size={17} />
           </a>
           <small>
-            {t("제공된 교재 {sourcePage}쪽 · 주간 일정 원문 기준", "Provided manual, page {sourcePage} · English titles are study translations", { sourcePage: w.sourcePage })}
+            {t(
+              "제공된 교재 {sourcePage}쪽 · 주간 일정 원문 기준",
+              "Provided manual, page {sourcePage} · English titles are study translations",
+              { sourcePage: w.sourcePage },
+            )}
           </small>
         </div>
         <button
@@ -304,17 +310,26 @@ export function WeekPage({ number }: { number: number }) {
       </div>
       <h2>{t("나의 일주일", "Your week")}</h2>
       <p className="muted">
-        {t(
-          "일별 분량은 주간 경전 범위를 나눈 학습 제안입니다. 일요일에는 한 주를 돌아봅니다.",
-          "Daily portions are suggested divisions of the weekly reading. Sunday is for looking back.",
-        )}
+        {sundayRest
+          ? t(
+              "월요일부터 토요일까지 읽고, 일요일에는 쉬거나 밀린 분량을 이어 읽으세요.",
+              "Read Monday through Saturday. On Sunday, rest or catch up on an earlier day.",
+            )
+          : t(
+              "일별 분량은 주간 경전 범위를 나눈 학습 제안입니다. 일요일에는 한 주를 돌아봅니다.",
+              "Daily portions are suggested divisions of the weekly reading. Sunday is for looking back.",
+            )}
       </p>
       <div className="days">
         {Array.from({ length: 7 }, (_, i) => (
           <Link
             key={i}
             href={`/week/${number}/day/${i + 1}`}
-            className={completed.includes(i + 1) ? "done" : ""}
+            className={
+              completed.includes(i + 1) && !(sundayRest && i === 6)
+                ? "done"
+                : ""
+            }
           >
             <span>
               {t(
@@ -323,7 +338,9 @@ export function WeekPage({ number }: { number: number }) {
               )}
             </span>
             <strong>
-              {completed.includes(i + 1) ? (
+              {sundayRest && i === 6 ? (
+                t("쉼", "Rest")
+              ) : completed.includes(i + 1) ? (
                 <Check size={21} />
               ) : (
                 String(i + 1).padStart(2, "0")
@@ -333,34 +350,38 @@ export function WeekPage({ number }: { number: number }) {
         ))}
       </div>
       <div className="stack">
-        {Array.from({ length: 7 }, (_, i) => (
-          <Link
-            className="day-row"
-            href={`/week/${number}/day/${i + 1}`}
-            key={i}
-          >
-            <span>{String(i + 1).padStart(2, "0")}</span>
-            <div>
-              <strong>
-                {i === 6
-                  ? t("이번 주 돌아보기", "Reflect on the week")
-                  : reading(w, i + 1, uiLang)}
-              </strong>
-              <small>
-                {i === 6
-                  ? t(
-                      "다음 주에 이어 갈 질문을 남겨 보세요.",
-                      "Leave a question to carry into next week.",
-                    )
-                  : t(
-                      "읽고 · 생각하고 · 실천하기",
-                      "Read · Reflect · Put into practice",
-                    )}
-              </small>
-            </div>
-            <ArrowRight size={20} />
-          </Link>
-        ))}
+        {Array.from({ length: 7 }, (_, i) => {
+          const day = sundayRest && getStudyDay(number, i + 1);
+          let title = day
+            ? t(studyDayTitle(day, number), studyDayTitle(day, number, true))
+            : reading(w, i + 1, uiLang);
+          let description = t(
+            "읽고 · 생각하고 · 실천하기",
+            "Read · Reflect · Put into practice",
+          );
+          if (i === 6) {
+            title = sundayRest
+              ? t("휴식 · 이어 읽기", "Rest and catch up")
+              : t("이번 주 돌아보기", "Reflect on the week");
+            description = sundayRest
+              ? t("월~토 중 이어서 읽을 날을 선택하세요.", "Choose an earlier day to continue reading.")
+              : t("다음 주에 이어 갈 질문을 남겨 보세요.", "Leave a question to carry into next week.");
+          }
+          return (
+            <Link
+              className="day-row"
+              href={`/week/${number}/day/${i + 1}`}
+              key={i}
+            >
+              <span>{String(i + 1).padStart(2, "0")}</span>
+              <div>
+                <strong>{title}</strong>
+                <small>{description}</small>
+              </div>
+              <ArrowRight size={20} />
+            </Link>
+          );
+        })}
       </div>
       <PublishedQuestions week={number} />
       <div className="actions">

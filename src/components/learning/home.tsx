@@ -17,7 +17,7 @@ import { RecommendedDiscussion } from "./recommended-discussion";
 import { useStudyDate } from "../use-study-date";
 import { Announcements } from "./announcements";
 import { HomeCommunity } from "./home-community";
-import { getStudyDay, dailyStudyHref } from "@/lib/cfm-study-plan";
+import { getStudyDay, dailyStudyHref, isStudyRestDay } from "@/lib/cfm-study-plan";
 import { DailyInsightHome } from "./daily-insight";
 export function HomePage() {
   const { tl, locale, t, uiLang, weeks, ready, boot, reload, error } = useApp();
@@ -33,6 +33,7 @@ export function HomePage() {
     (date < weeks[0].start ? weeks[0] : weeks.at(-1)!);
   const day = dayIndex(w, date);
   const allocated = getStudyDay(w.number, day);
+  const restDay = isStudyRestDay(w.number, day);
   const studyHref = dailyStudyHref(w.number, day);
   const study = dailyStudyContent(w, day, uiLang);
   const nextWeek = weeks.find((candidate) => candidate.number === w.number + 1);
@@ -70,7 +71,9 @@ export function HomePage() {
             {t("다음 주", "Next week")} ·{" "}
             {nextWeek.start.slice(5).replace("-", ".")}–
             {nextWeek.end.slice(5).replace("-", ".")} ·{" "}
-            {t("7일 분량 보기", "View the seven-day plan")}
+            {isStudyRestDay(nextWeek.number, 7)
+              ? t("월~토 분량 보기", "View the Monday–Saturday plan")
+              : t("7일 분량 보기", "View the seven-day plan")}
           </Link>
         )}
       </div>
@@ -104,7 +107,9 @@ export function HomePage() {
             )}
           </p>
           <Link className="button primary" href={studyHref}>
-            {t("오늘의 학습 시작하기", "Begin today’s learning")}
+            {restDay
+              ? t("이번 주 분량 이어 읽기", "Catch up on this week’s reading")
+              : t("오늘의 학습 시작하기", "Begin today’s learning")}
             <ArrowRight size={19} />
           </Link>
           <span className="quiet-note">
@@ -140,7 +145,7 @@ export function HomePage() {
       <ContinueLearning />
       <Announcements />
       <RecommendedDiscussion week={w} />
-      {!allocated && <Recommendation week={w} day={day} />}
+      {!allocated && !restDay && <Recommendation week={w} day={day} />}
       <section
         className="rhythm"
         aria-label={t("학습의 흐름", "Learning rhythm")}
@@ -190,18 +195,24 @@ export function HomePage() {
           {[
             {
               icon: BookOpen,
-              label: t("오늘의 말씀", "Today’s reading"),
-              body: study.topic,
+              label: restDay
+                ? t("이번 주 이어 읽기", "Catch up this week")
+                : t("오늘의 말씀", "Today’s reading"),
+              body: restDay ? study.question : study.topic,
               href: studyHref,
               n: "01",
             },
-            {
-              icon: Feather,
-              label: t("오늘의 질문", "Today’s question"),
-              body: study.question,
-              href: studyHref,
-              n: "02",
-            },
+            ...(restDay
+              ? []
+              : [
+                  {
+                    icon: Feather,
+                    label: t("오늘의 질문", "Today’s question"),
+                    body: study.question,
+                    href: studyHref,
+                    n: "02",
+                  },
+                ]),
             {
               icon: MessageCircle,
               label: t("우리 반 생각", "Our shared thoughts"),

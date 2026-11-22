@@ -2,6 +2,7 @@ import type { StudyTask } from "./cfm-study-plan";
 import week44 from "@/data/cfm-2026-week-44-english.json";
 import week46 from "@/data/cfm-2026-week-46-english.json";
 import week47 from "@/data/cfm-2026-week-47-english.json";
+import week48 from "@/data/cfm-2026-week-48-english.json";
 
 type OriginalRange = Pick<
   StudyTask,
@@ -24,6 +25,7 @@ const englishEditions: Readonly<Record<string, EnglishStudyEdition>> = {
   ...week44.tasks,
   ...week46.tasks,
   ...week47.tasks,
+  ...week48.tasks,
 };
 
 export function verifiedEnglishSource(

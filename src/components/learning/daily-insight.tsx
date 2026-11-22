@@ -13,7 +13,7 @@ import { uploadPoster } from "@/lib/image-compress";
 import type { AutoInsight, InsightText } from "@/lib/daily-insight";
 import type { UiLang } from "@/lib/i18n";
 import type { CustomInsight } from "@/lib/daily-insight-service";
-import { dailyStudyHref } from "@/lib/cfm-study-plan";
+import { dailyStudyHref, isStudyRestDay } from "@/lib/cfm-study-plan";
 import { useStudyDate } from "../use-study-date";
 import { PosterImage } from "../poster-image";
 
@@ -208,7 +208,9 @@ export function DailyInsightCard({
             className="button"
             href={dailyStudyHref(data.auto.week, data.auto.day)}
           >
-            <Sun size={18} /> {t("오늘 학습 시작", "Start today’s study")}
+            <Sun size={18} /> {isStudyRestDay(data.auto.week, data.auto.day)
+              ? t("이번 주 분량 이어 읽기", "Catch up on this week’s reading")
+              : t("오늘 학습 시작", "Start today’s study")}
           </Link>
         )}
         <button

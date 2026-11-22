@@ -2,6 +2,7 @@ import approved from "@/data/cfm-2026-week-43.json";
 import week44 from "@/data/cfm-2026-week-44.json";
 import week46 from "@/data/cfm-2026-week-46.json";
 import week47 from "@/data/cfm-2026-week-47.json";
+import week48 from "@/data/cfm-2026-week-48.json";
 import type { UiLang } from "./i18n";
 import { churchLangCode } from "./i18n";
 import { verifiedEnglishSource } from "./study-source-editions";
@@ -22,10 +23,12 @@ export type StudyTask = {
   selectedIds: string[];
   noteLinks: { note: string; owner: string }[];
   readingNote?: string;
+  printEdition?: { pages: string; ko: string; en: string };
   relatedTaskIds?: string[];
 };
 export type StudyDay = {
   day: number;
+  restDay?: boolean;
   shortTitle: string;
   shortTitleEn?: string;
   familyTitle?: string;
@@ -49,6 +52,7 @@ const plans: Readonly<Record<number, StudyPlan>> = {
   44: week44,
   46: week46,
   47: week47,
+  48: week48,
 };
 export const getStudyPlan = (week: number): StudyPlan | undefined =>
   plans[week];
@@ -62,12 +66,25 @@ export function findStudyDay(plan: StudyPlan | undefined, day: number) {
 }
 export const getStudyDay = (week: number, day: number) =>
   findStudyDay(getStudyPlan(week), day);
-export function dailyStudyHref(week: number, day: number) {
-  return `/week/${week}/day/${day}?${getStudyDay(week, day) ? "track=adult" : "view=notes"}`;
+export function isStudyRestDay(week: number, day: number) {
+  return (
+    getStudyPlan(week)?.days.some((d) => d.day === day && d.restDay) === true
+  );
+}
+export function dailyStudyHref(
+  week: number,
+  day: number,
+  track: StudyTrack = "adult",
+) {
+  const reader = getStudyDay(week, day) || isStudyRestDay(week, day);
+  return `/week/${week}/day/${day}?${reader ? `track=${track}` : "view=notes"}`;
 }
 export function isStudyReaderPath(path: string) {
   const route = path.match(/^\/week\/(\d+)\/day\/([1-7])$/);
-  return !!route && !!getStudyDay(Number(route[1]), Number(route[2]));
+  if (!route) return false;
+  const week = Number(route[1]);
+  const day = Number(route[2]);
+  return !!getStudyDay(week, day) || isStudyRestDay(week, day);
 }
 export const studyTasks = (
   day: number,

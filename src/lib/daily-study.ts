@@ -1,4 +1,4 @@
-import { getStudyDay, studyDayTitle } from "./cfm-study-plan";
+import { getStudyDay, isStudyRestDay, studyDayTitle } from "./cfm-study-plan";
 import { reading } from "./curriculum";
 import { translate, type UiLang } from "./i18n";
 import { recommendedQuestion } from "./recommendations";
@@ -6,6 +6,20 @@ import type { Week } from "./types";
 
 // Home and the daily card must describe the same day that their links open.
 export function dailyStudyContent(week: Week, day: number, lang: UiLang) {
+  if (isStudyRestDay(week.number, day))
+    return {
+      title: translate(
+        lang,
+        "일요일 · 휴식과 이어 읽기",
+        "Sunday · Rest and catch up",
+      ),
+      question: translate(
+        lang,
+        "오늘은 쉬어 가세요. 밀린 분량은 읽던 요일에서 이어 갈 수 있어요.",
+        "Rest today, or choose an earlier day to pick up where you left off.",
+      ),
+      topic: "",
+    };
   const allocated = getStudyDay(week.number, day);
   if (!allocated) {
     const recommended = recommendedQuestion(week, day, lang);
