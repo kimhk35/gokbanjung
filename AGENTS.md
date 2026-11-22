@@ -116,7 +116,7 @@ Church website. Users also want less content at once and easy question links.
 
 ### Lightweight continuity
 
-- Before adding or changing a seven-day Come, Follow Me allocation, read
+- Before adding or changing a weekly Come, Follow Me allocation, read
   `docs/study/cfm-distribution-method.md`. Preserve the complete source inventory,
   scripture/talk bodies and notes within its declared scope; verify no missing
   or duplicate units and actual blue-range boundaries. Record unverified weeks

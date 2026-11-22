@@ -6,6 +6,7 @@ import {
   getStudyPlan,
   getStudyDay,
   findStudyDay,
+  isStudyRestDay,
   dailyStudyHref,
   hasStudyPlan,
   isStudyReaderPath,
@@ -196,10 +197,28 @@ test("daily entry uses the allocation when ready and the existing lesson otherwi
       );
     }
   }
-  for (const week of [45, 48]) {
+  for (const week of [45, 49]) {
     assert.equal(getStudyDay(week, 7), undefined);
     assert.equal(dailyStudyHref(week, 7), `/week/${week}/day/7?view=notes`);
   }
+});
+
+test("a scheduled rest Sunday opens catch-up instead of the unallocated lesson", () => {
+  assert.equal(isStudyRestDay(48, 7), true);
+  assert.equal(getStudyDay(48, 7), undefined);
+  assert.equal(isStudyReaderPath("/week/48/day/7"), true);
+  assert.equal(dailyStudyHref(48, 7), "/week/48/day/7?track=adult");
+  assert.equal(dailyStudyHref(48, 7, "family"), "/week/48/day/7?track=family");
+  for (let day = 1; day <= 6; day++) {
+    assert.equal(isStudyRestDay(48, day), false);
+    assert.equal(getStudyDay(48, day)?.day, day);
+    assert.equal(
+      dailyStudyHref(48, day, "family"),
+      `/week/48/day/${day}?track=family`,
+    );
+  }
+  assert.equal(isStudyRestDay(47, 7), false);
+  assert.equal(isStudyRestDay(49, 7), false);
 });
 
 test("partly allocated weeks resolve by day number and fall back for missing or empty days", () => {

@@ -27,7 +27,7 @@ type Source = {
   }[];
 };
 
-for (const week of [44, 46, 47]) {
+for (const week of [44, 46, 47, 48]) {
   const sources: Source[] = JSON.parse(
     readFileSync(`docs/study/2026-english-${week}-sources.json`, "utf8"),
   );

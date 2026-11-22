@@ -73,7 +73,7 @@ test("daily cards describe the allocated day's materials and question, including
 });
 
 test("unallocated dates keep their own legacy reading and question", () => {
-  for (const date of ["2026-11-08", "2026-11-23"]) {
+  for (const date of ["2026-11-08", "2026-11-30"]) {
     const week = currentWeek(date)!;
     const day = dayIndex(week, date);
     const card = autoInsight(date)!;
@@ -86,6 +86,15 @@ test("unallocated dates keep their own legacy reading and question", () => {
       );
     }
   }
+});
+
+test("the Sunday catch-up card offers earlier readings without setting another assignment", () => {
+  const card = autoInsight("2026-11-29")!;
+  assert.equal(card.week, 48);
+  assert.equal(card.day, 7);
+  assert.equal(card.ko.topic, "");
+  assert.match(card.ko.question, /밀린 분량/);
+  assert.match(card.en.question, /earlier day/);
 });
 
 async function make(role: Actor["role"]): Promise<Actor> {

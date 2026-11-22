@@ -82,7 +82,7 @@ export function JourneyPage() {
                   week={r.week}
                 />
               </p>
-              <Link href={`/week/${r.week}/day/${r.day}`}>
+              <Link href={`/week/${r.week}/day/${r.day}?view=notes`}>
                 {t("기록 이어 쓰기", "Continue this reflection")} →
               </Link>
             </article>

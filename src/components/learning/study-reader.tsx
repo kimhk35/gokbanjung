@@ -25,6 +25,7 @@ import { api } from "@/lib/client";
 import {
   getStudyPlan,
   getStudyDay,
+  isStudyRestDay,
   dailyStudyHref,
   studyDayTitle,
   studyFamilyTitle,
@@ -505,9 +506,7 @@ function Reader({
           disabled={busy}
           onChange={(e) =>
             router.replace(
-              getStudyDay(week, Number(e.target.value))
-                ? `/week/${week}/day/${e.target.value}?track=${track}`
-                : dailyStudyHref(week, Number(e.target.value)),
+              dailyStudyHref(week, Number(e.target.value), track),
               {
                 scroll: false,
               },
@@ -526,7 +525,9 @@ function Reader({
                   ·{" "}
                   {d
                     ? t(studyDayTitle(d, week), studyDayTitle(d, week, true))
-                    : t("기존 학습", "Existing study")}
+                    : isStudyRestDay(week, dayNumber)
+                      ? t("휴식 · 이어 읽기", "Rest and catch up")
+                      : t("기존 학습", "Existing study")}
                   {materialPercent(
                     dayNumber,
                     "adult",
@@ -746,6 +747,16 @@ function Reader({
                 {t("나만의 학습 메모", "Private learning notes")}
               </button>
             </div>
+          )}
+          {positionReady && edition.printEdition && (
+            <a
+              className="study-print-link"
+              href={uiLang === "en" ? edition.printEdition.en : edition.printEdition.ko}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("인쇄본 {pages}쪽 읽기 (PDF) ↗", "Read pages {pages} in the print edition (PDF) ↗", { pages: edition.printEdition.pages })}
+            </a>
           )}
           {positionReady && (edition.readingNote || related.length > 0) && (
             <details key={task.id} className="study-related-reading">
@@ -1121,7 +1132,7 @@ function Reader({
             </tr>
           </thead>
           <tbody>
-            {plan.days.map((d) => (
+            {plan.days.filter((d) => !d.restDay).map((d) => (
               <tr key={d.day}>
                 <th>
                   <button

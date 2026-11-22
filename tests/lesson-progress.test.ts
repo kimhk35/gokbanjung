@@ -85,3 +85,20 @@ test("Twenty distinct local faith backgrounds exist and are supported in lesson 
   assert.equal(new Set(sources).size, 20);
   assert.equal(cardBackgroundUrl("../../secret"), null);
 });
+
+test("six completed days finish the six-day week, including in monthly totals", () => {
+  const week = weeks.find((w) => w.number === 48)!;
+  const progress = Array.from({ length: 6 }, (_, i) => ({
+    week: 48,
+    day: i + 1,
+  }));
+  const result = studyProgress([week], progress);
+  assert.equal(result.scheduled.size, 6);
+  assert.equal(result.scheduled.has("2026-11-29"), false);
+  assert.equal(result.complete.size, 6);
+  assert.deepEqual(result.months[10], { month: "2026-11", total: 6, done: 6 });
+  assert.deepEqual(
+    studyProgress([week], [...progress, { week: 48, day: 7 }]).complete,
+    result.complete,
+  );
+});
