@@ -218,3 +218,92 @@ body {
 :root[data-theme="dark"] .nav-symbol {
   color: var(--gold);
 }
+.study-points {
+  display: grid;
+  gap: 12px;
+  margin-block: 18px;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.study-points-card {
+  background: #114c48;
+  border-radius: 16px;
+  padding: clamp(16px, 4vw, 26px);
+  color: #fffdf1;
+}
+.study-points-card h2,
+.study-points-ward h3 {
+  margin: 0;
+  color: inherit;
+}
+.study-points-period {
+  margin: 3px 0 0;
+  color: #d1e7d7;
+  font-size: 0.9em;
+}
+.study-points-totals {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px 18px;
+  margin: 16px 0 12px;
+}
+.study-points-totals dd {
+  margin: 0;
+  font-size: clamp(1.25rem, 5vw, 2.1rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.study-points-totals > div:first-child dd {
+  color: #f4d797;
+  font-size: clamp(1.6rem, 6vw, 2.65rem);
+}
+.study-points-breakdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 14px;
+  border-top: 1px solid #cbe3d262;
+  padding-top: 10px;
+  margin: 0;
+}
+.study-points-history {
+  border-block: 1px solid var(--line);
+}
+.study-points-history summary {
+  padding: 11px 0;
+  min-height: 44px;
+  cursor: pointer;
+}
+.study-points-history ul {
+  list-style: none;
+  padding: 0;
+}
+.study-points-history li,
+.study-points-ward {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.study-points-history li {
+  padding-block: 8px;
+  border-top: 1px solid var(--line);
+}
+.study-points-history time {
+  margin-inline-end: 8px;
+  color: var(--muted);
+}
+.study-points-history strong,
+.study-points-ward strong {
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+.study-points-ward {
+  flex-wrap: wrap;
+  padding: 12px 0;
+}
+.study-points-ward p {
+  margin: 4px 0 0;
+}

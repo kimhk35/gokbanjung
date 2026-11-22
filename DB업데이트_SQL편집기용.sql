@@ -325,6 +325,24 @@ create table if not exists public.ggc_auth_config (
 alter table public.ggc_auth_config enable row level security;
 revoke all on public.ggc_auth_config from public, anon, authenticated;
 
+-- 20261122233236_study_learning_points.sql
+create table if not exists ggc.study_point_events (
+  owner_id uuid not null references ggc.actors(id) on delete cascade,
+  course_id text not null references ggc.courses(id),
+  week integer not null references ggc.weeks(id),
+  day integer not null check (day between 1 and 7),
+  kind text not null check (kind in ('reading', 'thought')),
+  earned_at timestamptz not null default now(),
+  primary key (owner_id, week, day, kind)
+);
+
+alter table ggc.study_point_events enable row level security;
+revoke all on ggc.study_point_events from public, anon, authenticated;
+
+create index if not exists study_point_events_course_reading
+  on ggc.study_point_events (course_id, earned_at)
+  where kind = 'reading';
+
 select case
   when to_regclass('ggc.events') is not null
    and to_regclass('ggc.prompt_reply_reactions') is not null
@@ -335,6 +353,7 @@ select case
    and to_regclass('ggc.study_range_thoughts') is not null
    and to_regclass('ggc.study_material_progress') is not null
    and to_regclass('ggc.study_day_completion') is not null
+   and to_regclass('ggc.study_point_events') is not null
    and to_regclass('ggc.stored_files') is not null
    and to_regclass('public.ggc_auth_user') is not null
    and to_regclass('public.ggc_auth_session') is not null

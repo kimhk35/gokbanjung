@@ -5,6 +5,8 @@ import { ensure, AppError } from "./errors";
 import type { Actor } from "./types";
 import { curriculum, COURSE } from "./curriculum";
 import { canManageRecords } from "./access";
+import { getStudyPointSummary } from "./study-points";
+import { studyTasks } from "./cfm-study-plan";
 export const weekSchema = z.coerce.number().int().min(1).max(52);
 const text = z.string().trim().min(1).max(6000);
 export async function rateLimit(key: string, limit: number, seconds = 3600) {
@@ -55,15 +57,37 @@ export async function readData(
   }
   const availableTeachers =
     path === "bootstrap" ? await teachers(a.course_id) : [];
-  const materialCompletions =
+  const [materialCompletions, studyPoints] =
     path === "journey"
-      ? await privileged((db) =>
-          db.query<{ week: number; day: number }>(
-            "select week,day from ggc.study_day_completion where owner_id=$1",
-            [a.id],
-          ),
-        )
-      : [];
+      ? await Promise.all([
+          privileged(async (db) => {
+            const basic = await db.query<{ week: number; day: number }>(
+              "select week,day from ggc.study_day_completion where owner_id=$1",
+              [a.id],
+            );
+            const family = await db.query<{
+              week: number;
+              day: number;
+              task_ids: string[];
+            }>(
+              `select week,day,array_agg(task_id) as task_ids
+               from ggc.study_material_progress
+               where owner_id=$1 and track='family' group by week,day`,
+              [a.id],
+            );
+            for (const { week, day, task_ids } of family) {
+              const tasks = studyTasks(day, "family", week);
+              if (
+                tasks.length &&
+                tasks.every((task) => task_ids.includes(task.id))
+              )
+                basic.push({ week, day });
+            }
+            return basic;
+          }),
+          getStudyPointSummary(a),
+        ])
+      : [[], null] as const;
   return asActor(a, async (db) => {
     const week = weekSchema.parse(params.get("week") || 38);
     switch (path) {
@@ -122,6 +146,7 @@ export async function readData(
         };
       case "journey":
         return {
+          studyPoints,
           reflections: await db.query(
             "select week,day,content,updated_at from ggc.reflections order by week desc,day desc",
           ),

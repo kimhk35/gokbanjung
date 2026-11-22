@@ -88,6 +88,7 @@ try {
       "20261018020000_study_material_progress.sql",
       "20261019030000_database_file_storage.sql",
       "20261019040000_database_auth.sql",
+      "20261122233236_study_learning_points.sql",
     ]) {
       await tx.unsafe(await read(`supabase/migrations/${file}`, "utf8"));
     }
@@ -95,7 +96,8 @@ try {
       to_regclass('ggc.study_prompt_assignments') as assignments,
       to_regclass('ggc.study_range_thoughts') as thoughts,
       to_regclass('ggc.study_material_progress') as progress,
-      to_regclass('ggc.study_day_completion') as completion`;
+      to_regclass('ggc.study_day_completion') as completion,
+      to_regclass('ggc.study_point_events') as points`;
     if (Object.values(reader).some((table) => !table))
       throw new Error("Study reader schema verification failed");
     const [neon] = await tx`select to_regclass('ggc.stored_files') as files,

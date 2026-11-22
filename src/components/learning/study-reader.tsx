@@ -36,6 +36,7 @@ import {
   studySourceNoteUrl,
   studySourceUrl,
   studyTasks,
+  studyThoughtAnchor,
   studyRelatedTasks,
   type StudyTrack,
   type StudyDay,
@@ -240,6 +241,7 @@ function Reader({
   const [invite, setInvite] = useState(false);
   const [dismissed, setDismissed] = useState<number[]>([]);
   const [status, setStatus] = useState("");
+  const [pointsAwarded, setPointsAwarded] = useState(0);
   const [jump, setJump] = useState(0);
   const alive = useRef(true);
   const communityRequest = useRef(0);
@@ -288,11 +290,7 @@ function Reader({
   const stats = materialPercent(selectedDay, track, completed, week);
   const source = {
     path: task.path,
-    anchor:
-      task.selectedIds.find((id) => /^p\d+$/.test(id)) ||
-      task.selectedIds[0] ||
-      task.anchor ||
-      "main",
+    anchor: studyThoughtAnchor(task),
     label: edition.label,
   };
   const sourcePath = source.path,
@@ -392,15 +390,13 @@ function Reader({
     if (!connectionOK || busy) return false;
     setBusy(true);
     setStatus("");
+    setPointsAwarded(0);
     ++progressRequest.current;
     try {
-      await api("notes/study-progress-save", {
-        week,
-        day: dayNo,
-        track: course,
-        task_id: taskId,
-        complete,
-      });
+      const saved = await api<{ pointsAwarded: number }>(
+        "notes/study-progress-save",
+        { week, day: dayNo, track: course, task_id: taskId, complete },
+      );
       if (!alive.current) return false;
       const next = progress.filter(
         (p) => !(p.day === dayNo && p.track === course && p.task_id === taskId),
@@ -438,7 +434,9 @@ function Reader({
       )
         setInvite(true);
       if (!complete) setInvite(false);
-      setStatus(t("학습 기록을 저장했습니다.", "Learning progress saved."));
+      setPointsAwarded(saved.pointsAwarded);
+      if (!saved.pointsAwarded)
+        setStatus(t("학습 기록을 저장했습니다.", "Learning progress saved."));
       return true;
     } catch (e) {
       if (alive.current) {
@@ -865,6 +863,21 @@ function Reader({
           </button>
           <button type="button" onClick={dismissInvite}>
             {t("나중에", "Later")}
+          </button>
+        </div>
+      )}
+      {pointsAwarded > 0 && (
+        <div className="study-gentle" role="status">
+          <span>
+            {t(
+              "하루 분량을 마쳐 {n}점을 받았어요.",
+              "You earned {n} points for finishing a study day.",
+              { n: pointsAwarded },
+            )}
+          </span>
+          <Link href="/journey">{t("나의 여정", "My journey")}</Link>
+          <button type="button" onClick={() => setPointsAwarded(0)}>
+            {t("닫기", "Close")}
           </button>
         </div>
       )}

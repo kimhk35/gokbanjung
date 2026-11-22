@@ -1491,5 +1491,21 @@
  "이번 주 이어 읽기": "Catch up this week",
  "월요일부터 토요일까지 읽고, 일요일에는 쉬거나 밀린 분량을 이어 읽으세요.": "Read Monday through Saturday. On Sunday, rest or catch up on an earlier day.",
  "월~토 중 이어서 읽을 날을 선택하세요.": "Choose an earlier day to continue reading.",
- "{number}주차 {done}/{total}일 완료, {percent}%": "Week {number}: {done}/{total} days completed, {percent}%"
+ "{number}주차 {done}/{total}일 완료, {percent}%": "Week {number}: {done}/{total} days completed, {percent}%",
+ "학습 포인트": "Learning points",
+ "이번 주 포인트": "This week’s points",
+ "누적 포인트": "Lifetime points",
+ "{n}점": "{n} points",
+ "하루 분량 완료": "Study day completed",
+ "첫 생각 기록": "First thought recorded",
+ "일일 경전 퀴즈": "Daily scripture quiz",
+ "주간 경전 퀴즈": "Weekly scripture quiz",
+ "월간 경전 퀴즈": "Monthly scripture quiz",
+ "최근 적립 내역과 기준": "Recent points and how to earn them",
+ "우리 와드가 함께 읽은 분량": "What our ward has read together",
+ "이번 주 회원 전체 합계": "This week’s member total",
+ "{n}일치": "{n} study days",
+ "하루 분량을 마쳐 {n}점을 받았어요.": "You earned {n} points for finishing a study day.",
+ "이 학습일의 첫 생각으로 {n}점을 받았어요.": "You earned {n} points for your first thought on this study day.",
+ "기본·가족 과정 중 하나의 하루 분량을 마치면 10점, 그 학습일의 첫 생각이나 개인 메모를 저장하면 2점이 쌓여요. 밀린 분량은 마친 주에 적립돼요.": "Earn 10 points for finishing either reading track for a study day, and 2 points for the first thought or private note for that day. Catch-up reading counts in the week you finish it."
 }

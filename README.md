@@ -48,6 +48,8 @@ Supabase API·Storage·Auth 키는 더 이상 사용하지 않습니다. `supaba
 ## 데이터베이스 업데이트
 
 기존 `ggc` 스키마의 기록은 유지하며 `npm run db:update`(또는 Neon SQL Editor에 `DB업데이트_SQL편집기용.sql` 붙여 넣기)로 추가 SQL만 적용합니다. 두 번 실행해도 안전합니다.
+
+학습 포인트는 `ggc.study_point_events`가 설치된 시점부터 새 읽기 완료와 첫 생각 기록을 적립합니다. 누적 점수에는 기존 경전 퀴즈 적립 내역이 포함됩니다.
 로그인·파일 저장에는 다음 두 마이그레이션이 필요합니다.
 
 - `20261019030000_database_file_storage.sql`: 서버 전용 파일 저장소(`ggc.stored_files`)
