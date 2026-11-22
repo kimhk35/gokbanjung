@@ -8,7 +8,8 @@
       "codex/mobile-reader-focus": false,
       "claude/auth-restore": false,
       "codex/week47-connected-reading": false,
-      "codex/week48-six-day-reading": false
+      "codex/week48-six-day-reading": false,
+      "codex/reader-previous-material": false
     }
   },
   "framework": "nextjs",

@@ -13,6 +13,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import {
   BookOpen,
   Check,
+  ChevronLeft,
   CircleHelp,
   Maximize2,
   MessageCircle,
@@ -868,6 +869,15 @@ function Reader({
         </div>
       )}
       <footer className="study-reader-bottom">
+        <button
+          type="button"
+          className="study-previous"
+          disabled={!positionReady || step === 0 || busy}
+          onClick={() => selectPosition(tasks[step - 1].id)}
+        >
+          <ChevronLeft size={18} aria-hidden="true" />
+          {t("이전", "Previous")}
+        </button>
         <button
           type="button"
           className="study-primary"
