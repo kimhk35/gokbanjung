@@ -335,6 +335,7 @@ body:has(.study-reader-shell) {
 }
 .study-reader-bottom {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 12px;
   margin: 0 !important;
@@ -356,6 +357,13 @@ body:has(.study-reader-shell) {
 }
 .study-reader-bottom button {
   white-space: nowrap;
+}
+.study-previous {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-shrink: 0;
 }
 .study-gentle,
 .study-connection {
@@ -1111,6 +1119,7 @@ body:has(.study-reader-shell) {
   .study-reader .study-reader-bottom button {
     padding: 8px 10px;
     font-size: 16px;
+    white-space: normal;
   }
 }
 @media (max-width: 600px) {
@@ -1123,6 +1132,16 @@ body:has(.study-reader-shell) {
   }
 }
 @media (max-width: 360px) {
+  .study-reader-bottom {
+    gap: 4px;
+    padding-inline: 4px;
+  }
+  .study-reader .study-reader-bottom button {
+    padding-inline: 5px;
+  }
+  .study-previous svg {
+    display: none;
+  }
   .study-reader .study-reader-top .study-brand,
   .study-reader .study-reader-top .study-official {
     display: none;

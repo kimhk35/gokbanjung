@@ -4,6 +4,8 @@ import { contentSecurityPolicy } from "./src/lib/security-headers";
 const buildDate = new Date(Date.now() + 9 * 3600000).toISOString().slice(0, 10);
 const config: NextConfig = {
   env: { NEXT_PUBLIC_BUILD_DATE: buildDate },
+  // The floating development menu intercepts taps on the reader's bottom bar.
+  devIndicators: false,
   distDir: process.env.NEXT_DIST_DIR || ".next",
   serverExternalPackages: [
     "@electric-sql/pglite",
