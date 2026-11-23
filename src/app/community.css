@@ -535,7 +535,7 @@ a.event-card:hover {
   .desktop-nav {
     display: none !important;
   }
-  .mobile-nav {
+  body:not(:has(.study-reader-shell)) .mobile-nav {
     display: flex !important;
     position: fixed;
     inset: 0 auto 0 0;
@@ -565,11 +565,8 @@ a.event-card:hover {
   body {
     padding-bottom: 0 !important;
   }
-  header,
-  .reading-toolbar,
-  main,
-  footer,
-  .share-tabs {
+  body:not(:has(.study-reader-shell))
+    :is(header, .reading-toolbar, main, footer, .share-tabs) {
     margin-left: 92px !important;
   }
   .ward-split {

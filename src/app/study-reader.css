@@ -1131,13 +1131,29 @@ body:has(.study-reader-shell) {
     font-size: 14px;
   }
 }
+@media (max-width: 480px) {
+  .study-reader-bottom {
+    display: grid;
+    grid-template-columns: minmax(44px, 0.75fr) minmax(44px, 1fr) minmax(44px, 1.4fr);
+    align-items: stretch;
+  }
+  .study-reader .study-reader-bottom button {
+    padding-inline: 6px;
+    line-height: 1.35;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+  .study-reader-bottom button:last-of-type {
+    margin-left: 0;
+  }
+}
 @media (max-width: 360px) {
   .study-reader-bottom {
-    gap: 4px;
-    padding-inline: 4px;
+    padding-inline: 6px;
   }
   .study-reader .study-reader-bottom button {
     padding-inline: 5px;
+    font-size: 14px;
   }
   .study-previous svg {
     display: none;
