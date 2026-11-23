@@ -5,6 +5,7 @@ import {
   useMemo,
   useRef,
   useState,
+  type ReactNode,
   type Ref,
 } from "react";
 import Link from "next/link";
@@ -23,6 +24,8 @@ import {
 } from "lucide-react";
 import { useApp } from "../provider";
 import { api } from "@/lib/client";
+import { canManageRecords } from "@/lib/access";
+import type { StudyPointTotals } from "@/lib/study-points";
 import {
   getStudyPlan,
   getStudyDay,
@@ -36,6 +39,7 @@ import {
   studySourceNoteUrl,
   studySourceUrl,
   studyTasks,
+  studyThoughtAnchor,
   studyRelatedTasks,
   type StudyTrack,
   type StudyDay,
@@ -73,10 +77,12 @@ type ReaderProps = {
 function StudySourceFrame({
   url,
   title,
+  points,
   onRetry,
 }: {
   url: string;
   title: string;
+  points: ReactNode;
   onRetry: () => void;
 }) {
   const { t } = useApp();
@@ -91,7 +97,10 @@ function StudySourceFrame({
     <>
       <div className="study-source-tools">
         <div>
-          <strong>{title}</strong>
+          <div className="study-source-heading">
+            <strong>{title}</strong>
+            {points}
+          </div>
           <span>
             {t(
               "본문이 보이지 않으면 새 창에서 같은 범위를 읽어 주세요.",
@@ -217,7 +226,8 @@ function Reader({
   readerRef: Ref<HTMLDivElement>;
   onGuide: () => void;
 }) {
-  const { uiLang, setLang, t, boot, ready, reload, error } = useApp();
+  const { uiLang, setLang, t, boot, ready, reload, error, locale } = useApp();
+  const pointOwner = canManageRecords(boot?.actor) ? boot?.actor.id : undefined;
   const router = useRouter();
   const [track, setTrack] = useState<StudyTrack>(initialTrack);
   const [materialsOpen, setMaterialsOpen] = useState(false);
@@ -240,6 +250,29 @@ function Reader({
   const [invite, setInvite] = useState(false);
   const [dismissed, setDismissed] = useState<number[]>([]);
   const [status, setStatus] = useState("");
+  const [pointsAwarded, setPointsAwarded] = useState(0);
+  const [pointsRefresh, setPointsRefresh] = useState(0);
+  const [pointBalance, setPointBalance] = useState<{
+    owner: string;
+    totals: StudyPointTotals | null;
+  }>();
+  const totals = pointBalance && pointBalance.owner === pointOwner
+    ? pointBalance.totals
+    : null;
+  const pointDisplay = totals && (
+    <div className="study-reader-points" aria-live="polite">
+      <span>
+        {t("이번 주 {n}점", "This week {n} pts", {
+          n: totals.weekly.toLocaleString(locale),
+        })}
+      </span>
+      <span>
+        {t("누적 {n}점", "Lifetime {n} pts", {
+          n: totals.total.toLocaleString(locale),
+        })}
+      </span>
+    </div>
+  );
   const [jump, setJump] = useState(0);
   const alive = useRef(true);
   const communityRequest = useRef(0);
@@ -288,11 +321,7 @@ function Reader({
   const stats = materialPercent(selectedDay, track, completed, week);
   const source = {
     path: task.path,
-    anchor:
-      task.selectedIds.find((id) => /^p\d+$/.test(id)) ||
-      task.selectedIds[0] ||
-      task.anchor ||
-      "main",
+    anchor: studyThoughtAnchor(task),
     label: edition.label,
   };
   const sourcePath = source.path,
@@ -305,6 +334,20 @@ function Reader({
       alive.current = false;
     };
   }, []);
+  useEffect(() => {
+    if (!pointOwner) return;
+    let active = true;
+    api<StudyPointTotals | null>("study-points")
+      .then((totals) => {
+        if (active) setPointBalance({ owner: pointOwner, totals });
+      })
+      .catch(() => {
+        if (active) setPointBalance({ owner: pointOwner, totals: null });
+      });
+    return () => {
+      active = false;
+    };
+  }, [pointOwner, pointsRefresh]);
   const notes = useLocalDraft(
     boot ? `${boot.actor.id}:cfm:${week}:${selectedDay}:${track}` : null,
     { body: "" },
@@ -369,6 +412,7 @@ function Reader({
   const onCommunityChanged = () => {
     refreshCommunity();
     refreshRange();
+    if (pointOwner) setPointsRefresh((current) => current + 1);
   };
   const currentAnswered = overview?.answeredDays.includes(selectedDay) || false;
   const dismissInvite = () => {
@@ -392,15 +436,13 @@ function Reader({
     if (!connectionOK || busy) return false;
     setBusy(true);
     setStatus("");
+    setPointsAwarded(0);
     ++progressRequest.current;
     try {
-      await api("notes/study-progress-save", {
-        week,
-        day: dayNo,
-        track: course,
-        task_id: taskId,
-        complete,
-      });
+      const saved = await api<{ pointsAwarded: number }>(
+        "notes/study-progress-save",
+        { week, day: dayNo, track: course, task_id: taskId, complete },
+      );
       if (!alive.current) return false;
       const next = progress.filter(
         (p) => !(p.day === dayNo && p.track === course && p.task_id === taskId),
@@ -438,7 +480,11 @@ function Reader({
       )
         setInvite(true);
       if (!complete) setInvite(false);
-      setStatus(t("학습 기록을 저장했습니다.", "Learning progress saved."));
+      setPointsAwarded(saved.pointsAwarded);
+      if (pointOwner && saved.pointsAwarded > 0)
+        setPointsRefresh((current) => current + 1);
+      if (!saved.pointsAwarded)
+        setStatus(t("학습 기록을 저장했습니다.", "Learning progress saved."));
       return true;
     } catch (e) {
       if (alive.current) {
@@ -630,7 +676,8 @@ function Reader({
         </Link>
       </header>
       <div className="study-mobile-context study-mobile-control">
-        <span>{materialLabel}</span>
+        <span className="study-context-title">{materialLabel}</span>
+        {pointDisplay}
         <small>
           {positionReady ? step + 1 : "–"}/{tasks.length}
         </small>
@@ -805,6 +852,7 @@ function Reader({
               key={`${task.id}:${uiLang}:${sourceUrl}:${jump}`}
               url={sourceUrl}
               title={edition.label}
+              points={pointDisplay}
               onRetry={() => setJump((n) => n + 1)}
             />
           ) : (
@@ -865,6 +913,21 @@ function Reader({
           </button>
           <button type="button" onClick={dismissInvite}>
             {t("나중에", "Later")}
+          </button>
+        </div>
+      )}
+      {pointsAwarded > 0 && (
+        <div className="study-gentle" role="status">
+          <span>
+            {t(
+              "하루 분량을 마쳐 {n}점을 받았어요.",
+              "You earned {n} points for finishing a study day.",
+              { n: pointsAwarded },
+            )}
+          </span>
+          <Link href="/journey">{t("나의 여정", "My journey")}</Link>
+          <button type="button" onClick={() => setPointsAwarded(0)}>
+            {t("닫기", "Close")}
           </button>
         </div>
       )}

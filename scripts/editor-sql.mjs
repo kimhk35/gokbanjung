@@ -31,6 +31,7 @@ select case
    and to_regclass('ggc.study_range_thoughts') is not null
    and to_regclass('ggc.study_material_progress') is not null
    and to_regclass('ggc.study_day_completion') is not null
+   and to_regclass('ggc.study_point_events') is not null
    and to_regclass('ggc.stored_files') is not null
    and to_regclass('public.ggc_auth_user') is not null
    and to_regclass('public.ggc_auth_session') is not null

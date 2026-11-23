@@ -95,6 +95,15 @@ export const studyTasks = (
     track === "adult" ? "adultTasks" : "familyTasks"
   ] || [];
 
+export function studyThoughtAnchor(task: StudyTask) {
+  return (
+    task.selectedIds.find((id) => /^p\d+$/.test(id)) ||
+    task.selectedIds[0] ||
+    task.anchor ||
+    "main"
+  );
+}
+
 // Optional references navigate to a passage's existing allocation. They are
 // not extra reading tasks and never contribute to the completion denominator.
 export function studyRelatedTasks(task: StudyTask, week: number) {

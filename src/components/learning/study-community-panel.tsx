@@ -298,6 +298,7 @@ function RangeThoughts({
   const [busy, setBusy] = useState(false);
   const [failed, setFailed] = useState(false);
   const [publicCount, setPublicCount] = useState(0);
+  const [savedPoints, setSavedPoints] = useState(0);
   const load = useCallback(() => {
     api<{ items: StudyThought[]; publicCount: number }>(
       `think/study-thoughts?${new URLSearchParams({ week: String(week), path: source.path, anchor: source.anchor })}`,
@@ -315,8 +316,11 @@ function RangeThoughts({
   const submit = async () => {
     if (!boot) return;
     setBusy(true);
+    setSavedPoints(0);
     try {
-      const thought = await api<StudyThought>("think/study-thought", {
+      const { pointsAwarded, ...thought } = await api<
+        StudyThought & { pointsAwarded: number }
+      >("think/study-thought", {
         id: newId(),
         week,
         day,
@@ -328,6 +332,7 @@ function RangeThoughts({
       });
       rememberAuthor(draft.value.author);
       draft.clear();
+      setSavedPoints(pointsAwarded);
       setItems((list) => [...list, thought]);
       if (thought.visibility === "public") setPublicCount((n) => n + 1);
       onChanged();
@@ -403,6 +408,15 @@ function RangeThoughts({
           </article>
         ))}
       </section>
+      {savedPoints > 0 && (
+        <p className="study-gentle" role="status">
+          {t(
+            "이 학습일의 첫 생각으로 {n}점을 받았어요.",
+            "You earned {n} points for your first thought on this study day.",
+            { n: savedPoints },
+          )}
+        </p>
+      )}
       <form
         className="study-community-composer"
         onSubmit={(e) => {

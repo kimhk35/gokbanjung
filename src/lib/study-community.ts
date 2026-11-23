@@ -3,6 +3,8 @@ import { privileged, type DB } from "./db";
 import { ensure } from "./errors";
 import { authorName, canAuthor, listPrompts, type Prompt } from "./prompts";
 import type { Actor } from "./types";
+import { studyTasks, studyThoughtAnchor } from "./cfm-study-plan";
+import { awardStudyPoints } from "./study-points";
 
 export type StudyQuestion = Prompt & { study_day: number | null };
 export type StudyOverview = {
@@ -166,9 +168,9 @@ export async function saveStudyThought(a: Actor, input: unknown) {
     })
     .parse(input);
   return privileged(async (db) => {
-    await db.query(
+    const inserted = await db.query(
       `insert into ggc.study_range_thoughts(id,owner_id,week,day,track,source_path,anchor,label,body,author,visibility)
-      values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) on conflict(id) do nothing`,
+      values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) on conflict(id) do nothing returning id`,
       [
         v.id,
         a.id,
@@ -205,7 +207,19 @@ export async function saveStudyThought(a: Actor, input: unknown) {
     );
     const { owner_id: _owner, ...thought } = row;
     void _owner;
-    return { ...thought, mine: true, created_at: iso(row.created_at) };
+    const assigned = studyTasks(v.day, v.track, v.week).some(
+      (task) => task.path === v.path && studyThoughtAnchor(task) === v.anchor,
+    );
+    const pointsAwarded =
+      inserted.length && assigned
+        ? await awardStudyPoints(db, a, v.week, v.day, "thought")
+        : 0;
+    return {
+      ...thought,
+      mine: true,
+      created_at: iso(row.created_at),
+      pointsAwarded,
+    };
   });
 }
 export async function deleteStudyThought(a: Actor, input: unknown) {

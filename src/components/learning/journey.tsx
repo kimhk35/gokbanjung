@@ -6,29 +6,45 @@ import { api } from "@/lib/client";
 import { PageTitle, Empty, WeekPicker } from "./learn";
 import { Translated } from "../community/wall";
 import { currentWeek } from "@/lib/curriculum";
-import type { Localized } from "@/lib/types";
 import { canManageRecords } from "@/lib/access";
 import { ProgressDashboard } from "./progress-dashboard";
 import { RecordsGate } from "../account";
+import { StudyPoints } from "./study-points";
+import type { StudyPointSummary } from "@/lib/study-points";
+
+type JourneyData = {
+  reflections: {
+    week: number;
+    day: number;
+    content: Record<string, string>;
+    updated_at: string;
+  }[];
+  progress: { week: number; day: number }[];
+  bookmarks: { id: string; week: number }[];
+  questions: { week: number; content: string }[];
+  studyPoints: StudyPointSummary | null;
+};
+
 export function JourneyPage() {
   const { tl, t, boot, weeks, error } = useApp();
-  const [data, setData] = useState<{
-    reflections: {
-      week: number;
-      day: number;
-      content: Record<string, string>;
-      updated_at: string;
-    }[];
-    progress: { week: number; day: number }[];
-    bookmarks: { id: string; week: number }[];
-    questions: { week: number; content: string }[];
-  } | null>(null);
+  const actorId = canManageRecords(boot?.actor) ? boot!.actor.id : undefined;
+  const [record, setRecord] = useState<{ actorId: string; data: JourneyData }>();
   useEffect(() => {
-    setData(null);
-    if (canManageRecords(boot?.actor))
-      api<typeof data>("journey").then(setData).catch(error);
-  }, [boot]);
-  if (!canManageRecords(boot?.actor)) return <RecordsGate>{null}</RecordsGate>;
+    if (!actorId) return;
+    let active = true;
+    api<JourneyData>("journey")
+      .then((data) => {
+        if (active) setRecord({ actorId, data });
+      })
+      .catch((failure) => {
+        if (active) error(failure);
+      });
+    return () => {
+      active = false;
+    };
+  }, [actorId, error]);
+  if (!actorId) return <RecordsGate>{null}</RecordsGate>;
+  const data = record?.actorId === actorId ? record.data : undefined;
   return (
     <div className="page narrow">
       <PageTitle
@@ -40,11 +56,14 @@ export function JourneyPage() {
         )}
       />
       {data ? (
-        <ProgressDashboard
-          progress={data.progress}
-          reflections={data.reflections.length}
-          bookmarks={data.bookmarks.length}
-        />
+        <>
+          {data.studyPoints && <StudyPoints summary={data.studyPoints} />}
+          <ProgressDashboard
+            progress={data.progress}
+            reflections={data.reflections.length}
+            bookmarks={data.bookmarks.length}
+          />
+        </>
       ) : (
         <p role="status">
           {t("학습 진행을 불러오는 중…", "Loading learning progress…")}
