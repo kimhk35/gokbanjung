@@ -50,6 +50,9 @@ test("weekly and lifetime points count only eligible activity, once across both 
   const guest = await actor("GUEST");
   assert.equal(await finish(guest, 1, "family"), 10);
   await assert.rejects(getStudyPointSummary(guest), { status: 403 });
+  await assert.rejects(readData(guest, "study-points", new URLSearchParams()), {
+    status: 403,
+  });
 
   const [basic, family] = await Promise.all([
     finish(member, 1, "adult"),
@@ -157,6 +160,14 @@ test("weekly and lifetime points count only eligible activity, once across both 
     /A private study note|visibility|owner_id/,
   );
   assert.equal((await getStudyPointSummary(outside))?.total, 10);
+  assert.deepEqual(await readData(member, "study-points", new URLSearchParams()), {
+    weekly: summary.weekly,
+    total: summary.total,
+  });
+  assert.deepEqual(await readData(outside, "study-points", new URLSearchParams()), {
+    weekly: 10,
+    total: 10,
+  });
   const journey = await readData(member, "journey", new URLSearchParams());
   assert.ok(journey && "progress" in journey);
   assert.deepEqual(journey.progress, [

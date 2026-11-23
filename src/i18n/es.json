@@ -1507,5 +1507,7 @@
  "{n}일치": "{n} días de estudio",
  "하루 분량을 마쳐 {n}점을 받았어요.": "Ganaste {n} puntos por completar un día de estudio.",
  "이 학습일의 첫 생각으로 {n}점을 받았어요.": "Ganaste {n} puntos por tu primera reflexión de este día de estudio.",
+ "이번 주 {n}점": "Esta semana {n} pts",
+ "누적 {n}점": "Total {n} pts",
  "기본·가족 과정 중 하나의 하루 분량을 마치면 10점, 그 학습일의 첫 생각이나 개인 메모를 저장하면 2점이 쌓여요. 밀린 분량은 마친 주에 적립돼요.": "Gana 10 puntos al terminar las lecturas básicas o familiares de un día y 2 al guardar tu primera reflexión o nota privada de ese día. Las lecturas pendientes cuentan en la semana en que las terminas."
 }

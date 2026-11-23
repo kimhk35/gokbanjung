@@ -1507,5 +1507,7 @@
  "{n}일치": "{n} araw ng pag-aaral",
  "하루 분량을 마쳐 {n}점을 받았어요.": "Nakakuha ka ng {n} puntos sa pagtatapos ng isang araw ng pag-aaral.",
  "이 학습일의 첫 생각으로 {n}점을 받았어요.": "Nakakuha ka ng {n} puntos sa unang pagninilay para sa araw na ito.",
+ "이번 주 {n}점": "Ngayong linggo {n} puntos",
+ "누적 {n}점": "Kabuuang {n} puntos",
  "기본·가족 과정 중 하나의 하루 분량을 마치면 10점, 그 학습일의 첫 생각이나 개인 메모를 저장하면 2점이 쌓여요. 밀린 분량은 마친 주에 적립돼요.": "Makakuha ng 10 puntos sa pagkompleto ng batayan o pampamilyang babasahin para sa isang araw at 2 sa pag-save ng unang pagninilay o pribadong tala para sa araw na iyon. Binibilang ang hinabol na babasahin sa linggong natapos ito."
 }

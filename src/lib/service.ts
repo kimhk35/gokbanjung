@@ -5,7 +5,7 @@ import { ensure, AppError } from "./errors";
 import type { Actor } from "./types";
 import { curriculum, COURSE } from "./curriculum";
 import { canManageRecords } from "./access";
-import { getStudyPointSummary } from "./study-points";
+import { getStudyPointSummary, getStudyPointTotals } from "./study-points";
 import { studyTasks } from "./cfm-study-plan";
 export const weekSchema = z.coerce.number().int().min(1).max(52);
 const text = z.string().trim().min(1).max(6000);
@@ -40,6 +40,7 @@ export async function readData(
   path: string,
   params: URLSearchParams,
 ) {
+  if (path === "study-points") return getStudyPointTotals(a);
   if (path === "class-members") {
     const { classMembers } = await import("./class-members");
     return classMembers(a, params);
