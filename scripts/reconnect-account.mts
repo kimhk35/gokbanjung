@@ -34,8 +34,12 @@ try {
     reconnectCandidates(wrap(tx)),
   )) as Awaited<ReturnType<typeof reconnectCandidates>>;
   if (!people.length) {
-    console.log("다시 연결할 계정이 없습니다. / No accounts need reconnecting.");
-    process.exit(0);
+    console.log("끊긴 계정이 없어 관리자 계정을 점검합니다. / Checking administrators.");
+    await sql.end();
+    // Continue in the same terminal so the address is not pasted twice.
+    process.env.DATABASE_URL = url;
+    await import("./admin-recover.mjs");
+    process.exit();
   }
   console.log("\n로그인이 끊긴 기존 계정 / Former accounts without a sign-in:");
   people.forEach((p, i) =>
