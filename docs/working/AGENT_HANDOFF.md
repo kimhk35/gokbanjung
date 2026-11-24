@@ -1357,3 +1357,27 @@ progress loss, English note URLs, end-boundary reload, 390/1280px layouts.
 Evidence: ignored test-results/week47/english-reader-fixed.jpg and english-*
 test/build logs. This is local emulation, not physical-device or production QA.
 Added to the existing PR #8 branch; no Vercel deployment or production DB writes.
+
+## Administrator sign-in recovery — 2026-11-24
+
+PR #7 is merged and deployed; the operator applied the database update on
+2026-11-12~17. The remaining step was the administrator's own sign-in.
+`account:reconnect` failed on Neon connection strings (`channel_binding` was
+sent to the server as a setting) and could not help when the administrator was
+already connected but the password was unknown.
+
+- `parseDatabaseUrl` drops `channel_binding` and accepts a pasted `psql '...'`.
+- `npm run admin:recover` shows administrators in a read-only transaction, then
+  replaces one administrator's password after `RESET`, or continues to
+  first-admin setup after `FIRST` when none exists. `account:reconnect`
+  continues into it when nobody needs reconnecting.
+- First-admin logic moved unchanged to `scripts/first-admin.mjs` (Korean prompts
+  added) because tsx resolves `bootstrap-admin.mjs` to the retired `.mts`;
+  `node scripts/bootstrap-admin.mjs` still works.
+
+Verification: 172 node tests and TypeScript; local PostgreSQL 17.11 with
+synthetic records (existing tables byte-identical after a reset, sign-in with
+the new password, wrong password refused) and a real Windows console with
+injected keys. Main 2351a48 passed the 16-scenario Playwright run the same day.
+The operator reported that the production administrator is authenticated; which
+branch was used and other accounts were not checked from here.

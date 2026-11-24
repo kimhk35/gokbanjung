@@ -4,6 +4,7 @@ export function parseDatabaseUrl(raw) {
   let value = String(raw ?? "")
     .trim()
     .replace(/^DATABASE_URL\s*=\s*/, "")
+    .replace(/^psql\s+/, "")
     .trim();
   value = value.replace(/^["']|["']$/g, "").trim();
   if (!value)
@@ -27,6 +28,9 @@ export function parseDatabaseUrl(raw) {
       error:
         "DATABASE_URL 값은 postgresql:// 로 시작해야 합니다. 다른 값을 복사한 것 같습니다.",
     };
+  // postgres.js sends unknown URL options to the server; Neon's is not a server setting.
+  value = value
+    .replace(/([?&])channel_binding=[^&]*(&|$)/, (_, start, end) => (end ? start : ""));
   try {
     const host = new URL(value).hostname;
     if (!host.includes(".") && host !== "localhost") throw new Error("host");

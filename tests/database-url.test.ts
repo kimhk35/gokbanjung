@@ -26,3 +26,18 @@ test("explains in Korean what went wrong", () => {
   );
   assert.match(parseDatabaseUrl("postgresql://nohost").error!, /올바른 주소/);
 });
+
+test("accepts the connection string and psql command that Neon shows", () => {
+  const neon = "postgresql://owner:pw@ep-a-pooler.ap-southeast-1.aws.neon.tech/neondb";
+  // postgres.js would send channel_binding to the server, which rejects it.
+  for (const pasted of [
+    `${neon}?sslmode=require&channel_binding=require`,
+    `psql '${neon}?channel_binding=require&sslmode=require'`,
+  ]) {
+    const { url, host, error } = parseDatabaseUrl(pasted);
+    assert.equal(error, undefined);
+    assert.equal(url, `${neon}?sslmode=require`);
+    assert.equal(host, "ep-a-pooler.ap-southeast-1.aws.neon.tech");
+  }
+  assert.equal(parseDatabaseUrl(`${neon}?channel_binding=require`).url, neon);
+});

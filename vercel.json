@@ -10,7 +10,8 @@
       "codex/week47-connected-reading": false,
       "codex/week48-six-day-reading": false,
       "codex/reader-previous-material": false,
-      "codex/study-learning-points": false
+      "codex/study-learning-points": false,
+      "claude/reconnect-neon-url": false
     }
   },
   "framework": "nextjs",
