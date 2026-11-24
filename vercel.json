@@ -11,7 +11,8 @@
       "codex/week48-six-day-reading": false,
       "codex/reader-previous-material": false,
       "codex/study-learning-points": false,
-      "claude/reconnect-neon-url": false
+      "claude/reconnect-neon-url": false,
+      "claude/security-updates": false
     }
   },
   "framework": "nextjs",
